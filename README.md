@@ -28,7 +28,7 @@ If you would like to help make MvvmCross even better, then please do:
 * please do blog about your adventures with MvvmCross - we're currently light on documentation!
 * if you use the framework, then please let me know - we love to see what people are doing with it
 
-When creating a new sample, please do the following:
+**When creating a new sample, please do the following:**
 
  - Use NuGets for all external references
  - Provide a Readme.md file describing the sample
