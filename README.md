@@ -32,7 +32,7 @@ If you would like to help make MvvmCross even better, then please do:
 
  - Use NuGets for all external references
  - Provide a Readme.md file describing the sample
- - Provide a some screenshots of the sample
+ - Provide a screenshots of the sample
 
 ### Acknowledgements
 
