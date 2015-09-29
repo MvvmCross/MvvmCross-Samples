@@ -145,12 +145,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DailyDilbert.Droid", "Daily
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DailyDilbert.Touch", "DailyDilbert\DailyDilbert.Touch\DailyDilbert.Touch.csproj", "{45C6F105-16E5-4898-A9AB-174E5B2925B6}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{416AF8B3-4053-4FFA-8082-FA7087B7B810}"
-	ProjectSection(SolutionItems) = preProject
-		DailyDilbert\ReadMe.txt = DailyDilbert\ReadMe.txt
-		TwitterSearch\Readme.txt = TwitterSearch\Readme.txt
-	EndProjectSection
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DialogExamples.Core", "DialogExamples\DialogExamples.Core\DialogExamples.Core.csproj", "{F27FFC14-80CA-4C17-852C-AA558C482E6E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DialogExamples.Droid", "DialogExamples\DialogExamples.Droid\DialogExamples.Droid.csproj", "{4F1CA122-CB11-464B-AC49-D99C308A2D29}"
@@ -292,12 +286,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwitterSearch.UI.WP7", "Twi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwitterSearch.UI.Wpf", "TwitterSearch\TwitterSearch.UI.Wpf\TwitterSearch.UI.Wpf.csproj", "{8356C9F9-3181-4D7D-BF56-074C5D642CD3}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{416AF8B3-4053-4FFA-8082-FA7087B7B810}"
-	ProjectSection(SolutionItems) = preProject
-		DailyDilbert\ReadMe.txt = DailyDilbert\ReadMe.txt
-		TwitterSearch\Readme.txt = TwitterSearch\Readme.txt
-	EndProjectSection
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValueConversion.Core", "ValueConversion\ValueConversion.Core\ValueConversion.Core.csproj", "{62EE85D4-7170-436A-928C-ADD190DC7C45}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValueConversion.UI.WP", "ValueConversion\ValueConversion.UI.WP\ValueConversion.UI.WP.csproj", "{3C68BF20-07E8-479F-AB7A-96665E25EF61}"
@@ -320,8 +308,8 @@ Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		TipCalc\TipCalc.UI.WindowsCommon\TipCalc.UI.WindowsCommon.Shared\TipCalc.UI.WindowsCommon.Shared.projitems*{b727cc27-90ec-4bde-b3ea-a99ed2a62c8d}*SharedItemsImports = 13
 		MvxPageDemo\MvxPageDemo.Shared\MvxPageDemo.Shared.projitems*{ad8ef19a-e06f-4f01-9eee-f2d792306e13}*SharedItemsImports = 4
-		TipCalc.UI.WindowsCommon\TipCalc.UI.WindowsCommon.Shared\TipCalc.UI.WindowsCommon.Shared.projitems*{704b3b67-aa14-43ec-9964-032bae2edfa3}*SharedItemsImports = 4
-		TipCalc.UI.WindowsCommon\TipCalc.UI.WindowsCommon.Shared\TipCalc.UI.WindowsCommon.Shared.projitems*{3f686252-66db-4d27-8ded-7da2bbc29299}*SharedItemsImports = 4
+		TipCalc\TipCalc.UI.WindowsCommon\TipCalc.UI.WindowsCommon.Shared\TipCalc.UI.WindowsCommon.Shared.projitems*{704b3b67-aa14-43ec-9964-032bae2edfa3}*SharedItemsImports = 4
+		TipCalc\TipCalc.UI.WindowsCommon\TipCalc.UI.WindowsCommon.Shared\TipCalc.UI.WindowsCommon.Shared.projitems*{3f686252-66db-4d27-8ded-7da2bbc29299}*SharedItemsImports = 4
 		MvxPageDemo\MvxPageDemo.Shared\MvxPageDemo.Shared.projitems*{3aeeee75-357c-454b-a768-5d3efaf8aaeb}*SharedItemsImports = 13
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -7699,7 +7687,6 @@ Global
 		{59BC23E9-2455-4150-9B2D-D4D4C546750D} = {802B7229-3F45-4127-A275-FAC84E70C350}
 		{A6EE12FD-A7A6-41D7-BA2E-4DBC3BE7C85B} = {802B7229-3F45-4127-A275-FAC84E70C350}
 		{45C6F105-16E5-4898-A9AB-174E5B2925B6} = {802B7229-3F45-4127-A275-FAC84E70C350}
-		{5D4BF8A5-BF5A-4FA8-9AF6-28E7AB4355FE} = {802B7229-3F45-4127-A275-FAC84E70C350}
 		{F27FFC14-80CA-4C17-852C-AA558C482E6E} = {54F01D3C-7096-4851-84D4-DFCEFF000EE4}
 		{4F1CA122-CB11-464B-AC49-D99C308A2D29} = {54F01D3C-7096-4851-84D4-DFCEFF000EE4}
 		{403EE118-85F5-46F2-B01B-58644658E2FA} = {54F01D3C-7096-4851-84D4-DFCEFF000EE4}
@@ -7768,7 +7755,6 @@ Global
 		{95007050-92DD-40FA-A69D-DB244F2DD74A} = {CA8E385D-0F27-4EA4-A8A1-1ADFD92C500A}
 		{DCFDC29E-FF44-470D-BB2D-2F35C46919CD} = {CA8E385D-0F27-4EA4-A8A1-1ADFD92C500A}
 		{8356C9F9-3181-4D7D-BF56-074C5D642CD3} = {CA8E385D-0F27-4EA4-A8A1-1ADFD92C500A}
-		{416AF8B3-4053-4FFA-8082-FA7087B7B810} = {CA8E385D-0F27-4EA4-A8A1-1ADFD92C500A}
 		{62EE85D4-7170-436A-928C-ADD190DC7C45} = {1714FE87-1038-402B-9A61-192B772D697F}
 		{3C68BF20-07E8-479F-AB7A-96665E25EF61} = {1714FE87-1038-402B-9A61-192B772D697F}
 		{3B661757-1140-461F-97CF-B820E3FE5B32} = {1714FE87-1038-402B-9A61-192B772D697F}

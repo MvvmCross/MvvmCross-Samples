@@ -138,6 +138,7 @@
     <AppxManifest Include="Package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
+    <None Include="packages.config" />
     <None Include="ValueConversion.UI.WindowsStore_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
@@ -188,8 +189,9 @@
     <Reference Include="Cirrious.CrossCore.WindowsStore">
       <HintPath>..\..\Lib\Mvx\WindowsStore\Cirrious.CrossCore.WindowsStore.dll</HintPath>
     </Reference>
-    <Reference Include="Cirrious.MvvmCross">
-      <HintPath>..\..\Lib\Mvx\Portable\Cirrious.MvvmCross.dll</HintPath>
+    <Reference Include="Cirrious.MvvmCross, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MvvmCross.HotTuna.MvvmCrossLibraries.4.0.0-beta3\lib\win81\Cirrious.MvvmCross.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Cirrious.MvvmCross.Plugins.Color">
       <HintPath>..\..\Lib\Mvx\WindowsStore\Cirrious.MvvmCross.Plugins.Color.dll</HintPath>
@@ -202,6 +204,10 @@
     </Reference>
     <Reference Include="Cirrious.MvvmCross.Plugins.Visibility.WindowsStore">
       <HintPath>..\..\Lib\Mvx\WindowsStore\Cirrious.MvvmCross.Plugins.Visibility.WindowsStore.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.WindowsCommon, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MvvmCross.HotTuna.MvvmCrossLibraries.4.0.0-beta3\lib\win81\Cirrious.MvvmCross.WindowsCommon.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Cirrious.MvvmCross.WindowsStore">
       <HintPath>..\..\Lib\Mvx\WindowsStore\Cirrious.MvvmCross.WindowsStore.dll</HintPath>

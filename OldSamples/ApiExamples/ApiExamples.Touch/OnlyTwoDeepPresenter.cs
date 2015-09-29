@@ -1,3 +1,4 @@
+using Cirrious.MvvmCross.Touch.Platform;
 using Cirrious.MvvmCross.Touch.Views.Presenters;
 using UIKit;
 
@@ -5,7 +6,7 @@ namespace ApiExamples.Touch
 {
     public class OnlyTwoDeepPresenter : MvxTouchViewPresenter
     {
-        public OnlyTwoDeepPresenter(UIApplicationDelegate applicationDelegate, UIWindow window) 
+        public OnlyTwoDeepPresenter(IMvxApplicationDelegate applicationDelegate, UIWindow window) 
             : base(applicationDelegate, window)
         {
         }

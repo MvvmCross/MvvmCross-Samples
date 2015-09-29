@@ -2,6 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="auto" android:theme="@android:style/Theme.Black.NoTitleBar" package="misc.mvvmcross.customermanagement" android:versionCode="1" android:versionName="1.0">
   <application android:label="Customer Management" android:icon="@drawable/icon">
   </application>
-  <uses-sdk android:minSdkVersion="8" />
+  <uses-sdk android:minSdkVersion="15" />
   <uses-permission android:name="android.permission.INTERNET" />
 </manifest>
