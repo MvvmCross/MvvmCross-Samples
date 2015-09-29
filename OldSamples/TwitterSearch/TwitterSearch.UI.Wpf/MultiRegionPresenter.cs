@@ -1,6 +1,6 @@
-﻿using System.Linq;
+﻿using Cirrious.MvvmCross.Wpf.Views;
+using System.Linq;
 using System.Windows;
-using Cirrious.MvvmCross.Wpf.Views;
 
 namespace TwitterSearch.UI.Wpf
 {
@@ -19,11 +19,11 @@ namespace TwitterSearch.UI.Wpf
             // this is really hacky - do it using attributes isnt
             var attribute = frameworkElement
                                 .GetType()
-                                .GetCustomAttributes(typeof (RegionAttribute), true)
+                                .GetCustomAttributes(typeof(RegionAttribute), true)
                                 .FirstOrDefault() as RegionAttribute;
 
             var regionName = attribute == null ? null : attribute.Name;
             _mainWindow.PresentInRegion(frameworkElement, regionName);
-        }  
+        }
     }
 }

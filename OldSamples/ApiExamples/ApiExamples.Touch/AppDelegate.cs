@@ -1,15 +1,15 @@
-using Foundation;
-using UIKit;
 using Cirrious.CrossCore;
 using Cirrious.MvvmCross.Touch.Platform;
 using Cirrious.MvvmCross.ViewModels;
+using Foundation;
+using UIKit;
 
 namespace ApiExamples.Touch
 {
     [Register("AppDelegate")]
     public partial class AppDelegate : MvxApplicationDelegate
     {
-        UIWindow _window;
+        private UIWindow _window;
 
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {

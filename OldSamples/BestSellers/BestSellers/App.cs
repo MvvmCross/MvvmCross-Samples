@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using BestSellers.ViewModels;
-using Cirrious.CrossCore.Core;
+﻿using BestSellers.ViewModels;
 using Cirrious.CrossCore;
+using Cirrious.CrossCore.Core;
 using Cirrious.MvvmCross.ViewModels;
+using System;
 
 namespace BestSellers
 {
@@ -50,8 +47,8 @@ namespace BestSellers
         public event EventHandler<ErrorEventArgs> ErrorReported;
     }
 
-    public class App 
-        : MvxApplication        
+    public class App
+        : MvxApplication
     {
         public App()
         {

@@ -1,7 +1,7 @@
+using Collections.Core.ViewModels.Samples.ListItems;
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using Collections.Core.ViewModels.Samples.ListItems;
 
 namespace Collections.Core.ViewModels.Samples.LargeFixed
 {
@@ -116,6 +116,6 @@ namespace Collections.Core.ViewModels.Samples.LargeFixed
             throw new NotImplementedException();
         }
 
-        #endregion
+        #endregion Not implemented
     }
 }

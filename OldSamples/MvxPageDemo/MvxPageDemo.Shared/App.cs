@@ -1,21 +1,19 @@
-﻿using System;
-using Cirrious.MvvmCross.ViewModels;
-using Cirrious.CrossCore;
+﻿using Cirrious.MvvmCross.ViewModels;
 using MvxPageDemo.ViewModels;
 
 namespace MvxPageDemo.Shared
 {
-	public class App : MvxApplication
-	{
-		public App ()
-		{
-		}
+    public class App : MvxApplication
+    {
+        public App()
+        {
+        }
 
-		public override void Initialize ()
-		{
-			base.Initialize ();
-			//Start
-			RegisterAppStart<StartViewModel> ();
-		}
-	}
+        public override void Initialize()
+        {
+            base.Initialize();
+            //Start
+            RegisterAppStart<StartViewModel>();
+        }
+    }
 }

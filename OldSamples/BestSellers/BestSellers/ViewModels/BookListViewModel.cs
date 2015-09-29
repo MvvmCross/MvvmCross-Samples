@@ -1,17 +1,15 @@
-﻿using System;
+﻿using BestSellers.Helpers;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Net;
 using System.Xml.Linq;
-using BestSellers.Helpers;
-using Cirrious.MvvmCross.ViewModels;
 
 namespace BestSellers.ViewModels
 {
     public class BookListViewModel : BaseViewModel
     {
-        const string URL_BOOKLIST = "http://api.nytimes.com/svc/books/v2/lists/{0}.xml?api-key=d8ad3be01d98001865e96ee55c1044db:8:57889697";
+        private const string URL_BOOKLIST = "http://api.nytimes.com/svc/books/v2/lists/{0}.xml?api-key=d8ad3be01d98001865e96ee55c1044db:8:57889697";
 
         public void Init(string category = null)
         {
@@ -21,6 +19,7 @@ namespace BestSellers.ViewModels
         }
 
         private string _category;
+
         public string Category
         {
             get { return _category; }
@@ -28,6 +27,7 @@ namespace BestSellers.ViewModels
         }
 
         private string _categoryDisplayName;
+
         public string CategoryDisplayName
         {
             get { return _categoryDisplayName; }
@@ -35,6 +35,7 @@ namespace BestSellers.ViewModels
         }
 
         private List<BookDataViewModel> _list;
+
         public List<BookDataViewModel> List
         {
             get { return _list; }

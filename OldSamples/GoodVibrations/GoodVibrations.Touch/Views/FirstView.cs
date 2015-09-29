@@ -1,9 +1,3 @@
-using System.Drawing;
-using Cirrious.MvvmCross.Binding.BindingContext;
-using Cirrious.MvvmCross.Touch.Views;
-using MonoTouch.UIKit;
-using MonoTouch.Foundation;
-
 namespace GoodVibrations.Touch.Views
 {
     [Register("FirstView")]
@@ -11,7 +5,7 @@ namespace GoodVibrations.Touch.Views
     {
         public override void ViewDidLoad()
         {
-            View = new UIView(){ BackgroundColor = UIColor.White};
+            View = new UIView() { BackgroundColor = UIColor.White };
             base.ViewDidLoad();
 
             //var label = new UILabel(new RectangleF(10, 10, 300, 40));

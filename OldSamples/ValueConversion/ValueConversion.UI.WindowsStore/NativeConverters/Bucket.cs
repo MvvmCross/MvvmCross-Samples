@@ -1,7 +1,4 @@
-﻿using Cirrious.CrossCore.WindowsStore.Converters;
-using Cirrious.MvvmCross.Plugins.Color;
-using Cirrious.MvvmCross.Plugins.Visibility;
-using ValueConversion.Core.Converters;
+﻿using ValueConversion.Core.Converters;
 
 namespace ValueConversion.UI.WindowsStore.NativeConverters
 {

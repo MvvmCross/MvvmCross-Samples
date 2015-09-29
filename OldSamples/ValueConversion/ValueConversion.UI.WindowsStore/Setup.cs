@@ -1,7 +1,4 @@
-﻿using Cirrious.CrossCore.Plugins;
-using Cirrious.MvvmCross.Plugins.Color;
-using Cirrious.MvvmCross.ViewModels;
-using Cirrious.MvvmCross.WindowsStore.Platform;
+﻿using Cirrious.MvvmCross.ViewModels;
 using Windows.UI.Xaml.Controls;
 
 namespace ValueConversion.UI.WindowsStore

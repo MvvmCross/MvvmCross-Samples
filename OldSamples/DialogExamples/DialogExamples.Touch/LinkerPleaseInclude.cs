@@ -1,8 +1,6 @@
-using System;
+using Foundation;
 using System.Collections.Specialized;
 using System.Windows.Input;
-using Cirrious.MvvmCross.Touch.Views;
-using Foundation;
 using UIKit;
 
 namespace DialogExamples.Touch
@@ -89,23 +87,22 @@ namespace DialogExamples.Touch
 
         public void Include(INotifyCollectionChanged changed)
         {
-            changed.CollectionChanged += (s, e) => { var test = string.Format("{0}{1}{2}{3}{4}", e.Action,e.NewItems, e.NewStartingIndex, e.OldItems, e.OldStartingIndex); } ;
+            changed.CollectionChanged += (s, e) => { var test = string.Format("{0}{1}{2}{3}{4}", e.Action, e.NewItems, e.NewStartingIndex, e.OldItems, e.OldStartingIndex); };
         }
-		
+
         public void Include(ICommand command)
         {
-           command.CanExecuteChanged += (s, e) => { if (command.CanExecute(null)) command.Execute(null); };
+            command.CanExecuteChanged += (s, e) => { if (command.CanExecute(null)) command.Execute(null); };
         }
 
-		public void Include(Cirrious.CrossCore.IoC.MvxPropertyInjector injector)
-		{
-			injector = new Cirrious.CrossCore.IoC.MvxPropertyInjector();
-		} 
+        public void Include(Cirrious.CrossCore.IoC.MvxPropertyInjector injector)
+        {
+            injector = new Cirrious.CrossCore.IoC.MvxPropertyInjector();
+        }
 
-		public void Include(System.ComponentModel.INotifyPropertyChanged changed)
-		{
-			changed.PropertyChanged += (sender, e) => { var test = e.PropertyName; };
-		}
-	}
+        public void Include(System.ComponentModel.INotifyPropertyChanged changed)
+        {
+            changed.PropertyChanged += (sender, e) => { var test = e.PropertyName; };
+        }
+    }
 }
-

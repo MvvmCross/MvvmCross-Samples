@@ -1,6 +1,6 @@
-﻿using System;
+﻿using Cirrious.CrossCore.UI;
+using System;
 using System.Collections.Generic;
-using Cirrious.CrossCore.UI;
 
 namespace FractalGen.Core.Services.Fractal
 {
@@ -81,19 +81,19 @@ namespace FractalGen.Core.Services.Fractal
                 double x1 = 0.0;
                 double y1 = 0.0;
                 double looper = 0.0;
-                while (looper < ITERATION_MAX && x1*x1 + y1*y1 < 4)
+                while (looper < ITERATION_MAX && x1 * x1 + y1 * y1 < 4)
                 {
                     looper = looper + 1.0;
-                    double xx = (x1*x1) - (y1*y1) + _x;
-                    y1 = 2*x1*y1 + y;
+                    double xx = (x1 * x1) - (y1 * y1) + _x;
+                    y1 = 2 * x1 * y1 + y;
                     x1 = xx;
                 }
 
                 // Get the percent of where the looper stopped
-                double perc = looper/(ITERATION_MAX);
+                double perc = looper / (ITERATION_MAX);
 
                 // Get that part of a _colors.Count - 1 scale
-                var val = (int) Math.Floor(perc*(_colorArray.Count - 1));
+                var val = (int)Math.Floor(perc * (_colorArray.Count - 1));
 
                 // Use that number to set the color
                 SetPixel(_s, z, _colorArray[val]);
@@ -110,14 +110,14 @@ namespace FractalGen.Core.Services.Fractal
                 return;
             }
 
-            SCALE_DOWN = SCALE_DOWN/8;
-            SCALE_UP = SCALE_UP/8;
+            SCALE_DOWN = SCALE_DOWN / 8;
+            SCALE_UP = SCALE_UP / 8;
 
-            WIDTH = BASE_WIDTH/SCALE_DOWN;
-            HEIGHT = BASE_HEIGHT/SCALE_DOWN;
+            WIDTH = BASE_WIDTH / SCALE_DOWN;
+            HEIGHT = BASE_HEIGHT / SCALE_DOWN;
 
-            _xIncrement = (_xmax - _xmin)/WIDTH;
-            _yIncrement = (_ymax - _ymin)/HEIGHT;
+            _xIncrement = (_xmax - _xmin) / WIDTH;
+            _yIncrement = (_ymax - _ymin) / HEIGHT;
 
             _x = _xmin;
             _s = 0;
@@ -125,8 +125,8 @@ namespace FractalGen.Core.Services.Fractal
 
         private void SetPixel(double x, double y, MvxColor color)
         {
-            _bitmap.FillRectangle((int) (x*SCALE_UP), (int) (y*SCALE_UP), (int) ((x + 1)*SCALE_UP),
-                                  (int) ((y + 1)*SCALE_UP), color);
+            _bitmap.FillRectangle((int)(x * SCALE_UP), (int)(y * SCALE_UP), (int)((x + 1) * SCALE_UP),
+                                  (int)((y + 1) * SCALE_UP), color);
         }
     }
 }

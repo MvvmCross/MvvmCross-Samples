@@ -1,9 +1,5 @@
-using System.Collections.Generic;
-using MonoTouch.Foundation;
-using MonoTouch.UIKit;
-using Cirrious.MvvmCross.Touch.Views;
 using Cirrious.MvvmCross.Binding.BindingContext;
-using Cirrious.MvvmCross.Binding.Touch.Views;
+using System.Collections.Generic;
 
 namespace Collections.Touch
 {
@@ -15,11 +11,11 @@ namespace Collections.Touch
             base.ViewDidLoad();
 
             var source = new TableSource(TableView)
-                {
-                    UseAnimations = true,
-                    AddAnimation = UITableViewRowAnimation.Left,
-                    RemoveAnimation = UITableViewRowAnimation.Right
-                };
+            {
+                UseAnimations = true,
+                AddAnimation = UITableViewRowAnimation.Left,
+                RemoveAnimation = UITableViewRowAnimation.Right
+            };
 
             this.AddBindings(new Dictionary<object, string>
                 {

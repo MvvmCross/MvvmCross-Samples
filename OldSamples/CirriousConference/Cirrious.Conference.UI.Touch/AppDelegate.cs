@@ -1,19 +1,13 @@
 using Cirrious.Conference.UI.Touch.Interfaces;
-using Cirrious.Conference.UI.Touch.Views;
 using Cirrious.CrossCore;
 using Cirrious.MvvmCross.ViewModels;
-using MonoTouch.Foundation;
-using MonoTouch.UIKit;
-using MonoTouch.ObjCRuntime;
-using Cirrious.MvvmCross.Touch.Platform;
 
 namespace Cirrious.Conference.UI.Touch
 {
     [Register("AppDelegate")]
     public partial class AppDelegate
         : MvxApplicationDelegate
-        
-        
+
     {
         public static readonly NSString NotificationWillChangeStatusBarOrientation = new NSString("UIApplicationWillChangeStatusBarOrientationNotification");
         public static readonly NSString NotificationDidChangeStatusBarOrientation = new NSString("UIApplicationDidChangeStatusBarOrientationNotification");
@@ -21,7 +15,7 @@ namespace Cirrious.Conference.UI.Touch
         public static readonly NSString NotificationFavoriteUpdated = new NSString("NotificationFavoriteUpdated");
 
         // class-level declarations
-        UIWindow _window;
+        private UIWindow _window;
 
         public static bool IsPhone
         {
@@ -57,9 +51,9 @@ namespace Cirrious.Conference.UI.Touch
 
             var presenter = new ConferencePresenter(this, _window);
 
-            //var presenter = 
-            //    IsPad 
-            //        ? (IMvxTouchViewPresenter)new TwitterTabletSearchPresenter(this, _window) 
+            //var presenter =
+            //    IsPad
+            //        ? (IMvxTouchViewPresenter)new TwitterTabletSearchPresenter(this, _window)
             //        : (IMvxTouchViewPresenter);
             var setup = new Setup(this, presenter);
             setup.Initialize();

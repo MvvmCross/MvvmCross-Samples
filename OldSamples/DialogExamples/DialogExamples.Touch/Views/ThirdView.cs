@@ -3,7 +3,6 @@ using Cirrious.MvvmCross.Dialog.Touch;
 using CrossUI.Touch.Dialog.Elements;
 using DialogExamples.Core.ViewModels;
 using DialogExamples.Touch.BindableElements;
-using MonoTouch.Foundation;
 
 namespace DialogExamples.Touch.Views
 {
@@ -11,7 +10,7 @@ namespace DialogExamples.Touch.Views
     public class ThirdView : MvxDialogViewController
     {
         public ThirdView()
-            : base(pushing:true)
+            : base(pushing: true)
         {
         }
 

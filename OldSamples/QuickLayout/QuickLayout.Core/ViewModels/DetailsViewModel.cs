@@ -1,7 +1,7 @@
 namespace QuickLayout.Core.ViewModels
 {
-    public class DetailsViewModel 
-		: BaseDetailsViewModel
+    public class DetailsViewModel
+        : BaseDetailsViewModel
     {
     }
 }

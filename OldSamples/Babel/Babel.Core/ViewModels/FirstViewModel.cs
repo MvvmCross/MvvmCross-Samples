@@ -1,6 +1,6 @@
-using System.Windows.Input;
 using Cirrious.MvvmCross.Plugins.JsonLocalisation;
 using Cirrious.MvvmCross.ViewModels;
+using System.Windows.Input;
 
 namespace Babel.Core.ViewModels
 {
@@ -36,13 +36,12 @@ namespace Babel.Core.ViewModels
 
         public ICommand GoCommand
         {
-            get { return new MvxCommand(() => ShowViewModel<SecondViewModel>());}
+            get { return new MvxCommand(() => ShowViewModel<SecondViewModel>()); }
         }
 
         public ICommand ForceTextRefreshCommand
         {
-            get { return new MvxCommand(() => RaisePropertyChanged(() => TextSource));}
+            get { return new MvxCommand(() => RaisePropertyChanged(() => TextSource)); }
         }
-        
     }
 }

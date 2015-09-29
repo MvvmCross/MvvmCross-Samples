@@ -1,106 +1,128 @@
 ﻿using Cirrious.MvvmCross.ViewModels;
-using System.Diagnostics;
 using System;
+using System.Diagnostics;
 
 namespace Soba.Core.ViewModels
 {
-	public class FirstViewModel : MvxViewModel
-	{
-		public FirstViewModel ()
-		{
-		}
+    public class FirstViewModel : MvxViewModel
+    {
+        public FirstViewModel()
+        {
+        }
 
-		private TimeSpan _time = DateTime.Now.TimeOfDay;
-		public TimeSpan Time {
-			get { return _time; }
-			set { 
-				if (_time == value)
-					return;
-				_time = value;
-				RaisePropertyChanged (() => Time); 
-			}
-		}
+        private TimeSpan _time = DateTime.Now.TimeOfDay;
 
-		private DateTime _date = DateTime.Now;
-		public DateTime Date {
-			get { return _date; }
-			set { 
-				if (_date == value)
-					return;
-				_date = value;
-				RaisePropertyChanged (() => Date); 
-			}
-		}
+        public TimeSpan Time
+        {
+            get { return _time; }
+            set
+            {
+                if (_time == value)
+                    return;
+                _time = value;
+                RaisePropertyChanged(() => Time);
+            }
+        }
 
-		private int _selected;
-		public int Selected {
-			get { return _selected; }
-			set { 
-				if (_selected == value)
-					return;
-				_selected = value;
-				RaisePropertyChanged (() => Selected); 
-			}
-		}
-			
-		public IMvxCommand GoCommand
-		{
-			get 
-			{
-				return new MvxCommand(() => {
-					Debug.WriteLine("Go!");
-				});
-			}
-		}
+        private DateTime _date = DateTime.Now;
 
-		private string _query;
-		public string Query {
-			get { return _query; }
-			set { 
-				if (_query == value)
-					return;
-				_query = value;
-				RaisePropertyChanged (() => Query); 
-			}
-		}
+        public DateTime Date
+        {
+            get { return _date; }
+            set
+            {
+                if (_date == value)
+                    return;
+                _date = value;
+                RaisePropertyChanged(() => Date);
+            }
+        }
 
-		private string _msg;
-		public string Msg {
-			get { return _msg; }
-			set { 
-				if (_msg == value)
-					return;
-				_msg = value;
-				RaisePropertyChanged (() => Msg); 
-			}
-		}
+        private int _selected;
 
-		private int _value;
-		public int Value {
-			get { return _value; }
-			set { 
-				if (_value == value)
-					return;
-				_value = value;
-				RaisePropertyChanged (() => Value); 
-			}
-		}
+        public int Selected
+        {
+            get { return _selected; }
+            set
+            {
+                if (_selected == value)
+                    return;
+                _selected = value;
+                RaisePropertyChanged(() => Selected);
+            }
+        }
 
-		public bool IsHidden {
-			get { return !_isOn; }
-		}
+        public IMvxCommand GoCommand
+        {
+            get
+            {
+                return new MvxCommand(() =>
+                {
+                    Debug.WriteLine("Go!");
+                });
+            }
+        }
 
-		private bool _isOn;
-		public bool IsOn {
-			get { return _isOn; }
-			set { 
-				if (_isOn == value)
-					return;
-				_isOn = value;
-				RaisePropertyChanged (() => IsOn); 
-				RaisePropertyChanged (() => IsHidden); 
-			}
-		}
-	}
+        private string _query;
+
+        public string Query
+        {
+            get { return _query; }
+            set
+            {
+                if (_query == value)
+                    return;
+                _query = value;
+                RaisePropertyChanged(() => Query);
+            }
+        }
+
+        private string _msg;
+
+        public string Msg
+        {
+            get { return _msg; }
+            set
+            {
+                if (_msg == value)
+                    return;
+                _msg = value;
+                RaisePropertyChanged(() => Msg);
+            }
+        }
+
+        private int _value;
+
+        public int Value
+        {
+            get { return _value; }
+            set
+            {
+                if (_value == value)
+                    return;
+                _value = value;
+                RaisePropertyChanged(() => Value);
+            }
+        }
+
+        public bool IsHidden
+        {
+            get { return !_isOn; }
+        }
+
+        private bool _isOn;
+
+        public bool IsOn
+        {
+            get { return _isOn; }
+            set
+            {
+                if (_isOn == value)
+                    return;
+                _isOn = value;
+                RaisePropertyChanged(() => IsOn);
+                RaisePropertyChanged(() => IsHidden);
+            }
+        }
+    }
 }
-

@@ -1,6 +1,6 @@
+using Cirrious.MvvmCross.ViewModels;
 using System.Collections.Generic;
 using System.Windows.Input;
-using Cirrious.MvvmCross.ViewModels;
 
 namespace DialogExamples.Core.ViewModels
 {
@@ -95,8 +95,9 @@ namespace DialogExamples.Core.ViewModels
         }
 
         private List<Person> _people;
-        public List<Person> People 
-        {   
+
+        public List<Person> People
+        {
             get { return _people; }
             set { _people = value; RaisePropertyChanged(() => People); }
         }

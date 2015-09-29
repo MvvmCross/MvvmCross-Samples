@@ -1,10 +1,9 @@
-using System;
-using System.Collections.Generic;
+using Cirrious.CrossCore;
 using Cirrious.CrossCore.Core;
 using Cirrious.CrossCore.Exceptions;
-using Cirrious.CrossCore;
 using Cirrious.CrossCore.Platform;
-using Cirrious.MvvmCross.Plugins.File;
+using System;
+using System.Collections.Generic;
 
 namespace Cirrious.Conference.Core.Models
 {

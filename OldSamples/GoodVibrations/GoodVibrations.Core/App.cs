@@ -10,7 +10,7 @@ namespace GoodVibrations.Core
                 .EndingWith("Service")
                 .AsInterfaces()
                 .RegisterAsLazySingleton();
-				
+
             RegisterAppStart<ViewModels.FirstViewModel>();
         }
     }

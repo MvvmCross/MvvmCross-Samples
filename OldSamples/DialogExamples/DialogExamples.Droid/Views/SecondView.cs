@@ -1,7 +1,5 @@
-using System.ComponentModel;
 using Android.App;
 using Android.OS;
-using Cirrious.MvvmCross.Binding.BindingContext;
 using Cirrious.MvvmCross.Dialog.Droid.Views;
 using CrossUI.Droid.Dialog.Elements;
 using DialogExamples.Core.ViewModels;

@@ -8,10 +8,11 @@ namespace DailyDilbert.Core.ViewModels
         }
 
         private DilbertItem _dilbertItem;
+
         public DilbertItem Item
         {
             get { return _dilbertItem; }
             set { _dilbertItem = value; RaisePropertyChanged(() => Item); }
-        }        
+        }
     }
 }

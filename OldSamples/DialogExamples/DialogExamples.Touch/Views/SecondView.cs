@@ -2,7 +2,6 @@ using Cirrious.MvvmCross.Binding.BindingContext;
 using Cirrious.MvvmCross.Dialog.Touch;
 using CrossUI.Touch.Dialog.Elements;
 using DialogExamples.Core.ViewModels;
-using MonoTouch.Foundation;
 
 namespace DialogExamples.Touch.Views
 {
@@ -10,7 +9,7 @@ namespace DialogExamples.Touch.Views
     public class SecondView : MvxDialogViewController
     {
         public SecondView()
-            : base(pushing:true)
+            : base(pushing: true)
         {
         }
 

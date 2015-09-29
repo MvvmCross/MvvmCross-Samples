@@ -1,10 +1,9 @@
-using System.Drawing;
 using Cirrious.MvvmCross.Binding.BindingContext;
 using Cirrious.MvvmCross.Binding.Touch.Views;
 using CrossUI.Touch.Dialog.Elements;
 using DialogExamples.Core.ViewModels;
-using MonoTouch.CoreGraphics;
-using MonoTouch.UIKit;
+using System.Drawing;
+using UIKit;
 
 namespace DialogExamples.Touch.BindableElements
 {
@@ -49,7 +48,7 @@ namespace DialogExamples.Touch.BindableElements
         {
             get
             {
-                if (InnerView == null) return null; 
+                if (InnerView == null) return null;
                 return InnerView.Title;
             }
             set

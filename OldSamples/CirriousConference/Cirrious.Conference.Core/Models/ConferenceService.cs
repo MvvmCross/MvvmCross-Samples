@@ -1,30 +1,29 @@
-﻿using System;
+﻿using Cirrious.Conference.Core.Interfaces;
+using Cirrious.Conference.Core.Models.Raw;
+using Cirrious.CrossCore;
+using Cirrious.CrossCore.Core;
+using Cirrious.CrossCore.Platform;
+using MvvmCross.Plugins.Messenger;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
-using System.Collections.Generic;
-using Cirrious.Conference.Core.Interfaces;
-using Cirrious.Conference.Core.Models.Raw;
-using Cirrious.CrossCore.Core;
-using Cirrious.CrossCore;
-using Cirrious.CrossCore.Platform;
-using Cirrious.MvvmCross.Plugins.File;
-using Cirrious.MvvmCross.Plugins.Messenger;
 
 namespace Cirrious.Conference.Core.Models
 {
-    public class ConferenceService 
+    public class ConferenceService
         : IConferenceService
-        
+
     {
         private readonly FavoritesSaver _favoritesSaver = new FavoritesSaver();
 
         // is loading setup
         private bool _isLoading;
+
         public bool IsLoading
         {
             get { return _isLoading; }
-            private set 
-            { 
+            private set
+            {
                 _isLoading = value;
                 FireLoadingChanged();
             }
@@ -32,46 +31,48 @@ namespace Cirrious.Conference.Core.Models
 
         private void FireLoadingChanged()
         {
-			FireMessage(new LoadingChangedMessage(this));
+            FireMessage(new LoadingChangedMessage(this));
         }
- 
+
         // the basic lists
         public IDictionary<string, SessionWithFavoriteFlag> Sessions { get; private set; }
+
         public IDictionary<string, Sponsor> Exhibitors { get; private set; }
         public IDictionary<string, Sponsor> Sponsors { get; private set; }
 
         // a hashtable of favorites
         private IDictionary<string, SessionWithFavoriteFlag> _favoriteSessions;
-        public IDictionary<string,SessionWithFavoriteFlag> GetCopyOfFavoriteSessions()
+
+        public IDictionary<string, SessionWithFavoriteFlag> GetCopyOfFavoriteSessions()
         {
             lock (this)
             {
-				if (_favoriteSessions == null)
-					return new Dictionary<string, SessionWithFavoriteFlag>();
-				
+                if (_favoriteSessions == null)
+                    return new Dictionary<string, SessionWithFavoriteFlag>();
+
                 var toReturn = new Dictionary<string, SessionWithFavoriteFlag>(_favoriteSessions);
                 return toReturn;
             }
         }
-		 
+
         private void FireFavoriteSessionsChanged()
         {
-			FireMessage(new FavoritesChangedMessage(this));
+            FireMessage(new FavoritesChangedMessage(this));
         }
 
-		private void FireMessage(MvxMessage message)
-		{
-			var messenger = Mvx.Resolve<IMvxMessenger>();
-			messenger.Publish(message);
-		}
+        private void FireMessage(MvxMessage message)
+        {
+            var messenger = Mvx.Resolve<IMvxMessenger>();
+            messenger.Publish(message);
+        }
 
         public void BeginAsyncLoad()
         {
             IsLoading = true;
             MvxAsyncDispatcher.BeginAsync(Load);
         }
-		
-		public void DoSyncLoad()
+
+        public void DoSyncLoad()
         {
             IsLoading = true;
             Load();
@@ -84,8 +85,8 @@ namespace Cirrious.Conference.Core.Models
             LoadSponsors();
 
             IsLoading = false;
-        }		
-		
+        }
+
         private void LoadSponsors()
         {
             var file = Mvx.Resolve<IMvxResourceLoader>().GetTextResource("ConfResources/Sponsors.txt");
@@ -131,15 +132,15 @@ namespace Cirrious.Conference.Core.Models
                 item.Key = item.Title;
             }
             Sessions = items.Select(x => new SessionWithFavoriteFlag()
-                                                  {
-                                                      Session = x,
-                                                      IsFavorite = false
-                                                  })
+            {
+                Session = x,
+                IsFavorite = false
+            })
                 .ToDictionary(x => x.Session.Key, x => x);
 
             foreach (var sessionWithFavoriteFlag in Sessions.Values)
             {
-                sessionWithFavoriteFlag.PropertyChanged += SessionWithFavoriteFlagOnPropertyChanged;            
+                sessionWithFavoriteFlag.PropertyChanged += SessionWithFavoriteFlagOnPropertyChanged;
             }
         }
 

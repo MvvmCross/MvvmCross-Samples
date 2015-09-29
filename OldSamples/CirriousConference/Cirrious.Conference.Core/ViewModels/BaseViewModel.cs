@@ -1,40 +1,37 @@
-using System;
-using System.Threading;
-using System.Windows.Input;
 using Cirrious.Conference.Core.Interfaces;
-using Cirrious.CrossCore.Exceptions;
 using Cirrious.CrossCore;
+using Cirrious.CrossCore.Exceptions;
 using Cirrious.MvvmCross.Localization;
-using Cirrious.MvvmCross.Plugins.Email;
-using Cirrious.MvvmCross.Plugins.PhoneCall;
-using Cirrious.MvvmCross.Plugins.Share;
-using Cirrious.MvvmCross.Plugins.WebBrowser;
 using Cirrious.MvvmCross.ViewModels;
-using Cirrious.MvvmCross.Plugins.Messenger;
+using MvvmCross.Plugins.Messenger;
+using System;
+using System.Windows.Input;
 
 namespace Cirrious.Conference.Core.ViewModels
 {
     public class BaseViewModel
         : MvxViewModel
-        
-	{
-		private IMvxMessenger MvxMessenger {
-			get {
-				return Mvx.Resolve<IMvxMessenger>();
-			}
-		}
 
-		protected MvxSubscriptionToken Subscribe<TMessage> (Action<TMessage> action)
-			where TMessage : MvxMessage
-		{
-		    return MvxMessenger.Subscribe<TMessage>(action, MvxReference.Weak);
-		}
+    {
+        private IMvxMessenger MvxMessenger
+        {
+            get
+            {
+                return Mvx.Resolve<IMvxMessenger>();
+            }
+        }
 
-		protected void Unsubscribe<TMessage> (MvxSubscriptionToken id)
-			where TMessage : MvxMessage
-		{
-			MvxMessenger.Unsubscribe<TMessage>(id);
-		}
+        protected MvxSubscriptionToken Subscribe<TMessage>(Action<TMessage> action)
+            where TMessage : MvxMessage
+        {
+            return MvxMessenger.Subscribe<TMessage>(action, MvxReference.Weak);
+        }
+
+        protected void Unsubscribe<TMessage>(MvxSubscriptionToken id)
+            where TMessage : MvxMessage
+        {
+            MvxMessenger.Unsubscribe<TMessage>(id);
+        }
 
         public IMvxLanguageBinder TextSource
         {
@@ -68,17 +65,17 @@ namespace Cirrious.Conference.Core.ViewModels
             var task = Mvx.Resolve<IMvxComposeEmailTask>();
             task.ComposeEmail(to, null, subject, body, false);
         }
-	
-		public ICommand ShareGeneralCommand
-		{
-			get { return new MvxCommand(DoShareGeneral); }
-		}
-		
-		public void DoShareGeneral()
-		{
+
+        public ICommand ShareGeneralCommand
+        {
+            get { return new MvxCommand(DoShareGeneral); }
+        }
+
+        public void DoShareGeneral()
+        {
             var toShare = string.Format("#SQLBitsX");
-		    ExceptionSafeShare(toShare);
-		}
+            ExceptionSafeShare(toShare);
+        }
 
         protected void ExceptionSafeShare(string toShare)
         {

@@ -1,6 +1,6 @@
-using System.Windows.Input;
 using Cirrious.Conference.Core.ViewModels.SessionLists;
 using Cirrious.MvvmCross.ViewModels;
+using System.Windows.Input;
 
 namespace Cirrious.Conference.Core.ViewModels.HomeViewModels
 {
@@ -17,14 +17,14 @@ namespace Cirrious.Conference.Core.ViewModels.HomeViewModels
             get { return new MvxCommand(() => ShowViewModel<TopicsViewModel>()); }
         }
 
-        public ICommand ShowSpeakersCommand    
+        public ICommand ShowSpeakersCommand
         {
             get { return new MvxCommand(() => ShowViewModel<SpeakersViewModel>()); }
         }
 
         public ICommand ShowDayCommand
         {
-            get { return new MvxCommand<string>((day) => ShowViewModel<SessionListViewModel>(new {dayOfMonth = int.Parse(day)})); }
+            get { return new MvxCommand<string>((day) => ShowViewModel<SessionListViewModel>(new { dayOfMonth = int.Parse(day) })); }
         }
 
         public ICommand ShowThursdayCommand

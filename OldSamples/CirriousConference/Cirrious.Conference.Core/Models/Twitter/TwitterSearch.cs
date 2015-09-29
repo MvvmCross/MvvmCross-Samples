@@ -1,11 +1,10 @@
+using Cirrious.CrossCore.Core;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net;
-using System.Threading;
 using System.Xml.Linq;
-using Cirrious.CrossCore.Core;
 
 namespace Cirrious.Conference.Core.Models.Twitter
 {
@@ -73,15 +72,14 @@ namespace Cirrious.Conference.Core.Models.Twitter
             var doc = XDocument.Parse(xml);
             var items = doc.Descendants(AtomConst.Entry)
                 .Select(entryElement => new Tweet()
-                                            {
-                                                Title = entryElement.Descendants(AtomConst.Title).Single().Value,
-                                                Id = long.Parse(entryElement.Descendants(AtomConst.ID).Single().Value.Split(':')[2]),
-                                                ProfileImageUrl = entryElement.Descendants(AtomConst.Link).Skip(1).First().Attribute("href").Value,
-                                                Timestamp = DateTime.Parse(entryElement.Descendants(AtomConst.Published).Single().Value),
-                                                Author = entryElement.Descendants(AtomConst.Name).Single().Value
-                                            });
+                {
+                    Title = entryElement.Descendants(AtomConst.Title).Single().Value,
+                    Id = long.Parse(entryElement.Descendants(AtomConst.ID).Single().Value.Split(':')[2]),
+                    ProfileImageUrl = entryElement.Descendants(AtomConst.Link).Skip(1).First().Attribute("href").Value,
+                    Timestamp = DateTime.Parse(entryElement.Descendants(AtomConst.Published).Single().Value),
+                    Author = entryElement.Descendants(AtomConst.Name).Single().Value
+                });
             _success(items);
         }
-
     }
 }

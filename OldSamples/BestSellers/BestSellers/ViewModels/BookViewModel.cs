@@ -1,16 +1,15 @@
-﻿using System;
+﻿using BestSellers.Helpers;
+using System;
 using System.IO;
 using System.Linq;
-using System.Net;
-using System.Threading;
 using System.Xml.Linq;
-using BestSellers.Helpers;
 
 namespace BestSellers.ViewModels
 {
     public class BookViewModel : BaseViewModel
     {
         private BookDataViewModel _book;
+
         public BookDataViewModel Book
         {
             get { return _book; }
@@ -44,49 +43,49 @@ namespace BestSellers.ViewModels
             loaded = XDocument.Load(stream);
             var books = from item in loaded.Descendants("book")
                         select new BookDataViewModel()
-                                    {
-                                        Category = item.Element("display_name").Value,
-                                        BestSellersDate = item.Element("bestsellers_date").Value,
-                                        Rank = item.Element("rank").Value,
-                                        RankLastWeek = item.Element("rank_last_week").Value,
-                                        WeeksOnList = item.Element("weeks_on_list").Value,
-                                        PublishedDate = item.Element("published_date").Value,
+                        {
+                            Category = item.Element("display_name").Value,
+                            BestSellersDate = item.Element("bestsellers_date").Value,
+                            Rank = item.Element("rank").Value,
+                            RankLastWeek = item.Element("rank_last_week").Value,
+                            WeeksOnList = item.Element("weeks_on_list").Value,
+                            PublishedDate = item.Element("published_date").Value,
 
-                                        Title =
+                            Title =
                                             item.Descendants("book_detail").Elements("title").First().Value.
                                             ToTitleCase(),
-                                        Contributor =
+                            Contributor =
                                             item.Descendants("book_detail").Elements("contributor").First().Value,
-                                        ContributorNote =
+                            ContributorNote =
                                             item.Descendants("book_detail").Elements("contributor_note").First().
                                             Value,
-                                        Author = item.Descendants("book_detail").Elements("author").First().Value,
-                                        ISBN13 =
+                            Author = item.Descendants("book_detail").Elements("author").First().Value,
+                            ISBN13 =
                                             item.Descendants("book_detail").Elements("primary_isbn13").First().
                                             Value,
-                                        ISBN10 =
+                            ISBN10 =
                                             item.Descendants("book_detail").Elements("primary_isbn10").First().
                                             Value,
-                                        Publisher =
+                            Publisher =
                                             item.Descendants("book_detail").Elements("publisher").First().Value,
-                                        AgeGroup =
+                            AgeGroup =
                                             item.Descendants("book_detail").Elements("age_group").First().Value,
-                                        Price = item.Descendants("book_detail").Elements("price").First().Value,
-                                        Description =
+                            Price = item.Descendants("book_detail").Elements("price").First().Value,
+                            Description =
                                             item.Descendants("book_detail").Elements("description").First().Value,
 
-                                        BookReviewLink =
+                            BookReviewLink =
                                             item.Descendants("review").Elements("book_review_link").First().Value,
-                                        FirstChapterLink =
+                            FirstChapterLink =
                                             item.Descendants("review").Elements("first_chapter_link").First().
                                             Value,
-                                        SundayReviewLink =
+                            SundayReviewLink =
                                             item.Descendants("review").Elements("sunday_review_link").First().
                                             Value,
-                                        ArticleChapterLink =
+                            ArticleChapterLink =
                                             item.Descendants("review").Elements("article_chapter_link").First().
                                             Value,
-                                    };
+                        };
 
             Book = books.First();
         }

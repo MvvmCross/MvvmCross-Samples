@@ -1,5 +1,4 @@
-﻿using Cirrious.CrossCore;
-using Cirrious.MvvmCross.ViewModels;
+﻿using Cirrious.MvvmCross.ViewModels;
 using Collections.Core.ViewModels;
 
 namespace Collections.Core

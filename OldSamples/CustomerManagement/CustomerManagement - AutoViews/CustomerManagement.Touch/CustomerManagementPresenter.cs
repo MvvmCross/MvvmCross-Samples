@@ -1,17 +1,14 @@
 using Cirrious.CrossCore.Platform;
-using Cirrious.MvvmCross.Touch.Views;
-using Cirrious.MvvmCross.Touch.Views.Presenters;
 using Cirrious.MvvmCross.ViewModels;
 using CustomerManagement.AutoViews.Core.Interfaces;
-using MonoTouch.UIKit;
 
 namespace CustomerManagement.Touch
 {
-    public class CustomerManagementPresenter 
+    public class CustomerManagementPresenter
         : MvxTouchViewPresenter
           , IViewModelCloser
     {
-        public CustomerManagementPresenter(UIApplicationDelegate applicationDelegate, UIWindow window) 
+        public CustomerManagementPresenter(UIApplicationDelegate applicationDelegate, UIWindow window)
             : base(applicationDelegate, window)
         {
         }

@@ -6,9 +6,9 @@ using CustomerManagement.AutoViews.Core.ViewModels;
 
 namespace CustomerManagement.AutoViews.Core
 {
-    public class App 
+    public class App
         : MvxApplication
-        
+
     {
         public App()
         {

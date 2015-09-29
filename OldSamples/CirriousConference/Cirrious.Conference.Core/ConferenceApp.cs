@@ -8,8 +8,8 @@ using Cirrious.MvvmCross.ViewModels;
 
 namespace Cirrious.Conference.Core
 {
-    public abstract class BaseConferenceApp 
-        : MvxApplication        
+    public abstract class BaseConferenceApp
+        : MvxApplication
     {
         protected BaseConferenceApp()
         {
@@ -21,19 +21,19 @@ namespace Cirrious.Conference.Core
 
         private void InitialisePlugins()
         {
-			Cirrious.MvvmCross.Plugins.Json.PluginLoader.Instance.EnsureLoaded();
+            MvvmCross.Plugins.Json.PluginLoader.Instance.EnsureLoaded();
 
-            Cirrious.MvvmCross.Plugins.File.PluginLoader.Instance.EnsureLoaded();
-            Cirrious.MvvmCross.Plugins.JsonLocalisation.PluginLoader.Instance.EnsureLoaded();
-            Cirrious.MvvmCross.Plugins.ResourceLoader.PluginLoader.Instance.EnsureLoaded();
-			Cirrious.MvvmCross.Plugins.Messenger.PluginLoader.Instance.EnsureLoaded();
+            MvvmCross.Plugins.File.PluginLoader.Instance.EnsureLoaded();
+            MvvmCross.Plugins.JsonLocalisation.PluginLoader.Instance.EnsureLoaded();
+            MvvmCross.Plugins.ResourceLoader.PluginLoader.Instance.EnsureLoaded();
+            MvvmCross.Plugins.Messenger.PluginLoader.Instance.EnsureLoaded();
 
             // these don't really need to be loaded on startup, but it's convenient for now
-            Cirrious.MvvmCross.Plugins.Email.PluginLoader.Instance.EnsureLoaded();
-            Cirrious.MvvmCross.Plugins.PhoneCall.PluginLoader.Instance.EnsureLoaded();
-            Cirrious.MvvmCross.Plugins.Share.PluginLoader.Instance.EnsureLoaded();
-            Cirrious.MvvmCross.Plugins.Visibility.PluginLoader.Instance.EnsureLoaded();
-            Cirrious.MvvmCross.Plugins.WebBrowser.PluginLoader.Instance.EnsureLoaded();
+            MvvmCross.Plugins.Email.PluginLoader.Instance.EnsureLoaded();
+            MvvmCross.Plugins.PhoneCall.PluginLoader.Instance.EnsureLoaded();
+            MvvmCross.Plugins.Share.PluginLoader.Instance.EnsureLoaded();
+            MvvmCross.Plugins.Visibility.PluginLoader.Instance.EnsureLoaded();
+            MvvmCross.Plugins.WebBrowser.PluginLoader.Instance.EnsureLoaded();
         }
 
         private void InitaliseErrorSystem()

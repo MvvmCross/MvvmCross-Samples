@@ -1,5 +1,5 @@
-using System.Windows.Input;
 using Cirrious.MvvmCross.ViewModels;
+using System.Windows.Input;
 
 namespace Cirrious.Conference.Core.ViewModels
 {
@@ -38,7 +38,7 @@ namespace Cirrious.Conference.Core.ViewModels
                         ShowWebPage("http://sqlbits.com"));
             }
         }
-        
+
         public ICommand MonoTouchCommand
         {
             get

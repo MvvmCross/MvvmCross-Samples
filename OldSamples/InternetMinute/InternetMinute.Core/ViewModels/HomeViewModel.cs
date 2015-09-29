@@ -1,9 +1,9 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using Cirrious.MvvmCross.Plugins.Messenger;
 using Cirrious.MvvmCross.ViewModels;
 using InternetMinute.Core.Services.Times;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace InternetMinute.Core.ViewModels
 {
@@ -28,9 +28,9 @@ namespace InternetMinute.Core.ViewModels
         public StateObject SaveState()
         {
             return new StateObject()
-                {
-                    CreatedTimeUtc = _createdAtUtc
-                };
+            {
+                CreatedTimeUtc = _createdAtUtc
+            };
         }
 
         public void ReloadState(StateObject state)
@@ -45,6 +45,7 @@ namespace InternetMinute.Core.ViewModels
         }
 
         public List<DescriptionViewModel> Descriptions { get; private set; }
+
         private void OnTick(TickMessage message)
         {
             Update();

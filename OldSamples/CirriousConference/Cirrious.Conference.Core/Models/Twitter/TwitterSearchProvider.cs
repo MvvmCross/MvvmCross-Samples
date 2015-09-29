@@ -1,6 +1,6 @@
+using Cirrious.Conference.Core.Interfaces;
 using System;
 using System.Collections.Generic;
-using Cirrious.Conference.Core.Interfaces;
 
 namespace Cirrious.Conference.Core.Models.Twitter
 {
@@ -9,6 +9,6 @@ namespace Cirrious.Conference.Core.Models.Twitter
         public void StartAsyncSearch(string searchText, Action<IEnumerable<Tweet>> success, Action<Exception> error)
         {
             TwitterSearch.StartAsyncSearch(searchText, success, error);
-        }        
+        }
     }
 }

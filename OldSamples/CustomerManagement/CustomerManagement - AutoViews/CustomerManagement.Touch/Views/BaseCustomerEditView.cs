@@ -1,12 +1,6 @@
-using Cirrious.MvvmCross.Dialog.Touch;
-using Cirrious.MvvmCross.Views;
-using CustomerManagement.AutoViews.Core.Models;
-using CustomerManagement.AutoViews.Core.ViewModels;
-using MonoTouch.UIKit;
-
 namespace CustomerManagement.Touch.Views
 {
-	/*
+    /*
     public class BaseCustomerEditView <TViewModel>
         : MvxTouchDialogViewController<TViewModel>
         , IMvxModalTouchView
@@ -16,11 +10,11 @@ namespace CustomerManagement.Touch.Views
             : base(request, UITableViewStyle.Grouped, null, true)
         {
         }
-		
+
         public override void ViewDidLoad ()
         {
             base.ViewDidLoad ();
-			
+
             this.NavigationItem.SetRightBarButtonItem(new UIBarButtonItem("Save", UIBarButtonItemStyle.Done, null), false);
             this.NavigationItem.RightBarButtonItem.Clicked += delegate {
                                                                            ViewModel.DoSave();
@@ -32,7 +26,7 @@ namespace CustomerManagement.Touch.Views
 
             if (ViewModel.Customer.PrimaryAddress == null)
                 ViewModel.Customer.PrimaryAddress = new Address();
-			
+
             this.Root = new RootElement("Customer Info")
                             {
                                 new Section("Contact Info")
@@ -52,7 +46,7 @@ namespace CustomerManagement.Touch.Views
                                     },
                             };
         }
-		
+
         public virtual void Save()
         {
             ViewModel.DoSave();

@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using Cirrious.CrossCore.Plugins;
-using Cirrious.MvvmCross.ViewModels;
-using Cirrious.MvvmCross.WindowsStore.Platform;
-using Tutorial.Core.ViewModels;
-using Tutorial.Core.ViewModels.Lessons;
+﻿using Cirrious.MvvmCross.ViewModels;
 using Windows.UI.Xaml.Controls;
 
 namespace Tutorial.UI.WinRT

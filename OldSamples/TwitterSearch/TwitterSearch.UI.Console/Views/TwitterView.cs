@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Linq;
-using Cirrious.MvvmCross.Console.Views;
 using TwitterSearch.Core.ViewModels;
 
 namespace TwitterSearch.UI.Console.Views
@@ -55,4 +54,3 @@ namespace TwitterSearch.UI.Console.Views
         }
     }
 }
-                                                                                    

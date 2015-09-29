@@ -10,7 +10,7 @@ namespace Sample.Plugin.Vibration.Touch
                 .EndingWith("Service")
                 .AsInterfaces()
                 .RegisterAsLazySingleton();
-				
+
             RegisterAppStart<ViewModels.FirstViewModel>();
         }
     }

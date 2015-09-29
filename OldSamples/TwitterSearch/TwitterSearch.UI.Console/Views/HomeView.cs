@@ -1,10 +1,9 @@
 ﻿using System;
-using Cirrious.MvvmCross.Console.Views;
 using TwitterSearch.Core.ViewModels;
 
 namespace TwitterSearch.UI.Console.Views
 {
-    class HomeView : MvxConsoleView<HomeViewModel>
+    internal class HomeView : MvxConsoleView<HomeViewModel>
     {
         protected override void OnViewModelChanged()
         {
@@ -39,10 +38,12 @@ namespace TwitterSearch.UI.Console.Views
                 case "S":
                     ViewModel.Commands["Search"].Execute(null);
                     return true;
+
                 case "RANDOM":
                 case "R":
                     ViewModel.Commands["PickRandom"].Execute(null);
                     return true;
+
                 default:
                     string searchTerm = null;
                     if (input.StartsWith("EDIT ") && input.Length > 5)

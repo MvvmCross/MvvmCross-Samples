@@ -1,5 +1,3 @@
-using Cirrious.MvvmCross.Touch.Views;
-
 namespace Navigation.UI.Touch
 {
     public partial class SimpleView : MvxViewController

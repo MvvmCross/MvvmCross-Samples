@@ -1,40 +1,33 @@
-using Cirrious.MvvmCross.Dialog.Touch;
-using Cirrious.MvvmCross.Views;
-using MonoTouch.UIKit;
-
 namespace CustomerManagement.Touch.Views
 {
-	/*
-	public class CustomerView: MvxTouchDialogViewController<DetailsCustomerViewModel> 
+    /*
+	public class CustomerView: MvxTouchDialogViewController<DetailsCustomerViewModel>
 	{
         public CustomerView(MvxViewModelRequest request)
             : base(request, UITableViewStyle.Grouped, null, true)
         {
         }
-	
+
 		public override void ViewDidLoad ()
 		{
 			base.ViewDidLoad ();
 
             // so here we want to bind the table to the viewmodel... how?
 
-
             // need to bind the table...
 
-
-			NavigationItem.SetRightBarButtonItem(new UIBarButtonItem(UIBarButtonSystemItem.Action, 
+			NavigationItem.SetRightBarButtonItem(new UIBarButtonItem(UIBarButtonSystemItem.Action,
 			    (sender, e) => { ActionMenu(); }), false);
 		}
-		
+
 		public override void ViewDidAppear (bool animated)
 		{
 			base.ViewDidAppear (animated);
 			ResetDisplay();
 		}
-		
+
 		private void ResetDisplay()
 		{
-            
 			string addressString = ViewModel.Customer.PrimaryAddress != null ? ViewModel.Customer.PrimaryAddress.ToString() : string.Empty;
             this.Root = new RootElement("Customer Info")
             {
@@ -54,7 +47,7 @@ namespace CustomerManagement.Touch.Views
                 },
             };
         }
-		
+
 		void ActionMenu()
 		{
 			//_actionSheet = new UIActionSheet("");
@@ -75,17 +68,16 @@ namespace CustomerManagement.Touch.Views
 			else
 				actionSheet.ShowFrom(NavigationItem.RightBarButtonItem, true);
 		}
-		
+
 		void ChangeCustomer()
 		{
 			ViewModel.DoEdit();
 		}
-		
+
 		void DeleteCustomer()
 		{
 			ViewModel.DoDelete();
-		}		
+		}
 	}
 	*/
 }
-

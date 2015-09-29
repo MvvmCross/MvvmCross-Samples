@@ -10,7 +10,7 @@ namespace Cirrious.Conference.Core
                 .EndingWith("Service")
                 .AsInterfaces()
                 .RegisterAsLazySingleton();
-				
+
             RegisterAppStart<ViewModels.FirstViewModel>();
         }
     }

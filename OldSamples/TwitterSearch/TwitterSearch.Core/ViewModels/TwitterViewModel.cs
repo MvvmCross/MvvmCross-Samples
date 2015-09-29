@@ -1,26 +1,27 @@
+using Cirrious.MvvmCross.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Cirrious.MvvmCross.ViewModels;
 using TwitterSearch.Core.Interfaces;
 using TwitterSearch.Core.Models;
 
 namespace TwitterSearch.Core.ViewModels
 {
     public class TwitterViewModel
-        : MvxViewModel        
+        : MvxViewModel
     {
         public TwitterViewModel(ITwitterSearchProvider searchProvider)
         {
             TwitterSearchProvider = searchProvider;
         }
-        
+
         public void Init(string searchTerm)
         {
             StartSearch(searchTerm);
         }
 
         private bool _isSearching;
+
         public bool IsSearching
         {
             get { return _isSearching; }
@@ -28,6 +29,7 @@ namespace TwitterSearch.Core.ViewModels
         }
 
         private IEnumerable<Tweet> _tweets;
+
         public IEnumerable<Tweet> Tweets
         {
             get { return _tweets; }

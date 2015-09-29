@@ -1,7 +1,6 @@
 using Android.Content;
 using Cirrious.CrossCore.Droid;
 using Cirrious.CrossCore.IoC;
-using Cirrious.CrossCore.Platform;
 using Cirrious.CrossCore.Plugins;
 
 namespace NoMvvm
@@ -18,8 +17,8 @@ namespace NoMvvm
             var ioc = MvxSimpleIoCContainer.Initialize();
 
             ioc.RegisterSingleton<IMvxPluginManager>(new MvxFilePluginManager(".Droid", ".dll"));
-	
-			ioc.RegisterSingleton<IMvxAndroidGlobals>(new AndroidGlobals(applicationContext, GetType().Namespace));
-		}
+
+            ioc.RegisterSingleton<IMvxAndroidGlobals>(new AndroidGlobals(applicationContext, GetType().Namespace));
+        }
     }
 }

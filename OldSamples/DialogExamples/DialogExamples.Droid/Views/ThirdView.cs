@@ -1,6 +1,5 @@
 using Android.App;
 using Android.OS;
-using Cirrious.MvvmCross.Binding.BindingContext;
 using Cirrious.MvvmCross.Dialog.Droid.Views;
 using CrossUI.Droid.Dialog.Elements;
 using DialogExamples.Core.ViewModels;
@@ -26,7 +25,7 @@ namespace DialogExamples.Droid.Views
                         },
                     new BindableSection<CustomStringElement>("Bound String Elements")
                         .Bind(bindings, element => element.ItemsSource, vm => vm.People),
-                    new BindableSection<CustomViewElement>("Bound Custom View Elements", 
+                    new BindableSection<CustomViewElement>("Bound Custom View Elements",
                             () => new CustomViewElement(this))
                         .Bind(bindings, element => element.ItemsSource, vm => vm.People)
                 };

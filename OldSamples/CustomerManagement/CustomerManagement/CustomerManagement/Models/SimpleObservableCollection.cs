@@ -9,10 +9,9 @@ namespace CustomerManagement.Core.Models
     {
         public SimpleObservableCollection(List<T> source)
             : base(source)
-        {            
+        {
         }
     }
-
 
     /*
     public class XmlDataStore
@@ -148,7 +147,7 @@ namespace CustomerManagement.Core.Models
 
         public static ObservableCollection<Contact> GetContacts(string customer)
         {
-            return 
+            return
                 new ObservableCollection<Contact>(GetCustomerList().Where(obj => obj.ID == customer).First().Contacts);
         }
 
@@ -253,7 +252,7 @@ namespace CustomerManagement.Core.Models
         private static ObservableCollection<Customer> CachedCustomerList;
 
 		//
-        // File system Access 
+        // File system Access
 		//
         static ObservableCollection<Customer> GetCustomerList()
         {
@@ -307,7 +306,7 @@ namespace CustomerManagement.Core.Models
             using (StreamWriter writer = new StreamWriter(dataFilePath))
             {
                 var serializer = new XmlSerializer(typeof(List<Customer>));
-                serializer.Serialize(writer, customers); 
+                serializer.Serialize(writer, customers);
             }
         }
 

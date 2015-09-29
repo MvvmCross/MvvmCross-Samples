@@ -1,8 +1,7 @@
-using System.Windows.Input;
 using Cirrious.Conference.Core.Models;
 using Cirrious.CrossCore;
-using Cirrious.MvvmCross.Plugins.Share;
 using Cirrious.MvvmCross.ViewModels;
+using System.Windows.Input;
 
 namespace Cirrious.Conference.Core.ViewModels
 {
@@ -31,7 +30,7 @@ namespace Cirrious.Conference.Core.ViewModels
         private void ShowSession()
         {
             SessionWithFavoriteFlag session;
-            if (Service.Sessions == null 
+            if (Service.Sessions == null
                 || !Service.Sessions.TryGetValue(_key, out session))
             {
                 // TODO - some kind of error notification would be nice

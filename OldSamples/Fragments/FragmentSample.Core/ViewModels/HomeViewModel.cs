@@ -1,9 +1,9 @@
-﻿using System.Windows.Input;
-using Cirrious.MvvmCross.ViewModels;
+﻿using Cirrious.MvvmCross.ViewModels;
 using FragmentSample.Core.ViewModels.Dialog;
 using FragmentSample.Core.ViewModels.Form;
 using FragmentSample.Core.ViewModels.Shakespeare;
 using FragmentSample.Core.ViewModels.Tab;
+using System.Windows.Input;
 
 namespace FragmentSample.Core.ViewModels
 {
@@ -33,7 +33,7 @@ namespace FragmentSample.Core.ViewModels
 
         public ICommand ShowShakespeareCommand
         {
-            get { return new MvxCommand(() => ShowViewModel<TitlesViewModel>());}
+            get { return new MvxCommand(() => ShowViewModel<TitlesViewModel>()); }
         }
     }
 }

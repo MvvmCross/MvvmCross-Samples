@@ -1,15 +1,13 @@
 using System;
-using MonoTouch.UIKit;
-using System.Drawing;
 
 namespace GoodVibrations.Touch
 {
     public class MyViewController : UIViewController
     {
-        UIButton button;
-        int numClicks = 0;
-        float buttonWidth = 200;
-        float buttonHeight = 50;
+        private UIButton button;
+        private int numClicks = 0;
+        private float buttonWidth = 200;
+        private float buttonHeight = 50;
 
         public MyViewController()
         {
@@ -43,7 +41,5 @@ namespace GoodVibrations.Touch
 
             View.AddSubview(button);
         }
-
     }
 }
-

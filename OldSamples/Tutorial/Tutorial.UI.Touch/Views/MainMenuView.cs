@@ -1,13 +1,6 @@
-using System;
-using System.Collections.Generic;
-using Cirrious.MvvmCross.Binding.Touch;
-using Cirrious.MvvmCross.Binding.Touch.Views;
-using Cirrious.MvvmCross.Views;
 using MonoTouch.Foundation;
-using MonoTouch.UIKit;
+using System.Collections.Generic;
 using Tutorial.Core.ViewModels;
-using Cirrious.MvvmCross.Touch.Views;
-using Cirrious.MvvmCross.Binding.BindingContext;
 
 namespace Tutorial.UI.Touch.Views
 {
@@ -18,10 +11,11 @@ namespace Tutorial.UI.Touch.Views
         {
         }
 
-		public new MainMenuViewModel ViewModel {
-			get { return (MainMenuViewModel)base.ViewModel; }
-			set { base.ViewModel = value; }
-		}
+        public new MainMenuViewModel ViewModel
+        {
+            get { return (MainMenuViewModel)base.ViewModel; }
+            set { base.ViewModel = value; }
+        }
 
         public override void ViewDidLoad()
         {
@@ -30,7 +24,7 @@ namespace Tutorial.UI.Touch.Views
             Title = "Views";
 
             var tableSource = new TableViewSource(TableView);
-            
+
             this.AddBindings(
                 new Dictionary<object, string>()
                     {
@@ -46,7 +40,7 @@ namespace Tutorial.UI.Touch.Views
         public sealed class TableViewCell
             : MvxStandardTableViewCell
         {
-			public const string BindingText = @"TitleText Name;DetailText FullName";
+            public const string BindingText = @"TitleText Name;DetailText FullName";
 
             // if you don't want to JSON text, then you can use MvxBindingDescription in C#, instead:
             //public static readonly MvxBindingDescription[] BindingDescriptions
@@ -73,7 +67,7 @@ namespace Tutorial.UI.Touch.Views
 
         public class TableViewSource : MvxTableViewSource
         {
-            static readonly NSString CellIdentifier = new NSString("TableViewCell");
+            private static readonly NSString CellIdentifier = new NSString("TableViewCell");
 
             public TableViewSource(UITableView tableView)
                 : base(tableView)
@@ -91,7 +85,6 @@ namespace Tutorial.UI.Touch.Views
             }
         }
 
-        #endregion
+        #endregion Nested classes for the table
     }
 }
-

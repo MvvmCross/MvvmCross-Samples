@@ -1,8 +1,7 @@
+using Cirrious.CrossCore;
+using Mvvm.Framework;
 using System.ComponentModel;
 using System.Windows.Input;
-using Cirrious.CrossCore;
-using Cirrious.MvvmCross.Plugins.Location;
-using Mvvm.Framework;
 
 namespace Mvvm
 {
@@ -21,14 +20,15 @@ namespace Mvvm
         }
 
         private MvxGeoLocation _location;
+
         public MvxGeoLocation Location
         {
             get { return _location; }
             set
             {
-				Mvx.Trace("Location received {0}", _location);
+                Mvx.Trace("Location received {0}", _location);
                 _location = value;
-				OnBackgroundPropertyChanged("Location");
+                OnBackgroundPropertyChanged("Location");
             }
         }
 
@@ -46,18 +46,20 @@ namespace Mvvm
 
         public ICommand ToggleCommand
         {
-            get { return new SimpleCommand(() =>
-                {
-                    if (!Started)
-                    {
-                        _geoLocationWatcher.Start(new MvxGeoLocationOptions(), OnLocation, OnError);
-                    }
-                    else
-                    {
-                        _geoLocationWatcher.Stop();
-                    }
-                    Started = !Started;
-                }); 
+            get
+            {
+                return new SimpleCommand(() =>
+              {
+                  if (!Started)
+                  {
+                      _geoLocationWatcher.Start(new MvxGeoLocationOptions(), OnLocation, OnError);
+                  }
+                  else
+                  {
+                      _geoLocationWatcher.Stop();
+                  }
+                  Started = !Started;
+              });
             }
         }
 

@@ -9,7 +9,7 @@ namespace Cirrious.Conference.Core.ViewModels
         public HomeViewModel()
         {
             Welcome = new WelcomeViewModel();
-            Sessions = new SessionsViewModel();            
+            Sessions = new SessionsViewModel();
             Twitter = new TwitterViewModel();
             Favorites = new FavoritesViewModel();
         }

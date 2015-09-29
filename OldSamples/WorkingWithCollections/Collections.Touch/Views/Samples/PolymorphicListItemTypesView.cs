@@ -1,11 +1,7 @@
+using Cirrious.MvvmCross.Binding.BindingContext;
+using Collections.Core.ViewModels.Samples.ListItems;
 using System;
 using System.Collections.Generic;
-using Collections.Core.ViewModels.Samples.ListItems;
-using MonoTouch.Foundation;
-using MonoTouch.UIKit;
-using Cirrious.MvvmCross.Touch.Views;
-using Cirrious.MvvmCross.Binding.BindingContext;
-using Cirrious.MvvmCross.Binding.Touch.Views;
 
 namespace Collections.Touch
 {
@@ -66,7 +62,7 @@ namespace Collections.Touch
                     throw new ArgumentException("Unknown animal of type " + item.GetType().Name);
                 }
 
-                return (UITableViewCell) TableView.DequeueReusableCell(cellIdentifier, indexPath);
+                return (UITableViewCell)TableView.DequeueReusableCell(cellIdentifier, indexPath);
             }
         }
     }

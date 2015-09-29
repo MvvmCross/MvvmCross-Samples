@@ -1,7 +1,5 @@
-using System;
-using System.Threading;
-using Cirrious.MvvmCross.Plugins.Messenger;
 using FractalGen.Core.Messages;
+using System;
 
 namespace FractalGen.Core.Services
 {

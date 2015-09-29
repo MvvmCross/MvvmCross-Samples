@@ -1,7 +1,6 @@
-﻿using System.Windows.Input;
-using Cirrious.MvvmCross.ViewModels;
-using CrossUI.Core.Descriptions;
+﻿using Cirrious.MvvmCross.ViewModels;
 using CustomerManagement.Core.Models;
+using System.Windows.Input;
 
 namespace CustomerManagement.Core.ViewModels
 {

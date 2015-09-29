@@ -1,5 +1,4 @@
 using Android.Views;
-using Cirrious.MvvmCross.Binding.Droid.Views;
 
 namespace Mvvm.Framework
 {

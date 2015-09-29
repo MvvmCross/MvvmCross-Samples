@@ -1,5 +1,4 @@
 using Cirrious.MvvmCross.ViewModels;
-using Cirrious.MvvmCross.WindowsStore.Platform;
 using Windows.UI.Xaml.Controls;
 
 namespace DailyDilbert.Store

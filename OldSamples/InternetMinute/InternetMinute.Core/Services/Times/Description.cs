@@ -1,8 +1,4 @@
-﻿using System;
-using System.Linq;
-using System.Text;
-
-namespace InternetMinute.Core.Services.Times
+﻿namespace InternetMinute.Core.Services.Times
 {
     public class Description
     {

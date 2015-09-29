@@ -1,5 +1,3 @@
-using MonoTouch.UIKit;
-
 namespace Collections.Touch
 {
     public class Application

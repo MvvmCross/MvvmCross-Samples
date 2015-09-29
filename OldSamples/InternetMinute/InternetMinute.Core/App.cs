@@ -11,7 +11,7 @@ namespace InternetMinute.Core
                 .EndingWith("Service")
                 .AsInterfaces()
                 .RegisterAsSingleton();
-				
+
             RegisterAppStart<HomeViewModel>();
         }
     }

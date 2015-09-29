@@ -1,6 +1,6 @@
+using Cirrious.MvvmCross.ViewModels;
 using System;
 using System.Windows.Input;
-using Cirrious.MvvmCross.ViewModels;
 
 namespace BestSellers.ViewModels
 {
@@ -53,7 +53,7 @@ namespace BestSellers.ViewModels
 
         public ICommand ViewDetailCommand
         {
-            get { return new MvxCommand(() => ShowViewModel<BookViewModel>(new { category= CategoryEncoded, book=ISBN })); }
+            get { return new MvxCommand(() => ShowViewModel<BookViewModel>(new { category = CategoryEncoded, book = ISBN })); }
         }
     }
 }

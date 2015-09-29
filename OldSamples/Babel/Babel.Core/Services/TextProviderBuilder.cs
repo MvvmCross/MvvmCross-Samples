@@ -1,9 +1,8 @@
-﻿using System;
+﻿using Cirrious.CrossCore.IoC;
+using Cirrious.MvvmCross.Plugins.JsonLocalisation;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using Cirrious.CrossCore.IoC;
-using Cirrious.MvvmCross.Plugins.JsonLocalisation;
+using System.Reflection;
 
 namespace Babel.Core.Services
 {
@@ -20,6 +19,7 @@ namespace Babel.Core.Services
             get
             {
                 var dictionary = this.GetType()
+                    .GetTypeInfo()
                     .Assembly
                     .CreatableTypes()
                     .Where(t => t.Name.EndsWith("ViewModel"))

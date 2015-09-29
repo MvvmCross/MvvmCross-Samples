@@ -1,12 +1,4 @@
-using System;
-using System.Collections.Generic;
 using Cirrious.CrossCore.Plugins;
-using Cirrious.MvvmCross.Platform;
-using Cirrious.MvvmCross.Plugins.Visibility;
-using Cirrious.MvvmCross.Touch;
-using Cirrious.MvvmCross.Touch.Platform;
-using Cirrious.MvvmCross.Binding.Touch;
-using Cirrious.MvvmCross.Touch.Views.Presenters;
 using Cirrious.MvvmCross.ViewModels;
 
 namespace BestSellers.Touch
@@ -42,12 +34,12 @@ namespace BestSellers.Touch
             return app;
         }
 
-		protected override void InitializeLastChance()
-		{
-			// create a new error displayer - it will hook itself into the framework
-			var errorDisplayer = new ErrorDisplayer();
+        protected override void InitializeLastChance()
+        {
+            // create a new error displayer - it will hook itself into the framework
+            var errorDisplayer = new ErrorDisplayer();
 
-			base.InitializeLastChance();
-		}
+            base.InitializeLastChance();
+        }
     }
 }

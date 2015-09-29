@@ -7,8 +7,8 @@ namespace FractalGen.UI.Store.UIServices
     {
         public DisplayDimensionsService()
         {
-            Height = (int) (Window.Current.Bounds.Height);
-            Width = (int) (Window.Current.Bounds.Width);
+            Height = (int)(Window.Current.Bounds.Height);
+            Width = (int)(Window.Current.Bounds.Width);
         }
 
         public int Height { get; set; }

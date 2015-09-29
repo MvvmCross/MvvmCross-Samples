@@ -98,7 +98,7 @@
     </Reference>
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
-    <Reference Include="monotouch" />
+    <Reference Include="Xamarin.iOS" />
     <Reference Include="Cirrious.MvvmCross.Plugins.Color">
       <HintPath>..\..\Lib\Mvx\Portable\Cirrious.MvvmCross.Plugins.Color.dll</HintPath>
     </Reference>

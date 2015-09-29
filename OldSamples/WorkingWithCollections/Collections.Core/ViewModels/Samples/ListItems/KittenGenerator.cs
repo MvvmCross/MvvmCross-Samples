@@ -32,10 +32,10 @@ namespace Collections.Core.ViewModels.Samples.ListItems
         public Kitten CreateNewKitten()
         {
             return new Kitten
-                {
-                    Name = _names[_random.Next(_names.Count)],
-                    ImageUrl = string.Format("http://placekitten.com/{0}/{0}", _random.Next(20) + 300)
-                };
+            {
+                Name = _names[_random.Next(_names.Count)],
+                ImageUrl = string.Format("http://placekitten.com/{0}/{0}", _random.Next(20) + 300)
+            };
         }
     }
 }

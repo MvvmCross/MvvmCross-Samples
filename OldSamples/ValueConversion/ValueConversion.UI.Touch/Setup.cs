@@ -1,19 +1,14 @@
+using Cirrious.MvvmCross.ViewModels;
 using System.Collections.Generic;
 using System.Reflection;
-using Cirrious.CrossCore.Plugins;
-using Cirrious.MvvmCross.Plugins.Color;
-using Cirrious.MvvmCross.ViewModels;
 using ValueConversion.Core;
-using Cirrious.MvvmCross.Touch.Platform;
-using Cirrious.MvvmCross.Touch.Views.Presenters;
-using Cirrious.MvvmCross.Plugins.Visibility;
 
 namespace ValueConversion.UI.Touch
 {
     public class Setup : MvxTouchSetup
     {
         public Setup(MvxApplicationDelegate applicationDelegate, IMvxTouchViewPresenter presenter)
-			: base(applicationDelegate, presenter)
+            : base(applicationDelegate, presenter)
         {
         }
 
@@ -22,8 +17,8 @@ namespace ValueConversion.UI.Touch
             get
             {
                 var toReturn = base.ValueConverterAssemblies;
-                toReturn.Add(typeof (MvxNativeColorValueConverter).Assembly);
-                toReturn.Add(typeof (MvxVisibilityValueConverter).Assembly);
+                toReturn.Add(typeof(MvxNativeColorValueConverter).Assembly);
+                toReturn.Add(typeof(MvxVisibilityValueConverter).Assembly);
                 return toReturn;
             }
         }
@@ -42,13 +37,13 @@ namespace ValueConversion.UI.Touch
 
         public override void LoadPlugins(IMvxPluginManager pluginManager)
         {
-			pluginManager.EnsurePluginLoaded<Cirrious.MvvmCross.Plugins.Color.PluginLoader>();
+            pluginManager.EnsurePluginLoaded<Cirrious.MvvmCross.Plugins.Color.PluginLoader>();
             pluginManager.EnsurePluginLoaded<Cirrious.MvvmCross.Plugins.Visibility.PluginLoader>();
             base.LoadPlugins(pluginManager);
         }
     }
 
-    // The UIApplicationDelegate for the application. This class is responsible for launching the 
-    // User Interface of the application, as well as listening (and optionally responding) to 
+    // The UIApplicationDelegate for the application. This class is responsible for launching the
+    // User Interface of the application, as well as listening (and optionally responding) to
     // application events from iOS.
 }

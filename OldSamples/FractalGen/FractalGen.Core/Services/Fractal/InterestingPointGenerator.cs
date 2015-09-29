@@ -171,12 +171,12 @@ namespace FractalGen.Core.Services.Fractal
             var which = _random.Next(_boundaries.GetLength(0));
             var boundary = _boundaries[which];
             return new Limits
-                {
-                    XMin = boundary[0],
-                    XMax = boundary[1],
-                    YMin = boundary[2],
-                    YMax = boundary[3]
-                };
+            {
+                XMin = boundary[0],
+                XMax = boundary[1],
+                YMin = boundary[2],
+                YMax = boundary[3]
+            };
         }
     }
 }

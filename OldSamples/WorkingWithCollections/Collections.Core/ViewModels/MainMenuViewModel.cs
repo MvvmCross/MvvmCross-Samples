@@ -1,13 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Windows.Input;
-using Cirrious.MvvmCross.ViewModels;
+﻿using Cirrious.MvvmCross.ViewModels;
 using Collections.Core.ViewModels.Samples.LargeDynamic;
 using Collections.Core.ViewModels.Samples.LargeFixed;
 using Collections.Core.ViewModels.Samples.MultipleListItemTypes;
 using Collections.Core.ViewModels.Samples.SmallDynamic;
 using Collections.Core.ViewModels.Samples.SmallFixed;
 using Collections.Core.ViewModels.Samples.SpecificPositions;
+using System;
+using System.Collections.Generic;
+using System.Windows.Input;
 
 namespace Collections.Core.ViewModels
 {

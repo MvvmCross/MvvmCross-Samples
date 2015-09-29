@@ -1,11 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Runtime.Serialization;
-using System.Text;
 using System.Threading.Tasks;
-using Windows.ApplicationModel;
 using Windows.Storage;
 using Windows.Storage.Streams;
 using Windows.UI.Xaml;
@@ -133,8 +130,10 @@ namespace TwitterSearch.UI.WinRT.Common
 
         private static DependencyProperty FrameSessionStateKeyProperty =
             DependencyProperty.RegisterAttached("_FrameSessionStateKey", typeof(String), typeof(SuspensionManager), null);
+
         private static DependencyProperty FrameSessionStateProperty =
             DependencyProperty.RegisterAttached("_FrameSessionState", typeof(Dictionary<String, Object>), typeof(SuspensionManager), null);
+
         private static List<WeakReference<Frame>> _registeredFrames = new List<WeakReference<Frame>>();
 
         /// <summary>
@@ -243,6 +242,7 @@ namespace TwitterSearch.UI.WinRT.Common
             frameState["Navigation"] = frame.GetNavigationState();
         }
     }
+
     public class SuspensionManagerException : Exception
     {
         public SuspensionManagerException()
@@ -252,7 +252,6 @@ namespace TwitterSearch.UI.WinRT.Common
         public SuspensionManagerException(Exception e)
             : base("SuspensionManager failed", e)
         {
-
         }
     }
 }

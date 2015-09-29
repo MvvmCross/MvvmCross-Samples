@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using Cirrious.MvvmCross.ViewModels;
 using System.Windows.Input;
-using Cirrious.MvvmCross.ViewModels;
 
 namespace FragmentSample.Core.ViewModels.Shakespeare
 {
@@ -29,7 +25,7 @@ namespace FragmentSample.Core.ViewModels.Shakespeare
 
         public ICommand ShowCommand
         {
-            get 
+            get
             {
                 return new MvxCommand<string>(title =>
                     {

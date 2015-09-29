@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Cirrious.CrossCore.Plugins;
-using Cirrious.MvvmCross.ViewModels;
-using Cirrious.MvvmCross.WindowsStore.Platform;
+﻿using Cirrious.MvvmCross.ViewModels;
 using TwitterSearch.Core;
 using Windows.UI.Xaml.Controls;
 

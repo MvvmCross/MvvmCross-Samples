@@ -1,5 +1,4 @@
 using System;
-using MonoTouch.UIKit;
 
 namespace Collections.Touch
 {
@@ -33,6 +32,7 @@ namespace Collections.Touch
                 case 0:
                     AddKittensPressed();
                     break;
+
                 case 1:
                     KillKittensPressed();
                     break;
@@ -40,6 +40,7 @@ namespace Collections.Touch
         }
 
         protected abstract void AddKittensPressed();
+
         protected abstract void KillKittensPressed();
     }
 }

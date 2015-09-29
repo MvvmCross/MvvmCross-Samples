@@ -6,6 +6,7 @@ namespace CompositeControl.Core.ViewModels
         : MvxViewModel
     {
         private string _firstName;
+
         public string FirstName
         {
             get { return _firstName; }
@@ -13,11 +14,12 @@ namespace CompositeControl.Core.ViewModels
         }
 
         private string _secondName;
+
         public string SecondName
         {
             get { return _secondName; }
             set { _secondName = value; RaisePropertyChanged(() => SecondName); RaisePropertyChanged(() => FullName); }
-        }        
+        }
 
         public string FullName
         {

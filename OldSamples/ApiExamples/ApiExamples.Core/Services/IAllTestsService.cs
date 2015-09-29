@@ -6,6 +6,7 @@ namespace ApiExamples.Core.ViewModels
     public interface IAllTestsService
     {
         Type NextViewModelType(TestViewModel currentViewModel);
+
         IList<Type> All { get; }
     }
 }

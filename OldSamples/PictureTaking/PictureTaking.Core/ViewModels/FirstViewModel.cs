@@ -1,11 +1,11 @@
-using System.IO;
 using Cirrious.MvvmCross.Plugins.PictureChooser;
 using Cirrious.MvvmCross.ViewModels;
+using System.IO;
 
 namespace PictureTaking.Core.ViewModels
 {
-    public class FirstViewModel 
-		: MvxViewModel
+    public class FirstViewModel
+        : MvxViewModel
     {
         private readonly IMvxPictureChooserTask _pictureChooserTask;
 
@@ -15,6 +15,7 @@ namespace PictureTaking.Core.ViewModels
         }
 
         private Cirrious.MvvmCross.ViewModels.MvxCommand _takePictureCommand;
+
         public System.Windows.Input.ICommand TakePictureCommand
         {
             get
@@ -30,6 +31,7 @@ namespace PictureTaking.Core.ViewModels
         }
 
         private Cirrious.MvvmCross.ViewModels.MvxCommand _choosePictureCommand;
+
         public System.Windows.Input.ICommand ChoosePictureCommand
         {
             get
@@ -41,16 +43,16 @@ namespace PictureTaking.Core.ViewModels
 
         private void DoChoosePicture()
         {
-            _pictureChooserTask.ChoosePictureFromLibrary(400, 95, OnPicture, () => {});
+            _pictureChooserTask.ChoosePictureFromLibrary(400, 95, OnPicture, () => { });
         }
 
         private byte[] _bytes;
+
         public byte[] Bytes
         {
             get { return _bytes; }
             set { _bytes = value; RaisePropertyChanged(() => Bytes); }
         }
-        
 
         private void OnPicture(Stream pictureStream)
         {

@@ -1,14 +1,6 @@
-using System;
-using System.Collections.Generic;
-using System.Drawing;
-using Cirrious.MvvmCross.Binding.Touch;
-using MonoTouch.Foundation;
-using MonoTouch.UIKit;
 using Cirrious.Conference.Core.ViewModels;
-using Cirrious.MvvmCross.Binding.Touch.Views;
-using Cirrious.MvvmCross.Views;
-using Cirrious.MvvmCross.Touch.Views;
 using Cirrious.MvvmCross.Binding.BindingContext;
+using System.Collections.Generic;
 
 namespace Cirrious.Conference.UI.Touch
 {
@@ -19,10 +11,11 @@ namespace Cirrious.Conference.UI.Touch
         {
         }
 
-		public new SessionViewModel ViewModel {
-			get { return (SessionViewModel)base.ViewModel; }
-			set { base.ViewModel = value; }
-		}
+        public new SessionViewModel ViewModel
+        {
+            get { return (SessionViewModel)base.ViewModel; }
+            set { base.ViewModel = value; }
+        }
 
         public override void ViewDidLoad()
         {
@@ -43,7 +36,6 @@ namespace Cirrious.Conference.UI.Touch
                                  });
 
             NavigationItem.SetRightBarButtonItem(new UIBarButtonItem("Tweet", UIBarButtonItemStyle.Bordered, (sender, e) => ViewModel.DoShare()), false);
-
         }
 
         public override void ViewDidUnload()
@@ -65,4 +57,3 @@ namespace Cirrious.Conference.UI.Touch
         }
     }
 }
-

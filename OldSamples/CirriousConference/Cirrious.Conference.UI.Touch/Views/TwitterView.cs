@@ -1,12 +1,6 @@
-using System.Collections.Generic;
 using Cirrious.Conference.Core.ViewModels.HomeViewModels;
-using Cirrious.MvvmCross.Binding.Touch;
-using Cirrious.MvvmCross.Binding.Touch.Views;
-using Cirrious.MvvmCross.Views;
-using MonoTouch.Foundation;
-using MonoTouch.UIKit;
-using Cirrious.MvvmCross.Touch.Views;
 using Cirrious.MvvmCross.Binding.BindingContext;
+using System.Collections.Generic;
 
 namespace Cirrious.Conference.UI.Touch.Views
 {
@@ -15,12 +9,13 @@ namespace Cirrious.Conference.UI.Touch.Views
     {
         private UIActivityIndicatorView _activityView;
 
-		public new TwitterViewModel ViewModel {
-			get { return (TwitterViewModel)base.ViewModel; }
-			set { base.ViewModel = value; }
-		}
+        public new TwitterViewModel ViewModel
+        {
+            get { return (TwitterViewModel)base.ViewModel; }
+            set { base.ViewModel = value; }
+        }
 
-        FoldingTableViewController _tableView;
+        private FoldingTableViewController _tableView;
 
         public override void ViewDidLoad()
         {
@@ -33,7 +28,7 @@ namespace Cirrious.Conference.UI.Touch.Views
             //View.BringSubviewToFront(_activityView);
 
             _tableView = new FoldingTableViewController(new System.Drawing.RectangleF(0, 0, 320, 367), UITableViewStyle.Plain);
-			var source = new TableSource(_tableView.TableView);
+            var source = new TableSource(_tableView.TableView);
 
             this.AddBindings(new Dictionary<object, string>()
                                  {
@@ -47,22 +42,21 @@ namespace Cirrious.Conference.UI.Touch.Views
             _tableView.TableView.ReloadData();
             this.Add(_tableView.View);
 
-
             NavigationItem.SetRightBarButtonItem(new UIBarButtonItem("Tweet", UIBarButtonItemStyle.Bordered, (sender, e) => ViewModel.DoShareGeneral()), false);
         }
 
-		public class TableSource : MvxSimpleTableViewSource
-		{
-			public TableSource (UITableView tableView)
-				: base(tableView, TweetCell3.Identifier, TweetCell3.Identifier)
-			{
-				tableView.RegisterNibForCellReuse(UINib.FromName(TweetCell3.Identifier, NSBundle.MainBundle), TweetCell3.Identifier);
-			}
+        public class TableSource : MvxSimpleTableViewSource
+        {
+            public TableSource(UITableView tableView)
+                : base(tableView, TweetCell3.Identifier, TweetCell3.Identifier)
+            {
+                tableView.RegisterNibForCellReuse(UINib.FromName(TweetCell3.Identifier, NSBundle.MainBundle), TweetCell3.Identifier);
+            }
 
-			public override float GetHeightForRow (UITableView tableView, NSIndexPath indexPath)
-			{
-				return 100.0f;
-			}
-		}
+            public override float GetHeightForRow(UITableView tableView, NSIndexPath indexPath)
+            {
+                return 100.0f;
+            }
+        }
     }
 }

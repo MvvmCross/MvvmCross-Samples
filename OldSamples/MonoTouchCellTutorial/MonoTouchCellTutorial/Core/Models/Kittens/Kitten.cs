@@ -2,6 +2,6 @@
 {
     public class Kitten : Animal
     {
-		public bool LitterTrained { get; set; }
+        public bool LitterTrained { get; set; }
     }
 }

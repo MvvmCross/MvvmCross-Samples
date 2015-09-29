@@ -13,46 +13,41 @@
 
         <Grid.ChildrenTransitions>
             <TransitionCollection>
-                <EntranceThemeTransition/>
+                <EntranceThemeTransition />
             </TransitionCollection>
         </Grid.ChildrenTransitions>
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
         <!-- Title Panel -->
         <StackPanel Grid.Row="0" Margin="19,0,0,0">
-            <TextBlock Text="MY APPLICATION" Style="{ThemeResource TitleTextBlockStyle}" Margin="0,12,0,0"/>
-            <TextBlock Text="Tip View" Margin="0,-6.5,0,26.5" Style="{ThemeResource HeaderTextBlockStyle}" CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}"/>
+            <TextBlock Text="MY APPLICATION" Style="{ThemeResource TitleTextBlockStyle}" Margin="0,12,0,0" />
+            <TextBlock Text="Tip View" Margin="0,-6.5,0,26.5" Style="{ThemeResource HeaderTextBlockStyle}" CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}" />
         </StackPanel>
 
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="19,9.5,19,0">
             <StackPanel>
                 <TextBlock
-                    Text="SubTotal"
-                    />
-                <TextBox 
-                    Text="{Binding SubTotal, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
-                    />
+                    Text="SubTotal" />
+                <TextBox
+                    Text="{Binding SubTotal, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
 
                 <TextBlock
-                    Text="Generosity"
-                    />
-                <Slider 
-                    Value="{Binding Generosity,Mode=TwoWay}" 
-                    SmallChange="1" 
-                    LargeChange="10" 
-                    Minimum="0" 
+                    Text="Generosity" />
+                <Slider
+                    Value="{Binding Generosity,Mode=TwoWay}"
+                    SmallChange="1"
+                    LargeChange="10"
+                    Minimum="0"
                     Maximum="100" />
 
                 <TextBlock
-                    Text="Tip"
-                    />
-                <TextBlock 
-                    Text="{Binding Tip}" 
-                    />
+                    Text="Tip" />
+                <TextBlock
+                    Text="{Binding Tip}" />
             </StackPanel>
         </Grid>
     </Grid>

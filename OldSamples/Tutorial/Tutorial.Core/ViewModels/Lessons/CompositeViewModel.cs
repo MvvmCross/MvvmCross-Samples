@@ -1,4 +1,3 @@
-using System;
 using Cirrious.MvvmCross.ViewModels;
 
 namespace Tutorial.Core.ViewModels.Lessons

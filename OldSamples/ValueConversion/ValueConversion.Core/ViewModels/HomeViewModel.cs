@@ -1,7 +1,7 @@
+using Cirrious.MvvmCross.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Windows.Input;
-using Cirrious.MvvmCross.ViewModels;
 
 namespace ValueConversion.Core.ViewModels
 {
@@ -49,7 +49,7 @@ namespace ValueConversion.Core.ViewModels
         public class MenuItem<TViewModel> : MenuItem
         {
             public MenuItem(HomeViewModel parent)
-                : base(typeof (TViewModel), parent)
+                : base(typeof(TViewModel), parent)
             {
             }
         }

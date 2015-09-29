@@ -203,6 +203,7 @@
         }
 
         private string _title;
+
         public string Title
         {
             get { return _title; }
@@ -210,10 +211,11 @@
         }
 
         private string _body;
+
         public string Body
         {
             get { return _body; }
             set { _body = value; RaisePropertyChanged(() => Body); }
-        }        
+        }
     }
 }

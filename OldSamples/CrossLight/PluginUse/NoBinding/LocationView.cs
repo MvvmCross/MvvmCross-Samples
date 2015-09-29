@@ -1,10 +1,10 @@
-﻿using System;
-using System.ComponentModel;
-using Android.App;
+﻿using Android.App;
 using Android.OS;
 using Android.Widget;
 using Cirrious.CrossCore;
 using NoBinding.Framework;
+using System;
+using System.ComponentModel;
 
 namespace NoBinding
 {
@@ -37,13 +37,13 @@ namespace NoBinding
             SetContentView(Resource.Layout.Main);
 
             // get the controls
-             _latText = this.FindViewById<TextView>(Resource.Id.LatText);
-             _lngText = this.FindViewById<TextView>(Resource.Id.LngText);
-             _startedText = this.FindViewById<TextView>(Resource.Id.StartedText);
-             _errorText = this.FindViewById<TextView>(Resource.Id.ErrorText);
-             _button = this.FindViewById<Button>(Resource.Id.ToggleButton);
+            _latText = this.FindViewById<TextView>(Resource.Id.LatText);
+            _lngText = this.FindViewById<TextView>(Resource.Id.LngText);
+            _startedText = this.FindViewById<TextView>(Resource.Id.StartedText);
+            _errorText = this.FindViewById<TextView>(Resource.Id.ErrorText);
+            _button = this.FindViewById<Button>(Resource.Id.ToggleButton);
 
-             // bind to click
+            // bind to click
             _button.Click += ButtonOnClick;
 
             // update all UI
@@ -62,9 +62,11 @@ namespace NoBinding
                 case "Location":
                     UpdateLocation();
                     return;
+
                 case "Error":
                     UpdateError();
                     return;
+
                 case "Started":
                     UpdateStarted();
                     return;
@@ -104,4 +106,3 @@ namespace NoBinding
         }
     }
 }
-

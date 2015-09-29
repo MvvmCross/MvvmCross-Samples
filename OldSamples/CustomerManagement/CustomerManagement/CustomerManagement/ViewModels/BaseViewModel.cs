@@ -6,16 +6,16 @@ using System.Windows.Input;
 
 namespace CustomerManagement.Core.ViewModels
 {
-    public class BaseViewModel 
-        : MvxViewModel        
+    public class BaseViewModel
+        : MvxViewModel
     {
-		public ICommand CloseCommand
-		{
-			get
-			{
-				return new MvxCommand(RequestClose);
-			}
-		}
+        public ICommand CloseCommand
+        {
+            get
+            {
+                return new MvxCommand(RequestClose);
+            }
+        }
 
         protected void RequestClose()
         {

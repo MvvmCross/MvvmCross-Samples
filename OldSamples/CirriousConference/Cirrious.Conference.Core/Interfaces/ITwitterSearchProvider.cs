@@ -1,6 +1,6 @@
+using Cirrious.Conference.Core.Models.Twitter;
 using System;
 using System.Collections.Generic;
-using Cirrious.Conference.Core.Models.Twitter;
 
 namespace Cirrious.Conference.Core.Interfaces
 {

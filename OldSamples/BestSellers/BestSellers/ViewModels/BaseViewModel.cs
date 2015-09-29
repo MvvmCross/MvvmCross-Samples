@@ -1,17 +1,18 @@
-using System;
-using System.IO;
-using System.Net;
 using Cirrious.CrossCore;
 using Cirrious.CrossCore.Platform;
 using Cirrious.MvvmCross.ViewModels;
+using System;
+using System.IO;
+using System.Net;
 
 namespace BestSellers.ViewModels
 {
-    public class BaseViewModel 
+    public class BaseViewModel
         : MvxViewModel
-          
+
     {
         private bool _isLoading;
+
         public bool IsLoading
         {
             get { return _isLoading; }

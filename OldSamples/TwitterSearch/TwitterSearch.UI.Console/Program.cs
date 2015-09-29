@@ -1,20 +1,16 @@
-﻿using System.Linq;
-using System.Text;
-using Cirrious.CrossCore;
-using Cirrious.MvvmCross.Console.Platform;
-using Cirrious.MvvmCross.ViewModels;
+﻿using Cirrious.MvvmCross.ViewModels;
 
 namespace TwitterSearch.UI.Console
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             var p = new Program();
             p.Run();
         }
 
-        void Run()
+        private void Run()
         {
             // initialize app
             var setup = new Setup();

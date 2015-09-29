@@ -1,6 +1,6 @@
-﻿using System;
+﻿using Cirrious.CrossCore.UI;
+using System;
 using System.Collections.Generic;
-using Cirrious.CrossCore.UI;
 
 namespace FractalGen.Core.Services.Fractal
 {
@@ -61,9 +61,9 @@ namespace FractalGen.Core.Services.Fractal
         private void ColorArrayHSVGeneric(double startH, double endH, double s, double v)
         {
             _colors = new List<MvxColor>();
-            double increment = (endH - startH)/500;
+            double increment = (endH - startH) / 500;
             for (int i = 0; i < 500; i++)
-                _colors.Add(FromHSV(i*increment + startH, s, v));
+                _colors.Add(FromHSV(i * increment + startH, s, v));
         }
 
         private MvxColor FromHSV(double h, double s, double v)
@@ -71,14 +71,14 @@ namespace FractalGen.Core.Services.Fractal
             // see http://www.tech-faq.com/hsv.html
             int r, g, b;
             _converter.HsvToRgb(h, s, v, out r, out g, out b);
-            return new MvxColor(255, (byte) (r), (byte) (g), (byte) (b));
+            return new MvxColor(255, (byte)(r), (byte)(g), (byte)(b));
         }
 
         private void ColorArrayOne()
         {
             _colors = new List<MvxColor>();
             for (int i = 0; i < 128; i++)
-                _colors.Add(new MvxColor((byte) (255 - (i*2)), (byte) (255 - (i*2)), 0));
+                _colors.Add(new MvxColor((byte)(255 - (i * 2)), (byte)(255 - (i * 2)), 0));
             //for (int i = 0; i < 128; i++)
             //    _colors.Add(new MvxColor((byte)(i * 2), (byte)(i * 2), 0));
         }
@@ -95,14 +95,14 @@ namespace FractalGen.Core.Services.Fractal
             for (int i = 0; i < 64; i++)
             {
                 _colors.Add(new MvxColor(red, green, blue));
-                green = (byte) (green + 4);
+                green = (byte)(green + 4);
             }
 
             green = 255;
             for (int i = 0; i < 64; i++)
             {
                 _colors.Add(new MvxColor(red, green, blue));
-                red = (byte) (red - 4);
+                red = (byte)(red - 4);
             }
             red = 0;
 
@@ -110,14 +110,14 @@ namespace FractalGen.Core.Services.Fractal
             for (int i = 0; i < 64; i++)
             {
                 _colors.Add(new MvxColor(red, green, blue));
-                blue = (byte) (blue + 4);
+                blue = (byte)(blue + 4);
             }
 
             blue = 255;
             for (int i = 0; i < 64; i++)
             {
                 _colors.Add(new MvxColor(red, green, blue));
-                green = (byte) (green - 4);
+                green = (byte)(green - 4);
             }
         }
 
@@ -132,14 +132,14 @@ namespace FractalGen.Core.Services.Fractal
             for (int i = 0; i < 64; i++)
             {
                 _colors.Add(new MvxColor(red, green, blue));
-                red = (byte) (red + 4);
+                red = (byte)(red + 4);
             }
 
             red = 255;
             for (int i = 0; i < 64; i++)
             {
                 _colors.Add(new MvxColor(red, green, blue));
-                blue = (byte) (blue + 4);
+                blue = (byte)(blue + 4);
             }
             red = 255;
             blue = 255;
@@ -147,8 +147,8 @@ namespace FractalGen.Core.Services.Fractal
             for (int i = 0; i < 64; i++)
             {
                 _colors.Add(new MvxColor(red, green, blue));
-                blue = (byte) (blue - 4);
-                green = (byte) (green + 4);
+                blue = (byte)(blue - 4);
+                green = (byte)(green + 4);
             }
             green = 255;
             blue = 0;
@@ -156,7 +156,7 @@ namespace FractalGen.Core.Services.Fractal
             for (int i = 0; i < 64; i++)
             {
                 _colors.Add(new MvxColor(red, green, blue));
-                blue = (byte) (blue + 4);
+                blue = (byte)(blue + 4);
             }
         }
 
@@ -164,7 +164,7 @@ namespace FractalGen.Core.Services.Fractal
         {
             _colors = new List<MvxColor>();
             for (int i = 0; i < 128; i++)
-                _colors.Add(new MvxColor((byte) (255 - (i*2)), 0, (byte) (255 - (i*2))));
+                _colors.Add(new MvxColor((byte)(255 - (i * 2)), 0, (byte)(255 - (i * 2))));
             //for (int i = 0; i < 128; i++)
             //    _colors.Add(new MvxColor((byte)(i * 2), 0, (byte)(i * 2)));
         }
@@ -173,7 +173,7 @@ namespace FractalGen.Core.Services.Fractal
         {
             _colors = new List<MvxColor>();
             for (int i = 0; i < 128; i++)
-                _colors.Add(new MvxColor(0, (byte) (255 - (i*2)), (byte) (255 - (i*2))));
+                _colors.Add(new MvxColor(0, (byte)(255 - (i * 2)), (byte)(255 - (i * 2))));
             //for (int i = 0; i < 128; i++)
             //    _colors.Add(new MvxColor(0, (byte) (i*2), (byte) (i*2)));
         }
@@ -182,7 +182,7 @@ namespace FractalGen.Core.Services.Fractal
         {
             _colors = new List<MvxColor>();
             for (int i = 0; i < 128; i++)
-                _colors.Add(new MvxColor((byte) (255 - (i*2)), (byte) (255 - (i*2)), (byte) (255 - (i*2))));
+                _colors.Add(new MvxColor((byte)(255 - (i * 2)), (byte)(255 - (i * 2)), (byte)(255 - (i * 2))));
             //for (int i = 0; i < 128; i++)
             //    _colors.Add(new MvxColor((byte)(i * 2), (byte)(i * 2), (byte)(i * 2)));
         }
@@ -191,8 +191,8 @@ namespace FractalGen.Core.Services.Fractal
         {
             _colors = new List<MvxColor>();
             for (int i = 0; i < 128; i++)
-                _colors.Add(new MvxColor((byte) (red*(255 - (i*2))), (byte) (green*(255 - (i*2))),
-                                         (byte) (blue*(255 - (i*2)))));
+                _colors.Add(new MvxColor((byte)(red * (255 - (i * 2))), (byte)(green * (255 - (i * 2))),
+                                         (byte)(blue * (255 - (i * 2)))));
             //for (int i = 0; i < 128; i++)
             //    _colors.Add(new MvxColor((byte)(red * i * 2), (byte)(green * i * 2), (byte)(blue * i * 2)));
         }

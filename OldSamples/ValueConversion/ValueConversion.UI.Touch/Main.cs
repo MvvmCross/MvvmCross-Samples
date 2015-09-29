@@ -1,5 +1,3 @@
-using MonoTouch.UIKit;
-
 namespace ValueConversion.UI.Touch
 {
     public class Application

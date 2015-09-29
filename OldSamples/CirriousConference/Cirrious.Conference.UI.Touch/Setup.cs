@@ -1,17 +1,8 @@
 using Cirrious.Conference.Core;
-using Cirrious.Conference.Core.Converters;
 using Cirrious.Conference.UI.Touch.Bindings;
-using Cirrious.CrossCore.Plugins;
 using Cirrious.MvvmCross.Binding.Bindings.Target.Construction;
-using Cirrious.MvvmCross.Binding.Touch;
-using Cirrious.MvvmCross.Touch;
-using Cirrious.MvvmCross.Touch.Platform;
-using Cirrious.MvvmCross.Binding.Binders;
-using Cirrious.MvvmCross.Touch.Views.Presenters;
-using Cirrious.MvvmCross.ViewModels;
-using MonoTouch.UIKit;
-using Cirrious.MvvmCross.Platform;
 using Cirrious.MvvmCross.Localization;
+using Cirrious.MvvmCross.ViewModels;
 
 namespace Cirrious.Conference.UI.Touch
 {
@@ -45,15 +36,14 @@ namespace Cirrious.Conference.UI.Touch
             registry.RegisterFactory(new MvxCustomBindingFactory<SessionCell2>("IsFavorite", (cell) => new FavoritesSessionCellBinding(cell)));
         }
 
-		protected override System.Collections.Generic.List<System.Reflection.Assembly> ValueConverterAssemblies 
-		{
-			get 
-			{
-				var toReturn = base.ValueConverterAssemblies;
-				toReturn.Add(typeof(MvxLanguageConverter).Assembly);
-				return toReturn;
-			}
-		}
+        protected override System.Collections.Generic.List<System.Reflection.Assembly> ValueConverterAssemblies
+        {
+            get
+            {
+                var toReturn = base.ValueConverterAssemblies;
+                toReturn.Add(typeof(MvxLanguageConverter).Assembly);
+                return toReturn;
+            }
+        }
     }
 }
-

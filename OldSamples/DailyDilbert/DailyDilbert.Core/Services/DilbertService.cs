@@ -49,10 +49,10 @@ namespace DailyDilbert.Core
             var items = xml.Descendants("item");
             var list = items.Select(x =>
                                     new DilbertItem()
-                                        {
-                                            Title = x.Element("title").Value,
-                                            StripUrl = ExtractHttpImg(x.Element("description").Value)
-                                        }).ToList();
+                                    {
+                                        Title = x.Element("title").Value,
+                                        StripUrl = ExtractHttpImg(x.Element("description").Value)
+                                    }).ToList();
             return list;
         }
 

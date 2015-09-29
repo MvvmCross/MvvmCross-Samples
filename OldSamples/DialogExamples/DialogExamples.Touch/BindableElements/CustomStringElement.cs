@@ -7,7 +7,7 @@ namespace DialogExamples.Touch.BindableElements
     public class CustomStringElement
         : StringElement
           , IBindableElement
-    {       
+    {
         public IMvxBindingContext BindingContext { get; set; }
 
         public CustomStringElement()

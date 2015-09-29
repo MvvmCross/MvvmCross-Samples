@@ -1,8 +1,8 @@
+using Collections.Core.ViewModels.Samples.ListItems;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.Specialized;
-using Collections.Core.ViewModels.Samples.ListItems;
 
 namespace Collections.Core.ViewModels.Samples.LargeDynamic
 {
@@ -126,7 +126,7 @@ namespace Collections.Core.ViewModels.Samples.LargeDynamic
             throw new NotImplementedException();
         }
 
-        #endregion
+        #endregion Not implemented
 
         private void RaiseCollectionChanged(NotifyCollectionChangedEventArgs args)
         {

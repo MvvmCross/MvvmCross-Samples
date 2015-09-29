@@ -1,18 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Net;
 using System.Xml.Linq;
-using Cirrious.MvvmCross.ViewModels;
 
 namespace BestSellers.ViewModels
 {
     public class CategoryListViewModel : BaseViewModel
     {
-        const string URL_CATEGORIES = "http://api.nytimes.com/svc/books/v2/lists/names.xml?api-key=d8ad3be01d98001865e96ee55c1044db:8:57889697";
+        private const string URL_CATEGORIES = "http://api.nytimes.com/svc/books/v2/lists/names.xml?api-key=d8ad3be01d98001865e96ee55c1044db:8:57889697";
 
         private List<CategoryDataViewModel> _list;
+
         public List<CategoryDataViewModel> List
         {
             get { return _list; }

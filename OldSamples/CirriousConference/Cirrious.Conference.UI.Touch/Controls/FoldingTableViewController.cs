@@ -4,25 +4,22 @@
 
 using System;
 using System.Windows.Input;
-using MonoTouch.UIKit;
-using System.Drawing;
-using MonoTouch.CoreAnimation;
-using Cirrious.MvvmCross.Binding.Touch.Views;
 
 namespace Cirrious.Conference.UI.Touch
 {
     public class FoldingTableViewController : UIViewController
     {
-        const float kRefreshViewHeight = 65;
+        private const float kRefreshViewHeight = 65;
 
-        UIView headerView;
-        UIView topView;
-        UILabel topLabel;
-        UIView bottomView;
-        UILabel bottomLabel;
-        UITableView tableView;
+        private UIView headerView;
+        private UIView topView;
+        private UILabel topLabel;
+        private UIView bottomView;
+        private UILabel bottomLabel;
+        private UITableView tableView;
 
         private bool _refreshing;
+
         public bool Refreshing
         {
             get
@@ -43,6 +40,7 @@ namespace Cirrious.Conference.UI.Touch
         }
 
         private string _lastUpdatedText = "?";
+
         public string LastUpdatedText
         {
             get
@@ -131,7 +129,7 @@ namespace Cirrious.Conference.UI.Touch
             }
         }
 
-        void RefreshData()
+        private void RefreshData()
         {
             if (RefreshHeadCommand == null)
                 return;
@@ -139,7 +137,7 @@ namespace Cirrious.Conference.UI.Touch
             RefreshHeadCommand.Execute(null);
         }
 
-        void OnRefreshingStarted()
+        private void OnRefreshingStarted()
         {
             topLabel.Text = "Refreshing...";
             UIView.Animate(0.2, delegate
@@ -148,30 +146,30 @@ namespace Cirrious.Conference.UI.Touch
             });
         }
 
-        void OnRefreshingEnded()
+        private void OnRefreshingEnded()
         {
             ResetHeader();
         }
 
-        void ResetHeader()
+        private void ResetHeader()
         {
             this.TableView.ContentInset = UIEdgeInsets.Zero;
         }
 
-        void UnfoldHeaderToFraction(float fraction)
+        private void UnfoldHeaderToFraction(float fraction)
         {
             bottomView.Layer.Transform = CATransform3D.MakeRotation((float)Math.PI / 2f - (float)Math.Asin(fraction), 1f, 0, 0);
             topView.Layer.Transform = CATransform3D.MakeRotation((float)Math.Asin(fraction) + ((((float)Math.PI) * 3f) / 2f), 1f, 0, 0);
             topView.Frame = new RectangleF(0, kRefreshViewHeight * (1 - fraction), this.View.Bounds.Size.Width, kRefreshViewHeight / 2);
         }
 
-        void HandleTableViewhandleDraggingEnded(object sender, DraggingEventArgs e)
+        private void HandleTableViewhandleDraggingEnded(object sender, DraggingEventArgs e)
         {
             if (TableView.ContentOffset.Y < -kRefreshViewHeight)
                 this.RefreshData();
         }
 
-        void HandleTableViewhandleScrolled(object sender, EventArgs e)
+        private void HandleTableViewhandleScrolled(object sender, EventArgs e)
         {
             if (!Refreshing)
             {
@@ -190,4 +188,3 @@ namespace Cirrious.Conference.UI.Touch
         }
     }
 }
-

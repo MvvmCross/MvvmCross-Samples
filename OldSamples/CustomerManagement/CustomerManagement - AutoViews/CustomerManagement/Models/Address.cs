@@ -1,5 +1,5 @@
-using System;
 using Cirrious.MvvmCross.ViewModels;
+using System;
 
 namespace CustomerManagement.AutoViews.Core.Models
 {
@@ -11,6 +11,7 @@ namespace CustomerManagement.AutoViews.Core.Models
         }
 
         private string _id;
+
         public string ID
         {
             get { return _id; }
@@ -18,6 +19,7 @@ namespace CustomerManagement.AutoViews.Core.Models
         }
 
         private string _description;
+
         public string Description
         {
             get { return _description; }
@@ -25,6 +27,7 @@ namespace CustomerManagement.AutoViews.Core.Models
         }
 
         private string _street1;
+
         public string Street1
         {
             get { return _street1; }
@@ -32,6 +35,7 @@ namespace CustomerManagement.AutoViews.Core.Models
         }
 
         private string _street2;
+
         public string Street2
         {
             get { return _street2; }
@@ -39,6 +43,7 @@ namespace CustomerManagement.AutoViews.Core.Models
         }
 
         private string _city;
+
         public string City
         {
             get { return _city; }
@@ -46,6 +51,7 @@ namespace CustomerManagement.AutoViews.Core.Models
         }
 
         private string _state;
+
         public string State
         {
             get { return _state; }
@@ -53,6 +59,7 @@ namespace CustomerManagement.AutoViews.Core.Models
         }
 
         private string _zip;
+
         public string Zip
         {
             get { return _zip; }

@@ -1,7 +1,6 @@
-﻿using System;
+﻿using FractalGen.UI.Store.Common;
+using System;
 using System.Collections.Generic;
-using FractalGen.UI.Store.Common;
-using Windows.UI.Xaml.Controls;
 
 // The Basic Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234237
 

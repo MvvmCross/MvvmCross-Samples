@@ -1,7 +1,4 @@
-﻿using System;
-using System.Net;
-
-namespace Cirrious.Conference.Core
+﻿namespace Cirrious.Conference.Core
 {
     public static class Constants
     {

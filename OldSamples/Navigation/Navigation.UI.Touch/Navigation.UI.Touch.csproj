@@ -141,7 +141,7 @@
     </Reference>
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
-    <Reference Include="monotouch" />
+    <Reference Include="Xamarin.iOS" />
     <Reference Include="Cirrious.CrossCore.Touch">
       <HintPath>..\..\Lib\Mvx\Touch\Cirrious.CrossCore.Touch.dll</HintPath>
     </Reference>

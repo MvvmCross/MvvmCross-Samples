@@ -1,5 +1,4 @@
-﻿
-{
+﻿{
 "PageTitle":"About...",
 "SQLBitsXApp":"App",
 "AboutSQLBitsXApp":"The SQL Bits X app was made by @slodge at Cirrious Ltd.\n\nIt's written in C# using the MvvmCross framework on top of Microsoft's WP7 SDK, and Xamarin's MonoTouch and MonoDroid products.\n\nFor more information about this app:",

@@ -1,24 +1,18 @@
-﻿using System;
+﻿using Cirrious.CrossCore;
+using Cirrious.MvvmCross.ViewModels;
+using CustomerManagement.AutoViews.Core.Models;
+using System;
 using System.Collections.Generic;
 using System.Windows.Input;
-using Cirrious.CrossCore;
-using Cirrious.MvvmCross.AutoView;
-using Cirrious.MvvmCross.AutoView.Auto.Dialog;
-using Cirrious.MvvmCross.AutoView.Auto.Menu;
-using Cirrious.MvvmCross.AutoView.Interfaces;
-using Cirrious.MvvmCross.Plugins.PhoneCall;
-using Cirrious.MvvmCross.Plugins.WebBrowser;
-using Cirrious.MvvmCross.ViewModels;
-using CrossUI.Core.Descriptions;
-using CustomerManagement.AutoViews.Core.Models;
 
 namespace CustomerManagement.AutoViews.Core.ViewModels
 {
-    public class DetailsCustomerViewModel 
+    public class DetailsCustomerViewModel
         : BaseViewModel
         , IMvxAutoDialogViewModel
     {
         private Customer _customer;
+
         public Customer Customer
         {
             get { return _customer; }
@@ -85,16 +79,16 @@ namespace CustomerManagement.AutoViews.Core.ViewModels
                     {
                         new StringAuto(caption: "ID", bindingExpression: () => Customer.ID),
                         new StringAuto(caption: "Name", bindingExpression: () => Customer.Name),
-                        new StringAuto(caption: "Website", 
+                        new StringAuto(caption: "Website",
                                        bindingExpression: () => Customer.Website,
                                        selectedCommand: () => ShowWebsiteCommand),
-                        new StringAuto(caption: "Phone", 
+                        new StringAuto(caption: "Phone",
                                        bindingExpression: () => Customer.PrimaryPhone,
                                        selectedCommand: () => CallCustomerCommand),
                     },
                 new SectionAuto(header: "General Info")
                     {
-                        new StringAuto(caption: "Address", 
+                        new StringAuto(caption: "Address",
                                        bindingExpression: () => Customer.PrimaryAddress,
                                        selectedCommand: () => ShowOnMapCommand),
                     }
@@ -192,6 +186,7 @@ namespace CustomerManagement.AutoViews.Core.ViewModels
         }
 
 #warning Broken Code - also should probably use a service to do the save, not the static
+
         private void DeleteCustomer()
         {
             DataStore.DeleteCustomer(Customer.ID);

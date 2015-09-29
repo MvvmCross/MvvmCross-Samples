@@ -1,9 +1,5 @@
-using Cirrious.FluentLayouts;
 using Cirrious.FluentLayouts.Touch;
 using Cirrious.MvvmCross.Binding.BindingContext;
-using Cirrious.MvvmCross.Touch.Views;
-using MonoTouch.Foundation;
-using MonoTouch.UIKit;
 using QuickLayout.Core.ViewModels;
 
 namespace QuickLayout.Touch.Views
@@ -16,22 +12,22 @@ namespace QuickLayout.Touch.Views
             View.BackgroundColor = UIColor.White;
             base.ViewDidLoad();
 
-            var fNameLabel = new UILabel {Text = "First"};
+            var fNameLabel = new UILabel { Text = "First" };
             Add(fNameLabel);
 
-            var sNameLabel = new UILabel {Text = "Last"};
+            var sNameLabel = new UILabel { Text = "Last" };
             Add(sNameLabel);
 
-            var numberLabel = new UILabel {Text = "#"};
+            var numberLabel = new UILabel { Text = "#" };
             Add(numberLabel);
 
-            var streetLabel = new UILabel {Text = "Street"};
+            var streetLabel = new UILabel { Text = "Street" };
             Add(streetLabel);
 
-            var townLabel = new UILabel {Text = "Town"};
+            var townLabel = new UILabel { Text = "Town" };
             Add(townLabel);
 
-            var zipLabel = new UILabel {Text = "Zip"};
+            var zipLabel = new UILabel { Text = "Zip" };
             Add(zipLabel);
 
             var fNameField = new UITextField() { BackgroundColor = UIColor.LightGray, BorderStyle = UITextBorderStyle.RoundedRect };
@@ -69,7 +65,6 @@ namespace QuickLayout.Touch.Views
 
             var hMargin = 10;
             var vMargin = 10;
-
 
             View.AddConstraints(
 
@@ -130,13 +125,13 @@ namespace QuickLayout.Touch.Views
     }
 
     /*
-     * 
+     *
                 View.AddConstraints(
 
                 fNameLabel.Left().EqualTo().LeftOf(View).Plus(hMargin),
                 fNameLabel.Right().EqualTo().LeftOf(sNameLabel).Minus(hMargin),
                 fNameLabel.Top().EqualTo().TopOf(View).Plus(vMargin),
-                
+
                 sNameLabel.Top().EqualTo().TopOf(fNameLabel),
                 sNameLabel.Right().EqualTo().RightOf(View).Minus(hMargin),
                 sNameLabel.Width().EqualTo().WidthOf(fNameLabel),
@@ -153,7 +148,7 @@ namespace QuickLayout.Touch.Views
                 numberLabel.Right().EqualTo().LeftOf(streetLabel).Minus(hMargin),
                 numberLabel.Top().EqualTo().BottomOf(fNameField).Plus(vMargin),
                 numberLabel.Width().EqualTo().WidthOf(streetLabel).WithMultiplier(0.3f),
- 
+
                 streetLabel.Top().EqualTo().TopOf(numberLabel),
                 streetLabel.Right().EqualTo().RightOf(View).Minus(hMargin),
 
@@ -168,15 +163,15 @@ namespace QuickLayout.Touch.Views
                 townLabel.Left().EqualTo().LeftOf(fNameLabel),
                 townLabel.Right().EqualTo().RightOf(streetLabel),
                 townLabel.Top().EqualTo().BottomOf(numberField).Plus(vMargin),
-               
+
                 townField.Left().EqualTo().LeftOf(townLabel),
                 townField.Width().EqualTo().WidthOf(townLabel),
                 townField.Top().EqualTo().BottomOf(townLabel).Plus(vMargin),
- 
+
                 zipLabel.Left().EqualTo().LeftOf(fNameLabel),
                 zipLabel.Width().EqualTo().WidthOf(townLabel),
                 zipLabel.Top().EqualTo().BottomOf(townField).Plus(vMargin),
-                
+
                 zipField.Left().EqualTo().LeftOf(townLabel),
                 zipField.Width().EqualTo().WidthOf(zipLabel),
                 zipField.Top().EqualTo().BottomOf(zipLabel).Plus(vMargin),

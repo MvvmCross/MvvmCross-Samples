@@ -21,7 +21,7 @@ namespace Navigation.UI.WindowsStore.Common
     ///             <RichTextBlockOverflow Width="400" Margin="50,0,0,0"/>
     ///         </DataTemplate>
     ///     </RichTextColumns.ColumnTemplate>
-    ///     
+    ///
     ///     <RichTextBlock Width="400">
     ///         <Paragraph>
     ///             <Run Text="{Binding Content}"/>
@@ -40,15 +40,15 @@ namespace Navigation.UI.WindowsStore.Common
         /// Identifies the <see cref="RichTextContent"/> dependency property.
         /// </summary>
         public static readonly DependencyProperty RichTextContentProperty =
-            DependencyProperty.Register("RichTextContent", typeof (RichTextBlock),
-                                        typeof (RichTextColumns), new PropertyMetadata(null, ResetOverflowLayout));
+            DependencyProperty.Register("RichTextContent", typeof(RichTextBlock),
+                                        typeof(RichTextColumns), new PropertyMetadata(null, ResetOverflowLayout));
 
         /// <summary>
         /// Identifies the <see cref="ColumnTemplate"/> dependency property.
         /// </summary>
         public static readonly DependencyProperty ColumnTemplateProperty =
-            DependencyProperty.Register("ColumnTemplate", typeof (DataTemplate),
-                                        typeof (RichTextColumns), new PropertyMetadata(null, ResetOverflowLayout));
+            DependencyProperty.Register("ColumnTemplate", typeof(DataTemplate),
+                                        typeof(RichTextColumns), new PropertyMetadata(null, ResetOverflowLayout));
 
         /// <summary>
         /// Lists overflow columns already created.  Must maintain a 1:1 relationship with
@@ -70,7 +70,7 @@ namespace Navigation.UI.WindowsStore.Common
         /// </summary>
         public RichTextBlock RichTextContent
         {
-            get { return (RichTextBlock) GetValue(RichTextContentProperty); }
+            get { return (RichTextBlock)GetValue(RichTextContentProperty); }
             set { SetValue(RichTextContentProperty, value); }
         }
 
@@ -80,7 +80,7 @@ namespace Navigation.UI.WindowsStore.Common
         /// </summary>
         public DataTemplate ColumnTemplate
         {
-            get { return (DataTemplate) GetValue(ColumnTemplateProperty); }
+            get { return (DataTemplate)GetValue(ColumnTemplateProperty); }
             set { SetValue(ColumnTemplateProperty, value); }
         }
 
@@ -141,7 +141,7 @@ namespace Navigation.UI.WindowsStore.Common
                 }
                 else
                 {
-                    overflow = (RichTextBlockOverflow) ColumnTemplate.LoadContent();
+                    overflow = (RichTextBlockOverflow)ColumnTemplate.LoadContent();
                     _overflowColumns.Add(overflow);
                     Children.Add(overflow);
                     if (overflowIndex == 0)

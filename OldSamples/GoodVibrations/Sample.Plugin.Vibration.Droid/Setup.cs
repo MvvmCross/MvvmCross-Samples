@@ -15,7 +15,7 @@ namespace Sample.Plugin.Vibration.Droid
         {
             return new Core.App();
         }
-		
+
         protected override IMvxTrace CreateDebugTrace()
         {
             return new DebugTrace();

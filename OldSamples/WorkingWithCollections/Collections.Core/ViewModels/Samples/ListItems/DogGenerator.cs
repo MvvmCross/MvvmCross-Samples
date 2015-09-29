@@ -63,10 +63,10 @@ namespace Collections.Core.ViewModels.Samples.ListItems
         public Dog CreateNewDog()
         {
             return new Dog
-                {
-                    Name = _names[_random.Next(_names.Count)],
-                    ImageUrl = string.Format("http://placedog.com/{0}/{0}", _random.Next(20) + 300)
-                };
+            {
+                Name = _names[_random.Next(_names.Count)],
+                ImageUrl = string.Format("http://placedog.com/{0}/{0}", _random.Next(20) + 300)
+            };
         }
     }
 }

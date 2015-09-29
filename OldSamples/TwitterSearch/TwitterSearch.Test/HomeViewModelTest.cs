@@ -1,10 +1,6 @@
 ﻿using Cirrious.MvvmCross.Platform;
-using Cirrious.MvvmCross.Test.Core;
-using Cirrious.MvvmCross.Views;
-using Moq;
 using NUnit.Framework;
 using TwitterSearch.Core.ViewModels;
-using TwitterSearch.Test.Mocks;
 
 namespace TwitterSearch.Test
 {
@@ -15,7 +11,7 @@ namespace TwitterSearch.Test
         public void GoCausesNoNavigationForBannedWord()
         {
             ClearAll();
-            
+
             var mockNavigation = CreateMockNavigation();
             var viewModel = new HomeViewModel();
             var searchTerm = "javascript";
@@ -28,7 +24,7 @@ namespace TwitterSearch.Test
         public void GoCausesNoNavigationForEmptySearch()
         {
             ClearAll();
-            
+
             var mockNavigation = CreateMockNavigation();
             var viewModel = new HomeViewModel();
             var searchTerm = "";
@@ -56,7 +52,7 @@ namespace TwitterSearch.Test
         public void RandomChangesTheSearchTerm()
         {
             ClearAll();
-            
+
             var viewModel = new HomeViewModel();
             var searchTerm = "Test Search Term";
             viewModel.SearchText = searchTerm;

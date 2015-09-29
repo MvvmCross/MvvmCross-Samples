@@ -1,5 +1,5 @@
-using System;
 using Cirrious.MvvmCross.ViewModels;
+using System;
 
 namespace DialogExamples.Core.ViewModels
 {
@@ -7,6 +7,7 @@ namespace DialogExamples.Core.ViewModels
         : MvxViewModel
     {
         private DateTime _when = DateTime.UtcNow;
+
         public DateTime When
         {
             get { return _when; }
@@ -14,6 +15,7 @@ namespace DialogExamples.Core.ViewModels
         }
 
         private DateTime _duration = DateTime.UtcNow;
+
         public DateTime Duration
         {
             get { return _duration; }
@@ -21,6 +23,7 @@ namespace DialogExamples.Core.ViewModels
         }
 
         private double _temperature = 98.0;
+
         public double Temperature
         {
             get { return _temperature; }

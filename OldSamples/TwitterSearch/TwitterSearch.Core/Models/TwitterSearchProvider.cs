@@ -9,6 +9,6 @@ namespace TwitterSearch.Core.Models
         public void StartAsyncSearch(string searchText, Action<IEnumerable<Tweet>> success, Action<Exception> error)
         {
             TwitterSearch.StartAsyncSearch(searchText, success, error);
-        }        
+        }
     }
 }

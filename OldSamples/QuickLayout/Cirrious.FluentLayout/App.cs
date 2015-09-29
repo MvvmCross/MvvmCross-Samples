@@ -10,7 +10,7 @@ namespace Cirrious.FluentLayouts.Touch
                 .EndingWith("Service")
                 .AsInterfaces()
                 .RegisterAsLazySingleton();
-				
+
             RegisterAppStart<ViewModels.FirstViewModel>();
         }
     }

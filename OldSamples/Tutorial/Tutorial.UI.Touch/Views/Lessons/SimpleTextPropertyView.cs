@@ -1,28 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Cirrious.MvvmCross.Binding.BindingContext;
-using Cirrious.MvvmCross.Dialog.Touch;
-using Cirrious.MvvmCross.Views;
-using MonoTouch.UIKit;
-using Tutorial.Core.ViewModels.Lessons;
-using CrossUI.Touch.Dialog.Elements;
+﻿using Tutorial.Core.ViewModels.Lessons;
 
 namespace Tutorial.UI.Touch.Views.Lessons
 {
     public class SimpleTextPropertyView
          : MvxDialogViewController
     {
-        public SimpleTextPropertyView() 
+        public SimpleTextPropertyView()
             : base(UITableViewStyle.Grouped, null, true)
         {
         }
 
-		public new SimpleTextPropertyViewModel ViewModel {
-			get { return (SimpleTextPropertyViewModel)base.ViewModel; }
-			set { base.ViewModel = value; }
-		}
+        public new SimpleTextPropertyViewModel ViewModel
+        {
+            get { return (SimpleTextPropertyViewModel)base.ViewModel; }
+            set { base.ViewModel = value; }
+        }
 
         public override void ViewDidLoad()
         {
@@ -31,7 +23,7 @@ namespace Tutorial.UI.Touch.Views.Lessons
             this.NavigationItem.SetLeftBarButtonItem(new UIBarButtonItem("Cancel", UIBarButtonItemStyle.Bordered, null), false);
             this.NavigationItem.LeftBarButtonItem.Clicked += delegate
             {
-				NavigationController.PopViewControllerAnimated(true);
+                NavigationController.PopViewControllerAnimated(true);
             };
 
             this.Root = new RootElement("Simple Text Property")

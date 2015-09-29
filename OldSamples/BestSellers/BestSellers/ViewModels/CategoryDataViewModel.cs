@@ -1,6 +1,5 @@
-using System.Collections.Generic;
-using System.Windows.Input;
 using Cirrious.MvvmCross.ViewModels;
+using System.Windows.Input;
 
 namespace BestSellers.ViewModels
 {
@@ -24,7 +23,7 @@ namespace BestSellers.ViewModels
         {
             get
             {
-                return new MvxCommand(() => ShowViewModel<BookListViewModel>(new {category = ListNameEncoded}));
+                return new MvxCommand(() => ShowViewModel<BookListViewModel>(new { category = ListNameEncoded }));
             }
         }
     }

@@ -1,16 +1,12 @@
-using Cirrious.MvvmCross.Binding.Touch.Views;
-using MonoTouch.Foundation;
-using MonoTouch.UIKit;
-
 namespace CustomerManagement.Touch.Views
 {
-	/*
+    /*
     public class CustomerListTableViewCell
         : MvxTableViewCell
     {
         public const string BindingText = @"{'TitleText':{'Path':'Name'},'DetailText':{'Path':'Website'}}";
 
-        public static readonly MvxBindingDescription[] BindingDescriptions 
+        public static readonly MvxBindingDescription[] BindingDescriptions
             = new []
                   {
                       new MvxBindingDescription()

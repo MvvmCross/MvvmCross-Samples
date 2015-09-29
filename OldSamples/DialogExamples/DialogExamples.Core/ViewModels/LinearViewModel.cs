@@ -1,6 +1,5 @@
-using System.Collections.Generic;
-using System.Windows.Input;
 using Cirrious.MvvmCross.ViewModels;
+using System.Windows.Input;
 
 namespace DialogExamples.Core.ViewModels
 {

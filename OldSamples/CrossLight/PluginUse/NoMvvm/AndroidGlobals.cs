@@ -1,6 +1,6 @@
-using System.Reflection;
 using Android.Content;
 using Cirrious.CrossCore.Droid;
+using System.Reflection;
 
 namespace NoMvvm
 {
@@ -8,12 +8,12 @@ namespace NoMvvm
         : IMvxAndroidGlobals
     {
         private readonly Context _applicationContext;
-		private readonly string _namespace;
+        private readonly string _namespace;
 
         public AndroidGlobals(Context applicationContext, string theNamespace)
         {
             _applicationContext = applicationContext;
-			_namespace = theNamespace;
+            _namespace = theNamespace;
         }
 
         public virtual string ExecutableNamespace

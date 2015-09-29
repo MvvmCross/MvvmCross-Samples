@@ -8,7 +8,7 @@ namespace Cirrious.Conference.Core
 
         public static void Info(string message, params object[] args)
         {
-            MvxTrace.TaggedTrace(MvxTraceLevel.Diagnostic, Tag, message, args);    
+            MvxTrace.TaggedTrace(MvxTraceLevel.Diagnostic, Tag, message, args);
         }
 
         public static void Warn(string message, params object[] args)

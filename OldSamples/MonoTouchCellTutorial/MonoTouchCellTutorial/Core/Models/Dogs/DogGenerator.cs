@@ -1,9 +1,8 @@
-using System;
 using System.Collections.Generic;
 
 namespace MonoTouchCellTutorial.Core.Models.Dogs
 {
-	public class DogGenerator : AnimalGenerator
+    public class DogGenerator : AnimalGenerator
     {
         private readonly List<string> _names = new List<string>() { "Buddy"
             ,"Toby"
@@ -34,11 +33,11 @@ namespace MonoTouchCellTutorial.Core.Models.Dogs
         public Dog CreateNewDog()
         {
             return new Dog()
-                {
-                    Name = _names[Random(_names.Count)],
-                    ImageUrl = string.Format("http://placedog.com/{0}/{0}", Random(20) + 300),
-					GoodWithChildren = RandomBool (),
-				};
+            {
+                Name = _names[Random(_names.Count)],
+                ImageUrl = string.Format("http://placedog.com/{0}/{0}", Random(20) + 300),
+                GoodWithChildren = RandomBool(),
+            };
         }
     }
 }

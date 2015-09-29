@@ -1,12 +1,10 @@
-﻿using System;
+﻿using Cirrious.CrossCore.Platform;
+using Cirrious.CrossCore.WeakSubscription;
+using CrossUI.Droid.Dialog.Elements;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.Specialized;
-using Cirrious.CrossCore.Platform;
-using Cirrious.CrossCore.WeakSubscription;
-using Cirrious.MvvmCross.Binding;
-using Cirrious.MvvmCross.Binding.Attributes;
-using CrossUI.Droid.Dialog.Elements;
 
 namespace DialogExamples.Droid.BindableElements
 {
@@ -78,7 +76,7 @@ namespace DialogExamples.Droid.BindableElements
 
                     element.DataContext = item;
 
-                    newElements.Add((Element) element);
+                    newElements.Add((Element)element);
                 }
             }
 

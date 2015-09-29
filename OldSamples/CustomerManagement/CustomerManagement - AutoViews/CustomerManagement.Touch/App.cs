@@ -10,7 +10,7 @@ namespace CustomerManagement.AutoViews.Touch
                 .EndingWith("Service")
                 .AsInterfaces()
                 .RegisterAsLazySingleton();
-				
+
             RegisterAppStart<ViewModels.FirstViewModel>();
         }
     }

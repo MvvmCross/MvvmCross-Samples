@@ -1,6 +1,6 @@
-using System;
 using Android.App;
 using Cirrious.CrossCore.Core;
+using System;
 
 namespace Mvvm.Framework
 {

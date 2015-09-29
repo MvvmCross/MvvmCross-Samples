@@ -1,29 +1,22 @@
-using System;
-using System.Drawing;
-using Cirrious.MvvmCross.Binding.Touch;
-using MonoTouch.Foundation;
-using MonoTouch.UIKit;
-using System.Collections.Generic;
-using Cirrious.MvvmCross.Binding.Touch.Views;
 using Cirrious.Conference.Core.ViewModels.HomeViewModels;
-using Cirrious.MvvmCross.Views;
-using Cirrious.MvvmCross.Touch.Views;
 using Cirrious.MvvmCross.Binding.BindingContext;
+using System.Collections.Generic;
 
 namespace Cirrious.Conference.UI.Touch
 {
-    public partial class WelcomeView 
-		: MvxViewController
+    public partial class WelcomeView
+        : MvxViewController
     {
         public WelcomeView()
-			: base("WelcomeView", null)
+            : base("WelcomeView", null)
         {
         }
 
-		public new WelcomeViewModel ViewModel {
-			get { return (WelcomeViewModel)base.ViewModel; }
-			set { base.ViewModel = value; }
-		}
+        public new WelcomeViewModel ViewModel
+        {
+            get { return (WelcomeViewModel)base.ViewModel; }
+            set { base.ViewModel = value; }
+        }
 
         public override void ViewDidLoad()
         {
@@ -38,19 +31,19 @@ namespace Cirrious.Conference.UI.Touch
 
             this.AddLangBindings(new Dictionary<object, string>()
                 {
-                    { MainLabel, "Text AboutSQLBits" },				
-                    { Button1, "Title Sponsors" },				
-                    { Button2, "Title Exhibitors" },				
-                    { Button3, "Title Map" },				
-                    { Button4, "Title About" },				
+                    { MainLabel, "Text AboutSQLBits" },
+                    { Button1, "Title Sponsors" },
+                    { Button2, "Title Exhibitors" },
+                    { Button3, "Title Map" },
+                    { Button4, "Title About" },
                 });
 
             this.AddBindings(new Dictionary<object, string>()
                 {
-                    { Button1, "TouchUpInside ShowSponsorsCommand" },				
-                    { Button2, "TouchUpInside ShowExhibitorsCommand" },				
-                    { Button3, "TouchUpInside ShowMapCommand" },				
-                    { Button4, "TouchUpInside ShowAboutCommand" },				
+                    { Button1, "TouchUpInside ShowSponsorsCommand" },
+                    { Button2, "TouchUpInside ShowExhibitorsCommand" },
+                    { Button3, "TouchUpInside ShowMapCommand" },
+                    { Button4, "TouchUpInside ShowAboutCommand" },
                 });
 
             NavigationItem.SetRightBarButtonItem(new UIBarButtonItem("Tweet", UIBarButtonItemStyle.Bordered, (sender, e) => ViewModel.DoShareGeneral()), false);
@@ -69,4 +62,3 @@ namespace Cirrious.Conference.UI.Touch
         }
     }
 }
-

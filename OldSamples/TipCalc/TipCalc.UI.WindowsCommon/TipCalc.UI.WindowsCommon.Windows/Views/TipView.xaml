@@ -24,54 +24,49 @@
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.ChildrenTransitions>
             <TransitionCollection>
-                <EntranceThemeTransition/>
+                <EntranceThemeTransition />
             </TransitionCollection>
         </Grid.ChildrenTransitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="140"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="140" />
+            <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
         <!-- Back button and page title -->
         <Grid>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="120"/>
-                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="120" />
+                <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
             <Button x:Name="backButton" Margin="39,59,39,0" Command="{Binding NavigationHelper.GoBackCommand, ElementName=pageRoot}"
                         Style="{StaticResource NavigationBackButtonNormalStyle}"
                         VerticalAlignment="Top"
                         AutomationProperties.Name="Back"
                         AutomationProperties.AutomationId="BackButton"
-                        AutomationProperties.ItemType="Navigation Button"/>
-            <TextBlock x:Name="pageTitle" Text="Tip View" Style="{StaticResource HeaderTextBlockStyle}" Grid.Column="1" 
-                        IsHitTestVisible="false" TextWrapping="NoWrap" VerticalAlignment="Bottom" Margin="0,0,30,40"/>
+                        AutomationProperties.ItemType="Navigation Button" />
+            <TextBlock x:Name="pageTitle" Text="Tip View" Style="{StaticResource HeaderTextBlockStyle}" Grid.Column="1"
+                        IsHitTestVisible="false" TextWrapping="NoWrap" VerticalAlignment="Bottom" Margin="0,0,30,40" />
         </Grid>
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
             <StackPanel>
                 <TextBlock
-                    Text="SubTotal"
-                    />
-                <TextBox 
-                    Text="{Binding SubTotal, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
-                    />
+                    Text="SubTotal" />
+                <TextBox
+                    Text="{Binding SubTotal, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
 
                 <TextBlock
-                    Text="Generosity"
-                    />
-                <Slider 
-                    Value="{Binding Generosity,Mode=TwoWay}" 
-                    SmallChange="1" 
-                    LargeChange="10" 
-                    Minimum="0" 
+                    Text="Generosity" />
+                <Slider
+                    Value="{Binding Generosity,Mode=TwoWay}"
+                    SmallChange="1"
+                    LargeChange="10"
+                    Minimum="0"
                     Maximum="100" />
 
                 <TextBlock
-                    Text="Tip"
-                    />
-                <TextBlock 
-                    Text="{Binding Tip}" 
-                    />
+                    Text="Tip" />
+                <TextBlock
+                    Text="{Binding Tip}" />
             </StackPanel>
         </Grid>
     </Grid>

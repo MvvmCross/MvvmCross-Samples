@@ -15,7 +15,7 @@ namespace GoodVibrations.Droid
         {
             return new Core.App();
         }
-		
+
         protected override IMvxTrace CreateDebugTrace()
         {
             return new DebugTrace();

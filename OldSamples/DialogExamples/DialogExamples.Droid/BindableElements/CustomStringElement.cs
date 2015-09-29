@@ -1,4 +1,3 @@
-using Cirrious.MvvmCross.Binding.BindingContext;
 using CrossUI.Droid.Dialog.Elements;
 using DialogExamples.Core.ViewModels;
 
@@ -7,7 +6,7 @@ namespace DialogExamples.Droid.BindableElements
     public class CustomStringElement
         : StringElement
           , IBindableElement
-    {       
+    {
         public IMvxBindingContext BindingContext { get; set; }
 
         public CustomStringElement()

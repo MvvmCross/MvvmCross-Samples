@@ -5,12 +5,12 @@ using Cirrious.MvvmCross.Droid.Views;
 namespace NoBinding
 {
     [Activity(
-		Label = "NoBinding"
-		, MainLauncher = true
-		, Icon = "@drawable/icon"
-		, Theme = "@style/Theme.Splash"
-		, NoHistory = true
-		, ScreenOrientation = ScreenOrientation.Portrait)]
+        Label = "NoBinding"
+        , MainLauncher = true
+        , Icon = "@drawable/icon"
+        , Theme = "@style/Theme.Splash"
+        , NoHistory = true
+        , ScreenOrientation = ScreenOrientation.Portrait)]
     public class SplashScreen : MvxSplashScreenActivity
     {
         public SplashScreen()

@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Cirrious.MvvmCross.Dialog.Touch;
-using Cirrious.MvvmCross.Touch.Views;
-using Cirrious.MvvmCross.ViewModels;
-using Cirrious.MvvmCross.Views;
-using MonoTouch.UIKit;
+﻿using Cirrious.MvvmCross.ViewModels;
 using Tutorial.Core.ViewModels.Lessons;
 
 namespace Tutorial.UI.Touch.Views.Lessons
@@ -14,17 +6,19 @@ namespace Tutorial.UI.Touch.Views.Lessons
     public sealed class CompositeView
          : MvxTabBarViewController
     {
-        bool _viewDidLoadCallNeeded;
-        public CompositeView() 
+        private bool _viewDidLoadCallNeeded;
+
+        public CompositeView()
         {
-			if (_viewDidLoadCallNeeded)
+            if (_viewDidLoadCallNeeded)
                 ViewDidLoad();
         }
 
-		public new CompositeViewModel ViewModel {
-			get { return (CompositeViewModel)base.ViewModel; }
-			set { base.ViewModel = value; }
-		}
+        public new CompositeViewModel ViewModel
+        {
+            get { return (CompositeViewModel)base.ViewModel; }
+            set { base.ViewModel = value; }
+        }
 
         public override void ViewDidLoad()
         {
@@ -43,8 +37,8 @@ namespace Tutorial.UI.Touch.Views.Lessons
                                     CreateTabFor("Pull", "speakers", ViewModel.Pull),
                                   };
 
-            // tell the tab bar which controllers are allowed to customize. 
-            // if we don't set  it assumes all controllers are customizable. 
+            // tell the tab bar which controllers are allowed to customize.
+            // if we don't set  it assumes all controllers are customizable.
             // if we set to empty array, NO controllers are customizable.
             CustomizableViewControllers = new UIViewController[] { };
 
@@ -53,12 +47,13 @@ namespace Tutorial.UI.Touch.Views.Lessons
         }
 
         private int _createdSoFarCount = 0;
+
         private UIViewController CreateTabFor(string title, string imageName, IMvxViewModel viewModel)
         {
             var innerView = (UIViewController)this.CreateViewControllerFor(viewModel);
             innerView.Title = title;
             innerView.TabBarItem = new UITabBarItem(
-                                    title, 
+                                    title,
                                     UIImage.FromBundle("Images/Tabs/" + imageName + ".png"),
                                     _createdSoFarCount++);
             return innerView;

@@ -1,9 +1,5 @@
-using Cirrious.FluentLayouts;
 using Cirrious.FluentLayouts.Touch;
 using Cirrious.MvvmCross.Binding.BindingContext;
-using Cirrious.MvvmCross.Touch.Views;
-using MonoTouch.Foundation;
-using MonoTouch.UIKit;
 using QuickLayout.Core.ViewModels;
 
 namespace QuickLayout.Touch.Views
@@ -42,7 +38,7 @@ namespace QuickLayout.Touch.Views
             set.Apply();
 
             var constraints = View.VerticalStackPanelConstraints(
-                                            new Margins(20, 10, 20, 10, 5, 5),                                              
+                                            new Margins(20, 10, 20, 10, 5, 5),
                                             View.Subviews);
             View.AddConstraints(constraints);
         }

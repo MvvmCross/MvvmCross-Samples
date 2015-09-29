@@ -5,9 +5,9 @@ using CustomerManagement.Core.ViewModels;
 
 namespace CustomerManagement.Core
 {
-    public class App 
+    public class App
         : MvxApplication
-        
+
     {
         public App()
         {

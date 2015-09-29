@@ -1,6 +1,5 @@
-using Navigation.Core.ViewModels;
-using Cirrious.MvvmCross.Touch.Views;
 using Cirrious.MvvmCross.Binding.BindingContext;
+using Navigation.Core.ViewModels;
 
 namespace Navigation.UI.Touch
 {

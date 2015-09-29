@@ -8,6 +8,6 @@ namespace Cirrious.Conference.Core.Interfaces
         : ICollection<TKey>
           , INotifyPropertyChanged
           , INotifyCollectionChanged
-    {        
+    {
     }
 }

@@ -1,13 +1,8 @@
-using System;
-using System.IO;
-using System.Windows.Threading;
-using Cirrious.CrossCore;
-using Cirrious.CrossCore.Platform;
 using Cirrious.CrossCore.Plugins;
-using Cirrious.MvvmCross.Plugins.ResourceLoader.Wpf;
 using Cirrious.MvvmCross.ViewModels;
 using Cirrious.MvvmCross.Wpf.Platform;
 using Cirrious.MvvmCross.Wpf.Views;
+using System.Windows.Threading;
 
 namespace Babel.Wpf
 {

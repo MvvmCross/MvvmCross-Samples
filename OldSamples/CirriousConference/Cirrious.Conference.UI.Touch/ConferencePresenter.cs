@@ -1,8 +1,4 @@
 using Cirrious.Conference.UI.Touch.Interfaces;
-using Cirrious.Conference.UI.Touch.Views;
-using Cirrious.MvvmCross.Touch.Views;
-using Cirrious.MvvmCross.Touch.Views.Presenters;
-using MonoTouch.UIKit;
 
 namespace Cirrious.Conference.UI.Touch
 {
@@ -36,4 +32,3 @@ namespace Cirrious.Conference.UI.Touch
         }
     }
 }
-

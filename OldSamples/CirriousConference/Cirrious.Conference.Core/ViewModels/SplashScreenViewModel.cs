@@ -1,5 +1,3 @@
-using System;
-
 namespace Cirrious.Conference.Core.ViewModels
 {
     public class SplashScreenViewModel
@@ -18,11 +16,12 @@ namespace Cirrious.Conference.Core.ViewModels
         }
 
         private bool _splashScreenComplete;
+
         public bool SplashScreenComplete
         {
             get { return _splashScreenComplete; }
-            set 
-            { 
+            set
+            {
                 _splashScreenComplete = value;
                 MoveForwardsIfPossible();
             }
@@ -33,7 +32,7 @@ namespace Cirrious.Conference.Core.ViewModels
             if (IsLoading || !SplashScreenComplete)
                 return;
 
-            ShowViewModel<HomeViewModel>(true);           
+            ShowViewModel<HomeViewModel>(true);
         }
     }
 }

@@ -6,7 +6,7 @@ namespace ApiExamples.Touch
 {
     public class OnlyTwoDeepPresenter : MvxTouchViewPresenter
     {
-        public OnlyTwoDeepPresenter(IMvxApplicationDelegate applicationDelegate, UIWindow window) 
+        public OnlyTwoDeepPresenter(IMvxApplicationDelegate applicationDelegate, UIWindow window)
             : base(applicationDelegate, window)
         {
         }

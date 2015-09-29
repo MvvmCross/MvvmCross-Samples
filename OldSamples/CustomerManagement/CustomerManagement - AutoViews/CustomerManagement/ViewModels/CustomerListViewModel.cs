@@ -1,13 +1,7 @@
-﻿using System.Windows.Input;
-using Cirrious.MvvmCross.AutoView;
-using Cirrious.MvvmCross.AutoView.Auto;
-using Cirrious.MvvmCross.AutoView.Auto.List;
-using Cirrious.MvvmCross.AutoView.Auto.Menu;
-using Cirrious.MvvmCross.AutoView.Interfaces;
-using Cirrious.MvvmCross.ViewModels;
-using CrossUI.Core.Descriptions;
+﻿using Cirrious.MvvmCross.ViewModels;
 using CustomerManagement.AutoViews.Core.Interfaces.Models;
 using CustomerManagement.AutoViews.Core.Models;
+using System.Windows.Input;
 
 namespace CustomerManagement.AutoViews.Core.ViewModels
 {

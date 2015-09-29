@@ -1,6 +1,5 @@
 using Cirrious.Conference.Core.Interfaces;
 using Cirrious.CrossCore;
-using MonoTouch.UIKit;
 
 namespace Cirrious.Conference.UI.Touch
 {

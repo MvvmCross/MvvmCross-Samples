@@ -1,17 +1,7 @@
+using Cirrious.Conference.Core.ViewModels;
+using Cirrious.MvvmCross.Binding.BindingContext;
 using System;
 using System.Collections.Generic;
-using System.Drawing;
-using System.Net.Mime;
-using Cirrious.MvvmCross.Binding.Touch;
-using MonoTouch.Foundation;
-using MonoTouch.UIKit;
-using Cirrious.Conference.Core.ViewModels;
-using Cirrious.MvvmCross.Binding.Touch.Views;
-using Cirrious.MvvmCross.Views;
-using MonoTouch.MapKit;
-using MonoTouch.CoreLocation;
-using Cirrious.MvvmCross.Touch.Views;
-using Cirrious.MvvmCross.Binding.BindingContext;
 
 namespace Cirrious.Conference.UI.Touch
 {
@@ -22,10 +12,11 @@ namespace Cirrious.Conference.UI.Touch
         {
         }
 
-		public new MapViewModel ViewModel {
-			get { return (MapViewModel)base.ViewModel; }
-			set { base.ViewModel = value; }
-		}
+        public new MapViewModel ViewModel
+        {
+            get { return (MapViewModel)base.ViewModel; }
+            set { base.ViewModel = value; }
+        }
 
         public override void DidReceiveMemoryWarning()
         {
@@ -55,25 +46,24 @@ namespace Cirrious.Conference.UI.Touch
                                   , ViewModel.Name);
             map.AddAnnotationObject(annotation);
 
-
             Button1.SetImage(UIImage.FromFile("ConfResources/Images/appbar.link.png"), UIControlState.Normal);
             Button2.SetImage(UIImage.FromFile("ConfResources/Images/appbar.phone.png"), UIControlState.Normal);
             Button3.SetImage(UIImage.FromFile("ConfResources/Images/appbar.feature.email.rest.png"), UIControlState.Normal);
 
             this.AddBindings(new Dictionary<object, string>()
-		                         {
-                                     {Label1,"Text Name"}, 
+                                 {
+                                     {Label1,"Text Name"},
                                      {Button1,"Title Address"},
                                      {Button2,"Title Phone"},
                                      {Button3,"Title Email"},
-		                         });
+                                 });
 
             this.AddBindings(new Dictionary<object, string>()
-		                         {
+                                 {
                                      {Button1,"TouchUpInside WebPageCommand"},
                                      {Button2,"TouchUpInside PhoneCommand"},
                                      {Button3,"TouchUpInside EmailCommand"},
-		                         });
+                                 });
 
             NavigationItem.SetRightBarButtonItem(new UIBarButtonItem("Tweet", UIBarButtonItemStyle.Bordered, (sender, e) => ViewModel.DoShareGeneral()), false);
         }
@@ -131,6 +121,7 @@ namespace Cirrious.Conference.UI.Touch
         {
             private CLLocationCoordinate2D _coordinate;
             private string _title, _subtitle;
+
             public override CLLocationCoordinate2D Coordinate
             {
                 get
@@ -139,6 +130,7 @@ namespace Cirrious.Conference.UI.Touch
                 }
                 set { _coordinate = value; }
             }
+
             public override string Title
             {
                 get
@@ -146,6 +138,7 @@ namespace Cirrious.Conference.UI.Touch
                     return _title;
                 }
             }
+
             public override string Subtitle
             {
                 get
@@ -153,6 +146,7 @@ namespace Cirrious.Conference.UI.Touch
                     return _subtitle;
                 }
             }
+
             /// <summary>
             /// custom constructor
             /// </summary>
@@ -166,4 +160,3 @@ namespace Cirrious.Conference.UI.Touch
         }
     }
 }
-

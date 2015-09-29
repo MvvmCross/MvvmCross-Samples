@@ -1,20 +1,18 @@
+using Cirrious.CrossCore;
+using Cirrious.CrossCore.Exceptions;
+using Cirrious.CrossCore.Platform;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Xml.Linq;
 using System.Xml.Serialization;
-using Cirrious.CrossCore.Exceptions;
-using Cirrious.CrossCore;
-using Cirrious.CrossCore.Platform;
-using Cirrious.MvvmCross.Plugins.File;
-using Cirrious.MvvmCross.Plugins.ResourceLoader;
 
 namespace CustomerManagement.Core.Models
 {
-    public class SimpleDataStore 
+    public class SimpleDataStore
         : IDataStore
-          
+
     {
         public SimpleDataStore()
         {
@@ -90,7 +88,8 @@ namespace CustomerManagement.Core.Models
                                                      });
         }
 
-        private IObservableCollection<Customer> _customers; 
+        private IObservableCollection<Customer> _customers;
+
         public IObservableCollection<Customer> Customers
         {
             get { return _customers; }

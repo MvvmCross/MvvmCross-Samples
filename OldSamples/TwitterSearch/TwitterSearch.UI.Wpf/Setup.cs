@@ -1,7 +1,7 @@
-﻿using System.Windows.Threading;
-using Cirrious.MvvmCross.ViewModels;
+﻿using Cirrious.MvvmCross.ViewModels;
 using Cirrious.MvvmCross.Wpf.Platform;
 using Cirrious.MvvmCross.Wpf.Views;
+using System.Windows.Threading;
 using TwitterSearch.Core;
 
 namespace TwitterSearch.UI.Wpf

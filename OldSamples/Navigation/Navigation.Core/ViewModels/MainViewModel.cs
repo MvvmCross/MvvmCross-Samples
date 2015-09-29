@@ -1,5 +1,5 @@
-﻿using System.Windows.Input;
-using Cirrious.MvvmCross.ViewModels;
+﻿using Cirrious.MvvmCross.ViewModels;
+using System.Windows.Input;
 
 namespace Navigation.Core.ViewModels
 {
@@ -34,13 +34,13 @@ namespace Navigation.Core.ViewModels
                 return
                     new MvxCommand(
                         () =>
-                        ShowViewModel<ParameterizedViewModel>(new ParameterizedViewModel.Parameters {Key = ParameterKey}));
+                        ShowViewModel<ParameterizedViewModel>(new ParameterizedViewModel.Parameters { Key = ParameterKey }));
             }
         }
 
         public ICommand GoAnonymousCommand
         {
-            get { return new MvxCommand(() => ShowViewModel<AnonymousViewModel>(new {key = ParameterKey})); }
+            get { return new MvxCommand(() => ShowViewModel<AnonymousViewModel>(new { key = ParameterKey })); }
         }
     }
 }

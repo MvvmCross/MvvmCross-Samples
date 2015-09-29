@@ -1,5 +1,5 @@
-using System;
 using Cirrious.MvvmCross.ViewModels;
+using System;
 
 namespace Tutorial.Core.ViewModels.Lessons
 {
@@ -7,6 +7,7 @@ namespace Tutorial.Core.ViewModels.Lessons
         : MvxViewModel
     {
         private float _tipValue;
+
         public float TipValue
         {
             get { return _tipValue; }
@@ -14,6 +15,7 @@ namespace Tutorial.Core.ViewModels.Lessons
         }
 
         private float _total;
+
         public float Total
         {
             get { return _total; }
@@ -21,6 +23,7 @@ namespace Tutorial.Core.ViewModels.Lessons
         }
 
         private float _subTotal;
+
         public float SubTotal
         {
             get { return _subTotal; }
@@ -28,6 +31,7 @@ namespace Tutorial.Core.ViewModels.Lessons
         }
 
         private int _tipPercent;
+
         public int TipPercent
         {
             get { return _tipPercent; }

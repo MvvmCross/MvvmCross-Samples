@@ -1,21 +1,17 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq.Expressions;
-using System.Windows.Input;
-using Cirrious.CrossCore;
-using Cirrious.MvvmCross.Plugins.PhoneCall;
-using Cirrious.MvvmCross.Plugins.WebBrowser;
+﻿using Cirrious.CrossCore;
 using Cirrious.MvvmCross.ViewModels;
-using CrossUI.Core.Descriptions;
 using CustomerManagement.Core.Models;
+using System;
+using System.Collections.Generic;
+using System.Windows.Input;
 
 namespace CustomerManagement.Core.ViewModels
 {
-    public class DetailsCustomerViewModel 
-        : BaseViewModel        
+    public class DetailsCustomerViewModel
+        : BaseViewModel
     {
         private Customer _customer;
+
         public Customer Customer
         {
             get { return _customer; }
@@ -116,6 +112,7 @@ namespace CustomerManagement.Core.ViewModels
         }
 
 #warning Broken Code - also should probably use a service to do the save, not the static
+
         private void DeleteCustomer()
         {
             DataStore.DeleteCustomer(Customer.ID);

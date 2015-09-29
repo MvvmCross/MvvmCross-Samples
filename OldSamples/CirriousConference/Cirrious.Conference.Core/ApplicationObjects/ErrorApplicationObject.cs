@@ -1,7 +1,6 @@
-using System;
 using Cirrious.Conference.Core.Interfaces;
 using Cirrious.CrossCore.Core;
-using Cirrious.MvvmCross.ViewModels;
+using System;
 
 namespace Cirrious.Conference.Core.ApplicationObjects
 {

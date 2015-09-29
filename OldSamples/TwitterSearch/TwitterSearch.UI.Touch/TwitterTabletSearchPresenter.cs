@@ -1,16 +1,12 @@
-using System;
-using Cirrious.CrossCore;
-using Cirrious.MvvmCross.Touch.Views;
-using Cirrious.MvvmCross.Touch.Views.Presenters;
 using Cirrious.MvvmCross.ViewModels;
-using MonoTouch.UIKit;
+using System;
 using TwitterSearch.UI.Touch.Views;
 
 namespace TwitterSearch.UI.Touch
 {
     public class TwitterTabletSearchPresenter
         : MvxBaseTouchViewPresenter
-        
+
     {
         private readonly UIApplicationDelegate _applicationDelegate;
         private readonly UIWindow _window;
@@ -47,7 +43,6 @@ namespace TwitterSearch.UI.Touch
             throw new NotImplementedException();
         }
 
-        
         public override bool PresentModalViewController(UIViewController viewController, bool animated)
         {
             throw new NotImplementedException();

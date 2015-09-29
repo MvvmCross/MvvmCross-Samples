@@ -5,8 +5,7 @@
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
-    local:MvxBind="{'Click':{'Path':'Command'}}"
-    >
+    local:MvxBind="{'Click':{'Path':'Command'}}">
   <ImageView
       xmlns:android="http://schemas.android.com/apk/res/android"
       xmlns:local="http://schemas.android.com/apk/res/com.cirrious.conference.sqlbits"
@@ -15,15 +14,12 @@
       android:layout_height="70dp"
       android:padding="10dp"
       android:icon="@drawable/icon"
-      local:MvxBind="AssetImagePath Item.Image,Converter=SponsorImage"
-    />
+      local:MvxBind="AssetImagePath Item.Image,Converter=SponsorImage" />
   <TextView
       android:id="@+id/SponsorImageView"
       android:layout_width="fill_parent"
       android:layout_height="70dp"
       android:padding="10dp"
       android:textSize="24dp"
-      local:MvxBind="Text Item.Name"
-    />
+      local:MvxBind="Text Item.Name" />
 </LinearLayout>
-

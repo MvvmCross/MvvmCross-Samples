@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Globalization;
-using Cirrious.CrossCore.Converters;
-using Cirrious.CrossCore.UI;
-using Cirrious.MvvmCross.Plugins.Color;
 
 namespace ValueConversion.Core.Converters
 {
@@ -10,7 +7,7 @@ namespace ValueConversion.Core.Converters
     {
         protected override string Convert(double value, Type targetType, object parameter, CultureInfo culture)
         {
-            return (value*value).ToString();
+            return (value * value).ToString();
         }
 
         protected override double ConvertBack(string value, Type targetType, object parameter, CultureInfo culture)
@@ -34,7 +31,7 @@ namespace ValueConversion.Core.Converters
     {
         protected override MvxColor Convert(object value, object parameter, CultureInfo culture)
         {
-            var input = (MvxColor) value;
+            var input = (MvxColor)value;
             var brightnessToUse = SimpleContrast(input.R, input.G, input.B);
             return new MvxColor(brightnessToUse, brightnessToUse, brightnessToUse);
         }
@@ -83,22 +80,22 @@ namespace ValueConversion.Core.Converters
             else if (difference < 100.0)
             {
                 whichFormat = "{0}s ago";
-                valueToFormat = (int) difference;
+                valueToFormat = (int)difference;
             }
             else if (difference < 3600.0)
             {
                 whichFormat = "{0}m ago";
-                valueToFormat = (int) (difference/60);
+                valueToFormat = (int)(difference / 60);
             }
-            else if (difference < 24*3600)
+            else if (difference < 24 * 3600)
             {
                 whichFormat = "{0}h ago";
-                valueToFormat = (int) (difference/(3600));
+                valueToFormat = (int)(difference / (3600));
             }
             else
             {
                 whichFormat = "{0}d ago";
-                valueToFormat = (int) (difference/(3600*24));
+                valueToFormat = (int)(difference / (3600 * 24));
             }
 
             return string.Format(whichFormat, valueToFormat);

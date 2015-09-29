@@ -1,12 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Documents;
 
 namespace Babel.Store.Common
 {
@@ -24,7 +20,7 @@ namespace Babel.Store.Common
     ///             <RichTextBlockOverflow Width="400" Margin="50,0,0,0"/>
     ///         </DataTemplate>
     ///     </RichTextColumns.ColumnTemplate>
-    ///     
+    ///
     ///     <RichTextBlock Width="400">
     ///         <Paragraph>
     ///             <Run Text="{Binding Content}"/>

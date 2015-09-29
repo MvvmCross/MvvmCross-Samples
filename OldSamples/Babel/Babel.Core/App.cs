@@ -14,7 +14,7 @@ namespace Babel.Core
                 .EndingWith("Service")
                 .AsInterfaces()
                 .RegisterAsLazySingleton();
-				
+
             InitializeText();
             RegisterAppStart<ViewModels.FirstViewModel>();
         }

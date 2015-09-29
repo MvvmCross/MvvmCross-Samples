@@ -1,12 +1,11 @@
 using System;
 using System.Collections.Specialized;
 using System.Windows.Input;
-using MonoTouch.UIKit;
 
 namespace PictureTaking.Touch
 {
-	// This class is never actually executed, but when Xamarin linking is enabled it does how to ensure types and properties
-	// are preserved in the deployed app
+    // This class is never actually executed, but when Xamarin linking is enabled it does how to ensure types and properties
+    // are preserved in the deployed app
     public class LinkerPleaseInclude
     {
         public void Include(UIButton uiButton)
@@ -63,12 +62,12 @@ namespace PictureTaking.Touch
 
         public void Include(INotifyCollectionChanged changed)
         {
-            changed.CollectionChanged += (s,e) => { var test = string.Format("{0}{1}{2}{3}{4}", e.Action,e.NewItems, e.NewStartingIndex, e.OldItems, e.OldStartingIndex); } ;
+            changed.CollectionChanged += (s, e) => { var test = string.Format("{0}{1}{2}{3}{4}", e.Action, e.NewItems, e.NewStartingIndex, e.OldItems, e.OldStartingIndex); };
         }
-		
+
         public void Include(ICommand command)
         {
-           command.CanExecuteChanged += (s, e) => { if (command.CanExecute(null)) command.Execute(null); };
+            command.CanExecuteChanged += (s, e) => { if (command.CanExecute(null)) command.Execute(null); };
         }
-	}
+    }
 }

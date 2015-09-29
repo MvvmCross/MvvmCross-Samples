@@ -1,10 +1,9 @@
-using System.Linq;
 using Android.App;
 using Android.OS;
-using Cirrious.MvvmCross.Binding.BindingContext;
 using Cirrious.MvvmCross.Dialog.Droid.Views;
 using CrossUI.Droid.Dialog.Elements;
 using DialogExamples.Core.ViewModels;
+using System.Linq;
 
 namespace DialogExamples.Droid.Views
 {
@@ -50,7 +49,7 @@ namespace DialogExamples.Droid.Views
                         {
                             new ButtonElement("Second").Bind(bindings, element => element.SelectedCommand, vm => vm.GoSecondCommand),
                             new ButtonElement("Bindable Elements").Bind(bindings, element => element.SelectedCommand, vm => vm.BindableElementsCommand),
-                            new ButtonElement("Linear view dialog").Bind(bindings, element => element.SelectedCommand, vm => vm.GoLinearCommand)  
+                            new ButtonElement("Linear view dialog").Bind(bindings, element => element.SelectedCommand, vm => vm.GoLinearCommand)
                         },
                     new Section("Debug out:")
                         {

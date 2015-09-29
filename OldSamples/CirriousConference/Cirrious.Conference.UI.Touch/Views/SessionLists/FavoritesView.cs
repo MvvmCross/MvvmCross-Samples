@@ -1,11 +1,10 @@
-using System;
 using Cirrious.Conference.Core.ViewModels.SessionLists;
-using Cirrious.MvvmCross.Views;
+using System;
 
 namespace Cirrious.Conference.UI.Touch.Views.SessionLists
 {
-    public class FavoritesView 
+    public class FavoritesView
         : BaseSessionListView<FavoritesViewModel, DateTime>
     {
-	}
+    }
 }

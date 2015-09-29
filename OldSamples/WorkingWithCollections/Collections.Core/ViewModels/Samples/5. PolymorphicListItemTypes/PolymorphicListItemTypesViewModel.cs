@@ -1,5 +1,5 @@
-﻿using System.Collections.Generic;
-using Collections.Core.ViewModels.Samples.ListItems;
+﻿using Collections.Core.ViewModels.Samples.ListItems;
+using System.Collections.Generic;
 
 namespace Collections.Core.ViewModels.Samples.MultipleListItemTypes
 {
@@ -12,7 +12,7 @@ namespace Collections.Core.ViewModels.Samples.MultipleListItemTypes
             var animals = new List<Animal>();
             for (var i = 0; i < 10; i++)
             {
-                animals.Add(i%2 == 0 ? CreateDog() : (Animal) CreateKitten());
+                animals.Add(i % 2 == 0 ? CreateDog() : (Animal)CreateKitten());
             }
             Animals = animals;
         }

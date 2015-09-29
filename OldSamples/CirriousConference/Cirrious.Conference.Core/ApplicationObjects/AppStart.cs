@@ -1,20 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading;
+﻿using Cirrious.Conference.Core.Interfaces;
 using Cirrious.Conference.Core.ViewModels;
 using Cirrious.CrossCore;
 using Cirrious.MvvmCross.ViewModels;
-using Cirrious.Conference.Core.Interfaces;
 
 namespace Cirrious.Conference.Core.ApplicationObjects
 {
     public class AppStart
         : MvxNavigatingObject
-        , IMvxAppStart		
+        , IMvxAppStart
     {
         private readonly bool _showSplashScreen;
+
         public AppStart(bool showSplashScreen)
         {
             _showSplashScreen = showSplashScreen;

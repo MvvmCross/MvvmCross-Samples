@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using CustomerManagement.AutoViews.Core.Interfaces.Models;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using CustomerManagement.AutoViews.Core.Interfaces.Models;
 
 namespace CustomerManagement.AutoViews.Core.Models
 {
@@ -10,10 +10,9 @@ namespace CustomerManagement.AutoViews.Core.Models
     {
         public SimpleObservableCollection(List<T> source)
             : base(source)
-        {            
+        {
         }
     }
-
 
     /*
     public class XmlDataStore
@@ -149,7 +148,7 @@ namespace CustomerManagement.AutoViews.Core.Models
 
         public static ObservableCollection<Contact> GetContacts(string customer)
         {
-            return 
+            return
                 new ObservableCollection<Contact>(GetCustomerList().Where(obj => obj.ID == customer).First().Contacts);
         }
 
@@ -254,7 +253,7 @@ namespace CustomerManagement.AutoViews.Core.Models
         private static ObservableCollection<Customer> CachedCustomerList;
 
 		//
-        // File system Access 
+        // File system Access
 		//
         static ObservableCollection<Customer> GetCustomerList()
         {
@@ -308,7 +307,7 @@ namespace CustomerManagement.AutoViews.Core.Models
             using (StreamWriter writer = new StreamWriter(dataFilePath))
             {
                 var serializer = new XmlSerializer(typeof(List<Customer>));
-                serializer.Serialize(writer, customers); 
+                serializer.Serialize(writer, customers);
             }
         }
 

@@ -1,7 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Windows.Input;
-using Cirrious.MvvmCross.ViewModels;
 
 namespace DailyDilbert.Core.ViewModels
 {
@@ -33,6 +31,7 @@ namespace DailyDilbert.Core.ViewModels
         }
 
         private bool _isLoading;
+
         public bool IsLoading
         {
             get { return _isLoading; }
@@ -40,6 +39,7 @@ namespace DailyDilbert.Core.ViewModels
         }
 
         private List<DilbertItem> _items;
+
         public List<DilbertItem> Items
         {
             get { return _items; }
@@ -47,6 +47,7 @@ namespace DailyDilbert.Core.ViewModels
         }
 
         private Cirrious.MvvmCross.ViewModels.MvxCommand<DilbertItem> _itemSelectedCommand;
+
         public System.Windows.Input.ICommand ItemSelectedCommand
         {
             get

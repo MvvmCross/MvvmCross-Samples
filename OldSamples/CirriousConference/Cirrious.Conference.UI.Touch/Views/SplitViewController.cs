@@ -1,7 +1,3 @@
-using System.Drawing;
-using Cirrious.MvvmCross.Touch.Views;
-using MonoTouch.UIKit;
-
 namespace Cirrious.Conference.UI.Touch.Views
 {
     public sealed class SplitViewController : UISplitViewController

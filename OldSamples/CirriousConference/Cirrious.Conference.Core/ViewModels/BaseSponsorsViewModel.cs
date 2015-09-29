@@ -1,8 +1,8 @@
-using System.Collections.Generic;
-using System.Linq;
 using Cirrious.Conference.Core.Models.Raw;
 using Cirrious.Conference.Core.ViewModels.Helpers;
 using Cirrious.MvvmCross.ViewModels;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Cirrious.Conference.Core.ViewModels
 {
@@ -17,6 +17,6 @@ namespace Cirrious.Conference.Core.ViewModels
             Sponsors = sponsors.Select(x => new WithCommand<Sponsor>(x, new MvxCommand(() => ShowWebPage(x.Url)))).ToList();
         }
 
-        public IList<WithCommand<Sponsor>> Sponsors { get; private set; }        
+        public IList<WithCommand<Sponsor>> Sponsors { get; private set; }
     }
 }

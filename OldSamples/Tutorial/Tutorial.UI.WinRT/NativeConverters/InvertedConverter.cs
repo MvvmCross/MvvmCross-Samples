@@ -1,6 +1,5 @@
 using System;
 using System.Globalization;
-using Cirrious.CrossCore.Converters;
 
 namespace Tutorial.UI.WinRT.Converters
 {

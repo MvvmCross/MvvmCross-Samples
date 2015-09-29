@@ -1,14 +1,12 @@
-using Cirrious.MvvmCross.Binding.Touch.Views;
 using MonoTouch.Foundation;
-using MonoTouch.UIKit;
 
 namespace CustomerManagement.Touch.Views
 {
     public class CustomerListTableViewSource : MvxTableViewSource
     {
-        static readonly NSString CellIdentifier = new NSString("ClientCell");
+        private static readonly NSString CellIdentifier = new NSString("ClientCell");
 
-        public CustomerListTableViewSource(UITableView tableView) 
+        public CustomerListTableViewSource(UITableView tableView)
             : base(tableView)
         {
         }

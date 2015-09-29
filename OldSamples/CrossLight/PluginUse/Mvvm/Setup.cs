@@ -2,9 +2,7 @@ using Android.Content;
 using Android.Views;
 using Cirrious.CrossCore.Core;
 using Cirrious.CrossCore.Droid;
-using Cirrious.CrossCore.Droid.Platform;
 using Cirrious.CrossCore.IoC;
-using Cirrious.CrossCore.Platform;
 using Cirrious.CrossCore.Plugins;
 using Cirrious.MvvmCross.Binding.Droid;
 using Cirrious.MvvmCross.Binding.Droid.Binders.ViewTypeResolvers;
@@ -17,7 +15,7 @@ namespace Mvvm
         public static readonly Setup Instance = new Setup();
 
         private Setup()
-        {            
+        {
         }
 
         public void EnsureInitialized(Context applicationContext)

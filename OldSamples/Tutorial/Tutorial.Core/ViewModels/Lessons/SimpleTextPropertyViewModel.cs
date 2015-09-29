@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using Cirrious.MvvmCross.ViewModels;
 
 namespace Tutorial.Core.ViewModels.Lessons
@@ -10,6 +6,7 @@ namespace Tutorial.Core.ViewModels.Lessons
         : MvxViewModel
     {
         private string _theText;
+
         public string TheText
         {
             get { return _theText; }

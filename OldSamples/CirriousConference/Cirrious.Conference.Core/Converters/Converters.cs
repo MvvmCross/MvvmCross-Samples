@@ -1,5 +1,5 @@
 using Cirrious.MvvmCross.Localization;
-using Cirrious.MvvmCross.Plugins.Visibility;
+using MvvmCross.Plugins.Visibility;
 
 namespace Cirrious.Conference.Core.Converters
 {

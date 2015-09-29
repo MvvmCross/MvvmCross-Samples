@@ -1,15 +1,13 @@
-using System;
-using System.Reflection;
 using Cirrious.MvvmCross.Binding;
 using Cirrious.MvvmCross.Binding.Bindings.Target;
-using MonoTouch.UIKit;
+using System;
 
 namespace Cirrious.Conference.UI.Touch.Bindings
 {
     public class FavoritesButtonBinding
         : MvxTargetBinding
     {
-		public static readonly UIImage YesImage = UIImage.FromFile("ConfResources/star_gold45.png");
+        public static readonly UIImage YesImage = UIImage.FromFile("ConfResources/star_gold45.png");
         public static readonly UIImage NoImage = UIImage.FromFile("ConfResources/star_grey45.png");
 
         public static void SetButtonBackground(UIButton button, bool value)
@@ -24,17 +22,19 @@ namespace Cirrious.Conference.UI.Touch.Bindings
             }
         }
 
-        private UIButton Button {
-			get {
-				return Target as UIButton;
-			}
-		}
+        private UIButton Button
+        {
+            get
+            {
+                return Target as UIButton;
+            }
+        }
 
         private bool _currentValue;
 
         public FavoritesButtonBinding(UIButton button)
-        	: base(button)
-		{
+            : base(button)
+        {
             button.TouchUpInside += ButtonOnClick;
         }
 
@@ -52,22 +52,25 @@ namespace Cirrious.Conference.UI.Touch.Bindings
             SetButtonBackground();
         }
 
-        private void SetButtonBackground ()
-		{
-			var button = Button;
-			if (button != null) {
-				SetButtonBackground (button, _currentValue);
-			}
-		}
+        private void SetButtonBackground()
+        {
+            var button = Button;
+            if (button != null)
+            {
+                SetButtonBackground(button, _currentValue);
+            }
+        }
 
-        protected override void Dispose (bool isDisposing)
-		{
-			if (isDisposing) {
-				var button = Button;
-				if (button != null) {
-					button.TouchUpInside -= ButtonOnClick;
-				}
-			}
+        protected override void Dispose(bool isDisposing)
+        {
+            if (isDisposing)
+            {
+                var button = Button;
+                if (button != null)
+                {
+                    button.TouchUpInside -= ButtonOnClick;
+                }
+            }
 
             base.Dispose(isDisposing);
         }

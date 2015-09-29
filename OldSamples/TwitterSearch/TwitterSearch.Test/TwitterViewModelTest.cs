@@ -1,8 +1,8 @@
-﻿using System;
+﻿using Moq;
+using NUnit.Framework;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using Moq;
-using NUnit.Framework;
 using TwitterSearch.Core.Interfaces;
 using TwitterSearch.Core.Models;
 using TwitterSearch.Core.ViewModels;
@@ -29,7 +29,7 @@ namespace TwitterSearch.Test
         [Test]
         public void ErrorredSearchCausesChangeInIsSearching()
         {
-            ClearAll();            
+            ClearAll();
             CreateMockNavigation();
 
             var twitterService = new Mock<ITwitterSearchProvider>();
@@ -80,7 +80,7 @@ namespace TwitterSearch.Test
         {
             ClearAll();
             CreateMockNavigation();
-            
+
             var twitterService = new Mock<ITwitterSearchProvider>();
             var searchText = "To search for";
             Action<IEnumerable<Tweet>> storedSuccessAction = null;

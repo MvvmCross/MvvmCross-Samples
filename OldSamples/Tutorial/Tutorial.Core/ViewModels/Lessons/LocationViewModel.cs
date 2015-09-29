@@ -1,13 +1,10 @@
-using System;
-using System.Windows.Input;
-using Cirrious.CrossCore;
-using Cirrious.MvvmCross.Plugins.Location;
 using Cirrious.MvvmCross.ViewModels;
+using System.Windows.Input;
 
 namespace Tutorial.Core.ViewModels.Lessons
 {
     public class LocationViewModel
-        : MvxViewModel        
+        : MvxViewModel
     {
         private readonly IMvxGeoLocationWatcher _watcher;
 
@@ -19,6 +16,7 @@ namespace Tutorial.Core.ViewModels.Lessons
         }
 
         private bool _isStarted;
+
         public bool IsStarted
         {
             get { return _isStarted; }
@@ -26,6 +24,7 @@ namespace Tutorial.Core.ViewModels.Lessons
         }
 
         private double _lat;
+
         public double Lat
         {
             get { return _lat; }
@@ -33,6 +32,7 @@ namespace Tutorial.Core.ViewModels.Lessons
         }
 
         private double _lng;
+
         public double Lng
         {
             get { return _lng; }
@@ -40,6 +40,7 @@ namespace Tutorial.Core.ViewModels.Lessons
         }
 
         private string _lastError;
+
         public string LastError
         {
             get { return _lastError; }

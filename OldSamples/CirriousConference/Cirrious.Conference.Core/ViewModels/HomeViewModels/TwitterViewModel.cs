@@ -1,20 +1,18 @@
+using Cirrious.Conference.Core.Interfaces;
+using Cirrious.Conference.Core.Models.Twitter;
+using Cirrious.Conference.Core.ViewModels.Helpers;
+using Cirrious.CrossCore;
+using Cirrious.MvvmCross.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Input;
-using Cirrious.Conference.Core.Interfaces;
-using Cirrious.Conference.Core.Models.Twitter;
-using Cirrious.CrossCore;
-using Cirrious.Conference.Core.ViewModels.Helpers;
-using Cirrious.MvvmCross.Plugins.Network;
-using Cirrious.MvvmCross.Plugins.Network.Reachability;
-using Cirrious.MvvmCross.ViewModels;
 
 namespace Cirrious.Conference.Core.ViewModels.HomeViewModels
 {
     public class TwitterViewModel
         : BaseViewModel
-        
+
     {
         private const string SearchTerm = "SQLBits";
 
@@ -24,6 +22,7 @@ namespace Cirrious.Conference.Core.ViewModels.HomeViewModels
         }
 
         private IEnumerable<Tweet> _tweets;
+
         public IEnumerable<Tweet> Tweets
         {
             get { return _tweets; }
@@ -31,13 +30,15 @@ namespace Cirrious.Conference.Core.ViewModels.HomeViewModels
         }
 
         private IEnumerable<WithCommand<Tweet>> _tweetsPlus;
+
         public IEnumerable<WithCommand<Tweet>> TweetsPlus
         {
             get { return _tweetsPlus; }
             set { _tweetsPlus = value; RaisePropertyChanged("TweetsPlus"); }
         }
-		
+
         private bool _isSearching;
+
         public bool IsSearching
         {
             get { return _isSearching; }
@@ -51,44 +52,45 @@ namespace Cirrious.Conference.Core.ViewModels.HomeViewModels
                 return new MvxCommand(StartSearch);
             }
         }
-		
-		public ICommand RefreshCommand
-		{
-			get
-			{
+
+        public ICommand RefreshCommand
+        {
+            get
+            {
                 return new MvxCommand(StartSearch);
-			}
-		}
-		
-		private DateTime _whenLastUpdatedUtc = DateTime.MinValue;
-		public DateTime WhenLastUpdatedUtc
-		{
-			get
-			{
-				return _whenLastUpdatedUtc;
-			}
-			set
-			{
-				_whenLastUpdatedUtc = value;
-				RaisePropertyChanged("WhenLastUpdatedUtc");
-			}
-		}
-		
+            }
+        }
+
+        private DateTime _whenLastUpdatedUtc = DateTime.MinValue;
+
+        public DateTime WhenLastUpdatedUtc
+        {
+            get
+            {
+                return _whenLastUpdatedUtc;
+            }
+            set
+            {
+                _whenLastUpdatedUtc = value;
+                RaisePropertyChanged("WhenLastUpdatedUtc");
+            }
+        }
+
         private void StartSearch()
         {
             if (IsSearching)
                 return;
-			
-			IMvxReachability reach;
-			if (Mvx.TryResolve<IMvxReachability>(out reach))
-			{
-				if (!reach.IsHostReachable("www.twitter.com"))
-				{
-				    ReportError(SharedTextSource.GetText("Error.NoNetwork"));
-					return;
-				}
-			}
-			
+
+            IMvxReachability reach;
+            if (Mvx.TryResolve<IMvxReachability>(out reach))
+            {
+                if (!reach.IsHostReachable("www.twitter.com"))
+                {
+                    ReportError(SharedTextSource.GetText("Error.NoNetwork"));
+                    return;
+                }
+            }
+
             IsSearching = true;
             TwitterSearchProvider.StartAsyncSearch(SearchTerm, Success, Error);
         }
@@ -113,12 +115,12 @@ namespace Cirrious.Conference.Core.ViewModels.HomeViewModels
         {
             IsSearching = false;
             Tweets = enumerable.ToList();
-			TweetsPlus = Tweets.Select(x => new WithCommand<Tweet>(x, new MvxCommand(() => ShowTweet(x)))).ToList();
-			WhenLastUpdatedUtc = DateTime.UtcNow;
+            TweetsPlus = Tweets.Select(x => new WithCommand<Tweet>(x, new MvxCommand(() => ShowTweet(x)))).ToList();
+            WhenLastUpdatedUtc = DateTime.UtcNow;
         }
-			                           
-		private void ShowTweet(Tweet tweet)
-		{
+
+        private void ShowTweet(Tweet tweet)
+        {
             var guessTwitterNameEnds = tweet.Author.IndexOf(' ');
             if (guessTwitterNameEnds > 0)
             {
@@ -129,6 +131,6 @@ namespace Cirrious.Conference.Core.ViewModels.HomeViewModels
             {
                 ExceptionSafeShare("@" + tweet.Author + " #sqlbitsX ");
             }
-		}
+        }
     }
 }

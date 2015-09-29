@@ -1,20 +1,15 @@
-using System.Drawing;
-using System.Windows.Input;
 using Cirrious.Conference.Core.ViewModels;
-using Cirrious.MvvmCross.Binding.Touch.Views;
-using Cirrious.MvvmCross.Views;
-using MonoTouch.Foundation;
-using MonoTouch.UIKit;
-using Cirrious.MvvmCross.Touch.Views;
+using System.Windows.Input;
 
 namespace Cirrious.Conference.UI.Touch
 {
     public class AboutView : MvxViewController
     {
-		public new AboutViewModel ViewModel {
-			get { return (AboutViewModel)base.ViewModel; }
-			set { base.ViewModel = value; }
-		}
+        public new AboutViewModel ViewModel
+        {
+            get { return (AboutViewModel)base.ViewModel; }
+            set { base.ViewModel = value; }
+        }
 
         private UIScrollView _scrollview;
         private int _currentTop = 0;
@@ -24,12 +19,12 @@ namespace Cirrious.Conference.UI.Touch
             base.ViewDidLoad();
 
             View.BackgroundColor = UIColor.Black;
-			
-			NavigationItem.SetRightBarButtonItem(new UIBarButtonItem("Tweet", UIBarButtonItemStyle.Bordered, (sender, e) => ViewModel.DoShareGeneral()), false);			
-			
-            _scrollview = new UIScrollView(new RectangleF(0,0,320,365));
+
+            NavigationItem.SetRightBarButtonItem(new UIBarButtonItem("Tweet", UIBarButtonItemStyle.Bordered, (sender, e) => ViewModel.DoShareGeneral()), false);
+
+            _scrollview = new UIScrollView(new RectangleF(0, 0, 320, 365));
             View.AddSubview(_scrollview);
-			
+
             AddHeading("SQLBitsXApp");
             AddTextBlock("AboutSQLBitsXApp");
             AddCommand("ContactSlodgeCommand", "StuartLinkText", "appbar.feature.email.rest");
@@ -37,11 +32,11 @@ namespace Cirrious.Conference.UI.Touch
 
             AddHeading("SQLBitsX");
             AddTextBlock("AboutSQLBitsX");
-            AddCommand("ShowSqlBitsCommand","SQLBitsLinkText","appbar.link");
+            AddCommand("ShowSqlBitsCommand", "SQLBitsLinkText", "appbar.link");
 
             AddHeading("SQLBits");
             AddTextBlock("AboutSQLBits");
-            AddCommand("ShowSqlBitsCommand","SQLBitsLinkText","appbar.link");
+            AddCommand("ShowSqlBitsCommand", "SQLBitsLinkText", "appbar.link");
 
             AddHeading("MvvmCross");
             AddTextBlock("AboutMvvmCross");
@@ -51,7 +46,7 @@ namespace Cirrious.Conference.UI.Touch
             AddTextBlock("ForXamarin");
             AddCommand("MonoTouchCommand", "MonoTouch", "appbar.link");
             AddCommand("MonoDroidCommand", "MonoForAndroid", "appbar.link");
-                            
+
             AddTextBlock("DisclaimerMono");
 
             _scrollview.ContentSize = new SizeF(320, _currentTop);
@@ -81,7 +76,7 @@ namespace Cirrious.Conference.UI.Touch
             var text = GetText(which);
             var nsText = new NSString(text);
             var font = UIFont.FromName("Helvetica", 13);
-            var size = nsText.StringSize(font, new SizeF(300,100000), UILineBreakMode.WordWrap);
+            var size = nsText.StringSize(font, new SizeF(300, 100000), UILineBreakMode.WordWrap);
             var frame = new RectangleF(10, _currentTop, 300, size.Height);
             var view = new UILabel(frame);
             view.BackgroundColor = UIColor.Black;

@@ -11,7 +11,7 @@ namespace Cirrious.Conference.Core.ViewModels.SessionLists
         public void Init(int dayOfMonth)
         {
             _dayOfMonth = dayOfMonth;
-            Title = DayFrom(_dayOfMonth);            
+            Title = DayFrom(_dayOfMonth);
         }
 
         protected override void LoadSessions()
@@ -40,9 +40,11 @@ namespace Cirrious.Conference.Core.ViewModels.SessionLists
                 case 29:
                     day = "Thursday";
                     break;
+
                 case 30:
                     day = "Friday";
                     break;
+
                 case 31:
                 default:
                     day = "Saturday";
@@ -52,6 +54,7 @@ namespace Cirrious.Conference.Core.ViewModels.SessionLists
         }
 
         private string _title;
+
         public string Title
         {
             get { return _title; }

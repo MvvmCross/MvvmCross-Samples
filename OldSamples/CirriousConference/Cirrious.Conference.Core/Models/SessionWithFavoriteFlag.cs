@@ -8,6 +8,7 @@ namespace Cirrious.Conference.Core.Models
     {
         public Session Session { get; set; }
         private bool _isFavorite;
+
         public bool IsFavorite
         {
             get { return _isFavorite; }

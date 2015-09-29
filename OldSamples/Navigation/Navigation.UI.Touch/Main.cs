@@ -1,6 +1,4 @@
-﻿using MonoTouch.UIKit;
-
-namespace Navigation.UI.Touch
+﻿namespace Navigation.UI.Touch
 {
     public class Application
     {

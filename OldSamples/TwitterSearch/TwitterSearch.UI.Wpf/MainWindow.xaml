@@ -9,6 +9,5 @@
         </Grid.ColumnDefinitions>
         <Grid x:Name="LeftHandColumn"></Grid>
         <Grid x:Name="RightHandColumn" Grid.Column="1"></Grid>
-
     </Grid>
 </Window>

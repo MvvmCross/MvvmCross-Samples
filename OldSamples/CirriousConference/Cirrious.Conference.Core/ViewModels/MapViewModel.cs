@@ -1,14 +1,13 @@
-using System.Windows.Input;
 using Cirrious.MvvmCross.ViewModels;
+using System.Windows.Input;
 
 namespace Cirrious.Conference.Core.ViewModels
 {
     public class MapViewModel
         : BaseViewModel
     {
-
         public string Name { get { return "Novotel London West"; } }
-        public string Address { get { return "London W6 8DR"; }}
+        public string Address { get { return "London W6 8DR"; } }
         public string LocationWebPage { get { return "http://www.novotellondonwest.co.uk/location/index.htm"; } }
 
         public string Phone { get { return "+44 (0)208 741 1555"; } }

@@ -5,8 +5,8 @@ using CustomerManagement.AutoViews.Core.Interfaces.Models;
 
 namespace CustomerManagement.AutoViews.Core.ViewModels
 {
-    public class BaseViewModel 
-        : MvxViewModel        
+    public class BaseViewModel
+        : MvxViewModel
     {
         protected void RequestClose()
         {

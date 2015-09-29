@@ -15,12 +15,12 @@ namespace MvxPageDemo.Touch.Views
             View = new UIView { BackgroundColor = UIColor.White };
             base.ViewDidLoad();
 
-			// ios7 layout
+            // ios7 layout
             if (RespondsToSelector(new Selector("edgesForExtendedLayout")))
             {
-               EdgesForExtendedLayout = UIRectEdge.None;
+                EdgesForExtendedLayout = UIRectEdge.None;
             }
-			   
+
             var label = new UILabel(new CGRect(10, 10, 300, 40));
             Add(label);
             var textField = new UITextField(new CGRect(10, 50, 300, 40));

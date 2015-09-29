@@ -22,7 +22,7 @@ namespace InternetMinute.Core.ViewModels
 
         public void Update(double numMinutes)
         {
-            Count = (long)(numMinutes*(double)Description.PerMinute);
+            Count = (long)(numMinutes * (double)Description.PerMinute);
         }
     }
 }

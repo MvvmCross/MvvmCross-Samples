@@ -1,12 +1,12 @@
-using System;
+using MvvmCross.Plugins.Messenger;
 
 namespace Cirrious.Conference.Core
-{	
-	public class LoadingChangedMessage : Cirrious.MvvmCross.Plugins.Messenger.MvxMessage
-	{
-		public LoadingChangedMessage (object sender)
-			: base(sender)
-		{
-		}
-	}
+{
+    public class LoadingChangedMessage : MvxMessage
+    {
+        public LoadingChangedMessage(object sender)
+            : base(sender)
+        {
+        }
+    }
 }

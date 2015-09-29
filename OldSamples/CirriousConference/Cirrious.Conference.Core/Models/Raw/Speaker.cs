@@ -3,6 +3,7 @@ using System.Collections.Generic;
 namespace Cirrious.Conference.Core.Models.Raw
 {
 #warning - not used :/
+
     public class Speaker
     {
         public string Key { get; set; }

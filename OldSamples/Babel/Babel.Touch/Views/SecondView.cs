@@ -1,9 +1,3 @@
-using System.Drawing;
-using Cirrious.MvvmCross.Binding.BindingContext;
-using Cirrious.MvvmCross.Touch.Views;
-using MonoTouch.Foundation;
-using MonoTouch.UIKit;
-
 namespace Babel.Touch.Views
 {
     [Register("SecondView")]

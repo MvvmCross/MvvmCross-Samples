@@ -20,6 +20,5 @@ namespace BestSellers.Helpers
             }
             return result;
         }
-
     }
 }

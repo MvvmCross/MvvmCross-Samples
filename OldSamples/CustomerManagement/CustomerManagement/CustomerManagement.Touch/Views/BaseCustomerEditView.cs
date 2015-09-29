@@ -1,45 +1,43 @@
 using Cirrious.MvvmCross.Binding.BindingContext;
-using Cirrious.MvvmCross.Dialog.Touch;
-using Cirrious.MvvmCross.Touch.Views;
-using Cirrious.MvvmCross.Views;
 using CustomerManagement.Core.Models;
 using CustomerManagement.Core.ViewModels;
-using MonoTouch.UIKit;
-using CrossUI.Touch.Dialog.Elements;
 
 namespace CustomerManagement.Touch.Views
 {
-    public class BaseCustomerEditView <TViewModel>
+    public class BaseCustomerEditView<TViewModel>
         : MvxDialogViewController
         , IMvxModalTouchView
         where TViewModel : BaseEditCustomerViewModel
     {
-		public new TViewModel ViewModel {
-			get { return (TViewModel)base.ViewModel; }
-			set { base.ViewModel = value; }
-		}
+        public new TViewModel ViewModel
+        {
+            get { return (TViewModel)base.ViewModel; }
+            set { base.ViewModel = value; }
+        }
 
         public BaseCustomerEditView()
             : base(UITableViewStyle.Grouped, null, true)
         {
         }
-		
-        public override void ViewDidLoad ()
+
+        public override void ViewDidLoad()
         {
-            base.ViewDidLoad ();
-			
+            base.ViewDidLoad();
+
             this.NavigationItem.SetRightBarButtonItem(new UIBarButtonItem("Save", UIBarButtonItemStyle.Done, null), false);
-            this.NavigationItem.RightBarButtonItem.Clicked += delegate {
-                                                                           ViewModel.DoSave();
+            this.NavigationItem.RightBarButtonItem.Clicked += delegate
+            {
+                ViewModel.DoSave();
             };
             this.NavigationItem.SetLeftBarButtonItem(new UIBarButtonItem("Cancel", UIBarButtonItemStyle.Bordered, null), false);
-            this.NavigationItem.LeftBarButtonItem.Clicked += delegate {
+            this.NavigationItem.LeftBarButtonItem.Clicked += delegate
+            {
                 ViewModel.CloseCommand.Execute(null);
             };
 
             if (ViewModel.Customer.PrimaryAddress == null)
                 ViewModel.Customer.PrimaryAddress = new Address();
-			
+
             this.Root = new RootElement("Customer Info")
                             {
                                 new Section("Contact Info")
@@ -59,7 +57,7 @@ namespace CustomerManagement.Touch.Views
                                     },
                             };
         }
-		
+
         public virtual void Save()
         {
             ViewModel.DoSave();

@@ -1,8 +1,5 @@
-using Collections.Core.ViewModels.Samples.SpecificPositions;
-using MonoTouch.UIKit;
-using Cirrious.MvvmCross.Touch.Views;
-using Cirrious.MvvmCross.Binding.Touch.Views;
 using Cirrious.MvvmCross.Binding.BindingContext;
+using Collections.Core.ViewModels.Samples.SpecificPositions;
 
 namespace Collections.Touch
 {
@@ -16,7 +13,6 @@ namespace Collections.Touch
         {
             Title = "Specific Positions";
         }
-
 
         public override void ViewDidLoad()
         {

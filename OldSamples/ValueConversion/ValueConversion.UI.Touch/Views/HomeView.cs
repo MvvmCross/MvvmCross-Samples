@@ -1,7 +1,4 @@
 using ValueConversion.Core.ViewModels;
-using Cirrious.MvvmCross.Touch.Views;
-using Cirrious.MvvmCross.Binding.Touch.Views;
-using Cirrious.MvvmCross.Binding.BindingContext;
 
 namespace ValueConversion.UI.Touch
 {

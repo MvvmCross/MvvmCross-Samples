@@ -1,7 +1,5 @@
-using System;
-using System.Windows.Input;
-using Cirrious.CrossCore.Platform;
 using Cirrious.MvvmCross.ViewModels;
+using System;
 
 namespace TwitterSearch.Core.ViewModels
 {
@@ -35,6 +33,7 @@ namespace TwitterSearch.Core.ViewModels
         }
 
         private string _searchText;
+
         public string SearchText
         {
             get { return _searchText; }

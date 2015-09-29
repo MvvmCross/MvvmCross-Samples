@@ -1,5 +1,5 @@
-using System.Windows.Input;
 using Cirrious.MvvmCross.ViewModels;
+using System.Windows.Input;
 
 namespace Cirrious.Conference.Core.ViewModels.HomeViewModels
 {
@@ -15,12 +15,12 @@ namespace Cirrious.Conference.Core.ViewModels.HomeViewModels
         {
             get { return new MvxCommand(() => ShowViewModel<ExhibitionViewModel>()); }
         }
-        
+
         public ICommand ShowMapCommand
         {
             get { return new MvxCommand(() => ShowViewModel<MapViewModel>()); }
         }
-        
+
         public ICommand ShowAboutCommand
         {
             get { return new MvxCommand(() => ShowViewModel<AboutViewModel>()); }

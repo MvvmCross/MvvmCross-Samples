@@ -2,7 +2,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using Cirrious.MvvmCross.WindowsStore.Views;
 using Windows.ApplicationModel;
 using Windows.Foundation.Collections;
 using Windows.Foundation.Metadata;
@@ -41,8 +40,8 @@ namespace FractalGen.UI.Store.Common
         /// Identifies the <see cref="DefaultViewModel"/> dependency property.
         /// </summary>
         public static readonly DependencyProperty DefaultViewModelProperty =
-            DependencyProperty.Register("DefaultViewModel", typeof (IObservableMap<String, Object>),
-                                        typeof (LayoutAwarePage), null);
+            DependencyProperty.Register("DefaultViewModel", typeof(IObservableMap<String, Object>),
+                                        typeof(LayoutAwarePage), null);
 
         private List<Control> _layoutAwareControls;
 
@@ -157,7 +156,7 @@ namespace FractalGen.UI.Store.Common
             if ((args.EventType == CoreAcceleratorKeyEventType.SystemKeyDown ||
                  args.EventType == CoreAcceleratorKeyEventType.KeyDown) &&
                 (virtualKey == VirtualKey.Left || virtualKey == VirtualKey.Right ||
-                 (int) virtualKey == 166 || (int) virtualKey == 167))
+                 (int)virtualKey == 166 || (int)virtualKey == 167))
             {
                 var coreWindow = Window.Current.CoreWindow;
                 var downState = CoreVirtualKeyStates.Down;
@@ -167,14 +166,14 @@ namespace FractalGen.UI.Store.Common
                 bool noModifiers = !menuKey && !controlKey && !shiftKey;
                 bool onlyAlt = menuKey && !controlKey && !shiftKey;
 
-                if (((int) virtualKey == 166 && noModifiers) ||
+                if (((int)virtualKey == 166 && noModifiers) ||
                     (virtualKey == VirtualKey.Left && onlyAlt))
                 {
                     // When the previous key or Alt+Left are pressed navigate back
                     args.Handled = true;
                     GoBack(this, new RoutedEventArgs());
                 }
-                else if (((int) virtualKey == 167 && noModifiers) ||
+                else if (((int)virtualKey == 167 && noModifiers) ||
                          (virtualKey == VirtualKey.Right && onlyAlt))
                 {
                     // When the next key or Alt+Right are pressed navigate forward
@@ -198,7 +197,8 @@ namespace FractalGen.UI.Store.Common
 
             // Ignore button chords with the left, right, and middle buttons
             if (properties.IsLeftButtonPressed || properties.IsRightButtonPressed ||
-                properties.IsMiddleButtonPressed) return;
+                properties.IsMiddleButtonPressed)
+                return;
 
             // If back or foward are pressed (but not both) navigate appropriately
             bool backPressed = properties.IsXButton1Pressed;
@@ -211,7 +211,7 @@ namespace FractalGen.UI.Store.Common
             }
         }
 
-        #endregion
+        #endregion Navigation support
 
         #region Visual state switching
 
@@ -312,7 +312,7 @@ namespace FractalGen.UI.Store.Common
             }
         }
 
-        #endregion
+        #endregion Visual state switching
 
         #region Process lifetime management
 
@@ -339,7 +339,7 @@ namespace FractalGen.UI.Store.Common
         {
         }
 
-        #endregion
+        #endregion Process lifetime management
 
         /// <summary>
         /// Implementation of IObservableMap that supports reentrancy for use as a default view
@@ -348,6 +348,7 @@ namespace FractalGen.UI.Store.Common
         private class ObservableDictionary<K, V> : IObservableMap<K, V>
         {
             private readonly Dictionary<K, V> _dictionary = new Dictionary<K, V>();
+
             public event MapChangedEventHandler<K, V> MapChanged;
 
             public void Add(K key, V value)

@@ -1,16 +1,13 @@
+using Cirrious.MvvmCross.ViewModels;
 using System;
 using System.Collections.ObjectModel;
 using System.Text;
 using System.Windows.Input;
-using Cirrious.CrossCore.Core;
-using Cirrious.CrossCore;
-using Cirrious.MvvmCross.Plugins.ThreadUtils;
-using Cirrious.MvvmCross.ViewModels;
 
 namespace Tutorial.Core.ViewModels.Lessons
 {
     public class PullToRefreshViewModel
-        : MvxViewModel        
+        : MvxViewModel
     {
         private IMvxThreadSleep Sleeper
         {
@@ -20,16 +17,18 @@ namespace Tutorial.Core.ViewModels.Lessons
                 return Mvx.Resolve<IMvxThreadSleep>();
             }
         }
+
         public class SimpleEmail
         {
-            public string From { get; set; }    
-            public string Header { get; set; }    
-            public string Message { get; set; }    
+            public string From { get; set; }
+            public string Header { get; set; }
+            public string Message { get; set; }
         }
 
         private static readonly Random Random = new Random();
 
         private ObservableCollection<SimpleEmail> _emails;
+
         public ObservableCollection<SimpleEmail> Emails
         {
             get { return _emails; }
@@ -87,6 +86,7 @@ namespace Tutorial.Core.ViewModels.Lessons
         }
 
         private bool _isRefreshingHead;
+
         public bool IsRefreshingHead
         {
             get { return _isRefreshingHead; }
@@ -94,6 +94,7 @@ namespace Tutorial.Core.ViewModels.Lessons
         }
 
         private bool _isRefreshingTail;
+
         public bool IsRefreshingTail
         {
             get { return _isRefreshingTail; }
@@ -108,7 +109,7 @@ namespace Tutorial.Core.ViewModels.Lessons
 
         private void AddEmailsHead(int count)
         {
-            for (var i = 0; i < count; i++ )
+            for (var i = 0; i < count; i++)
             {
                 Emails.Insert(0, CreateEmail());
             }
@@ -125,11 +126,11 @@ namespace Tutorial.Core.ViewModels.Lessons
         private static SimpleEmail CreateEmail()
         {
             return new SimpleEmail()
-                       {
-                           From = PickName(),
-                           Header = PickHeader(),
-                           Message = GenerateMessage()
-                       };
+            {
+                From = PickName(),
+                Header = PickHeader(),
+                Message = GenerateMessage()
+            };
         }
 
         private static readonly string[] Lorem =
@@ -149,12 +150,14 @@ namespace Tutorial.Core.ViewModels.Lessons
         }
 
         private static readonly string[] Headers = new[] { "Would like to meet", "About your blog", "Important message from your bank", "Thought you would be interested in this...", "Borrow up to 1000 with free delivery" };
+
         private static string PickHeader()
         {
             return PickOne(Headers);
         }
 
         private static readonly string[] Names = new[] { "Fred", "Barney", "Wilma", "Betty", "Dino" };
+
         private static string PickName()
         {
             return PickOne(Names);

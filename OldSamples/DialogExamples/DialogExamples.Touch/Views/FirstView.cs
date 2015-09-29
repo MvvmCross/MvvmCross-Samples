@@ -1,12 +1,9 @@
-using System.Drawing;
-using System.Linq;
 using Cirrious.MvvmCross.Binding.BindingContext;
 using Cirrious.MvvmCross.Dialog.Touch;
-using Cirrious.MvvmCross.Touch.Views;
 using CrossUI.Touch.Dialog.Elements;
 using DialogExamples.Core.ViewModels;
-using MonoTouch.UIKit;
-using MonoTouch.Foundation;
+using System.Linq;
+using UIKit;
 
 namespace DialogExamples.Touch.Views
 {
@@ -57,7 +54,7 @@ namespace DialogExamples.Touch.Views
                                 BackgroundColor = UIColor.Blue,
                                 TextColor = UIColor.White,
                                 Alignment = UITextAlignment.Center
-                                }.Bind(bindings, element => element.SelectedCommand, vm => vm.BindableElementsCommand), 
+                                }.Bind(bindings, element => element.SelectedCommand, vm => vm.BindableElementsCommand),
                         },
                     new Section("Debug out:")
                         {

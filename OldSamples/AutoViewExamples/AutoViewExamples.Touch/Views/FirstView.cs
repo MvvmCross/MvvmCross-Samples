@@ -1,9 +1,3 @@
-using System.Drawing;
-using Cirrious.MvvmCross.Binding.BindingContext;
-using Cirrious.MvvmCross.Touch.Views;
-using MonoTouch.UIKit;
-using MonoTouch.Foundation;
-
 namespace AutoViewExamples.Touch.Views
 {
     /*

@@ -1,5 +1,5 @@
-﻿using System;
-using Cirrious.CrossCore.UI;
+﻿using Cirrious.CrossCore.UI;
+using System;
 
 namespace FractalGen.Core.Services.Fractal
 {
@@ -9,7 +9,7 @@ namespace FractalGen.Core.Services.Fractal
         {
             Height = baseHeight;
             Width = baseWidth;
-            Pixels = new int[baseWidth*baseHeight];
+            Pixels = new int[baseWidth * baseHeight];
         }
 
         public int Height { get; private set; }
@@ -27,7 +27,7 @@ namespace FractalGen.Core.Services.Fractal
         {
             for (var y = fromY; y < toY; y++)
             {
-                var offset = y*Width;
+                var offset = y * Width;
                 for (var x = fromX; x < toX; x++)
                 {
                     Pixels[x + offset] = color.ARGB;

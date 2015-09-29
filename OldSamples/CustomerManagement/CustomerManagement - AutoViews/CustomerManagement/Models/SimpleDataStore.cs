@@ -1,21 +1,19 @@
+using Cirrious.CrossCore;
+using Cirrious.CrossCore.Exceptions;
+using Cirrious.CrossCore.Platform;
+using CustomerManagement.AutoViews.Core.Interfaces.Models;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Xml.Linq;
 using System.Xml.Serialization;
-using Cirrious.CrossCore.Exceptions;
-using Cirrious.CrossCore;
-using Cirrious.CrossCore.Platform;
-using Cirrious.MvvmCross.Plugins.File;
-using Cirrious.MvvmCross.Plugins.ResourceLoader;
-using CustomerManagement.AutoViews.Core.Interfaces.Models;
 
 namespace CustomerManagement.AutoViews.Core.Models
 {
-    public class SimpleDataStore 
+    public class SimpleDataStore
         : IDataStore
-          
+
     {
         public SimpleDataStore()
         {
@@ -91,7 +89,8 @@ namespace CustomerManagement.AutoViews.Core.Models
                                                      });
         }
 
-        private IObservableCollection<Customer> _customers; 
+        private IObservableCollection<Customer> _customers;
+
         public IObservableCollection<Customer> Customers
         {
             get { return _customers; }

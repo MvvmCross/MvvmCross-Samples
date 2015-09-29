@@ -17,14 +17,14 @@
     <!--LayoutRoot is the root grid where all page content is placed-->
     <Grid x:Name="LayoutRoot" Background="Transparent">
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel Grid.Row="0" Margin="12,17,0,28">
-            <TextBlock Text="MY APPLICATION" Style="{StaticResource PhoneTextNormalStyle}"/>
-            <TextBlock Text="Tip View" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+            <TextBlock Text="MY APPLICATION" Style="{StaticResource PhoneTextNormalStyle}" />
+            <TextBlock Text="Tip View" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}" />
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
@@ -32,32 +32,26 @@
             <StackPanel>
                 <TextBlock
                     Text="SubTotal"
-                    Style="{StaticResource PhoneTextSubtleStyle}"
-                    />
-                <TextBox 
-                    Text="{Binding SubTotal, Mode=TwoWay}" 
-                    />
+                    Style="{StaticResource PhoneTextSubtleStyle}" />
+                <TextBox
+                    Text="{Binding SubTotal, Mode=TwoWay}" />
 
                 <TextBlock
                     Text="Generosity"
-                    Style="{StaticResource PhoneTextSubtleStyle}"
-                    />
-                <Slider 
-                    Value="{Binding Generosity, Mode=TwoWay}" 
-                    SmallChange="1" 
-                    LargeChange="10" 
-                    Minimum="0" 
+                    Style="{StaticResource PhoneTextSubtleStyle}" />
+                <Slider
+                    Value="{Binding Generosity, Mode=TwoWay}"
+                    SmallChange="1"
+                    LargeChange="10"
+                    Minimum="0"
                     Maximum="100" />
 
                 <TextBlock
                     Text="Tip"
-                    Style="{StaticResource PhoneTextSubtleStyle}"
-                    />
-                <TextBlock 
-                    Text="{Binding Tip}" 
-                    />
+                    Style="{StaticResource PhoneTextSubtleStyle}" />
+                <TextBlock
+                    Text="{Binding Tip}" />
             </StackPanel>
         </Grid>
     </Grid>
-
 </views:MvxPhonePage>

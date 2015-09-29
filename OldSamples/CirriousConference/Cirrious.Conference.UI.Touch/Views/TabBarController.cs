@@ -1,36 +1,29 @@
-using System;
-using System.Collections.Generic;
 using Cirrious.Conference.Core.ViewModels;
-using Cirrious.Conference.Core.ViewModels.HomeViewModels;
-using Cirrious.Conference.Core.ViewModels.SessionLists;
 using Cirrious.Conference.UI.Touch.Interfaces;
 using Cirrious.CrossCore;
 using Cirrious.MvvmCross.ViewModels;
-using MonoTouch.UIKit;
-using Cirrious.MvvmCross.Touch.Views;
-using Cirrious.MvvmCross.Views;
-using Cirrious.MvvmCross.Binding.Touch.Views;
 
 namespace Cirrious.Conference.UI.Touch.Views
 {
     public class TabBarController
         : MvxTabBarViewController
-        , ITabBarPresenter        
+        , ITabBarPresenter
     {
-		public TabBarController()
+        public TabBarController()
         {
             Mvx.Resolve<ITabBarPresenterHost>().TabBarPresenter = this;
 
-			// because the UIKit base class does ViewDidLoad, we have to make a second call here
-			ViewDidLoad();
-		}
+            // because the UIKit base class does ViewDidLoad, we have to make a second call here
+            ViewDidLoad();
+        }
 
-		public new HomeViewModel ViewModel {
-			get { return (HomeViewModel)base.ViewModel; }
-			set { base.ViewModel = value; }
-		}
+        public new HomeViewModel ViewModel
+        {
+            get { return (HomeViewModel)base.ViewModel; }
+            set { base.ViewModel = value; }
+        }
 
-		private int _createdSoFarCount = 0;
+        private int _createdSoFarCount = 0;
 
         private UIViewController CreateTabFor(string title, string imageName, IMvxViewModel viewModel)
         {
@@ -50,15 +43,15 @@ namespace Cirrious.Conference.UI.Touch.Views
             _createdSoFarCount++;
         }
 
-		public override void ViewDidLoad ()
-		{
-			base.ViewDidLoad ();
-		
-			// first time around this will be null, second time it will be OK
-			if (ViewModel == null)
-				return;
+        public override void ViewDidLoad()
+        {
+            base.ViewDidLoad();
 
-		    var viewControllers = new UIViewController[]
+            // first time around this will be null, second time it will be OK
+            if (ViewModel == null)
+                return;
+
+            var viewControllers = new UIViewController[]
                                   {
                                     CreateTabFor("Welcome", "home", ViewModel.Welcome),
                                     CreateTabFor("Sessions", "sessions", ViewModel.Sessions),

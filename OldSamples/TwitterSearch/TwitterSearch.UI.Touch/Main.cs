@@ -1,12 +1,10 @@
-using MonoTouch.UIKit;
-
-namespace TwitterSearch.UI.Touch 
+namespace TwitterSearch.UI.Touch
 {
-    public class Application 
+    public class Application
     {
-        static void Main (string[] args)
+        private static void Main(string[] args)
         {
-            UIApplication.Main (args, null, "AppDelegate");
+            UIApplication.Main(args, null, "AppDelegate");
         }
     }
 }

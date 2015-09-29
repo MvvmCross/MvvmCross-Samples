@@ -18,8 +18,7 @@
       android:layout_alignParentLeft="true"
       android:layout_toLeftOf="@+id/FavoriteButton"
       android:lines="2"
-      local:MvxBind="Text Item.Session.Title;Click Command"
-      />
+      local:MvxBind="Text Item.Session.Title;Click Command" />
 
   <Button
       android:id="@+id/FavoriteButton"
@@ -29,8 +28,7 @@
       android:layout_alignParentRight="true"
       android:minWidth="40dip"
       android:maxWidth="40dip"
-      local:MvxBind="IsFavorite Item.IsFavorite"
-  />
+      local:MvxBind="IsFavorite Item.IsFavorite" />
   <LinearLayout
     android:id="@+id/PeoplePanel"
     android:orientation="horizontal"
@@ -44,8 +42,7 @@
           android:id="@+id/PersonImage"
           android:src="@drawable/appbar_people"
           android:layout_width="15dp"
-          android:layout_height="15dp"
-        />
+          android:layout_height="15dp" />
     <TextView
           android:id="@+id/PeopleTextView"
           android:layout_width="wrap_content"
@@ -53,8 +50,7 @@
           android:paddingLeft="10dp"
           android:textSize="14dip"
           android:textColor="@color/icongrey"
-          local:MvxBind="Text Item.Session.SpeakerKey"
-        />
+          local:MvxBind="Text Item.Session.SpeakerKey" />
   </LinearLayout>
   <LinearLayout
     android:id="@+id/RoomPanel"
@@ -69,8 +65,7 @@
           android:id="@+id/PersonImage"
           android:src="@drawable/appbar_city"
           android:layout_width="15dp"
-          android:layout_height="15dp"
-        />
+          android:layout_height="15dp" />
     <TextView
           android:id="@+id/RoomTextView"
           android:paddingLeft="10dp"
@@ -78,7 +73,6 @@
           android:layout_height="wrap_content"
           android:textSize="14dip"
           android:textColor="@color/icongrey"
-          local:MvxBind="Text Item.Session,Converter=SessionSmallDetails,ConverterParameter='SmallDetailsFormat'"
-        />    
+          local:MvxBind="Text Item.Session,Converter=SessionSmallDetails,ConverterParameter='SmallDetailsFormat'" />
   </LinearLayout>
 </RelativeLayout>

@@ -1,7 +1,6 @@
 ﻿using Android.App;
 using Android.OS;
 using Cirrious.CrossCore;
-using Cirrious.MvvmCross.Binding.BindingContext;
 using Cirrious.MvvmCross.Binding.Droid.BindingContext;
 using Mvvm.Framework;
 
@@ -27,7 +26,7 @@ namespace Mvvm
             var viewModel = Mvx.IocConstruct<LocationViewModel>();
 
             // create the databound UI
-            _bindingContext = new MvxAndroidBindingContext(this, new LayoutInflaterProvider(LayoutInflater), viewModel);            
+            _bindingContext = new MvxAndroidBindingContext(this, new LayoutInflaterProvider(LayoutInflater), viewModel);
             var view = _bindingContext.BindingInflate(Resource.Layout.Main, null);
             SetContentView(view);
         }
@@ -39,4 +38,3 @@ namespace Mvvm
         }
     }
 }
-

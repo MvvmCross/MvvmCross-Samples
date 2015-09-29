@@ -1,13 +1,6 @@
-using System.Collections.Generic;
 using Cirrious.Conference.Core.ViewModels;
-using Cirrious.Conference.Core.ViewModels.HomeViewModels;
-using Cirrious.MvvmCross.Binding.Touch;
-using Cirrious.MvvmCross.Binding.Touch.Views;
-using Cirrious.MvvmCross.Views;
-using MonoTouch.Foundation;
-using MonoTouch.UIKit;
-using Cirrious.MvvmCross.Touch.Views;
 using Cirrious.MvvmCross.Binding.BindingContext;
+using System.Collections.Generic;
 
 namespace Cirrious.Conference.UI.Touch.Views
 {
@@ -17,10 +10,11 @@ namespace Cirrious.Conference.UI.Touch.Views
     {
         private UIActivityIndicatorView _activityView;
 
-		public new TViewModel ViewModel {
-			get { return (TViewModel)base.ViewModel; }
-			set { base.ViewModel = value; }
-		}
+        public new TViewModel ViewModel
+        {
+            get { return (TViewModel)base.ViewModel; }
+            set { base.ViewModel = value; }
+        }
 
         public override void ViewDidLoad()
         {
@@ -46,9 +40,9 @@ namespace Cirrious.Conference.UI.Touch.Views
                     return SponsorCell.LoadFromNib(tableView);
                 };
             this.AddBindings(new Dictionary<object, string>()
-		                         {
-		                             {source, "ItemsSource Sponsors"},
-		                         });
+                                 {
+                                     {source, "ItemsSource Sponsors"},
+                                 });
             TableView.RowHeight = 90;
             TableView.Source = source;
             TableView.BackgroundColor = UIColor.White;

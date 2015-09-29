@@ -1,6 +1,5 @@
-﻿using System;
-using System.Net;
-using Cirrious.CrossCore.Converters;
+﻿using Cirrious.CrossCore.Converters;
+using System;
 
 namespace Cirrious.Conference.Core.Converters
 {
@@ -14,7 +13,7 @@ namespace Cirrious.Conference.Core.Converters
 
             var format = parameter ?? "ddd h:mm";
 
-            var dateValue = (DateTime) value;
+            var dateValue = (DateTime)value;
             return dateValue.ToLocalTime().ToString((string)format);
         }
     }

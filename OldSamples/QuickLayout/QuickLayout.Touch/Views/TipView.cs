@@ -1,9 +1,5 @@
-using System.Drawing;
 using Cirrious.FluentLayouts.Touch;
 using Cirrious.MvvmCross.Binding.BindingContext;
-using Cirrious.MvvmCross.Touch.Views;
-using MonoTouch.Foundation;
-using MonoTouch.UIKit;
 using QuickLayout.Core.ViewModels;
 
 namespace QuickLayout.Touch.Views
@@ -21,10 +17,10 @@ namespace QuickLayout.Touch.Views
             Add(subTotal);
 
             var seek = new UISlider()
-                {
-                    MinValue = 0,
-                    MaxValue = 100,
-                };
+            {
+                MinValue = 0,
+                MaxValue = 100,
+            };
             Add(seek);
 
             var seekLabel = new UILabel();

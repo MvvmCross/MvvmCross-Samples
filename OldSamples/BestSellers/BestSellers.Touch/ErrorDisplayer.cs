@@ -1,5 +1,4 @@
 using Cirrious.CrossCore;
-using MonoTouch.UIKit;
 
 namespace BestSellers.Touch
 {

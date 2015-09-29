@@ -31,6 +31,7 @@ namespace QuickLayout.Core.ViewModels
         {
             Generosity = 0;
         }
+
         public void Full()
         {
             Generosity = 100;

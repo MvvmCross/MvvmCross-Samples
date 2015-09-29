@@ -1,12 +1,10 @@
-﻿using Cirrious.CrossCore;
-using Cirrious.CrossCore.IoC;
-using Cirrious.MvvmCross.ViewModels;
+﻿using Cirrious.MvvmCross.ViewModels;
 using TwitterSearch.Core.ViewModels;
 
 namespace TwitterSearch.Core
 {
     public class TwitterSearchApp
-        : MvxApplication        
+        : MvxApplication
     {
         public TwitterSearchApp()
         {

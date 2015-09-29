@@ -1,9 +1,5 @@
-using System.Collections.Generic;
-using MonoTouch.Foundation;
-using MonoTouch.UIKit;
-using Cirrious.MvvmCross.Touch.Views;
 using Cirrious.MvvmCross.Binding.BindingContext;
-using Cirrious.MvvmCross.Binding.Touch.Views;
+using System.Collections.Generic;
 
 namespace Collections.Touch
 {
@@ -34,6 +30,7 @@ namespace Collections.Touch
             private const string BindingText = "TitleText Title;SelectedCommand ShowCommand";
 
 #warning Switch to new base constructor when released...
+
             public TableSource(UITableView tableView)
                 : base(tableView, UITableViewCellStyle.Default, Identifier, BindingText)
             {

@@ -6,6 +6,6 @@ namespace Mvvm.Framework
     public interface ITopActivity
         : IMvxAndroidCurrentTopActivity
     {
-        new Activity Activity { get; set; }        
+        new Activity Activity { get; set; }
     }
 }

@@ -1,10 +1,8 @@
-using System;
-using System.IO;
 using Cirrious.CrossCore;
 using Cirrious.CrossCore.Platform;
-using Cirrious.MvvmCross.Plugins.ResourceLoader.WindowsStore;
 using Cirrious.MvvmCross.ViewModels;
-using Cirrious.MvvmCross.WindowsStore.Platform;
+using System;
+using System.IO;
 using Windows.UI.Xaml.Controls;
 
 namespace Babel.Store

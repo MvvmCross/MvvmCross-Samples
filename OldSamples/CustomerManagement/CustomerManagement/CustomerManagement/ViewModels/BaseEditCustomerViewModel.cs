@@ -1,6 +1,6 @@
-using System.Windows.Input;
 using Cirrious.MvvmCross.ViewModels;
 using CustomerManagement.Core.Models;
+using System.Windows.Input;
 
 namespace CustomerManagement.Core.ViewModels
 {
@@ -8,6 +8,7 @@ namespace CustomerManagement.Core.ViewModels
         : BaseViewModel
     {
         private Customer _customer;
+
         public Customer Customer
         {
             get { return _customer; }

@@ -1,5 +1,5 @@
-﻿using System;
-using Cirrious.MvvmCross.ViewModels;
+﻿using Cirrious.MvvmCross.ViewModels;
+using System;
 
 namespace CustomerManagement.AutoViews.Core.Models
 {
@@ -8,6 +8,7 @@ namespace CustomerManagement.AutoViews.Core.Models
 #elif (TOUCH)
     [MonoTouch.Foundation.Preserve (AllMembers = true)]
 #endif
+
     public class Customer : MvxNotifyPropertyChanged
     {
         public Customer()
@@ -19,6 +20,7 @@ namespace CustomerManagement.AutoViews.Core.Models
         }
 
         private string _id;
+
         public string ID
         {
             get { return _id; }
@@ -26,6 +28,7 @@ namespace CustomerManagement.AutoViews.Core.Models
         }
 
         private string _name;
+
         public string Name
         {
             get { return _name; }
@@ -33,6 +36,7 @@ namespace CustomerManagement.AutoViews.Core.Models
         }
 
         private string _website;
+
         public string Website
         {
             get { return _website; }
@@ -40,6 +44,7 @@ namespace CustomerManagement.AutoViews.Core.Models
         }
 
         private string _primaryPhone;
+
         public string PrimaryPhone
         {
             get { return _primaryPhone; }
@@ -47,6 +52,7 @@ namespace CustomerManagement.AutoViews.Core.Models
         }
 
         private Address _primaryAddress;
+
         public Address PrimaryAddress
         {
             get { return _primaryAddress; }

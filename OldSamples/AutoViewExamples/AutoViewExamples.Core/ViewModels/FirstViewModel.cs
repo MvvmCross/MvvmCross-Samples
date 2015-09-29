@@ -1,6 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Windows.Input;
 using Cirrious.MvvmCross.AutoView;
 using Cirrious.MvvmCross.AutoView.Auto;
 using Cirrious.MvvmCross.AutoView.Auto.Dialog;
@@ -9,6 +6,9 @@ using Cirrious.MvvmCross.AutoView.Auto.Menu;
 using Cirrious.MvvmCross.AutoView.Interfaces;
 using Cirrious.MvvmCross.ViewModels;
 using CrossUI.Core.Descriptions;
+using System;
+using System.Collections.Generic;
+using System.Windows.Input;
 
 namespace AutoViewExamples.Core.ViewModels
 {
@@ -56,17 +56,17 @@ namespace AutoViewExamples.Core.ViewModels
 
         public ICommand ShowDialogCommand
         {
-            get { return new MvxCommand(() => ShowViewModel<AutoDialogViewModel>());}
+            get { return new MvxCommand(() => ShowViewModel<AutoDialogViewModel>()); }
         }
 
         public ICommand ShowListCommand
         {
-            get { return new MvxCommand(() => ShowViewModel<AutoListViewModel>());}
+            get { return new MvxCommand(() => ShowViewModel<AutoListViewModel>()); }
         }
     }
 
-    public class AutoDialogViewModel 
-		: MvxViewModel
+    public class AutoDialogViewModel
+        : MvxViewModel
         , IMvxAutoDialogViewModel
     {
         public bool SupportsAutoView(string type)
@@ -113,18 +113,19 @@ namespace AutoViewExamples.Core.ViewModels
 
         public ICommand ResetCommand
         {
-            get { return new MvxCommand(() =>
-                {
-                    Name = "Reset";
-                    Password = "";
-                    IsAvailable = false;
-                    IsActive = false;
-                    DateOfBirth = new DateTime(2000,1,1,0,0,0, DateTimeKind.Utc);
-                    PreferredContactTime = new DateTime(2000, 1, 1, 0, 0, 0, DateTimeKind.Utc);
-                }); 
+            get
+            {
+                return new MvxCommand(() =>
+              {
+                  Name = "Reset";
+                  Password = "";
+                  IsAvailable = false;
+                  IsActive = false;
+                  DateOfBirth = new DateTime(2000, 1, 1, 0, 0, 0, DateTimeKind.Utc);
+                  PreferredContactTime = new DateTime(2000, 1, 1, 0, 0, 0, DateTimeKind.Utc);
+              });
             }
         }
-
 
         private KeyedDescription GetDialogAutoView()
         {
@@ -160,6 +161,7 @@ namespace AutoViewExamples.Core.ViewModels
         }
 
         private string _name = "Fred";
+
         public string Name
         {
             get { return _name; }
@@ -167,6 +169,7 @@ namespace AutoViewExamples.Core.ViewModels
         }
 
         private bool _isActive;
+
         public bool IsActive
         {
             get { return _isActive; }
@@ -174,6 +177,7 @@ namespace AutoViewExamples.Core.ViewModels
         }
 
         private bool _isAvailable;
+
         public bool IsAvailable
         {
             get { return _isAvailable; }
@@ -181,6 +185,7 @@ namespace AutoViewExamples.Core.ViewModels
         }
 
         private DateTime _dateOfBirth = new DateTime(1972, 7, 13, 0, 0, 0, DateTimeKind.Utc);
+
         public DateTime DateOfBirth
         {
             get { return _dateOfBirth; }
@@ -188,33 +193,37 @@ namespace AutoViewExamples.Core.ViewModels
         }
 
         private DateTime _preferredContactTime = new DateTime(2000, 1, 1, 17, 0, 0, 0, DateTimeKind.Utc);
+
         public DateTime PreferredContactTime
         {
             get { return _preferredContactTime; }
             set { _preferredContactTime = value; RaisePropertyChanged(() => PreferredContactTime); }
         }
 
-
         private string _password = "password";
+
         public string Password
         {
             get { return _password; }
             set { _password = value; RaisePropertyChanged(() => Password); }
         }
     }
+
     public class Person
     {
         public Person()
-        {}
+        { }
 
         public Person(string name, string job)
         {
             Name = name;
             Job = job;
         }
+
         public string Name { get; set; }
         public string Job { get; set; }
     }
+
     public class AutoListViewModel
             : MvxViewModel
             , IMvxAutoListViewModel
@@ -284,17 +293,18 @@ namespace AutoViewExamples.Core.ViewModels
                 new Person("Sooty", "Sweep"),
                 new Person("Ben", "Big"),
                 new Person("Jess", "Cat"),
-                new Person("Stuart", "Dogsbody"),                
+                new Person("Stuart", "Dogsbody"),
             };
+
         public List<Person> People
         {
             get { return _people; }
             set { _people = value; RaisePropertyChanged(() => People); }
         }
-        
+
         public ICommand PersonSelectedCommand
         {
-            get { return new MvxCommand<Person>(person => ShowViewModel<PersonViewModel>(person));}
+            get { return new MvxCommand<Person>(person => ShowViewModel<PersonViewModel>(person)); }
         }
 
         private KeyedDescription GetListAutoView()

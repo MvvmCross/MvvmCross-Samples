@@ -1,16 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Linq;
-using Cirrious.MvvmCross.WindowsStore.Views;
-using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.System;
 using Windows.UI.Core;
 using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Navigation;
 
 namespace InternetMinute.Store.Common
 {
@@ -204,7 +200,8 @@ namespace InternetMinute.Store.Common
 
             // Ignore button chords with the left, right, and middle buttons
             if (properties.IsLeftButtonPressed || properties.IsRightButtonPressed ||
-                properties.IsMiddleButtonPressed) return;
+                properties.IsMiddleButtonPressed)
+                return;
 
             // If back or foward are pressed (but not both) navigate appropriately
             bool backPressed = properties.IsXButton1Pressed;
@@ -217,7 +214,7 @@ namespace InternetMinute.Store.Common
             }
         }
 
-        #endregion
+        #endregion Navigation support
 
         #region Visual state switching
 
@@ -318,7 +315,7 @@ namespace InternetMinute.Store.Common
             }
         }
 
-        #endregion
+        #endregion Visual state switching
 
         /// <summary>
         /// Implementation of IObservableMap that supports reentrancy for use as a default view
@@ -339,6 +336,7 @@ namespace InternetMinute.Store.Common
             }
 
             private Dictionary<K, V> _dictionary = new Dictionary<K, V>();
+
             public event MapChangedEventHandler<K, V> MapChanged;
 
             private void InvokeMapChanged(CollectionChange change, K key)

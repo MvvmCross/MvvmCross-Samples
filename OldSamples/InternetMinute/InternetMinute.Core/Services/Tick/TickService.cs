@@ -1,6 +1,5 @@
-using System;
-using System.Threading;
 using Cirrious.MvvmCross.Plugins.Messenger;
+using System;
 
 namespace InternetMinute.Core
 {

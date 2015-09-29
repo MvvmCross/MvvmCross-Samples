@@ -1,5 +1,5 @@
-using System.Collections.Generic;
 using Collections.Core.ViewModels.Samples.ListItems;
+using System.Collections.Generic;
 
 namespace Collections.Core.ViewModels.Samples.LargeDynamic
 {
