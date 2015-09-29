@@ -26,6 +26,27 @@ namespace DialogExamples.Droid
 		
 		public static void UpdateIdValues()
 		{
+			global::Cirrious.MvvmCross.Binding.Droid.Resource.Attribute.MvxBind = global::DialogExamples.Droid.Resource.Attribute.MvxBind;
+			global::Cirrious.MvvmCross.Binding.Droid.Resource.Attribute.MvxDropDownItemTemplate = global::DialogExamples.Droid.Resource.Attribute.MvxDropDownItemTemplate;
+			global::Cirrious.MvvmCross.Binding.Droid.Resource.Attribute.MvxGroupItemTemplate = global::DialogExamples.Droid.Resource.Attribute.MvxGroupItemTemplate;
+			global::Cirrious.MvvmCross.Binding.Droid.Resource.Attribute.MvxItemTemplate = global::DialogExamples.Droid.Resource.Attribute.MvxItemTemplate;
+			global::Cirrious.MvvmCross.Binding.Droid.Resource.Attribute.MvxLang = global::DialogExamples.Droid.Resource.Attribute.MvxLang;
+			global::Cirrious.MvvmCross.Binding.Droid.Resource.Attribute.MvxSource = global::DialogExamples.Droid.Resource.Attribute.MvxSource;
+			global::Cirrious.MvvmCross.Binding.Droid.Resource.Attribute.MvxTemplate = global::DialogExamples.Droid.Resource.Attribute.MvxTemplate;
+			global::Cirrious.MvvmCross.Binding.Droid.Resource.Id.MvvmCrossTagId = global::DialogExamples.Droid.Resource.Id.MvvmCrossTagId;
+			global::Cirrious.MvvmCross.Binding.Droid.Resource.Id.MvxBindingTagUnique = global::DialogExamples.Droid.Resource.Id.MvxBindingTagUnique;
+			global::Cirrious.MvvmCross.Binding.Droid.Resource.Styleable.MvxBinding = global::DialogExamples.Droid.Resource.Styleable.MvxBinding;
+			global::Cirrious.MvvmCross.Binding.Droid.Resource.Styleable.MvxBinding_MvxBind = global::DialogExamples.Droid.Resource.Styleable.MvxBinding_MvxBind;
+			global::Cirrious.MvvmCross.Binding.Droid.Resource.Styleable.MvxBinding_MvxLang = global::DialogExamples.Droid.Resource.Styleable.MvxBinding_MvxLang;
+			global::Cirrious.MvvmCross.Binding.Droid.Resource.Styleable.MvxControl = global::DialogExamples.Droid.Resource.Styleable.MvxControl;
+			global::Cirrious.MvvmCross.Binding.Droid.Resource.Styleable.MvxControl_MvxTemplate = global::DialogExamples.Droid.Resource.Styleable.MvxControl_MvxTemplate;
+			global::Cirrious.MvvmCross.Binding.Droid.Resource.Styleable.MvxExpandableListView = global::DialogExamples.Droid.Resource.Styleable.MvxExpandableListView;
+			global::Cirrious.MvvmCross.Binding.Droid.Resource.Styleable.MvxExpandableListView_MvxGroupItemTemplate = global::DialogExamples.Droid.Resource.Styleable.MvxExpandableListView_MvxGroupItemTemplate;
+			global::Cirrious.MvvmCross.Binding.Droid.Resource.Styleable.MvxImageView = global::DialogExamples.Droid.Resource.Styleable.MvxImageView;
+			global::Cirrious.MvvmCross.Binding.Droid.Resource.Styleable.MvxImageView_MvxSource = global::DialogExamples.Droid.Resource.Styleable.MvxImageView_MvxSource;
+			global::Cirrious.MvvmCross.Binding.Droid.Resource.Styleable.MvxListView = global::DialogExamples.Droid.Resource.Styleable.MvxListView;
+			global::Cirrious.MvvmCross.Binding.Droid.Resource.Styleable.MvxListView_MvxDropDownItemTemplate = global::DialogExamples.Droid.Resource.Styleable.MvxListView_MvxDropDownItemTemplate;
+			global::Cirrious.MvvmCross.Binding.Droid.Resource.Styleable.MvxListView_MvxItemTemplate = global::DialogExamples.Droid.Resource.Styleable.MvxListView_MvxItemTemplate;
 			global::Cirrious.MvvmCross.Dialog.Droid.Resource.Attribute.MvxBind = global::DialogExamples.Droid.Resource.Attribute.MvxBind;
 			global::Cirrious.MvvmCross.Dialog.Droid.Resource.Attribute.MvxDropDownItemTemplate = global::DialogExamples.Droid.Resource.Attribute.MvxDropDownItemTemplate;
 			global::Cirrious.MvvmCross.Dialog.Droid.Resource.Attribute.MvxGroupItemTemplate = global::DialogExamples.Droid.Resource.Attribute.MvxGroupItemTemplate;
@@ -100,14 +121,17 @@ namespace DialogExamples.Droid
 			// aapt resource value: 0x7f010004
 			public const int MvxDropDownItemTemplate = 2130771972;
 			
+			// aapt resource value: 0x7f010005
+			public const int MvxGroupItemTemplate = 2130771973;
+			
 			// aapt resource value: 0x7f010003
 			public const int MvxItemTemplate = 2130771971;
 			
 			// aapt resource value: 0x7f010001
 			public const int MvxLang = 2130771969;
 			
-			// aapt resource value: 0x7f010005
-			public const int MvxSource = 2130771973;
+			// aapt resource value: 0x7f010006
+			public const int MvxSource = 2130771974;
 			
 			// aapt resource value: 0x7f010002
 			public const int MvxTemplate = 2130771970;
@@ -160,52 +184,55 @@ namespace DialogExamples.Droid
 		{
 			
 			// aapt resource value: 0x7f040000
-			public const int MvxBindingTagUnique = 2130968576;
-			
-			// aapt resource value: 0x7f040005
-			public const int dialog_BoolField = 2130968581;
-			
-			// aapt resource value: 0x7f040006
-			public const int dialog_Button = 2130968582;
-			
-			// aapt resource value: 0x7f04000b
-			public const int dialog_DisclosureField = 2130968587;
-			
-			// aapt resource value: 0x7f04000a
-			public const int dialog_HtmlField = 2130968586;
-			
-			// aapt resource value: 0x7f040008
-			public const int dialog_ImageLeft = 2130968584;
-			
-			// aapt resource value: 0x7f040003
-			public const int dialog_ImageRight = 2130968579;
+			public const int MvvmCrossTagId = 2130968576;
 			
 			// aapt resource value: 0x7f040001
-			public const int dialog_LabelField = 2130968577;
+			public const int MvxBindingTagUnique = 2130968577;
 			
-			// aapt resource value: 0x7f040004
-			public const int dialog_LabelPercentageField = 2130968580;
-			
-			// aapt resource value: 0x7f040002
-			public const int dialog_LabelSubtextField = 2130968578;
-			
-			// aapt resource value: 0x7f04000c
-			public const int dialog_Panel = 2130968588;
-			
-			// aapt resource value: 0x7f04000d
-			public const int dialog_RadioButtonList = 2130968589;
-			
-			// aapt resource value: 0x7f040009
-			public const int dialog_SliderField = 2130968585;
-			
-			// aapt resource value: 0x7f04000e
-			public const int dialog_Spinner = 2130968590;
+			// aapt resource value: 0x7f040006
+			public const int dialog_BoolField = 2130968582;
 			
 			// aapt resource value: 0x7f040007
-			public const int dialog_ValueField = 2130968583;
+			public const int dialog_Button = 2130968583;
+			
+			// aapt resource value: 0x7f04000c
+			public const int dialog_DisclosureField = 2130968588;
+			
+			// aapt resource value: 0x7f04000b
+			public const int dialog_HtmlField = 2130968587;
+			
+			// aapt resource value: 0x7f040009
+			public const int dialog_ImageLeft = 2130968585;
+			
+			// aapt resource value: 0x7f040004
+			public const int dialog_ImageRight = 2130968580;
+			
+			// aapt resource value: 0x7f040002
+			public const int dialog_LabelField = 2130968578;
+			
+			// aapt resource value: 0x7f040005
+			public const int dialog_LabelPercentageField = 2130968581;
+			
+			// aapt resource value: 0x7f040003
+			public const int dialog_LabelSubtextField = 2130968579;
+			
+			// aapt resource value: 0x7f04000d
+			public const int dialog_Panel = 2130968589;
+			
+			// aapt resource value: 0x7f04000e
+			public const int dialog_RadioButtonList = 2130968590;
+			
+			// aapt resource value: 0x7f04000a
+			public const int dialog_SliderField = 2130968586;
 			
 			// aapt resource value: 0x7f04000f
-			public const int iFormFieldValue = 2130968591;
+			public const int dialog_Spinner = 2130968591;
+			
+			// aapt resource value: 0x7f040008
+			public const int dialog_ValueField = 2130968584;
+			
+			// aapt resource value: 0x7f040010
+			public const int iFormFieldValue = 2130968592;
 			
 			static Id()
 			{
@@ -359,8 +386,14 @@ namespace DialogExamples.Droid
 			// aapt resource value: 0
 			public const int MvxControl_MvxTemplate = 0;
 			
-			public static int[] MvxImageView = new int[] {
+			public static int[] MvxExpandableListView = new int[] {
 					2130771973};
+			
+			// aapt resource value: 0
+			public const int MvxExpandableListView_MvxGroupItemTemplate = 0;
+			
+			public static int[] MvxImageView = new int[] {
+					2130771974};
 			
 			// aapt resource value: 0
 			public const int MvxImageView_MvxSource = 0;
