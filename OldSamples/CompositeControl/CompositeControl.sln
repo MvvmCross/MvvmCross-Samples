@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompositeControl.Core", "CompositeControl.Core\CompositeControl.Core.csproj", "{B243ED88-AE7F-4FF4-9822-8816218E53B9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompositeControl.Droid", "CompositeControl.Droid\CompositeControl.Droid.csproj", "{9988B5FF-C02E-4609-89AF-F8EB69BBDFC8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B243ED88-AE7F-4FF4-9822-8816218E53B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B243ED88-AE7F-4FF4-9822-8816218E53B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B243ED88-AE7F-4FF4-9822-8816218E53B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B243ED88-AE7F-4FF4-9822-8816218E53B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9988B5FF-C02E-4609-89AF-F8EB69BBDFC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9988B5FF-C02E-4609-89AF-F8EB69BBDFC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9988B5FF-C02E-4609-89AF-F8EB69BBDFC8}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{9988B5FF-C02E-4609-89AF-F8EB69BBDFC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9988B5FF-C02E-4609-89AF-F8EB69BBDFC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9988B5FF-C02E-4609-89AF-F8EB69BBDFC8}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

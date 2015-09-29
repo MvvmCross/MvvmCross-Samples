@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res/FragmentSample.UI.Droid"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:layout_gravity="center"
+  android:gravity="center"
+    android:padding="40dp"
+  android:background="#FF00FF"
+  android:orientation="vertical">
+  <TextView
+  android:layout_gravity="center"
+  android:gravity="center"
+      android:layout_width="fill_parent"
+  android:layout_height="wrap_content"
+  android:textColor="#000000"
+  android:text="These last three tabs share the same ViewModel - they all bind to the same thing"
+></TextView>
+  <TextView
+     android:layout_width="fill_parent"
+  android:layout_gravity="center"
+  android:gravity="center"
+ android:layout_height="wrap_content"
+ android:textColor="#000000"
+ android:text="Full Name is:"
+></TextView>
+
+  <TextView
+  android:layout_gravity="center"
+  android:gravity="center"
+      android:layout_width="fill_parent"
+  android:layout_height="wrap_content"
+  android:textColor="#000000"
+     android:textSize="64dp"
+      local:MvxBind="Text FullName"
+></TextView>
+</LinearLayout>

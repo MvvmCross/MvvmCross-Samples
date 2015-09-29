@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res/FragmentSample.UI.Droid"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+>
+  <Button
+          android:id="@+id/switchFragmentButton"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:text="Switch Form Fragments"
+            />
+  <TextView
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:text="Form:"
+            />
+  <FrameLayout  
+          android:id="@+id/titles_fragment_holder"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+            />
+
+  <TextView
+          android:id="@+id/testButton"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:text="List:"
+            />
+  <fragment class="FragmentSample.UI.Droid.Views.MyListFragment"
+          android:id="@+id/list_fragment"
+          android:layout_width="fill_parent"
+          android:layout_height="fill_parent"
+            />
+</LinearLayout>

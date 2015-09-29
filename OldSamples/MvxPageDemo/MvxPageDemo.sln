@@ -1,0 +1,32 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "MvxPageDemo.Shared", "MvxPageDemo.Shared\MvxPageDemo.Shared.shproj", "{3AEEEE75-357C-454B-A768-5D3EFAF8AAEB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxPageDemo.Touch", "MvxPageDemo.Touch\MvxPageDemo.Touch.csproj", "{AD8EF19A-E06F-4F01-9EEE-F2D792306E13}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		MvxPageDemo.Shared\MvxPageDemo.Shared.projitems*{3aeeee75-357c-454b-a768-5d3efaf8aaeb}*SharedItemsImports = 13
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|iPhone = Debug|iPhone
+		Debug|iPhoneSimulator = Debug|iPhoneSimulator
+		Release|iPhone = Release|iPhone
+		Release|iPhoneSimulator = Release|iPhoneSimulator
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AD8EF19A-E06F-4F01-9EEE-F2D792306E13}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{AD8EF19A-E06F-4F01-9EEE-F2D792306E13}.Debug|iPhone.Build.0 = Debug|iPhone
+		{AD8EF19A-E06F-4F01-9EEE-F2D792306E13}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{AD8EF19A-E06F-4F01-9EEE-F2D792306E13}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{AD8EF19A-E06F-4F01-9EEE-F2D792306E13}.Release|iPhone.ActiveCfg = Release|iPhone
+		{AD8EF19A-E06F-4F01-9EEE-F2D792306E13}.Release|iPhone.Build.0 = Release|iPhone
+		{AD8EF19A-E06F-4F01-9EEE-F2D792306E13}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{AD8EF19A-E06F-4F01-9EEE-F2D792306E13}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

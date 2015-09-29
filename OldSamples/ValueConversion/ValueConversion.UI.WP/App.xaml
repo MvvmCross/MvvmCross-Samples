@@ -1,0 +1,28 @@
+﻿<Application 
+    x:Class="ValueConversion.UI.WP.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"       
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:nativeConverters="clr-namespace:ValueConversion.UI.WP.NativeConverters">
+
+    <!--Application Resources-->
+    <Application.Resources>
+        <nativeConverters:NativeTimeAgoConverter x:Name="TimeAgo" />
+        <nativeConverters:NativeColorConverter x:Name="NativeColor" />
+        <nativeConverters:NativeInvertedVisibilityConverter x:Name="InvertedVisibility" />
+        <nativeConverters:NativeVisibilityConverter x:Name="Visibility" />
+        <nativeConverters:NativeContrastColorConverter x:Name="ContrastColor" />
+        <nativeConverters:NativeStringLengthConverter x:Name="StringLength" />
+        <nativeConverters:NativeStringReverseConverter x:Name="StringReverse" />
+        <nativeConverters:NativeTwoWayConverter x:Name="TwoWay" />
+    </Application.Resources>
+
+    <Application.ApplicationLifetimeObjects>
+        <!--Required object that handles lifetime events for the application-->
+        <shell:PhoneApplicationService 
+            Launching="Application_Launching" Closing="Application_Closing" 
+            Activated="Application_Activated" Deactivated="Application_Deactivated"/>
+    </Application.ApplicationLifetimeObjects>
+
+</Application>

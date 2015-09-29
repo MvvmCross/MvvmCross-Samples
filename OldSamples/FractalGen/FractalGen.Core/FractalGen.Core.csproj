@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{40F8EE7F-4751-440B-9A8F-F05EC02FC822}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FractalGen.Core</RootNamespace>
+    <AssemblyName>FractalGen.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Profile158</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProductVersion>12.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="App.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\Fractal\IMandelbrotGenerator.cs" />
+    <Compile Include="Services\PlatformSpecific\IDisplayDimensionsService.cs" />
+    <Compile Include="Services\Fractal\InterestingPointGenerator.cs" />
+    <Compile Include="Services\Fractal\HSVConverter.cs" />
+    <Compile Include="Services\Fractal\ColorArrayGenerator.cs" />
+    <Compile Include="Services\Fractal\IColorArrayGenerator.cs" />
+    <Compile Include="Services\Fractal\IHSVConverter.cs" />
+    <Compile Include="Services\Fractal\IInterestingPointGenerator.cs" />
+    <Compile Include="Services\Fractal\IMandelbrot.cs" />
+    <Compile Include="Services\Fractal\ISimpleWriteableBitmap.cs" />
+    <Compile Include="Services\Fractal\IWriteableBitmapGenerator.cs" />
+    <Compile Include="Services\Fractal\Limits.cs" />
+    <Compile Include="Services\Fractal\Mandelbrot.cs" />
+    <Compile Include="Messages\TickMessage.cs" />
+    <Compile Include="Services\Fractal\MandelbrotGenerator.cs" />
+    <Compile Include="Services\ITimerService.cs" />
+    <Compile Include="Services\TimerService.cs" />
+    <Compile Include="Services\Fractal\SimpleWriteableBitmap.cs" />
+    <Compile Include="Services\Fractal\WriteableBitmapGenerator.cs" />
+    <Compile Include="ViewModels\GenerateViewModel.cs" />
+    <Compile Include="Services\Fractal\IMandelbrotTask.cs" />
+    <Compile Include="Services\Fractal\IMandelbrotTaskGenerator.cs" />
+    <Compile Include="Services\Fractal\MandelbrotTask.cs" />
+    <Compile Include="Services\Fractal\MandelbrotTaskGenerator.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Windows" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Serialization" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Cirrious.CrossCore">
+      <HintPath>..\..\Lib\Mvx\Portable\Cirrious.CrossCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross">
+      <HintPath>..\..\Lib\Mvx\Portable\Cirrious.MvvmCross.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Plugins.Color">
+      <HintPath>..\..\Lib\Mvx\Portable\Cirrious.MvvmCross.Plugins.Color.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Plugins.Messenger">
+      <HintPath>..\..\Lib\Mvx\Portable\Cirrious.MvvmCross.Plugins.Messenger.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

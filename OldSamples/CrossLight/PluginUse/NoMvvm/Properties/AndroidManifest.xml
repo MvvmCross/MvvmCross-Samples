@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="nomvvm.droid" android:installLocation="auto">
+	<uses-sdk android:targetSdkVersion="8" />
+	<application android:label="No Mvvm"></application>
+	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+</manifest>

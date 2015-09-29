@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res/navigation.droid"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+  <Button
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:text="Go Simple"
+      local:MvxBind="Click GoSimpleCommand" />
+  <TextView
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:text="Parameter key:" />
+  <EditText
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      local:MvxBind="Text ParameterKey" />
+  <Button
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:text="Go Params"
+      local:MvxBind="Click GoParameterizedCommand" />
+  <Button
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:text="Go Anon"
+      local:MvxBind="Click GoAnonymousCommand" />
+</LinearLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res/ValueConversion.UI.Droid"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+  <TextView
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:text="Edit this:"
+   />
+  <EditText
+        android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+        local:MvxBind="Text TheText" 
+   />
+  <TextView
+        android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+        android:text="The length:"
+   />
+  <TextView
+        android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+        local:MvxBind="Text TheText, Converter=StringLength"
+   />
+  <TextView
+        android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+        android:text="In reverse:"
+   />
+  <TextView
+        android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+        local:MvxBind="Text TheText, Converter=StringReverse"
+   />
+
+</LinearLayout>

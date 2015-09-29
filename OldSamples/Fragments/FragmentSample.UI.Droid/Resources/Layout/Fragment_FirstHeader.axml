@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res/FragmentSample.UI.Droid"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="#afafff"
+>
+  <TextView
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:textColor="#000000"
+      android:textSize="30dp"
+      android:text="This is the first header"
+      />
+    
+  <EditText 
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:textColor="#000000"
+      android:textSize="30dp"
+      local:MvxBind="Text SearchTerm"
+  />
+    <Button
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:text="Go"
+      local:MvxBind="Click FetchItemsCommand"
+  />
+</LinearLayout>

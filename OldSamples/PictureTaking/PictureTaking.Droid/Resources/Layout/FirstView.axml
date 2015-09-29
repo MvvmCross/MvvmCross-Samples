@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res/com.cirrious.picturetaking"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+  <Button 
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:text="Take Picture"
+    local:MvxBind="Click TakePictureCommand"
+    />
+  <Button
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:text="Choose Picture"
+    local:MvxBind="Click ChoosePictureCommand"
+    />
+  <ImageView
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    local:MvxBind="Bitmap Bytes,Converter=InMemoryImage"
+    />
+    
+</LinearLayout>

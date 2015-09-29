@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+  <LinearLayout
+    android:layout_alignParentBottom="true"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <TextView
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:text="Is this updated?"
+      />
+    <TextView
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      local:MvxBind="Text Selected"
+      />
+    <Button
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:text="Next test"
+      local:MvxBind="Click NextCommand"
+    />
+    <LinearLayout
+      android:orientation="vertical"
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent">
+      <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Some controls..."
+      />
+      <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Add"
+        local:MvxBind="Click AddCommand"
+    />
+      <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Remove"
+        local:MvxBind="Click RemoveCommand"
+    />
+      <MvxListView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        local:MvxBind="ItemsSource Items;ItemClick Hello"
+      />
+    </LinearLayout>
+  </LinearLayout>
+</RelativeLayout>

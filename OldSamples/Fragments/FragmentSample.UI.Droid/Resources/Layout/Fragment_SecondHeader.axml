@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res/FragmentSample.UI.Droid"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal"
+    android:background="#afffaf"
+>
+  <TextView
+    android:layout_weight="1"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:textColor="#000000"
+    android:textSize="30dp"
+    android:text="Second header"
+      />
+
+  <EditText 
+    android:layout_weight="1"
+    android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:textColor="#000000"
+      android:textSize="50dp"
+      local:MvxBind="Text SearchTerm,Mode=TwoWay"
+  />
+    <Button
+    android:layout_weight="1"
+    android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:text="Go"
+      local:MvxBind="Click FetchItemsCommand"
+  />
+</LinearLayout>

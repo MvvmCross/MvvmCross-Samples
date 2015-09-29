@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FragmentSample.Core", "FragmentSample.Core\FragmentSample.Core.csproj", "{5BD562E0-1E91-45AF-9365-BF54FF7929C1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FragmentSample.UI.Droid", "FragmentSample.UI.Droid\FragmentSample.UI.Droid.csproj", "{AF507054-5204-4A71-B3B3-0D840A70E8C3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5BD562E0-1E91-45AF-9365-BF54FF7929C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BD562E0-1E91-45AF-9365-BF54FF7929C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BD562E0-1E91-45AF-9365-BF54FF7929C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BD562E0-1E91-45AF-9365-BF54FF7929C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF507054-5204-4A71-B3B3-0D840A70E8C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF507054-5204-4A71-B3B3-0D840A70E8C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF507054-5204-4A71-B3B3-0D840A70E8C3}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{AF507054-5204-4A71-B3B3-0D840A70E8C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF507054-5204-4A71-B3B3-0D840A70E8C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF507054-5204-4A71-B3B3-0D840A70E8C3}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

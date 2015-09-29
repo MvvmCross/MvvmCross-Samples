@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+  <TextView
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:text="Click for commands..."
+    />
+  <Button
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:textSize="40dp"
+    android:text="Never clicked"
+    local:MvxBind="Text Format('Clicked {0} times', Count); Click MyCommand" 
+    />
+  <CheckBox
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:text="Enabled the button?"
+    local:MvxBind="Checked ShouldEnable" 
+    />
+  <Button
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:text="Next test"
+    local:MvxBind="Click NextCommand"
+    />
+</LinearLayout>

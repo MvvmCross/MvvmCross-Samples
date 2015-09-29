@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <Mvx.MvxSpinner
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/listPreferredItemHeight"
+        local:MvxBind="ItemsSource Shapes; SelectedItem Current" />
+  <!--
+    could be customised using
+    local:MvxDropDownItemTemplate="@layout/spinner_dropdownitem_shape"
+    local:MvxItemTemplate="@layout/spinner_item_shape"
+  -->
+  <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="40dp"
+        local:MvxBind="Text Current" />
+  <MC.ShapeView
+        android:layout_width="fill_parent"
+        android:layout_height="300dp"
+        local:MvxBind="Shape Current" />
+</LinearLayout>
