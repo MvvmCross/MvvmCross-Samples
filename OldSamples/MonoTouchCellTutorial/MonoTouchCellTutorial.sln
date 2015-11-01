@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonoTouchCellTutorial", "MonoTouchCellTutorial\MonoTouchCellTutorial.csproj", "{176BBCC7-ABA4-4873-BF18-67A24E9071F3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Ad-Hoc|iPhone = Ad-Hoc|iPhone
+		Ad-Hoc|iPhoneSimulator = Ad-Hoc|iPhoneSimulator
+		AppStore|iPhone = AppStore|iPhone
+		AppStore|iPhoneSimulator = AppStore|iPhoneSimulator
+		Debug|iPhone = Debug|iPhone
+		Debug|iPhoneSimulator = Debug|iPhoneSimulator
+		Release|iPhone = Release|iPhone
+		Release|iPhoneSimulator = Release|iPhoneSimulator
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{176BBCC7-ABA4-4873-BF18-67A24E9071F3}.Ad-Hoc|iPhone.ActiveCfg = Ad-Hoc|iPhone
+		{176BBCC7-ABA4-4873-BF18-67A24E9071F3}.Ad-Hoc|iPhone.Build.0 = Ad-Hoc|iPhone
+		{176BBCC7-ABA4-4873-BF18-67A24E9071F3}.Ad-Hoc|iPhoneSimulator.ActiveCfg = Ad-Hoc|iPhoneSimulator
+		{176BBCC7-ABA4-4873-BF18-67A24E9071F3}.Ad-Hoc|iPhoneSimulator.Build.0 = Ad-Hoc|iPhoneSimulator
+		{176BBCC7-ABA4-4873-BF18-67A24E9071F3}.Ad-Hoc|iPhoneSimulator.Deploy.0 = Ad-Hoc|iPhoneSimulator
+		{176BBCC7-ABA4-4873-BF18-67A24E9071F3}.AppStore|iPhone.ActiveCfg = AppStore|iPhone
+		{176BBCC7-ABA4-4873-BF18-67A24E9071F3}.AppStore|iPhone.Build.0 = AppStore|iPhone
+		{176BBCC7-ABA4-4873-BF18-67A24E9071F3}.AppStore|iPhoneSimulator.ActiveCfg = AppStore|iPhoneSimulator
+		{176BBCC7-ABA4-4873-BF18-67A24E9071F3}.AppStore|iPhoneSimulator.Build.0 = AppStore|iPhoneSimulator
+		{176BBCC7-ABA4-4873-BF18-67A24E9071F3}.AppStore|iPhoneSimulator.Deploy.0 = AppStore|iPhoneSimulator
+		{176BBCC7-ABA4-4873-BF18-67A24E9071F3}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{176BBCC7-ABA4-4873-BF18-67A24E9071F3}.Debug|iPhone.Build.0 = Debug|iPhone
+		{176BBCC7-ABA4-4873-BF18-67A24E9071F3}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{176BBCC7-ABA4-4873-BF18-67A24E9071F3}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{176BBCC7-ABA4-4873-BF18-67A24E9071F3}.Release|iPhone.ActiveCfg = Release|iPhone
+		{176BBCC7-ABA4-4873-BF18-67A24E9071F3}.Release|iPhone.Build.0 = Release|iPhone
+		{176BBCC7-ABA4-4873-BF18-67A24E9071F3}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{176BBCC7-ABA4-4873-BF18-67A24E9071F3}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = MonoTouchCellTutorial\MonoTouchCellTutorial.csproj
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res/FragmentSample.UI.Droid"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+    android:padding="40dp"
+  android:background="#FF00FF"
+  android:orientation="vertical">
+  <TextView
+      android:layout_width="fill_parent"
+  android:layout_height="wrap_content"
+  android:textColor="#000000"
+  android:text="These last three tabs share the same ViewModel - they all bind to the same thing"
+></TextView>
+  <TextView
+      android:layout_width="fill_parent"
+  android:layout_height="wrap_content"
+  android:textColor="#000000"
+  android:text="First Name:"
+></TextView>
+  <EditText
+      android:layout_width="fill_parent"
+  android:layout_height="wrap_content"
+  android:textColor="#000000"
+      local:MvxBind="Text FirstName"
+></EditText>
+  <TextView
+      android:layout_width="fill_parent"
+  android:layout_height="wrap_content"
+  android:textColor="#000000"
+  android:text="Last Name:"
+></TextView>
+  <EditText
+      android:layout_width="fill_parent"
+  android:layout_height="wrap_content"
+  android:textColor="#000000"
+      local:MvxBind="Text LastName"
+></EditText>
+
+  <TextView
+     android:layout_width="fill_parent"
+ android:layout_height="wrap_content"
+ android:textColor="#000000"
+ android:text="Full Name:"
+></TextView>
+
+  <TextView
+      android:layout_width="fill_parent"
+  android:layout_height="wrap_content"
+  android:textColor="#000000"
+      local:MvxBind="Text FullName"
+></TextView>
+</LinearLayout>

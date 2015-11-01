@@ -1,12 +1,12 @@
+using ApiExamples.Core.ViewModels.Helpers;
+using Cirrious.CrossCore;
+using Cirrious.CrossCore.Converters;
+using Cirrious.MvvmCross.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Text.RegularExpressions;
 using System.Windows.Input;
-using ApiExamples.Core.ViewModels.Helpers;
-using Cirrious.CrossCore;
-using Cirrious.CrossCore.Converters;
-using Cirrious.MvvmCross.ViewModels;
 
 namespace ApiExamples.Core.ViewModels
 {
@@ -27,6 +27,7 @@ namespace ApiExamples.Core.ViewModels
         }
 
         private IList<Type> _tests;
+
         public IList<Type> Tests
         {
             get { return _tests; }
@@ -63,6 +64,7 @@ namespace ApiExamples.Core.ViewModels
         : TestViewModel
     {
         private DateTime _property = DateTime.Now;
+
         public DateTime Property
         {
             get { return _property; }
@@ -74,6 +76,7 @@ namespace ApiExamples.Core.ViewModels
         : TestViewModel
     {
         private TimeSpan _property = DateTime.Now.TimeOfDay;
+
         public TimeSpan Property
         {
             get { return _property; }
@@ -113,6 +116,7 @@ namespace ApiExamples.Core.ViewModels
                 return Caption.GetHashCode();
             }
         }
+
         private List<Thing> _items = new List<Thing>()
             {
                 new Thing("One"),
@@ -120,6 +124,7 @@ namespace ApiExamples.Core.ViewModels
                 new Thing("Three"),
                 new Thing("Four"),
             };
+
         public List<Thing> Items
         {
             get { return _items; }
@@ -127,6 +132,7 @@ namespace ApiExamples.Core.ViewModels
         }
 
         private Thing _selectedItem = new Thing("Three");
+
         public Thing SelectedItem
         {
             get { return _selectedItem; }
@@ -141,6 +147,7 @@ namespace ApiExamples.Core.ViewModels
             {
                 "One", "Two", "Three"
             };
+
         public ObservableCollection<string> Items
         {
             get { return _items; }
@@ -148,6 +155,7 @@ namespace ApiExamples.Core.ViewModels
         }
 
         private string _selected;
+
         public string Selected
         {
             get { return _selected; }
@@ -171,15 +179,15 @@ namespace ApiExamples.Core.ViewModels
                 });
             }
         }
-
-
     }
+
     public class ListViewModel : BaseListTestViewModel
     {
         private int i = 0;
+
         public ICommand Hello
         {
-            get { return new MvxCommand(() => Mvx.Trace("Hello " + ++i));}
+            get { return new MvxCommand(() => Mvx.Trace("Hello " + ++i)); }
         }
     }
 
@@ -195,6 +203,7 @@ namespace ApiExamples.Core.ViewModels
     public class ObservableCollectionViewModel : TestViewModel
     {
         private ObservableCollection<string> _items;
+
         public ObservableCollection<string> Items
         {
             get { return _items; }
@@ -209,9 +218,9 @@ namespace ApiExamples.Core.ViewModels
                 {
                     Items = new ObservableCollection<string>()
                             {
-                                "One " + Guid.NewGuid().ToString(), 
-                                "Two " + Guid.NewGuid().ToString(), 
-                                "Three " + Guid.NewGuid().ToString() 
+                                "One " + Guid.NewGuid().ToString(),
+                                "Two " + Guid.NewGuid().ToString(),
+                                "Three " + Guid.NewGuid().ToString()
                             };
                 });
             }
@@ -254,6 +263,7 @@ namespace ApiExamples.Core.ViewModels
     public class ObservableDictionaryViewModel : TestViewModel
     {
         private ObservableDictionary<string, string> _items;
+
         public ObservableDictionary<string, string> Items
         {
             get { return _items; }
@@ -268,7 +278,7 @@ namespace ApiExamples.Core.ViewModels
                 {
                     Items = new ObservableDictionary<string, string>()
                             {
-                                {"One", "One " + Guid.NewGuid().ToString() }, 
+                                {"One", "One " + Guid.NewGuid().ToString() },
                                 {"Two","Two " + Guid.NewGuid().ToString() },
                                 {"Three","Three " + Guid.NewGuid().ToString() }
                             };
@@ -285,7 +295,7 @@ namespace ApiExamples.Core.ViewModels
                     if (Items == null)
                     {
                         Items = new ObservableDictionary<string, string>() {
-                                {"One", "One " + Guid.NewGuid().ToString() }, 
+                                {"One", "One " + Guid.NewGuid().ToString() },
                                 {"Two","Two " + Guid.NewGuid().ToString() },
                                 {"Three","Three " + Guid.NewGuid().ToString() }
                             };
@@ -314,6 +324,7 @@ namespace ApiExamples.Core.ViewModels
     public class WithErrorsViewModel : TestViewModel
     {
         private ObservableDictionary<string, string> _errors = new ObservableDictionary<string, string>();
+
         public ObservableDictionary<string, string> Errors
         {
             get { return _errors; }
@@ -321,6 +332,7 @@ namespace ApiExamples.Core.ViewModels
         }
 
         private string _email = "Enter Email Here";
+
         public string Email
         {
             get { return _email; }
@@ -328,6 +340,7 @@ namespace ApiExamples.Core.ViewModels
         }
 
         private bool _acceptTerms;
+
         public bool AcceptTerms
         {
             get { return _acceptTerms; }
@@ -361,10 +374,10 @@ namespace ApiExamples.Core.ViewModels
         }
     }
 
-
     public class TextViewModel : TestViewModel
     {
         private string _stringProperty = "Hello";
+
         public string StringProperty
         {
             get { return _stringProperty; }
@@ -372,6 +385,7 @@ namespace ApiExamples.Core.ViewModels
         }
 
         private double _doubleProperty = 42.12;
+
         public double DoubleProperty
         {
             get { return _doubleProperty; }
@@ -382,6 +396,7 @@ namespace ApiExamples.Core.ViewModels
     public class SeekViewModel : TestViewModel
     {
         private double _seekProperty = 12;
+
         public double SeekProperty
         {
             get { return _seekProperty; }
@@ -394,6 +409,7 @@ namespace ApiExamples.Core.ViewModels
         public class PersonViewModel : MvxNotifyPropertyChanged
         {
             private string _firstName;
+
             public string FirstName
             {
                 get { return _firstName; }
@@ -401,6 +417,7 @@ namespace ApiExamples.Core.ViewModels
             }
 
             private string _lastName;
+
             public string LastName
             {
                 get { return _lastName; }
@@ -413,6 +430,7 @@ namespace ApiExamples.Core.ViewModels
             FirstName = "Fred",
             LastName = "Flintstone"
         };
+
         public PersonViewModel FirstPerson
         {
             get { return _firstPerson; }
@@ -424,6 +442,7 @@ namespace ApiExamples.Core.ViewModels
             FirstName = "Barney",
             LastName = "Rubble"
         };
+
         public PersonViewModel SecondPerson
         {
             get { return _secondPerson; }
@@ -448,6 +467,7 @@ namespace ApiExamples.Core.ViewModels
     public class ConvertThisViewModel : TestViewModel
     {
         private int _value = 21;
+
         public int Value
         {
             get { return _value; }
@@ -458,15 +478,17 @@ namespace ApiExamples.Core.ViewModels
     public class IfViewModel : TestViewModel
     {
         private int _testVal1 = 0;
-        public int TestVal1 
-        {   
+
+        public int TestVal1
+        {
             get { return _testVal1; }
             set { _testVal1 = value; RaisePropertyChanged(() => TestVal1); }
         }
 
         private int _testVal2 = 10;
-        public int TestVal2 
-        {   
+
+        public int TestVal2
+        {
             get { return _testVal2; }
             set { _testVal2 = value; RaisePropertyChanged(() => TestVal2); }
         }
@@ -475,6 +497,7 @@ namespace ApiExamples.Core.ViewModels
     public class MathsViewModel : TestViewModel
     {
         private int _testVal1 = 10;
+
         public int TestVal1
         {
             get { return _testVal1; }
@@ -482,6 +505,7 @@ namespace ApiExamples.Core.ViewModels
         }
 
         private int _testVal2 = 2;
+
         public int TestVal2
         {
             get { return _testVal2; }
@@ -521,6 +545,7 @@ namespace ApiExamples.Core.ViewModels
                 return Caption.GetHashCode();
             }
         }
+
         private List<Thing> _items = new List<Thing>()
             {
                 new Thing("One"),
@@ -528,6 +553,7 @@ namespace ApiExamples.Core.ViewModels
                 new Thing("Three"),
                 new Thing("Four"),
             };
+
         public List<Thing> Items
         {
             get { return _items; }
@@ -535,11 +561,11 @@ namespace ApiExamples.Core.ViewModels
         }
 
         private Thing _selectedItem = new Thing("Three");
+
         public Thing SelectedItem
         {
             get { return _selectedItem; }
             set { _selectedItem = value; RaisePropertyChanged(() => SelectedItem); }
         }
     }
-
 }

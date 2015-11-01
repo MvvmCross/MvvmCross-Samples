@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res/Collections.Droid"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    >
+  <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="2nd kitten is:"
+      />
+  <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+    <Mvx.MvxImageView
+       android:layout_width="50dp"
+       android:layout_height="50dp"
+       local:MvxBind="ImageUrl Kittens[2].ImageUrl"
+        ></Mvx.MvxImageView>
+    <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          local:MvxBind="Text Kittens[2].Name"
+          android:textAppearance="?android:attr/textAppearanceLarge"
+          />    
+  </LinearLayout>
+  <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Kitten 'Felix' is:"
+      />
+  <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+    <Mvx.MvxImageView
+       android:layout_width="50dp"
+       android:layout_height="50dp"
+       local:MvxBind="ImageUrl Lookup[Felix].ImageUrl"
+        ></Mvx.MvxImageView>
+    <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          local:MvxBind="Text Lookup[Felix].Name"
+          android:textAppearance="?android:attr/textAppearanceLarge"
+          />
+  </LinearLayout>
+</LinearLayout>

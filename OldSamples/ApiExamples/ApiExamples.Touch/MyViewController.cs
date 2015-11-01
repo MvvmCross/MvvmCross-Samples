@@ -1,15 +1,15 @@
-using System;
 using CoreGraphics;
+using System;
 using UIKit;
 
 namespace ApiExamples.Touch
 {
     public class MyViewController : UIViewController
     {
-        UIButton button;
-        int numClicks = 0;
-        float buttonWidth = 200;
-        float buttonHeight = 50;
+        private UIButton button;
+        private int numClicks = 0;
+        private float buttonWidth = 200;
+        private float buttonHeight = 50;
 
         public MyViewController()
         {
@@ -43,7 +43,5 @@ namespace ApiExamples.Touch
 
             View.AddSubview(button);
         }
-
     }
 }
-

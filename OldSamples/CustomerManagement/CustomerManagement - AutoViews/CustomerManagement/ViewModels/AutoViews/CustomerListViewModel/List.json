@@ -1,0 +1,17 @@
+﻿{
+    'Key':'General',
+    'Properties':{
+        'ItemsSource':'@MvxBind:Customers',
+        'ItemClick':'@MvxBind:CustomerSelectedCommand'
+    },
+    'DefaultLayout':{
+		'Key':'General',
+        'Properties':{
+			'LayoutName':'TitleAndSubTitle',
+			'Bindings':{
+				'Title':'Name',
+				'SubTitle':'Website'
+			}
+		}
+    }
+}

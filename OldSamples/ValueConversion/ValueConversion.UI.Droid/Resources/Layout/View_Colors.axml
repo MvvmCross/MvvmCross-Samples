@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res/ValueConversion.UI.Droid"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+  <TextView
+        android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+        android:text="Red:"
+   />
+    <SeekBar
+        android:layout_width="fill_parent"
+        android:layout_height="64dp"
+        android:max="255"
+        local:MvxBind="Progress Red" />
+  <TextView
+        android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+        android:text="Green:"
+   />
+    <SeekBar
+        android:layout_width="fill_parent"
+        android:layout_height="64dp"
+        android:max="255"
+        local:MvxBind="Progress Green" />
+  <TextView
+        android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+        android:text="Blue:"
+   />
+    <SeekBar
+        android:layout_width="fill_parent"
+        android:layout_height="64dp"
+        android:max="255"
+        local:MvxBind="Progress Blue" />
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        local:MvxBind="BackgroundColor Color, Converter=NativeColor; Text Color; TextColor Color, Converter=ContrastColor" 
+   />
+
+</LinearLayout>

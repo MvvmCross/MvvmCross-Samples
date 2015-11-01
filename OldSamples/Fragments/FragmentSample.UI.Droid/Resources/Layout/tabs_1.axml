@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res/FragmentSample.UI.Droid"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+    android:padding="40dp"
+  android:background="#FF0000"
+  android:orientation="vertical"
+    >
+  <TextView
+      android:layout_width="fill_parent"
+  android:layout_height="wrap_content"
+  android:textColor="#000000"
+  android:text="The Hello Property is:"
+></TextView>
+  <TextView
+      android:layout_width="fill_parent"
+  android:layout_height="wrap_content"
+  android:textColor="#000000"
+      local:MvxBind="Text Hello"
+></TextView>
+  <TextView
+      android:layout_width="fill_parent"
+  android:layout_height="wrap_content"
+  android:textColor="#000000"
+  android:text="The When Property is:"
+></TextView>
+  <TextView
+      android:layout_width="fill_parent"
+  android:layout_height="wrap_content"
+  android:textColor="#000000"
+      local:MvxBind="Text When, Converter=TimeAgo"
+></TextView>
+</LinearLayout>

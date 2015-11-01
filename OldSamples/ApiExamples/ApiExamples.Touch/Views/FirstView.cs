@@ -3,8 +3,8 @@ using Cirrious.MvvmCross.Binding.BindingContext;
 using Cirrious.MvvmCross.Binding.Touch.Views;
 using Cirrious.MvvmCross.Touch.Views;
 using CoreGraphics;
-using UIKit;
 using Foundation;
+using UIKit;
 
 namespace ApiExamples.Touch.Views
 {
@@ -37,10 +37,10 @@ namespace ApiExamples.Touch.Views
             Title = title;
 
             var explain = new UILabel(new CGRect(10, 40, 300, 60))
-                {
-                    Text = ExplainText,
-                    Lines = 0,
-                };
+            {
+                Text = ExplainText,
+                Lines = 0,
+            };
             Add(explain);
 
             var nextButton = new UIButton(UIButtonType.RoundedRect);
@@ -86,7 +86,7 @@ namespace ApiExamples.Touch.Views
             var set = this.CreateBindingSet<DateTimeView, DateTimeViewModel>();
             set.Bind(datePicker).To(vm => vm.Property);
             set.Bind(textView).To("Format('{0:dd MMM yyyy}', Property)");
-            set.Bind(label).To("Format('{0:dd MMM yyyy}', Property)");            
+            set.Bind(label).To("Format('{0:dd MMM yyyy}', Property)");
             set.Apply();
         }
 
@@ -213,6 +213,7 @@ namespace ApiExamples.Touch.Views
     {
         // not tested
     }
+
     [Register("RelativeView")]
     public class RelativeView : NotTestedTestViewController
     {
@@ -322,7 +323,6 @@ namespace ApiExamples.Touch.Views
         {
             base.ViewDidLoad();
 
-
             var label = new UILabel(new CGRect(10, 100, 100, 30));
             label.Text = "Email";
             Add(label);
@@ -387,7 +387,6 @@ namespace ApiExamples.Touch.Views
             var mirrorLabel = new UILabel(new CGRect(110, 130, 200, 30));
             mirrorLabel.TextColor = UIColor.Blue;
             Add(mirrorLabel);
-
 
             var label1 = new UILabel(new CGRect(10, 160, 100, 30));
             label1.Text = "A number:";

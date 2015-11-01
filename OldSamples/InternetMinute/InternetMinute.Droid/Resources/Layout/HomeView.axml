@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Mvx.MvxListView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res/com.cirrious.internetminute"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+                 local:MvxBind="ItemsSource Descriptions"
+                 local:MvxItemTemplate="@layout/listitem_description">
+</Mvx.MvxListView>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+  <LinearLayout 
+      android:orientation="vertical"
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent">
+    <TextView
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:text="Enter some text..."
+      />
+    <EditText
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:textSize="30dp"
+      local:MvxBind="Text StringProperty"
+    />
+    <TextView
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:text="Is this text updated?"
+    />
+    <TextView
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:textSize="30dp"
+      local:MvxBind="Text StringProperty"
+    />
+    <TextView
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:text="Enter a number..."
+      />
+    <EditText
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:inputType="numberDecimal|numberSigned"
+      android:textSize="30dp"
+      local:MvxBind="Text DoubleProperty"
+    />
+    <TextView
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:text="Is this text updated?"
+    />
+    <TextView
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:textSize="30dp"
+      local:MvxBind="Text DoubleProperty"
+    />
+
+    <Button
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:text="Next test"
+      local:MvxBind="Click NextCommand"
+    />
+  </LinearLayout>
+</ScrollView>

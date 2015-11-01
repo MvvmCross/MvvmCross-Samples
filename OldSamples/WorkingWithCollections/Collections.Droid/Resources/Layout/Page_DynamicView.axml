@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res/Collections.Droid"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    >
+  <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/buttonPanel"
+        android:orientation="horizontal"
+      >
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add One"
+        local:MvxBind="Click AddKittenCommand"
+      ></Button>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kill Some"
+        local:MvxBind="Click KillKittensCommand"
+      ></Button>
+  </LinearLayout>
+  <Mvx.MvxListView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/buttonPanel"
+        local:MvxItemTemplate="@layout/listitem_kitten"
+        local:MvxBind="ItemsSource Kittens"
+      />
+</RelativeLayout>

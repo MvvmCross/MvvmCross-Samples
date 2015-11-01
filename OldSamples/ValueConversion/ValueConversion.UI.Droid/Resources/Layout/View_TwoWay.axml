@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res/ValueConversion.UI.Droid"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+  <TextView
+        android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+        android:text="The value:"
+   />
+  <TextView
+        android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+        local:MvxBind="Text TheValue"
+   />
+  <TextView
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:text="Edit the square:"
+   />
+  <EditText
+        android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+        local:MvxBind="Text TheValue, Converter=TwoWay"
+   />
+
+</LinearLayout>

@@ -18,37 +18,45 @@ namespace ApiExamples.Core.ViewModels.Helpers
         private const string ValuesName = "Values";
 
         private IDictionary<TKey, TValue> _dictionary;
+
         protected IDictionary<TKey, TValue> Dictionary
         {
             get { return _dictionary; }
         }
 
         #region Constructors
+
         public ObservableDictionary()
         {
             _dictionary = new Dictionary<TKey, TValue>();
         }
+
         public ObservableDictionary(IDictionary<TKey, TValue> dictionary)
         {
             _dictionary = new Dictionary<TKey, TValue>(dictionary);
         }
+
         public ObservableDictionary(IEqualityComparer<TKey> comparer)
         {
             _dictionary = new Dictionary<TKey, TValue>(comparer);
         }
+
         public ObservableDictionary(int capacity)
         {
             _dictionary = new Dictionary<TKey, TValue>(capacity);
         }
+
         public ObservableDictionary(IDictionary<TKey, TValue> dictionary, IEqualityComparer<TKey> comparer)
         {
             _dictionary = new Dictionary<TKey, TValue>(dictionary, comparer);
         }
+
         public ObservableDictionary(int capacity, IEqualityComparer<TKey> comparer)
         {
             _dictionary = new Dictionary<TKey, TValue>(capacity, comparer);
         }
-        #endregion
+
+        #endregion Constructors
 
         #region IDictionary<TKey,TValue> Members
 
@@ -104,7 +112,7 @@ namespace ApiExamples.Core.ViewModels.Helpers
             }
         }
 
-        #endregion
+        #endregion IDictionary<TKey,TValue> Members
 
         #region ICollection<KeyValuePair<TKey,TValue>> Members
 
@@ -147,8 +155,7 @@ namespace ApiExamples.Core.ViewModels.Helpers
             return Remove(item.Key);
         }
 
-
-        #endregion
+        #endregion ICollection<KeyValuePair<TKey,TValue>> Members
 
         #region IEnumerable<KeyValuePair<TKey,TValue>> Members
 
@@ -157,7 +164,7 @@ namespace ApiExamples.Core.ViewModels.Helpers
             return Dictionary.GetEnumerator();
         }
 
-        #endregion
+        #endregion IEnumerable<KeyValuePair<TKey,TValue>> Members
 
         #region IEnumerable Members
 
@@ -166,19 +173,19 @@ namespace ApiExamples.Core.ViewModels.Helpers
             return ((IEnumerable)Dictionary).GetEnumerator();
         }
 
-        #endregion
+        #endregion IEnumerable Members
 
         #region INotifyCollectionChanged Members
 
         public event NotifyCollectionChangedEventHandler CollectionChanged;
 
-        #endregion
+        #endregion INotifyCollectionChanged Members
 
         #region INotifyPropertyChanged Members
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-        #endregion
+        #endregion INotifyPropertyChanged Members
 
         public void AddRange(IDictionary<TKey, TValue> items)
         {
@@ -261,5 +268,4 @@ namespace ApiExamples.Core.ViewModels.Helpers
                 CollectionChanged(this, new NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction.Reset));
         }
     }
-
 }

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+  <TextView
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:textSize="24dp"
+      android:text="Customer 1" />
+  <Mvx.MvxFrameControl
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      local:MvxBind="DataContext Customer1"
+      local:MvxTemplate="@layout/comp_customer"/>
+  <TextView
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:textSize="24dp"
+      local:MvxBind="Text Customer1.FullName" />
+  <View
+      android:layout_width="fill_parent"
+      android:layout_height="1dp"
+      android:layout_margin="6dp"
+      android:background="#a0a0a0"/>
+  <TextView
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:textSize="24dp"
+      android:text="Customer 2" />
+  <Mvx.MvxFrameControl
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      local:MvxBind="DataContext Customer2"      
+      local:MvxTemplate="@layout/comp_customer"/>
+  <TextView
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:textSize="24dp"
+      local:MvxBind="Text Customer2.FullName" />
+</LinearLayout>

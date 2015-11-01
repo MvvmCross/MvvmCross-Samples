@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res/Collections.Droid"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="20dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:gravity="right"
+        local:MvxBind="Text Name"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+    <Mvx.MvxImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_weight="10"
+        local:MvxBind="ImageUrl ImageUrl" />
+</LinearLayout>
