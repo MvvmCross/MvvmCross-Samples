@@ -8,7 +8,7 @@ See the official [MvvmCross blog](http://mvvmcross.com/) for the latest news!
 
 * [StackOverflow](http://stackoverflow.com/questions/tagged/mvvmcross)
 * [Xamarin forums](http://forums.xamarin.com)
-* [Jabbr](http://jabbr.net/#/rooms/mvvmcross)
+* [Slack](https://xamarinchat.herokuapp.com/) join the mvvmcross channel after you are in
 
 ### Documentation
 
