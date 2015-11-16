@@ -4,6 +4,15 @@ XPlatformMenus is a cross-platform navigation implementation showing how to impl
 
 See the official [MvvmCross blog](http://mvvmcross.com/) for the latest news!
 
+# Features
+
+ - Hamburger menu navigation on all platforms
+ - Platform agnostic services implemented in the Core
+ - Platform specific services implemented in the platform projects
+ - Registration of platform specific services during application start-up
+ - Custom application start-up (Core.AppStart)
+ - FluentLayout on iOS
+
 Licensing
 ---------
 

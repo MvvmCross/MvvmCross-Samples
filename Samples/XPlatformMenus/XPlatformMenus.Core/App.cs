@@ -8,14 +8,21 @@ namespace XPlatformMenus.Core
     {
         public override void Initialize()
         {
+            // Registers any classes ending with "Service" into the internal
+            // Mvx IoC container for use when constructing objects through
+            // the container
             CreatableTypes()
                 .EndingWith("Service")
                 .AsInterfaces()
                 .RegisterAsLazySingleton();
 
-            // Register the custom application start object
+            // Construct custom application start object
             Mvx.ConstructAndRegisterSingleton<IMvxAppStart, AppStart>();
+
+            // request a reference to the constructed appstart object 
             var appStart = Mvx.Resolve<IMvxAppStart>();
+
+            // register the appstart object
             RegisterAppStart(appStart);
         }
     }

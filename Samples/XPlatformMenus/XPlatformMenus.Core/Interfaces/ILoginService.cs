@@ -11,7 +11,7 @@
         bool IsAuthenticated { get; }
 
         /// <summary>
-        /// Attempts to log the user in using the stored credentials if present
+        /// Attempts to log the user in using stored credentials if present
         /// </summary>
         /// <returns> <c>true</c> if the login is successful, <c>false</c> otherwise </returns>
         bool Login();
@@ -28,7 +28,7 @@
         /// </summary>
         /// <param name="userName">Name of the user.</param>
         /// <param name="password">The users password.</param>
-        /// <returns></returns>
+        /// <returns><c>true</c> if the login is successful, <c>false</c> otherwise </returns>
         bool Login(string userName, string password);
     }
 }

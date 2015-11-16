@@ -12,7 +12,7 @@ namespace XPlatformMenus.Core.Services
         public LoginService() // e.g. LoginService(IMyApiClient client)
         {
             // this constructor would most likely contain some form of API Client that performs
-            // the message creation, sending and deals with the response from the remote API
+            // the message creation, sending and deals with the response from a remote API
         }
 
         /// <summary>
@@ -34,11 +34,12 @@ namespace XPlatformMenus.Core.Services
             // var username = Settings.UserName;
             // var username = _settingsService.GetValue<string>(Constants.UserNameKey);
 
+            // force return of false just for demo purposes
             IsAuthenticated = false;
             return IsAuthenticated;
         }
 
-        /// <summary>The login method to retrieve OAuth2 access tokens from the Moodex API. </summary>
+        /// <summary>The login method to retrieve OAuth2 access tokens from an API. </summary>
         /// <param name="userName">The user Name (email address) </param>
         /// <param name="password">The users <paramref name="password"/>. </param>
         /// <param name="scope">The required scopes. </param>

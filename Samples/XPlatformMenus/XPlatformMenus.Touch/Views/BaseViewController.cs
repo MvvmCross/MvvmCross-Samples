@@ -5,7 +5,7 @@ using XPlatformMenus.Core.ViewModels;
 namespace XPlatformMenus.Touch.Views
 {
     /// <summary>
-    /// A base view
+    /// A base view controller 
     /// </summary>
     public class BaseViewController<TViewModel> : MvxViewController where TViewModel : BaseVm
     {
