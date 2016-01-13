@@ -1,10 +1,10 @@
 using Cirrious.FluentLayouts.Touch;
-using Cirrious.MvvmCross.Binding.BindingContext;
-using Cirrious.MvvmCross.Touch.Views;
 using Foundation;
 using UIKit;
 using XPlatformMenus.Core.ViewModels;
 using XPlatformMenus.Touch.Panels;
+using MvvmCross.iOS.Views;
+using MvvmCross.Binding.BindingContext;
 
 namespace XPlatformMenus.Touch.Views
 {

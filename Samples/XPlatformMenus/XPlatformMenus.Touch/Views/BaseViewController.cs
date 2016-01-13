@@ -1,13 +1,13 @@
-using Cirrious.MvvmCross.Touch.Views;
 using UIKit;
 using XPlatformMenus.Core.ViewModels;
+using MvvmCross.iOS.Views;
 
 namespace XPlatformMenus.Touch.Views
 {
     /// <summary>
     /// A base view controller 
     /// </summary>
-    public class BaseViewController<TViewModel> : MvxViewController where TViewModel : BaseVm
+    public class BaseViewController<TViewModel> : MvxViewController where TViewModel : BaseViewModel
     {
         #region Fields
 

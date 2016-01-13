@@ -4,15 +4,15 @@ using Android.OS;
 using Android.Runtime;
 using Android.Support.Design.Widget;
 using Android.Views;
-using Cirrious.MvvmCross.Binding.Droid.BindingContext;
-using Cirrious.MvvmCross.Droid.Support.Fragging;
-using Cirrious.MvvmCross.Droid.Support.Fragging.Fragments;
 using XPlatformMenus.Core.ViewModels;
 using XPlatformMenus.Droid.Activities;
+using MvvmCross.Droid.Support.V7.Fragging.Attributes;
+using MvvmCross.Droid.Support.V7.Fragging.Fragments;
+using MvvmCross.Binding.Droid.BindingContext;
 
 namespace XPlatformMenus.Droid.Fragments
 {
-    [MvxOwnedViewModelFragment]
+	[MvxFragment(typeof(MainViewModel), Resource.Id.navigation_frame)]
     [Register("xplatformmenus.droid.fragments.MenuFragment")]
     public class MenuFragment : MvxFragment<MenuViewModel>, NavigationView.IOnNavigationItemSelectedListener
     {

@@ -1,6 +1,6 @@
 ﻿namespace XPlatformMenus.Core.ViewModels
 {
-    public class HomeViewModel : BaseVm
+	public class HomeViewModel : BaseViewModel
     {
         public HomeViewModel() 
         {

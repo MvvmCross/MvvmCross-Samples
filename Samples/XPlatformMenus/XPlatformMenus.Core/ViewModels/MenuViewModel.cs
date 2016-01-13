@@ -1,8 +1,9 @@
-﻿using Cirrious.MvvmCross.ViewModels;
+﻿using MvvmCross.Core.ViewModels;
+
 
 namespace XPlatformMenus.Core.ViewModels
 {
-    public class MenuViewModel : BaseVm
+	public class MenuViewModel : BaseViewModel
     {
         #region Cross Platform Commands & Handlers
 

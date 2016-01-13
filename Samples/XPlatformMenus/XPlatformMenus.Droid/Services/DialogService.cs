@@ -1,7 +1,7 @@
 using Android.App;
-using Cirrious.CrossCore;
-using Cirrious.CrossCore.Droid.Platform;
 using XPlatformMenus.Core.Interfaces;
+using MvvmCross.Platform;
+using MvvmCross.Platform.Droid.Platform;
 
 namespace XPlatformMenus.Droid.Services
 {

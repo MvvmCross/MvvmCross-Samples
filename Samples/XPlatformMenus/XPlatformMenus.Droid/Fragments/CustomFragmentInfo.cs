@@ -1,9 +1,9 @@
 using System;
-using Cirrious.MvvmCross.Droid.Support.Fragging;
+using MvvmCross.Droid.Support.V7.Fragging.Caching;
 
 namespace XPlatformMenus.Droid.Fragments
 {
-    internal sealed class CustomFragmentInfo : MvxCachedFragmentInfo
+    /*internal sealed class CustomFragmentInfo : MvxCachedFragmentInfo
     {
         public bool IsRoot { get; set; }
 
@@ -12,5 +12,5 @@ namespace XPlatformMenus.Droid.Fragments
         {
             IsRoot = isRoot;
         }
-    }
+    }*/
 }
