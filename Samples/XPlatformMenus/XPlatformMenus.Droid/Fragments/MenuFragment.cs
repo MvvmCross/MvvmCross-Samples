@@ -12,7 +12,7 @@ using MvvmCross.Binding.Droid.BindingContext;
 
 namespace XPlatformMenus.Droid.Fragments
 {
-    [MvxFragment(typeof(MainViewModel), Resource.Id.content_frame)]
+	[MvxFragment(typeof(MainViewModel), Resource.Id.navigation_frame)]
     [Register("xplatformmenus.droid.fragments.MenuFragment")]
     public class MenuFragment : MvxFragment<MenuViewModel>, NavigationView.IOnNavigationItemSelectedListener
     {
