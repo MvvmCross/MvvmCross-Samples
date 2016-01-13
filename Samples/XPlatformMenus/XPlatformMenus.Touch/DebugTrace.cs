@@ -1,8 +1,8 @@
 using System;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
-using Cirrious.CrossCore;
-using Cirrious.CrossCore.Platform;
+using MvvmCross.Platform.Platform;
+using MvvmCross.Platform;
 
 namespace XPlatformMenus.Touch
 {

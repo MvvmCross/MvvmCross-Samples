@@ -5,14 +5,13 @@ using Android.OS;
 using Android.Support.V4.View;
 using Android.Support.V4.Widget;
 using Android.Views;
-using Cirrious.CrossCore;
-using Cirrious.MvvmCross.Droid.Support.AppCompat;
-using Cirrious.MvvmCross.Droid.Support.Fragging;
-using Cirrious.MvvmCross.Droid.Support.Fragging.Fragments;
-using Cirrious.MvvmCross.Droid.Support.Fragging.Presenter;
-using Cirrious.MvvmCross.ViewModels;
 using XPlatformMenus.Core.ViewModels;
 using XPlatformMenus.Droid.Fragments;
+using MvvmCross.Droid.Support.V7.AppCompat;
+using MvvmCross.Droid.Support.V7.Fragging.Fragments;
+using MvvmCross.Core.ViewModels;
+using MvvmCross.Droid.Support.V7.Fragging.Caching;
+using MvvmCross.Platform;
 
 namespace XPlatformMenus.Droid.Activities
 {
@@ -22,23 +21,21 @@ namespace XPlatformMenus.Droid.Activities
         LaunchMode = LaunchMode.SingleTop,
         Name = "xplatformmenus.droid.activities.MainActivity"
     )]
-    public class MainActivity : MvxCachingFragmentCompatActivity<MainViewModel>, IMvxFragmentHost
+    public class MainActivity : MvxCachingFragmentCompatActivity<MainViewModel>
     {
         public DrawerLayout DrawerLayout;
 
-        private static readonly Dictionary<string, CustomFragmentInfo> MyFragmentsInfo = new Dictionary<string, CustomFragmentInfo>()
+        /*private static readonly Dictionary<string, CustomFragmentInfo> MyFragmentsInfo = new Dictionary<string, CustomFragmentInfo>()
         {
             {typeof(MenuViewModel).Name, new CustomFragmentInfo(typeof(MenuViewModel).Name, typeof(MenuFragment), typeof(MenuViewModel))},
             {typeof(HomeViewModel).Name, new CustomFragmentInfo( typeof(HomeViewModel).Name, typeof(HomeFragment), typeof(HomeViewModel), isRoot: true)},
             {typeof(ExampleViewPagerViewModel).Name, new CustomFragmentInfo( typeof(ExampleViewPagerViewModel).Name, typeof(ExampleViewPagerFragment), typeof(ExampleViewPagerViewModel), isRoot: true)},
             {typeof(ExampleRecyclerViewModel).Name, new CustomFragmentInfo( typeof(ExampleRecyclerViewModel).Name, typeof(ExampleRecyclerViewFragment), typeof(ExampleRecyclerViewModel), isRoot: true)},
             {typeof(SettingsViewModel).Name, new CustomFragmentInfo( typeof(SettingsViewModel).Name, typeof(SettingsFragment), typeof(SettingsViewModel), isRoot: true)}
-        };
+        };*/
 
         protected override void OnCreate(Bundle bundle)
         {
-            RegisterForDetailsRequests();
-
             base.OnCreate(bundle);
 
             SetContentView(Resource.Layout.activity_main);
@@ -63,39 +60,15 @@ namespace XPlatformMenus.Droid.Activities
             return base.OnOptionsItemSelected(item);
         }
 
-        private void RegisterForDetailsRequests()
-        {
-            RegisterFragmentAtHost<MenuFragment, MenuViewModel>(typeof(MenuViewModel).Name);
-            RegisterFragmentAtHost<HomeFragment, HomeViewModel>(typeof(HomeViewModel).Name);
-            RegisterFragmentAtHost<ExampleViewPagerFragment, ExampleViewPagerViewModel>(typeof(ExampleViewPagerViewModel).Name);
-            RegisterFragmentAtHost<ExampleRecyclerViewFragment, ExampleRecyclerViewModel>(typeof(ExampleRecyclerViewModel).Name);
-            RegisterFragmentAtHost<SettingsFragment, SettingsViewModel>(typeof(SettingsViewModel).Name);
-        }
-
-        public void RegisterFragmentAtHost<TFragment, TViewModel>(string tag)
-            where TFragment : IMvxFragmentView
-            where TViewModel : IMvxViewModel
-        {
-            var customPresenter = Mvx.Resolve<IMvxFragmentsPresenter>();
-            customPresenter.RegisterViewModelAtHost<TViewModel>(this);
-            RegisterFragment<TFragment, TViewModel>(tag);
-        }
-
-        protected override IMvxCachedFragmentInfo CreateFragmentInfo<TFragment, TViewModel>(string tag, bool addToBackstack = false)
-        {
-            var fragInfo = MyFragmentsInfo[tag];
-            return fragInfo;
-        }
-
-        public override void OnFragmentCreated(IMvxCachedFragmentInfo fragmentInfo, Android.Support.V4.App.FragmentTransaction transaction)
+        /*public override void OnFragmentCreated(IMvxCachedFragmentInfo fragmentInfo, Android.Support.V4.App.FragmentTransaction transaction)
         {
             var myCustomInfo = (CustomFragmentInfo)fragmentInfo;
 
             // You can do fragment + transaction based configurations here.
             // Note that, the cached fragment might be reused in another transaction afterwards.
-        }
+        }*/
 
-        private void CheckIfMenuIsNeeded(CustomFragmentInfo myCustomInfo)
+        /*private void CheckIfMenuIsNeeded(CustomFragmentInfo myCustomInfo)
         {
             //If not root, we will block the menu sliding gesture and show the back button on top
             if (myCustomInfo.IsRoot)
@@ -107,7 +80,7 @@ namespace XPlatformMenus.Droid.Activities
                 ShowBackButton();
             }
         }
-
+*/
         private void ShowBackButton()
         {
             //TODO Tell the toggle to set the indicator off
@@ -138,11 +111,11 @@ namespace XPlatformMenus.Droid.Activities
             return true;
         }
 
-        public override void OnFragmentChanged(IMvxCachedFragmentInfo fragmentInfo)
+        /*public override void OnFragmentChanged(IMvxCachedFragmentInfo fragmentInfo)
         {
             var myCustomInfo = (CustomFragmentInfo)fragmentInfo;
             CheckIfMenuIsNeeded(myCustomInfo);
-        }
+        }*/
 
         public bool Close(IMvxViewModel viewModel)
         {

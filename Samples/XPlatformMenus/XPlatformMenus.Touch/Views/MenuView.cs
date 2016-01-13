@@ -1,4 +1,4 @@
-﻿using Cirrious.MvvmCross.Binding.BindingContext;
+﻿using MvvmCross.Binding.BindingContext;
 using CoreGraphics;
 using Foundation;
 using UIKit;

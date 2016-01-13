@@ -1,8 +1,8 @@
 ﻿using Android.App;
 using Android.Content.PM;
 using Android.OS;
-using Cirrious.MvvmCross.Droid.Support.AppCompat;
 using XPlatformMenus.Core.ViewModels;
+using MvvmCross.Droid.Support.V7.AppCompat;
 
 namespace XPlatformMenus.Droid.Activities
 {

@@ -1,9 +1,9 @@
-﻿using Cirrious.MvvmCross.ViewModels;
-using XPlatformMenus.Core.Interfaces;
+﻿using XPlatformMenus.Core.Interfaces;
+using MvvmCross.Core.ViewModels;
 
 namespace XPlatformMenus.Core.ViewModels
 {
-    public class LoginViewModel : BaseVm
+	public class LoginViewModel : BaseViewModel
     {
         private readonly ILoginService _loginService;
 

@@ -1,19 +1,21 @@
 ﻿using System.Linq;
-using Cirrious.CrossCore.Exceptions;
-using Cirrious.CrossCore.Platform;
-using Cirrious.MvvmCross.Touch.Views;
-using Cirrious.MvvmCross.Touch.Views.Presenters;
-using Cirrious.MvvmCross.ViewModels;
-using Cirrious.MvvmCross.Views;
 using JASidePanels;
 using UIKit;
+using MvvmCross.iOS.Views.Presenters;
 
 // based on code from Matthew Waring and using the JASidePanel Component
 // https://matthewwaring.wordpress.com/2015/10/21/jasidepanels-and-mvvmcross-ios-slide-out-menu/
 // https://components.xamarin.com/view/jasidepanels
+using MvvmCross.iOS.Views;
+using MvvmCross.Core.ViewModels;
+using MvvmCross.Platform.Exceptions;
+using MvvmCross.Platform.Platform;
+using MvvmCross.Core.Views;
+
+
 namespace XPlatformMenus.Touch.Panels
 {
-    public class JaSidePanelsMvxPresenter : MvxTouchViewPresenter
+    public class JaSidePanelsMvxPresenter : MvxIosViewPresenter
     {
         private UIViewController _currentModalViewController;
 
@@ -53,13 +55,13 @@ namespace XPlatformMenus.Touch.Panels
             }
         }
 
-        public override void Show(IMvxTouchView view)
+        public override void Show(IMvxIosView view)
         {
             Trc.Mn("IMvxTouchView");
 
             // Handle modal first
             // This will use our TopLevel UINavigation Controller, to present over the top of the Panels UX
-            if (view is IMvxModalTouchView)
+            if (view is IMvxModalIosView)
             {
                 if (_currentModalViewController != null)
                 {
@@ -265,7 +267,7 @@ namespace XPlatformMenus.Touch.Panels
         {
             if (_currentModalViewController != null)
             {
-                IMvxTouchView mvxTouchView = _currentModalViewController as IMvxTouchView;
+				IMvxIosView mvxTouchView = _currentModalViewController as IMvxIosView;
                 if (mvxTouchView == null)
                     MvxTrace.Error("Unable to close view - modal is showing but not an IMvxTouchView");
                 else if (mvxTouchView.ReflectionGetViewModel() != toClose)
@@ -305,7 +307,7 @@ namespace XPlatformMenus.Touch.Panels
                 return false;
             }
 
-            IMvxTouchView mvxTouchView = uiNavigationController.TopViewController as IMvxTouchView;
+			IMvxIosView mvxTouchView = uiNavigationController.TopViewController as IMvxIosView;
 
             if (mvxTouchView == null)
             {

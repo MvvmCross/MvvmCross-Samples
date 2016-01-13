@@ -1,6 +1,6 @@
 ﻿namespace XPlatformMenus.Core.ViewModels
 {
-    public class ExampleViewPagerViewModel : BaseVm
+	public class ExampleViewPagerViewModel : BaseViewModel
     {
         public RecyclerViewModel Recycler { get; private set; }
 

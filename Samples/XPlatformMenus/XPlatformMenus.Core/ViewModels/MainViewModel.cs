@@ -1,6 +1,6 @@
 ﻿namespace XPlatformMenus.Core.ViewModels
 {
-    public class MainViewModel : BaseVm
+	public class MainViewModel : BaseViewModel
     {
         public void ShowMenu()
         {

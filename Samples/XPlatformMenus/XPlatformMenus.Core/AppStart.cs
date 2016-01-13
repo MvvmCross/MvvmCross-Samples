@@ -1,6 +1,6 @@
-﻿using Cirrious.MvvmCross.ViewModels;
-using XPlatformMenus.Core.Interfaces;
+﻿using XPlatformMenus.Core.Interfaces;
 using XPlatformMenus.Core.ViewModels;
+using MvvmCross.Core.ViewModels;
 
 namespace XPlatformMenus.Core
 {

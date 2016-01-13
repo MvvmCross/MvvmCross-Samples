@@ -2,11 +2,11 @@ using System;
 using System.Collections.ObjectModel;
 using System.Threading.Tasks;
 using System.Windows.Input;
-using Cirrious.MvvmCross.ViewModels;
+using MvvmCross.Core.ViewModels;
 
 namespace XPlatformMenus.Core.ViewModels
 {
-    public class RecyclerViewModel : BaseVm
+	public class RecyclerViewModel : BaseViewModel
     {
         private ListItem _selectedItem;
 

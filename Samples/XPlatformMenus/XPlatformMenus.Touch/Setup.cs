@@ -1,16 +1,16 @@
-using Cirrious.CrossCore;
-using Cirrious.CrossCore.Platform;
-using Cirrious.MvvmCross.Touch.Views.Presenters;
-using Cirrious.MvvmCross.ViewModels;
-using Cirrious.MvvmCross.Touch.Platform;
 using UIKit;
 using XPlatformMenus.Core.Interfaces;
 using XPlatformMenus.Touch.Panels;
 using XPlatformMenus.Touch.Services;
+using MvvmCross.iOS.Platform;
+using MvvmCross.Core.ViewModels;
+using MvvmCross.Platform;
+using MvvmCross.Platform.Platform;
+using MvvmCross.iOS.Views.Presenters;
 
 namespace XPlatformMenus.Touch
 {
-	public class Setup : MvxTouchSetup
+	public class Setup : MvxIosSetup
 	{
         private MvxApplicationDelegate _applicationDelegate;
         private UIWindow _window;
@@ -39,7 +39,7 @@ namespace XPlatformMenus.Touch
             return new DebugTrace();
         }
 
-        protected override IMvxTouchViewPresenter CreatePresenter()
+        protected override IMvxIosViewPresenter CreatePresenter()
         {
             return new JaSidePanelsMvxPresenter((MvxApplicationDelegate)ApplicationDelegate, Window);
         }

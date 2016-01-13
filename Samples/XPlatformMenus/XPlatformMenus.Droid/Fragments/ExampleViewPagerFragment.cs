@@ -4,13 +4,13 @@ using Android.Runtime;
 using Android.Support.Design.Widget;
 using Android.Support.V4.View;
 using Android.Views;
-using Cirrious.MvvmCross.Droid.Support.Fragging;
-using Cirrious.MvvmCross.Droid.Support.V4;
 using XPlatformMenus.Core.ViewModels;
+using MvvmCross.Droid.Support.V7.Fragging.Attributes;
+using MvvmCross.Droid.Support.V4;
 
 namespace XPlatformMenus.Droid.Fragments
 {
-    [MvxOwnedViewModelFragment]
+    [MvxFragment(typeof(MainViewModel), Resource.Id.content_frame)]
     [Register("xplatformmenus.droid.fragments.ExampleViewPagerFragment")]
     public class ExampleViewPagerFragment : BaseFragment<ExampleViewPagerViewModel>
     {
@@ -21,15 +21,15 @@ namespace XPlatformMenus.Droid.Fragments
             var viewPager = view.FindViewById<ViewPager>(Resource.Id.viewpager);
             if (viewPager != null)
             {
-                var fragments = new List<MvxFragmentStatePagerAdapter.FragmentInfo>
+                var fragments = new List<MvxFragmentStatePagerAdapter2.FragmentInfo>
                 {
-                    new MvxFragmentStatePagerAdapter.FragmentInfo("RecyclerView 1", typeof(RecyclerViewFragment), typeof(RecyclerViewModel)),
-                    new MvxFragmentStatePagerAdapter.FragmentInfo("RecyclerView 2", typeof(RecyclerViewFragment), typeof(RecyclerViewModel)),
-                    new MvxFragmentStatePagerAdapter.FragmentInfo("RecyclerView 3", typeof(RecyclerViewFragment), typeof(RecyclerViewModel)),
-                    new MvxFragmentStatePagerAdapter.FragmentInfo("RecyclerView 4", typeof(RecyclerViewFragment), typeof(RecyclerViewModel)),
-                    new MvxFragmentStatePagerAdapter.FragmentInfo("RecyclerView 5", typeof(RecyclerViewFragment), typeof(RecyclerViewModel))                };
+					new MvxFragmentStatePagerAdapter2.FragmentInfo("RecyclerView 1", typeof(RecyclerViewFragment), typeof(RecyclerViewModel)),
+					new MvxFragmentStatePagerAdapter2.FragmentInfo("RecyclerView 2", typeof(RecyclerViewFragment), typeof(RecyclerViewModel)),
+					new MvxFragmentStatePagerAdapter2.FragmentInfo("RecyclerView 3", typeof(RecyclerViewFragment), typeof(RecyclerViewModel)),
+					new MvxFragmentStatePagerAdapter2.FragmentInfo("RecyclerView 4", typeof(RecyclerViewFragment), typeof(RecyclerViewModel)),
+					new MvxFragmentStatePagerAdapter2.FragmentInfo("RecyclerView 5", typeof(RecyclerViewFragment), typeof(RecyclerViewModel))                };
 
-                viewPager.Adapter = new MvxFragmentStatePagerAdapter(Activity, ChildFragmentManager, fragments);
+				viewPager.Adapter = new MvxFragmentStatePagerAdapter2(Activity, ChildFragmentManager, fragments);
             }
 
             var tabLayout = view.FindViewById<TabLayout>(Resource.Id.tabs);
