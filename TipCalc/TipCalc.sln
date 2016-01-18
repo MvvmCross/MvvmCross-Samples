@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TipCalc.UI.WindowsCommon.Wi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TipCalc.UI.Wpf", "TipCalc.UI.Wpf\TipCalc.UI.Wpf.csproj", "{5A39CBC2-C298-48D5-A578-40EE2CA73EC5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TipCalc.UI.UWP", "TipCalc.UI.UWP\TipCalc.UI.UWP.csproj", "{671AE5FD-6DF0-4BE6-9ECA-14C23036ABD5}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		TipCalc.UI.WindowsCommon\TipCalc.UI.WindowsCommon.Shared\TipCalc.UI.WindowsCommon.Shared.projitems*{08ec0bb5-117e-4cea-9cd5-81ad4d4a02eb}*SharedItemsImports = 4
@@ -290,6 +292,30 @@ Global
 		{5A39CBC2-C298-48D5-A578-40EE2CA73EC5}.Release|x64.Build.0 = Release|Any CPU
 		{5A39CBC2-C298-48D5-A578-40EE2CA73EC5}.Release|x86.ActiveCfg = Release|Any CPU
 		{5A39CBC2-C298-48D5-A578-40EE2CA73EC5}.Release|x86.Build.0 = Release|Any CPU
+		{671AE5FD-6DF0-4BE6-9ECA-14C23036ABD5}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{671AE5FD-6DF0-4BE6-9ECA-14C23036ABD5}.Debug|ARM.ActiveCfg = Debug|ARM
+		{671AE5FD-6DF0-4BE6-9ECA-14C23036ABD5}.Debug|ARM.Build.0 = Debug|ARM
+		{671AE5FD-6DF0-4BE6-9ECA-14C23036ABD5}.Debug|ARM.Deploy.0 = Debug|ARM
+		{671AE5FD-6DF0-4BE6-9ECA-14C23036ABD5}.Debug|iPhone.ActiveCfg = Debug|x86
+		{671AE5FD-6DF0-4BE6-9ECA-14C23036ABD5}.Debug|iPhoneSimulator.ActiveCfg = Debug|x86
+		{671AE5FD-6DF0-4BE6-9ECA-14C23036ABD5}.Debug|x64.ActiveCfg = Debug|x64
+		{671AE5FD-6DF0-4BE6-9ECA-14C23036ABD5}.Debug|x64.Build.0 = Debug|x64
+		{671AE5FD-6DF0-4BE6-9ECA-14C23036ABD5}.Debug|x64.Deploy.0 = Debug|x64
+		{671AE5FD-6DF0-4BE6-9ECA-14C23036ABD5}.Debug|x86.ActiveCfg = Debug|x86
+		{671AE5FD-6DF0-4BE6-9ECA-14C23036ABD5}.Debug|x86.Build.0 = Debug|x86
+		{671AE5FD-6DF0-4BE6-9ECA-14C23036ABD5}.Debug|x86.Deploy.0 = Debug|x86
+		{671AE5FD-6DF0-4BE6-9ECA-14C23036ABD5}.Release|Any CPU.ActiveCfg = Release|x86
+		{671AE5FD-6DF0-4BE6-9ECA-14C23036ABD5}.Release|ARM.ActiveCfg = Release|ARM
+		{671AE5FD-6DF0-4BE6-9ECA-14C23036ABD5}.Release|ARM.Build.0 = Release|ARM
+		{671AE5FD-6DF0-4BE6-9ECA-14C23036ABD5}.Release|ARM.Deploy.0 = Release|ARM
+		{671AE5FD-6DF0-4BE6-9ECA-14C23036ABD5}.Release|iPhone.ActiveCfg = Release|x86
+		{671AE5FD-6DF0-4BE6-9ECA-14C23036ABD5}.Release|iPhoneSimulator.ActiveCfg = Release|x86
+		{671AE5FD-6DF0-4BE6-9ECA-14C23036ABD5}.Release|x64.ActiveCfg = Release|x64
+		{671AE5FD-6DF0-4BE6-9ECA-14C23036ABD5}.Release|x64.Build.0 = Release|x64
+		{671AE5FD-6DF0-4BE6-9ECA-14C23036ABD5}.Release|x64.Deploy.0 = Release|x64
+		{671AE5FD-6DF0-4BE6-9ECA-14C23036ABD5}.Release|x86.ActiveCfg = Release|x86
+		{671AE5FD-6DF0-4BE6-9ECA-14C23036ABD5}.Release|x86.Build.0 = Release|x86
+		{671AE5FD-6DF0-4BE6-9ECA-14C23036ABD5}.Release|x86.Deploy.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
