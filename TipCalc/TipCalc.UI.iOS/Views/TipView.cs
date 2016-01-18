@@ -5,7 +5,7 @@ using UIKit;
 
 namespace TipCalc.UI.iOS
 {
-    public partial class TipView : MvxViewController<TipViewModel>
+    public partial class TipView : MvxViewController
     {
         public TipView() : base("TipView", null)
         {
