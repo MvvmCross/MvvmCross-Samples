@@ -1,5 +1,5 @@
-﻿using Cirrious.CrossCore.IoC;
-using Cirrious.MvvmCross.Plugins.JsonLocalisation;
+﻿using MvvmCross.Platform.IoC;
+using MvvmCross.Plugins.JsonLocalization;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;

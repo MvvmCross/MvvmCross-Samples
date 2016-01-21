@@ -166,7 +166,7 @@
     </Content>
     <Content Include="ToDo-MvvmCross\_ Windows Store UI.txt" />
     <None Include="Babel.Store_TemporaryKey.pfx" />
-    <None Include="packages.config" />
+    <None Include="packages-old.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\Logo.png" />

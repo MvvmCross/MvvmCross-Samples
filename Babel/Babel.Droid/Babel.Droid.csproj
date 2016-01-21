@@ -149,7 +149,7 @@
     <AndroidAsset Include="..\Babel.Phone\BabelResources\Text\SecondViewModel.json">
       <Link>Assets\BabelResources\Text\SecondViewModel.json</Link>
     </AndroidAsset>
-    <None Include="packages.config" />
+    <None Include="packages-old.config" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\BabelResources\Text\AboutAssets.txt" />
     <AndroidResource Include="Resources\Layout\FirstView.axml" />

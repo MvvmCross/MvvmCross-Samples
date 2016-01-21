@@ -110,7 +110,7 @@
     <Content Include="ToDo-MvvmCross\_ Touch UI.txt" />
     <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <None Include="packages.config" />
+    <None Include="packages-old.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MyViewController.cs" />

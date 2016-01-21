@@ -1,5 +1,5 @@
-using Cirrious.MvvmCross.Localization;
-using Cirrious.MvvmCross.ViewModels;
+using MvvmCross.Core.ViewModels;
+using MvvmCross.Localization;
 
 namespace Babel.Core.ViewModels
 {
