@@ -1,5 +1,5 @@
-using Cirrious.CrossCore;
-using Cirrious.CrossCore.IoC;
+using MvvmCross.Platform;
+using MvvmCross.Platform.IoC;
 using System;
 using System.Collections.Generic;
 using System.Linq;

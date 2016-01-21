@@ -1,7 +1,7 @@
 using ApiExamples.Core.ViewModels.Helpers;
-using Cirrious.CrossCore;
-using Cirrious.CrossCore.Converters;
-using Cirrious.MvvmCross.ViewModels;
+using MvvmCross.Platform;
+using MvvmCross.Platform.Converters;
+using MvvmCross.Core.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
