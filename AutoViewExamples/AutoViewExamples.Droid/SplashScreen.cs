@@ -1,10 +1,10 @@
 using Android.App;
 using Android.Content.PM;
-using Cirrious.CrossCore;
-using Cirrious.MvvmCross.AutoView.Droid.Views;
-using Cirrious.MvvmCross.AutoView.Droid.Views.Dialog;
-using Cirrious.MvvmCross.Droid.Views;
-using Cirrious.MvvmCross.ViewModels;
+using MvvmCross.Droid.Views;
+using MvvmCross.AutoView.Droid.Views;
+using MvvmCross.Platform;
+using MvvmCross.AutoView.Droid.Views.Dialog;
+using MvvmCross.Core.ViewModels;
 
 namespace AutoViewExamples.Droid
 {

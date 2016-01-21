@@ -34,7 +34,6 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .NET Framework is automatically included -->
-    <None Include="packages-old.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

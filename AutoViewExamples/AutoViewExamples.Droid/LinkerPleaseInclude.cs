@@ -67,9 +67,9 @@ namespace AutoViewExamples.Droid
             command.CanExecuteChanged += (s, e) => { if (command.CanExecute(null)) command.Execute(null); };
         }
 
-        public void Include(Cirrious.CrossCore.IoC.MvxPropertyInjector injector)
+		public void Include(MvvmCross.Platform.IoC.MvxPropertyInjector injector)
         {
-            injector = new Cirrious.CrossCore.IoC.MvxPropertyInjector();
+			injector = new MvvmCross.Platform.IoC.MvxPropertyInjector();
         }
 
         public void Include(System.ComponentModel.INotifyPropertyChanged changed)

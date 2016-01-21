@@ -1,9 +1,9 @@
-using Cirrious.CrossCore.Plugins;
+using MvvmCross.Platform.Plugins;
 
 namespace AutoViewExamples.Droid.Bootstrap
 {
     public class ResourceLoaderPluginBootstrap
-        : MvxPluginBootstrapAction<MvvmCross.Plugins.ResourceLoader.PluginLoader>
+		: MvxPluginBootstrapAction<MvvmCross.Platform.Plugins.MvxPluginManager>
     {
     }
 }
