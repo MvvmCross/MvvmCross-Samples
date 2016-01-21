@@ -1,5 +1,10 @@
-using Cirrious.MvvmCross.Touch.Platform;
-using Cirrious.MvvmCross.Touch.Views.Presenters;
+//using Cirrious.MvvmCross.Touch.Platform;
+//using Cirrious.MvvmCross.Touch.Views.Presenters;
+
+using MvvmCross.iOS.Platform;
+using MvvmCross.iOS.Views.Presenters;
+using MvvmCross.Platform.iOS.Views;
+using MvvmCross.Platform.iOS.Platform;
 using UIKit;
 
 namespace ApiExamples.Touch

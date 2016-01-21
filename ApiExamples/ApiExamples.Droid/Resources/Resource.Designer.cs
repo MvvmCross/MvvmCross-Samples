@@ -26,27 +26,27 @@ namespace ApiExamples.Droid
 		
 		public static void UpdateIdValues()
 		{
-			global::Cirrious.MvvmCross.Binding.Droid.Resource.Attribute.MvxBind = global::ApiExamples.Droid.Resource.Attribute.MvxBind;
-			global::Cirrious.MvvmCross.Binding.Droid.Resource.Attribute.MvxDropDownItemTemplate = global::ApiExamples.Droid.Resource.Attribute.MvxDropDownItemTemplate;
-			global::Cirrious.MvvmCross.Binding.Droid.Resource.Attribute.MvxGroupItemTemplate = global::ApiExamples.Droid.Resource.Attribute.MvxGroupItemTemplate;
-			global::Cirrious.MvvmCross.Binding.Droid.Resource.Attribute.MvxItemTemplate = global::ApiExamples.Droid.Resource.Attribute.MvxItemTemplate;
-			global::Cirrious.MvvmCross.Binding.Droid.Resource.Attribute.MvxLang = global::ApiExamples.Droid.Resource.Attribute.MvxLang;
-			global::Cirrious.MvvmCross.Binding.Droid.Resource.Attribute.MvxSource = global::ApiExamples.Droid.Resource.Attribute.MvxSource;
-			global::Cirrious.MvvmCross.Binding.Droid.Resource.Attribute.MvxTemplate = global::ApiExamples.Droid.Resource.Attribute.MvxTemplate;
-			global::Cirrious.MvvmCross.Binding.Droid.Resource.Id.MvvmCrossTagId = global::ApiExamples.Droid.Resource.Id.MvvmCrossTagId;
-			global::Cirrious.MvvmCross.Binding.Droid.Resource.Id.MvxBindingTagUnique = global::ApiExamples.Droid.Resource.Id.MvxBindingTagUnique;
-			global::Cirrious.MvvmCross.Binding.Droid.Resource.Styleable.MvxBinding = global::ApiExamples.Droid.Resource.Styleable.MvxBinding;
-			global::Cirrious.MvvmCross.Binding.Droid.Resource.Styleable.MvxBinding_MvxBind = global::ApiExamples.Droid.Resource.Styleable.MvxBinding_MvxBind;
-			global::Cirrious.MvvmCross.Binding.Droid.Resource.Styleable.MvxBinding_MvxLang = global::ApiExamples.Droid.Resource.Styleable.MvxBinding_MvxLang;
-			global::Cirrious.MvvmCross.Binding.Droid.Resource.Styleable.MvxControl = global::ApiExamples.Droid.Resource.Styleable.MvxControl;
-			global::Cirrious.MvvmCross.Binding.Droid.Resource.Styleable.MvxControl_MvxTemplate = global::ApiExamples.Droid.Resource.Styleable.MvxControl_MvxTemplate;
-			global::Cirrious.MvvmCross.Binding.Droid.Resource.Styleable.MvxExpandableListView = global::ApiExamples.Droid.Resource.Styleable.MvxExpandableListView;
-			global::Cirrious.MvvmCross.Binding.Droid.Resource.Styleable.MvxExpandableListView_MvxGroupItemTemplate = global::ApiExamples.Droid.Resource.Styleable.MvxExpandableListView_MvxGroupItemTemplate;
-			global::Cirrious.MvvmCross.Binding.Droid.Resource.Styleable.MvxImageView = global::ApiExamples.Droid.Resource.Styleable.MvxImageView;
-			global::Cirrious.MvvmCross.Binding.Droid.Resource.Styleable.MvxImageView_MvxSource = global::ApiExamples.Droid.Resource.Styleable.MvxImageView_MvxSource;
-			global::Cirrious.MvvmCross.Binding.Droid.Resource.Styleable.MvxListView = global::ApiExamples.Droid.Resource.Styleable.MvxListView;
-			global::Cirrious.MvvmCross.Binding.Droid.Resource.Styleable.MvxListView_MvxDropDownItemTemplate = global::ApiExamples.Droid.Resource.Styleable.MvxListView_MvxDropDownItemTemplate;
-			global::Cirrious.MvvmCross.Binding.Droid.Resource.Styleable.MvxListView_MvxItemTemplate = global::ApiExamples.Droid.Resource.Styleable.MvxListView_MvxItemTemplate;
+			global::MvvmCross.Binding.Droid.Resource.Attribute.MvxBind = global::ApiExamples.Droid.Resource.Attribute.MvxBind;
+			global::MvvmCross.Binding.Droid.Resource.Attribute.MvxDropDownItemTemplate = global::ApiExamples.Droid.Resource.Attribute.MvxDropDownItemTemplate;
+			global::MvvmCross.Binding.Droid.Resource.Attribute.MvxGroupItemTemplate = global::ApiExamples.Droid.Resource.Attribute.MvxGroupItemTemplate;
+			global::MvvmCross.Binding.Droid.Resource.Attribute.MvxItemTemplate = global::ApiExamples.Droid.Resource.Attribute.MvxItemTemplate;
+			global::MvvmCross.Binding.Droid.Resource.Attribute.MvxLang = global::ApiExamples.Droid.Resource.Attribute.MvxLang;
+			global::MvvmCross.Binding.Droid.Resource.Attribute.MvxSource = global::ApiExamples.Droid.Resource.Attribute.MvxSource;
+			global::MvvmCross.Binding.Droid.Resource.Attribute.MvxTemplate = global::ApiExamples.Droid.Resource.Attribute.MvxTemplate;
+			global::MvvmCross.Binding.Droid.Resource.Id.MvvmCrossTagId = global::ApiExamples.Droid.Resource.Id.MvvmCrossTagId;
+			global::MvvmCross.Binding.Droid.Resource.Id.MvxBindingTagUnique = global::ApiExamples.Droid.Resource.Id.MvxBindingTagUnique;
+			global::MvvmCross.Binding.Droid.Resource.Styleable.MvxBinding = global::ApiExamples.Droid.Resource.Styleable.MvxBinding;
+			global::MvvmCross.Binding.Droid.Resource.Styleable.MvxBinding_MvxBind = global::ApiExamples.Droid.Resource.Styleable.MvxBinding_MvxBind;
+			global::MvvmCross.Binding.Droid.Resource.Styleable.MvxBinding_MvxLang = global::ApiExamples.Droid.Resource.Styleable.MvxBinding_MvxLang;
+			global::MvvmCross.Binding.Droid.Resource.Styleable.MvxControl = global::ApiExamples.Droid.Resource.Styleable.MvxControl;
+			global::MvvmCross.Binding.Droid.Resource.Styleable.MvxControl_MvxTemplate = global::ApiExamples.Droid.Resource.Styleable.MvxControl_MvxTemplate;
+			global::MvvmCross.Binding.Droid.Resource.Styleable.MvxExpandableListView = global::ApiExamples.Droid.Resource.Styleable.MvxExpandableListView;
+			global::MvvmCross.Binding.Droid.Resource.Styleable.MvxExpandableListView_MvxGroupItemTemplate = global::ApiExamples.Droid.Resource.Styleable.MvxExpandableListView_MvxGroupItemTemplate;
+			global::MvvmCross.Binding.Droid.Resource.Styleable.MvxImageView = global::ApiExamples.Droid.Resource.Styleable.MvxImageView;
+			global::MvvmCross.Binding.Droid.Resource.Styleable.MvxImageView_MvxSource = global::ApiExamples.Droid.Resource.Styleable.MvxImageView_MvxSource;
+			global::MvvmCross.Binding.Droid.Resource.Styleable.MvxListView = global::ApiExamples.Droid.Resource.Styleable.MvxListView;
+			global::MvvmCross.Binding.Droid.Resource.Styleable.MvxListView_MvxDropDownItemTemplate = global::ApiExamples.Droid.Resource.Styleable.MvxListView_MvxDropDownItemTemplate;
+			global::MvvmCross.Binding.Droid.Resource.Styleable.MvxListView_MvxItemTemplate = global::ApiExamples.Droid.Resource.Styleable.MvxListView_MvxItemTemplate;
 		}
 		
 		public partial class Attribute

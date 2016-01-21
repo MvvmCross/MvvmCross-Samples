@@ -1,7 +1,8 @@
 using Android.Content;
-using Cirrious.CrossCore.Platform;
-using Cirrious.MvvmCross.Droid.Platform;
-using Cirrious.MvvmCross.ViewModels;
+using MvvmCross.Platform.Platform;
+using MvvmCross.Core.Platform;
+using MvvmCross.Droid.Platform;
+using MvvmCross.Core.ViewModels;
 
 namespace ApiExamples.Droid
 {
