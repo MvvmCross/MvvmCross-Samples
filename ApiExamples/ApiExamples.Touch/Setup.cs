@@ -1,12 +1,12 @@
-using Cirrious.CrossCore.Platform;
-using Cirrious.MvvmCross.Touch.Platform;
-using Cirrious.MvvmCross.Touch.Views.Presenters;
-using Cirrious.MvvmCross.ViewModels;
+using MvvmCross.Core.ViewModels;
+using MvvmCross.iOS.Platform;
+using MvvmCross.iOS.Views.Presenters;
+using MvvmCross.Platform.Platform;
 using UIKit;
 
 namespace ApiExamples.Touch
 {
-    public class Setup : MvxTouchSetup
+    public class Setup : MvxIosSetup
     {
         public Setup(MvxApplicationDelegate applicationDelegate, UIWindow window)
             : base(applicationDelegate, window)
@@ -23,7 +23,7 @@ namespace ApiExamples.Touch
             return new DebugTrace();
         }
 
-        protected override IMvxTouchViewPresenter CreatePresenter()
+        protected override IMvxIosViewPresenter CreatePresenter()
         {
             return new OnlyTwoDeepPresenter(ApplicationDelegate, Window);
         }

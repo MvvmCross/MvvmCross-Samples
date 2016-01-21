@@ -2,10 +2,6 @@ using ApiExamples.Core.ViewModels;
 using MvvmCross.iOS.Views;
 using MvvmCross.Binding.BindingContext;
 using MvvmCross.Binding.iOS.Views;
-
-// using Cirrious.MvvmCross.Binding.BindingContext;
-// using Cirrious.MvvmCross.Binding.Touch.Views;
-// using Cirrious.MvvmCross.Touch.Views;
 using CoreGraphics;
 using Foundation;
 using UIKit;

@@ -1,22 +1,17 @@
-//using Cirrious.MvvmCross.Touch.Platform;
-//using Cirrious.MvvmCross.Touch.Views.Presenters;
-
 using MvvmCross.iOS.Platform;
 using MvvmCross.iOS.Views.Presenters;
-using MvvmCross.Platform.iOS.Views;
-using MvvmCross.Platform.iOS.Platform;
 using UIKit;
 
 namespace ApiExamples.Touch
 {
-    public class OnlyTwoDeepPresenter : MvxTouchViewPresenter
+    public class OnlyTwoDeepPresenter : MvxIosViewPresenter
     {
         public OnlyTwoDeepPresenter(IMvxApplicationDelegate applicationDelegate, UIWindow window)
             : base(applicationDelegate, window)
         {
         }
 
-        public override void Show(Cirrious.MvvmCross.Touch.Views.IMvxTouchView view)
+        public override void Show(MvvmCross.iOS.Views.IMvxIosView view)
         {
             if (MasterNavigationController == null)
             {

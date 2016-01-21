@@ -1,7 +1,5 @@
 using Android.App;
 using Android.OS;
-//using Cirrious.CrossCore.Converters;
-//using Cirrious.MvvmCross.Droid.Views;
 using MvvmCross.Droid.Views;
 using MvvmCross.Platform.Converters;
 
