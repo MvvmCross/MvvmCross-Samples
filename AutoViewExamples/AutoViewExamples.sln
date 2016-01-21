@@ -5,7 +5,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoViewExamples.Core", "Au
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoViewExamples.Droid", "AutoViewExamples.Droid\AutoViewExamples.Droid.csproj", "{1695CF2E-50BE-4973-B226-2AC5495E4BFA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoViewExamples.Touch", "AutoViewExamples.Touch\AutoViewExamples.Touch.csproj", "{EF011216-8393-4BEA-B6E5-E7DFD58759C4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoViewExamples.Touch", "AutoViewExamples.Ios\AutoViewExamples.Touch.csproj", "{EF011216-8393-4BEA-B6E5-E7DFD58759C4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
