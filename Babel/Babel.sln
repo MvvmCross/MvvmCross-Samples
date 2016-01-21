@@ -1,13 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Babel.Core", "Babel.Core\Babel.Core.csproj", "{F7103111-05CE-4859-A81F-F7D88CAEE12E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Babel.Phone", "Babel.Phone\Babel.Phone.csproj", "{5B340095-E661-4670-8673-23FCDB3ACB95}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Babel.Droid", "Babel.Droid\Babel.Droid.csproj", "{34B5248B-80CB-40C9-9319-2BD73F830BEB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Babel.Touch", "Babel.Touch\Babel.Touch.csproj", "{27644071-97F7-4CAC-AA7F-13A56A1A4C03}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Babel.Ios", "Babel.Ios\Babel.Ios.csproj", "{27644071-97F7-4CAC-AA7F-13A56A1A4C03}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Babel.Store", "Babel.Store\Babel.Store.csproj", "{69E87973-C0A4-49CE-8869-CA190623D45A}"
 EndProject

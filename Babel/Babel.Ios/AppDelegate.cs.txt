@@ -4,7 +4,7 @@ using MvvmCross.Platform;
 using MvvmCross.Core.ViewModels;
 using MvvmCross.iOS.Platform;
 
-namespace Babel.Touch
+namespace Babel.Ios
 {
 	[Register ("AppDelegate")]
 	public partial class AppDelegate : MvxApplicationDelegate

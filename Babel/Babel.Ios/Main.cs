@@ -1,6 +1,6 @@
 ﻿using UIKit;
 
-namespace Babel.Touch
+namespace Babel.Ios
 {
 	public class Application
 	{

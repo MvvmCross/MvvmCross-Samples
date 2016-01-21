@@ -7,6 +7,7 @@ using Windows.UI.Core;
 using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
+using MvvmCross.WindowsCommon.Views;
 
 namespace Babel.Store.Common
 {
@@ -31,7 +32,7 @@ namespace Babel.Store.Common
     /// </list>
     /// </summary>
     [Windows.Foundation.Metadata.WebHostHidden]
-    public class LayoutAwarePage : MvxStorePage
+    public class LayoutAwarePage : MvxWindowsPage
     {
         /// <summary>
         /// Identifies the <see cref="DefaultViewModel"/> dependency property.

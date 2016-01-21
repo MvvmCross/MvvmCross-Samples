@@ -1,6 +1,6 @@
 using MvvmCross.Platform.IoC;
 
-namespace Babel.Touch
+namespace Babel.Ios
 {
     public class App : MvvmCross.Core.ViewModels.MvxApplication
     {
@@ -11,7 +11,7 @@ namespace Babel.Touch
                 .AsInterfaces()
                 .RegisterAsLazySingleton();
 
-            RegisterAppStart<ViewModels.FirstViewModel>();
+            RegisterAppStart<Core.ViewModels.FirstViewModel>();
         }
     }
 }

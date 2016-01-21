@@ -5,7 +5,7 @@ using MvvmCross.Binding.BindingContext;
 using System.Drawing;
 
 
-namespace Babel.Touch.Views
+namespace Babel.Ios.Views
 {
 	[Register ("FirstView")]
 	public class FirstView : MvxViewController

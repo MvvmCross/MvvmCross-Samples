@@ -4,7 +4,7 @@ using Foundation;
 using System.Drawing;
 using MvvmCross.Binding.BindingContext;
 
-namespace Babel.Touch.Views
+namespace Babel.Ios.Views
 {
 	[Register ("SecondView")]
 	public class SecondView : MvxViewController
