@@ -1,7 +1,7 @@
 using Android.Content;
-using Cirrious.MvvmCross.Droid.Platform;
-using Cirrious.MvvmCross.Localization;
-using Cirrious.MvvmCross.ViewModels;
+using MvvmCross.Droid.Platform;
+using MvvmCross.Core.ViewModels;
+using MvvmCross.Platform.Platform;
 
 namespace Babel.Droid
 {
@@ -11,19 +11,14 @@ namespace Babel.Droid
         {
         }
 
-        protected override System.Collections.Generic.List<System.Reflection.Assembly> ValueConverterAssemblies
-        {
-            get
-            {
-                var toReturn = base.ValueConverterAssemblies;
-                toReturn.Add(typeof(MvxLanguageConverter).Assembly);
-                return toReturn;
-            }
-        }
-
         protected override IMvxApplication CreateApp()
         {
             return new Core.App();
+        }
+
+        protected override IMvxTrace CreateDebugTrace()
+        {
+            return new DebugTrace();
         }
     }
 }

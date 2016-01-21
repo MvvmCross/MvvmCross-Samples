@@ -1,4 +1,6 @@
-﻿using Windows.ApplicationModel;
+﻿using MvvmCross.Core.ViewModels;
+using MvvmCross.Platform;
+using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -56,7 +58,7 @@ namespace Babel.Store
                 var setup = new Setup(rootFrame);
                 setup.Initialize();
 
-                var start = Cirrious.CrossCore.Mvx.Resolve<Cirrious.MvvmCross.ViewModels.IMvxAppStart>();
+                var start = Mvx.Resolve<IMvxAppStart>();
                 start.Start();
             }
             // Ensure the current window is active

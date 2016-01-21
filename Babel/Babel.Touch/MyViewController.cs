@@ -1,4 +1,6 @@
+using MonoTouch.UIKit;
 using System;
+using System.Drawing;
 
 namespace Babel.Touch
 {

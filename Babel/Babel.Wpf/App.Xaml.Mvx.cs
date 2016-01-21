@@ -1,8 +1,8 @@
-using Cirrious.CrossCore;
-using Cirrious.MvvmCross.ViewModels;
-using Cirrious.MvvmCross.Wpf.Views;
 using System;
 using System.Windows;
+using MvvmCross.Core.ViewModels;
+using MvvmCross.Platform;
+using MvvmCross.Wpf.Views;
 
 namespace Babel.Wpf
 {
@@ -13,7 +13,7 @@ namespace Babel.Wpf
         private void DoSetup()
         {
             LoadMvxAssemblyResources();
-
+            
             var presenter = new MvxSimpleWpfViewPresenter(MainWindow);
 
             var setup = new Setup(Dispatcher, presenter);
@@ -28,19 +28,23 @@ namespace Babel.Wpf
         protected override void OnActivated(EventArgs e)
         {
             if (!_setupComplete)
+            {
                 DoSetup();
+            }
 
             base.OnActivated(e);
         }
 
         private void LoadMvxAssemblyResources()
         {
-            for (var i = 0; ; i++)
+            for (var i = 0;; i++)
             {
-                string key = "MvxAssemblyImport" + i;
+                var key = "MvxAssemblyImport" + i;
                 var data = TryFindResource(key);
                 if (data == null)
+                {
                     return;
+                }
             }
         }
     }

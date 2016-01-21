@@ -1,6 +1,6 @@
-using Cirrious.CrossCore.Platform;
 using System;
 using System.Diagnostics;
+using MvvmCross.Platform.Platform;
 
 namespace Babel.Wpf
 {
@@ -20,11 +20,11 @@ namespace Babel.Wpf
         {
             try
             {
-                Debug.WriteLine(string.Format(tag + ":" + level + ":" + message, args));
+                Debug.WriteLine(tag + ":" + level + ":" + message, args);
             }
             catch (FormatException)
             {
-                Trace(MvxTraceLevel.Error, tag, "Exception during trace of {0} {1} {2}", level, message);
+                Trace(MvxTraceLevel.Error, tag, "Exception during trace of {0} {1}", level, message);
             }
         }
     }

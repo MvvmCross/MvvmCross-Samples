@@ -1,3 +1,6 @@
+using MonoTouch.Foundation;
+using MonoTouch.UIKit;
+
 namespace Babel.Touch.Views
 {
     [Register("SecondView")]

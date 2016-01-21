@@ -1,3 +1,7 @@
+using MonoTouch.Foundation;
+using MonoTouch.UIKit;
+using System.Drawing;
+
 namespace Babel.Touch.Views
 {
     [Register("FirstView")]

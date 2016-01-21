@@ -1,6 +1,6 @@
 using System;
 using System.Diagnostics;
-using Cirrious.CrossCore.Platform;
+using MvvmCross.Platform.Platform;
 
 namespace Babel.Droid
 {
@@ -20,11 +20,11 @@ namespace Babel.Droid
         {
             try
             {
-                Debug.WriteLine(string.Format(tag + ":" + level + ":" + message, args));
+                Debug.WriteLine(tag + ":" + level + ":" + message, args);
             }
             catch (FormatException)
             {
-                Trace(MvxTraceLevel.Error, tag, "Exception during trace of {0} {1} {2}", level, message);
+                Trace(MvxTraceLevel.Error, tag, "Exception during trace of {0} {1}", level, message);
             }
         }
     }
