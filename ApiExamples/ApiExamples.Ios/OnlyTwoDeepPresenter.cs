@@ -2,7 +2,7 @@ using MvvmCross.iOS.Platform;
 using MvvmCross.iOS.Views.Presenters;
 using UIKit;
 
-namespace ApiExamples.Touch
+namespace ApiExamples.Ios
 {
     public class OnlyTwoDeepPresenter : MvxIosViewPresenter
     {

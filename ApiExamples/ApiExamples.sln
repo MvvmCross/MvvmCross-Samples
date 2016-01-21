@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiExamples.Core", "ApiExamples.Core\ApiExamples.Core.csproj", "{1C605B28-683E-4EA2-94B3-FC02579DED4D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiExamples.Droid", "ApiExamples.Droid\ApiExamples.Droid.csproj", "{CCB1B74E-F72B-44A0-92BB-45E118D798EF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiExamples.Touch", "ApiExamples.Touch\ApiExamples.Touch.csproj", "{2A845DA1-4612-4526-838C-5712A75184D7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiExamples.Ios", "ApiExamples.Ios\ApiExamples.Ios.csproj", "{2A845DA1-4612-4526-838C-5712A75184D7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

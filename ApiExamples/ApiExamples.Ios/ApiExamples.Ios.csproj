@@ -6,9 +6,9 @@
     <ProjectGuid>{2A845DA1-4612-4526-838C-5712A75184D7}</ProjectGuid>
     <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Exe</OutputType>
-    <RootNamespace>ApiExamples.Touch</RootNamespace>
+    <RootNamespace>ApiExamples.Ios</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
-    <AssemblyName>ApiExamplesTouch</AssemblyName>
+    <AssemblyName>ApiExamplesIos</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
     <DebugSymbols>true</DebugSymbols>
@@ -89,7 +89,6 @@
     <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="packages.config" />
-    <None Include="packages_old.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MyViewController.cs" />

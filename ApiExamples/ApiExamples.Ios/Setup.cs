@@ -4,7 +4,7 @@ using MvvmCross.iOS.Views.Presenters;
 using MvvmCross.Platform.Platform;
 using UIKit;
 
-namespace ApiExamples.Touch
+namespace ApiExamples.Ios
 {
     public class Setup : MvxIosSetup
     {

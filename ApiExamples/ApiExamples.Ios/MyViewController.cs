@@ -2,7 +2,7 @@ using CoreGraphics;
 using System;
 using UIKit;
 
-namespace ApiExamples.Touch
+namespace ApiExamples.Ios
 {
     public class MyViewController : UIViewController
     {

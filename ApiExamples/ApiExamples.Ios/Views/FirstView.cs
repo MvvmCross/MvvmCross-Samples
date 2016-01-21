@@ -6,7 +6,7 @@ using CoreGraphics;
 using Foundation;
 using UIKit;
 
-namespace ApiExamples.Touch.Views
+namespace ApiExamples.Ios.Views
 {
     [Register("FirstView")]
     public class FirstView : MvxTableViewController

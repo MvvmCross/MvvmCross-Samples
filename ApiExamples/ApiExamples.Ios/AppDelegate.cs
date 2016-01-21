@@ -4,7 +4,7 @@ using MvvmCross.Core.ViewModels;
 using Foundation;
 using UIKit;
 
-namespace ApiExamples.Touch
+namespace ApiExamples.Ios
 {
     [Register("AppDelegate")]
     public partial class AppDelegate : MvxApplicationDelegate
