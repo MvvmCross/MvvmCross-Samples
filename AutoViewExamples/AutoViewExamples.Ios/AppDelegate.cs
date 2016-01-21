@@ -1,10 +1,10 @@
-using Cirrious.CrossCore;
-using Cirrious.MvvmCross.Touch.Platform;
-using Cirrious.MvvmCross.ViewModels;
 using Foundation;
+using MvvmCross.Core.ViewModels;
+using MvvmCross.iOS.Platform;
+using MvvmCross.Platform;
 using UIKit;
 
-namespace AutoViewExamples.Touch
+namespace AutoViewExamples.Ios
 {
     [Register("AppDelegate")]
     public partial class AppDelegate : MvxApplicationDelegate

@@ -1,6 +1,6 @@
 ﻿using UIKit;
 
-namespace AutoViewExamples.Touch
+namespace AutoViewExamples.Ios
 {
     public class Application
     {

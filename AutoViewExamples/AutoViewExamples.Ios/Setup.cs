@@ -1,13 +1,13 @@
-using Cirrious.CrossCore.Platform;
-using Cirrious.MvvmCross.AutoView.Touch;
-using Cirrious.MvvmCross.Dialog.Touch;
-using Cirrious.MvvmCross.Touch.Platform;
-using Cirrious.MvvmCross.ViewModels;
+using MvvmCross.AutoView.iOS;
+using MvvmCross.Dialog.iOS;
+using MvvmCross.iOS.Platform;
+using MvvmCross.Core.ViewModels;
+using MvvmCross.Platform.Platform;
 using UIKit;
 
-namespace AutoViewExamples.Touch
+namespace AutoViewExamples.Ios
 {
-    public class Setup : MvxTouchDialogSetup
+    public class Setup : MvxIosDialogSetup
     {
         public Setup(MvxApplicationDelegate applicationDelegate, UIWindow window)
             : base(applicationDelegate, window)
@@ -21,7 +21,7 @@ namespace AutoViewExamples.Touch
 
         protected override IMvxTrace CreateDebugTrace()
         {
-            return new DebugTrace();
+            return new MvxDebugTrace();
         }
 
         protected override void InitializeLastChance()

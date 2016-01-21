@@ -1,8 +1,8 @@
-using Cirrious.CrossCore.Platform;
+using MvvmCross.Platform.Platform;
 using System;
 using System.Diagnostics;
 
-namespace AutoViewExamples.Touch
+namespace AutoViewExamples.Ios
 {
     public class DebugTrace : IMvxTrace
     {

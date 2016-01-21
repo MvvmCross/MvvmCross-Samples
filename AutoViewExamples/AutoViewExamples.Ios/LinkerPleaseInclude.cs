@@ -1,10 +1,10 @@
-using Cirrious.MvvmCross.Touch.Views;
 using Foundation;
+using MvvmCross.iOS.Views;
 using System.Collections.Specialized;
 using System.Windows.Input;
 using UIKit;
 
-namespace AutoViewExamples.Touch
+namespace AutoViewExamples.Ios
 {
     // This class is never actually executed, but when Xamarin linking is enabled it does ensure types and properties
     // are preserved in the deployed app
@@ -96,9 +96,9 @@ namespace AutoViewExamples.Touch
             command.CanExecuteChanged += (s, e) => { if (command.CanExecute(null)) command.Execute(null); };
         }
 
-        public void Include(Cirrious.CrossCore.IoC.MvxPropertyInjector injector)
+        public void Include(MvvmCross.Platform.IoC.MvxPropertyInjector injector)
         {
-            injector = new Cirrious.CrossCore.IoC.MvxPropertyInjector();
+            injector = new MvvmCross.Platform.IoC.MvxPropertyInjector();
         }
 
         public void Include(System.ComponentModel.INotifyPropertyChanged changed)

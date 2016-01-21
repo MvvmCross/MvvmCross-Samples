@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoViewExamples.Core", "AutoViewExamples.Core\AutoViewExamples.Core.csproj", "{C6CEEB72-39C1-45AC-B471-4BA38F1904FE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoViewExamples.Droid", "AutoViewExamples.Droid\AutoViewExamples.Droid.csproj", "{1695CF2E-50BE-4973-B226-2AC5495E4BFA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoViewExamples.Touch", "AutoViewExamples.Ios\AutoViewExamples.Touch.csproj", "{EF011216-8393-4BEA-B6E5-E7DFD58759C4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoViewExamples.Ios", "AutoViewExamples.Ios\AutoViewExamples.Ios.csproj", "{EF011216-8393-4BEA-B6E5-E7DFD58759C4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,4 +1,4 @@
-namespace AutoViewExamples.Touch.Views
+namespace AutoViewExamples.Ios.Views
 {
     /*
     [Register("FirstView")]
