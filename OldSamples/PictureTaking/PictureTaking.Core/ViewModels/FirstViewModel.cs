@@ -1,6 +1,6 @@
-using Cirrious.MvvmCross.Plugins.PictureChooser;
-using Cirrious.MvvmCross.ViewModels;
 using System.IO;
+using MvvmCross.Core.ViewModels;
+using MvvmCross.Plugins.PictureChooser;
 
 namespace PictureTaking.Core.ViewModels
 {
@@ -14,13 +14,13 @@ namespace PictureTaking.Core.ViewModels
             _pictureChooserTask = pictureChooserTask;
         }
 
-        private Cirrious.MvvmCross.ViewModels.MvxCommand _takePictureCommand;
+        private MvxCommand _takePictureCommand;
 
         public System.Windows.Input.ICommand TakePictureCommand
         {
             get
             {
-                _takePictureCommand = _takePictureCommand ?? new Cirrious.MvvmCross.ViewModels.MvxCommand(DoTakePicture);
+                _takePictureCommand = _takePictureCommand ?? new MvxCommand(DoTakePicture);
                 return _takePictureCommand;
             }
         }
@@ -30,13 +30,13 @@ namespace PictureTaking.Core.ViewModels
             _pictureChooserTask.TakePicture(400, 95, OnPicture, () => { });
         }
 
-        private Cirrious.MvvmCross.ViewModels.MvxCommand _choosePictureCommand;
+        private MvxCommand _choosePictureCommand;
 
         public System.Windows.Input.ICommand ChoosePictureCommand
         {
             get
             {
-                _choosePictureCommand = _choosePictureCommand ?? new Cirrious.MvvmCross.ViewModels.MvxCommand(DoChoosePicture);
+                _choosePictureCommand = _choosePictureCommand ?? new MvxCommand(DoChoosePicture);
                 return _choosePictureCommand;
             }
         }

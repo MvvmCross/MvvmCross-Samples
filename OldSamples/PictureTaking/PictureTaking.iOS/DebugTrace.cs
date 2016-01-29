@@ -2,7 +2,7 @@ using System;
 using System.Diagnostics;
 using MvvmCross.Platform.Platform;
 
-namespace PictureTaking.Store
+namespace PictureTaking.Touch
 {
     public class DebugTrace : IMvxTrace
     {

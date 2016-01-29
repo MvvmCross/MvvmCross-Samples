@@ -1,9 +1,10 @@
-using Cirrious.MvvmCross.ViewModels;
 using Windows.UI.Xaml.Controls;
+using MvvmCross.Core.ViewModels;
+using MvvmCross.WindowsCommon.Platform;
 
 namespace PictureTaking.Store
 {
-    public class Setup : MvxStoreSetup
+    public class Setup : MvxWindowsSetup
     {
         public Setup(Frame rootFrame) : base(rootFrame)
         {

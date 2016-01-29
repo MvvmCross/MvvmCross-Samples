@@ -1,7 +1,7 @@
 using MvvmCross.Core.ViewModels;
 using MvvmCross.Platform.IoC;
 
-namespace PictureTaking.Core
+namespace PictureTaking.Touch
 {
     public class App : MvxApplication
     {
