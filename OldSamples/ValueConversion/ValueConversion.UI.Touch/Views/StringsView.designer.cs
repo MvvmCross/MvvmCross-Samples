@@ -4,7 +4,7 @@
 // actions made in the Xcode designer. If it is removed, they will be lost.
 // Manual changes to this file may not be handled correctly.
 //
-using MonoTouch.Foundation;
+using Foundation;
 
 namespace ValueConversion.UI.Touch
 {
@@ -12,13 +12,13 @@ namespace ValueConversion.UI.Touch
 	partial class StringsView
 	{
 		[Outlet]
-		MonoTouch.UIKit.UILabel ReversedLabel { get; set; }
+		UIKit.UILabel ReversedLabel { get; set; }
 
 		[Outlet]
-		MonoTouch.UIKit.UILabel LengthLabel { get; set; }
+		UIKit.UILabel LengthLabel { get; set; }
 
 		[Outlet]
-		MonoTouch.UIKit.UITextField TextEditor { get; set; }
+		UIKit.UITextField TextEditor { get; set; }
 		
 		void ReleaseDesignerOutlets ()
 		{

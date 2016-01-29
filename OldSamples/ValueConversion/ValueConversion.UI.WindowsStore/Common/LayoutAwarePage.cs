@@ -11,6 +11,7 @@ using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
+using MvvmCross.WindowsCommon.Views;
 
 namespace ValueConversion.UI.WindowsStore.Common
 {
@@ -35,7 +36,7 @@ namespace ValueConversion.UI.WindowsStore.Common
     /// </list>
     /// </summary>
     [WebHostHidden]
-    public class LayoutAwarePage : MvxStorePage
+    public class LayoutAwarePage : MvxWindowsPage
     {
         /// <summary>
         /// Identifies the <see cref="DefaultViewModel"/> dependency property.

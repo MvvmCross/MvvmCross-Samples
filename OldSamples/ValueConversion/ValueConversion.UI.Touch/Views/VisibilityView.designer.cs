@@ -4,7 +4,7 @@
 // actions made in the Xcode designer. If it is removed, they will be lost.
 // Manual changes to this file may not be handled correctly.
 //
-using MonoTouch.Foundation;
+using Foundation;
 
 namespace ValueConversion.UI.Touch
 {
@@ -12,10 +12,10 @@ namespace ValueConversion.UI.Touch
 	partial class VisibilityView
 	{
 		[Outlet]
-		MonoTouch.UIKit.UIView TheThing { get; set; }
+		UIKit.UIView TheThing { get; set; }
 
 		[Outlet]
-		MonoTouch.UIKit.UISwitch ShowSwitch { get; set; }
+		UIKit.UISwitch ShowSwitch { get; set; }
 		
 		void ReleaseDesignerOutlets ()
 		{

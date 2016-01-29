@@ -1,4 +1,7 @@
 using ValueConversion.Core.ViewModels;
+using MvvmCross.iOS.Views;
+using MvvmCross.Binding.BindingContext;
+using UIKit;
 
 namespace ValueConversion.UI.Touch
 {

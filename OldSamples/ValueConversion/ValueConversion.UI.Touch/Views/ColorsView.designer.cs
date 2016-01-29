@@ -4,7 +4,7 @@
 // actions made in the Xcode designer. If it is removed, they will be lost.
 // Manual changes to this file may not be handled correctly.
 //
-using MonoTouch.Foundation;
+using Foundation;
 
 namespace ValueConversion.UI.Touch
 {
@@ -12,19 +12,19 @@ namespace ValueConversion.UI.Touch
 	partial class ColorsView
 	{
 		[Outlet]
-		MonoTouch.UIKit.UILabel ColorLabel { get; set; }
+		UIKit.UILabel ColorLabel { get; set; }
 
 		[Outlet]
-		MonoTouch.UIKit.UISlider RedSlider { get; set; }
+		UIKit.UISlider RedSlider { get; set; }
 
 		[Outlet]
-		MonoTouch.UIKit.UISlider GreenSlider { get; set; }
+		UIKit.UISlider GreenSlider { get; set; }
 
 		[Outlet]
-		MonoTouch.UIKit.UISlider BlueSlider { get; set; }
+		UIKit.UISlider BlueSlider { get; set; }
 
 		[Outlet]
-		MonoTouch.UIKit.UIView ColorView { get; set; }
+		UIKit.UIView ColorView { get; set; }
 		
 		void ReleaseDesignerOutlets ()
 		{

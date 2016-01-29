@@ -1,4 +1,9 @@
-using Cirrious.MvvmCross.ViewModels;
+using MvvmCross.iOS.Platform;
+using UIKit;
+using MvvmCross.Platform;
+using Foundation;
+using MvvmCross.iOS.Views.Presenters;
+using MvvmCross.Core.ViewModels;
 
 namespace ValueConversion.UI.Touch
 {
@@ -22,7 +27,7 @@ namespace ValueConversion.UI.Touch
         {
             window = new UIWindow(UIScreen.MainScreen.Bounds);
 
-            var presenter = new MvxTouchViewPresenter(this, window);
+            var presenter = new MvxIosViewPresenter(this, window);
             var setup = new Setup(this, presenter);
             setup.Initialize();
 

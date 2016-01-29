@@ -1,7 +1,7 @@
-using Cirrious.MvvmCross.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Windows.Input;
+using MvvmCross.Core.ViewModels;
 
 namespace ValueConversion.Core.ViewModels
 {

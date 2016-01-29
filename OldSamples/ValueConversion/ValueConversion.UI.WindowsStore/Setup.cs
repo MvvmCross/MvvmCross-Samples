@@ -1,9 +1,12 @@
-﻿using Cirrious.MvvmCross.ViewModels;
-using Windows.UI.Xaml.Controls;
+﻿using Windows.UI.Xaml.Controls;
+using MvvmCross.Core.ViewModels;
+using MvvmCross.Platform.Plugins;
+using MvvmCross.Plugins.Color;
+using MvvmCross.WindowsCommon.Platform;
 
 namespace ValueConversion.UI.WindowsStore
 {
-    public class Setup : MvxStoreSetup
+    public class Setup : MvxWindowsSetup
     {
         public Setup(Frame rootFrame) : base(rootFrame)
         {
@@ -17,7 +20,7 @@ namespace ValueConversion.UI.WindowsStore
         public override void LoadPlugins(IMvxPluginManager pluginManager)
         {
             pluginManager.EnsurePluginLoaded<PluginLoader>();
-            pluginManager.EnsurePluginLoaded<Cirrious.MvvmCross.Plugins.Visibility.PluginLoader>();
+            pluginManager.EnsurePluginLoaded<MvvmCross.Plugins.Visibility.PluginLoader>();
             base.LoadPlugins(pluginManager);
         }
     }

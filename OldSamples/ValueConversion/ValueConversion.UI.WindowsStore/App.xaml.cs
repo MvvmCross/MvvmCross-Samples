@@ -1,8 +1,9 @@
-﻿using Cirrious.MvvmCross.ViewModels;
-using Windows.ApplicationModel;
+﻿using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
+using MvvmCross.Core.ViewModels;
+using MvvmCross.Platform;
 
 // The Blank Application template is documented at http://go.microsoft.com/fwlink/?LinkId=234227
 

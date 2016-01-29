@@ -1,7 +1,7 @@
 using Android.App;
-using Cirrious.MvvmCross.Binding.BindingContext;
-using Cirrious.MvvmCross.Dialog.Droid.Views;
+using MvvmCross.Dialog.Droid.Views;
 using CrossUI.Droid.Dialog.Elements;
+using MvvmCross.Binding.BindingContext;
 
 namespace ValueConversion.UI.Droid.Views
 {

@@ -4,7 +4,8 @@
 // actions made in the Xcode designer. If it is removed, they will be lost.
 // Manual changes to this file may not be handled correctly.
 //
-using MonoTouch.Foundation;
+
+using Foundation;
 
 namespace ValueConversion.UI.Touch
 {
@@ -12,22 +13,22 @@ namespace ValueConversion.UI.Touch
 	partial class DatesView
 	{
 		[Outlet]
-		MonoTouch.UIKit.UILabel SimpleDateLabel { get; set; }
+		UIKit.UILabel SimpleDateLabel { get; set; }
 
 		[Outlet]
-		MonoTouch.UIKit.UILabel TheDateLabel { get; set; }
+		UIKit.UILabel TheDateLabel { get; set; }
 
 		[Outlet]
-		MonoTouch.UIKit.UILabel SimpleOldDateLabel { get; set; }
+		UIKit.UILabel SimpleOldDateLabel { get; set; }
 
 		[Outlet]
-		MonoTouch.UIKit.UILabel OldDateLabel { get; set; }
+		UIKit.UILabel OldDateLabel { get; set; }
 
 		[Outlet]
-		MonoTouch.UIKit.UILabel SimpleVeryOldDateLabel { get; set; }
+		UIKit.UILabel SimpleVeryOldDateLabel { get; set; }
 
 		[Outlet]
-		MonoTouch.UIKit.UILabel VeryOldDateLabel { get; set; }
+		UIKit.UILabel VeryOldDateLabel { get; set; }
 		
 		void ReleaseDesignerOutlets ()
 		{

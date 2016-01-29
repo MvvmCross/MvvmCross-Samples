@@ -3,8 +3,6 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>8.0.30703</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{3B661757-1140-461F-97CF-B820E3FE5B32}</ProjectGuid>
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
@@ -28,7 +26,8 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <AndroidLinkMode>None</AndroidLinkMode>
-    <AndroidLinkSkip />
+    <AndroidLinkSkip>
+    </AndroidLinkSkip>
     <EmbedAssembliesIntoApk>True</EmbedAssembliesIntoApk>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -39,52 +38,8 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <AndroidUseSharedRuntime>False</AndroidUseSharedRuntime>
-    <AndroidLinkMode>SdkOnly</AndroidLinkMode>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Cirrious.CrossCore">
-      <HintPath>..\..\Lib\Mvx\Portable\Cirrious.CrossCore.dll</HintPath>
-    </Reference>
-    <Reference Include="Cirrious.CrossCore.Droid">
-      <HintPath>..\..\Lib\Mvx\Droid\Cirrious.CrossCore.Droid.dll</HintPath>
-    </Reference>
-    <Reference Include="Cirrious.MvvmCross, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\MvvmCross.HotTuna.MvvmCrossLibraries.4.0.0-beta3\lib\MonoAndroid\Cirrious.MvvmCross.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Cirrious.MvvmCross.Binding">
-      <HintPath>..\..\Lib\Mvx\Portable\Cirrious.MvvmCross.Binding.dll</HintPath>
-    </Reference>
-    <Reference Include="Cirrious.MvvmCross.Binding.Droid">
-      <HintPath>..\..\Lib\Mvx\Droid\Cirrious.MvvmCross.Binding.Droid.dll</HintPath>
-    </Reference>
-    <Reference Include="Cirrious.MvvmCross.Dialog.Droid">
-      <HintPath>..\..\Lib\Mvx\Droid\Cirrious.MvvmCross.Dialog.Droid.dll</HintPath>
-    </Reference>
-    <Reference Include="Cirrious.MvvmCross.Droid, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\MvvmCross.HotTuna.MvvmCrossLibraries.4.0.0-beta3\lib\MonoAndroid\Cirrious.MvvmCross.Droid.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Cirrious.MvvmCross.Plugins.Color">
-      <HintPath>..\..\Lib\Mvx\Portable\Cirrious.MvvmCross.Plugins.Color.dll</HintPath>
-    </Reference>
-    <Reference Include="Cirrious.MvvmCross.Plugins.Color.Droid">
-      <HintPath>..\..\Lib\Mvx\Droid\Cirrious.MvvmCross.Plugins.Color.Droid.dll</HintPath>
-    </Reference>
-    <Reference Include="Cirrious.MvvmCross.Plugins.Visibility">
-      <HintPath>..\..\Lib\Mvx\Portable\Cirrious.MvvmCross.Plugins.Visibility.dll</HintPath>
-    </Reference>
-    <Reference Include="Cirrious.MvvmCross.Plugins.Visibility.Droid">
-      <HintPath>..\..\Lib\Mvx\Droid\Cirrious.MvvmCross.Plugins.Visibility.Droid.dll</HintPath>
-    </Reference>
-    <Reference Include="CrossUI.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Lib\Mvx\Droid\CrossUI.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="CrossUI.Droid, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Lib\Mvx\Droid\CrossUI.Droid.dll</HintPath>
-    </Reference>
     <Reference Include="Mono.Android" />
     <Reference Include="mscorlib" />
     <Reference Include="System" />
@@ -94,6 +49,49 @@
     </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Xml" />
+    <Reference Include="MvvmCross.Platform.Droid">
+      <HintPath>..\packages\MvvmCross.Platform.4.0.0-beta8\lib\MonoAndroid\MvvmCross.Platform.Droid.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Platform">
+      <HintPath>..\packages\MvvmCross.Platform.4.0.0-beta8\lib\MonoAndroid\MvvmCross.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Localization">
+      <HintPath>..\packages\MvvmCross.Platform.4.0.0-beta8\lib\MonoAndroid\MvvmCross.Localization.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Droid">
+      <HintPath>..\packages\MvvmCross.Core.4.0.0-beta8\lib\MonoAndroid\MvvmCross.Droid.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Core">
+      <HintPath>..\packages\MvvmCross.Core.4.0.0-beta8\lib\MonoAndroid\MvvmCross.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Binding.Droid">
+      <HintPath>..\packages\MvvmCross.Binding.4.0.0-beta8\lib\MonoAndroid\MvvmCross.Binding.Droid.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Binding">
+      <HintPath>..\packages\MvvmCross.Binding.4.0.0-beta8\lib\MonoAndroid\MvvmCross.Binding.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Android.Export" />
+    <Reference Include="MvvmCross.Plugins.Color">
+      <HintPath>..\packages\MvvmCross.Plugin.Color.4.0.0-beta8\lib\MonoAndroid\MvvmCross.Plugins.Color.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.Color.Droid">
+      <HintPath>..\packages\MvvmCross.Plugin.Color.4.0.0-beta8\lib\MonoAndroid\MvvmCross.Plugins.Color.Droid.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.Visibility">
+      <HintPath>..\packages\MvvmCross.Plugin.Visibility.4.0.0-beta8\lib\MonoAndroid\MvvmCross.Plugins.Visibility.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.Visibility.Droid">
+      <HintPath>..\packages\MvvmCross.Plugin.Visibility.4.0.0-beta8\lib\MonoAndroid\MvvmCross.Plugins.Visibility.Droid.dll</HintPath>
+    </Reference>
+    <Reference Include="CrossUI.Core">
+      <HintPath>..\packages\MvvmCross.Dialog.Droid.4.0.0-beta8\lib\MonoAndroid\CrossUI.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="CrossUI.Droid">
+      <HintPath>..\packages\MvvmCross.Dialog.Droid.4.0.0-beta8\lib\MonoAndroid\CrossUI.Droid.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Dialog.Droid">
+      <HintPath>..\packages\MvvmCross.Dialog.Droid.4.0.0-beta8\lib\MonoAndroid\MvvmCross.Dialog.Droid.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="SplashScreen.cs" />
@@ -106,6 +104,8 @@
     <Compile Include="Views\StringsView.cs" />
     <Compile Include="Views\TwoWayView.cs" />
     <Compile Include="Views\VisibilityView.cs" />
+    <Compile Include="Bootstrap\ColorPluginBootstrap.cs" />
+    <Compile Include="Bootstrap\VisibilityPluginBootstrap.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

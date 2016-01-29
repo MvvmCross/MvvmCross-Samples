@@ -1,4 +1,7 @@
-﻿using ValueConversion.Core.Converters;
+﻿using MvvmCross.Platform.WindowsCommon.Converters;
+using MvvmCross.Plugins.Color;
+using MvvmCross.Plugins.Visibility;
+using ValueConversion.Core.Converters;
 
 namespace ValueConversion.UI.WindowsStore.NativeConverters
 {

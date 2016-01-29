@@ -1,14 +1,14 @@
 ﻿using System.Collections.Generic;
 using System.Reflection;
 using Android.Content;
-using Cirrious.CrossCore.Plugins;
-using Cirrious.MvvmCross.Dialog.Droid;
-using Cirrious.MvvmCross.Droid.Platform;
-using Cirrious.MvvmCross.Plugins.Color;
-using Cirrious.MvvmCross.Plugins.Visibility;
-using Cirrious.MvvmCross.ViewModels;
 using ValueConversion.Core;
-using PluginLoader = Cirrious.MvvmCross.Plugins.Color.PluginLoader;
+using PluginLoader = MvvmCross.Plugins.Color.PluginLoader;
+using MvvmCross.Core.ViewModels;
+using MvvmCross.Platform.Plugins;
+using MvvmCross.Plugins.Color;
+using MvvmCross.Plugins.Visibility;
+using MvvmCross.Dialog.Droid;
+using System.Collections;
 
 namespace ValueConversion.UI.Droid
 {
@@ -19,16 +19,14 @@ namespace ValueConversion.UI.Droid
         {
         }
 
-        protected override List<Assembly> ValueConverterAssemblies
-        {
-            get
-            {
-                var toReturn = base.ValueConverterAssemblies;
-                toReturn.Add(typeof (MvxNativeColorValueConverter).Assembly);
-                toReturn.Add(typeof (MvxVisibilityValueConverter).Assembly);
-                return toReturn;
-            }
-        }
+		protected override IEnumerable<Assembly> ValueConverterAssemblies {
+			get {
+				var toReturn = base.ValueConverterAssemblies as IList;
+				toReturn.Add(typeof (MvxNativeColorValueConverter).Assembly);
+				toReturn.Add(typeof (MvxVisibilityValueConverter).Assembly);
+				return (IEnumerable<Assembly>)toReturn;
+			}
+		}
 
         protected override IMvxApplication CreateApp()
         {
@@ -38,7 +36,7 @@ namespace ValueConversion.UI.Droid
         public override void LoadPlugins(IMvxPluginManager pluginManager)
         {
             pluginManager.EnsurePluginLoaded<PluginLoader>();
-            pluginManager.EnsurePluginLoaded<Cirrious.MvvmCross.Plugins.Visibility.PluginLoader>();
+            pluginManager.EnsurePluginLoaded<MvvmCross.Plugins.Visibility.PluginLoader>();
             base.LoadPlugins(pluginManager);
         }
     }

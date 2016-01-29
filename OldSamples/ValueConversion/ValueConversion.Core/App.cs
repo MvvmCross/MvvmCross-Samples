@@ -1,5 +1,5 @@
-﻿using Cirrious.MvvmCross.ViewModels;
-using ValueConversion.Core.ViewModels;
+﻿using ValueConversion.Core.ViewModels;
+using MvvmCross.Core.ViewModels;
 
 namespace ValueConversion.Core
 {

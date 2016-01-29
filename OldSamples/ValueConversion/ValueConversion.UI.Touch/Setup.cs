@@ -1,25 +1,31 @@
-using Cirrious.MvvmCross.ViewModels;
 using System.Collections.Generic;
 using System.Reflection;
 using ValueConversion.Core;
+using MvvmCross.iOS.Platform;
+using MvvmCross.iOS.Views.Presenters;
+using MvvmCross.Core.ViewModels;
+using MvvmCross.Platform.Plugins;
+using MvvmCross.Plugins.Color;
+using MvvmCross.Plugins.Visibility;
+using System.Collections;
 
 namespace ValueConversion.UI.Touch
 {
-    public class Setup : MvxTouchSetup
+    public class Setup : MvxIosSetup
     {
-        public Setup(MvxApplicationDelegate applicationDelegate, IMvxTouchViewPresenter presenter)
+        public Setup(MvxApplicationDelegate applicationDelegate, IMvxIosViewPresenter presenter)
             : base(applicationDelegate, presenter)
         {
         }
 
-        protected override List<Assembly> ValueConverterAssemblies
+		protected override IEnumerable<Assembly> ValueConverterAssemblies
         {
             get
             {
-                var toReturn = base.ValueConverterAssemblies;
+				var toReturn = base.ValueConverterAssemblies as IList;
                 toReturn.Add(typeof(MvxNativeColorValueConverter).Assembly);
                 toReturn.Add(typeof(MvxVisibilityValueConverter).Assembly);
-                return toReturn;
+                return (List<Assembly>)toReturn;
             }
         }
 
@@ -31,14 +37,14 @@ namespace ValueConversion.UI.Touch
         protected override void AddPluginsLoaders(MvxLoaderPluginRegistry loaders)
         {
             base.AddPluginsLoaders(loaders);
-            loaders.AddConventionalPlugin<Cirrious.MvvmCross.Plugins.Color.Touch.Plugin>();
-            loaders.AddConventionalPlugin<Cirrious.MvvmCross.Plugins.Visibility.Touch.Plugin>();
+			loaders.AddConventionalPlugin<MvvmCross.Plugins.Color.iOS.Plugin>();
+			loaders.AddConventionalPlugin<MvvmCross.Plugins.Visibility.iOS.Plugin>();
         }
 
         public override void LoadPlugins(IMvxPluginManager pluginManager)
         {
-            pluginManager.EnsurePluginLoaded<Cirrious.MvvmCross.Plugins.Color.PluginLoader>();
-            pluginManager.EnsurePluginLoaded<Cirrious.MvvmCross.Plugins.Visibility.PluginLoader>();
+            pluginManager.EnsurePluginLoaded<MvvmCross.Plugins.Color.PluginLoader>();
+            pluginManager.EnsurePluginLoaded<MvvmCross.Plugins.Visibility.PluginLoader>();
             base.LoadPlugins(pluginManager);
         }
     }

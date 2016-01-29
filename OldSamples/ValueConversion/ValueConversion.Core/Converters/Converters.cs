@@ -1,5 +1,8 @@
 ﻿using System;
 using System.Globalization;
+using MvvmCross.Platform.Converters;
+using MvvmCross.Platform.UI;
+using MvvmCross.Plugins.Color;
 
 namespace ValueConversion.Core.Converters
 {
