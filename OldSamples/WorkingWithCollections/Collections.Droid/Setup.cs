@@ -8,9 +8,9 @@
 // Project Lead - Stuart Lodge, Cirrious. http://www.cirrious.com - Hire me - I'm worth it!
 
 using Android.Content;
-using Cirrious.MvvmCross.Droid.Platform;
-using Cirrious.MvvmCross.ViewModels;
 using Collections.Core;
+using MvvmCross.Droid.Platform;
+using MvvmCross.Core.ViewModels;
 
 namespace Collections.Droid
 {
@@ -30,8 +30,8 @@ namespace Collections.Droid
         protected override void InitializeLastChance()
         {
             base.InitializeLastChance();
-            Cirrious.MvvmCross.Plugins.File.PluginLoader.Instance.EnsureLoaded();
-            Cirrious.MvvmCross.Plugins.DownloadCache.PluginLoader.Instance.EnsureLoaded();
+            MvvmCross.Plugins.File.PluginLoader.Instance.EnsureLoaded();
+            MvvmCross.Plugins.DownloadCache.PluginLoader.Instance.EnsureLoaded();
         }
     }
 }

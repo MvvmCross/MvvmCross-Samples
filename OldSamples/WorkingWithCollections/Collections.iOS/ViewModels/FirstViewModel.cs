@@ -1,6 +1,6 @@
 using MvvmCross.Core.ViewModels;
 
-namespace Collections.Core.ViewModels
+namespace Collections.Touch.ViewModels
 {
     public class FirstViewModel
         : MvxViewModel

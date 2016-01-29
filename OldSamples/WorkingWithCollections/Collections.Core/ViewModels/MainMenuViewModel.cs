@@ -1,5 +1,4 @@
-﻿using Cirrious.MvvmCross.ViewModels;
-using Collections.Core.ViewModels.Samples.LargeDynamic;
+﻿using Collections.Core.ViewModels.Samples.LargeDynamic;
 using Collections.Core.ViewModels.Samples.LargeFixed;
 using Collections.Core.ViewModels.Samples.MultipleListItemTypes;
 using Collections.Core.ViewModels.Samples.SmallDynamic;
@@ -8,6 +7,7 @@ using Collections.Core.ViewModels.Samples.SpecificPositions;
 using System;
 using System.Collections.Generic;
 using System.Windows.Input;
+using MvvmCross.Core.ViewModels;
 
 namespace Collections.Core.ViewModels
 {

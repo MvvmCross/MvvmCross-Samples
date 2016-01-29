@@ -1,6 +1,6 @@
-﻿using Cirrious.MvvmCross.ViewModels;
-using Collections.Core.ViewModels.Samples.ListItems;
+﻿using Collections.Core.ViewModels.Samples.ListItems;
 using System.Collections.Generic;
+using MvvmCross.Core.ViewModels;
 
 namespace Collections.Core.ViewModels.Samples
 {

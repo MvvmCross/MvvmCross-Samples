@@ -1,6 +1,6 @@
-﻿using Cirrious.MvvmCross.ViewModels;
-using System;
+﻿using System;
 using System.Windows.Input;
+using MvvmCross.Core.ViewModels;
 
 namespace Collections.Core.ViewModels.Samples.LargeDynamic
 {

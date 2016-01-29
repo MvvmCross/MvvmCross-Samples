@@ -8,7 +8,7 @@
 // Project Lead - Stuart Lodge, Cirrious. http://www.cirrious.com - Hire me - I'm worth it!
 
 using Android.App;
-using Cirrious.MvvmCross.Droid.Views;
+using MvvmCross.Droid.Views;
 
 namespace Collections.Droid
 {

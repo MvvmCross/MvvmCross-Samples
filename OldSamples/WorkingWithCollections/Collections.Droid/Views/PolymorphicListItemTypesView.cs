@@ -2,10 +2,10 @@ using Android.App;
 using Android.Content;
 using Android.Content.PM;
 using Android.Views;
-using Cirrious.MvvmCross.Binding.Droid.BindingContext;
-using Cirrious.MvvmCross.Binding.Droid.Views;
-using Cirrious.MvvmCross.Droid.Views;
 using Collections.Core.ViewModels.Samples.ListItems;
+using MvvmCross.Droid.Views;
+using MvvmCross.Binding.Droid.Views;
+using MvvmCross.Binding.Droid.BindingContext;
 
 namespace Collections.Droid.Views
 {
