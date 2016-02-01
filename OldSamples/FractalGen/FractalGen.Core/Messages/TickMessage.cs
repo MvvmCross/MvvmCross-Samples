@@ -1,3 +1,5 @@
+using MvvmCross.Plugins.Messenger;
+
 namespace FractalGen.Core.Messages
 {
     public class TickMessage : MvxMessage

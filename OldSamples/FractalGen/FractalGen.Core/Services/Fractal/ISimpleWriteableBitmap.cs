@@ -1,4 +1,4 @@
-﻿using Cirrious.CrossCore.UI;
+﻿using MvvmCross.Platform.UI;
 
 namespace FractalGen.Core.Services.Fractal
 {

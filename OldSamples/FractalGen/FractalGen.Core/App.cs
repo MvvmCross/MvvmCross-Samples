@@ -1,6 +1,6 @@
-﻿using Cirrious.CrossCore.IoC;
-using Cirrious.MvvmCross.ViewModels;
-using FractalGen.Core.ViewModels;
+﻿using FractalGen.Core.ViewModels;
+using MvvmCross.Core.ViewModels;
+using MvvmCross.Platform.IoC;
 
 namespace FractalGen.Core
 {

@@ -1,9 +1,10 @@
-﻿using Cirrious.MvvmCross.ViewModels;
-using FractalGen.Core.Messages;
+﻿using FractalGen.Core.Messages;
 using FractalGen.Core.Services.Fractal;
 using FractalGen.Core.Services.PlatformSpecific;
 using System;
 using System.Windows.Input;
+using MvvmCross.Core.ViewModels;
+using MvvmCross.Plugins.Messenger;
 
 namespace FractalGen.Core.ViewModels
 {

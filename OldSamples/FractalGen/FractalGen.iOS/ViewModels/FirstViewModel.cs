@@ -1,6 +1,6 @@
 using MvvmCross.Core.ViewModels;
 
-namespace FractalGen.Core.ViewModels
+namespace FractalGen.UI.Touch.ViewModels
 {
     public class FirstViewModel
         : MvxViewModel

@@ -36,7 +36,7 @@ namespace FractalGen.Core.Services.Fractal
 
         public void ProcessAsync()
         {
-            ThreadPool.QueueUserWorkItem(ignored => ProcessMandelbrot(this));
+            //ThreadPool.QueueUserWorkItem(ignored => ProcessMandelbrot(this));
         }
 
         private void ProcessMandelbrot(MandelbrotTask task)

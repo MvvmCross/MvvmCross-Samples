@@ -1,5 +1,5 @@
-﻿using Cirrious.CrossCore.UI;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using MvvmCross.Platform.UI;
 
 namespace FractalGen.Core.Services.Fractal
 {
