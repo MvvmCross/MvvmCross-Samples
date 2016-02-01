@@ -2,6 +2,8 @@
 using Windows.ApplicationModel.Activation;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
+using MvvmCross.Core.ViewModels;
+using MvvmCross.Platform;
 
 // The Blank Application template is documented at http://go.microsoft.com/fwlink/?LinkId=234227
 
@@ -57,7 +59,7 @@ namespace DailyDilbert.Store
                 var setup = new Setup(rootFrame);
                 setup.Initialize();
 
-                var start = Cirrious.CrossCore.Mvx.Resolve<Cirrious.MvvmCross.ViewModels.IMvxAppStart>();
+                var start = Mvx.Resolve<IMvxAppStart>();
                 start.Start();
             }
             // Ensure the current window is active

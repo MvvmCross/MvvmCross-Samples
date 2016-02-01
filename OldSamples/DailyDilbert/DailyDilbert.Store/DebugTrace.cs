@@ -1,6 +1,6 @@
-using Cirrious.CrossCore.Platform;
 using System;
 using System.Diagnostics;
+using MvvmCross.Platform.Platform;
 
 namespace DailyDilbert.Store
 {

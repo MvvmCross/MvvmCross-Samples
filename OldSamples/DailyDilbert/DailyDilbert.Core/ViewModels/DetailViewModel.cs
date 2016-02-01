@@ -1,6 +1,8 @@
+using MvvmCross.Core.ViewModels;
+
 namespace DailyDilbert.Core.ViewModels
 {
-    public class DetailViewModel : Cirrious.MvvmCross.ViewModels.MvxViewModel
+    public class DetailViewModel : MvxViewModel
     {
         public void Init(DilbertItem item)
         {

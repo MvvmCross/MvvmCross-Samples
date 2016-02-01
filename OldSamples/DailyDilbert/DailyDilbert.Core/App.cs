@@ -1,9 +1,10 @@
-using Cirrious.CrossCore.IoC;
 using DailyDilbert.Core.ViewModels;
+using MvvmCross.Core.ViewModels;
+using MvvmCross.Platform.IoC;
 
 namespace DailyDilbert.Core
 {
-    public class App : Cirrious.MvvmCross.ViewModels.MvxApplication
+    public class App : MvxApplication
     {
         public override void Initialize()
         {

@@ -1,9 +1,9 @@
-using Cirrious.CrossCore.Plugins;
+using MvvmCross.Platform.Plugins;
 
 namespace Bootstrap
 {
     public class FileCachePluginBootstrap
-        : MvxPluginBootstrapAction<Cirrious.MvvmCross.Plugins.File.PluginLoader>
+        : MvxPluginBootstrapAction<MvvmCross.Plugins.File.PluginLoader>
     {
     }
 }

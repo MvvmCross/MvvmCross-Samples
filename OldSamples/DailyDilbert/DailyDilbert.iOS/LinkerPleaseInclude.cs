@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Specialized;
 using System.Windows.Input;
+using UIKit;
 
 namespace DailyDilbert.Touch
 {
@@ -45,7 +46,7 @@ namespace DailyDilbert.Touch
         public void Include(UIDatePicker date)
         {
             date.Date = date.Date.AddSeconds(1);
-            date.ValueChanged += (sender, args) => { date.Date = DateTime.MaxValue; };
+			date.ValueChanged += (sender, args) => { date.Date = new Foundation.NSDate(); };
         }
 
         public void Include(UISlider slider)

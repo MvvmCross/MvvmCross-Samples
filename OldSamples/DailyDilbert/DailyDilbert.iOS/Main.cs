@@ -1,4 +1,6 @@
-﻿namespace DailyDilbert.Touch
+using UIKit;
+
+namespace DailyDilbert.Touch
 {
     public class Application
     {

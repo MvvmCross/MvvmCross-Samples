@@ -1,4 +1,6 @@
 using System;
+using UIKit;
+using CoreGraphics;
 
 namespace DailyDilbert.Touch
 {
@@ -23,7 +25,7 @@ namespace DailyDilbert.Touch
 
             button = UIButton.FromType(UIButtonType.RoundedRect);
 
-            button.Frame = new RectangleF(
+			button.Frame = new CGRect(
                 View.Frame.Width / 2 - buttonWidth / 2,
                 View.Frame.Height / 2 - buttonHeight / 2,
                 buttonWidth,

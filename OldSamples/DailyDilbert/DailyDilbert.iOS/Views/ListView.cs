@@ -1,5 +1,8 @@
-using Cirrious.MvvmCross.Binding.BindingContext;
 using DailyDilbert.Core.ViewModels;
+using MvvmCross.iOS.Views;
+using MvvmCross.Binding.iOS.Views;
+using MvvmCross.Binding.BindingContext;
+using UIKit;
 
 namespace DailyDilbert.Touch
 {

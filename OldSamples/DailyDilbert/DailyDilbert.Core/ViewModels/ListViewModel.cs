@@ -1,9 +1,10 @@
 using System;
 using System.Collections.Generic;
+using MvvmCross.Core.ViewModels;
 
 namespace DailyDilbert.Core.ViewModels
 {
-    public class ListViewModel : Cirrious.MvvmCross.ViewModels.MvxViewModel
+    public class ListViewModel : MvxViewModel
     {
         private readonly IDilbertService _dilbertService;
 
@@ -46,13 +47,13 @@ namespace DailyDilbert.Core.ViewModels
             set { _items = value; RaisePropertyChanged(() => Items); }
         }
 
-        private Cirrious.MvvmCross.ViewModels.MvxCommand<DilbertItem> _itemSelectedCommand;
+        private MvxCommand<DilbertItem> _itemSelectedCommand;
 
         public System.Windows.Input.ICommand ItemSelectedCommand
         {
             get
             {
-                _itemSelectedCommand = _itemSelectedCommand ?? new Cirrious.MvvmCross.ViewModels.MvxCommand<DilbertItem>(DoSelectItem);
+                _itemSelectedCommand = _itemSelectedCommand ?? new MvxCommand<DilbertItem>(DoSelectItem);
                 return _itemSelectedCommand;
             }
         }

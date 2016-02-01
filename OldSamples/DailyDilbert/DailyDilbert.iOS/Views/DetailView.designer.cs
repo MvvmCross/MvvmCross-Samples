@@ -4,21 +4,21 @@
 // actions made in the Xcode designer. If it is removed, they will be lost.
 // Manual changes to this file may not be handled correctly.
 //
-using MonoTouch.Foundation;
+using Foundation;
 
 namespace DailyDilbert.Touch
 {
-	[Register ("ListView")]
-	partial class ListView
+	[Register ("DetailView")]
+	partial class DetailView
 	{
 		[Outlet]
-		MonoTouch.UIKit.UITableView TableView { get; set; }
+		UIKit.UIImageView StripImage { get; set; }
 		
 		void ReleaseDesignerOutlets ()
 		{
-			if (TableView != null) {
-				TableView.Dispose ();
-				TableView = null;
+			if (StripImage != null) {
+				StripImage.Dispose ();
+				StripImage = null;
 			}
 		}
 	}

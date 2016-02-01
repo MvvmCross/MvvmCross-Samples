@@ -1,5 +1,9 @@
-using Cirrious.CrossCore;
-using Cirrious.MvvmCross.ViewModels;
+using MvvmCross.iOS.Platform;
+using UIKit;
+using Foundation;
+using MvvmCross.iOS.Views.Presenters;
+using MvvmCross.Platform;
+using MvvmCross.Core.ViewModels;
 
 namespace DailyDilbert.Touch
 {
@@ -12,7 +16,7 @@ namespace DailyDilbert.Touch
         {
             _window = new UIWindow(UIScreen.MainScreen.Bounds);
 
-            var presenter = new MvxTouchViewPresenter(this, _window);
+            var presenter = new MvxIosViewPresenter(this, _window);
             var setup = new Setup(this, presenter);
             setup.Initialize();
 

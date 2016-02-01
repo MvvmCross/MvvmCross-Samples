@@ -1,6 +1,9 @@
-using Cirrious.MvvmCross.Binding.BindingContext;
 using DailyDilbert.Core.ViewModels;
 using System;
+using MvvmCross.iOS.Views;
+using UIKit;
+using MvvmCross.Binding.iOS.Views;
+using MvvmCross.Binding.BindingContext;
 
 namespace DailyDilbert.Touch
 {
@@ -32,7 +35,7 @@ namespace DailyDilbert.Touch
             base.ViewDidLoad();
 
             //rotate rect
-            StripImage.Transform = MonoTouch.CoreGraphics.CGAffineTransform.MakeRotation((float)Math.PI / 2);
+            StripImage.Transform = CoreGraphics.CGAffineTransform.MakeRotation((float)Math.PI / 2);
 
             // Perform any additional setup after loading the view, typically from a nib.
             this.CreateBinding(_loader).To<DetailViewModel>(vm => vm.Item.StripUrl).Apply();
