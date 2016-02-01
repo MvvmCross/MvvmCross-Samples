@@ -1,8 +1,7 @@
-using InternetMinute.Core.ViewModels;
 using MvvmCross.Core.ViewModels;
 using MvvmCross.Platform.IoC;
 
-namespace InternetMinute.Core
+namespace InternetMinute.Touch
 {
     public class App : MvxApplication
     {
@@ -11,9 +10,9 @@ namespace InternetMinute.Core
             CreatableTypes()
                 .EndingWith("Service")
                 .AsInterfaces()
-                .RegisterAsSingleton();
+                .RegisterAsLazySingleton();
 
-            RegisterAppStart<HomeViewModel>();
+            RegisterAppStart<ViewModels.FirstViewModel>();
         }
     }
 }

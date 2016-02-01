@@ -1,6 +1,6 @@
 using MvvmCross.Core.ViewModels;
 
-namespace InternetMinute.Core.ViewModels
+namespace InternetMinute.Touch.ViewModels
 {
     public class FirstViewModel
         : MvxViewModel

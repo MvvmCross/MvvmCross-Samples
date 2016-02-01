@@ -1,9 +1,9 @@
-using Cirrious.MvvmCross.Plugins.Messenger;
-using Cirrious.MvvmCross.ViewModels;
 using InternetMinute.Core.Services.Times;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using MvvmCross.Core.ViewModels;
+using MvvmCross.Plugins.Messenger;
 
 namespace InternetMinute.Core.ViewModels
 {

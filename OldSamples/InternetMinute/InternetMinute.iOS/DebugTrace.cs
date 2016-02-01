@@ -2,7 +2,7 @@ using System;
 using System.Diagnostics;
 using MvvmCross.Platform.Platform;
 
-namespace InternetMinute.Droid
+namespace InternetMinute.Touch
 {
     public class DebugTrace : IMvxTrace
     {

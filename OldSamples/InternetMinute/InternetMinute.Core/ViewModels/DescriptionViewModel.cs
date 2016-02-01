@@ -1,5 +1,5 @@
-using Cirrious.MvvmCross.ViewModels;
 using InternetMinute.Core.Services.Times;
+using MvvmCross.Core.ViewModels;
 
 namespace InternetMinute.Core.ViewModels
 {
