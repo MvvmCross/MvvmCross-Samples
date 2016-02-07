@@ -191,6 +191,45 @@ namespace ApiExamples.Core.ViewModels
         }
     }
 
+    public class ListPlusParentViewModel : BaseListTestViewModel
+    {
+        private int _i = 0;
+
+        private string _helloWorld;
+        public string HelloWorld
+        {
+            get
+            {
+                return _helloWorld;
+            }
+            set
+            {
+                _helloWorld = value;
+                RaisePropertyChanged(() => HelloWorld);
+            }
+        }
+
+        private string _debugOutput;
+
+        public string DebugOutput
+        {
+            get
+            {
+                return _debugOutput;
+            }
+            set
+            {
+                _debugOutput = value;
+                RaisePropertyChanged(() => DebugOutput);
+            }
+        }
+
+        public ICommand Hello
+        {
+            get { return new MvxCommand(() => DebugOutput = "Hello " + ++_i); }
+        }
+    }
+
     public class LinearLayoutViewModel : BaseListTestViewModel
     { }
 

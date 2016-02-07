@@ -119,7 +119,9 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\Layout\Test_Date.axml" />
-    <AndroidResource Include="Resources\Layout\Test_Spinner.axml" />
+    <AndroidResource Include="Resources\Layout\Test_Spinner.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
     <AndroidResource Include="Resources\Layout\Test_LinearLayout.axml" />
     <AndroidResource Include="Resources\Layout\Test_List.axml">
       <SubType>Designer</SubType>
@@ -156,6 +158,12 @@
     <AndroidResource Include="Resources\Layout\SubTest_If.axml" />
     <AndroidResource Include="Resources\Layout\Test_RatingBar.axml" />
     <AndroidResource Include="Resources\Layout\Test_Command.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\Layout\Test_ListPlusParent.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\Layout\Item_Parented.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

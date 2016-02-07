@@ -56,6 +56,16 @@ namespace ApiExamples.Droid.Views
     }
 
     [Activity(NoHistory = true)]
+    public class ListPlusParentView : MvxActivity
+    {
+        protected override void OnCreate(Bundle bundle)
+        {
+            base.OnCreate(bundle);
+            SetContentView(Resource.Layout.Test_ListPlusParent);
+        }
+    }
+
+    [Activity(NoHistory = true)]
     public class LinearLayoutView : MvxActivity
     {
         protected override void OnCreate(Bundle bundle)

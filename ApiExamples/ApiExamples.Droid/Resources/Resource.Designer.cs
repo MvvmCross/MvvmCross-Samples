@@ -131,85 +131,91 @@ namespace ApiExamples.Droid
 			public const int FirstView = 2130903040;
 			
 			// aapt resource value: 0x7f030001
-			public const int Item_Person = 2130903041;
+			public const int Item_Parented = 2130903041;
 			
 			// aapt resource value: 0x7f030002
-			public const int Item_Radio = 2130903042;
+			public const int Item_Person = 2130903042;
 			
 			// aapt resource value: 0x7f030003
-			public const int Item_Spinner = 2130903043;
+			public const int Item_Radio = 2130903043;
 			
 			// aapt resource value: 0x7f030004
-			public const int Item_SpinnerDropDown = 2130903044;
+			public const int Item_Spinner = 2130903044;
 			
 			// aapt resource value: 0x7f030005
-			public const int Item_Test = 2130903045;
+			public const int Item_SpinnerDropDown = 2130903045;
 			
 			// aapt resource value: 0x7f030006
-			public const int Main = 2130903046;
+			public const int Item_Test = 2130903046;
 			
 			// aapt resource value: 0x7f030007
-			public const int SplashScreen = 2130903047;
+			public const int Main = 2130903047;
 			
 			// aapt resource value: 0x7f030008
-			public const int SubTest_If = 2130903048;
+			public const int SplashScreen = 2130903048;
 			
 			// aapt resource value: 0x7f030009
-			public const int Test_Command = 2130903049;
+			public const int SubTest_If = 2130903049;
 			
 			// aapt resource value: 0x7f03000a
-			public const int Test_ContainsSub = 2130903050;
+			public const int Test_Command = 2130903050;
 			
 			// aapt resource value: 0x7f03000b
-			public const int Test_ConvertThis = 2130903051;
+			public const int Test_ContainsSub = 2130903051;
 			
 			// aapt resource value: 0x7f03000c
-			public const int Test_Date = 2130903052;
+			public const int Test_ConvertThis = 2130903052;
 			
 			// aapt resource value: 0x7f03000d
-			public const int Test_Frame = 2130903053;
+			public const int Test_Date = 2130903053;
 			
 			// aapt resource value: 0x7f03000e
-			public const int Test_If = 2130903054;
+			public const int Test_Frame = 2130903054;
 			
 			// aapt resource value: 0x7f03000f
-			public const int Test_LinearLayout = 2130903055;
+			public const int Test_If = 2130903055;
 			
 			// aapt resource value: 0x7f030010
-			public const int Test_List = 2130903056;
+			public const int Test_LinearLayout = 2130903056;
 			
 			// aapt resource value: 0x7f030011
-			public const int Test_Maths = 2130903057;
+			public const int Test_List = 2130903057;
 			
 			// aapt resource value: 0x7f030012
-			public const int Test_ObservableCollection = 2130903058;
+			public const int Test_ListPlusParent = 2130903058;
 			
 			// aapt resource value: 0x7f030013
-			public const int Test_ObservableDictionary = 2130903059;
+			public const int Test_Maths = 2130903059;
 			
 			// aapt resource value: 0x7f030014
-			public const int Test_RadioGroup = 2130903060;
+			public const int Test_ObservableCollection = 2130903060;
 			
 			// aapt resource value: 0x7f030015
-			public const int Test_RatingBar = 2130903061;
+			public const int Test_ObservableDictionary = 2130903061;
 			
 			// aapt resource value: 0x7f030016
-			public const int Test_Relative = 2130903062;
+			public const int Test_RadioGroup = 2130903062;
 			
 			// aapt resource value: 0x7f030017
-			public const int Test_Seek = 2130903063;
+			public const int Test_RatingBar = 2130903063;
 			
 			// aapt resource value: 0x7f030018
-			public const int Test_Spinner = 2130903064;
+			public const int Test_Relative = 2130903064;
 			
 			// aapt resource value: 0x7f030019
-			public const int Test_Text = 2130903065;
+			public const int Test_Seek = 2130903065;
 			
 			// aapt resource value: 0x7f03001a
-			public const int Test_Time = 2130903066;
+			public const int Test_Spinner = 2130903066;
 			
 			// aapt resource value: 0x7f03001b
-			public const int Test_WithErrors = 2130903067;
+			public const int Test_Text = 2130903067;
+			
+			// aapt resource value: 0x7f03001c
+			public const int Test_Time = 2130903068;
+			
+			// aapt resource value: 0x7f03001d
+			public const int Test_WithErrors = 2130903069;
 			
 			static Layout()
 			{
