@@ -1,6 +1,5 @@
 ﻿using Foundation;
 using XPlatformMenus.Core.ViewModels;
-using XPlatformMenus.Touch.Views;
 
 namespace XPlatformMenusTabs.iOS.Views
 {
@@ -9,6 +8,7 @@ namespace XPlatformMenusTabs.iOS.Views
     {
         public override void ViewWillAppear(bool animated)
         {
+            NavigationController.SetNavigationBarHidden(true, false);
             Title = "Settings View";
             base.ViewWillAppear(animated);
         }

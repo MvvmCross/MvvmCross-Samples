@@ -1,8 +1,8 @@
+using MvvmCross.iOS.Views;
 using UIKit;
 using XPlatformMenus.Core.ViewModels;
-using MvvmCross.iOS.Views;
 
-namespace XPlatformMenus.Touch.Views
+namespace XPlatformMenusTabs.iOS.Views
 {
     /// <summary>
     /// A base view controller 

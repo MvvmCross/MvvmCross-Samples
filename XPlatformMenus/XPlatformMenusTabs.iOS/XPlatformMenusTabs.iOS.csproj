@@ -94,6 +94,7 @@
     <Compile Include="Views\BaseViewController.cs" />
     <Compile Include="Views\HelpView.cs" />
     <Compile Include="Views\HomeView.cs" />
+    <Compile Include="Views\InfoView.cs" />
     <Compile Include="Views\LoginView.cs" />
     <Compile Include="Views\SettingsView.cs" />
     <Compile Include="Views\TabBarController.cs" />

@@ -1,8 +1,7 @@
 ﻿using Foundation;
+using MvvmCross.Binding.BindingContext;
 using UIKit;
 using XPlatformMenus.Core.ViewModels;
-using XPlatformMenus.Touch.Views;
-using Margins = Cirrious.FluentLayouts.Touch.Margins;
 
 namespace XPlatformMenusTabs.iOS.Views
 {
@@ -11,33 +10,15 @@ namespace XPlatformMenusTabs.iOS.Views
     {
         public override void ViewDidLoad()
         {
+            NavigationController.SetNavigationBarHidden(true, true);
             base.ViewDidLoad();
-            var viewModel = this.ViewModel;
-
-            var scrollView = new UIScrollView(View.Frame)
-            {
-                ShowsHorizontalScrollIndicator = false,
-                AutoresizingMask = UIViewAutoresizing.FlexibleHeight
-            };
-
-            var textMessage = new UITextField { Placeholder = "This is the home view", BorderStyle = UITextBorderStyle.RoundedRect };
-
-            Add(scrollView);
-
-//            View.SubviewsDoNotTranslateAutoresizingMaskIntoConstraints();
-//
-//            View.AddConstraints(
-//                scrollView.AtLeftOf(View),
-//                scrollView.AtTopOf(View),
-//                scrollView.WithSameWidth(View),
-//                scrollView.WithSameHeight(View));
-//
-//            scrollView.Add(textMessage);
-//
-//            scrollView.SubviewsDoNotTranslateAutoresizingMaskIntoConstraints();
-//
-//            var constraints = scrollView.VerticalStackPanelConstraints(new Margins(20, 10, 20, 10, 5, 5), scrollView.Subviews);
-//            scrollView.AddConstraints(constraints);
+            UIButton infoButton = new UIButton(View.Frame);
+            infoButton.SetTitleColor(UIColor.Black, UIControlState.Normal);
+            infoButton.SetTitle("Show info", UIControlState.Normal);
+            View.AddSubview(infoButton);
+            var set = this.CreateBindingSet<HomeView, HomeViewModel>();
+            set.Bind(infoButton).To(vm => vm.GoToInfoCommand);
+            set.Apply();
         }
 
         public override void ViewWillAppear(bool animated)
