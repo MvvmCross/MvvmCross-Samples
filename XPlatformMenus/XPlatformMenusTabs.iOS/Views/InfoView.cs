@@ -13,7 +13,7 @@ namespace XPlatformMenusTabs.iOS.Views
 
         public override void ViewWillAppear(bool animated)
         {
-            NavigationController.SetNavigationBarHidden(false, true);
+            NavigationController.SetNavigationBarHidden(false, false);
             base.ViewWillAppear(animated);
         }
 

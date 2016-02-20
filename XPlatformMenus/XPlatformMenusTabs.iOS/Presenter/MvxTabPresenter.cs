@@ -1,5 +1,4 @@
-﻿using MvvmCross.iOS.Views;
-using MvvmCross.iOS.Views.Presenters;
+﻿using MvvmCross.iOS.Views.Presenters;
 using UIKit;
 using XPlatformMenusTabs.iOS.Interfaces;
 
@@ -20,16 +19,5 @@ namespace XPlatformMenusTabs.iOS.Presenter
         }
 
         public ITabBarPresenter TabBarPresenter { get; set; }
-
-        public override void Show(IMvxIosView view)
-        {
-            if (TabBarPresenter != null && view != TabBarPresenter)
-            {
-                TabBarPresenter.ShowView(view);
-                return;
-            }
-
-            base.Show(view);
-        }
     }
 }

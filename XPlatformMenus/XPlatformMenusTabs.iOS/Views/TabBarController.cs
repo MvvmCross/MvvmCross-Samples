@@ -5,88 +5,97 @@ using UIKit;
 using XPlatformMenus.Core.ViewModels;
 using XPlatformMenusTabs.iOS.Interfaces;
 
-public class TabBarController : MvxTabBarViewController, ITabBarPresenter
+namespace XPlatformMenusTabs.iOS.Views
 {
-    public TabBarController()
+    public class TabBarController : MvxTabBarViewController, ITabBarPresenter
     {
-        Mvx.Resolve<ITabBarPresenterHost>().TabBarPresenter = this;
+        public TabBarController()
+        {
+            Mvx.Resolve<ITabBarPresenterHost>().TabBarPresenter = this;
 
-        // because the UIKit base class does ViewDidLoad, we have to make a second call here
-        ViewDidLoad();
-    }
+            // because the UIKit base class does ViewDidLoad, we have to make a second call here
+            ViewDidLoad();
+        }
 
-    private int _createdSoFarCount = 0;
+        private int _createdSoFarCount = 0;
 
-    private UIViewController CreateTabFor(string title, string imageName, IMvxViewModel viewModel)
-    {
-        var controller = new UINavigationController();
-        controller.NavigationBar.TintColor = UIColor.Black;
-        var screen = this.CreateViewControllerFor(viewModel) as UIViewController;
-        SetTitleAndTabBarItem(screen, title, imageName);
-        controller.PushViewController(screen, false);
-        return controller;
-    }
+        private UIViewController CreateTabFor(string title, string imageName, IMvxViewModel viewModel)
+        {
+            var controller = new UINavigationController();
+            controller.NavigationBar.TintColor = UIColor.Black;
+            var screen = this.CreateViewControllerFor(viewModel) as UIViewController;
+            SetTitleAndTabBarItem(screen, title, imageName);
+            controller.PushViewController(screen, false);
+            return controller;
+        }
 
-    private void SetTitleAndTabBarItem(UIViewController screen, string title, string imageName)
-    {
-        screen.Title = title;
-        screen.TabBarItem = new UITabBarItem(title, null, _createdSoFarCount);
-        _createdSoFarCount++;
-    }
+        private void SetTitleAndTabBarItem(UIViewController screen, string title, string imageName)
+        {
+            screen.Title = title;
+            screen.TabBarItem = new UITabBarItem(title, null, _createdSoFarCount);
+            _createdSoFarCount++;
+        }
 
-    public override void ViewDidLoad()
-    {
-        base.ViewDidLoad();
+        public override void ViewWillAppear(bool animated)
+        {
+            base.ViewWillAppear(animated);
+            NavigationController?.SetNavigationBarHidden(true, false);
+        }
 
-        // first time around this will be null, second time it will be OK
-        if (ViewModel == null)
-            return;
+        public override void ViewDidLoad()
+        {
+            base.ViewDidLoad();
 
-        HomeViewModel homeViewModel = (HomeViewModel) Mvx.IocConstruct(typeof (HomeViewModel));
-        SettingsViewModel settingsViewModel = (SettingsViewModel) Mvx.IocConstruct(typeof(SettingsViewModel));
-        HelpAndFeedbackViewModel helpAndFeedbackViewModel = (HelpAndFeedbackViewModel) Mvx.IocConstruct(typeof(HelpAndFeedbackViewModel));
-        var viewControllers = new[]
-                              {
-                                    CreateTabFor("Home", "", homeViewModel),
-                                    CreateTabFor("Settings", "", settingsViewModel),
-                                    CreateTabFor("Help", "", helpAndFeedbackViewModel),
-                              };
-        ViewControllers = viewControllers;
-        CustomizableViewControllers = new UIViewController[] { };
-        SelectedViewController = ViewControllers[0];
-    }
+            // first time around this will be null, second time it will be OK
+            if (ViewModel == null)
+                return;
 
-    public new MainViewModel ViewModel
-    {
-        get { return (MainViewModel)base.ViewModel; }
-        set { base.ViewModel = value; }
-    }
+            HomeViewModel homeViewModel = (HomeViewModel) Mvx.IocConstruct(typeof (HomeViewModel));
+            SettingsViewModel settingsViewModel = (SettingsViewModel) Mvx.IocConstruct(typeof(SettingsViewModel));
+            HelpAndFeedbackViewModel helpAndFeedbackViewModel = (HelpAndFeedbackViewModel) Mvx.IocConstruct(typeof(HelpAndFeedbackViewModel));
+            var viewControllers = new[]
+            {
+                CreateTabFor("Home", "", homeViewModel),
+                CreateTabFor("Settings", "", settingsViewModel),
+                CreateTabFor("Help", "", helpAndFeedbackViewModel),
+            };
+            ViewControllers = viewControllers;
+            CustomizableViewControllers = new UIViewController[] { };
+            SelectedViewController = ViewControllers[0];
+        }
 
-    public bool GoBack()
-    {
-        var subNavigation = this.SelectedViewController as UINavigationController;
-        if (subNavigation == null)
-            return false;
+        public new MainViewModel ViewModel
+        {
+            get { return (MainViewModel)base.ViewModel; }
+            set { base.ViewModel = value; }
+        }
 
-        if (subNavigation.ViewControllers.Length <= 1)
-            return false;
+        public bool GoBack()
+        {
+            var subNavigation = this.SelectedViewController as UINavigationController;
+            if (subNavigation == null)
+                return false;
 
-        subNavigation.PopViewController(true);
-        return true;
-    }
+            if (subNavigation.ViewControllers.Length <= 1)
+                return false;
 
-    public bool ShowView(IMvxIosView view)
-    {
-        if (TryShowViewInCurrentTab(view))
+            subNavigation.PopViewController(true);
             return true;
+        }
 
-        return false;
-    }
+        public bool ShowView(IMvxIosView view)
+        {
+            if (TryShowViewInCurrentTab(view))
+                return true;
 
-    private bool TryShowViewInCurrentTab(IMvxIosView view)
-    {
-        var navigationController = (UINavigationController)this.SelectedViewController;
-        navigationController.PushViewController((UIViewController)view, true);
-        return true;
+            return false;
+        }
+
+        private bool TryShowViewInCurrentTab(IMvxIosView view)
+        {
+            var navigationController = (UINavigationController)this.SelectedViewController;
+            navigationController.PushViewController((UIViewController)view, true);
+            return true;
+        }
     }
 }

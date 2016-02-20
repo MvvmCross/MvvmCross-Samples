@@ -8,9 +8,8 @@ namespace XPlatformMenusTabs.iOS.Views
     {
         public override void ViewWillAppear(bool animated)
         {
-            NavigationController.SetNavigationBarHidden(true, false);
-            Title = "Settings View";
             base.ViewWillAppear(animated);
+            NavigationController.SetNavigationBarHidden(true, false);
         }
     }
 }

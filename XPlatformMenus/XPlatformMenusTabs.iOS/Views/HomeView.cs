@@ -8,9 +8,14 @@ namespace XPlatformMenusTabs.iOS.Views
     [Register("HomeView")]
     public class HomeView : BaseViewController<HomeViewModel>
     {
+        public override void ViewWillAppear(bool animated)
+        {
+            base.ViewWillAppear(animated);
+            NavigationController.SetNavigationBarHidden(true, false);
+        }
+
         public override void ViewDidLoad()
         {
-            NavigationController.SetNavigationBarHidden(true, true);
             base.ViewDidLoad();
             UIButton infoButton = new UIButton(View.Frame);
             infoButton.SetTitleColor(UIColor.Black, UIControlState.Normal);
@@ -19,12 +24,6 @@ namespace XPlatformMenusTabs.iOS.Views
             var set = this.CreateBindingSet<HomeView, HomeViewModel>();
             set.Bind(infoButton).To(vm => vm.GoToInfoCommand);
             set.Apply();
-        }
-
-        public override void ViewWillAppear(bool animated)
-        {
-            Title = "Home View";
-            base.ViewWillAppear(animated);
         }
     }
 }
