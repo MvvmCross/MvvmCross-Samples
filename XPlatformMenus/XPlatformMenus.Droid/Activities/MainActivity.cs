@@ -1,17 +1,12 @@
-﻿using System.Collections.Generic;
-using Android.App;
+﻿using Android.App;
 using Android.Content.PM;
 using Android.OS;
 using Android.Support.V4.View;
 using Android.Support.V4.Widget;
 using Android.Views;
-using XPlatformMenus.Core.ViewModels;
-using XPlatformMenus.Droid.Fragments;
-using MvvmCross.Droid.Support.V7.AppCompat;
-using MvvmCross.Droid.Support.V7.Fragging.Fragments;
 using MvvmCross.Core.ViewModels;
-using MvvmCross.Droid.Support.V7.Fragging.Caching;
-using MvvmCross.Platform;
+using MvvmCross.Droid.Support.V7.AppCompat;
+using XPlatformMenus.Core.ViewModels;
 
 namespace XPlatformMenus.Droid.Activities
 {
@@ -24,15 +19,6 @@ namespace XPlatformMenus.Droid.Activities
     public class MainActivity : MvxCachingFragmentCompatActivity<MainViewModel>
     {
         public DrawerLayout DrawerLayout;
-
-        /*private static readonly Dictionary<string, CustomFragmentInfo> MyFragmentsInfo = new Dictionary<string, CustomFragmentInfo>()
-        {
-            {typeof(MenuViewModel).Name, new CustomFragmentInfo(typeof(MenuViewModel).Name, typeof(MenuFragment), typeof(MenuViewModel))},
-            {typeof(HomeViewModel).Name, new CustomFragmentInfo( typeof(HomeViewModel).Name, typeof(HomeFragment), typeof(HomeViewModel), isRoot: true)},
-            {typeof(ExampleViewPagerViewModel).Name, new CustomFragmentInfo( typeof(ExampleViewPagerViewModel).Name, typeof(ExampleViewPagerFragment), typeof(ExampleViewPagerViewModel), isRoot: true)},
-            {typeof(ExampleRecyclerViewModel).Name, new CustomFragmentInfo( typeof(ExampleRecyclerViewModel).Name, typeof(ExampleRecyclerViewFragment), typeof(ExampleRecyclerViewModel), isRoot: true)},
-            {typeof(SettingsViewModel).Name, new CustomFragmentInfo( typeof(SettingsViewModel).Name, typeof(SettingsFragment), typeof(SettingsViewModel), isRoot: true)}
-        };*/
 
         protected override void OnCreate(Bundle bundle)
         {
