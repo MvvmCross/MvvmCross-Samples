@@ -34,12 +34,13 @@ namespace XPlatformMenus.Droid.Fragments
 
         public bool OnNavigationItemSelected(IMenuItem item)
         {
+            if (item != _previousMenuItem)
+            {
+                _previousMenuItem?.SetChecked(false);
+            }
+            
             item.SetCheckable(true);
             item.SetChecked(true);
-            if (_previousMenuItem != null) 
-            {
-                _previousMenuItem.SetChecked(false);
-            }
 
             _previousMenuItem = item;
 
