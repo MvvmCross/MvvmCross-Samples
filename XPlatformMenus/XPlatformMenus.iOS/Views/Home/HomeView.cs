@@ -1,5 +1,6 @@
 ﻿using Cirrious.FluentLayouts.Touch;
 using Foundation;
+using MvvmCross.Binding.BindingContext;
 using UIKit;
 using XPlatformMenus.Core.ViewModels;
 using XPlatformMenus.Touch.Panels;
@@ -21,7 +22,10 @@ namespace XPlatformMenus.Touch.Views
                 AutoresizingMask = UIViewAutoresizing.FlexibleHeight
             };
 
-            var textMessage = new UITextField { Placeholder = "This is the home view", BorderStyle = UITextBorderStyle.RoundedRect };
+            var infoButton = new UIButton();
+            infoButton.SetTitle("Show Info ViewModel", UIControlState.Normal);
+            infoButton.BackgroundColor = UIColor.Blue;
+            scrollView.AddSubviews( infoButton);
 
             Add(scrollView);
 
@@ -32,13 +36,19 @@ namespace XPlatformMenus.Touch.Views
                 scrollView.AtTopOf(View),
                 scrollView.WithSameWidth(View),
                 scrollView.WithSameHeight(View));
-
-            scrollView.Add(textMessage);
-
             scrollView.SubviewsDoNotTranslateAutoresizingMaskIntoConstraints();
 
-            var constraints = scrollView.VerticalStackPanelConstraints(new Margins(20, 10, 20, 10, 5, 5), scrollView.Subviews);
-            scrollView.AddConstraints(constraints);
+            var set = this.CreateBindingSet<HomeView, HomeViewModel>();
+            set.Bind(infoButton).To("GoToInfoCommand");
+            set.Apply();
+
+            scrollView.AddConstraints(
+               
+                infoButton.Below(scrollView).Plus(10),
+                infoButton.WithSameWidth(scrollView),
+                infoButton.WithSameLeft(scrollView)
+                );
+
         }
 
         public override void ViewWillAppear(bool animated)

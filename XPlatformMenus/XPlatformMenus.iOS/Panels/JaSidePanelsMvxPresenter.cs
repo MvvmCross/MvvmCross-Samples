@@ -19,7 +19,7 @@ namespace XPlatformMenus.Touch.Panels
     {
         private UIViewController _currentModalViewController;
 
-        private readonly JASidePanelController _jaSidePanelController;
+        private readonly JSSlidePanelSquareController _jaSidePanelController;
         private PanelEnum _activePanel;
 
         private UINavigationController CentrePanelUiNavigationController()
@@ -104,27 +104,37 @@ namespace XPlatformMenus.Touch.Panels
                     }
                 }
 
-                if (GetActivePanelUiNavigationController == null)
+                //figure out which panel we were just asked to show, left, right, center and properly place it
+                switch (panelAttribute.Panel)
                 {
-                    // If we have cleared down our panel completely, then we will be setting a new root view
-                    // this is perfect for Menu items 
-                    switch (_activePanel)
-                    {
-                        case PanelEnum.Center:
+                    case PanelEnum.Center:
+                        if (null == _jaSidePanelController.CenterPanel)
                             _jaSidePanelController.CenterPanel = new UINavigationController(viewController);
-                            break;
-                        case PanelEnum.Left:
+                        else
+                        {
+                            CentrePanelUiNavigationController().PushViewController(viewController, true);
+                        }
+                        break;
+                    case PanelEnum.Left:
+                        if (null == _jaSidePanelController.LeftPanel)
+                        {
                             _jaSidePanelController.LeftPanel = new UINavigationController(viewController);
-                            break;
-                        case PanelEnum.Right:
+                        }
+                        else
+                        {
+                            LeftPanelUiNavigationController().PushViewController(viewController, true);
+                        }
+                        break;
+                    case PanelEnum.Right:
+                        if (null == _jaSidePanelController.RightPanel)
+                        {
                             _jaSidePanelController.RightPanel = new UINavigationController(viewController);
-                            break;
-                    }
-                }
-                else
-                {
-                    // Otherwise we just want to push to the designated panel 
-                    GetActivePanelUiNavigationController.PushViewController(viewController, true);
+                        }
+                        else
+                        {
+                            RightPanelUiNavigationController().PushViewController(viewController, true);
+                        }
+                        break;
                 }
             }
         }
@@ -157,7 +167,7 @@ namespace XPlatformMenus.Touch.Panels
         public JaSidePanelsMvxPresenter(UIApplicationDelegate applicationDelegate, UIWindow window) :
             base(applicationDelegate, window)
         {
-            _jaSidePanelController = new JASidePanelController();
+            _jaSidePanelController = new JSSlidePanelSquareController();
             _activePanel = PanelEnum.Center;
         }
 
@@ -267,7 +277,7 @@ namespace XPlatformMenus.Touch.Panels
         {
             if (_currentModalViewController != null)
             {
-				IMvxIosView mvxTouchView = _currentModalViewController as IMvxIosView;
+                IMvxIosView mvxTouchView = _currentModalViewController as IMvxIosView;
                 if (mvxTouchView == null)
                     MvxTrace.Error("Unable to close view - modal is showing but not an IMvxTouchView");
                 else if (mvxTouchView.ReflectionGetViewModel() != toClose)
@@ -307,7 +317,7 @@ namespace XPlatformMenus.Touch.Panels
                 return false;
             }
 
-			IMvxIosView mvxTouchView = uiNavigationController.TopViewController as IMvxIosView;
+            IMvxIosView mvxTouchView = uiNavigationController.TopViewController as IMvxIosView;
 
             if (mvxTouchView == null)
             {

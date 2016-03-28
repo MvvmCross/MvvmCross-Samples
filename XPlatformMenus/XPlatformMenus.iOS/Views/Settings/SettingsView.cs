@@ -5,7 +5,7 @@ using XPlatformMenus.Touch.Panels;
 namespace XPlatformMenus.Touch.Views
 {
     [Register("SettingsView")]
-    [PanelPresentation(PanelEnum.Center, PanelHintType.ActivePanel, true)]
+    [PanelPresentation(PanelEnum.Center, PanelHintType.ResetRoot, true)]
     public class SettingsView : BaseViewController<SettingsViewModel>
     {
         public override void ViewWillAppear(bool animated)
