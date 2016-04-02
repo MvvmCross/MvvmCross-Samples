@@ -16,10 +16,10 @@
         android:textColor="@color/black"
         android:gravity="center"
         android:layout_centerInParent="true" />
-  <Button
+    <Button
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="Show Info ViewModel"
+        android:text="Show Third ViewModel"
         android:layout_centerInParent="true"
-        local:MvxBind="Click GoToInfoCommand" />
+        local:MvxBind="Click ShowThirdViewModelCommand" />
 </RelativeLayout>

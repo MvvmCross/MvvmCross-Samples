@@ -14,7 +14,7 @@ namespace XPlatformMenus.Core.ViewModels
         public RecyclerViewModel Recycler { get; private set; }
 
 	    public MvxCommand GoToInfoCommand
-	    {
+	    {            
 	        get { return new MvxCommand(() => ShowViewModel<InfoViewModel>());}
 	    }
     }

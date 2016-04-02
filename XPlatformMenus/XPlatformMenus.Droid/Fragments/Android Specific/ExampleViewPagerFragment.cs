@@ -16,6 +16,7 @@ namespace XPlatformMenus.Droid.Fragments
     {
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
+            base.showHamburgerMenu = true;
             var view = base.OnCreateView(inflater, container, savedInstanceState);
 
             var viewPager = view.FindViewById<ViewPager>(Resource.Id.viewpager);
