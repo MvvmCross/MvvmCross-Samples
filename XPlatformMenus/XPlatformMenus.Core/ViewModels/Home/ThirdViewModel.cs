@@ -21,8 +21,7 @@ namespace XPlatformMenus.Core.ViewModels
 
         private void DoSaveAndClose()
         {
-            //basically we are resetting the stack
-            //ShowViewModel<HomeViewModel>();
+            //do whatever work one would do to 'save', and send a message to pop to root           
             var messenger = Mvx.Resolve<IMvxMessenger>();
             messenger.Publish<PopToRootMessage>(new PopToRootMessage(this));
         }
