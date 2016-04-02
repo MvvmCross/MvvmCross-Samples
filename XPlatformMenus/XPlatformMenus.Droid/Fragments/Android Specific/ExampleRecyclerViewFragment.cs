@@ -21,6 +21,7 @@ namespace XPlatformMenus.Droid.Fragments
 
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
+            base.showHamburgerMenu = true;
             var view = base.OnCreateView(inflater, container, savedInstanceState);
 
             var recyclerView = view.FindViewById<MvxRecyclerView>(Resource.Id.my_recycler_view);

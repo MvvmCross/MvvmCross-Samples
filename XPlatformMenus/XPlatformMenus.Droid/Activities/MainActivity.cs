@@ -6,6 +6,9 @@ using Android.Support.V4.Widget;
 using Android.Views;
 using Android.Views.InputMethods;
 using MvvmCross.Droid.Support.V7.AppCompat;
+using MvvmCross.Platform;
+using MvvmCross.Plugins.Messenger;
+using XPlatformMenus.Core.Messages;
 using XPlatformMenus.Core.ViewModels;
 
 namespace XPlatformMenus.Droid.Activities
@@ -19,6 +22,7 @@ namespace XPlatformMenus.Droid.Activities
     public class MainActivity : MvxCachingFragmentCompatActivity<MainViewModel>
     {
         public DrawerLayout DrawerLayout;
+        private MvxSubscriptionToken popToRootToken;
 
         protected override void OnCreate(Bundle bundle)
         {

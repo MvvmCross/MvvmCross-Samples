@@ -12,8 +12,9 @@ namespace XPlatformMenus.Droid.Fragments
 {
     public abstract class BaseFragment : MvxFragment
     {
-        private Toolbar _toolbar;
-        private MvxActionBarDrawerToggle _drawerToggle;
+        protected Toolbar _toolbar;
+        protected MvxActionBarDrawerToggle _drawerToggle;
+        protected bool showHamburgerMenu = false;
 
         protected BaseFragment()
         {
@@ -30,7 +31,9 @@ namespace XPlatformMenus.Droid.Fragments
             if (_toolbar != null)
             {
                 ((MainActivity)Activity).SetSupportActionBar(_toolbar);
-                ((MainActivity)Activity).SupportActionBar.SetDisplayHomeAsUpEnabled(true);
+                if (showHamburgerMenu)
+                {
+                    ((MainActivity)Activity).SupportActionBar.SetDisplayHomeAsUpEnabled(true);
 
                 _drawerToggle = new MvxActionBarDrawerToggle(
                     Activity,                               // host Activity
@@ -51,7 +54,7 @@ namespace XPlatformMenus.Droid.Fragments
         public override void OnConfigurationChanged(Configuration newConfig)
         {
             base.OnConfigurationChanged(newConfig);
-            if (_toolbar != null)
+            if (_toolbar != null && null !=_drawerToggle)
             {
                 _drawerToggle.OnConfigurationChanged(newConfig);
             }
@@ -60,7 +63,7 @@ namespace XPlatformMenus.Droid.Fragments
         public override void OnActivityCreated(Bundle savedInstanceState)
         {
             base.OnActivityCreated(savedInstanceState);
-            if (_toolbar != null)
+            if (_toolbar != null && null != _drawerToggle)
             {
                 _drawerToggle.SyncState();
             }
