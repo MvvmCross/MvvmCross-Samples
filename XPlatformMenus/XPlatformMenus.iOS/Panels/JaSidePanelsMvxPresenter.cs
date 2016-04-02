@@ -11,13 +11,16 @@ using MvvmCross.Core.ViewModels;
 using MvvmCross.Platform.Exceptions;
 using MvvmCross.Platform.Platform;
 using MvvmCross.Core.Views;
-
+using MvvmCross.Plugins.Messenger;
+using MvvmCross.Platform;
+using XPlatformMenus.Core.Messages;
 
 namespace XPlatformMenus.Touch.Panels
 {
     public class JaSidePanelsMvxPresenter : MvxIosViewPresenter
     {
         private UIViewController _currentModalViewController;
+        private MvxSubscriptionToken popToRootToken;
 
         private readonly JSSlidePanelSquareController _jaSidePanelController;
         private PanelEnum _activePanel;
@@ -132,7 +135,7 @@ namespace XPlatformMenus.Touch.Panels
                         }
                         else
                         {
-                            RightPanelUiNavigationController().PushViewController(viewController, true);
+                            RightPanelUiNavigationController().PushViewController(viewController, true);                            
                         }
                         break;
                 }
@@ -168,7 +171,8 @@ namespace XPlatformMenus.Touch.Panels
             base(applicationDelegate, window)
         {
             _jaSidePanelController = new JSSlidePanelSquareController();
-            _activePanel = PanelEnum.Center;
+            _activePanel = PanelEnum.Center;            
+           
         }
 
         protected override void ShowFirstView(UIViewController viewController)
@@ -183,6 +187,11 @@ namespace XPlatformMenus.Touch.Panels
             MasterNavigationController.NavigationBarHidden = true;
             MasterNavigationController.PushViewController(_jaSidePanelController, false);
             _jaSidePanelController.CenterPanel = new UINavigationController(viewController);
+            var messenger = Mvx.Resolve<IMvxMessenger>();
+            popToRootToken = messenger.SubscribeOnMainThread<PopToRootMessage>(message =>
+            {
+                CentrePanelUiNavigationController().PopToRootViewController(false);
+            });
         }
 
         public override void ChangePresentation(MvxPresentationHint hint)

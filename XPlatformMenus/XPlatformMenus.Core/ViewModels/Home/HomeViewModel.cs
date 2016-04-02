@@ -15,6 +15,7 @@ namespace XPlatformMenus.Core.ViewModels
 
 	    public MvxCommand GoToInfoCommand
 	    {
+            //stuck, can't get this to show
 	        get { return new MvxCommand(() => ShowViewModel<InfoViewModel>());}
 	    }
     }

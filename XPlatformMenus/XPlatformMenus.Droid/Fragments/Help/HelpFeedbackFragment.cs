@@ -1,6 +1,8 @@
 ﻿using Android.Runtime;
 using XPlatformMenus.Core.ViewModels;
 using MvvmCross.Droid.Support.V7.Fragging.Attributes;
+using Android.Views;
+using Android.OS;
 
 namespace XPlatformMenus.Droid.Fragments
 {
@@ -8,6 +10,12 @@ namespace XPlatformMenus.Droid.Fragments
     [Register("xplatformmenus.droid.fragments.HelpFeedbackFragment")]
     public class HelpFeedbackFragment : BaseFragment<HelpAndFeedbackViewModel>
     {
+        public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
+        {
+            base.showHamburgerMenu = true;
+            return base.OnCreateView(inflater, container, savedInstanceState);
+        }
+
         protected override int FragmentId
         {
             get

@@ -6,6 +6,9 @@ using Android.Support.V4.Widget;
 using Android.Views;
 using MvvmCross.Core.ViewModels;
 using MvvmCross.Droid.Support.V7.AppCompat;
+using MvvmCross.Platform;
+using MvvmCross.Plugins.Messenger;
+using XPlatformMenus.Core.Messages;
 using XPlatformMenus.Core.ViewModels;
 
 namespace XPlatformMenus.Droid.Activities
@@ -19,6 +22,7 @@ namespace XPlatformMenus.Droid.Activities
     public class MainActivity : MvxCachingFragmentCompatActivity<MainViewModel>
     {
         public DrawerLayout DrawerLayout;
+        private MvxSubscriptionToken popToRootToken;
 
         protected override void OnCreate(Bundle bundle)
         {
@@ -32,6 +36,15 @@ namespace XPlatformMenus.Droid.Activities
             {
                 ViewModel.ShowMenu();
             }
+
+            var messenger = Mvx.Resolve<IMvxMessenger>();
+            popToRootToken = messenger.SubscribeOnMainThread<PopToRootMessage>(message =>
+            {
+                for (int i = 0; i < SupportFragmentManager.BackStackEntryCount; i++)
+                {
+                    SupportFragmentManager.PopBackStack();
+                }               
+            });
         }
 
         public override bool OnOptionsItemSelected(IMenuItem item)
@@ -91,8 +104,7 @@ namespace XPlatformMenus.Droid.Activities
             {
                 ShowFragment(request.ViewModelType.Name, Resource.Id.navigation_frame, bundle);
                 return true;
-            }
-            
+            }            
             ShowFragment(request.ViewModelType.Name, Resource.Id.content_frame, bundle, true);
             return true;
         }
