@@ -1,12 +1,12 @@
 using UIKit;
 using XPlatformMenus.Core.Interfaces;
-using XPlatformMenus.Touch.Panels;
 using XPlatformMenus.Touch.Services;
 using MvvmCross.iOS.Platform;
 using MvvmCross.Core.ViewModels;
 using MvvmCross.Platform;
 using MvvmCross.Platform.Platform;
 using MvvmCross.iOS.Views.Presenters;
+using MvvmCross.iOS.Support.JASidePanels;
 
 namespace XPlatformMenus.Touch
 {
@@ -41,7 +41,7 @@ namespace XPlatformMenus.Touch
 
         protected override IMvxIosViewPresenter CreatePresenter()
         {
-            return new JaSidePanelsMvxPresenter((MvxApplicationDelegate)ApplicationDelegate, Window);
+			return new MvxSidePanelsPresenter((MvxApplicationDelegate)ApplicationDelegate, Window);
         }
 
         protected override void InitializeFirstChance()

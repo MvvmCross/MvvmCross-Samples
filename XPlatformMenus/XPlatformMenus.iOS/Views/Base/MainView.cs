@@ -1,11 +1,11 @@
 ﻿using Foundation;
 using XPlatformMenus.Core.ViewModels;
-using XPlatformMenus.Touch.Panels;
+using MvvmCross.iOS.Support.SidePanels;
 
 namespace XPlatformMenus.Touch.Views
 {
     [Register("MainView")]
-	[PanelPresentation(PanelEnum.Center, PanelHintType.ResetRoot, true)]
+	[MvxPanelPresentation(MvxPanelEnum.Center, MvxPanelHintType.ResetRoot, true)]
     public class MainView : BaseViewController<MainViewModel>
     {
         public override void ViewDidLoad()
