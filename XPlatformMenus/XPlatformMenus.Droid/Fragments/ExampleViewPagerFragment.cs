@@ -5,12 +5,12 @@ using Android.Support.Design.Widget;
 using Android.Support.V4.View;
 using Android.Views;
 using XPlatformMenus.Core.ViewModels;
-using MvvmCross.Droid.Support.V7.Fragging.Attributes;
+using MvvmCross.Droid.Shared.Attributes;
 using MvvmCross.Droid.Support.V4;
 
 namespace XPlatformMenus.Droid.Fragments
 {
-    [MvxFragment(typeof(MainViewModel), Resource.Id.content_frame)]
+	[MvxFragment(typeof(MainViewModel), Resource.Id.content_frame, true)]
     [Register("xplatformmenus.droid.fragments.ExampleViewPagerFragment")]
     public class ExampleViewPagerFragment : BaseFragment<ExampleViewPagerViewModel>
     {
@@ -38,12 +38,6 @@ namespace XPlatformMenus.Droid.Fragments
             return view;
         }
 
-        protected override int FragmentId 
-        {
-            get 
-            {
-                return Resource.Layout.fragment_example_viewpager;
-            }
-        }
+		protected override int FragmentId => Resource.Layout.fragment_example_viewpager;
     }
 }

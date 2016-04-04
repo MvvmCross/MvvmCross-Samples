@@ -14,7 +14,7 @@ using MvvmCross.Droid.Support.V4;
 
 namespace XPlatformMenus.Droid.Fragments
 {
-    [Register("xplatformmenus.droid.fragments.RecyclerViewFragment")]
+	[Register("xplatformmenus.droid.fragments.RecyclerViewFragment")]
     public class RecyclerViewFragment : MvxFragment<RecyclerViewModel>
     {
         private IDisposable _itemSelectedToken;

@@ -6,7 +6,7 @@ using Android.Support.Design.Widget;
 using Android.Views;
 using XPlatformMenus.Core.ViewModels;
 using XPlatformMenus.Droid.Activities;
-using MvvmCross.Droid.Support.V7.Fragging.Attributes;
+using MvvmCross.Droid.Shared.Attributes;
 using MvvmCross.Droid.Support.V7.Fragging.Fragments;
 using MvvmCross.Binding.Droid.BindingContext;
 
