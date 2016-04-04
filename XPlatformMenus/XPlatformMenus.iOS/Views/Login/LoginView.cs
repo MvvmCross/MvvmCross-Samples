@@ -2,9 +2,9 @@ using Cirrious.FluentLayouts.Touch;
 using Foundation;
 using UIKit;
 using XPlatformMenus.Core.ViewModels;
-using XPlatformMenus.Touch.Panels;
 using MvvmCross.iOS.Views;
 using MvvmCross.Binding.BindingContext;
+using MvvmCross.iOS.Support.SidePanels;
 
 namespace XPlatformMenus.Touch.Views
 {
@@ -12,7 +12,7 @@ namespace XPlatformMenus.Touch.Views
     /// The login view
     /// </summary>
     [Register("LoginView")]
-    [PanelPresentation(PanelEnum.Center, PanelHintType.ActivePanel, true)]
+	[MvxPanelPresentation(MvxPanelEnum.Center, MvxPanelHintType.ActivePanel, true)]
     public class LoginView : MvxViewController<LoginViewModel>
     {
         #region Constructors

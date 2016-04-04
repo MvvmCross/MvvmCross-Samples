@@ -3,13 +3,13 @@ using CoreGraphics;
 using Foundation;
 using UIKit;
 using XPlatformMenus.Core.ViewModels;
-using XPlatformMenus.Touch.Panels;
 using Cirrious.FluentLayouts.Touch;
+using MvvmCross.iOS.Support.SidePanels;
 
 namespace XPlatformMenus.Touch.Views
 {
     [Register("MenuView")]
-    [PanelPresentation(PanelEnum.Left, PanelHintType.ActivePanel, false)]
+	[MvxPanelPresentation(MvxPanelEnum.Left, MvxPanelHintType.ActivePanel, false)]
     public class MenuView : BaseViewController<MenuViewModel>
     {
         public MenuView()

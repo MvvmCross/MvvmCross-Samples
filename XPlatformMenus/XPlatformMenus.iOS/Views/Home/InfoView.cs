@@ -3,12 +3,12 @@ using Foundation;
 using MvvmCross.Binding.BindingContext;
 using UIKit;
 using XPlatformMenus.Core.ViewModels;
-using XPlatformMenus.Touch.Panels;
+using MvvmCross.iOS.Support.SidePanels;
 
 namespace XPlatformMenus.Touch.Views
 {
     [Register("InfoView")]
-    [PanelPresentation(PanelEnum.Center, PanelHintType.ActivePanel, true)]
+	[MvxPanelPresentation(MvxPanelEnum.Center, MvxPanelHintType.ActivePanel, true)]
     public class InfoView : BaseViewController<InfoViewModel>
     {
         public override void ViewDidLoad()

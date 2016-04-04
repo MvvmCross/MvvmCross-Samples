@@ -5,10 +5,9 @@ using XPlatformMenus.Core.Interfaces;
 using XPlatformMenus.Droid.Services;
 using MvvmCross.Droid.Platform;
 using MvvmCross.Core.ViewModels;
-using MvvmCross.Platform.Platform;
 using MvvmCross.Droid.Views;
-using MvvmCross.Droid.Support.V7.Fragging.Presenter;
 using MvvmCross.Platform;
+using MvvmCross.Droid.Shared.Presenter;
 
 namespace XPlatformMenus.Droid
 {
