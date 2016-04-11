@@ -106,6 +106,7 @@
     <Compile Include="Views\VisibilityView.cs" />
     <Compile Include="Bootstrap\ColorPluginBootstrap.cs" />
     <Compile Include="Bootstrap\VisibilityPluginBootstrap.cs" />
+    <Compile Include="CustomColorPlugin.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
