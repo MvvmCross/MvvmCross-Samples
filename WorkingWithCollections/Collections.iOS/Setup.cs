@@ -19,21 +19,5 @@ namespace Collections.Touch
         {
             return new Collections.Core.App();
         }
-
-        protected override void AddPluginsLoaders(MvxLoaderPluginRegistry registry)
-        {
-			registry.AddConventionalPlugin<MvvmCross.Plugins.DownloadCache.iOS.Plugin>();
-			registry.AddConventionalPlugin<MvvmCross.Plugins.File.iOS.Plugin>();
-            base.AddPluginsLoaders(registry);
-        }
-
-        protected override void InitializeLastChance()
-        {
-            PluginLoader.Instance.EnsureLoaded();
-            MvvmCross.Plugins.File.PluginLoader.Instance.EnsureLoaded();
-            MvvmCross.Plugins.Json.PluginLoader.Instance.EnsureLoaded();
-
-            base.InitializeLastChance();
-        }
     }
 }
