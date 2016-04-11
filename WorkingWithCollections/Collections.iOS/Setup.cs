@@ -17,8 +17,7 @@ namespace Collections.Touch
 
         protected override IMvxApplication CreateApp()
         {
-            var app = new App();
-            return app;
+            return new Collections.Core.App();
         }
 
         protected override void AddPluginsLoaders(MvxLoaderPluginRegistry registry)
