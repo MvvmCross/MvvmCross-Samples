@@ -37,6 +37,7 @@
 					<VisualState.Setters>
 						<Setter Target="RootSplitView.DisplayMode" Value="Overlay"/>
 						<Setter Target="RootSplitView.IsPaneOpen" Value="False"/>
+						<Setter Target="PageContent.Margin" Value="0,60,0,0" />
 					</VisualState.Setters>
 				</VisualState>
 			</VisualStateGroup>

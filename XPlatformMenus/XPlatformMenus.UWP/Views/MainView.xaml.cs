@@ -1,6 +1,5 @@
 ﻿using Windows.Foundation;
 using Windows.UI.Xaml;
-using Windows.UI.Xaml.Automation;
 using Windows.UI.Xaml.Controls;
 using XPlatformMenus.Core.ViewModels;
 
@@ -106,24 +105,6 @@ namespace XPlatformMenus.UWP.Views
 			{
 				// handler(this, this.TogglePaneButtonRect);
 				handler.DynamicInvoke(this, TogglePaneButtonRect);
-			}
-		}
-
-		/// <summary>
-		/// Enable accessibility on each nav menu item by setting the AutomationProperties.Name on each container
-		/// using the associated Label of each item.
-		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="args"></param>
-		private void NavMenuItemContainerContentChanging(ListViewBase sender, ContainerContentChangingEventArgs args)
-		{
-			if (!args.InRecycleQueue && args.Item != null && args.Item is NavMenuItem)
-			{
-				args.ItemContainer.SetValue(AutomationProperties.NameProperty, ((NavMenuItem)args.Item).Label);
-			}
-			else
-			{
-				args.ItemContainer.ClearValue(AutomationProperties.NameProperty);
 			}
 		}
 
