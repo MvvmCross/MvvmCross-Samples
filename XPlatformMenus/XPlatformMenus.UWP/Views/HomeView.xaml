@@ -8,6 +8,11 @@
 	mc:Ignorable="d">
 
 	<Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-		<TextBlock Text="Home View" />
+		
+		<TextBlock
+			VerticalAlignment="Center"
+			HorizontalAlignment="Center"
+			Text="Use the menu to browse through all examples" />
+		
 	</Grid>
 </local:BaseView>

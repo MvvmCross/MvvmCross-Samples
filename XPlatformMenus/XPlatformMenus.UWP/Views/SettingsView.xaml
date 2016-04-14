@@ -8,6 +8,11 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-		<TextBlock Text="Settings View" />
+		
+		<TextBlock
+			VerticalAlignment="Center"
+			HorizontalAlignment="Center"
+			Text="Settings View" />
+		
     </Grid>
 </local:BaseView>

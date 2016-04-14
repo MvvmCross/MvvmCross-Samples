@@ -8,6 +8,11 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-		<TextBlock Text="Help View" />
+		
+		<TextBlock
+			VerticalAlignment="Center"
+			HorizontalAlignment="Center"
+			Text="Help View" />
+		
     </Grid>
 </local:BaseView>
