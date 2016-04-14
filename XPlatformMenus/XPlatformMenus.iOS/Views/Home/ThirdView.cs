@@ -52,13 +52,14 @@ namespace XPlatformMenus.Touch.Views
                 closeButton.WithSameWidth(label),
                 closeButton.WithSameLeft(label)
                 );
-
+            ViewModel.PopToRootHint = new MvxPanelPopToRootPresentationHint(MvxPanelEnum.Center);
         }
 
         public override void ViewWillAppear(bool animated)
         {
             Title = "Third View";
             base.ViewWillAppear(animated);
+           
         }
     }
 }

@@ -112,6 +112,14 @@
     <BundleResource Include="Resources\Default-568h%402x.png" />
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="JASidePanels, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmCross.iOS.Support.JASidePanels.4.1.1\lib\Xamarin.iOS10\JASidePanels.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MvvmCross.iOS.Support.JASidePanels, Version=1.0.5938.29906, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmCross.iOS.Support.JASidePanels.4.1.1\lib\Xamarin.iOS10\MvvmCross.iOS.Support.JASidePanels.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -142,12 +150,6 @@
     </Reference>
     <Reference Include="MvvmCross.iOS.Support">
       <HintPath>..\packages\MvvmCross.iOS.Support.4.1.1\lib\Xamarin.iOS10\MvvmCross.iOS.Support.dll</HintPath>
-    </Reference>
-    <Reference Include="MvvmCross.iOS.Support.JASidePanels">
-      <HintPath>..\packages\MvvmCross.iOS.Support.JASidePanels.4.1.1\lib\Xamarin.iOS10\MvvmCross.iOS.Support.JASidePanels.dll</HintPath>
-    </Reference>
-    <Reference Include="JASidePanels">
-      <HintPath>..\packages\MvvmCross.iOS.Support.JASidePanels.4.1.1\lib\Xamarin.iOS10\JASidePanels.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

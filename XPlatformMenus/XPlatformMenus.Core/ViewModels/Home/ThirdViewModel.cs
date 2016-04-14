@@ -19,11 +19,15 @@ namespace XPlatformMenus.Core.ViewModels
             }
         }
 
+        public MvxPresentationHint PopToRootHint { get; set; }
+
         private void DoSaveAndClose()
         {
-            //do whatever work one would do to 'save', and send a message to pop to root           
-            var messenger = Mvx.Resolve<IMvxMessenger>();
-            messenger.Publish<PopToRootMessage>(new PopToRootMessage(this));
+            //do whatever work one would do to 'save', and send a message to pop to root    
+            // MvxPanelHintType.ActivePanel
+            //Close(this);
+            //ShowViewModel<HomeViewModel>();
+            ChangePresentation(PopToRootHint);
         }
     }
 }
