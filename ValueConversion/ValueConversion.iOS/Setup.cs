@@ -33,20 +33,6 @@ namespace ValueConversion.UI.Touch
         {
             return new App();
         }
-
-        protected override void AddPluginsLoaders(MvxLoaderPluginRegistry loaders)
-        {
-            base.AddPluginsLoaders(loaders);
-			loaders.AddConventionalPlugin<MvvmCross.Plugins.Color.iOS.Plugin>();
-			loaders.AddConventionalPlugin<MvvmCross.Plugins.Visibility.iOS.Plugin>();
-        }
-
-        public override void LoadPlugins(IMvxPluginManager pluginManager)
-        {
-            pluginManager.EnsurePluginLoaded<MvvmCross.Plugins.Color.PluginLoader>();
-            pluginManager.EnsurePluginLoaded<MvvmCross.Plugins.Visibility.PluginLoader>();
-            base.LoadPlugins(pluginManager);
-        }
     }
 
     // The UIApplicationDelegate for the application. This class is responsible for launching the
