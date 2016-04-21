@@ -8,6 +8,8 @@ using MvvmCross.Core.ViewModels;
 using MvvmCross.Droid.Views;
 using MvvmCross.Platform;
 using MvvmCross.Droid.Shared.Presenter;
+using XPlatformMenus.Droid.Utilities;
+using MvvmCross.Platform.Droid.Platform;
 
 namespace XPlatformMenus.Droid
 {
@@ -23,25 +25,39 @@ namespace XPlatformMenus.Droid
             return new Core.App();
         }
 
-		protected override IEnumerable<Assembly> AndroidViewAssemblies => new List<Assembly>(base.AndroidViewAssemblies)
-		{
-			typeof(Android.Support.Design.Widget.NavigationView).Assembly,
-			typeof(Android.Support.Design.Widget.FloatingActionButton).Assembly,
-			typeof(Android.Support.V7.Widget.Toolbar).Assembly,
-			typeof(Android.Support.V4.Widget.DrawerLayout).Assembly,
-			typeof(Android.Support.V4.View.ViewPager).Assembly,
-			typeof(MvvmCross.Droid.Support.V7.RecyclerView.MvxRecyclerView).Assembly
-		};
+        protected override IEnumerable<Assembly> AndroidViewAssemblies => new List<Assembly>(base.AndroidViewAssemblies)
+        {
+            typeof(Android.Support.Design.Widget.NavigationView).Assembly,
+            typeof(Android.Support.Design.Widget.FloatingActionButton).Assembly,
+            typeof(Android.Support.V7.Widget.Toolbar).Assembly,
+            typeof(Android.Support.V4.Widget.DrawerLayout).Assembly,
+            typeof(Android.Support.V4.View.ViewPager).Assembly,
+            typeof(MvvmCross.Droid.Support.V7.RecyclerView.MvxRecyclerView).Assembly
+        };
 
-		/// <summary>
-		/// This is very important to override. The default view presenter does not know how to show fragments!
-		/// </summary>
-		protected override IMvxAndroidViewPresenter CreateViewPresenter()
-		{
-			var mvxFragmentsPresenter = new MvxFragmentsPresenter(AndroidViewAssemblies);
-			Mvx.RegisterSingleton<IMvxAndroidViewPresenter>(mvxFragmentsPresenter);
-			return mvxFragmentsPresenter;
-		}
+        /// <summary>
+        /// This is very important to override. The default view presenter does not know how to show fragments!
+        /// </summary>
+        protected override IMvxAndroidViewPresenter CreateViewPresenter()
+        {
+            var mvxFragmentsPresenter = new MvxFragmentsPresenter(AndroidViewAssemblies);
+            Mvx.RegisterSingleton<IMvxAndroidViewPresenter>(mvxFragmentsPresenter);
+
+            //add a presentation hint handler to listen for pop to root
+            mvxFragmentsPresenter.AddPresentationHintHandler<MvxPanelPopToRootPresentationHint>(hint =>
+            {                
+                var activity = Mvx.Resolve<IMvxAndroidCurrentTopActivity>().Activity;
+                var fragmentActivity = activity as Android.Support.V4.App.FragmentActivity;
+             
+                for (int i = 0; i < fragmentActivity.SupportFragmentManager.BackStackEntryCount; i++)
+                {
+                    fragmentActivity.SupportFragmentManager.PopBackStack();
+                }
+                return true;
+            });
+
+            return mvxFragmentsPresenter;
+        }
 
         protected override void InitializeFirstChance()
         {

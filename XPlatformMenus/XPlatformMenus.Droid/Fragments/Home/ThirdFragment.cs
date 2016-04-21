@@ -1,12 +1,10 @@
 ﻿using Android.OS;
 using Android.Runtime;
-using Android.Support.V7.Widget;
 using Android.Views;
-using MvvmCross.Binding.Droid.BindingContext;
-using MvvmCross.Droid.Support.V7.AppCompat;
 using XPlatformMenus.Core.ViewModels;
-using MvvmCross.Droid.Support.V7.Fragging.Attributes;
 using XPlatformMenus.Droid.Activities;
+using MvvmCross.Droid.Shared.Attributes;
+using XPlatformMenus.Droid.Utilities;
 
 namespace XPlatformMenus.Droid.Fragments
 {
@@ -20,7 +18,7 @@ namespace XPlatformMenus.Droid.Fragments
         {
             oldTitle = ((MainActivity)Activity).Title;
             ((MainActivity)Activity).Title = "Third Fragment";
-
+            ViewModel.PopToRootHint = new MvxPanelPopToRootPresentationHint();
             return base.OnCreateView(inflater, container, savedInstanceState);        
         }
 
