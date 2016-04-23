@@ -12,7 +12,7 @@ using XPlatformMenus.Core.ViewModels;
 
 namespace XPlatformMenus.Droid.Activities
 {
-    [Activity(
+    [Activity( 
         Label = "Main Activity",
         Theme = "@style/AppTheme",
         LaunchMode = LaunchMode.SingleTop,
