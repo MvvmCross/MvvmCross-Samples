@@ -7,6 +7,7 @@ using MvvmCross.Platform;
 using MvvmCross.Platform.Platform;
 using MvvmCross.iOS.Views.Presenters;
 using MvvmCross.iOS.Support.JASidePanels;
+using MvvmCross.iOS.Support.SidePanels;
 
 namespace XPlatformMenus.Touch
 {
@@ -49,6 +50,9 @@ namespace XPlatformMenus.Touch
             base.InitializeFirstChance();
 
             Mvx.RegisterSingleton<IDialogService>(() => new TouchDialogService());
+            //register the presentation hint to pop to root
+            //picked up in the third view model
+            Mvx.RegisterSingleton<MvxPresentationHint>(() => new MvxPanelPopToRootPresentationHint(MvxPanelEnum.Center));
         }
 	}
 }

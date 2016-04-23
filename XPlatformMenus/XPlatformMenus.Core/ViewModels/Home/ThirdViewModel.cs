@@ -1,7 +1,5 @@
 ﻿using MvvmCross.Core.ViewModels;
 using MvvmCross.Platform;
-using MvvmCross.Plugins.Messenger;
-using XPlatformMenus.Core.Messages;
 
 namespace XPlatformMenus.Core.ViewModels
 {
@@ -19,12 +17,12 @@ namespace XPlatformMenus.Core.ViewModels
             }
         }
 
-        public MvxPresentationHint PopToRootHint { get; set; }
+        private MvxPresentationHint popToRootHint = Mvx.Resolve<MvxPresentationHint>();
 
         private void DoSaveAndClose()
         {
             //do whatever work one would do to 'save', and send a message to pop to root               
-            ChangePresentation(PopToRootHint);
+            ChangePresentation(popToRootHint);
         }
     }
 }

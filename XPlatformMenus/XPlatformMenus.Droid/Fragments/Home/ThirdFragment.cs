@@ -17,8 +17,7 @@ namespace XPlatformMenus.Droid.Fragments
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
             oldTitle = ((MainActivity)Activity).Title;
-            ((MainActivity)Activity).Title = "Third Fragment";
-            ViewModel.PopToRootHint = new MvxPanelPopToRootPresentationHint();
+            ((MainActivity)Activity).Title = "Third Fragment";            
             return base.OnCreateView(inflater, container, savedInstanceState);        
         }
 

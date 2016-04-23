@@ -55,7 +55,9 @@ namespace XPlatformMenus.Droid
                 }
                 return true;
             });
-
+            //register the presentation hint to pop to root
+            //picked up in the third view model
+            Mvx.RegisterSingleton<MvxPresentationHint>(() => new MvxPanelPopToRootPresentationHint());            
             return mvxFragmentsPresenter;
         }
 

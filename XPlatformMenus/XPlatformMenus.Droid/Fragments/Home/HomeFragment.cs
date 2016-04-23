@@ -1,8 +1,8 @@
 ﻿using Android.Runtime;
 using XPlatformMenus.Core.ViewModels;
-using MvvmCross.Droid.Support.V7.Fragging.Attributes;
 using Android.OS;
 using Android.Views;
+using MvvmCross.Droid.Shared.Attributes;
 
 namespace XPlatformMenus.Droid.Fragments
 {
