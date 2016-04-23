@@ -23,10 +23,7 @@ namespace XPlatformMenus.Core.ViewModels
 
         private void DoSaveAndClose()
         {
-            //do whatever work one would do to 'save', and send a message to pop to root    
-            // MvxPanelHintType.ActivePanel
-            //Close(this);
-            //ShowViewModel<HomeViewModel>();
+            //do whatever work one would do to 'save', and send a message to pop to root               
             ChangePresentation(PopToRootHint);
         }
     }
