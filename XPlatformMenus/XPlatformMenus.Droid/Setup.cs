@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Reflection;
 using XPlatformMenus.Core.Interfaces;
 using XPlatformMenus.Droid.Services;
+using MvvmCross.Binding.Bindings.Target.Construction;
 using MvvmCross.Droid.Platform;
 using MvvmCross.Core.ViewModels;
 using MvvmCross.Droid.Views;
 using MvvmCross.Platform;
 using MvvmCross.Droid.Shared.Presenter;
+using MvvmCross.Droid.Support.V7.AppCompat;
 
 namespace XPlatformMenus.Droid
 {
@@ -41,6 +43,12 @@ namespace XPlatformMenus.Droid
 			var mvxFragmentsPresenter = new MvxFragmentsPresenter(AndroidViewAssemblies);
 			Mvx.RegisterSingleton<IMvxAndroidViewPresenter>(mvxFragmentsPresenter);
 			return mvxFragmentsPresenter;
+		}
+		
+		protected override void FillTargetFactories(IMvxTargetBindingFactoryRegistry registry)
+		{
+			MvxAppCompatSetupHelper.FillTargetFactories(registry);
+			base.FillTargetFactories(registry);
 		}
 
         protected override void InitializeFirstChance()
