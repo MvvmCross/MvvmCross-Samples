@@ -6,7 +6,6 @@ using Android.Support.V7.Widget;
 using Android.Views;
 using Android.Widget;
 using XPlatformMenus.Core.ViewModels;
-using MvvmCross.Droid.Support.V7.Fragging.Fragments;
 using MvvmCross.Binding.Droid.BindingContext;
 using MvvmCross.Droid.Support.V7.RecyclerView;
 using MvvmCross.Platform.WeakSubscription;

@@ -137,12 +137,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App.cs" />
     <Compile Include="LinkerPleaseInclude.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
     <Compile Include="Setup.cs" />
-    <Compile Include="ViewModels\FirstViewModel.cs" />
     <Compile Include="Views\MainMenuView.cs" />
     <Compile Include="Views\Samples\Cells\KittenCell.cs" />
     <Compile Include="Views\Samples\Cells\KittenCell.designer.cs">

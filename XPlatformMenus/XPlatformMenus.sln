@@ -177,6 +177,7 @@ Global
 		{A246F75A-20D7-49E0-954B-4C82900D6104}.Release|Mixed Platforms.Build.0 = Release|iPhone
 		{A246F75A-20D7-49E0-954B-4C82900D6104}.Release|x64.ActiveCfg = Release|iPhoneSimulator
 		{A246F75A-20D7-49E0-954B-4C82900D6104}.Release|x86.ActiveCfg = Release|iPhoneSimulator
+		{A246F75A-20D7-49E0-954B-4C82900D6104}.Debug|Any CPU.Build.0 = Debug|iPhone
 		{6A015CFE-10BA-4D98-B5FC-7B84BEF8402D}.Ad-Hoc|Any CPU.ActiveCfg = Ad-Hoc|iPhone
 		{6A015CFE-10BA-4D98-B5FC-7B84BEF8402D}.Ad-Hoc|ARM.ActiveCfg = Ad-Hoc|iPhone
 		{6A015CFE-10BA-4D98-B5FC-7B84BEF8402D}.Ad-Hoc|iPhone.ActiveCfg = Ad-Hoc|iPhone
@@ -217,6 +218,7 @@ Global
 		{6A015CFE-10BA-4D98-B5FC-7B84BEF8402D}.Release|Mixed Platforms.Build.0 = Release|iPhone
 		{6A015CFE-10BA-4D98-B5FC-7B84BEF8402D}.Release|x64.ActiveCfg = Release|iPhoneSimulator
 		{6A015CFE-10BA-4D98-B5FC-7B84BEF8402D}.Release|x86.ActiveCfg = Release|iPhone
+		{6A015CFE-10BA-4D98-B5FC-7B84BEF8402D}.Debug|Any CPU.Build.0 = Debug|iPhone
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

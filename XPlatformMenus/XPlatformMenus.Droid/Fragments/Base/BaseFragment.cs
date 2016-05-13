@@ -3,7 +3,7 @@ using Android.OS;
 using Android.Support.V7.Widget;
 using Android.Views;
 using XPlatformMenus.Droid.Activities;
-using MvvmCross.Droid.Support.V7.Fragging.Fragments;
+using MvvmCross.Droid.Support.V4;
 using MvvmCross.Droid.Support.V7.AppCompat;
 using MvvmCross.Core.ViewModels;
 using MvvmCross.Binding.Droid.BindingContext;

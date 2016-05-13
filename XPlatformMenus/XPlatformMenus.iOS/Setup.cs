@@ -6,8 +6,9 @@ using MvvmCross.Core.ViewModels;
 using MvvmCross.Platform;
 using MvvmCross.Platform.Platform;
 using MvvmCross.iOS.Views.Presenters;
-using MvvmCross.iOS.Support.JASidePanels;
 using MvvmCross.iOS.Support.SidePanels;
+using MvvmCross.iOS.Support;
+using MvvmCross.iOS.Support.JASidePanels;
 
 namespace XPlatformMenus.Touch
 {
