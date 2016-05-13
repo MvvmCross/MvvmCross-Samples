@@ -51,14 +51,14 @@ namespace XPlatformMenus.Touch.Views
                 closeButton.Below(label).Plus(10),
                 closeButton.WithSameWidth(label),
                 closeButton.WithSameLeft(label)
-                );
-
+                );          
         }
 
         public override void ViewWillAppear(bool animated)
         {
             Title = "Third View";
             base.ViewWillAppear(animated);
+           
         }
     }
 }

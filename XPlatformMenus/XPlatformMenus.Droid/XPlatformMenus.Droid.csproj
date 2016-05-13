@@ -13,9 +13,11 @@
     <AndroidApplication>true</AndroidApplication>
     <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
-    <AndroidUseLatestPlatformSdk>False</AndroidUseLatestPlatformSdk>
+    <AndroidUseLatestPlatformSdk>True</AndroidUseLatestPlatformSdk>
     <TargetFrameworkVersion>v6.0</TargetFrameworkVersion>
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -98,35 +100,42 @@
     <Reference Include="MvvmCross.Droid.Support.V7.AppCompat">
       <HintPath>..\packages\MvvmCross.Droid.Support.V7.AppCompat.4.1.5\lib\MonoAndroid403\MvvmCross.Droid.Support.V7.AppCompat.dll</HintPath>
     </Reference>
+    <Reference Include="MvvmCross.Plugins.Messenger">
+      <HintPath>..\packages\MvvmCross.Plugin.Messenger.4.1.4\lib\MonoAndroid\MvvmCross.Plugins.Messenger.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Droid.Support.V7.RecyclerView">
+      <HintPath>..\packages\MvvmCross.Droid.Support.V7.RecyclerView.4.1.4\lib\MonoAndroid403\MvvmCross.Droid.Support.V7.RecyclerView.dll</HintPath>
+    </Reference>
     <Reference Include="MvvmCross.Plugins.Visibility">
       <HintPath>..\packages\MvvmCross.Plugin.Visibility.4.1.4\lib\MonoAndroid\MvvmCross.Plugins.Visibility.dll</HintPath>
     </Reference>
     <Reference Include="MvvmCross.Plugins.Visibility.Droid">
       <HintPath>..\packages\MvvmCross.Plugin.Visibility.4.1.4\lib\MonoAndroid\MvvmCross.Plugins.Visibility.Droid.dll</HintPath>
     </Reference>
-    <Reference Include="MvvmCross.Droid.Support.V7.RecyclerView">
-      <HintPath>..\packages\MvvmCross.Droid.Support.V7.RecyclerView.4.1.4\lib\MonoAndroid403\MvvmCross.Droid.Support.V7.RecyclerView.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Activities\LoginActivity.cs" />
     <Compile Include="Activities\MainActivity.cs" />
+    <Compile Include="Bootstrap\VisibilityPluginBootstrap.cs" />
     <Compile Include="DebugTrace.cs" />
-    <Compile Include="Fragments\BaseFragment.cs" />
-    <Compile Include="Fragments\HelpFeedbackFragment.cs" />
-    <Compile Include="Fragments\ExampleRecyclerViewFragment.cs" />
-    <Compile Include="Fragments\ExampleViewPagerFragment.cs" />
-    <Compile Include="Fragments\HomeFragment.cs" />
-    <Compile Include="Fragments\MenuFragment.cs" />
-    <Compile Include="Fragments\RecyclerViewFragment.cs" />
-    <Compile Include="Fragments\SettingsFragment.cs" />
+    <Compile Include="Fragments\Android Specific\ExampleRecyclerViewFragment.cs" />
+    <Compile Include="Fragments\Android Specific\ExampleViewPagerFragment.cs" />
+    <Compile Include="Fragments\Android Specific\RecyclerViewFragment.cs" />
+    <Compile Include="Fragments\Base\BaseFragment.cs" />
+    <Compile Include="Fragments\Help\HelpFeedbackFragment.cs" />
+    <Compile Include="Fragments\Home\HomeFragment.cs" />
+    <Compile Include="Fragments\Home\InfoFragment.cs" />
+    <Compile Include="Fragments\Home\ThirdFragment.cs" />
+    <Compile Include="Fragments\Menu\MenuFragment.cs" />
+    <Compile Include="Fragments\Settings\SettingsFragment.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\DialogService.cs" />
     <Compile Include="Setup.cs" />
     <Compile Include="SplashScreen.cs" />
+    <Compile Include="Utilities\MvxPanelPopToRootPresentationHint.cs" />
     <Compile Include="Bootstrap\JsonPluginBootstrap.cs" />
-    <Compile Include="Bootstrap\VisibilityPluginBootstrap.cs" />
+    <Compile Include="Bootstrap\MessengerPluginBootstrap.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config">
@@ -146,6 +155,8 @@
     <AndroidResource Include="Resources\layout\toolbar_actionbar.axml" />
     <AndroidResource Include="Resources\menu\navigation_drawer.axml" />
     <AndroidResource Include="Resources\layout\fragment_helpfeedback.axml" />
+    <AndroidResource Include="Resources\layout\fragment_info.axml" />
+    <AndroidResource Include="Resources\layout\fragment_third.axml" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -194,12 +205,5 @@
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-     Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
   <Import Project="..\packages\Xamarin.Android.Support.Vector.Drawable.23.3.0\build\Xamarin.Android.Support.Vector.Drawable.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Vector.Drawable.23.3.0\build\Xamarin.Android.Support.Vector.Drawable.targets')" />
 </Project>

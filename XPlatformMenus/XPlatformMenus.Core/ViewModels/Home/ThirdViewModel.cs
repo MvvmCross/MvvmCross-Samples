@@ -1,10 +1,11 @@
 ﻿using MvvmCross.Core.ViewModels;
+using MvvmCross.Platform;
 
 namespace XPlatformMenus.Core.ViewModels
 {
-	public class ThirdViewModel : BaseViewModel
+    public class ThirdViewModel : BaseViewModel
     {
-     
+
         private MvxCommand saveAndCloseCommand;
 
         public MvxCommand SaveAndCloseCommand
@@ -16,11 +17,12 @@ namespace XPlatformMenus.Core.ViewModels
             }
         }
 
+        private MvxPresentationHint popToRootHint = Mvx.Resolve<MvxPresentationHint>();
+
         private void DoSaveAndClose()
         {
-            Close(this);
+            //do whatever work one would do to 'save', and send a message to pop to root               
+            ChangePresentation(popToRootHint);
         }
-
-
     }
 }

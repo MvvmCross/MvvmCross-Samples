@@ -6,11 +6,13 @@ using Android.Support.V4.Widget;
 using Android.Views;
 using Android.Views.InputMethods;
 using MvvmCross.Droid.Support.V7.AppCompat;
+using MvvmCross.Platform;
 using XPlatformMenus.Core.ViewModels;
+
 
 namespace XPlatformMenus.Droid.Activities
 {
-    [Activity(
+    [Activity( 
         Label = "Main Activity",
         Theme = "@style/AppTheme",
         LaunchMode = LaunchMode.SingleTop,
@@ -18,7 +20,7 @@ namespace XPlatformMenus.Droid.Activities
     )]
     public class MainActivity : MvxCachingFragmentCompatActivity<MainViewModel>
     {
-        public DrawerLayout DrawerLayout;
+        public DrawerLayout DrawerLayout;       
 
         protected override void OnCreate(Bundle bundle)
         {
@@ -30,6 +32,7 @@ namespace XPlatformMenus.Droid.Activities
 
             if (bundle == null)
                 ViewModel.ShowMenu();
+                    
         }
 
         public override bool OnOptionsItemSelected(IMenuItem item)
