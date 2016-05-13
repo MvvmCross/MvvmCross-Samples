@@ -1,0 +1,73 @@
+﻿<local:BaseView
+	x:Class="XPlatformMenus.UWP.Views.MainView"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:local="using:XPlatformMenus.UWP.Views"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d" Loaded="MainView_OnLoaded">
+
+	<Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+		<!-- Adaptive triggers -->
+		<VisualStateManager.VisualStateGroups>
+			<VisualStateGroup>
+				<VisualState>
+					<VisualState.StateTriggers>
+						<AdaptiveTrigger MinWindowWidth="{StaticResource LargeWindowSnapPoint}" />
+					</VisualState.StateTriggers>
+					<VisualState.Setters>
+						<Setter Target="RootSplitView.DisplayMode" Value="CompactInline"/>
+						<Setter Target="RootSplitView.IsPaneOpen" Value="True"/>
+					</VisualState.Setters>
+				</VisualState>
+				<VisualState>
+					<VisualState.StateTriggers>
+						<AdaptiveTrigger MinWindowWidth="{StaticResource MediumWindowSnapPoint}" />
+					</VisualState.StateTriggers>
+					<VisualState.Setters>
+						<Setter Target="RootSplitView.DisplayMode" Value="CompactOverlay"/>
+						<Setter Target="RootSplitView.IsPaneOpen" Value="False"/>
+					</VisualState.Setters>
+				</VisualState>
+				<VisualState>
+					<VisualState.StateTriggers>
+						<AdaptiveTrigger MinWindowWidth="{StaticResource MinWindowSnapPoint}" />
+					</VisualState.StateTriggers>
+					<VisualState.Setters>
+						<Setter Target="RootSplitView.DisplayMode" Value="Overlay"/>
+						<Setter Target="RootSplitView.IsPaneOpen" Value="False"/>
+						<Setter Target="PageContent.Margin" Value="0,60,0,0" />
+					</VisualState.Setters>
+				</VisualState>
+			</VisualStateGroup>
+		</VisualStateManager.VisualStateGroups>
+		
+		<SplitView
+			x:Name="RootSplitView"
+			DisplayMode="Inline"
+			OpenPaneLength="120"
+			PaneClosed="RootSplitView_PaneClosed"
+			IsTabStop="False">
+			
+			<SplitView.Pane>
+				<Frame x:Name="MenuContent" />
+			</SplitView.Pane>
+
+			<Frame x:Name="PageContent" />
+		</SplitView>
+
+		<!-- Declared last to have it rendered above everything else, but it needs to be the first item in the tab sequence. -->
+		<ToggleButton
+			x:Name="TogglePaneButton"
+			TabIndex="1"
+			Margin="0,4,0,0"
+			Style="{StaticResource SplitViewTogglePaneButtonStyle}"
+			IsChecked="{Binding IsPaneOpen, ElementName=RootSplitView, Mode=TwoWay}"
+			Unchecked="TogglePaneButton_Unchecked"
+			Checked="TogglePaneButton_Checked"
+			AutomationProperties.Name="Menu"
+			ToolTipService.ToolTip="Menu" />
+
+	</Grid>
+</local:BaseView>
