@@ -46,7 +46,7 @@ namespace XPlatformMenus.Droid.Fragments
                         Resource.String.drawer_close            // "close drawer" description
                     );
                     _drawerToggle.DrawerOpened += (object sender, ActionBarDrawerEventArgs e) => ((MainActivity)Activity).HideSoftKeyboard();
-                    ((MainActivity)Activity).DrawerLayout.SetDrawerListener(_drawerToggle);
+                    ((MainActivity)Activity).DrawerLayout.AddDrawerListener(_drawerToggle);
                 }
             }
             return view;
