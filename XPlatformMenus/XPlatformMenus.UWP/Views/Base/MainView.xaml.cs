@@ -24,7 +24,6 @@ namespace XPlatformMenus.UWP.Views
 		}
 
 
-
 		#region SplitView
 
 		public Rect TogglePaneButtonRect

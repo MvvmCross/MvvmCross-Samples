@@ -8,6 +8,11 @@
             ShowViewModel<MenuViewModel>();            
         }
 
+        public void ShowHome()
+        {
+            ShowViewModel<HomeViewModel>();
+        }
+
         public void Init(object hint)
         {
             // Can perform Vm data retrival here based on any

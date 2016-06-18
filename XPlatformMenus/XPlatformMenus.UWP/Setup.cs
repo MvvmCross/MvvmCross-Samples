@@ -6,6 +6,8 @@ using MvvmCross.WindowsUWP.Platform;
 using MvvmCross.WindowsUWP.Views;
 using XPlatformMenus.Core.Interfaces;
 using XPlatformMenus.UWP.Services;
+using XPlatformMenus.Core.ViewModels;
+using XPlatformMenus.UWP.Views;
 
 namespace XPlatformMenus.UWP
 {
@@ -29,9 +31,10 @@ namespace XPlatformMenus.UWP
         {
             if (hint is MvxPanelPopToRootPresentationHint)
             {
-                while (_rootFrame.CanGoBack)
+                var mainView = _rootFrame.Content as MainView; 
+                if (mainView != null)
                 {
-                    _rootFrame.GoBack();
+                    mainView.ViewModel.ShowHome();
                 }
             }
 
