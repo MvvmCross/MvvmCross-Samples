@@ -20,9 +20,17 @@ namespace XPlatformMenus.UWP.Views
 
 		private void MainView_OnLoaded(object sender, RoutedEventArgs e)
 		{
-			ViewModel.ShowMenu();
+			ViewModel.ShowMenu();            
 		}
 
+        public void PopToRoot()
+        {
+            var frame = PageContent;
+            while (frame.CanGoBack)
+            {
+                frame.GoBack();
+            }
+        }
 
 		#region SplitView
 

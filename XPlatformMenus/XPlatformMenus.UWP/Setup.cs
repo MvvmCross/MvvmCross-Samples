@@ -31,10 +31,10 @@ namespace XPlatformMenus.UWP
         {
             if (hint is MvxPanelPopToRootPresentationHint)
             {
-                var mainView = _rootFrame.Content as MainView; 
+                var mainView = _rootFrame.Content as MainView;
                 if (mainView != null)
                 {
-                    mainView.ViewModel.ShowHome();
+                    mainView.PopToRoot();
                 }
             }
 
