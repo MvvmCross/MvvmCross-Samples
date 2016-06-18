@@ -9,8 +9,8 @@
 
 	<Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
-            <TextBlock>Third View</TextBlock>
-            <Button Command="{Binding SaveAndCloseCommand}">Submit and Pop to Home</Button>
+            <TextBlock HorizontalAlignment="Center">Third View</TextBlock>
+            <Button HorizontalAlignment="Center" Command="{Binding SaveAndCloseCommand}">Submit and Pop to Home</Button>
         </StackPanel>
 	</Grid>
 </local:BaseView>

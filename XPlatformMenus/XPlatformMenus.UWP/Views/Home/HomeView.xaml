@@ -9,7 +9,7 @@
 
 	<Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
-            <Button HorizontalAlignment="Center" Command="{Binding GoToInfoCommand}">Show Info ViewModel</Button>
+            <Button Command="{Binding GoToInfoCommand}">Show Info ViewModel</Button>
         </StackPanel>
 	</Grid>
 </local:BaseView>

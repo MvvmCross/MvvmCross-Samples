@@ -9,6 +9,36 @@ using XPlatformMenus.UWP.Services;
 
 namespace XPlatformMenus.UWP
 {
+    public class MvxPanelPopToRootPresentationHint : MvxPresentationHint
+    {
+
+    }
+
+    public class CustomViewPresenter : MvxWindowsMultiRegionViewPresenter
+    {
+        IMvxWindowsFrame _rootFrame;
+
+        public CustomViewPresenter(IMvxWindowsFrame rootFrame)
+            : base(rootFrame)
+        {
+            _rootFrame = rootFrame;
+
+        }
+
+        public override void ChangePresentation(MvxPresentationHint hint)
+        {
+            if (hint is MvxPanelPopToRootPresentationHint)
+            {
+                while (_rootFrame.CanGoBack)
+                {
+                    _rootFrame.GoBack();
+                }
+            }
+
+            base.ChangePresentation(hint);
+        }
+    }
+
 	public class Setup : MvxWindowsSetup
 	{
 		public Setup(Frame rootFrame) : base(rootFrame)
@@ -27,7 +57,7 @@ namespace XPlatformMenus.UWP
 
 		protected override IMvxWindowsViewPresenter CreateViewPresenter(IMvxWindowsFrame rootFrame)
 		{
-			return new MvxWindowsMultiRegionViewPresenter(rootFrame);
+			return new CustomViewPresenter(rootFrame);
 		}
 
 		protected override void InitializeFirstChance()
@@ -35,6 +65,7 @@ namespace XPlatformMenus.UWP
 			base.InitializeFirstChance();
 
 			Mvx.RegisterSingleton<IDialogService>(() => new DialogService());
-		}
-	}
+            Mvx.RegisterSingleton<MvxPresentationHint>(() => new MvxPanelPopToRootPresentationHint());
+        }
+    }
 }
