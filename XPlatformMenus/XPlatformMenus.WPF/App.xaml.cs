@@ -2,6 +2,8 @@
 using MvvmCross.Platform;
 using MvvmCross.Wpf.Views;
 using System.Windows;
+using XPlatformMenus.Core.ViewModels;
+using XPlatformMenus.WPF.Views;
 
 namespace XPlatformMenus.WPF
 {
@@ -18,6 +20,10 @@ namespace XPlatformMenus.WPF
 
             var setup = new Setup(Dispatcher, presenter);
             setup.Initialize();
+
+            //Mvx.RegisterSingleton<IMvxWpfViewsContainer>(() => new MvxWpfViewsContainer());
+            //var viewsContainer = Mvx.Resolve<IMvxWpfViewsContainer>();
+            //viewsContainer.Add<LoginViewModel, LoginView>();
 
             var start = Mvx.Resolve<IMvxAppStart>();
             start.Start();

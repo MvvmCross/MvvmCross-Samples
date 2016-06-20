@@ -13,9 +13,10 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using XPlatformMenus.Core.ViewModels;
+using MvvmCross.Wpf.Views;
 
 namespace XPlatformMenus.WPF.Views
-{
+{    
     /// <summary>
     /// Interaction logic for HomeView.xaml
     /// </summary>
