@@ -12,16 +12,10 @@ namespace XPlatformMenus.Droid.Fragments
     {
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
-            base.showHamburgerMenu = true;
+            ShowHamburgerMenu = true;
             return base.OnCreateView(inflater, container, savedInstanceState);
         }
 
-        protected override int FragmentId
-        {
-            get
-            {
-                return Resource.Layout.fragment_helpfeedback;
-            }
-        }
+        protected override int FragmentId => Resource.Layout.fragment_helpfeedback;
     }
 }
