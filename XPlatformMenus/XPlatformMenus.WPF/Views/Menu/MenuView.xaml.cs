@@ -12,14 +12,21 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using XPlatformMenus.Core.ViewModels;
 
 namespace XPlatformMenus.WPF.Views
 {
     /// <summary>
     /// Interaction logic for MenuView.xaml
     /// </summary>
-    public partial class MenuView : UserControl
+    public partial class MenuView : BaseView
     {
+        public new MenuViewModel ViewModel
+        {
+            get { return (MenuViewModel)base.ViewModel; }
+            set { base.ViewModel = value; }
+        }
+
         public MenuView()
         {
             InitializeComponent();

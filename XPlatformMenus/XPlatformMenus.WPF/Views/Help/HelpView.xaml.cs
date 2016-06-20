@@ -12,14 +12,21 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using XPlatformMenus.Core.ViewModels;
 
 namespace XPlatformMenus.WPF.Views
 {
     /// <summary>
     /// Interaction logic for HelpView.xaml
     /// </summary>
-    public partial class HelpView : UserControl
+    public partial class HelpView : BaseView
     {
+        public new HelpAndFeedbackViewModel ViewModel
+        {
+            get { return (HelpAndFeedbackViewModel)base.ViewModel; }
+            set { base.ViewModel = value; }
+        }
+
         public HelpView()
         {
             InitializeComponent();

@@ -12,14 +12,21 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using XPlatformMenus.Core.ViewModels;
 
 namespace XPlatformMenus.WPF.Views
 {
     /// <summary>
     /// Interaction logic for SettingsView.xaml
     /// </summary>
-    public partial class SettingsView : UserControl
+    public partial class SettingsView : BaseView
     {
+        public new SettingsViewModel ViewModel
+        {
+            get { return (SettingsViewModel)base.ViewModel; }
+            set { base.ViewModel = value; }
+        }
+
         public SettingsView()
         {
             InitializeComponent();

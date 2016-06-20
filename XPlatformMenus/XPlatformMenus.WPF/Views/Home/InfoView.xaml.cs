@@ -12,14 +12,20 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using XPlatformMenus.Core.ViewModels;
 
 namespace XPlatformMenus.WPF.Views
 {
     /// <summary>
     /// Interaction logic for InfoView.xaml
     /// </summary>
-    public partial class InfoView : UserControl
+    public partial class InfoView : BaseView
     {
+        public new InfoViewModel ViewModel
+        {
+            get { return (InfoViewModel)base.ViewModel; }
+            set { base.ViewModel = value; }
+        }
         public InfoView()
         {
             InitializeComponent();
