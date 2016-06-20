@@ -12,12 +12,12 @@ namespace XPlatformMenus.Droid.Fragments
 {
     public abstract class BaseFragment : MvxFragment
     {
-        protected Toolbar _toolbar;
-        protected MvxActionBarDrawerToggle _drawerToggle;
+        protected Toolbar Toolbar { get; private set; }
+        protected MvxActionBarDrawerToggle DrawerToggle { get; private set; }
         /// <summary>
         /// If true show the hamburger menu
         /// </summary>
-        protected bool showHamburgerMenu = false;
+        protected bool ShowHamburgerMenu { get; set; } = false;
 
         protected BaseFragment()
         {
@@ -30,23 +30,28 @@ namespace XPlatformMenus.Droid.Fragments
 
             var view = this.BindingInflate(FragmentId, null);
 
-            _toolbar = view.FindViewById<Toolbar>(Resource.Id.toolbar);
-            if (_toolbar != null)
+            Toolbar = view.FindViewById<Toolbar>(Resource.Id.toolbar);
+            if (Toolbar != null)
             {
-                ((MainActivity)Activity).SetSupportActionBar(_toolbar);
-                if (showHamburgerMenu)
-                {
-                    ((MainActivity)Activity).SupportActionBar.SetDisplayHomeAsUpEnabled(true);
+                var mainActivity = Activity as MainActivity;
+                if (mainActivity == null) return view;
 
-                    _drawerToggle = new MvxActionBarDrawerToggle(
+                mainActivity.SetSupportActionBar(Toolbar);
+
+                if (ShowHamburgerMenu)
+                {
+                    mainActivity.SupportActionBar?.SetDisplayHomeAsUpEnabled(true);
+
+                    DrawerToggle = new MvxActionBarDrawerToggle(
                         Activity,                               // host Activity
-                        ((MainActivity)Activity).DrawerLayout,  // DrawerLayout object
-                        _toolbar,                               // nav drawer icon to replace 'Up' caret
+                        mainActivity.DrawerLayout,  // DrawerLayout object
+                        Toolbar,                               // nav drawer icon to replace 'Up' caret
                         Resource.String.drawer_open,            // "open drawer" description
                         Resource.String.drawer_close            // "close drawer" description
                     );
-                    _drawerToggle.DrawerOpened += (object sender, ActionBarDrawerEventArgs e) => ((MainActivity)Activity).HideSoftKeyboard();
-                    ((MainActivity)Activity).DrawerLayout.AddDrawerListener(_drawerToggle);
+
+                    DrawerToggle.DrawerOpened += (sender, e) => mainActivity?.HideSoftKeyboard();
+                    mainActivity.DrawerLayout.AddDrawerListener(DrawerToggle);
                 }
             }
             return view;
@@ -57,18 +62,18 @@ namespace XPlatformMenus.Droid.Fragments
         public override void OnConfigurationChanged(Configuration newConfig)
         {
             base.OnConfigurationChanged(newConfig);
-            if (_toolbar != null && null !=_drawerToggle)
+            if (Toolbar != null)
             {
-                _drawerToggle.OnConfigurationChanged(newConfig);
+                DrawerToggle?.OnConfigurationChanged(newConfig);
             }
         }
 
         public override void OnActivityCreated(Bundle savedInstanceState)
         {
             base.OnActivityCreated(savedInstanceState);
-            if (_toolbar != null && null != _drawerToggle)
+            if (Toolbar != null)
             {
-                _drawerToggle.SyncState();
+                DrawerToggle?.SyncState();
             }
         }
     }

@@ -21,7 +21,7 @@ namespace XPlatformMenus.Droid.Fragments
 
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
-            base.showHamburgerMenu = true;
+            ShowHamburgerMenu = true;
             var view = base.OnCreateView(inflater, container, savedInstanceState);
 
             var recyclerView = view.FindViewById<MvxRecyclerView>(Resource.Id.my_recycler_view);
@@ -36,7 +36,7 @@ namespace XPlatformMenus.Droid.Fragments
                 (sender, args) => {
                     if (ViewModel.SelectedItem != null)
                         Toast.MakeText(Activity,
-                            string.Format("Selected: {0}", ViewModel.SelectedItem.Title),
+                            $"Selected: {ViewModel.SelectedItem.Title}",
                             ToastLength.Short).Show();
                 });
 
