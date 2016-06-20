@@ -15,6 +15,7 @@ namespace XPlatformMenus.UWP.Views
 		public HomeView()
 		{
 			InitializeComponent();
+            DataContext = ViewModel;
 		}
-	}
+    }
 }
