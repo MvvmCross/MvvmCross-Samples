@@ -8,12 +8,12 @@
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid>
-        <StackPanel>
+        <StackPanel Margin="10">
             <!--<TextBox Text="{Binding Username}" PlaceholderText="User name..." />-->
-            <TextBox Text="{Binding Username}" />
+            <TextBox Margin="1" Text="{Binding Username}" />
             <!--<PasswordBox Password="{Binding Password}" PlaceholderText="Password..." />-->
-            <PasswordBox />
-            <Button Content="Login" Command="{Binding LoginCommand}" />
+            <PasswordBox Margin="1" />
+            <Button Margin="1" Content="Login" Command="{Binding LoginCommand}" />
             <!--<ProgressBar IsIndeterminate="True" />-->
         </StackPanel>
     </Grid>
