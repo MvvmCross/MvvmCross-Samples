@@ -6,7 +6,9 @@
              xmlns:local="clr-namespace:XPlatformMenus.WPF.Views"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
-    <Grid>
-        <TextBlock>Menu</TextBlock>
-    </Grid>
+    <StackPanel>
+        <Button Command="{Binding ShowHomeCommand}">Home</Button>
+        <Button Command="{Binding ShowSettingCommand}">Settings</Button>
+        <Button Command="{Binding ShowHelpCommand}">Help</Button>
+    </StackPanel>
 </local:BaseView>
