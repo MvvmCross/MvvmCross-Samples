@@ -6,7 +6,9 @@
              xmlns:local="clr-namespace:XPlatformMenus.WPF.Views"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
-    <Grid>
-        <TextBlock>Main View</TextBlock>
-    </Grid>
+    <DockPanel>
+        <Frame DockPanel.Dock="Left" x:Name="MenuContent">
+        </Frame>
+        <Frame x:Name="PageContent"></Frame>
+    </DockPanel>
 </local:BaseView>

@@ -16,14 +16,23 @@ namespace XPlatformMenus.WPF
 
         void DoSetup()
         {
-            var presenter = new MvxSimpleWpfViewPresenter(MainWindow);
+//            var presenter = new MvxSimpleWpfViewPresenter(MainWindow);
+            var presenter = new MvxMultiRegionWpfViewPresenter(MainWindow);
 
             var setup = new Setup(Dispatcher, presenter);
             setup.Initialize();
 
-            //Mvx.RegisterSingleton<IMvxWpfViewsContainer>(() => new MvxWpfViewsContainer());
-            //var viewsContainer = Mvx.Resolve<IMvxWpfViewsContainer>();
-            //viewsContainer.Add<LoginViewModel, LoginView>();
+            // Q: Why do we even have to do this, doesn't MvvmCross normally find the matching
+            // viewModel to view relationship?
+            Mvx.RegisterSingleton<IMvxWpfViewsContainer>(() => new MvxWpfViewsContainer());
+            var viewsContainer = Mvx.Resolve<IMvxWpfViewsContainer>();
+            viewsContainer.Add<LoginViewModel, LoginView>();
+            viewsContainer.Add<MainViewModel, MainView>();
+            viewsContainer.Add<HelpAndFeedbackViewModel, HelpView>();
+            viewsContainer.Add<SettingsViewModel, SettingsView>();
+            viewsContainer.Add<HomeViewModel, HomeView>();
+            viewsContainer.Add<InfoViewModel, InfoView>();
+            viewsContainer.Add<ThirdViewModel, ThirdView>();
 
             var start = Mvx.Resolve<IMvxAppStart>();
             start.Start();
