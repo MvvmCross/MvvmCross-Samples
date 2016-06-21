@@ -75,6 +75,7 @@
     <Compile Include="Services\DialogService.cs" />
     <Compile Include="Setup.cs" />
     <Compile Include="Views\Base\BaseView.cs" />
+    <Compile Include="Views\Base\BasePage.cs" />
     <Compile Include="Views\Help\HelpView.xaml.cs">
       <DependentUpon>HelpView.xaml</DependentUpon>
     </Compile>
@@ -96,6 +97,7 @@
     <Compile Include="Views\MvxRegionAttribute.cs" />
     <Compile Include="Views\MvxMultiRegionWpfViewPresenter.cs" />
     <Compile Include="Views\MvxWpfExtensionMethods.cs" />
+    <Compile Include="Views\MvxWpfPage.cs" />
     <Compile Include="Views\Settings\SettingsView.xaml.cs">
       <DependentUpon>SettingsView.xaml</DependentUpon>
     </Compile>

@@ -2,7 +2,6 @@
 
 namespace XPlatformMenus.WPF.Views
 {
-    [MvxRegion("PageContent")]
     public partial class LoginView : BaseView
     {
         public new LoginViewModel ViewModel

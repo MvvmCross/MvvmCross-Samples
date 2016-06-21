@@ -19,6 +19,8 @@ namespace XPlatformMenus.WPF.Views
             InitializeComponent();
         }
 
+        
+
         private void TogglePaneButton_Unchecked(object sender, RoutedEventArgs e)
         {
 
@@ -27,6 +29,11 @@ namespace XPlatformMenus.WPF.Views
         private void TogglePaneButton_Checked(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void MainView_Loaded(object sender, RoutedEventArgs e)
+        {
+            ViewModel.ShowMenu();
         }
     }
 }

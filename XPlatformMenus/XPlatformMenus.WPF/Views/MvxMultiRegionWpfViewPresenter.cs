@@ -9,6 +9,7 @@ using MvvmCross.Core.ViewModels;
 using System.Windows;
 using MvvmCross.Platform;
 using System.Windows.Media;
+using MvvmCross.Core.Views;
 
 namespace XPlatformMenus.WPF.Views
 {
@@ -28,14 +29,14 @@ namespace XPlatformMenus.WPF.Views
 
             if (viewType.HasRegionAttribute())
             {
-                var converter = Mvx.Resolve<IMvxNavigationSerializer>();
-                var requestText = converter.Serializer.SerializeObject(request);
+                var loader = Mvx.Resolve<IMvxSimpleWpfViewLoader>();
+                var view = loader.CreateView(request);
 
                 var containerView = FindChild<Frame>(_contentControl, viewType.GetRegionName());
 
                 if (containerView != null)
                 {
-                    containerView.Navigate(viewType, requestText);
+                    containerView.Navigate(view);
                     return;
                 }
             }
@@ -45,7 +46,7 @@ namespace XPlatformMenus.WPF.Views
 
         private static Type GetViewType(MvxViewModelRequest request)
         {
-            var viewFinder = Mvx.Resolve<IMvxWpfViewsContainer>();
+            var viewFinder = Mvx.Resolve<IMvxViewsContainer>();
             return viewFinder.GetViewType(request.ViewModelType);
         }
 

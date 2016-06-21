@@ -3,7 +3,7 @@
 namespace XPlatformMenus.WPF.Views
 {
     [MvxRegion("PageContent")]
-    public partial class HomeView : BaseView
+    public partial class HomeView : BasePage
     {
         public new HomeViewModel ViewModel
         {

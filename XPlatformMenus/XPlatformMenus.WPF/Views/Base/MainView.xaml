@@ -4,11 +4,10 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:XPlatformMenus.WPF.Views"
-             mc:Ignorable="d" 
+             mc:Ignorable="d" Loaded="MainView_Loaded"
              d:DesignHeight="300" d:DesignWidth="300">
     <DockPanel>
-        <Frame DockPanel.Dock="Left" x:Name="MenuContent">
-        </Frame>
-        <Frame x:Name="PageContent"></Frame>
+        <Frame DockPanel.Dock="Left" x:Name="MenuContent" NavigationUIVisibility="Hidden"></Frame>
+        <Frame x:Name="PageContent" NavigationUIVisibility="Hidden"></Frame>
     </DockPanel>
 </local:BaseView>
