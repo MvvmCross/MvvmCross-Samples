@@ -5,6 +5,7 @@ using MvvmCross.Wpf.Views;
 using System.Windows.Threading;
 using XPlatformMenus.Core.Interfaces;
 using XPlatformMenus.WPF.Services;
+using XPlatformMenus.WPF.Views;
 
 namespace XPlatformMenus.WPF
 {
@@ -25,7 +26,7 @@ namespace XPlatformMenus.WPF
             base.InitializeFirstChance();
 
             Mvx.RegisterSingleton<IDialogService>(() => new DialogService());
-            //Mvx.RegisterSingleton<MvxPresentationHint>(() => new MvxPanelPopToRootPresentationHint());
+            Mvx.RegisterSingleton<MvxPresentationHint>(() => new MvxPanelPopToRootPresentationHint());
         }
     }
 }

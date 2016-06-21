@@ -19,7 +19,19 @@ namespace XPlatformMenus.WPF.Views
             InitializeComponent();
         }
 
-        
+        private void MainView_Loaded(object sender, RoutedEventArgs e)
+        {
+            ViewModel.ShowMenu();
+        }
+
+        public void PopToRoot()
+        {
+            var frame = PageContent;
+            while (frame.CanGoBack)
+            {
+                frame.GoBack();
+            }
+        }
 
         private void TogglePaneButton_Unchecked(object sender, RoutedEventArgs e)
         {
@@ -31,9 +43,6 @@ namespace XPlatformMenus.WPF.Views
 
         }
 
-        private void MainView_Loaded(object sender, RoutedEventArgs e)
-        {
-            ViewModel.ShowMenu();
-        }
+
     }
 }

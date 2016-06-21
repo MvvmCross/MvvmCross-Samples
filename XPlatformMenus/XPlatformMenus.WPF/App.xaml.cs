@@ -17,7 +17,7 @@ namespace XPlatformMenus.WPF
 
         void DoSetup()
         {
-            var presenter = new MvxMultiRegionWpfViewPresenter(MainWindow);
+            var presenter = new CustomViewPresenter(MainWindow);
 
             var setup = new Setup(Dispatcher, presenter);
             setup.Initialize();
