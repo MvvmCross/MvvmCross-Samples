@@ -14,9 +14,9 @@
             <Button Command="{Binding ShowHelpCommand}">Help</Button>
         </StackPanel>-->
         <h:HamburgerMenu Background="LightGray" MenuIconColor="Black" MenuItemForeground="Black" SelectionIndicatorColor="Red" HorizontalAlignment="Left">
-            <h:HamburgerMenuItem Text="Home" SelectionCommand="{Binding ShowHomeCommand}" />
-            <h:HamburgerMenuItem Text="Help" SelectionCommand="{Binding ShowHelpCommand}" />
-            <h:HamburgerMenuItem Text="Settings" SelectionCommand="{Binding ShowSettingCommand}" />
+            <h:HamburgerMenuItem Text="Home" Icon="/Assets/home.png" SelectionCommand="{Binding ShowHomeCommand}" />
+            <h:HamburgerMenuItem Text="Help" Icon="/Assets/help.png" SelectionCommand="{Binding ShowHelpCommand}" />
+            <h:HamburgerMenuItem Text="Settings" Icon="/Assets/settings.png" SelectionCommand="{Binding ShowSettingCommand}" />
         </h:HamburgerMenu>
     </DockPanel>
 </local:BaseView>
