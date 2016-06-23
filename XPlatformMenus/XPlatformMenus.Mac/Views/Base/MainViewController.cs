@@ -42,6 +42,7 @@ namespace XPlatformMenus.Mac.Views
 		{
 			// TODO: while we can navigate back
 			PageContentPageController.NavigateBack(this);
+//			PageContentPageController.NavigateTo(PageContentPageController.ArrangedObjects[0]);
 		}
 
 		public void PlaceView(string region, NSView view)
@@ -49,10 +50,16 @@ namespace XPlatformMenus.Mac.Views
 			switch (region)
 			{
 				case "MenuContent":
-					MenuContentPageController.View = view;
+					// probably a PageController is not needed here
+					MenuContentPageController.View.AddSubview(view);
 					break;
 				case "PageContent":
-					PageContentPageController.View = view;
+					PageContentPageController.NavigateForwardTo(NSObject.FromObject(view.GetType().ToString()));
+					while (PageContentPageController.View.Subviews.Any())
+					{
+						PageContentPageController.View.Subviews[0].RemoveFromSuperview();
+					}
+					PageContentPageController.View.AddSubview(view);
 					break;
 			}
 		}

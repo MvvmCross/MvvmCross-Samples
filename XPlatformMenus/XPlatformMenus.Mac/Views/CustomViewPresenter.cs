@@ -1,5 +1,6 @@
 ﻿using MvvmCross.Core.ViewModels;
 using AppKit;
+using System.Linq;
 
 namespace XPlatformMenus.Mac.Views
 {
@@ -14,10 +15,19 @@ namespace XPlatformMenus.Mac.Views
         {
             if (hint is MvxPanelPopToRootPresentationHint)
             {
-				var viewController = Window.ContentViewController as MainViewController;
-				if (viewController != null)
+				if (Window.ContentView.Subviews.Any())
 				{
-					viewController.PopToRoot();
+					// there should be 1, and it should be the MainView
+					var mainView = Window.ContentView.Subviews[0];
+					if (mainView is MainView)
+					{
+						var mainViewController = mainView.NextResponder as MainViewController;
+						if (mainViewController != null)
+						{
+							mainViewController.PopToRoot();
+						}
+					}
+					return;
 				}
             }
 
