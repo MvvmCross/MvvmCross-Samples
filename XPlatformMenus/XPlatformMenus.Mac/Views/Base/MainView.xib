@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
     <dependencies>
-        <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10117"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="MainViewController">
             <connections>
-                <outlet property="MenuContentPageController" destination="TkN-iT-l0I" id="ArR-EB-Xo8"/>
+                <outlet property="MenuContentView" destination="k92-DD-0ZT" id="4rp-yJ-pBM"/>
                 <outlet property="PageContentPageController" destination="c8g-Hj-lGE" id="VJI-Ic-rDe"/>
                 <outlet property="view" destination="4" id="17"/>
             </connections>
@@ -18,17 +17,23 @@
             <rect key="frame" x="0.0" y="0.0" width="470" height="335"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
-                <splitView arrangesAllSubviews="NO" dividerStyle="paneSplitter" vertical="YES" id="0qc-qc-sO4">
+                <splitView arrangesAllSubviews="NO" dividerStyle="thin" vertical="YES" id="0qc-qc-sO4">
                     <rect key="frame" x="0.0" y="0.0" width="470" height="296"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <subviews>
                         <customView id="k92-DD-0ZT">
-                            <rect key="frame" x="0.0" y="0.0" width="109" height="296"/>
+                            <rect key="frame" x="0.0" y="0.0" width="111" height="296"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </customView>
                         <customView id="wE0-Dn-QQe">
-                            <rect key="frame" x="119" y="0.0" width="351" height="296"/>
+                            <rect key="frame" x="112" y="0.0" width="358" height="296"/>
                             <autoresizingMask key="autoresizingMask"/>
+                            <subviews>
+                                <customView id="gNM-wG-jkz">
+                                    <rect key="frame" x="20" y="20" width="311" height="256"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                </customView>
+                            </subviews>
                         </customView>
                     </subviews>
                     <holdingPriorities>
@@ -37,7 +42,7 @@
                     </holdingPriorities>
                 </splitView>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="bXK-1G-JkB">
-                    <rect key="frame" x="18" y="298" width="95" height="17"/>
+                    <rect key="frame" x="18" y="304" width="188" height="17"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Main View" id="SNM-aQ-Q4D">
                         <font key="font" metaFont="system"/>
@@ -48,14 +53,9 @@
             </subviews>
             <point key="canvasLocation" x="413" y="365.5"/>
         </customView>
-        <pagecontroller id="TkN-iT-l0I">
-            <connections>
-                <outlet property="view" destination="k92-DD-0ZT" id="Mew-US-Wir"/>
-            </connections>
-        </pagecontroller>
         <pagecontroller id="c8g-Hj-lGE">
             <connections>
-                <outlet property="view" destination="wE0-Dn-QQe" id="FgK-3S-15d"/>
+                <outlet property="view" destination="gNM-wG-jkz" id="Ovw-Jw-Lty"/>
             </connections>
         </pagecontroller>
     </objects>
