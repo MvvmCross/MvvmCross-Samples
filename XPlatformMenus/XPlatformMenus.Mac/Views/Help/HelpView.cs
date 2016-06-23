@@ -29,5 +29,6 @@ namespace XPlatformMenus.Mac.Views
 		}
 
 		#endregion
+
 	}
 }
