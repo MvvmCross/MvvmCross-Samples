@@ -16,7 +16,7 @@ namespace XPlatformMenus.Mac.Views
 		AppKit.NSView MenuContentView { get; set; }
 
 		[Outlet]
-		AppKit.NSPageController PageContentPageController { get; set; }
+		AppKit.NSPageController PageController { get; set; }
 		
 		void ReleaseDesignerOutlets ()
 		{
@@ -25,9 +25,9 @@ namespace XPlatformMenus.Mac.Views
 				MenuContentView = null;
 			}
 
-			if (PageContentPageController != null) {
-				PageContentPageController.Dispose ();
-				PageContentPageController = null;
+			if (PageController != null) {
+				PageController.Dispose ();
+				PageController = null;
 			}
 		}
 	}
