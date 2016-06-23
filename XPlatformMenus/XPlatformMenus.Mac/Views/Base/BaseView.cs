@@ -26,6 +26,31 @@ namespace XPlatformMenus.Mac.Views
 		}
 
 		#endregion
+
+
+		public static Random randomGen = new Random();
+
+		public override void AwakeFromNib()
+		{
+			base.AwakeFromNib();
+			WantsLayer = true;
+		}
+
+		public override bool WantsUpdateLayer
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		public override void UpdateLayer()
+		{
+			base.UpdateLayer();
+
+			Layer.BackgroundColor =
+				     new CoreGraphics.CGColor(randomGen.Next(255)/255.0f, randomGen.Next(255)/255.0f, randomGen.Next(255)/255.0f, 255);
+		}
 	}
 }
 

@@ -14,6 +14,7 @@ namespace XPlatformMenus.Mac.Views
 		public MainView(IntPtr handle) : base(handle)
 		{
 			Initialize();
+
 		}
 
 		// Called when created directly from a XIB file
@@ -29,5 +30,6 @@ namespace XPlatformMenus.Mac.Views
 		}
 
 		#endregion
+
 	}
 }
