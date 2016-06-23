@@ -38,11 +38,11 @@ namespace XPlatformMenus.Mac.Views
 
 		#endregion
 
+		// https://developer.apple.com/reference/appkit/nspagecontroller
+
 		public void PopToRoot()
 		{
 			// TODO: while we can navigate back
-			PageContentPageController.NavigateBack(this);
-//			PageContentPageController.NavigateTo(PageContentPageController.ArrangedObjects[0]);
 		}
 
 		public void PlaceView(string region, NSView view)
@@ -51,7 +51,11 @@ namespace XPlatformMenus.Mac.Views
 			{
 				case "MenuContent":
 					// probably a PageController is not needed here
-					MenuContentPageController.View.AddSubview(view);
+					while (MenuContentView.Subviews.Any())
+					{
+						MenuContentView.Subviews[0].RemoveFromSuperview();
+					}
+					MenuContentView.AddSubview(view);
 					break;
 				case "PageContent":
 					PageContentPageController.NavigateForwardTo(NSObject.FromObject(view.GetType().ToString()));
