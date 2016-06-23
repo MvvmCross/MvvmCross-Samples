@@ -1,9 +1,26 @@
-﻿namespace XPlatformMenus.Mac.Views
-{
+// WARNING
+//
+// This file has been generated automatically by Xamarin Studio to store outlets and
+// actions made in the UI designer. If it is removed, they will be lost.
+// Manual changes to this file may not be handled correctly.
+//
+using Foundation;
+using System.CodeDom.Compiler;
 
-	// Should subclass AppKit.NSViewController
-	[Foundation.Register("ThirdViewController")]
-	public partial class ThirdViewController
+namespace XPlatformMenus.Mac.Views
+{
+	[Register ("ThirdViewController")]
+	partial class ThirdViewController
 	{
+		[Outlet]
+		AppKit.NSButton SaveAndCloseButton { get; set; }
+		
+		void ReleaseDesignerOutlets ()
+		{
+			if (SaveAndCloseButton != null) {
+				SaveAndCloseButton.Dispose ();
+				SaveAndCloseButton = null;
+			}
+		}
 	}
 }
