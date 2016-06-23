@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using AppKit;
+using Foundation;
 
 namespace XPlatformMenus.Mac.Views
 {
@@ -25,5 +27,23 @@ namespace XPlatformMenus.Mac.Views
 
             return ((MvxRegionAttribute)attributes.First()).Name;
         }
+
+		public static void SwapSubView(this NSView containerView, NSView targetView)
+		{
+			// we could add spacing to this 
+
+			while (containerView.Subviews.Any())
+			{
+				containerView.Subviews[0].RemoveFromSuperview();
+			}
+
+			targetView.TranslatesAutoresizingMaskIntoConstraints = false;
+			containerView.AddSubview(targetView);
+			NSDictionary views = NSDictionary.FromObjectAndKey(targetView, new NSString("target"));
+			containerView.AddConstraints(NSLayoutConstraint.FromVisualFormat(
+				"H:|[target]|", NSLayoutFormatOptions.None, null, views));
+			containerView.AddConstraints(NSLayoutConstraint.FromVisualFormat(
+				"V:|[target]|", NSLayoutFormatOptions.None, null, views));
+		}
     }
 }

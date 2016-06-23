@@ -71,18 +71,7 @@ namespace XPlatformMenus.Mac.Views
 
 			if (containerView != null)
 			{
-				while (containerView.Subviews.Any())
-				{
-					containerView.Subviews[0].RemoveFromSuperview();
-				}
-
-				targetView.TranslatesAutoresizingMaskIntoConstraints = false;
-				containerView.AddSubview(targetView);
-				NSDictionary views = NSDictionary.FromObjectAndKey(targetView, new NSString("target"));
-				containerView.AddConstraints(NSLayoutConstraint.FromVisualFormat(
-					"H:|-10-[target]-10-|", NSLayoutFormatOptions.None, null, views));
-				containerView.AddConstraints(NSLayoutConstraint.FromVisualFormat(
-					"V:|-10-[target]-10-|", NSLayoutFormatOptions.None, null, views));					
+				containerView.SwapSubView(targetView);
 			}
 		}
 
@@ -92,6 +81,17 @@ namespace XPlatformMenus.Mac.Views
 
 			PageController.Delegate = new PageControllerDelegate();
 			SplitView.Delegate = new SplitViewDelegate();
+
+			/*
+  			SplitView.TranslatesAutoresizingMaskIntoConstraints = false;
+			var containerView = View;
+			var targetView = SplitView;
+			NSDictionary views = NSDictionary.FromObjectAndKey(targetView, new NSString("target"));
+			containerView.AddConstraints(NSLayoutConstraint.FromVisualFormat(
+				"H:|[target]|", NSLayoutFormatOptions.None, null, views));
+			containerView.AddConstraints(NSLayoutConstraint.FromVisualFormat(
+				"V:|[target]|", NSLayoutFormatOptions.None, null, views));
+				*/
 		}
 
 		public override void ViewDidAppear()

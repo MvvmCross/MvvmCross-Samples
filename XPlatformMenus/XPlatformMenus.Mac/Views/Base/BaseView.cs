@@ -31,7 +31,6 @@ namespace XPlatformMenus.Mac.Views
 
 		#endregion
 
-
 		public static Random randomGen = new Random();
 
 		public override void AwakeFromNib()

@@ -3,7 +3,7 @@ using System.Linq;
 using AppKit;
 using Foundation;
 
-namespace XPlatformMenus.Mac
+namespace XPlatformMenus.Mac.Views
 {
 	public class PageControllerDelegate : NSPageControllerDelegate
 	{
@@ -20,18 +20,7 @@ namespace XPlatformMenus.Mac
 			var targetView = targetObject as NSView;
 			if (targetView != null)
 			{
-				while (containerView.Subviews.Any())
-				{
-					containerView.Subviews[0].RemoveFromSuperview();
-				}
-
-				targetView.TranslatesAutoresizingMaskIntoConstraints = false;
-				containerView.AddSubview(targetView);
-				NSDictionary views = NSDictionary.FromObjectAndKey(targetView, new NSString("target"));
-				containerView.AddConstraints(NSLayoutConstraint.FromVisualFormat(
-					"H:|-10-[target]-10-|", NSLayoutFormatOptions.None, null, views));
-				containerView.AddConstraints(NSLayoutConstraint.FromVisualFormat(
-					"V:|-10-[target]-10-|", NSLayoutFormatOptions.None, null, views));
+				containerView.SwapSubView(targetView);
 			}
 		}
 
