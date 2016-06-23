@@ -14,26 +14,24 @@ namespace XPlatformMenus.Mac
 
 		public override void DidTransition(NSPageController pageController, NSObject targetObject)
 		{
+			var containerView = pageController.View;
+
 			// in this case just swap the view with the stored view
 			var targetView = targetObject as NSView;
 			if (targetView != null)
 			{
-				// clear the deck
-				while (pageController.View.Subviews.Any())
+				while (containerView.Subviews.Any())
 				{
-					pageController.View.Subviews[0].RemoveFromSuperview();
+					containerView.Subviews[0].RemoveFromSuperview();
 				}
 
-				// prep the view
-				//targetView.TranslatesAutoresizingMaskIntoConstraints = false;
-				//targetView.AutoresizingMask = NSViewResizingMask.MinXMargin | NSViewResizingMask.MaxXMargin |
-				//	NSViewResizingMask.MinYMargin | NSViewResizingMask.MaxXMargin;
-
-				//pageController.View.AddConstraints(NSLayoutConstraint.FromVisualFormat(
-				//	"H:|-[target]-|", NSLayoutFormatOptions.None, "target", targetView));
-				//pageController.View.AddConstraints(NSLayoutConstraint.FromVisualFormat(
-				//	"V:|-[target]-|", NSLayoutFormatOptions.None, "target", targetView));
-				pageController.View.AddSubview(targetView);
+				targetView.TranslatesAutoresizingMaskIntoConstraints = false;
+				containerView.AddSubview(targetView);
+				NSDictionary views = NSDictionary.FromObjectAndKey(targetView, new NSString("target"));
+				containerView.AddConstraints(NSLayoutConstraint.FromVisualFormat(
+					"H:|-10-[target]-10-|", NSLayoutFormatOptions.None, null, views));
+				containerView.AddConstraints(NSLayoutConstraint.FromVisualFormat(
+					"V:|-10-[target]-10-|", NSLayoutFormatOptions.None, null, views));
 			}
 		}
 
