@@ -1,9 +1,11 @@
 ﻿using System;
 using Foundation;
 using MvvmCross.Binding.Mac.Views;
+using AppKit;
 
 namespace XPlatformMenus.Mac.Views
 {
+	[Register("BaseView")]
 	public class BaseView : MvxView
 	{
 		#region Constructors
@@ -23,6 +25,8 @@ namespace XPlatformMenus.Mac.Views
 		// Shared initialization code
 		void Initialize()
 		{
+			TranslatesAutoresizingMaskIntoConstraints = true;   // skip Auto-layout
+			AutoresizingMask = NSViewResizingMask.HeightSizable | NSViewResizingMask.WidthSizable;
 		}
 
 		#endregion

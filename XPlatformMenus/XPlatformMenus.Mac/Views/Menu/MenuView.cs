@@ -26,6 +26,7 @@ namespace XPlatformMenus.Mac.Views
 		// Shared initialization code
 		void Initialize()
 		{
+			AutoresizingMask = NSViewResizingMask.HeightSizable | NSViewResizingMask.WidthSizable;
 		}
 
 		#endregion

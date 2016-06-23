@@ -190,6 +190,7 @@
     <Compile Include="Views\MvxMacExtensionMethods.cs" />
     <Compile Include="Views\CustomViewPresenter.cs" />
     <Compile Include="Views\Base\PageControllerDelegate.cs" />
+    <Compile Include="Views\Base\SplitViewDelegate.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Main.storyboard" />
