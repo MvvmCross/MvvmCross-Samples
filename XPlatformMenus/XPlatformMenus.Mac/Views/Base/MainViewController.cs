@@ -42,10 +42,14 @@ namespace XPlatformMenus.Mac.Views
 
 		public void PopToRoot()
 		{
-			PageController.SelectedIndex = 0;
+			if (PageController.ArrangedObjects.Count() > 0)
+			{
+				PageController.SelectedIndex = 0;
+				PageController.ArrangedObjects = new NSObject[] { PageController.ArrangedObjects.First() };
+			}
 		}
 
-		public void PlaceView(string region, NSView view)
+		public void PlaceView(string region, NSView targetView)
 		{
 			switch (region)
 			{
@@ -55,10 +59,14 @@ namespace XPlatformMenus.Mac.Views
 					{
 						MenuContentView.Subviews[0].RemoveFromSuperview();
 					}
-					MenuContentView.AddSubview(view);
+					MenuContentView.AddSubview(targetView);
 					break;
 				case "PageContent":
-					PageController.NavigateForwardTo(view);
+					if (!PageController.ArrangedObjects.Any())
+					{
+						PageController.View.AddSubview(targetView);
+					}
+					PageController.NavigateForwardTo(targetView);
 					break;
 			}
 		}
