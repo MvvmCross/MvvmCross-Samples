@@ -71,27 +71,18 @@ namespace XPlatformMenus.Mac.Views
 
 			if (containerView != null)
 			{
-//				containerView.TranslatesAutoresizingMaskIntoConstraints = false;
-				//targetView.TranslatesAutoresizingMaskIntoConstraints = false;
-				//targetView.AutoresizingMask = NSViewResizingMask.MinXMargin | NSViewResizingMask.MaxXMargin |
-				//	NSViewResizingMask.MinYMargin | NSViewResizingMask.MaxXMargin; // | 
-//					NSViewResizingMask.HeightSizable | NSViewResizingMask.WidthSizable;
-
-				//targetView.AutoresizingMask = NSViewResizingMask.HeightSizable | NSViewResizingMask.WidthSizable;
-
 				while (containerView.Subviews.Any())
 				{
 					containerView.Subviews[0].RemoveFromSuperview();
 				}
 
-
-
-				// crashes why?
-				//containerView.AddConstraints(NSLayoutConstraint.FromVisualFormat(
-				//	"H:|[target]|", NSLayoutFormatOptions.None, "target", targetView)); 
-				//containerView.AddConstraints(NSLayoutConstraint.FromVisualFormat(
-				//	"V:|-[target]-|", NSLayoutFormatOptions.None, "target", targetView));
+				targetView.TranslatesAutoresizingMaskIntoConstraints = false;
 				containerView.AddSubview(targetView);
+				NSDictionary views = NSDictionary.FromObjectAndKey(targetView, new NSString("target"));
+				containerView.AddConstraints(NSLayoutConstraint.FromVisualFormat(
+					"H:|-10-[target]-10-|", NSLayoutFormatOptions.None, null, views));
+				containerView.AddConstraints(NSLayoutConstraint.FromVisualFormat(
+					"V:|-10-[target]-10-|", NSLayoutFormatOptions.None, null, views));					
 			}
 		}
 
