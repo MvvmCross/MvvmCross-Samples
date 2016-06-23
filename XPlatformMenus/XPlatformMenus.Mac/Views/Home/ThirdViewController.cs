@@ -1,8 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using Foundation;
-using AppKit;
+using MvvmCross.Binding.BindingContext;
+using XPlatformMenus.Core.ViewModels;
 
 namespace XPlatformMenus.Mac.Views
 {
@@ -35,6 +34,15 @@ namespace XPlatformMenus.Mac.Views
 		}
 
 		#endregion
+
+		public override void ViewDidLoad()
+		{
+			base.ViewDidLoad();
+
+			var set = this.CreateBindingSet<ThirdViewController, ThirdViewModel>();
+			set.Bind(SaveAndCloseButton).To(vm => vm.SaveAndCloseCommand);
+			set.Apply();
+		}
 
 		//strongly typed view accessor
 		public new ThirdView View
