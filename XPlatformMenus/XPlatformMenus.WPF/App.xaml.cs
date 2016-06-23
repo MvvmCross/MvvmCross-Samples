@@ -1,7 +1,10 @@
 ﻿using MvvmCross.Core.ViewModels;
+using MvvmCross.Core.Views;
 using MvvmCross.Platform;
 using MvvmCross.Wpf.Views;
 using System.Windows;
+using XPlatformMenus.Core.ViewModels;
+using XPlatformMenus.WPF.Views;
 
 namespace XPlatformMenus.WPF
 {
@@ -14,7 +17,7 @@ namespace XPlatformMenus.WPF
 
         void DoSetup()
         {
-            var presenter = new MvxSimpleWpfViewPresenter(MainWindow);
+            var presenter = new CustomViewPresenter(MainWindow);
 
             var setup = new Setup(Dispatcher, presenter);
             setup.Initialize();

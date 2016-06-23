@@ -9,10 +9,10 @@
 
 	<Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-		<StackPanel>
-			<TextBox Text="{Binding Username}" PlaceholderText="User name..." />
-			<PasswordBox Password="{Binding Password}" PlaceholderText="Password..." />
-			<Button Content="Login" Command="{Binding LoginCommand}" />
+		<StackPanel Margin="10">
+			<TextBox Margin="1" Text="{Binding Username}" PlaceholderText="User name..." />
+			<PasswordBox Margin="1" Password="{Binding Password}" PlaceholderText="Password..." />
+			<Button Margin="1" Content="Login" Command="{Binding LoginCommand}" />
 			<!--<ProgressBar IsIndeterminate="True" />-->
 		</StackPanel>
 
