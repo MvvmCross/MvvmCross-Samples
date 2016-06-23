@@ -8,7 +8,7 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>TipCalc.UI.iOS</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
-    <AssemblyName>TipCalcUIiOS</AssemblyName>
+    <AssemblyName>TipCalc.UI.Mac</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
     <DebugSymbols>true</DebugSymbols>
