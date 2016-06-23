@@ -5,6 +5,7 @@ using MvvmCross.Core.Views;
 using MvvmCross.Mac.Views;
 using MvvmCross.Mac.Views.Presenters;
 using MvvmCross.Platform;
+using System.Linq;
 
 namespace XPlatformMenus.Mac.Views
 {
@@ -24,16 +25,23 @@ namespace XPlatformMenus.Mac.Views
 				// where is the view loader?
 				var loader = Mvx.Resolve<IMvxMacViewCreator>();
 				var view = loader.CreateView(request);
+				var viewController = view as NSViewController;
 
-				var mainViewController = Window.ContentViewController as MainViewController;
-				if (mainViewController != null)
+				if (Window.ContentView.Subviews.Any())
 				{
-					var targetViewController = view as NSViewController;
-
-					mainViewController.PlaceView(viewType.GetRegionName(), targetViewController.View);
+					// there should be 1, and it should be the MainView
+					var mainView = Window.ContentView.Subviews[0];
+					if (mainView is MainView)
+					{
+						var mainViewController = mainView.NextResponder as MainViewController;
+						if (mainViewController != null)
+						{
+							mainViewController.PlaceView(viewType.GetRegionName(), viewController.View);
+						}
+					}
 					return;
 				}
-            }
+			}
             
             base.Show(request);
         }

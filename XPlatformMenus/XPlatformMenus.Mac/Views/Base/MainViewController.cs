@@ -60,6 +60,11 @@ namespace XPlatformMenus.Mac.Views
 		public override void ViewDidLoad()
 		{
 			base.ViewDidLoad();
+		}
+
+		public override void ViewDidAppear()
+		{
+			base.ViewDidAppear();
 
 			ViewModel.ShowMenu();
 		}
