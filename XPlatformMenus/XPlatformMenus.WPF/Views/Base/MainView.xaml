@@ -1,0 +1,14 @@
+﻿<local:BaseView x:Class="XPlatformMenus.WPF.Views.MainView"
+             xmlns:h="clr-namespace:HamburgerMenu;assembly=HamburgerMenu"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:XPlatformMenus.WPF.Views"
+             mc:Ignorable="d" Loaded="MainView_Loaded"
+             d:DesignHeight="300" d:DesignWidth="300">
+    <DockPanel>
+        <Frame DockPanel.Dock="Left" x:Name="MenuContent" NavigationUIVisibility="Hidden"></Frame>
+        <Frame x:Name="PageContent" NavigationUIVisibility="Hidden"></Frame>
+    </DockPanel>
+</local:BaseView>
