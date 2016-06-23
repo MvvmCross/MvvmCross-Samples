@@ -42,7 +42,7 @@ namespace XPlatformMenus.Mac.Views
 
 		public void PopToRoot()
 		{
-			// TODO: while we can navigate back
+			PageController.SelectedIndex = 0;
 		}
 
 		public void PlaceView(string region, NSView view)
@@ -58,12 +58,7 @@ namespace XPlatformMenus.Mac.Views
 					MenuContentView.AddSubview(view);
 					break;
 				case "PageContent":
-					PageContentPageController.NavigateForwardTo(NSObject.FromObject(view.GetType().ToString()));
-					while (PageContentPageController.View.Subviews.Any())
-					{
-						PageContentPageController.View.Subviews[0].RemoveFromSuperview();
-					}
-					PageContentPageController.View.AddSubview(view);
+					PageController.NavigateForwardTo(view);
 					break;
 			}
 		}
@@ -71,6 +66,8 @@ namespace XPlatformMenus.Mac.Views
 		public override void ViewDidLoad()
 		{
 			base.ViewDidLoad();
+
+			PageController.Delegate = new PageControllerDelegate();
 		}
 
 		public override void ViewDidAppear()
