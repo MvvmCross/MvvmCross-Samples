@@ -51,23 +51,47 @@ namespace XPlatformMenus.Mac.Views
 
 		public void PlaceView(string region, NSView targetView)
 		{
+			NSView containerView = null;
+
 			switch (region)
 			{
 				case "MenuContent":
-					// probably a PageController is not needed here
-					while (MenuContentView.Subviews.Any())
-					{
-						MenuContentView.Subviews[0].RemoveFromSuperview();
-					}
-					MenuContentView.AddSubview(targetView);
+					containerView = MenuContentView;
 					break;
 				case "PageContent":
-					if (!PageController.ArrangedObjects.Any())
+					if (PageController.ArrangedObjects.Any())
 					{
-						PageController.View.AddSubview(targetView);
+						PageController.NavigateForwardTo(targetView);
+						return;
 					}
+					containerView = PageController.View;
 					PageController.NavigateForwardTo(targetView);
 					break;
+			}
+
+			if (containerView != null)
+			{
+//				containerView.TranslatesAutoresizingMaskIntoConstraints = false;
+				//targetView.TranslatesAutoresizingMaskIntoConstraints = false;
+				//targetView.AutoresizingMask = NSViewResizingMask.MinXMargin | NSViewResizingMask.MaxXMargin |
+				//	NSViewResizingMask.MinYMargin | NSViewResizingMask.MaxXMargin; // | 
+//					NSViewResizingMask.HeightSizable | NSViewResizingMask.WidthSizable;
+
+				//targetView.AutoresizingMask = NSViewResizingMask.HeightSizable | NSViewResizingMask.WidthSizable;
+
+				while (containerView.Subviews.Any())
+				{
+					containerView.Subviews[0].RemoveFromSuperview();
+				}
+
+
+
+				// crashes why?
+				//containerView.AddConstraints(NSLayoutConstraint.FromVisualFormat(
+				//	"H:|[target]|", NSLayoutFormatOptions.None, "target", targetView)); 
+				//containerView.AddConstraints(NSLayoutConstraint.FromVisualFormat(
+				//	"V:|-[target]-|", NSLayoutFormatOptions.None, "target", targetView));
+				containerView.AddSubview(targetView);
 			}
 		}
 
@@ -76,6 +100,7 @@ namespace XPlatformMenus.Mac.Views
 			base.ViewDidLoad();
 
 			PageController.Delegate = new PageControllerDelegate();
+			SplitView.Delegate = new SplitViewDelegate();
 		}
 
 		public override void ViewDidAppear()

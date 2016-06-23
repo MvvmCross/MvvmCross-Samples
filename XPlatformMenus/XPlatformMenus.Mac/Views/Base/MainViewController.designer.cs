@@ -17,6 +17,9 @@ namespace XPlatformMenus.Mac.Views
 
 		[Outlet]
 		AppKit.NSPageController PageController { get; set; }
+
+		[Outlet]
+		AppKit.NSSplitView SplitView { get; set; }
 		
 		void ReleaseDesignerOutlets ()
 		{
@@ -28,6 +31,11 @@ namespace XPlatformMenus.Mac.Views
 			if (PageController != null) {
 				PageController.Dispose ();
 				PageController = null;
+			}
+
+			if (SplitView != null) {
+				SplitView.Dispose ();
+				SplitView = null;
 			}
 		}
 	}
