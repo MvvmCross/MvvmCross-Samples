@@ -1,9 +1,42 @@
-﻿namespace XPlatformMenus.Mac.Views
-{
+// WARNING
+//
+// This file has been generated automatically by Xamarin Studio to store outlets and
+// actions made in the UI designer. If it is removed, they will be lost.
+// Manual changes to this file may not be handled correctly.
+//
+using Foundation;
+using System.CodeDom.Compiler;
 
-	// Should subclass AppKit.NSViewController
-	[Foundation.Register("MenuViewController")]
-	public partial class MenuViewController
+namespace XPlatformMenus.Mac.Views
+{
+	[Register ("MenuViewController")]
+	partial class MenuViewController
 	{
+		[Outlet]
+		AppKit.NSButton HelpButton { get; set; }
+
+		[Outlet]
+		AppKit.NSButton HomeButton { get; set; }
+
+		[Outlet]
+		AppKit.NSButton SettingsButton { get; set; }
+		
+		void ReleaseDesignerOutlets ()
+		{
+			if (HomeButton != null) {
+				HomeButton.Dispose ();
+				HomeButton = null;
+			}
+
+			if (HelpButton != null) {
+				HelpButton.Dispose ();
+				HelpButton = null;
+			}
+
+			if (SettingsButton != null) {
+				SettingsButton.Dispose ();
+				SettingsButton = null;
+			}
+		}
 	}
 }
