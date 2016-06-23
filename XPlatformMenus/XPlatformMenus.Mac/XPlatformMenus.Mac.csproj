@@ -184,6 +184,11 @@
     <Compile Include="ViewController.designer.cs">
       <DependentUpon>ViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\MvxRegionAttribute.cs" />
+    <Compile Include="Views\MvxMultiRegionMacViewPresenter.cs" />
+    <Compile Include="Views\MvxPanelPopToRootPresentationHint.cs" />
+    <Compile Include="Views\MvxMacExtensionMethods.cs" />
+    <Compile Include="Views\CustomViewPresenter.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Main.storyboard" />

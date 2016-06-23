@@ -10,7 +10,7 @@ using XPlatformMenus.Core.ViewModels;
 
 namespace XPlatformMenus.Mac.Views
 {
-	public class BaseViewController : MvxViewController
+	public class BaseViewController<TViewModel> : MvxViewController where TViewModel : BaseViewModel
 	{
 		#region Constructors
 
@@ -38,6 +38,17 @@ namespace XPlatformMenus.Mac.Views
 		}
 
 		#endregion
+
+		#region Fields
+
+		public new TViewModel ViewModel
+		{
+			get { return (TViewModel)base.ViewModel; }
+			set { base.ViewModel = value; }
+		}
+
+		#endregion
+
 	}
 }
 

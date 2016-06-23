@@ -1,12 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using Foundation;
-using AppKit;
+using MvvmCross.Binding.BindingContext;
+using XPlatformMenus.Core.ViewModels;
 
 namespace XPlatformMenus.Mac.Views
 {
-	public partial class MenuViewController : BaseViewController
+	[MvxRegion("MenuContent")]
+	public partial class MenuViewController : BaseViewController<MenuViewModel>
 	{
 		#region Constructors
 
@@ -35,6 +35,18 @@ namespace XPlatformMenus.Mac.Views
 		}
 
 		#endregion
+
+
+		public override void ViewDidLoad()
+		{
+			base.ViewDidLoad();
+
+			var set = this.CreateBindingSet<MenuViewController, MenuViewModel>();
+			set.Bind(HomeButton).To(vm => vm.ShowHomeCommand);
+			set.Bind(HelpButton).To(vm => vm.ShowHelpCommand);
+			set.Bind(SettingsButton).To(vm => vm.ShowSettingCommand);
+			set.Apply();
+		}
 
 		//strongly typed view accessor
 		public new MenuView View

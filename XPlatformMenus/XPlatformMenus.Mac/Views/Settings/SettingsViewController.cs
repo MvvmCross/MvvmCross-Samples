@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using Foundation;
 using AppKit;
+using XPlatformMenus.Core.ViewModels;
 
 namespace XPlatformMenus.Mac.Views
 {
-	public partial class SettingsViewController : BaseViewController
+	[MvxRegion("PageContent")]
+	public partial class SettingsViewController : BaseViewController<SettingsViewModel>
 	{
 		#region Constructors
 

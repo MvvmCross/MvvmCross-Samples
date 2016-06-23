@@ -5,7 +5,8 @@ using XPlatformMenus.Core.ViewModels;
 
 namespace XPlatformMenus.Mac.Views
 {
-	public partial class InfoViewController : BaseViewController
+	[MvxRegion("PageContent")]
+	public partial class InfoViewController : BaseViewController<InfoViewModel>
 	{
 		#region Constructors
 

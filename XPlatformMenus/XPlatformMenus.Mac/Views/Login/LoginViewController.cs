@@ -5,7 +5,7 @@ using XPlatformMenus.Core.ViewModels;
 
 namespace XPlatformMenus.Mac.Views
 {
-	public partial class LoginViewController : BaseViewController
+	public partial class LoginViewController : BaseViewController<LoginViewModel>
 	{
 		#region Constructors
 
