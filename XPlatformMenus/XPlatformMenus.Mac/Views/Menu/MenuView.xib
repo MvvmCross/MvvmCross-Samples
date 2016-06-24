@@ -17,29 +17,29 @@
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customView placeholderIntrinsicWidth="109" placeholderIntrinsicHeight="127" id="4" customClass="MenuView">
-            <rect key="frame" x="0.0" y="0.0" width="109" height="127"/>
+            <rect key="frame" x="0.0" y="0.0" width="177" height="158"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
-                <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="clV-iq-Mgf">
-                    <rect key="frame" x="15" y="24" width="79" height="79"/>
+                <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" misplaced="YES" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="clV-iq-Mgf">
+                    <rect key="frame" x="15" y="55" width="99" height="79"/>
                     <subviews>
                         <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Ml2-kS-Q3h">
-                            <rect key="frame" x="-6" y="51" width="91" height="32"/>
-                            <buttonCell key="cell" type="push" title="Home" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Nuf-uB-0Km">
+                            <rect key="frame" x="-6" y="51" width="111" height="32"/>
+                            <buttonCell key="cell" type="push" title="Home" bezelStyle="rounded" image="NSHomeTemplate" imagePosition="left" alignment="center" borderStyle="border" imageScaling="proportionallyDown" sound="Ping" inset="2" id="Nuf-uB-0Km">
                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                 <font key="font" metaFont="system"/>
                             </buttonCell>
                         </button>
                         <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="N9s-Ib-xUo">
-                            <rect key="frame" x="-6" y="22" width="91" height="32"/>
-                            <buttonCell key="cell" type="push" title="Help" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="M23-ls-fdj">
+                            <rect key="frame" x="-6" y="22" width="111" height="32"/>
+                            <buttonCell key="cell" type="push" title="Help" bezelStyle="rounded" image="NSInfo" imagePosition="left" alignment="center" borderStyle="border" imageScaling="proportionallyDown" sound="Basso" inset="2" id="M23-ls-fdj">
                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                 <font key="font" metaFont="system"/>
                             </buttonCell>
                         </button>
-                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="AhK-5q-cT9">
-                            <rect key="frame" x="-6" y="-7" width="91" height="32"/>
-                            <buttonCell key="cell" type="push" title="Settings" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="47b-ht-EYm">
+                        <button verticalHuggingPriority="750" allowsExpansionToolTips="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AhK-5q-cT9">
+                            <rect key="frame" x="-6" y="-7" width="111" height="32"/>
+                            <buttonCell key="cell" type="push" title="Settings" bezelStyle="rounded" image="NSActionTemplate" imagePosition="left" alignment="center" borderStyle="border" sound="Frog" inset="2" id="47b-ht-EYm">
                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                 <font key="font" metaFont="system"/>
                             </buttonCell>
@@ -65,7 +65,15 @@
                 <constraint firstItem="clV-iq-Mgf" firstAttribute="centerY" secondItem="4" secondAttribute="centerY" id="p7N-lu-ZXA"/>
                 <constraint firstItem="clV-iq-Mgf" firstAttribute="centerX" secondItem="4" secondAttribute="centerX" id="ztk-tP-Lj7"/>
             </constraints>
-            <point key="canvasLocation" x="312.5" y="160.5"/>
+            <point key="canvasLocation" x="346.5" y="176"/>
         </customView>
     </objects>
+    <resources>
+        <image name="NSActionTemplate" width="14" height="14"/>
+        <image name="NSHomeTemplate" width="14" height="14"/>
+        <image name="NSInfo" width="32" height="32"/>
+        <sound name="Basso"/>
+        <sound name="Frog"/>
+        <sound name="Ping"/>
+    </resources>
 </document>
