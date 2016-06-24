@@ -20,8 +20,8 @@
             <rect key="frame" x="0.0" y="0.0" width="177" height="158"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
-                <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" misplaced="YES" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="clV-iq-Mgf">
-                    <rect key="frame" x="15" y="55" width="99" height="79"/>
+                <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="clV-iq-Mgf">
+                    <rect key="frame" x="39" y="69" width="99" height="79"/>
                     <subviews>
                         <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Ml2-kS-Q3h">
                             <rect key="frame" x="-6" y="51" width="111" height="32"/>
@@ -62,8 +62,8 @@
                 </stackView>
             </subviews>
             <constraints>
-                <constraint firstItem="clV-iq-Mgf" firstAttribute="centerY" secondItem="4" secondAttribute="centerY" id="p7N-lu-ZXA"/>
-                <constraint firstItem="clV-iq-Mgf" firstAttribute="centerX" secondItem="4" secondAttribute="centerX" id="ztk-tP-Lj7"/>
+                <constraint firstItem="clV-iq-Mgf" firstAttribute="centerX" secondItem="4" secondAttribute="centerX" id="18A-b2-YaH"/>
+                <constraint firstItem="clV-iq-Mgf" firstAttribute="top" secondItem="4" secondAttribute="top" constant="10" id="p7N-lu-ZXA"/>
             </constraints>
             <point key="canvasLocation" x="346.5" y="176"/>
         </customView>
