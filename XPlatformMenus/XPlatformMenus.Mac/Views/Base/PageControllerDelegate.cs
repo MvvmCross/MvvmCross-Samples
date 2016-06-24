@@ -7,6 +7,9 @@ namespace XPlatformMenus.Mac.Views
 {
 	public class PageControllerDelegate : NSPageControllerDelegate
 	{
+		// See https://developer.apple.com/library/mac/releasenotes/WindowsViews/NSPageControllerDelegate_Protocol/#//apple_ref/occ/intfm/NSPageControllerDelegate/pageController:identifierForObject:
+		// Perhaps we should be using the ViewController code
+
 		public override void WillStartLiveTransition(NSPageController pageController)
 		{
 //			base.WillStartLiveTransition(pageController);
