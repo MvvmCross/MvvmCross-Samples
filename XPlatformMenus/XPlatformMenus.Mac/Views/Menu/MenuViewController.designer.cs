@@ -19,23 +19,31 @@ namespace XPlatformMenus.Mac.Views
 		AppKit.NSButton HomeButton { get; set; }
 
 		[Outlet]
+		AppKit.NSOutlineView MenuOutlineView { get; set; }
+
+		[Outlet]
 		AppKit.NSButton SettingsButton { get; set; }
 		
 		void ReleaseDesignerOutlets ()
 		{
-			if (HomeButton != null) {
-				HomeButton.Dispose ();
-				HomeButton = null;
-			}
-
 			if (HelpButton != null) {
 				HelpButton.Dispose ();
 				HelpButton = null;
 			}
 
+			if (HomeButton != null) {
+				HomeButton.Dispose ();
+				HomeButton = null;
+			}
+
 			if (SettingsButton != null) {
 				SettingsButton.Dispose ();
 				SettingsButton = null;
+			}
+
+			if (MenuOutlineView != null) {
+				MenuOutlineView.Dispose ();
+				MenuOutlineView = null;
 			}
 		}
 	}

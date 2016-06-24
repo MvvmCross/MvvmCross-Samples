@@ -192,6 +192,9 @@
     <Compile Include="Views\Base\PageControllerDelegate.cs" />
     <Compile Include="Views\Base\SplitViewDelegate.cs" />
     <Compile Include="Views\Base\CustomSplitView.cs" />
+    <Compile Include="Views\Menu\MenuOutlineDelegate.cs" />
+    <Compile Include="Views\Menu\MenuOutlineDataSource.cs" />
+    <Compile Include="Views\Menu\MenuObj.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Main.storyboard" />
