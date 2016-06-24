@@ -33,6 +33,9 @@
                         </textField>
                         <secureTextField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="rPw-Ro-Z0P">
                             <rect key="frame" x="0.0" y="29" width="200" height="22"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="200" id="J5R-ej-9dc"/>
+                            </constraints>
                             <secureTextFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" usesSingleLineMode="YES" id="tPA-ye-TVd">
                                 <font key="font" metaFont="system"/>
                                 <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -43,13 +46,17 @@
                             </secureTextFieldCell>
                         </secureTextField>
                         <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="cHf-Eg-Ki5">
-                            <rect key="frame" x="-6" y="-7" width="77" height="32"/>
+                            <rect key="frame" x="-6" y="-7" width="212" height="32"/>
                             <buttonCell key="cell" type="push" title="Log in" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="860-kt-VFT">
                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                 <font key="font" metaFont="system"/>
                             </buttonCell>
                         </button>
                     </subviews>
+                    <constraints>
+                        <constraint firstItem="cHf-Eg-Ki5" firstAttribute="leading" secondItem="D4T-Fh-qes" secondAttribute="leading" id="J5V-FB-o8G"/>
+                        <constraint firstAttribute="trailing" secondItem="cHf-Eg-Ki5" secondAttribute="trailing" id="h5F-14-462"/>
+                    </constraints>
                     <visibilityPriorities>
                         <integer value="1000"/>
                         <integer value="1000"/>
@@ -63,9 +70,8 @@
                 </stackView>
             </subviews>
             <constraints>
-                <constraint firstItem="D4T-Fh-qes" firstAttribute="centerY" secondItem="4" secondAttribute="centerY" id="4LQ-qM-uaC"/>
-                <constraint firstItem="D4T-Fh-qes" firstAttribute="centerX" secondItem="4" secondAttribute="centerX" id="Aym-dG-q7K"/>
-                <constraint firstItem="D4T-Fh-qes" firstAttribute="leading" secondItem="4" secondAttribute="leading" constant="135" id="fpA-J3-KS8"/>
+                <constraint firstItem="D4T-Fh-qes" firstAttribute="centerX" secondItem="4" secondAttribute="centerX" id="GrV-Ve-Vlf"/>
+                <constraint firstItem="D4T-Fh-qes" firstAttribute="centerY" secondItem="4" secondAttribute="centerY" id="l4E-gq-KKv"/>
             </constraints>
             <point key="canvasLocation" x="340" y="386"/>
         </customView>
