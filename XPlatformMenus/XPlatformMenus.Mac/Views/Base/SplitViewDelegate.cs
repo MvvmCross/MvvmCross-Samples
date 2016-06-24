@@ -1,5 +1,7 @@
 ﻿using System;
 using AppKit;
+using MvvmCross.Platform;
+using MvvmCross.Platform.Platform;
 
 namespace XPlatformMenus.Mac.Views
 {
@@ -7,7 +9,8 @@ namespace XPlatformMenus.Mac.Views
 	{
 		public override void Resize(NSSplitView splitView, CoreGraphics.CGSize oldSize)
 		{
-//			base.Resize(splitView, oldSize);
+			//Mvx.Trace(MvxTraceLevel.Diagnostic,oldSize.Width.ToString());
+			splitView.AdjustSubviews();
 		}
 	}
 }
