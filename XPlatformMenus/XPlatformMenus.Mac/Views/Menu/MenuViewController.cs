@@ -48,6 +48,10 @@ namespace XPlatformMenus.Mac.Views
 			menuItems.AddItem("Help", "help.png", () => { ViewModel.ShowHelpCommand.Execute(); });
 			menuItems.AddItem("Settings", "settings.png", () => { ViewModel.ShowSettingCommand.Execute(); });
 
+
+			// TODO: There is a really odd bug here, if the Window covers the super category "Pages", the buttons
+			// will stop working.
+
 			MenuListView.AddItem(menuItems);
 			MenuListView.ReloadData();
 			MenuListView.ExpandItem(null, true);
