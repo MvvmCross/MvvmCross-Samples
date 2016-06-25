@@ -25,12 +25,13 @@ namespace XPlatformMenus.Mac.Views
 		// Shared initialization code
 		void Initialize()
 		{
-			TranslatesAutoresizingMaskIntoConstraints = true;   // skip Auto-layout
-			AutoresizingMask = NSViewResizingMask.HeightSizable | NSViewResizingMask.WidthSizable;
+			//TranslatesAutoresizingMaskIntoConstraints = true;   // skip Auto-layout
+			//AutoresizingMask = NSViewResizingMask.HeightSizable | NSViewResizingMask.WidthSizable;
 		}
 
 		#endregion
 
+		/*
 		public static Random randomGen = new Random();
 
 		public override void AwakeFromNib()
@@ -54,6 +55,7 @@ namespace XPlatformMenus.Mac.Views
 			Layer.BackgroundColor =
 				     new CoreGraphics.CGColor(randomGen.Next(255)/255.0f, randomGen.Next(255)/255.0f, randomGen.Next(255)/255.0f, 255);
 		}
+		*/
 	}
 }
 
