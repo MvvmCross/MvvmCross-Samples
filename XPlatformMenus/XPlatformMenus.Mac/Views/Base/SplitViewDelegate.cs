@@ -10,7 +10,19 @@ namespace XPlatformMenus.Mac.Views
 		public override void Resize(NSSplitView splitView, CoreGraphics.CGSize oldSize)
 		{
 			//Mvx.Trace(MvxTraceLevel.Diagnostic,oldSize.Width.ToString());
+
 			splitView.AdjustSubviews();
+
+		}
+
+		public override nfloat SetMinCoordinateOfSubview(NSSplitView splitView, nfloat proposedMinimumPosition, nint subviewDividerIndex)
+		{
+			return 55.0f;
+		}
+
+		public override nfloat SetMaxCoordinateOfSubview(NSSplitView splitView, nfloat proposedMaximumPosition, nint subviewDividerIndex)
+		{
+			return 120.0f;
 		}
 	}
 }

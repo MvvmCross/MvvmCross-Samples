@@ -36,6 +36,7 @@ namespace XPlatformMenus.Mac.Views
 			{
 				containerView.Subviews[0].RemoveFromSuperview();
 			}
+			containerView.RemoveConstraints(containerView.Constraints);
 
 			targetView.TranslatesAutoresizingMaskIntoConstraints = false;
 			containerView.AddSubview(targetView);
