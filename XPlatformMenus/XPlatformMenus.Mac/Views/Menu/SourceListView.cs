@@ -1,5 +1,6 @@
 ﻿using System;
 using AppKit;
+using CoreGraphics;
 using Foundation;
 
 namespace XPlatformMenus.Mac.Views
