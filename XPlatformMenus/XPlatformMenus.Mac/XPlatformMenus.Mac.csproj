@@ -103,6 +103,7 @@
     <Folder Include="Views\Settings\" />
     <Folder Include="Views\Home\" />
     <Folder Include="Services\" />
+    <Folder Include="Assets\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -195,6 +196,10 @@
     <Compile Include="Views\Menu\MenuOutlineDelegate.cs" />
     <Compile Include="Views\Menu\MenuOutlineDataSource.cs" />
     <Compile Include="Views\Menu\MenuObj.cs" />
+    <Compile Include="Views\Menu\SourceListItem.cs" />
+    <Compile Include="Views\Menu\SourceListDataSource.cs" />
+    <Compile Include="Views\Menu\SourceListDelegate.cs" />
+    <Compile Include="Views\Menu\SourceListView.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Main.storyboard" />
@@ -212,6 +217,11 @@
       <Project>{C23A254A-EEC5-4BD7-B1F6-D01060BAC88B}</Project>
       <Name>XPlatformMenus.Core</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="help.png" />
+    <BundleResource Include="home.png" />
+    <BundleResource Include="settings.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Mac\Xamarin.Mac.CSharp.targets" />
 </Project>

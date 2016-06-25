@@ -13,37 +13,13 @@ namespace XPlatformMenus.Mac.Views
 	partial class MenuViewController
 	{
 		[Outlet]
-		AppKit.NSButton HelpButton { get; set; }
-
-		[Outlet]
-		AppKit.NSButton HomeButton { get; set; }
-
-		[Outlet]
-		AppKit.NSOutlineView MenuOutlineView { get; set; }
-
-		[Outlet]
-		AppKit.NSButton SettingsButton { get; set; }
+		XPlatformMenus.Mac.Views.SourceListView MenuListView { get; set; }
 		
 		void ReleaseDesignerOutlets ()
 		{
-			if (HelpButton != null) {
-				HelpButton.Dispose ();
-				HelpButton = null;
-			}
-
-			if (HomeButton != null) {
-				HomeButton.Dispose ();
-				HomeButton = null;
-			}
-
-			if (SettingsButton != null) {
-				SettingsButton.Dispose ();
-				SettingsButton = null;
-			}
-
-			if (MenuOutlineView != null) {
-				MenuOutlineView.Dispose ();
-				MenuOutlineView = null;
+			if (MenuListView != null) {
+				MenuListView.Dispose ();
+				MenuListView = null;
 			}
 		}
 	}
