@@ -19,6 +19,19 @@ namespace XPlatformMenus.Mac.Views
 		#endregion
 
 		#region Override Methods
+		public override nfloat GetRowHeight(NSOutlineView outlineView, NSObject item)
+		{
+			// if it is a HeaderCell, we should resize
+			if (((SourceListItem)item).HasChildren)
+			{
+				return 17.0f;
+			}
+			else 
+			{
+				return 26.0f;
+			}
+		}
+
 		public override bool ShouldEditTableColumn(NSOutlineView outlineView, NSTableColumn tableColumn, Foundation.NSObject item)
 		{
 			return false;
@@ -47,6 +60,7 @@ namespace XPlatformMenus.Mac.Views
 			else {
 				view = (NSTableCellView)outlineView.MakeView("DataCell", this);
 				view.ImageView.Image = ((SourceListItem)item).Icon;
+
 			}
 
 			// Initialize view
