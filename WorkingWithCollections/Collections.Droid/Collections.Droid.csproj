@@ -117,6 +117,7 @@
     <Compile Include="Views\MainMenuView.cs" />
     <Compile Include="Bootstrap\DownloadCachePluginBootstrap.cs" />
     <Compile Include="Bootstrap\FilePluginBootstrap.cs" />
+    <Compile Include="Views\ExpandableView.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -140,6 +141,10 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <None Include="packages.config" />
+    <AndroidResource Include="Resources\Layout\Page_ExpandableView.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\Layout\ListItem_ExpandableGroup.axml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\Layout\SplashScreen.axml" />

@@ -4,6 +4,7 @@ using Collections.Core.ViewModels.Samples.MultipleListItemTypes;
 using Collections.Core.ViewModels.Samples.SmallDynamic;
 using Collections.Core.ViewModels.Samples.SmallFixed;
 using Collections.Core.ViewModels.Samples.SpecificPositions;
+using Collections.Core.ViewModels.Samples.Expandable;
 using System;
 using System.Collections.Generic;
 using System.Windows.Input;
@@ -23,6 +24,7 @@ namespace Collections.Core.ViewModels
                     new MenuItem("Large Dynamic Collection", this, typeof (LargeDynamicViewModel)),
                     new MenuItem("Polymorphic Collection", this, typeof (PolymorphicListItemTypesViewModel)),
                     new MenuItem("Specific Positions Collection", this, typeof (SpecificPositionsViewModel)),
+					new MenuItem("Expandable Collection", this, typeof (ExpandableViewModel)),
                 };
         }
 

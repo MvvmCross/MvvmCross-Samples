@@ -54,6 +54,7 @@
     <Compile Include="ViewModels\Samples\1. SmallFixed\SmallFixedViewModel.cs" />
     <Compile Include="ViewModels\Samples\5. PolymorphicListItemTypes\PolymorphicListItemTypesViewModel.cs" />
     <Compile Include="ViewModels\Samples\6. SpecificPositions\SpecificPositionsViewModel.cs" />
+    <Compile Include="ViewModels\Samples\7. Expandable\ExpandableViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -86,5 +87,8 @@
   -->
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ViewModels\Samples\7. Expandable\" />
   </ItemGroup>
 </Project>
