@@ -14,6 +14,11 @@ namespace XPlatformMenus.Mac.Views
 			DataSource = dataSource;
 		}
 
+		public override bool IsGroupItem(NSOutlineView outlineView, Foundation.NSObject item)
+		{
+			return false;
+		}
+		/*
 		public override NSView GetView(NSOutlineView outlineView, NSTableColumn tableColumn, Foundation.NSObject item)
 		{
 			NSTextView view = (NSTextView)outlineView.MakeView(
@@ -31,6 +36,7 @@ namespace XPlatformMenus.Mac.Views
 			view.Value = menuObj.Title;
 			return view;
 		}
+		*/
 	}
 }
 
