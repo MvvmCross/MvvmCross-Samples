@@ -1,6 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using Collections.Core.ViewModels.Samples.ListItems;
+﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace Collections.Core.ViewModels.Samples.Expandable
 {
@@ -12,26 +11,13 @@ namespace Collections.Core.ViewModels.Samples.Expandable
 		{
 			var kittenGroups = new List<KittenGroup>();
 
-			for (int i = 0; i < 6; i++)
-			{
-				var kittenGroup = new KittenGroup();
-				kittenGroup.Title = $"Kittens Group {i + 1}";
-				kittenGroup.AddRange(CreateKittens(3));
-				kittenGroups.Add(kittenGroup);
-			}
-
-			KittenGroups = kittenGroups;
+			KittenGroups = CreateKittenGroups(10).ToList();
 		}
 
 		public List<KittenGroup> KittenGroups
 		{
 			get { return _kittenGroups; }
 			set { SetProperty(ref _kittenGroups, value); }
-		}
-
-		public class KittenGroup : List<Kitten>
-		{
-			public string Title { get; set; }
 		}
 	}
 }
