@@ -164,6 +164,13 @@
     <Compile Include="Bootstrap\DownloadCachePluginBootstrap.cs" />
     <Compile Include="Bootstrap\FilePluginBootstrap.cs" />
     <Compile Include="Bootstrap\JsonPluginBootstrap.cs" />
+    <Compile Include="Views\Samples\Cells\HeaderCell.cs" />
+    <Compile Include="Views\Samples\Cells\HeaderCell.designer.cs">
+      <DependentUpon>HeaderCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\BaseExpandableTableView.cs" />
+    <Compile Include="Views\Samples\ExpandableView.cs" />
+    <Compile Include="MyExpTVS.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Collections.Core\Collections.Core.csproj">
@@ -175,6 +182,7 @@
     <InterfaceDefinition Include="Views\Samples\Cells\KittenCell.xib" />
     <InterfaceDefinition Include="Views\Samples\Cells\DogCell.xib" />
     <InterfaceDefinition Include="Views\Samples\SpecificPositionsView.xib" />
+    <InterfaceDefinition Include="Views\Samples\Cells\HeaderCell.xib" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
