@@ -9,8 +9,6 @@ namespace Collections.Core.ViewModels.Samples.Expandable
 
 		public ExpandableViewModel()
 		{
-			var kittenGroups = new List<KittenGroup>();
-
 			KittenGroups = CreateKittenGroups(10).ToList();
 		}
 
