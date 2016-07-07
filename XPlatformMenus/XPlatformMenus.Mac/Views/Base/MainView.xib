@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10117"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="MainViewController">
+            <connections>
+                <outlet property="MenuContentView" destination="k92-DD-0ZT" id="4rp-yJ-pBM"/>
+                <outlet property="PageController" destination="c8g-Hj-lGE" id="uo2-cr-c4L"/>
+                <outlet property="SplitView" destination="0qc-qc-sO4" id="FxS-Gs-rtV"/>
+                <outlet property="view" destination="4" id="17"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView autoresizesSubviews="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4" customClass="MainView">
+            <rect key="frame" x="0.0" y="0.0" width="424" height="294"/>
+            <subviews>
+                <splitView dividerStyle="thin" vertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0qc-qc-sO4" customClass="CustomSplitView">
+                    <rect key="frame" x="0.0" y="0.0" width="424" height="294"/>
+                    <subviews>
+                        <customView fixedFrame="YES" id="k92-DD-0ZT" customClass="BaseView">
+                            <rect key="frame" x="0.0" y="0.0" width="144" height="294"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                        </customView>
+                        <customView id="wE0-Dn-QQe" customClass="BaseView">
+                            <rect key="frame" x="145" y="0.0" width="279" height="294"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <customView misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gNM-wG-jkz" customClass="BaseView">
+                                    <rect key="frame" x="0.0" y="0.0" width="334" height="294"/>
+                                </customView>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="gNM-wG-jkz" secondAttribute="trailing" id="93K-ER-yBq"/>
+                                <constraint firstItem="gNM-wG-jkz" firstAttribute="leading" secondItem="wE0-Dn-QQe" secondAttribute="leading" id="Cvo-ia-VyY"/>
+                                <constraint firstAttribute="bottom" secondItem="gNM-wG-jkz" secondAttribute="bottom" id="QJi-wi-4Bg"/>
+                                <constraint firstItem="gNM-wG-jkz" firstAttribute="top" secondItem="wE0-Dn-QQe" secondAttribute="top" id="VzV-sM-cF5"/>
+                            </constraints>
+                        </customView>
+                    </subviews>
+                    <holdingPriorities>
+                        <real value="250"/>
+                        <real value="250"/>
+                    </holdingPriorities>
+                </splitView>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="0qc-qc-sO4" secondAttribute="bottom" id="73A-rv-Koo"/>
+                <constraint firstItem="0qc-qc-sO4" firstAttribute="leading" secondItem="4" secondAttribute="leading" id="Kvg-eg-6gu"/>
+                <constraint firstItem="0qc-qc-sO4" firstAttribute="top" secondItem="4" secondAttribute="top" id="tUa-Dy-4xw"/>
+                <constraint firstAttribute="trailing" secondItem="0qc-qc-sO4" secondAttribute="trailing" id="zdp-PX-kNZ"/>
+            </constraints>
+            <point key="canvasLocation" x="370" y="364"/>
+        </customView>
+        <pagecontroller id="c8g-Hj-lGE">
+            <connections>
+                <outlet property="view" destination="gNM-wG-jkz" id="Ovw-Jw-Lty"/>
+            </connections>
+        </pagecontroller>
+    </objects>
+</document>
