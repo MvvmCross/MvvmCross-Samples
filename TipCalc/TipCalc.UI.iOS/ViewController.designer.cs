@@ -11,11 +11,11 @@ using UIKit;
 
 namespace TipCalc.UI.iOS
 {
-	[Register ("ViewController")]
-	partial class ViewController
-	{
-		void ReleaseDesignerOutlets ()
-		{
-		}
-	}
+    [Register ("ViewController")]
+    partial class ViewController
+    {
+        void ReleaseDesignerOutlets ()
+        {
+        }
+    }
 }

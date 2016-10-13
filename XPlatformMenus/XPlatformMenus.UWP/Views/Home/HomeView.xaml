@@ -1,5 +1,5 @@
 ﻿<local:BaseView
-	x:Class="XPlatformMenus.UWP.Views.LoginView"
+	x:Class="XPlatformMenus.UWP.Views.HomeView"
 	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
 	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 	xmlns:local="using:XPlatformMenus.UWP.Views"
@@ -8,13 +8,8 @@
 	mc:Ignorable="d">
 
 	<Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
-		<StackPanel>
-			<TextBox Text="{Binding Username}" PlaceholderText="User name..." />
-			<PasswordBox Password="{Binding Password}" PlaceholderText="Password..." />
-			<Button Content="Login" Command="{Binding LoginCommand}" />
-			<!--<ProgressBar IsIndeterminate="True" />-->
-		</StackPanel>
-
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Button Command="{Binding GoToInfoCommand}">Show Info ViewModel</Button>
+        </StackPanel>
 	</Grid>
 </local:BaseView>
