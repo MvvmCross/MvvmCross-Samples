@@ -28,8 +28,6 @@ namespace Collections.Touch
 
 			TableView.Source = source;
 			TableView.ReloadData();
-
-			UIScreen.MainScreen.Bounds.X
 		}
 	}
 
