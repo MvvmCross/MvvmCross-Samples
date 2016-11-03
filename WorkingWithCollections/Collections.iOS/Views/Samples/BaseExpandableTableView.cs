@@ -4,8 +4,7 @@ using UIKit;
 using Foundation;
 using MvvmCross.Binding.BindingContext;
 using System;
-using Collections.Core.ViewModels.Samples.ListItems;
-using Collections.Core;
+using MvvmCross.iOS.Support.Views;
 
 namespace Collections.Touch
 {
@@ -29,10 +28,12 @@ namespace Collections.Touch
 
 			TableView.Source = source;
 			TableView.ReloadData();
+
+			UIScreen.MainScreen.Bounds.X
 		}
 	}
 
-	public class ExpandableTableSource : MyExpTVS<KittenGroup, Kitten>
+	public class ExpandableTableSource : MvxExpandableTableViewSource
 	{
 		public ExpandableTableSource(UITableView tableView) : base(tableView)
 		{
@@ -46,7 +47,7 @@ namespace Collections.Touch
 			tableView.RegisterNibForCellReuse(UINib.FromName(nibName2, NSBundle.MainBundle), HeaderCellIdentifier);
 		}
 
-		public override nfloat GetHeightForRow (UITableView tableView, NSIndexPath indexPath)
+		public override nfloat GetHeightForRow(UITableView tableView, NSIndexPath indexPath)
 		{
 			return 120f;
 		}
