@@ -3,8 +3,21 @@ using System.Collections.Generic;
 
 namespace Collections.Core.ViewModels.Samples.ListItems
 {
-    public class KittenGenerator
+	public class KittenGenerator
     {
+		private readonly List<string> _typesOfKittens = new List<string>
+		{
+			"Fluffy",
+			"ReallyFluffy",
+			"Scrappy",
+			"Cute",
+			"Aggressive",
+			"Funny",
+			"Bald",
+			"WillBite",
+			"HasBigPaws"
+		};
+
         private readonly List<string> _names = new List<string>
             {
                 "Tiddles",
@@ -37,5 +50,19 @@ namespace Collections.Core.ViewModels.Samples.ListItems
                 ImageUrl = string.Format("http://placekitten.com/{0}/{0}", _random.Next(20) + 300)
             };
         }
+
+		public KittenGroup CreateNewKittenGroup(int numberOfKittens)
+		{
+			var kittenList = new List<Kitten>();
+			for (int x = 0; x < numberOfKittens; x++)
+			{
+				kittenList.Add(CreateNewKitten());
+			}
+
+			return new KittenGroup(kittenList)
+			{
+				Title = _typesOfKittens[_random.Next(_typesOfKittens.Count)]
+			};
+		}
     }
 }

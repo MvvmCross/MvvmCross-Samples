@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res/Collections.Droid"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <Mvx.MvxExpandableListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        local:MvxItemTemplate="@layout/listitem_kitten"
+        local:MvxGroupItemTemplate="@layout/listitem_expandablegroup"
+        local:MvxBind="ItemsSource KittenGroups" />
+</FrameLayout>
