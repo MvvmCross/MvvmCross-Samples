@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 
 namespace FractalGen.Core.Services.Fractal
 {
@@ -36,7 +37,7 @@ namespace FractalGen.Core.Services.Fractal
 
         public void ProcessAsync()
         {
-            //ThreadPool.QueueUserWorkItem(ignored => ProcessMandelbrot(this));
+            Task.Run(() => ProcessMandelbrot(this));
         }
 
         private void ProcessMandelbrot(MandelbrotTask task)
