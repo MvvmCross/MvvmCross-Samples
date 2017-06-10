@@ -1,21 +1,29 @@
 using FractalGen.Core.Messages;
-using System;
 using MvvmCross.Plugins.Messenger;
+using System.Threading.Tasks;
 
 namespace FractalGen.Core.Services
 {
     public class TimerService : ITimerService
     {
         private readonly IMvxMessenger _messenger;
-        //private readonly Timer _timer;
 
         public TimerService(IMvxMessenger messenger)
         {
             _messenger = messenger;
-            //_timer = new Timer(OnTimerCallback, null, TimeSpan.FromSeconds(0.1), TimeSpan.FromSeconds(0.1));
+
+            Task.Run(async () =>
+                {
+                    while (true)
+                    {
+
+                        await Task.Delay(2000);
+                        OnTimerCallback();
+                    }
+                });
         }
 
-        private void OnTimerCallback(object state)
+        private void OnTimerCallback()
         {
             _messenger.Publish(new TickMessage(this));
         }

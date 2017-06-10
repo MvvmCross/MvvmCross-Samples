@@ -18,7 +18,7 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>MinimumOSVersion</key>
-	<string>5.1.1</string>
+	<string>8.0</string>
 	<key>CFBundleDisplayName</key>
 	<string>Fractal</string>
 	<key>CFBundleIdentifier</key>
@@ -33,5 +33,7 @@
 	<array>
 		<string>Resources/Default-568h@2x.png</string>
 	</array>
+	<key>CFBundleName</key>
+	<string>Fractal</string>
 </dict>
 </plist>
