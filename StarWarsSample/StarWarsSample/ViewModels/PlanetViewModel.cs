@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Threading.Tasks;
+using Acr.UserDialogs;
 using MvvmCross.Core.ViewModels;
 using MvvmCross.Platform.Platform;
 using MvvmCross.Plugins.Messenger;
@@ -12,13 +13,16 @@ namespace StarWarsSample.ViewModels
     {
         private readonly IMvxJsonConverter _jsonConverter;
         private readonly IMvxMessenger _mvxMessenger;
+        private readonly IUserDialogs _userDialogs;
 
         public PlanetViewModel(
             IMvxJsonConverter jsonConverter,
-            IMvxMessenger mvxMessenger)
+            IMvxMessenger mvxMessenger,
+            IUserDialogs userDialogs)
         {
             _jsonConverter = jsonConverter;
             _mvxMessenger = mvxMessenger;
+            _userDialogs = userDialogs;
 
             DestroyPlanetCommand = new MvxAsyncCommand(DestroyPlanet);
         }
@@ -69,6 +73,17 @@ namespace StarWarsSample.ViewModels
         // Private methods
         private async Task DestroyPlanet()
         {
+            var result = await _userDialogs.ConfirmAsync(new ConfirmConfig
+            {
+                Title = "Destroy Planet",
+                Message = "Sir, are you sure you want to destroy this planet",
+                OkText = "YES",
+                CancelText = "No"
+            });
+
+            if (!result)
+                return;
+
             Destroying = true;
 
             await Task.Delay(5000);

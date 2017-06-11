@@ -1,4 +1,5 @@
 ﻿using System;
+using Acr.UserDialogs;
 using Android.App;
 using Android.Content.PM;
 using Android.Support.V4.View;
@@ -22,6 +23,8 @@ namespace StarWarsSample.Droid.Views
         protected override void OnCreate(Android.OS.Bundle bundle)
         {
             base.OnCreate(bundle);
+
+            UserDialogs.Init(this);
 
             SetContentView(Resource.Layout.MainView);
 
