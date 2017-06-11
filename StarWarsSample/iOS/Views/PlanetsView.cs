@@ -9,7 +9,7 @@ using UIKit;
 
 namespace StarWarsSample.iOS.Views
 {
-    [MvxTabPresentation(WrapInNavigationController = true, TabName = "Planets", TabIconName = "ic_people")]
+    [MvxTabPresentation(WrapInNavigationController = true, TabName = "Target: Planets", TabIconName = "ic_people")]
     public class PlanetsView : MvxViewController<PlanetsViewModel>
     {
         private UIImageView _imgBackground;
@@ -24,7 +24,7 @@ namespace StarWarsSample.iOS.Views
         {
             base.ViewDidLoad();
 
-            Title = "Possible Targets: Planets";
+            Title = "Target: Planets";
 
             EdgesForExtendedLayout = UIRectEdge.None;
 

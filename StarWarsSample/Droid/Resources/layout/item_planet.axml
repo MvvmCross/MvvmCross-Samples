@@ -1,21 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	xmlns:local="http://schemas.android.com/apk/res-auto"
 	android:layout_width="match_parent"
-	android:layout_height="wrap_content">
+	android:layout_height="wrap_content"
+	android:orientation="vertical">
 	<TextView
 		android:id="@+id/txt_name"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:layout_marginRight="100dp"
-		android:layout_centerVertical="true"
+		android:textColor="@color/red"
+		android:layout_margin="16dp"
 		local:MvxBind="Text Name" />
 	<View
 		android:layout_width="match_parent"
-		android:layout_height="2dp"
-		android:layout_marginTop="0dp"
-		android:layout_below="@+id/img_user"
-		android:layout_alignParentBottom="true"
-		android:background="@color/gray" />
-</RelativeLayout>
+		android:layout_height="1dp"
+		android:layout_marginLeft="8dp"
+		android:background="@android:color/white" />
+</LinearLayout>

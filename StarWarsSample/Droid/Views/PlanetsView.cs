@@ -1,10 +1,10 @@
-﻿using System;
-using Android;
-using Android.OS;
+﻿using Android.OS;
 using Android.Runtime;
+using Android.Support.V7.Widget;
 using Android.Views;
 using MvvmCross.Droid.Shared.Attributes;
-using StarWarsSample.Droid.Views;
+using MvvmCross.Droid.Support.V7.RecyclerView;
+using StarWarsSample.Droid.Extensions;
 using StarWarsSample.ViewModels;
 
 namespace StarWarsSample.Droid.Views
@@ -19,6 +19,17 @@ namespace StarWarsSample.Droid.Views
         {
             var view = base.OnCreateView(inflater, container, savedInstanceState);
 
+            ParentActivity.SupportActionBar.Title = "Target: Planets";
+
+            var recyclerView = view.FindViewById<MvxRecyclerView>(Resource.Id.planets_recycler_view);
+            if (recyclerView != null)
+            {
+                recyclerView.HasFixedSize = true;
+                var layoutManager = new LinearLayoutManager(Activity);
+                recyclerView.SetLayoutManager(layoutManager);
+
+                recyclerView.AddOnScrollFetchItemsListener(layoutManager, () => ViewModel.FetchPlanetsTask, () => this.ViewModel.FetchPlanetCommand);
+            }
 
             return view;
         }

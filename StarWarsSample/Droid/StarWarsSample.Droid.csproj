@@ -193,6 +193,9 @@
     <Compile Include="Views\PlanetsView.cs" />
     <Compile Include="Views\MenuView.cs" />
     <Compile Include="Views\BaseFragment.cs" />
+    <Compile Include="Extensions\MvxRecyclerViewExtensions.cs" />
+    <Compile Include="Controls\RecyclerViewOnScrollListener.cs" />
+    <Compile Include="Views\PlanetView.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -220,6 +223,7 @@
     <AndroidResource Include="Resources\drawable-nodpi\ic_vader.jpg" />
     <AndroidResource Include="Resources\layout\PlanetsView.axml" />
     <AndroidResource Include="Resources\layout\item_planet.axml" />
+    <AndroidResource Include="Resources\layout\PlanetView.axml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\" />
@@ -232,6 +236,8 @@
     <Folder Include="Resources\drawable-xxhdpi\" />
     <Folder Include="Resources\drawable-xxxhdpi\" />
     <Folder Include="Resources\drawable-nodpi\" />
+    <Folder Include="Extensions\" />
+    <Folder Include="Controls\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Build.Download.0.4.3\build\Xamarin.Build.Download.targets" Condition="Exists('..\packages\Xamarin.Build.Download.0.4.3\build\Xamarin.Build.Download.targets')" />

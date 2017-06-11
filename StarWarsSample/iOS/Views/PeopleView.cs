@@ -9,7 +9,7 @@ using UIKit;
 
 namespace StarWarsSample.iOS.Views
 {
-    [MvxTabPresentation(WrapInNavigationController = true, TabName = "People", TabIconName = "ic_people")]
+    [MvxTabPresentation(WrapInNavigationController = true, TabName = "Target: People", TabIconName = "ic_people")]
     public class PeopleView : MvxViewController<PeopleViewModel>
     {
         private UITableView _tableView;
@@ -19,7 +19,7 @@ namespace StarWarsSample.iOS.Views
         {
             base.ViewDidLoad();
 
-            Title = "Possible Targets: People";
+            Title = "Target: People";
 
             EdgesForExtendedLayout = UIRectEdge.None;
 
