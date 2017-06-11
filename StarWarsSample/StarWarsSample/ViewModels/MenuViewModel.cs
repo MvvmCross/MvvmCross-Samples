@@ -7,6 +7,20 @@ namespace StarWarsSample.ViewModels
     {
         public MenuViewModel()
         {
+            ShowStatusCommand = new MvxCommand(() => ShowViewModel<StatusViewModel>());
         }
+
+        // MvvmCross Lifecycle
+        public override void Start()
+        {
+            base.Start();
+        }
+
+        // MVVM Properties
+
+        // MVVM Commands
+        public IMvxCommand ShowStatusCommand { get; set; }
+
+        // Private methods
     }
 }

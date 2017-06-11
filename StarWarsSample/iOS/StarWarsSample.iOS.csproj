@@ -149,6 +149,12 @@
     <Reference Include="TZStackView">
       <HintPath>..\packages\TZStackView.1.1.1\lib\Xamarin.iOS10\TZStackView.dll</HintPath>
     </Reference>
+    <Reference Include="OxyPlot">
+      <HintPath>..\packages\OxyPlot.Core.2.0.0-unstable0956\lib\portable-net45+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1+Xamarin.iOS10\OxyPlot.dll</HintPath>
+    </Reference>
+    <Reference Include="OxyPlot.Xamarin.iOS">
+      <HintPath>..\packages\OxyPlot.Xamarin.iOS.1.1.0-unstable0011\lib\Xamarin.iOS10\OxyPlot.Xamarin.iOS.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\StarWarsSample\StarWarsSample.csproj">
@@ -209,6 +215,7 @@
     <Compile Include="CustomViews\InfoView.cs" />
     <Compile Include="CustomViews\BaseView.cs" />
     <Compile Include="Extensions\UIViewExtensions.cs" />
+    <Compile Include="Views\StatusView.cs" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\background.jpeg" />
