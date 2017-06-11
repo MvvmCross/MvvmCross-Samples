@@ -6618,20 +6618,11 @@ namespace StarWarsSample.Droid
 			// aapt resource value: 0x7f0b0161
 			public const int Animation_Design_BottomSheetDialog = 2131427681;
 			
-			// aapt resource value: 0x7f0b017a
-			public const int AppTheme = 2131427706;
-			
 			// aapt resource value: 0x7f0b017b
-			public const int AppTheme_Base = 2131427707;
+			public const int AppTheme = 2131427707;
 			
 			// aapt resource value: 0x7f0b017c
-			public const int AppTheme_Login = 2131427708;
-			
-			// aapt resource value: 0x7f0b017d
-			public const int AppTheme_Menu = 2131427709;
-			
-			// aapt resource value: 0x7f0b017e
-			public const int AppTheme_Splash = 2131427710;
+			public const int AppTheme_Base = 2131427708;
 			
 			// aapt resource value: 0x7f0b00a3
 			public const int Base_AlertDialog_AppCompat = 2131427491;
@@ -7476,6 +7467,9 @@ namespace StarWarsSample.Droid
 			// aapt resource value: 0x7f0b0170
 			public const int Theme_Design_NoActionBar = 2131427696;
 			
+			// aapt resource value: 0x7f0b017a
+			public const int Theme_Splash = 2131427706;
+			
 			// aapt resource value: 0x7f0b0110
 			public const int ThemeOverlay_AppCompat = 2131427600;
 			
@@ -7496,6 +7490,12 @@ namespace StarWarsSample.Droid
 			
 			// aapt resource value: 0x7f0b0116
 			public const int ThemeOverlay_AppCompat_Light = 2131427606;
+			
+			// aapt resource value: 0x7f0b017e
+			public const int ThemeToolbarNavigationView = 2131427710;
+			
+			// aapt resource value: 0x7f0b017d
+			public const int Toolbar = 2131427709;
 			
 			// aapt resource value: 0x7f0b0117
 			public const int Widget_AppCompat_ActionBar = 2131427607;

@@ -31,10 +31,8 @@
 		<item name="android:statusBarColor">@color/colorPrimaryDark</item>
 	</style>-->
 	<!-- Splash style -->
-	<style name="Theme.Splash" parent="android:Theme">
-		<item name="android:windowBackground">@drawable/screen</item>
-		<item name="android:windowNoTitle">true</item>
-		<item name="android:windowFullscreen">true</item>
+	<style name="Theme.Splash" parent="AppTheme.Base">
+		<item name="android:statusBarColor">@color/colorPrimaryDark</item>
 	</style>
 	<!-- Application theme -->
 	<style name="AppTheme" parent="AppTheme.Base">

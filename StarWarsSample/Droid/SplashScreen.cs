@@ -9,7 +9,7 @@ namespace StarWarsSample.Droid
         Label = "Example.Droid"
         , MainLauncher = true
         , Icon = "@mipmap/icon"
-        , Theme = "@style/AppTheme.Splash"
+        , Theme = "@style/Theme.Splash"
         , NoHistory = true
         , ScreenOrientation = ScreenOrientation.Portrait)]
     public class SplashScreen : MvxSplashScreenActivity
