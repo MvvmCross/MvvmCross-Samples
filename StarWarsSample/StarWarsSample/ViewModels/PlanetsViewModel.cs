@@ -1,9 +1,12 @@
 ﻿using System;
+using System.Linq;
 using System.Threading.Tasks;
 using MvvmCross.Core.ViewModels;
 using MvvmCross.Platform.Platform;
+using MvvmCross.Plugins.Messenger;
 using Nito.AsyncEx;
 using StarWarsSample.Models;
+using StarWarsSample.MvxMessages;
 using StarWarsSample.Services.Interfaces;
 
 namespace StarWarsSample.ViewModels
@@ -12,15 +15,30 @@ namespace StarWarsSample.ViewModels
     {
         private readonly IPlanetsService _planetsService;
         private readonly IMvxJsonConverter _jsonConverter;
+        private readonly IMvxMessenger _mvxMessenger;
 
+        private MvxSubscriptionToken _planetDestroyedToken;
         private string _nextPage;
 
-        public PlanetsViewModel(IPlanetsService planetsService, IMvxJsonConverter jsonConverter)
+        public PlanetsViewModel(
+            IPlanetsService planetsService,
+            IMvxJsonConverter jsonConverter,
+            IMvxMessenger mvxMessenger)
         {
             _planetsService = planetsService;
             _jsonConverter = jsonConverter;
+            _mvxMessenger = mvxMessenger;
 
             Planets = new MvxObservableCollection<Planet>();
+
+            _planetDestroyedToken = _mvxMessenger.SubscribeOnMainThread<PlanetDestroyedMessage>(
+                message =>
+                {
+                    var planet = Planets.FirstOrDefault(p => p.Name == message.Planet.Name);
+                    if (planet != null)
+                        Planets.Remove(planet);
+                }
+            );
 
             PlanetSelectedCommand = new MvxCommand<Planet>(PlanetSelected);
             FetchPlanetCommand = new MvxCommand(

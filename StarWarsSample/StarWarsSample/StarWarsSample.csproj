@@ -47,6 +47,7 @@
     <Compile Include="ViewModels\PersonViewModel.cs" />
     <Compile Include="AppColors.cs" />
     <Compile Include="ViewModels\PlanetViewModel.cs" />
+    <Compile Include="MvxMessages\PlanetDestroyedMessage.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MvvmCross.Platform">
@@ -98,6 +99,7 @@
     <Folder Include="Rest\" />
     <Folder Include="Rest\Interfaces\" />
     <Folder Include="Rest\Implementations\" />
+    <Folder Include="MvxMessages\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
 </Project>
