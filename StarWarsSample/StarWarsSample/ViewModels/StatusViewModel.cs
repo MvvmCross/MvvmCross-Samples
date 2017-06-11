@@ -6,7 +6,7 @@ using OxyPlot.Series;
 
 namespace StarWarsSample.ViewModels
 {
-    public class StatusViewModel : MvxViewModel
+    public class StatusViewModel : BaseViewModel
     {
         public StatusViewModel()
         {

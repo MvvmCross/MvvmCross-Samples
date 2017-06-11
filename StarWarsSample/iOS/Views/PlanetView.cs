@@ -4,6 +4,7 @@ using MvvmCross.iOS.Views;
 using MvvmCross.iOS.Views.Presenters.Attributes;
 using StarWarsSample.iOS.CustomViews;
 using StarWarsSample.iOS.Extensions;
+using StarWarsSample.Resources;
 using StarWarsSample.ViewModels;
 using TZStackView;
 using UIKit;
@@ -53,29 +54,29 @@ namespace StarWarsSample.iOS.Views
                 Spacing = 8f
             };
             _viewName = new InfoView();
-            _viewName.Label.Text = "Name";
+            _viewName.Label.Text = Strings.Name;
 
             _viewClimate = new InfoView();
-            _viewClimate.Label.Text = "Climate";
+            _viewClimate.Label.Text = Strings.Climate;
 
             _viewDiameter = new InfoView();
-            _viewDiameter.Label.Text = "Diameter";
+            _viewDiameter.Label.Text = Strings.Diameter;
 
             _viewGravity = new InfoView();
-            _viewGravity.Label.Text = "Gravity";
+            _viewGravity.Label.Text = Strings.Gravity;
 
             _viewTerrain = new InfoView();
-            _viewTerrain.Label.Text = "Terrain";
+            _viewTerrain.Label.Text = Strings.Terrain;
 
             _viewPopulation = new InfoView();
-            _viewPopulation.Label.Text = "Population";
+            _viewPopulation.Label.Text = Strings.Population;
 
             _btnDestroy = new UIButton
             {
                 BackgroundColor = UIColor.Red
             };
             _btnDestroy.Layer.CornerRadius = 5f;
-            _btnDestroy.SetTitle("DESTROY", UIControlState.Normal);
+            _btnDestroy.SetTitle(Strings.Destroy.ToUpper(), UIControlState.Normal);
             _btnDestroy.SetTitleColor(UIColor.White, UIControlState.Normal);
             _btnDestroy.SetTitleColor(UIColor.LightGray, UIControlState.Selected);
             _btnDestroy.PulseToSize(1.2f, 2f, true, true);

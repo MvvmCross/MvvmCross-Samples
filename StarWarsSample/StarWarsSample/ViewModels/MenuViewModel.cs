@@ -3,7 +3,7 @@ using MvvmCross.Core.ViewModels;
 
 namespace StarWarsSample.ViewModels
 {
-    public class MenuViewModel : MvxViewModel
+    public class MenuViewModel : BaseViewModel
     {
         public MenuViewModel()
         {

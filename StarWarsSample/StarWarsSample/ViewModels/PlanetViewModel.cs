@@ -9,7 +9,7 @@ using StarWarsSample.MvxMessages;
 
 namespace StarWarsSample.ViewModels
 {
-    public class PlanetViewModel : MvxViewModel
+    public class PlanetViewModel : BaseViewModel
     {
         private readonly IMvxJsonConverter _jsonConverter;
         private readonly IMvxMessenger _mvxMessenger;

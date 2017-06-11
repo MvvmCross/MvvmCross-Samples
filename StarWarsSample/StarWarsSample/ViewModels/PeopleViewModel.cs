@@ -8,7 +8,7 @@ using StarWarsSample.Services.Interfaces;
 
 namespace StarWarsSample.ViewModels
 {
-    public class PeopleViewModel : MvxViewModel
+    public class PeopleViewModel : BaseViewModel
     {
         private readonly IPeopleService _peopleService;
         private readonly IMvxJsonConverter _jsonConverter;

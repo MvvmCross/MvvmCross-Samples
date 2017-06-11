@@ -5,7 +5,7 @@ using StarWarsSample.Models;
 
 namespace StarWarsSample.ViewModels
 {
-    public class PersonViewModel : MvxViewModel
+    public class PersonViewModel : BaseViewModel
     {
         private readonly IMvxJsonConverter _jsonConverter;
 

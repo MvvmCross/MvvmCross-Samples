@@ -173,6 +173,9 @@
     <Reference Include="OxyPlot.Xamarin.Android">
       <HintPath>..\packages\OxyPlot.Xamarin.Android.1.1.0-unstable0011\lib\MonoAndroid10\OxyPlot.Xamarin.Android.dll</HintPath>
     </Reference>
+    <Reference Include="Xamarin.Android.Support.Percent">
+      <HintPath>..\packages\Xamarin.Android.Support.Percent.25.3.1\lib\MonoAndroid70\Xamarin.Android.Support.Percent.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\StarWarsSample\StarWarsSample.csproj">
@@ -196,6 +199,7 @@
     <Compile Include="Extensions\MvxRecyclerViewExtensions.cs" />
     <Compile Include="Controls\RecyclerViewOnScrollListener.cs" />
     <Compile Include="Views\PlanetView.cs" />
+    <Compile Include="Controls\InfoView.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -224,6 +228,7 @@
     <AndroidResource Include="Resources\layout\PlanetsView.axml" />
     <AndroidResource Include="Resources\layout\item_planet.axml" />
     <AndroidResource Include="Resources\layout\PlanetView.axml" />
+    <AndroidResource Include="Resources\layout\control_info_view.axml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\" />
@@ -253,4 +258,5 @@
   <Import Project="..\packages\Xamarin.Android.Support.Transition.25.3.1\build\MonoAndroid70\Xamarin.Android.Support.Transition.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Transition.25.3.1\build\MonoAndroid70\Xamarin.Android.Support.Transition.targets')" />
   <Import Project="..\packages\Xamarin.Android.Support.v7.RecyclerView.25.3.1\build\MonoAndroid70\Xamarin.Android.Support.v7.RecyclerView.targets" Condition="Exists('..\packages\Xamarin.Android.Support.v7.RecyclerView.25.3.1\build\MonoAndroid70\Xamarin.Android.Support.v7.RecyclerView.targets')" />
   <Import Project="..\packages\Xamarin.Android.Support.Design.25.3.1\build\MonoAndroid70\Xamarin.Android.Support.Design.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Design.25.3.1\build\MonoAndroid70\Xamarin.Android.Support.Design.targets')" />
+  <Import Project="..\packages\Xamarin.Android.Support.Percent.25.3.1\build\MonoAndroid70\Xamarin.Android.Support.Percent.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Percent.25.3.1\build\MonoAndroid70\Xamarin.Android.Support.Percent.targets')" />
 </Project>

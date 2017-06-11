@@ -11,7 +11,7 @@ using StarWarsSample.Services.Interfaces;
 
 namespace StarWarsSample.ViewModels
 {
-    public class PlanetsViewModel : MvxViewModel
+    public class PlanetsViewModel : BaseViewModel
     {
         private readonly IPlanetsService _planetsService;
         private readonly IMvxJsonConverter _jsonConverter;

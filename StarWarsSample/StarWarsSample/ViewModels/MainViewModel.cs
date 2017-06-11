@@ -3,7 +3,7 @@ using StarWarsSample.Services.Interfaces;
 
 namespace StarWarsSample.ViewModels
 {
-    public class MainViewModel : MvxViewModel
+    public class MainViewModel : BaseViewModel
     {
         private readonly IPeopleService _peopleService;
 
