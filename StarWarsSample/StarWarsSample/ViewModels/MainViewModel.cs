@@ -11,7 +11,9 @@ namespace StarWarsSample.ViewModels
         {
             _peopleService = peopleService;
 
-            ShowInitialViewModelsCommand = new MvxCommand(ShowInitialViewModels);
+            ShowPeopleViewModelCommand = new MvxCommand(() => ShowViewModel<PeopleViewModel>());
+            ShowPlanetsViewModelCommand = new MvxCommand(() => ShowViewModel<PlanetsViewModel>());
+            ShowMenuViewModelCommand = new MvxCommand(() => ShowViewModel<MenuViewModel>());
         }
 
         // MvvmCross Lifecycle
@@ -23,14 +25,10 @@ namespace StarWarsSample.ViewModels
         // MVVM Properties
 
         // MVVM Commands
-        public IMvxCommand ShowInitialViewModelsCommand { get; set; }
+        public IMvxCommand ShowPeopleViewModelCommand { get; set; }
+        public IMvxCommand ShowPlanetsViewModelCommand { get; set; }
+        public IMvxCommand ShowMenuViewModelCommand { get; set; }
 
         // Private methods
-        private void ShowInitialViewModels()
-        {
-            ShowViewModel<PeopleViewModel>();
-            ShowViewModel<PlanetsViewModel>();
-            ShowViewModel<MenuViewModel>();
-        }
     }
 }

@@ -57,6 +57,8 @@ namespace StarWarsSample.iOS.Views
             View.BringSubviewToFront(_tableView);
 
             var set = this.CreateBindingSet<PeopleView, PeopleViewModel>();
+            set.Bind(this).For("NetworkIndicator").To(vm => vm.LoadPeopleTask.IsNotCompleted).WithFallback(false);
+            set.Bind(this).For("NetworkIndicator").To(vm => vm.FetchPeopleTask.IsNotCompleted).WithFallback(false);
             set.Bind(_source).For(v => v.ItemsSource).To(vm => vm.People);
             set.Bind(_source).For(v => v.SelectionChangedCommand).To(vm => vm.PersonSelectedCommand);
             set.Bind(_source).For(v => v.FetchCommand).To(vm => vm.FetchPeopleCommand);

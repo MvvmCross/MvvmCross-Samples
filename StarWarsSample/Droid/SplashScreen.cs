@@ -1,8 +1,9 @@
+using Android;
 using Android.App;
 using Android.Content.PM;
 using MvvmCross.Droid.Views;
 
-namespace Example.Droid
+namespace StarWarsSample.Droid
 {
     [Activity(
         Label = "Example.Droid"

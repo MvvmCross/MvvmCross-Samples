@@ -28,7 +28,9 @@ namespace StarWarsSample.iOS.Views
             if (_firstTimePresented)
             {
                 _firstTimePresented = false;
-                ViewModel.ShowInitialViewModelsCommand.Execute(null);
+                ViewModel.ShowPeopleViewModelCommand.Execute(null);
+                ViewModel.ShowPlanetsViewModelCommand.Execute(null);
+                ViewModel.ShowMenuViewModelCommand.Execute(null);
             }
         }
     }

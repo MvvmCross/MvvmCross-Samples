@@ -20,11 +20,11 @@ namespace StarWarsSample.iOS.Views.Cells
 
             _lblName = new UILabel
             {
-                TextColor = UIColor.Red
+                TextColor = UIColor.Red,
+                Font = UIFont.SystemFontOfSize(15f, UIFontWeight.Semibold)
             };
 
             BackgroundColor = UIColor.Clear;
-            //ContentView.BackgroundColor = UIColor.Clear;
             ContentView.AddSubview(_lblName);
             ContentView.SubviewsDoNotTranslateAutoresizingMaskIntoConstraints();
 
@@ -45,7 +45,6 @@ namespace StarWarsSample.iOS.Views.Cells
                 _lblName.AtLeftOf(ContentView, 9f),
                 _lblName.AtTopOf(ContentView),
                 _lblName.AtBottomOf(ContentView),
-                //_lblName.WithSameCenterY(ContentView),
                 _lblName.AtRightOf(ContentView, 9f)
             );
         }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 using MvvmCross.Core.ViewModels;
+using MvvmCross.Platform.Platform;
 using Nito.AsyncEx;
 using StarWarsSample.Models;
 using StarWarsSample.Services.Interfaces;
@@ -10,12 +11,14 @@ namespace StarWarsSample.ViewModels
     public class PeopleViewModel : MvxViewModel
     {
         private readonly IPeopleService _peopleService;
+        private readonly IMvxJsonConverter _jsonConverter;
 
         private string _nextPage;
 
-        public PeopleViewModel(IPeopleService peopleService)
+        public PeopleViewModel(IPeopleService peopleService, IMvxJsonConverter jsonConverter)
         {
             _peopleService = peopleService;
+            _jsonConverter = jsonConverter;
 
             People = new MvxObservableCollection<Person>();
 
@@ -72,7 +75,8 @@ namespace StarWarsSample.ViewModels
 
         private void PersonSelected(Person selectedPerson)
         {
-            ShowViewModel<PersonViewModel>();
+            var serializedPerson = _jsonConverter.SerializeObject(selectedPerson);
+            ShowViewModel<PersonViewModel>(new { serializedPerson });
         }
     }
 }
