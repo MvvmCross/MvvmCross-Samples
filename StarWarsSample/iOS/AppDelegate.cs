@@ -2,6 +2,7 @@
 using MvvmCross.Core.ViewModels;
 using MvvmCross.iOS.Platform;
 using MvvmCross.Platform;
+using MvvmCross.Plugins.Color.iOS;
 using UIKit;
 
 namespace StarWarsSample.iOS
@@ -29,7 +30,34 @@ namespace StarWarsSample.iOS
 
             Window.MakeKeyAndVisible();
 
+            CustomizeAppearance();
+
             return true;
+        }
+
+        private void CustomizeAppearance()
+        {
+            var attributes = new UITextAttributes();
+            attributes.TextColor = UIColor.White;
+            attributes.TextShadowColor = UIColor.Clear;
+            UINavigationBar.Appearance.SetBackgroundImage(new UIImage(), UIBarPosition.Any, UIBarMetrics.Default);
+            UINavigationBar.Appearance.ShadowImage = new UIImage();
+
+            UINavigationBar.Appearance.SetTitleTextAttributes(attributes);
+            UINavigationBar.Appearance.Translucent = false;
+            UINavigationBar.Appearance.BarTintColor = AppColors.PrimaryColor.ToNativeColor();
+            UINavigationBar.Appearance.TintColor = UIColor.White;
+            UINavigationBar.Appearance.BackgroundColor = AppColors.PrimaryColor.ToNativeColor();
+            UINavigationBar.Appearance.BackIndicatorImage = new UIImage();
+
+            UITabBar.Appearance.BackgroundColor = AppColors.PrimaryColor.ToNativeColor();
+            UITabBarItem.Appearance.SetTitleTextAttributes(new UITextAttributes()
+            {
+                TextColor = AppColors.AccentColor.ToNativeColor()
+            }, UIControlState.Selected);
+
+            UITextField.Appearance.TintColor = AppColors.PrimaryColor.ToNativeColor();
+            UITextView.Appearance.TintColor = AppColors.PrimaryColor.ToNativeColor();
         }
     }
 }

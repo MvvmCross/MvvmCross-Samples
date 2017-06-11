@@ -119,6 +119,12 @@
     <Reference Include="Cirrious.FluentLayouts.Touch">
       <HintPath>..\packages\Cirrious.FluentLayout.2.5.0\lib\Xamarin.iOS10\Cirrious.FluentLayouts.Touch.dll</HintPath>
     </Reference>
+    <Reference Include="MvvmCross.Plugins.Color">
+      <HintPath>..\packages\MvvmCross.Plugin.Color.5.0.2\lib\Xamarin.iOS10\MvvmCross.Plugins.Color.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.Color.iOS">
+      <HintPath>..\packages\MvvmCross.Plugin.Color.5.0.2\lib\Xamarin.iOS10\MvvmCross.Plugins.Color.iOS.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\StarWarsSample\StarWarsSample.csproj">
@@ -129,10 +135,21 @@
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\ic_people.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\ic_people.imageset\ic_people_red.pdf" />
+    <ImageAsset Include="Assets.xcassets\ic_menu.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\ic_menu.imageset\ic_bottomnavigation_menu.pdf" />
+    <ImageAsset Include="Assets.xcassets\ic_vader.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\ic_vader.imageset\imageedit_2_9075227536.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
     <Folder Include="Views\" />
+    <Folder Include="Assets.xcassets\ic_people.imageset\" />
+    <Folder Include="Assets.xcassets\ic_menu.imageset\" />
+    <Folder Include="Sources\" />
+    <Folder Include="Views\Cells\" />
+    <Folder Include="Assets.xcassets\ic_vader.imageset\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
@@ -149,6 +166,13 @@
     <Compile Include="Setup.cs" />
     <Compile Include="Bootstrap\JsonPluginBootstrap.cs" />
     <Compile Include="Views\MainView.cs" />
+    <Compile Include="Views\PeopleView.cs" />
+    <Compile Include="Views\PlanetsView.cs" />
+    <Compile Include="Views\MenuView.cs" />
+    <Compile Include="Sources\PeopleTableSource.cs" />
+    <Compile Include="Views\Cells\PeopleTableViewCell.cs" />
+    <Compile Include="Views\Cells\BaseTableViewCell.cs" />
+    <Compile Include="Bootstrap\ColorPluginBootstrap.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

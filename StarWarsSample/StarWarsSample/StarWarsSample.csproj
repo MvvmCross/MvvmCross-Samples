@@ -37,6 +37,15 @@
     <Compile Include="Rest\Interfaces\IRestClient.cs" />
     <Compile Include="Rest\Implementations\RestClient.cs" />
     <Compile Include="Constants.cs" />
+    <Compile Include="ViewModels\PeopleViewModel.cs" />
+    <Compile Include="ViewModels\PlanetsViewModel.cs" />
+    <Compile Include="Models\PagedResult.cs" />
+    <Compile Include="Services\Interfaces\IPlanetsService.cs" />
+    <Compile Include="Models\Planet.cs" />
+    <Compile Include="Services\Implementations\PlanetService.cs" />
+    <Compile Include="ViewModels\MenuViewModel.cs" />
+    <Compile Include="ViewModels\PersonViewModel.cs" />
+    <Compile Include="AppColors.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MvvmCross.Platform">

@@ -1,7 +1,4 @@
-﻿using System.Threading.Tasks;
-using MvvmCross.Core.ViewModels;
-using Nito.AsyncEx;
-using StarWarsSample.Models;
+﻿using MvvmCross.Core.ViewModels;
 using StarWarsSample.Services.Interfaces;
 
 namespace StarWarsSample.ViewModels
@@ -13,39 +10,27 @@ namespace StarWarsSample.ViewModels
         public MainViewModel(IPeopleService peopleService)
         {
             _peopleService = peopleService;
+
+            ShowInitialViewModelsCommand = new MvxCommand(ShowInitialViewModels);
         }
 
         // MvvmCross Lifecycle
         public override void Start()
         {
             base.Start();
-
-            LoadPersonTask = NotifyTaskCompletion.Create(GetPerson);
         }
 
         // MVVM Properties
-        public INotifyTaskCompletion LoadPersonTask { get; set; }
-
-        private Person _person;
-        public Person Person
-        {
-            get
-            {
-                return _person;
-            }
-            set
-            {
-                _person = value;
-                RaisePropertyChanged(() => Person);
-            }
-        }
 
         // MVVM Commands
+        public IMvxCommand ShowInitialViewModelsCommand { get; set; }
 
         // Private methods
-        private async Task GetPerson()
+        private void ShowInitialViewModels()
         {
-            Person = await _peopleService.GetPersonAsync();
+            ShowViewModel<PeopleViewModel>();
+            ShowViewModel<PlanetsViewModel>();
+            ShowViewModel<MenuViewModel>();
         }
     }
 }

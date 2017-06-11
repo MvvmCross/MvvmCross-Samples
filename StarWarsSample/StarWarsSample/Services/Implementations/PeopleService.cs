@@ -16,6 +16,13 @@ namespace StarWarsSample.Services.Implementations
             _restClient = restClient;
         }
 
+        public Task<PagedResult<Person>> GetPeopleAsync(string url = null)
+        {
+            return string.IsNullOrEmpty(url)
+                         ? _restClient.MakeApiCall<PagedResult<Person>>($"{Constants.BaseUrl}/people/", HttpMethod.Get)
+                         : _restClient.MakeApiCall<PagedResult<Person>>(url, HttpMethod.Get);
+        }
+
         public Task<Person> GetPersonAsync()
         {
             return _restClient.MakeApiCall<Person>($"{Constants.BaseUrl}/people/1/", HttpMethod.Get);

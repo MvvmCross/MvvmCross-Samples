@@ -1,17 +1,14 @@
-﻿using System;
-using Cirrious.FluentLayouts.Touch;
-using MvvmCross.Binding.BindingContext;
-using MvvmCross.iOS.Views;
+﻿using MvvmCross.iOS.Views;
 using MvvmCross.iOS.Views.Presenters.Attributes;
+using MvvmCross.Plugins.Color.iOS;
 using StarWarsSample.ViewModels;
-using UIKit;
 
 namespace StarWarsSample.iOS.Views
 {
     [MvxRootPresentation]
-    public class MainView : MvxTabBarViewController
+    public class MainView : MvxTabBarViewController<MainViewModel>
     {
-        //private UILabel _lblPerson;
+        private bool _firstTimePresented = true;
 
         public MainView()
         {
@@ -21,13 +18,18 @@ namespace StarWarsSample.iOS.Views
         {
             base.ViewDidLoad();
 
-            //_lblPerson = new UILabel();
+            TabBar.TintColor = AppColors.AccentColor.ToNativeColor();
+        }
 
-            //View.AddSubview(_lblPerson);
-            //View.SubviewsDoNotTranslateAutoresizingMaskIntoConstraints();
+        public override void ViewWillAppear(bool animated)
+        {
+            base.ViewWillAppear(animated);
 
-            var set = this.CreateBindingSet<MainView, MainViewModel>();
-            set.Apply();
+            if (_firstTimePresented)
+            {
+                _firstTimePresented = false;
+                ViewModel.ShowInitialViewModelsCommand.Execute(null);
+            }
         }
     }
 }

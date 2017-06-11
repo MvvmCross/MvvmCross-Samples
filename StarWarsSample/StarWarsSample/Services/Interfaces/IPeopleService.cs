@@ -6,6 +6,8 @@ namespace StarWarsSample.Services.Interfaces
 {
     public interface IPeopleService
     {
+        Task<PagedResult<Person>> GetPeopleAsync(string url = null);
+
         Task<Person> GetPersonAsync();
     }
 }
