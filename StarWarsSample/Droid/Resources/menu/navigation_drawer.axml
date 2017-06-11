@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<menu
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:local="http://schemas.android.com/apk/res-auto">
+	<group
+		android:id="@+id/nav_items">
+		<item
+			android:id="@+id/nav_home"
+			android:title="Home" />
+		<item
+			android:id="@+id/nav_second_home"
+			android:title="Second host home" />
+	</group>
+	<group
+		android:id="@+id/nav_footer">
+		<item
+			android:id="@+id/nav_settings"
+			android:title="Settings" />
+		<item
+			android:id="@+id/nav_helpfeedback"
+			android:title="Help and Feedback" />
+	</group>
+</menu>

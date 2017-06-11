@@ -8,7 +8,7 @@ namespace StarWarsSample.Droid
     [Activity(
         Label = "Example.Droid"
         , MainLauncher = true
-        , Icon = "@drawable/icon"
+        , Icon = "@mipmap/icon"
         , Theme = "@style/AppTheme.Splash"
         , NoHistory = true
         , ScreenOrientation = ScreenOrientation.Portrait)]

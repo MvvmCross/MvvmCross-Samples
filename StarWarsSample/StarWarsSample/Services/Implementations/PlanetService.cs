@@ -16,9 +16,11 @@ namespace StarWarsSample.Services.Implementations
             _restClient = restClient;
         }
 
-        public Task<PagedResult<Planet>> GetPlanetsAsync()
+        public Task<PagedResult<Planet>> GetPlanetsAsync(string url = null)
         {
-            return _restClient.MakeApiCall<PagedResult<Planet>>($"{Constants.BaseUrl}/planets/", HttpMethod.Get);
+            return string.IsNullOrEmpty(url)
+                         ? _restClient.MakeApiCall<PagedResult<Planet>>($"{Constants.BaseUrl}/planets/", HttpMethod.Get)
+                         : _restClient.MakeApiCall<PagedResult<Planet>>(url, HttpMethod.Get);
         }
     }
 }

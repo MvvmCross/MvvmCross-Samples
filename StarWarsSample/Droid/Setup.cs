@@ -16,7 +16,7 @@ using SwarWarsSample;
 
 namespace StarWarsSample.Droid
 {
-    public class Setup : MvxAndroidSetup
+    public class Setup : MvxAppCompatSetup
     {
         public Setup(Context applicationContext)
             : base(applicationContext)
@@ -31,6 +31,7 @@ namespace StarWarsSample.Droid
         protected override IEnumerable<Assembly> AndroidViewAssemblies => new List<Assembly>(base.AndroidViewAssemblies)
         {
             typeof(NavigationView).Assembly,
+            typeof(CoordinatorLayout).Assembly,
             typeof(FloatingActionButton).Assembly,
             typeof(Toolbar).Assembly,
             typeof(DrawerLayout).Assembly,
