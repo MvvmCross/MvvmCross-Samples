@@ -22,6 +22,8 @@ namespace StarWarsSample.iOS
         {
             Window = new UIWindow(UIScreen.MainScreen.Bounds);
 
+            application.StatusBarStyle = UIStatusBarStyle.LightContent;
+
             var setup = new Setup(this, Window);
             setup.Initialize();
 
@@ -37,13 +39,14 @@ namespace StarWarsSample.iOS
 
         private void CustomizeAppearance()
         {
-            var attributes = new UITextAttributes();
-            attributes.TextColor = UIColor.White;
-            attributes.TextShadowColor = UIColor.Clear;
             UINavigationBar.Appearance.SetBackgroundImage(new UIImage(), UIBarPosition.Any, UIBarMetrics.Default);
             UINavigationBar.Appearance.ShadowImage = new UIImage();
 
-            UINavigationBar.Appearance.SetTitleTextAttributes(attributes);
+            UINavigationBar.Appearance.SetTitleTextAttributes(new UITextAttributes()
+            {
+                TextColor = UIColor.White,
+                Font = UIFont.SystemFontOfSize(17f, UIFontWeight.Semibold)
+            });
             UINavigationBar.Appearance.Translucent = false;
             UINavigationBar.Appearance.BarTintColor = AppColors.PrimaryColor.ToNativeColor();
             UINavigationBar.Appearance.TintColor = UIColor.White;
@@ -56,8 +59,9 @@ namespace StarWarsSample.iOS
                 TextColor = AppColors.AccentColor.ToNativeColor()
             }, UIControlState.Selected);
 
-            UITextField.Appearance.TintColor = AppColors.PrimaryColor.ToNativeColor();
-            UITextView.Appearance.TintColor = AppColors.PrimaryColor.ToNativeColor();
+            UITextField.Appearance.TintColor = AppColors.AccentColor.ToNativeColor();
+            UITextView.Appearance.TintColor = AppColors.AccentColor.ToNativeColor();
+            UIButton.Appearance.SetTitleColor(AppColors.AccentColor.ToNativeColor(), UIControlState.Highlighted);
         }
     }
 }

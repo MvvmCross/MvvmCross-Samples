@@ -76,7 +76,7 @@ namespace StarWarsSample.ViewModels
             var result = await _userDialogs.ConfirmAsync(new ConfirmConfig
             {
                 Title = "Destroy Planet",
-                Message = "Sir, are you sure you want to destroy this planet",
+                Message = "Sir, are you sure you want to destroy this planet?",
                 OkText = "YES",
                 CancelText = "No"
             });
@@ -86,7 +86,7 @@ namespace StarWarsSample.ViewModels
 
             Destroying = true;
 
-            await Task.Delay(5000);
+            await Task.Delay(4000);
 
             Destroying = false;
 

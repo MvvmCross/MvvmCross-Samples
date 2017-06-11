@@ -13,6 +13,7 @@ namespace StarWarsSample.iOS.Sources
 
         public PlanetsTableSource(UITableView tableView) : base(tableView, typeof(PlanetTableViewCell))
         {
+            DeselectAutomatically = true;
         }
 
         protected override UITableViewCell GetOrCreateCellFor(UITableView tableView, Foundation.NSIndexPath indexPath, object item)

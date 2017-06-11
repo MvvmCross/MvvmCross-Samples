@@ -18,6 +18,7 @@ namespace StarWarsSample.iOS.Views
         {
             base.ViewDidLoad();
 
+            TabBar.BarTintColor = AppColors.PrimaryColor.ToNativeColor();
             TabBar.TintColor = AppColors.AccentColor.ToNativeColor();
         }
 

@@ -19,6 +19,8 @@ namespace StarWarsSample.iOS.Views
         {
             base.ViewDidLoad();
 
+            Title = "Possible Targets: People";
+
             EdgesForExtendedLayout = UIRectEdge.None;
 
             View.BackgroundColor = UIColor.Clear;

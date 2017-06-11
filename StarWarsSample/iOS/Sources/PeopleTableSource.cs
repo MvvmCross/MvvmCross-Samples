@@ -13,6 +13,7 @@ namespace StarWarsSample.iOS.Sources
 
         public PeopleTableSource(UITableView tableView) : base(tableView, typeof(PeopleTableViewCell))
         {
+            DeselectAutomatically = true;
         }
 
         protected override UITableViewCell GetOrCreateCellFor(UITableView tableView, Foundation.NSIndexPath indexPath, object item)

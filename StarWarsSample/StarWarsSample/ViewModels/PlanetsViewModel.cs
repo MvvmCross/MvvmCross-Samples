@@ -94,7 +94,7 @@ namespace StarWarsSample.ViewModels
         private void PlanetSelected(Planet selectedPlanet)
         {
             var serializedPlanet = _jsonConverter.SerializeObject(selectedPlanet);
-            ShowViewModel<PersonViewModel>(new { serializedPlanet });
+            ShowViewModel<PlanetViewModel>(new { serializedPlanet });
         }
     }
 }
