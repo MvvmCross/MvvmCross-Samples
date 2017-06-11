@@ -1,15 +1,68 @@
 ﻿using System;
+using Cirrious.FluentLayouts.Touch;
+using MvvmCross.Binding.BindingContext;
 using MvvmCross.iOS.Views;
 using MvvmCross.iOS.Views.Presenters.Attributes;
+using StarWarsSample.iOS.Sources;
 using StarWarsSample.ViewModels;
+using UIKit;
 
 namespace StarWarsSample.iOS.Views
 {
     [MvxTabPresentation(WrapInNavigationController = true, TabName = "Planets", TabIconName = "ic_people")]
     public class PlanetsView : MvxTableViewController<PlanetsViewModel>
     {
+        private UIImageView _imgBackground;
+        private UITableView _tableView;
+        private PlanetsTableSource _source;
+
         public PlanetsView()
         {
+        }
+
+        public override void ViewDidLoad()
+        {
+            base.ViewDidLoad();
+
+            EdgesForExtendedLayout = UIRectEdge.None;
+
+            View.BackgroundColor = UIColor.Clear;
+
+            _tableView = new UITableView();
+            _tableView.BackgroundColor = UIColor.Clear;
+
+            _imgBackground = new UIImageView(UIImage.FromBundle("ic_vader"))
+            {
+                ContentMode = UIViewContentMode.Center
+            };
+
+            _source = new PlanetsTableSource(_tableView);
+            _tableView.Source = _source;
+
+            View.AddSubviews(_tableView, _imgBackground);
+            View.SubviewsDoNotTranslateAutoresizingMaskIntoConstraints();
+
+            View.AddConstraints(
+                _imgBackground.AtLeftOf(View),
+                _imgBackground.AtTopOf(View),
+                _imgBackground.AtBottomOf(View),
+                _imgBackground.AtRightOf(View),
+
+                _tableView.AtLeftOf(View),
+                _tableView.AtTopOf(View),
+                _tableView.AtBottomOf(View),
+                _tableView.AtRightOf(View)
+            );
+
+            View.BringSubviewToFront(_tableView);
+
+            var set = this.CreateBindingSet<PlanetsView, PlanetsViewModel>();
+            set.Bind(this).For("NetworkIndicator").To(vm => vm.LoadPlanetsTask.IsNotCompleted).WithFallback(false);
+            set.Bind(this).For("NetworkIndicator").To(vm => vm.FetchPlanetsTask.IsNotCompleted).WithFallback(false);
+            set.Bind(_source).For(v => v.ItemsSource).To(vm => vm.Planets);
+            set.Bind(_source).For(v => v.SelectionChangedCommand).To(vm => vm.PlanetSelectedCommand);
+            set.Bind(_source).For(v => v.FetchCommand).To(vm => vm.FetchPlanetCommand);
+            set.Apply();
         }
     }
 }

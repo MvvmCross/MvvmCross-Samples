@@ -12,13 +12,8 @@ namespace StarWarsSample.iOS.Views
     [MvxTabPresentation(WrapInNavigationController = true, TabName = "People", TabIconName = "ic_people")]
     public class PeopleView : MvxViewController<PeopleViewModel>
     {
-        private UIImageView _imgBackground;
         private UITableView _tableView;
         private PeopleTableSource _source;
-
-        public PeopleView()
-        {
-        }
 
         public override void ViewDidLoad()
         {
@@ -31,23 +26,13 @@ namespace StarWarsSample.iOS.Views
             _tableView = new UITableView();
             _tableView.BackgroundColor = UIColor.Clear;
 
-            _imgBackground = new UIImageView(UIImage.FromBundle("ic_vader"))
-            {
-                ContentMode = UIViewContentMode.Center
-            };
-
             _source = new PeopleTableSource(_tableView);
             _tableView.Source = _source;
 
-            View.AddSubviews(_tableView, _imgBackground);
+            View.AddSubviews(_tableView);
             View.SubviewsDoNotTranslateAutoresizingMaskIntoConstraints();
 
             View.AddConstraints(
-                _imgBackground.AtLeftOf(View),
-                _imgBackground.AtTopOf(View),
-                _imgBackground.AtBottomOf(View),
-                _imgBackground.AtRightOf(View),
-
                 _tableView.AtLeftOf(View),
                 _tableView.AtTopOf(View),
                 _tableView.AtBottomOf(View),

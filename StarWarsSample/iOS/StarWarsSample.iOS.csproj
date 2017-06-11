@@ -199,6 +199,8 @@
     <Compile Include="MvxBindings\NetworkIndicatorTargetBinding.cs" />
     <Compile Include="Views\PersonView.cs" />
     <Compile Include="CustomViews\TwitterCoverImageView.cs" />
+    <Compile Include="Sources\PlanetsTableSource.cs" />
+    <Compile Include="Views\Cells\PlanetTableViewCell.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
