@@ -3454,6 +3454,9 @@ namespace StarWarsSample.Droid
 			// aapt resource value: 0x7f05000f
 			public const int design_snackbar_out = 2131034127;
 			
+			// aapt resource value: 0x7f050010
+			public const int pulse_animation = 2131034128;
+			
 			static Animation()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
@@ -5816,8 +5819,8 @@ namespace StarWarsSample.Droid
 			// aapt resource value: 0x7f090025
 			public const int always = 2131296293;
 			
-			// aapt resource value: 0x7f0900b2
-			public const int appbar = 2131296434;
+			// aapt resource value: 0x7f0900b3
+			public const int appbar = 2131296435;
 			
 			// aapt resource value: 0x7f090031
 			public const int auto = 2131296305;
@@ -5827,6 +5830,9 @@ namespace StarWarsSample.Droid
 			
 			// aapt resource value: 0x7f09002a
 			public const int bottom = 2131296298;
+			
+			// aapt resource value: 0x7f0900b2
+			public const int btn_destroy = 2131296434;
 			
 			// aapt resource value: 0x7f09004d
 			public const int buttonPanel = 2131296333;
@@ -6005,8 +6011,8 @@ namespace StarWarsSample.Droid
 			// aapt resource value: 0x7f09008a
 			public const int main_frame = 2131296394;
 			
-			// aapt resource value: 0x7f0900b4
-			public const int masked = 2131296436;
+			// aapt resource value: 0x7f0900b5
+			public const int masked = 2131296437;
 			
 			// aapt resource value: 0x7f090098
 			public const int media_actions = 2131296408;
@@ -6020,23 +6026,23 @@ namespace StarWarsSample.Droid
 			// aapt resource value: 0x7f09001c
 			public const int multiply = 2131296284;
 			
-			// aapt resource value: 0x7f0900b8
-			public const int nav_footer = 2131296440;
+			// aapt resource value: 0x7f0900b9
+			public const int nav_footer = 2131296441;
 			
-			// aapt resource value: 0x7f0900ba
-			public const int nav_helpfeedback = 2131296442;
-			
-			// aapt resource value: 0x7f0900b6
-			public const int nav_home = 2131296438;
-			
-			// aapt resource value: 0x7f0900b5
-			public const int nav_items = 2131296437;
+			// aapt resource value: 0x7f0900bb
+			public const int nav_helpfeedback = 2131296443;
 			
 			// aapt resource value: 0x7f0900b7
-			public const int nav_second_home = 2131296439;
+			public const int nav_home = 2131296439;
 			
-			// aapt resource value: 0x7f0900b9
-			public const int nav_settings = 2131296441;
+			// aapt resource value: 0x7f0900b6
+			public const int nav_items = 2131296438;
+			
+			// aapt resource value: 0x7f0900b8
+			public const int nav_second_home = 2131296440;
+			
+			// aapt resource value: 0x7f0900ba
+			public const int nav_settings = 2131296442;
 			
 			// aapt resource value: 0x7f09008c
 			public const int navigation_frame = 2131296396;
@@ -6290,8 +6296,8 @@ namespace StarWarsSample.Droid
 			// aapt resource value: 0x7f09000e
 			public const int view_offset_helper = 2131296270;
 			
-			// aapt resource value: 0x7f0900b3
-			public const int visible = 2131296435;
+			// aapt resource value: 0x7f0900b4
+			public const int visible = 2131296436;
 			
 			// aapt resource value: 0x7f090029
 			public const int withText = 2131296297;

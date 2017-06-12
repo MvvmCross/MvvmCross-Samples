@@ -135,6 +135,20 @@
 				android:layout_width="match_parent"
 				android:layout_height="wrap_content"
 				local:MvxBind="Label [Population]; Info Planet.Population" />
+			<Button
+				android:id="@+id/btn_destroy"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="20dp"
+				android:layout_marginBottom="16dp"
+				android:layout_marginLeft="60dp"
+				android:layout_marginRight="60dp"
+				android:textSize="15sp"
+				android:textAllCaps="true"
+				android:background="@color/red"
+				android:textColor="@android:color/white"
+				android:stateListAnimator="@null"
+				local:MvxBind="Click DestroyPlanetCommand; Text [Destroy]" />
 		</LinearLayout>
 	</android.support.v4.widget.NestedScrollView>
 </android.support.design.widget.CoordinatorLayout>
