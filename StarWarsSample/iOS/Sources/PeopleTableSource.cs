@@ -11,7 +11,7 @@ namespace StarWarsSample.iOS.Sources
     {
         public ICommand FetchCommand { get; set; }
 
-        public PeopleTableSource(UITableView tableView) : base(tableView, typeof(PeopleTableViewCell))
+        public PeopleTableSource(UITableView tableView) : base(tableView, typeof(NameTableViewCell))
         {
             DeselectAutomatically = true;
         }

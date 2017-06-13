@@ -1,8 +1,9 @@
 ﻿using System;
 using Cirrious.FluentLayouts.Touch;
+using MvvmCross.Plugins.Color.iOS;
 using UIKit;
 
-namespace StarWarsSample.iOS.CustomViews
+namespace StarWarsSample.iOS.CustomControls
 {
     public class InfoView : BaseView
     {
@@ -23,12 +24,14 @@ namespace StarWarsSample.iOS.CustomViews
 
             Label = new UILabel
             {
-                TextColor = UIColor.Gray
+                TextColor = AppColors.AccentColor.ToNativeColor(),
+                Font = UIFont.SystemFontOfSize(14f, UIFontWeight.Semibold)
             };
 
             Information = new UILabel
             {
-                TextColor = UIColor.DarkGray
+                TextColor = UIColor.White,
+                Font = UIFont.SystemFontOfSize(14f, UIFontWeight.Bold)
             };
 
             Line = new UIView
@@ -57,7 +60,7 @@ namespace StarWarsSample.iOS.CustomViews
                 Line.AtLeftOf(this),
                 Line.AtRightOf(this),
                 Line.AtBottomOf(this),
-                Line.Height().EqualTo(1f)
+                Line.Height().EqualTo(.5f)
             );
         }
     }

@@ -181,7 +181,7 @@
     <Folder Include="Views\Cells\" />
     <Folder Include="Assets.xcassets\ic_vader.imageset\" />
     <Folder Include="MvxBindings\" />
-    <Folder Include="CustomViews\" />
+    <Folder Include="CustomControls\" />
     <Folder Include="Extensions\" />
   </ItemGroup>
   <ItemGroup>
@@ -203,19 +203,19 @@
     <Compile Include="Views\PlanetsView.cs" />
     <Compile Include="Views\MenuView.cs" />
     <Compile Include="Sources\PeopleTableSource.cs" />
-    <Compile Include="Views\Cells\PeopleTableViewCell.cs" />
+    <Compile Include="Views\Cells\NameTableViewCell.cs" />
     <Compile Include="Views\Cells\BaseTableViewCell.cs" />
     <Compile Include="Bootstrap\ColorPluginBootstrap.cs" />
     <Compile Include="MvxBindings\NetworkIndicatorTargetBinding.cs" />
     <Compile Include="Views\PersonView.cs" />
-    <Compile Include="CustomViews\TwitterCoverImageView.cs" />
+    <Compile Include="CustomControls\TwitterCoverImageView.cs" />
     <Compile Include="Sources\PlanetsTableSource.cs" />
-    <Compile Include="Views\Cells\PlanetTableViewCell.cs" />
     <Compile Include="Views\PlanetView.cs" />
-    <Compile Include="CustomViews\InfoView.cs" />
-    <Compile Include="CustomViews\BaseView.cs" />
+    <Compile Include="CustomControls\InfoView.cs" />
+    <Compile Include="CustomControls\BaseView.cs" />
     <Compile Include="Extensions\UIViewExtensions.cs" />
     <Compile Include="Views\StatusView.cs" />
+    <Compile Include="CustomControls\MenuOption.cs" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\background.jpeg" />

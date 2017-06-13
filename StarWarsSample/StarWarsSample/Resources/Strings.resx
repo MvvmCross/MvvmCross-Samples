@@ -138,4 +138,22 @@
 	<data name="Destroy" xml:space="preserve">
     <value>Destroy</value> 
   </data>
+	<data name="Statistics" xml:space="preserve">
+    <value>Statistics</value> 
+  </data>
+	<data name="DeathStarStatus" xml:space="preserve">
+    <value>Death Star Status</value> 
+  </data>
+	<data name="Time" xml:space="preserve">
+    <value>Time</value> 
+  </data>
+	<data name="Targets" xml:space="preserve">
+    <value>Targets</value> 
+  </data>
+	<data name="AnotherOption" xml:space="preserve">
+    <value>Another option</value> 
+  </data>
+	<data name="Menu" xml:space="preserve">
+    <value>Menu</value> 
+  </data>
 </root>

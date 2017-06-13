@@ -6,11 +6,11 @@ using UIKit;
 
 namespace StarWarsSample.iOS.Views.Cells
 {
-    public class PeopleTableViewCell : BaseTableViewCell
+    public class NameTableViewCell : BaseTableViewCell
     {
         private UILabel _lblName;
 
-        public PeopleTableViewCell(IntPtr handle) : base(handle)
+        public NameTableViewCell(IntPtr handle) : base(handle)
         {
         }
 
@@ -18,10 +18,12 @@ namespace StarWarsSample.iOS.Views.Cells
         {
             base.CreateView();
 
+            SelectionStyle = UITableViewCellSelectionStyle.None;
+
             _lblName = new UILabel
             {
                 TextColor = UIColor.Red,
-                Font = UIFont.SystemFontOfSize(15f, UIFontWeight.Semibold)
+                Font = UIFont.SystemFontOfSize(15f, UIFontWeight.Bold)
             };
 
             BackgroundColor = UIColor.Clear;
@@ -31,9 +33,7 @@ namespace StarWarsSample.iOS.Views.Cells
             this.DelayBind(
                 () =>
             {
-                var set = this.CreateBindingSet<PeopleTableViewCell, Person>();
-                set.Bind(_lblName).To(vm => vm.Name);
-                set.Apply();
+                this.AddBindings(_lblName, "Text Name");
             });
         }
 

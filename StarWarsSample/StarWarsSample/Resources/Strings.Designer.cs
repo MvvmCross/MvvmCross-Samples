@@ -88,5 +88,41 @@ namespace StarWarsSample.Resources {
                 return ResourceManager.GetString("Destroy", resourceCulture);
             }
         }
+        
+        public static string Statistics {
+            get {
+                return ResourceManager.GetString("Statistics", resourceCulture);
+            }
+        }
+        
+        public static string DeathStarStatus {
+            get {
+                return ResourceManager.GetString("DeathStarStatus", resourceCulture);
+            }
+        }
+        
+        public static string Time {
+            get {
+                return ResourceManager.GetString("Time", resourceCulture);
+            }
+        }
+        
+        public static string Targets {
+            get {
+                return ResourceManager.GetString("Targets", resourceCulture);
+            }
+        }
+        
+        public static string AnotherOption {
+            get {
+                return ResourceManager.GetString("AnotherOption", resourceCulture);
+            }
+        }
+        
+        public static string Menu {
+            get {
+                return ResourceManager.GetString("Menu", resourceCulture);
+            }
+        }
     }
 }

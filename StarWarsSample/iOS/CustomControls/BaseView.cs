@@ -1,7 +1,7 @@
 ﻿using System;
 using UIKit;
 
-namespace StarWarsSample.iOS.CustomViews
+namespace StarWarsSample.iOS.CustomControls
 {
     public class BaseView : UIView
     {

@@ -7,7 +7,7 @@ using CoreGraphics;
 using Foundation;
 using UIKit;
 
-namespace StarWarsSample.iOS.CustomViews
+namespace StarWarsSample.iOS.CustomControls
 {
     public class TwitterCoverImageView : UIImageView
     {

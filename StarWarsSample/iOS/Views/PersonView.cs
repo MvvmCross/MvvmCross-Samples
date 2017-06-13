@@ -1,7 +1,7 @@
 ﻿using Cirrious.FluentLayouts.Touch;
 using MvvmCross.iOS.Views;
 using MvvmCross.iOS.Views.Presenters.Attributes;
-using StarWarsSample.iOS.CustomViews;
+using StarWarsSample.iOS.CustomControls;
 using StarWarsSample.ViewModels;
 using UIKit;
 

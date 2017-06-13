@@ -11,7 +11,7 @@ namespace StarWarsSample.iOS.Sources
     {
         public ICommand FetchCommand { get; set; }
 
-        public PlanetsTableSource(UITableView tableView) : base(tableView, typeof(PlanetTableViewCell))
+        public PlanetsTableSource(UITableView tableView) : base(tableView, typeof(NameTableViewCell))
         {
             DeselectAutomatically = true;
         }

@@ -2,7 +2,8 @@
 using MvvmCross.Binding.BindingContext;
 using MvvmCross.iOS.Views;
 using MvvmCross.iOS.Views.Presenters.Attributes;
-using StarWarsSample.iOS.CustomViews;
+using MvvmCross.Plugins.Color.iOS;
+using StarWarsSample.iOS.CustomControls;
 using StarWarsSample.iOS.Extensions;
 using StarWarsSample.Resources;
 using StarWarsSample.ViewModels;
@@ -14,12 +15,17 @@ namespace StarWarsSample.iOS.Views
     [MvxChildPresentation]
     public class PlanetView : MvxViewController<PlanetViewModel>
     {
+        private const float HEADER_HEIGHT = 160f;
+
         private UIScrollView _scrollView;
         private UIView _contentView;
         private TwitterCoverImageView _twitterCoverImageView;
+        private UILabel _lblName;
+
+        private UIView _line;
 
         private StackView _stackInfo;
-        private InfoView _viewName, _viewClimate, _viewDiameter, _viewGravity, _viewTerrain, _viewPopulation;
+        private InfoView _viewClimate, _viewDiameter, _viewGravity, _viewTerrain, _viewPopulation;
 
         private UIButton _btnDestroy;
 
@@ -33,28 +39,35 @@ namespace StarWarsSample.iOS.Views
 
             Title = "Planet Target details";
 
-            View.BackgroundColor = UIColor.White;
+            View.BackgroundColor = UIColor.Black;
 
             _scrollView = new UIScrollView();
 
             _twitterCoverImageView = new TwitterCoverImageView
             {
-                CoverViewHeight = 80f,
+                CoverViewHeight = HEADER_HEIGHT,
                 BackgroundColor = UIColor.Clear,
                 Image = UIImage.FromBundle("ic_vader"),
                 ScrollView = _scrollView
             };
-            _scrollView.AddSubview(_twitterCoverImageView);
 
-            _contentView = new UIView { BackgroundColor = UIColor.White };
+            _line = new UIView
+            {
+                BackgroundColor = UIColor.LightGray
+            };
+
+            _contentView = new UIView();
 
             _stackInfo = new StackView
             {
                 Axis = UILayoutConstraintAxis.Vertical,
                 Spacing = 8f
             };
-            _viewName = new InfoView();
-            _viewName.Label.Text = Strings.Name;
+            _lblName = new UILabel
+            {
+                Font = UIFont.SystemFontOfSize(28f, UIFontWeight.Bold),
+                TextColor = AppColors.AccentColor.ToNativeColor()
+            };
 
             _viewClimate = new InfoView();
             _viewClimate.Label.Text = Strings.Climate;
@@ -75,22 +88,23 @@ namespace StarWarsSample.iOS.Views
             {
                 BackgroundColor = UIColor.Red
             };
-            _btnDestroy.Layer.CornerRadius = 5f;
+            _btnDestroy.Layer.CornerRadius = 8f;
             _btnDestroy.SetTitle(Strings.Destroy.ToUpper(), UIControlState.Normal);
             _btnDestroy.SetTitleColor(UIColor.White, UIControlState.Normal);
             _btnDestroy.SetTitleColor(UIColor.LightGray, UIControlState.Selected);
             _btnDestroy.PulseToSize(1.2f, 2f, true, true);
 
+            _scrollView.AddSubview(_twitterCoverImageView);
+
             View.AddSubviews(_scrollView);
             View.SubviewsDoNotTranslateAutoresizingMaskIntoConstraints();
 
-            _scrollView.AddSubview(_contentView);
+            _scrollView.AddSubviews(_lblName, _line, _contentView);
             _scrollView.SubviewsDoNotTranslateAutoresizingMaskIntoConstraints();
 
             _contentView.AddSubviews(_stackInfo, _btnDestroy);
             _contentView.SubviewsDoNotTranslateAutoresizingMaskIntoConstraints();
 
-            _stackInfo.AddArrangedSubview(_viewName);
             _stackInfo.AddArrangedSubview(_viewClimate);
             _stackInfo.AddArrangedSubview(_viewDiameter);
             _stackInfo.AddArrangedSubview(_viewGravity);
@@ -105,7 +119,15 @@ namespace StarWarsSample.iOS.Views
             );
 
             _scrollView.AddConstraints(
-                _contentView.AtTopOf(_scrollView, 80f),
+                _line.AtTopOf(_scrollView, HEADER_HEIGHT),
+                _line.AtLeftOf(_scrollView),
+                _line.AtRightOf(_scrollView),
+                _line.Height().EqualTo(.5f),
+
+                _lblName.Above(_line, 8f),
+                _lblName.AtLeftOf(_line, 8f),
+
+                _contentView.Below(_line),
                 _contentView.AtLeftOf(_scrollView),
                 _contentView.AtRightOf(_scrollView),
                 _contentView.AtBottomOf(_scrollView)
@@ -122,12 +144,12 @@ namespace StarWarsSample.iOS.Views
 
                 _btnDestroy.Below(_stackInfo, 20f),
                 _btnDestroy.WithSameCenterX(_contentView),
-                _btnDestroy.AtBottomOf(_contentView, 150f),
+                _btnDestroy.AtBottomOf(_contentView, 100f),
                 _btnDestroy.Width().EqualTo(120f)
             );
 
             var set = this.CreateBindingSet<PlanetView, PlanetViewModel>();
-            set.Bind(_viewName.Information).To(vm => vm.Planet.Name);
+            set.Bind(_lblName).To(vm => vm.Planet.Name);
             set.Bind(_viewClimate.Information).To(vm => vm.Planet.Climate);
             set.Bind(_viewDiameter.Information).To(vm => vm.Planet.Diameter);
             set.Bind(_viewGravity.Information).To(vm => vm.Planet.Gravity);
