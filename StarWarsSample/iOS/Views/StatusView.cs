@@ -3,7 +3,9 @@ using Cirrious.FluentLayouts.Touch;
 using MvvmCross.Binding.BindingContext;
 using MvvmCross.iOS.Views;
 using MvvmCross.iOS.Views.Presenters.Attributes;
+using MvvmCross.Plugins.Color.iOS;
 using OxyPlot.Xamarin.iOS;
+using StarWarsSample.Resources;
 using StarWarsSample.ViewModels;
 using UIKit;
 
@@ -12,6 +14,7 @@ namespace StarWarsSample.iOS.Views
     [MvxModalPresentation(WrapInNavigationController = true, ModalTransitionStyle = UIKit.UIModalTransitionStyle.CrossDissolve)]
     public class StatusView : MvxViewController<StatusViewModel>
     {
+        private UILabel _lblTitle;
         private PlotView _plotView;
         private UIBarButtonItem _btnClose;
 
@@ -23,23 +26,40 @@ namespace StarWarsSample.iOS.Views
         {
             base.ViewDidLoad();
 
-            _btnClose = new UIBarButtonItem(UIBarButtonSystemItem.Cancel, (sender, e) => DismissViewController(true, null));
+            View.BackgroundColor = UIColor.Black;
+
+            Title = Strings.Statistics;
+
+            _btnClose = new UIBarButtonItem(UIBarButtonSystemItem.Cancel, null);
             NavigationItem.SetLeftBarButtonItem(_btnClose, false);
 
-            _plotView = new PlotView();
+            _lblTitle = new UILabel
+            {
+                Font = UIFont.SystemFontOfSize(28f, UIFontWeight.Bold),
+                TextColor = AppColors.AccentColor.ToNativeColor(),
+                Text = Strings.DeathStarStatus
+            };
 
-            View.AddSubview(_plotView);
+            _plotView = new PlotView();
+            _plotView.BackgroundColor = UIColor.Clear;
+
+            View.AddSubviews(_lblTitle, _plotView);
             View.SubviewsDoNotTranslateAutoresizingMaskIntoConstraints();
 
             View.AddConstraints(
+                _lblTitle.AtLeftOf(View, 12f),
+                _lblTitle.AtTopOf(View, 8f),
+                _lblTitle.AtRightOf(View, 12f),
+
+                _plotView.Below(_lblTitle),
                 _plotView.AtLeftOf(View),
-                _plotView.AtTopOf(View),
                 _plotView.AtRightOf(View),
                 _plotView.AtBottomOf(View)
             );
 
             var set = this.CreateBindingSet<StatusView, StatusViewModel>();
             set.Bind(_plotView).For(v => v.Model).To(vm => vm.PlotModel);
+            set.Bind(_btnClose).For("Clicked").To(vm => vm.CloseCommand);
             set.Apply();
         }
 

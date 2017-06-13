@@ -1,8 +1,9 @@
-﻿using System;
+﻿using System.Windows.Input;
 using MvvmCross.Core.ViewModels;
 using OxyPlot;
 using OxyPlot.Axes;
 using OxyPlot.Series;
+using StarWarsSample.Resources;
 
 namespace StarWarsSample.ViewModels
 {
@@ -10,6 +11,7 @@ namespace StarWarsSample.ViewModels
     {
         public StatusViewModel()
         {
+            CloseCommand = new MvxCommand(() => Close(this));
         }
 
         // MvvmCross Lifecycle
@@ -19,10 +21,29 @@ namespace StarWarsSample.ViewModels
 
             PlotModel = new PlotModel
             {
-                Title = "Death Star Status"
+                PlotAreaBorderColor = OxyColors.LightGray,
+                LegendTextColor = OxyColors.LightGray,
+                LegendTitleColor = OxyColors.LightGray,
+                TextColor = OxyColors.White
             };
-            PlotModel.Axes.Add(new LinearAxis { Position = AxisPosition.Bottom, Title = "Time" });
-            PlotModel.Axes.Add(new LinearAxis { Position = AxisPosition.Left, Maximum = 10, Minimum = 0, Title = "Targets" });
+            PlotModel.Axes.Add(new LinearAxis
+            {
+                Position = AxisPosition.Bottom,
+                Title = Strings.Time,
+                TitleColor = OxyColors.White,
+                AxislineColor = OxyColors.LightGray,
+                TicklineColor = OxyColors.LightGray
+            });
+            PlotModel.Axes.Add(new LinearAxis
+            {
+                Position = AxisPosition.Left,
+                Maximum = 10,
+                Minimum = 0,
+                Title = Strings.Targets,
+                TitleColor = OxyColors.White,
+                AxislineColor = OxyColors.LightGray,
+                TicklineColor = OxyColors.LightGray
+            });
 
             var series1 = new LineSeries
             {
@@ -59,6 +80,7 @@ namespace StarWarsSample.ViewModels
         }
 
         // MVVM Commands
+        public ICommand CloseCommand { get; set; }
 
         // Private methods
     }
