@@ -1,17 +1,23 @@
 ﻿using System;
 using Cirrious.FluentLayouts.Touch;
 using MvvmCross.Binding.BindingContext;
+using MvvmCross.Binding.iOS.Views.Gestures;
 using MvvmCross.iOS.Views;
 using MvvmCross.iOS.Views.Presenters.Attributes;
+using StarWarsSample.iOS.CustomControls;
+using StarWarsSample.Resources;
 using StarWarsSample.ViewModels;
+using TZStackView;
 using UIKit;
 
 namespace StarWarsSample.iOS.Views
 {
-    [MvxTabPresentation(WrapInNavigationController = false, TabName = "Menu", TabIconName = "ic_menu")]
+    [MvxTabPresentation(WrapInNavigationController = true, TabName = "Menu", TabIconName = "ic_menu")]
     public class MenuView : MvxViewController<MenuViewModel>
     {
-        private UIButton _btnStatus;
+        private StackView _options;
+
+        private MenuOption _optionStatistics, _optionOther1, _optionOther2;
 
         public MenuView()
         {
@@ -21,22 +27,36 @@ namespace StarWarsSample.iOS.Views
         {
             base.ViewDidLoad();
 
-            View.BackgroundColor = UIColor.White;
+            View.BackgroundColor = UIColor.Black;
 
-            _btnStatus = new UIButton();
-            _btnStatus.SetTitleColor(UIColor.Red, UIControlState.Normal);
-            _btnStatus.SetTitle("Ver", UIControlState.Normal);
+            Title = Strings.Menu;
 
-            View.AddSubview(_btnStatus);
+            _options = new StackView
+            {
+                Axis = UILayoutConstraintAxis.Vertical
+            };
+            _optionStatistics = new MenuOption();
+            _optionStatistics.Label.Text = Strings.Statistics;
+            _optionOther1 = new MenuOption();
+            _optionOther1.Label.Text = Strings.AnotherOption;
+            _optionOther2 = new MenuOption();
+            _optionOther2.Label.Text = Strings.AnotherOption;
+
+            View.AddSubview(_options);
             View.SubviewsDoNotTranslateAutoresizingMaskIntoConstraints();
 
+            _options.AddArrangedSubview(_optionStatistics);
+            _options.AddArrangedSubview(_optionOther1);
+            _options.AddArrangedSubview(_optionOther2);
+
             View.AddConstraints(
-                _btnStatus.WithSameCenterY(View),
-                _btnStatus.WithSameCenterX(View)
+                _options.AtLeftOf(View),
+                _options.AtTopOf(View),
+                _options.AtRightOf(View)
             );
 
             var set = this.CreateBindingSet<MenuView, MenuViewModel>();
-            set.Bind(_btnStatus).To(vm => vm.ShowStatusCommand);
+            set.Bind(_optionStatistics.Tap()).For(g => g.Command).To(vm => vm.ShowStatusCommand);
             set.Apply();
         }
     }
