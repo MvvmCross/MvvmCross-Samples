@@ -200,6 +200,7 @@
     <Compile Include="Controls\RecyclerViewOnScrollListener.cs" />
     <Compile Include="Views\PlanetView.cs" />
     <Compile Include="Controls\InfoView.cs" />
+    <Compile Include="Views\PeopleView.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -226,10 +227,11 @@
     <AndroidResource Include="Resources\layout\navigation_header.axml" />
     <AndroidResource Include="Resources\drawable-nodpi\ic_vader.jpg" />
     <AndroidResource Include="Resources\layout\PlanetsView.axml" />
-    <AndroidResource Include="Resources\layout\item_planet.axml" />
+    <AndroidResource Include="Resources\layout\item_name.axml" />
     <AndroidResource Include="Resources\layout\PlanetView.axml" />
     <AndroidResource Include="Resources\layout\control_info_view.axml" />
     <AndroidResource Include="Resources\anim\pulse_animation.xml" />
+    <AndroidResource Include="Resources\layout\PeopleView.axml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\" />

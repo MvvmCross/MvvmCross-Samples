@@ -9,12 +9,14 @@
 		android:id="@+id/txt_name"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:textColor="@color/red"
 		android:layout_margin="16dp"
+		android:textStyle="bold"
+		android:textSize="16sp"
+		android:textColor="@color/colorAccent"
 		local:MvxBind="Text Name" />
 	<View
 		android:layout_width="match_parent"
 		android:layout_height="1dp"
 		android:layout_marginLeft="8dp"
-		android:background="@android:color/white" />
+		android:background="@color/light_gray" />
 </LinearLayout>

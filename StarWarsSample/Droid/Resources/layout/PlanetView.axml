@@ -145,7 +145,7 @@
 				android:layout_marginRight="60dp"
 				android:textSize="15sp"
 				android:textAllCaps="true"
-				android:background="@color/red"
+				android:background="@color/colorAccent"
 				android:textColor="@android:color/white"
 				android:stateListAnimator="@null"
 				local:MvxBind="Click DestroyPlanetCommand; Text [Destroy]" />
