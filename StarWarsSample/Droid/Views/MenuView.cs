@@ -26,7 +26,7 @@ namespace StarWarsSample.Droid.Views
 
             navigationView = view.FindViewById<NavigationView>(Resource.Id.navigation_view);
             navigationView.SetNavigationItemSelectedListener(this);
-            navigationView.Menu.FindItem(Resource.Id.nav_home).SetChecked(true);
+            navigationView.Menu.FindItem(Resource.Id.nav_planets).SetChecked(true);
 
             return view;
         }
@@ -48,21 +48,18 @@ namespace StarWarsSample.Droid.Views
             ((MainView)Activity).DrawerLayout.CloseDrawers();
             await Task.Delay(TimeSpan.FromMilliseconds(250));
 
-            //switch (itemId)
-            //{
-            //    case Resource.Id.nav_home:
-            //        ViewModel.ShowViewModelAndroid(typeof(HomeViewModel));
-            //        break;
-            //    case Resource.Id.nav_second_home:
-            //        ViewModel.ShowViewModelAndroid(typeof(SecondHostViewModel));
-            //        break;
-            //    case Resource.Id.nav_settings:
-            //        ViewModel.ShowViewModelAndroid(typeof(SettingsViewModel));
-            //        break;
-            //    case Resource.Id.nav_helpfeedback:
-            //        ViewModel.ShowViewModelAndroid(typeof(SettingsViewModel));
-            //        break;
-            //}
+            switch (itemId)
+            {
+                case Resource.Id.nav_planets:
+                    ViewModel.ShowPlanetsCommand.Execute(null);
+                    break;
+                case Resource.Id.nav_people:
+                    ViewModel.ShowPeopleCommand.Execute(null);
+                    break;
+                case Resource.Id.nav_statistics:
+                    ViewModel.ShowStatusCommand.Execute(null);
+                    break;
+            }
         }
     }
 }

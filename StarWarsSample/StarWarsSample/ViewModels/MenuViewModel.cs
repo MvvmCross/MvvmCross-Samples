@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Windows.Input;
 using MvvmCross.Core.ViewModels;
 
 namespace StarWarsSample.ViewModels
@@ -7,6 +8,8 @@ namespace StarWarsSample.ViewModels
     {
         public MenuViewModel()
         {
+            ShowPlanetsCommand = new MvxCommand(() => ShowViewModel<PlanetsViewModel>());
+            ShowPeopleCommand = new MvxCommand(() => ShowViewModel<PeopleViewModel>());
             ShowStatusCommand = new MvxCommand(() => ShowViewModel<StatusViewModel>());
         }
 
@@ -19,7 +22,9 @@ namespace StarWarsSample.ViewModels
         // MVVM Properties
 
         // MVVM Commands
-        public IMvxCommand ShowStatusCommand { get; set; }
+        public ICommand ShowStatusCommand { get; set; }
+        public ICommand ShowPlanetsCommand { get; set; }
+        public ICommand ShowPeopleCommand { get; set; }
 
         // Private methods
     }

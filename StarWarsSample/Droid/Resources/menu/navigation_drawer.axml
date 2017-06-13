@@ -5,19 +5,13 @@
 	<group
 		android:id="@+id/nav_items">
 		<item
-			android:id="@+id/nav_home"
-			android:title="Home" />
+			android:id="@+id/nav_planets"
+			android:title="Target: Planets" />
 		<item
-			android:id="@+id/nav_second_home"
-			android:title="Second host home" />
-	</group>
-	<group
-		android:id="@+id/nav_footer">
+			android:id="@+id/nav_people"
+			android:title="Target: People" />
 		<item
-			android:id="@+id/nav_settings"
-			android:title="Settings" />
-		<item
-			android:id="@+id/nav_helpfeedback"
-			android:title="Help and Feedback" />
+			android:id="@+id/nav_statistics"
+			android:title="Statistics" />
 	</group>
 </menu>
