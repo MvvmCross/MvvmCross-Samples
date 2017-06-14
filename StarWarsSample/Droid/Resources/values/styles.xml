@@ -2,7 +2,10 @@
 <resources>
 	<!-- Splash style -->
 	<style name="Theme.Splash" parent="AppTheme.Base">
+		<item name="android:windowBackground">@drawable/screen</item>
 		<item name="android:statusBarColor">@color/colorPrimaryDark</item>
+		<item name="android:windowNoTitle">true</item>
+		<item name="android:windowFullscreen">true</item>
 	</style>
 	<!-- Application theme -->
 	<style name="AppTheme" parent="AppTheme.Base">
@@ -12,7 +15,6 @@
 		<item name="colorPrimaryDark">@color/colorPrimaryDark</item>
 		<item name="colorAccent">@color/colorAccent</item>
 		<item name="android:windowBackground">@android:color/white</item>
-		<!--<item name="android:colorBackground">@android:color/white</item>-->
 	</style>
 	<style name="Toolbar">
 		<item name="android:layout_height">?attr/actionBarSize</item>

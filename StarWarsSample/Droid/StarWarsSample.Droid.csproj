@@ -179,6 +179,9 @@
 		<Reference Include="Lottie">
 			<HintPath>..\packages\Com.Airbnb.Android.Lottie.2.0.0.0\lib\MonoAndroid40\Lottie.dll</HintPath>
 		</Reference>
+		<Reference Include="Refractored.Controls.CircleImageView">
+		  <HintPath>..\packages\Refractored.Controls.CircleImageView.1.0.1\lib\MonoAndroid10\Refractored.Controls.CircleImageView.dll</HintPath>
+		</Reference>
 	</ItemGroup>
 	<ItemGroup>
 		<ProjectReference Include="..\StarWarsSample\StarWarsSample.csproj">
@@ -215,7 +218,7 @@
 		<AndroidResource Include="Resources\layout\MenuView.axml" />
 		<AndroidResource Include="Resources\values\Strings.xml" />
 		<AndroidResource Include="Resources\layout\MainView.axml" />
-		<AndroidResource Include="Resources\layout\splash_screen.axml" />
+		<AndroidResource Include="Resources\layout\SplashScreen.axml" />
 		<AndroidResource Include="Resources\layout\toolbar_actionbar.axml" />
 		<AndroidResource Include="Resources\values\colors.xml" />
 		<AndroidResource Include="Resources\values\dimens.xml" />
@@ -239,8 +242,16 @@
 		<AndroidResource Include="Resources\drawable\another_option.xml" />
 		<AndroidResource Include="Resources\drawable\people.xml" />
 		<AndroidResource Include="Resources\drawable\planet.xml" />
-		<AndroidResource Include="Resources\drawable\statistics.xml" />
 		<AndroidResource Include="Resources\layout\StatusView.axml" />
+		<AndroidResource Include="Resources\drawable-hdpi\screen.png" />
+		<AndroidResource Include="Resources\drawable-mdpi\screen.png" />
+		<AndroidResource Include="Resources\drawable-xhdpi\screen.png" />
+		<AndroidResource Include="Resources\drawable-xxhdpi\screen.png" />
+		<AndroidResource Include="Resources\drawable-xxxhdpi\screen.png" />
+		<AndroidResource Include="Resources\drawable-nodpi\menu_header_background.png" />
+		<AndroidResource Include="Resources\drawable-nodpi\People_Header.png" />
+		<AndroidResource Include="Resources\drawable-nodpi\profile.png" />
+		<AndroidResource Include="Resources\drawable\statistics.xml" />
 	</ItemGroup>
 	<ItemGroup>
 		<Folder Include="Views\" />
@@ -286,19 +297,16 @@
 	  <MonoDevelop>
 	    <Properties>
 	      <Policies>
-	        <TextStylePolicy inheritsSet="null" scope="application/android+xml" />
+	        <TextStylePolicy TabWidth="4" IndentWidth="4" RemoveTrailingWhitespace="True" NoTabsAfterNonTabs="False" EolMarker="Native" FileWidth="80" TabsToSpaces="True" scope="application/android+xml">
+	          <inheritsSet />
+	          <inheritsScope />
+	        </TextStylePolicy>
 	        <XmlFormattingPolicy scope="application/android+xml">
 	          <DefaultFormat AttributesInNewLine="True" AlignAttributes="True" />
 	          <inheritsSet />
 	          <inheritsScope />
 	        </XmlFormattingPolicy>
 	        <TextStylePolicy inheritsSet="null" scope="text/x-web" />
-	        <TextStylePolicy inheritsSet="null" scope="application/xml" />
-	        <XmlFormattingPolicy scope="application/xml">
-	          <DefaultFormat AttributesInNewLine="True" AlignAttributes="True" />
-	          <inheritsSet />
-	          <inheritsScope />
-	        </XmlFormattingPolicy>
 	      </Policies>
 	    </Properties>
 	  </MonoDevelop>

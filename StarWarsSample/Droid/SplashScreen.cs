@@ -6,16 +6,15 @@ using MvvmCross.Droid.Views;
 namespace StarWarsSample.Droid
 {
     [Activity(
-        Label = "Example.Droid"
-        , MainLauncher = true
-        , Icon = "@mipmap/icon"
-        , Theme = "@style/Theme.Splash"
-        , NoHistory = true
-        , ScreenOrientation = ScreenOrientation.Portrait)]
+        MainLauncher = true,
+        Icon = "@mipmap/icon",
+        Theme = "@style/Theme.Splash",
+        NoHistory = true,
+        ScreenOrientation = ScreenOrientation.Portrait)]
     public class SplashScreen : MvxSplashScreenActivity
     {
         public SplashScreen()
-            : base(Resource.Layout.splash_screen)
+            : base(Resource.Layout.SplashScreen)
         {
         }
     }

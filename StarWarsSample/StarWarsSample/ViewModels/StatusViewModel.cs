@@ -1,4 +1,5 @@
-﻿using System.Windows.Input;
+﻿using System;
+using System.Windows.Input;
 using MvvmCross.Core.ViewModels;
 using OxyPlot;
 using OxyPlot.Axes;
@@ -13,14 +14,32 @@ namespace StarWarsSample.ViewModels
         {
             CloseCommand = new MvxCommand(() => Close(this));
 
-            PlotModel = new PlotModel
+
+        }
+
+        // MvvmCross Lifecycle
+        public override void Start()
+        {
+            base.Start();
+        }
+
+        // MVVM Properties
+        public PlotModel PlotModel => GeneratePlotModel();
+
+        // MVVM Commands
+        public ICommand CloseCommand { get; set; }
+
+        // Private methods
+        private PlotModel GeneratePlotModel()
+        {
+            var model = new PlotModel
             {
                 PlotAreaBorderColor = OxyColors.LightGray,
                 LegendTextColor = OxyColors.LightGray,
                 LegendTitleColor = OxyColors.LightGray,
                 TextColor = OxyColors.White
             };
-            PlotModel.Axes.Add(new LinearAxis
+            model.Axes.Add(new LinearAxis
             {
                 Position = AxisPosition.Bottom,
                 Title = Strings.Time,
@@ -28,7 +47,7 @@ namespace StarWarsSample.ViewModels
                 AxislineColor = OxyColors.LightGray,
                 TicklineColor = OxyColors.LightGray
             });
-            PlotModel.Axes.Add(new LinearAxis
+            model.Axes.Add(new LinearAxis
             {
                 Position = AxisPosition.Left,
                 Maximum = 10,
@@ -55,33 +74,9 @@ namespace StarWarsSample.ViewModels
             series1.Points.Add(new DataPoint(6.0, 6.2));
             series1.Points.Add(new DataPoint(8.9, 8.9));
 
-            PlotModel.Series.Add(series1);
+            model.Series.Add(series1);
+
+            return model;
         }
-
-        // MvvmCross Lifecycle
-        public override void Start()
-        {
-            base.Start();
-        }
-
-        // MVVM Properties
-        private PlotModel _plotModel;
-        public PlotModel PlotModel
-        {
-            get
-            {
-                return _plotModel;
-            }
-            set
-            {
-                _plotModel = value;
-                RaisePropertyChanged(() => PlotModel);
-            }
-        }
-
-        // MVVM Commands
-        public ICommand CloseCommand { get; set; }
-
-        // Private methods
     }
 }
