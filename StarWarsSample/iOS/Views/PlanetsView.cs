@@ -32,6 +32,8 @@ namespace StarWarsSample.iOS.Views
 
             _tableView = new UITableView();
             _tableView.BackgroundColor = UIColor.Clear;
+            _tableView.RowHeight = UITableView.AutomaticDimension;
+            _tableView.EstimatedRowHeight = 44f;
 
             _imgBackground = new UIImageView(UIImage.FromBundle("ic_vader"))
             {

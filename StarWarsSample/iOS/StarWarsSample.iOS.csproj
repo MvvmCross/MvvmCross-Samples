@@ -155,6 +155,9 @@
     <Reference Include="OxyPlot.Xamarin.iOS">
       <HintPath>..\packages\OxyPlot.Xamarin.iOS.1.1.0-unstable0011\lib\Xamarin.iOS10\OxyPlot.Xamarin.iOS.dll</HintPath>
     </Reference>
+    <Reference Include="Lottie.iOS">
+      <HintPath>..\packages\Com.Airbnb.iOS.Lottie.1.5.1.1\lib\xamarinios\Lottie.iOS.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\StarWarsSample\StarWarsSample.csproj">
@@ -220,6 +223,14 @@
   <ItemGroup>
     <BundleResource Include="Resources\background.jpeg" />
     <BundleResource Include="Resources\Human_Imperium_logo.png" />
+    <BundleResource Include="Resources\starwars.json" />
+    <BundleResource Include="Resources\img_0.png" />
+    <BundleResource Include="Resources\img_1.png" />
+    <BundleResource Include="Resources\char1.png" />
+    <BundleResource Include="Resources\char2.png" />
+    <BundleResource Include="Resources\starwars2.json" />
+    <BundleResource Include="Resources\weapon.png" />
+    <BundleResource Include="Resources\weapon2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

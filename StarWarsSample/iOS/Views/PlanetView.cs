@@ -9,6 +9,7 @@ using StarWarsSample.Resources;
 using StarWarsSample.ViewModels;
 using TZStackView;
 using UIKit;
+using Airbnb.Lottie;
 
 namespace StarWarsSample.iOS.Views
 {
@@ -28,6 +29,8 @@ namespace StarWarsSample.iOS.Views
         private InfoView _viewClimate, _viewDiameter, _viewGravity, _viewTerrain, _viewPopulation;
 
         private UIButton _btnDestroy;
+
+        private LOTAnimationView _animation;
 
         public PlanetView()
         {
@@ -94,9 +97,13 @@ namespace StarWarsSample.iOS.Views
             _btnDestroy.SetTitleColor(UIColor.LightGray, UIControlState.Selected);
             _btnDestroy.PulseToSize(1.2f, 2f, true, true);
 
+            _animation = LOTAnimationView.AnimationNamed("starwars2");
+            _animation.Hidden = true;
+
             _scrollView.AddSubview(_twitterCoverImageView);
 
             View.AddSubviews(_scrollView);
+            View.AddSubview(_animation);
             View.SubviewsDoNotTranslateAutoresizingMaskIntoConstraints();
 
             _scrollView.AddSubviews(_lblName, _line, _contentView);
@@ -115,7 +122,12 @@ namespace StarWarsSample.iOS.Views
                 _scrollView.AtLeftOf(View),
                 _scrollView.AtTopOf(View),
                 _scrollView.AtRightOf(View),
-                _scrollView.AtBottomOf(View)
+                _scrollView.AtBottomOf(View),
+
+                _animation.AtLeftOf(View),
+                _animation.AtTopOf(View),
+                _animation.AtRightOf(View),
+                _animation.AtBottomOf(View)
             );
 
             _scrollView.AddConstraints(
@@ -164,6 +176,8 @@ namespace StarWarsSample.iOS.Views
             base.ViewWillAppear(animated);
 
             NavigationController.SetNavigationBarHidden(true, false);
+
+            ViewModel.PropertyChanged += ViewModel_PropertyChanged;
         }
 
         public override void ViewWillDisappear(bool animated)
@@ -171,6 +185,19 @@ namespace StarWarsSample.iOS.Views
             base.ViewWillDisappear(animated);
 
             NavigationController.SetNavigationBarHidden(false, false);
+        }
+
+        private void ViewModel_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
+        {
+            if (e.PropertyName == nameof(ViewModel.Destroying))
+            {
+                if (ViewModel.Destroying)
+                {
+                    _animation.Hidden = false;
+                    _animation.Play();
+                }
+
+            }
         }
     }
 }

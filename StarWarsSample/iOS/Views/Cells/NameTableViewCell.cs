@@ -1,13 +1,14 @@
 ﻿using System;
 using Cirrious.FluentLayouts.Touch;
 using MvvmCross.Binding.BindingContext;
-using StarWarsSample.Models;
 using UIKit;
 
 namespace StarWarsSample.iOS.Views.Cells
 {
     public class NameTableViewCell : BaseTableViewCell
     {
+        private const float PADDING = 12f;
+
         private UILabel _lblName;
 
         public NameTableViewCell(IntPtr handle) : base(handle)
@@ -42,10 +43,10 @@ namespace StarWarsSample.iOS.Views.Cells
             base.CreateConstraints();
 
             ContentView.AddConstraints(
-                _lblName.AtLeftOf(ContentView, 9f),
-                _lblName.AtTopOf(ContentView),
-                _lblName.AtBottomOf(ContentView),
-                _lblName.AtRightOf(ContentView, 9f)
+                _lblName.AtLeftOf(ContentView, PADDING),
+                _lblName.AtTopOf(ContentView, PADDING),
+                _lblName.AtBottomOf(ContentView, PADDING),
+                _lblName.AtRightOf(ContentView, PADDING)
             );
         }
     }
