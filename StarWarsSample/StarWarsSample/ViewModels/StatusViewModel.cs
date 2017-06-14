@@ -12,12 +12,6 @@ namespace StarWarsSample.ViewModels
         public StatusViewModel()
         {
             CloseCommand = new MvxCommand(() => Close(this));
-        }
-
-        // MvvmCross Lifecycle
-        public override void Start()
-        {
-            base.Start();
 
             PlotModel = new PlotModel
             {
@@ -62,6 +56,12 @@ namespace StarWarsSample.ViewModels
             series1.Points.Add(new DataPoint(8.9, 8.9));
 
             PlotModel.Series.Add(series1);
+        }
+
+        // MvvmCross Lifecycle
+        public override void Start()
+        {
+            base.Start();
         }
 
         // MVVM Properties

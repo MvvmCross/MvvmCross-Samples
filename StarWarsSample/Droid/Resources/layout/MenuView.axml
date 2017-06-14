@@ -10,5 +10,6 @@
 	android:theme="@style/ThemeToolbarNavigationView"
 	android:background="@color/colorPrimary"
 	local:itemTextColor="@color/light_gray"
+	local:itemIconTint="@color/light_gray"
 	local:headerLayout="@layout/navigation_header"
 	local:menu="@menu/navigation_drawer" />

@@ -240,6 +240,7 @@
 		<AndroidResource Include="Resources\drawable\people.xml" />
 		<AndroidResource Include="Resources\drawable\planet.xml" />
 		<AndroidResource Include="Resources\drawable\statistics.xml" />
+		<AndroidResource Include="Resources\layout\StatusView.axml" />
 	</ItemGroup>
 	<ItemGroup>
 		<Folder Include="Views\" />

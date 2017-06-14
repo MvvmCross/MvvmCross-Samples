@@ -125,15 +125,15 @@ namespace StarWarsSample.Resources {
             }
         }
         
-        public static string TargetsPlanets {
+        public static string TargetPlanets {
             get {
-                return ResourceManager.GetString("TargetsPlanets", resourceCulture);
+                return ResourceManager.GetString("TargetPlanets", resourceCulture);
             }
         }
         
-        public static string TargetsPeople {
+        public static string TargetPeople {
             get {
-                return ResourceManager.GetString("TargetsPeople", resourceCulture);
+                return ResourceManager.GetString("TargetPeople", resourceCulture);
             }
         }
     }

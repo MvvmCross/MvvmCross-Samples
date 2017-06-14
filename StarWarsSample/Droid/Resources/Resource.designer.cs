@@ -5861,8 +5861,8 @@ namespace StarWarsSample.Droid
 			// aapt resource value: 0x7f0900b1
 			public const int animation_view = 2131296433;
 			
-			// aapt resource value: 0x7f0900b2
-			public const int appbar = 2131296434;
+			// aapt resource value: 0x7f0900b3
+			public const int appbar = 2131296435;
 			
 			// aapt resource value: 0x7f090032
 			public const int auto = 2131296306;
@@ -6044,8 +6044,8 @@ namespace StarWarsSample.Droid
 			// aapt resource value: 0x7f09008d
 			public const int main_frame = 2131296397;
 			
-			// aapt resource value: 0x7f0900b4
-			public const int masked = 2131296436;
+			// aapt resource value: 0x7f0900b5
+			public const int masked = 2131296437;
 			
 			// aapt resource value: 0x7f090099
 			public const int media_actions = 2131296409;
@@ -6059,17 +6059,17 @@ namespace StarWarsSample.Droid
 			// aapt resource value: 0x7f09001d
 			public const int multiply = 2131296285;
 			
-			// aapt resource value: 0x7f0900b5
-			public const int nav_items = 2131296437;
-			
-			// aapt resource value: 0x7f0900b7
-			public const int nav_people = 2131296439;
-			
 			// aapt resource value: 0x7f0900b6
-			public const int nav_planets = 2131296438;
+			public const int nav_items = 2131296438;
 			
 			// aapt resource value: 0x7f0900b8
-			public const int nav_statistics = 2131296440;
+			public const int nav_people = 2131296440;
+			
+			// aapt resource value: 0x7f0900b7
+			public const int nav_planets = 2131296439;
+			
+			// aapt resource value: 0x7f0900b9
+			public const int nav_statistics = 2131296441;
 			
 			// aapt resource value: 0x7f09008f
 			public const int navigation_frame = 2131296399;
@@ -6118,6 +6118,9 @@ namespace StarWarsSample.Droid
 			
 			// aapt resource value: 0x7f0900ab
 			public const int planets_recycler_view = 2131296427;
+			
+			// aapt resource value: 0x7f0900b2
+			public const int plot_view = 2131296434;
 			
 			// aapt resource value: 0x7f0900a9
 			public const int posts_placeholder = 2131296425;
@@ -6323,8 +6326,8 @@ namespace StarWarsSample.Droid
 			// aapt resource value: 0x7f09000e
 			public const int view_offset_helper = 2131296270;
 			
-			// aapt resource value: 0x7f0900b3
-			public const int visible = 2131296435;
+			// aapt resource value: 0x7f0900b4
+			public const int visible = 2131296436;
 			
 			// aapt resource value: 0x7f090045
 			public const int weak = 2131296325;
@@ -6602,10 +6605,13 @@ namespace StarWarsSample.Droid
 			public const int splash_screen = 2130968646;
 			
 			// aapt resource value: 0x7f040047
-			public const int support_simple_spinner_dropdown_item = 2130968647;
+			public const int StatusView = 2130968647;
 			
 			// aapt resource value: 0x7f040048
-			public const int toolbar_actionbar = 2130968648;
+			public const int support_simple_spinner_dropdown_item = 2130968648;
+			
+			// aapt resource value: 0x7f040049
+			public const int toolbar_actionbar = 2130968649;
 			
 			static Layout()
 			{

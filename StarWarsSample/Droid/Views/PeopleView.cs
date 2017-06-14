@@ -6,6 +6,7 @@ using Android.Views;
 using MvvmCross.Droid.Shared.Attributes;
 using MvvmCross.Droid.Support.V7.RecyclerView;
 using StarWarsSample.Droid.Extensions;
+using StarWarsSample.Resources;
 using StarWarsSample.ViewModels;
 
 namespace StarWarsSample.Droid.Views
@@ -20,7 +21,7 @@ namespace StarWarsSample.Droid.Views
         {
             var view = base.OnCreateView(inflater, container, savedInstanceState);
 
-            ParentActivity.SupportActionBar.Title = "Target: People";
+            ParentActivity.SupportActionBar.Title = Strings.TargetPeople;
 
             var recyclerView = view.FindViewById<MvxRecyclerView>(Resource.Id.people_recycler_view);
             if (recyclerView != null)
@@ -34,6 +35,5 @@ namespace StarWarsSample.Droid.Views
 
             return view;
         }
-
     }
 }

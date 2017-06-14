@@ -28,43 +28,12 @@
 					android:scaleType="centerCrop"
 					android:src="@drawable/Planet_Header"
 					local:layout_collapseMode="parallax" />
-				<!--<FrameLayout
-				android:id="@+id/fl_planet"
-				android:layout_width="match_parent"
-				android:layout_height="match_parent"
-				android:layout_gravity="bottom|center_horizontal"
-				android:orientation="vertical" 
-				local:layout_collapseMode="parallax">
-			</FrameLayout>-->
 				<android.support.v7.widget.Toolbar
 					android:id="@+id/toolbar"
 					android:layout_width="match_parent"
 					android:layout_height="?attr/actionBarSize"
 					local:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-					local:layout_collapseMode="pin">
-					<!--<LinearLayout
-						android:layout_width="wrap_content"
-						android:layout_height="match_parent"
-						android:orientation="horizontal">
-						<ImageView
-							android:layout_width="32dp"
-							android:layout_height="32dp"
-							android:id="@+id/img_planet_toolbar"
-							android:layout_gravity="center"
-							android:visibility="invisible"
-							android:scaleType="centerCrop" />
-						<TextView
-							android:id="@+id/profile_title"
-							android:layout_width="wrap_content"
-							android:layout_height="match_parent"
-							android:gravity="center_vertical"
-							android:layout_marginLeft="8dp"
-							android:textColor="@android:color/white"
-							android:textSize="20sp"
-							android:visibility="invisible"
-							local:MvxBind="Text NameSurnameText(Profile)" />
-					</LinearLayout>-->
-				</android.support.v7.widget.Toolbar>
+					local:layout_collapseMode="pin" />
 			</android.support.design.widget.CollapsingToolbarLayout>
 		</android.support.design.widget.AppBarLayout>
 		<android.support.v4.widget.NestedScrollView

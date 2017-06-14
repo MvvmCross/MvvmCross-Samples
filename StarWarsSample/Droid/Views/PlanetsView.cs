@@ -5,6 +5,7 @@ using Android.Views;
 using MvvmCross.Droid.Shared.Attributes;
 using MvvmCross.Droid.Support.V7.RecyclerView;
 using StarWarsSample.Droid.Extensions;
+using StarWarsSample.Resources;
 using StarWarsSample.ViewModels;
 
 namespace StarWarsSample.Droid.Views
@@ -19,7 +20,7 @@ namespace StarWarsSample.Droid.Views
         {
             var view = base.OnCreateView(inflater, container, savedInstanceState);
 
-            ParentActivity.SupportActionBar.Title = "Target: Planets";
+            ParentActivity.SupportActionBar.Title = Strings.TargetPlanets;
 
             var recyclerView = view.FindViewById<MvxRecyclerView>(Resource.Id.planets_recycler_view);
             if (recyclerView != null)

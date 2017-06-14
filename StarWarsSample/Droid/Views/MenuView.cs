@@ -31,7 +31,7 @@ namespace StarWarsSample.Droid.Views
             _navigationView.Menu.FindItem(Resource.Id.nav_planets).SetChecked(true);
 
             var iconPlanets = _navigationView.Menu.FindItem(Resource.Id.nav_planets);
-            iconPlanets.SetTitle(Strings.TargetsPlanets);
+            iconPlanets.SetTitle(Strings.TargetPlanets);
             iconPlanets.SetCheckable(false);
             iconPlanets.SetChecked(true);
             var imgPlanet = VectorDrawableCompat.Create(Resources, Resource.Drawable.planet, Activity.Theme);
@@ -40,7 +40,7 @@ namespace StarWarsSample.Droid.Views
             _previousMenuItem = iconPlanets;
 
             var iconPeople = _navigationView.Menu.FindItem(Resource.Id.nav_people);
-            iconPeople.SetTitle(Strings.TargetsPeople);
+            iconPeople.SetTitle(Strings.TargetPeople);
             iconPeople.SetCheckable(false);
             var imgPeople = VectorDrawableCompat.Create(Resources, Resource.Drawable.people, Activity.Theme);
             iconPeople.SetIcon(imgPeople);
