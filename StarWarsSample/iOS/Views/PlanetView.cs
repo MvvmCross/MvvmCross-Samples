@@ -10,6 +10,9 @@ using StarWarsSample.ViewModels;
 using TZStackView;
 using UIKit;
 using Airbnb.Lottie;
+using MvvmCross.Core.ViewModels;
+using StarWarsSample.MvxInteraction;
+using MvvmCross.Platform.Core;
 
 namespace StarWarsSample.iOS.Views
 {
@@ -22,15 +25,26 @@ namespace StarWarsSample.iOS.Views
         private UIView _contentView;
         private TwitterCoverImageView _twitterCoverImageView;
         private UILabel _lblName;
-
         private UIView _line;
-
         private StackView _stackInfo;
         private InfoView _viewClimate, _viewDiameter, _viewGravity, _viewTerrain, _viewPopulation;
-
         private UIButton _btnDestroy;
 
         private LOTAnimationView _animation;
+
+        private IMvxInteraction<DestructionAction> _interaction;
+        public IMvxInteraction<DestructionAction> Interaction
+        {
+            get => _interaction;
+            set
+            {
+                if (_interaction != null)
+                    _interaction.Requested -= OnInteractionRequested;
+
+                _interaction = value;
+                _interaction.Requested += OnInteractionRequested;
+            }
+        }
 
         public PlanetView()
         {
@@ -168,6 +182,7 @@ namespace StarWarsSample.iOS.Views
             set.Bind(_viewTerrain.Information).To(vm => vm.Planet.Terrain);
             set.Bind(_viewPopulation.Information).To(vm => vm.Planet.Population);
             set.Bind(_btnDestroy).To(vm => vm.DestroyPlanetCommand);
+            set.Bind(this).For(v => v.Interaction).To(vm => vm.Interaction);
             set.Apply();
         }
 
@@ -176,8 +191,6 @@ namespace StarWarsSample.iOS.Views
             base.ViewWillAppear(animated);
 
             NavigationController.SetNavigationBarHidden(true, false);
-
-            ViewModel.PropertyChanged += ViewModel_PropertyChanged;
         }
 
         public override void ViewWillDisappear(bool animated)
@@ -187,17 +200,14 @@ namespace StarWarsSample.iOS.Views
             NavigationController.SetNavigationBarHidden(false, false);
         }
 
-        private void ViewModel_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
+        private void OnInteractionRequested(object sender, MvxValueEventArgs<DestructionAction> eventArgs)
         {
-            if (e.PropertyName == nameof(ViewModel.Destroying))
+            _animation.Hidden = false;
+            _animation.PlayWithCompletion(
+                (animationFinished) =>
             {
-                if (ViewModel.Destroying)
-                {
-                    _animation.Hidden = false;
-                    _animation.Play();
-                }
-
-            }
+                eventArgs.Value.OnDestroyed();
+            });
         }
     }
 }
