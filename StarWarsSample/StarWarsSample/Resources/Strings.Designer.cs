@@ -124,5 +124,17 @@ namespace StarWarsSample.Resources {
                 return ResourceManager.GetString("Menu", resourceCulture);
             }
         }
+        
+        public static string TargetsPlanets {
+            get {
+                return ResourceManager.GetString("TargetsPlanets", resourceCulture);
+            }
+        }
+        
+        public static string TargetsPeople {
+            get {
+                return ResourceManager.GetString("TargetsPeople", resourceCulture);
+            }
+        }
     }
 }

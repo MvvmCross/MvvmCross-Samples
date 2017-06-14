@@ -3,10 +3,12 @@ using System.Threading.Tasks;
 using Android.OS;
 using Android.Runtime;
 using Android.Support.Design.Widget;
+using Android.Support.Graphics.Drawable;
 using Android.Views;
 using MvvmCross.Binding.Droid.BindingContext;
 using MvvmCross.Droid.Shared.Attributes;
 using MvvmCross.Droid.Support.V4;
+using StarWarsSample.Resources;
 using StarWarsSample.ViewModels;
 
 namespace StarWarsSample.Droid.Views
@@ -15,8 +17,8 @@ namespace StarWarsSample.Droid.Views
     [Register("starWarsSample.droid.views.MenuView")]
     public class MenuFragment : MvxFragment<MenuViewModel>, NavigationView.IOnNavigationItemSelectedListener
     {
-        private NavigationView navigationView;
-        private IMenuItem previousMenuItem;
+        private NavigationView _navigationView;
+        private IMenuItem _previousMenuItem;
 
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
@@ -24,19 +26,43 @@ namespace StarWarsSample.Droid.Views
 
             var view = this.BindingInflate(Resource.Layout.MenuView, null);
 
-            navigationView = view.FindViewById<NavigationView>(Resource.Id.navigation_view);
-            navigationView.SetNavigationItemSelectedListener(this);
-            navigationView.Menu.FindItem(Resource.Id.nav_planets).SetChecked(true);
+            _navigationView = view.FindViewById<NavigationView>(Resource.Id.navigation_view);
+            _navigationView.SetNavigationItemSelectedListener(this);
+            _navigationView.Menu.FindItem(Resource.Id.nav_planets).SetChecked(true);
+
+            var iconPlanets = _navigationView.Menu.FindItem(Resource.Id.nav_planets);
+            iconPlanets.SetTitle(Strings.TargetsPlanets);
+            iconPlanets.SetCheckable(false);
+            iconPlanets.SetChecked(true);
+            var imgPlanet = VectorDrawableCompat.Create(Resources, Resource.Drawable.planet, Activity.Theme);
+            iconPlanets.SetIcon(imgPlanet);
+
+            _previousMenuItem = iconPlanets;
+
+            var iconPeople = _navigationView.Menu.FindItem(Resource.Id.nav_people);
+            iconPeople.SetTitle(Strings.TargetsPeople);
+            iconPeople.SetCheckable(false);
+            var imgPeople = VectorDrawableCompat.Create(Resources, Resource.Drawable.people, Activity.Theme);
+            iconPeople.SetIcon(imgPeople);
+
+            var iconStatistics = _navigationView.Menu.FindItem(Resource.Id.nav_statistics);
+            iconStatistics.SetTitle(Strings.Statistics);
+            iconStatistics.SetCheckable(false);
+            var imgStatistics = VectorDrawableCompat.Create(Resources, Resource.Drawable.statistics, Activity.Theme);
+            iconStatistics.SetIcon(imgStatistics);
 
             return view;
         }
 
         public bool OnNavigationItemSelected(IMenuItem item)
         {
+            if (_previousMenuItem != null)
+                _previousMenuItem.SetChecked(false);
+
             item.SetCheckable(true);
             item.SetChecked(true);
-            previousMenuItem?.SetChecked(false);
-            previousMenuItem = item;
+
+            _previousMenuItem = item;
 
             Navigate(item.ItemId);
 

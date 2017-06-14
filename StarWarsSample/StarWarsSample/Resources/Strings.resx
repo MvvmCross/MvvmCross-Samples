@@ -156,4 +156,10 @@
 	<data name="Menu" xml:space="preserve">
     <value>Menu</value> 
   </data>
+	<data name="TargetsPlanets" xml:space="preserve">
+    <value>Target: Planets</value> 
+  </data>
+	<data name="TargetsPeople" xml:space="preserve">
+    <value>Target: People</value> 
+  </data>
 </root>

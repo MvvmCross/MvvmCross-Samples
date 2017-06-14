@@ -236,6 +236,10 @@
 		<AndroidResource Include="Resources\mipmap-xhdpi\icon.png" />
 		<AndroidResource Include="Resources\mipmap-xxhdpi\icon.png" />
 		<AndroidResource Include="Resources\mipmap-xxxhdpi\icon.png" />
+		<AndroidResource Include="Resources\drawable\another_option.xml" />
+		<AndroidResource Include="Resources\drawable\people.xml" />
+		<AndroidResource Include="Resources\drawable\planet.xml" />
+		<AndroidResource Include="Resources\drawable\statistics.xml" />
 	</ItemGroup>
 	<ItemGroup>
 		<Folder Include="Views\" />
