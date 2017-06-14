@@ -53,6 +53,7 @@
       <DependentUpon>Strings.resx</DependentUpon>
     </Compile>
     <Compile Include="ViewModels\BaseViewModel.cs" />
+    <Compile Include="MvxInteraction\DestructionAction.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MvvmCross.Platform">
@@ -118,6 +119,7 @@
     <Folder Include="Rest\Implementations\" />
     <Folder Include="MvxMessages\" />
     <Folder Include="Resources\" />
+    <Folder Include="MvxInteraction\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\Strings.resx">

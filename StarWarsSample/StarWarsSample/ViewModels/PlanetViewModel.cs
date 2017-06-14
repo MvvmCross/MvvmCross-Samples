@@ -5,6 +5,7 @@ using MvvmCross.Core.ViewModels;
 using MvvmCross.Platform.Platform;
 using MvvmCross.Plugins.Messenger;
 using StarWarsSample.Models;
+using StarWarsSample.MvxInteraction;
 using StarWarsSample.MvxMessages;
 
 namespace StarWarsSample.ViewModels
@@ -14,6 +15,9 @@ namespace StarWarsSample.ViewModels
         private readonly IMvxJsonConverter _jsonConverter;
         private readonly IMvxMessenger _mvxMessenger;
         private readonly IUserDialogs _userDialogs;
+
+        private MvxInteraction<DestructionAction> _interaction = new MvxInteraction<DestructionAction>();
+
 
         public PlanetViewModel(
             IMvxJsonConverter jsonConverter,
@@ -53,19 +57,7 @@ namespace StarWarsSample.ViewModels
             }
         }
 
-        private bool _destroying;
-        public bool Destroying
-        {
-            get
-            {
-                return _destroying;
-            }
-            set
-            {
-                _destroying = value;
-                RaisePropertyChanged(() => Destroying);
-            }
-        }
+        public IMvxInteraction<DestructionAction> Interaction => _interaction;
 
         // MVVM Commands
         public IMvxCommand DestroyPlanetCommand { get; set; }
@@ -84,15 +76,17 @@ namespace StarWarsSample.ViewModels
             if (!result)
                 return;
 
-            Destroying = true;
+            var request = new DestructionAction
+            {
+                OnDestroyed = () =>
+                {
+                    _mvxMessenger.Publish(new PlanetDestroyedMessage(this, Planet));
 
-            await Task.Delay(4000);
+                    Close(this);
+                }
+            };
 
-            Destroying = false;
-
-            _mvxMessenger.Publish(new PlanetDestroyedMessage(this, Planet));
-
-            Close(this);
+            _interaction.Raise(request);
         }
     }
 }
