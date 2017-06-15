@@ -175,11 +175,7 @@
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\Contents.json" />
     <ImageAsset Include="Assets.xcassets\ic_people.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\ic_people.imageset\ic_people_red.pdf" />
     <ImageAsset Include="Assets.xcassets\ic_menu.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\ic_menu.imageset\ic_bottomnavigation_menu.pdf" />
-    <ImageAsset Include="Assets.xcassets\ic_vader.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\ic_vader.imageset\imageedit_2_9075227536.jpg" />
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-small.png" />
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-small%402x.png" />
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-small%403x.png" />
@@ -192,6 +188,22 @@
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-76.png" />
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-76%402x.png" />
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-167.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Default-750%402x~iphone6-portrait_750x1334.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Default-568h%402x~iphone_640x1136.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Default-Portrait~ipad_768x1024.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Default-Portrait%402x~ipad_1536x2048.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Default-Landscape~ipad_1024x768.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Default-Landscape%402x~ipad_2048x1536.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Default%402x~iphone_640x960.png" />
+    <ImageAsset Include="Assets.xcassets\ic_people.imageset\people.pdf" />
+    <ImageAsset Include="Assets.xcassets\ic_planets.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\ic_planets.imageset\planets.pdf" />
+    <ImageAsset Include="Assets.xcassets\ic_menu.imageset\menu.pdf" />
+    <ImageAsset Include="Assets.xcassets\ic_statistics.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\ic_statistics.imageset\estadisticas.pdf" />
+    <ImageAsset Include="Assets.xcassets\ic_another_option.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\ic_another_option.imageset\anotheroption1.pdf" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
@@ -204,9 +216,9 @@
     <Folder Include="MvxBindings\" />
     <Folder Include="CustomControls\" />
     <Folder Include="Extensions\" />
-  </ItemGroup>
-  <ItemGroup>
-    <InterfaceDefinition Include="LaunchScreen.storyboard" />
+    <Folder Include="Assets.xcassets\ic_planets.imageset\" />
+    <Folder Include="Assets.xcassets\ic_statistics.imageset\" />
+    <Folder Include="Assets.xcassets\ic_another_option.imageset\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -240,8 +252,6 @@
     <Compile Include="Bootstrap\VisibilityPluginBootstrap.cs" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\background.jpeg" />
-    <BundleResource Include="Resources\Human_Imperium_logo.png" />
     <BundleResource Include="Resources\starwars.json" />
     <BundleResource Include="Resources\img_0.png" />
     <BundleResource Include="Resources\img_1.png" />
@@ -250,6 +260,8 @@
     <BundleResource Include="Resources\starwars2.json" />
     <BundleResource Include="Resources\weapon.png" />
     <BundleResource Include="Resources\weapon2.png" />
+    <BundleResource Include="Resources\Planet_Header.jpg" />
+    <BundleResource Include="Resources\Background.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

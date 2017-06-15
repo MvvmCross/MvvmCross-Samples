@@ -21,17 +21,12 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="12" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES" image="background.jpeg">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="17" translatesAutoresizingMaskIntoConstraints="NO" image="Human_Imperium_logo.png" misplaced="YES">
-                                <rect key="frame" x="225" y="223" width="150" height="154"/>
-                            </imageView>
                         </subviews>
                         <constraints>
                             <constraint id="13" firstItem="12" firstAttribute="trailing" secondItem="Ze5-6b-2t3" secondAttribute="trailingMargin" constant="16"/>
                             <constraint id="14" firstItem="Ze5-6b-2t3" firstAttribute="leadingMargin" secondItem="12" secondAttribute="leading" constant="16"/>
                             <constraint id="15" firstItem="12" firstAttribute="bottom" secondItem="Ze5-6b-2t3" secondAttribute="bottom"/>
                             <constraint id="16" firstItem="12" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top"/>
-                            <constraint id="18" firstItem="17" firstAttribute="centerX" secondItem="12" secondAttribute="centerX"/>
-                            <constraint id="19" firstItem="12" firstAttribute="centerY" secondItem="17" secondAttribute="centerY" constant="24"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -44,5 +39,11 @@
         <image name="ic_vader" width="574" height="574"/>
         <image name="background.jpeg" width="1920" height="1080"/>
         <image name="Human_Imperium_logo.png" width="300" height="346"/>
+        <image name="img_0.png" width="691" height="692"/>
+        <image name="img_1.png" width="691" height="690"/>
+        <image name="char1.png" width="664" height="1315"/>
+        <image name="char2.png" width="1149" height="1213"/>
+        <image name="weapon.png" width="1374" height="1167"/>
+        <image name="weapon2.png" width="1404" height="1210"/>
     </resources>
 </document>

@@ -11,11 +11,11 @@ namespace StarWarsSample.iOS.CustomControls
 {
     public class TwitterCoverImageView : UIImageView
     {
-        public static readonly nfloat DefaultCoverViewHeight = 200;
+        public static readonly nfloat DefaultCoverViewHeight = 160;
 
         private UIScrollView scrollView;
         private UIView topView;
-        private List<UIImage> blurredImages;
+        //private List<UIImage> blurredImages;
 
         public TwitterCoverImageView()
         {
@@ -43,7 +43,7 @@ namespace StarWarsSample.iOS.CustomControls
         {
             topView = top;
             CoverViewHeight = DefaultCoverViewHeight;
-            blurredImages = new List<UIImage>(20);
+            //blurredImages = new List<UIImage>(20);
             ContentMode = UIViewContentMode.ScaleAspectFill;
             ClipsToBounds = true;
         }
@@ -70,7 +70,7 @@ namespace StarWarsSample.iOS.CustomControls
             set
             {
                 base.Image = value;
-                PrepareForBlurImages();
+                //PrepareForBlurImages();
             }
         }
 
@@ -90,20 +90,20 @@ namespace StarWarsSample.iOS.CustomControls
                 }
                 Frame = new CGRect(-offset, -offset + topViewHeight, 320 + offset * 2, CoverViewHeight + offset);
 
-                int index = (int)offset / 10;
-                if (index < 0)
-                {
-                    index = 0;
-                }
-                else if (index >= blurredImages.Count)
-                {
-                    index = blurredImages.Count - 1;
-                }
-                var image = blurredImages[index];
-                if (Image != image)
-                {
-                    base.Image = image;
-                }
+                //int index = (int)offset / 10;
+                //if (index < 0)
+                //{
+                //    index = 0;
+                //}
+                //else if (index >= blurredImages.Count)
+                //{
+                //    index = blurredImages.Count - 1;
+                //}
+                //var image = blurredImages[index];
+                //if (Image != image)
+                //{
+                //    base.Image = image;
+                //}
             }
             else
             {
@@ -115,11 +115,11 @@ namespace StarWarsSample.iOS.CustomControls
                 }
                 Frame = new CGRect(0, topViewHeight, 320, CoverViewHeight);
 
-                var image = blurredImages[0];
-                if (Image != image)
-                {
-                    base.Image = image;
-                }
+                //var image = blurredImages[0];
+                //if (Image != image)
+                //{
+                //    base.Image = image;
+                //}
             }
         }
 
@@ -139,6 +139,7 @@ namespace StarWarsSample.iOS.CustomControls
             SetNeedsLayout();
         }
 
+        /*
         private void PrepareForBlurImages()
         {
             blurredImages.Clear();
@@ -150,7 +151,9 @@ namespace StarWarsSample.iOS.CustomControls
                 num += 0.04f;
             }
         }
+        */
 
+        /*
         private static UIImage Blur(UIImage image, float blurRadius)
         {
             if (image.Size.Width < 1 || image.Size.Height < 1)
@@ -234,5 +237,6 @@ namespace StarWarsSample.iOS.CustomControls
 
             return outputImage;
         }
+        */
     }
 }

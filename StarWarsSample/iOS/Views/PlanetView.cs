@@ -64,7 +64,7 @@ namespace StarWarsSample.iOS.Views
             {
                 CoverViewHeight = HEADER_HEIGHT,
                 BackgroundColor = UIColor.Clear,
-                Image = UIImage.FromBundle("ic_vader"),
+                Image = UIImage.FromBundle("Planet_Header.jpg"),
                 ScrollView = _scrollView
             };
 

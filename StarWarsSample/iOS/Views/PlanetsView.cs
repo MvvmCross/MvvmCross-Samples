@@ -4,12 +4,13 @@ using MvvmCross.Binding.BindingContext;
 using MvvmCross.iOS.Views;
 using MvvmCross.iOS.Views.Presenters.Attributes;
 using StarWarsSample.iOS.Sources;
+using StarWarsSample.Resources;
 using StarWarsSample.ViewModels;
 using UIKit;
 
 namespace StarWarsSample.iOS.Views
 {
-    [MvxTabPresentation(WrapInNavigationController = true, TabName = "Target: Planets", TabIconName = "ic_people")]
+    [MvxTabPresentation(WrapInNavigationController = true, TabName = "Target: Planets", TabIconName = "ic_planets")]
     public class PlanetsView : MvxViewController<PlanetsViewModel>
     {
         private UIImageView _imgBackground;
@@ -24,7 +25,7 @@ namespace StarWarsSample.iOS.Views
         {
             base.ViewDidLoad();
 
-            Title = "Target: Planets";
+            Title = Strings.TargetPlanets;
 
             EdgesForExtendedLayout = UIRectEdge.None;
 
@@ -35,9 +36,9 @@ namespace StarWarsSample.iOS.Views
             _tableView.RowHeight = UITableView.AutomaticDimension;
             _tableView.EstimatedRowHeight = 44f;
 
-            _imgBackground = new UIImageView(UIImage.FromBundle("ic_vader"))
+            _imgBackground = new UIImageView(UIImage.FromBundle("Background.jpg"))
             {
-                ContentMode = UIViewContentMode.Center
+                ContentMode = UIViewContentMode.ScaleAspectFill
             };
 
             _source = new PlanetsTableSource(_tableView);
