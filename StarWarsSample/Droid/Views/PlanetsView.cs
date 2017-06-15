@@ -10,7 +10,7 @@ using StarWarsSample.ViewModels;
 
 namespace StarWarsSample.Droid.Views
 {
-    [MvxFragment(typeof(MainViewModel), Resource.Id.content_frame, true)]
+    [MvxFragment(typeof(MainViewModel), Resource.Id.content_frame, false)]
     [Register("starWarsSample.droid.views.PlanetsView")]
     public class PlanetsView : BaseFragment<PlanetsViewModel>
     {
@@ -29,7 +29,7 @@ namespace StarWarsSample.Droid.Views
                 var layoutManager = new LinearLayoutManager(Activity);
                 recyclerView.SetLayoutManager(layoutManager);
 
-                recyclerView.AddOnScrollFetchItemsListener(layoutManager, () => ViewModel.FetchPlanetsTask, () => this.ViewModel.FetchPlanetCommand);
+                recyclerView.AddOnScrollFetchItemsListener(layoutManager, () => ViewModel.FetchPlanetsTask, () => ViewModel.FetchPlanetCommand);
             }
 
             return view;
