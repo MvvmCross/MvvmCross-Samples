@@ -111,7 +111,7 @@ namespace StarWarsSample.iOS.Views
             _btnDestroy.SetTitleColor(UIColor.LightGray, UIControlState.Selected);
             _btnDestroy.PulseToSize(1.2f, 2f, true, true);
 
-            _animation = LOTAnimationView.AnimationNamed("starwars2");
+            _animation = LOTAnimationView.AnimationNamed("starwars");
             _animation.Hidden = true;
 
             _scrollView.AddSubview(_twitterCoverImageView);

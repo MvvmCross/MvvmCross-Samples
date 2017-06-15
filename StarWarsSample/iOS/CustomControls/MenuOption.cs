@@ -7,6 +7,9 @@ namespace StarWarsSample.iOS.CustomControls
     public class MenuOption : BaseView
     {
         private const float PADDING = 16f;
+        private const float IMAGE_SIZE = 22f;
+
+        public UIImageView Image { get; set; }
 
         public UILabel Label { get; set; }
 
@@ -20,6 +23,8 @@ namespace StarWarsSample.iOS.CustomControls
         {
             base.CreateViews();
 
+            Image = new UIImageView();
+
             Label = new UILabel
             {
                 TextColor = UIColor.Red,
@@ -28,7 +33,7 @@ namespace StarWarsSample.iOS.CustomControls
 
             Line = new UIView { BackgroundColor = UIColor.LightGray };
 
-            AddSubviews(Label, Line);
+            AddSubviews(Image, Label, Line);
             this.SubviewsDoNotTranslateAutoresizingMaskIntoConstraints();
         }
 
@@ -37,7 +42,12 @@ namespace StarWarsSample.iOS.CustomControls
             base.CreateConstraints();
 
             this.AddConstraints(
-                Label.AtLeftOf(this, PADDING),
+                Image.AtLeftOf(this, PADDING),
+                Image.WithSameCenterY(this),
+                Image.Width().EqualTo(IMAGE_SIZE),
+                Image.Height().EqualTo(IMAGE_SIZE),
+
+                Label.ToRightOf(Image, PADDING / 2),
                 Label.AtTopOf(this, PADDING),
                 Label.AtRightOf(this, PADDING),
 
