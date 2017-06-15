@@ -11,9 +11,10 @@ using UIKit;
 
 namespace StarWarsSample.iOS.Views
 {
-    [MvxModalPresentation(WrapInNavigationController = true, ModalTransitionStyle = UIKit.UIModalTransitionStyle.CrossDissolve)]
+    [MvxModalPresentation(WrapInNavigationController = true, ModalTransitionStyle = UIModalTransitionStyle.CrossDissolve)]
     public class StatusView : MvxViewController<StatusViewModel>
     {
+        private UIImageView _imgBackground;
         private UILabel _lblTitle;
         private PlotView _plotView;
         private UIBarButtonItem _btnClose;
@@ -26,7 +27,12 @@ namespace StarWarsSample.iOS.Views
         {
             base.ViewDidLoad();
 
-            View.BackgroundColor = UIColor.Black;
+            View.BackgroundColor = UIColor.Clear;
+
+            _imgBackground = new UIImageView(UIImage.FromBundle("Background.jpg"))
+            {
+                ContentMode = UIViewContentMode.ScaleAspectFill
+            };
 
             Title = Strings.Statistics;
 
@@ -43,10 +49,15 @@ namespace StarWarsSample.iOS.Views
             _plotView = new PlotView();
             _plotView.BackgroundColor = UIColor.Clear;
 
-            View.AddSubviews(_lblTitle, _plotView);
+            View.AddSubviews(_imgBackground, _lblTitle, _plotView);
             View.SubviewsDoNotTranslateAutoresizingMaskIntoConstraints();
 
             View.AddConstraints(
+                _imgBackground.AtLeftOf(View),
+                _imgBackground.AtTopOf(View),
+                _imgBackground.AtBottomOf(View),
+                _imgBackground.AtRightOf(View),
+
                 _lblTitle.AtLeftOf(View, 12f),
                 _lblTitle.AtTopOf(View, 8f),
                 _lblTitle.AtRightOf(View, 12f),
@@ -56,6 +67,8 @@ namespace StarWarsSample.iOS.Views
                 _plotView.AtRightOf(View),
                 _plotView.AtBottomOf(View)
             );
+
+            View.BringSubviewToFront(_plotView);
 
             var set = this.CreateBindingSet<StatusView, StatusViewModel>();
             set.Bind(_plotView).For(v => v.Model).To(vm => vm.PlotModel);
