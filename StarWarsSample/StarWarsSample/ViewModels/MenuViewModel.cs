@@ -1,30 +1,30 @@
 ﻿using System;
-using System.Windows.Input;
+using MvvmCross.Core.Navigation;
 using MvvmCross.Core.ViewModels;
 
 namespace StarWarsSample.ViewModels
 {
     public class MenuViewModel : BaseViewModel
     {
-        public MenuViewModel()
+        private readonly IMvxNavigationService _navigationService;
+
+        public MenuViewModel(IMvxNavigationService navigationService)
         {
-            ShowPlanetsCommand = new MvxCommand(() => ShowViewModel<PlanetsViewModel>());
-            ShowPeopleCommand = new MvxCommand(() => ShowViewModel<PeopleViewModel>());
-            ShowStatusCommand = new MvxCommand(() => ShowViewModel<StatusViewModel>());
+            _navigationService = navigationService;
+
+            ShowPlanetsCommand = new MvxAsyncCommand(async () => await _navigationService.Navigate<PlanetsViewModel>());
+            ShowPeopleCommand = new MvxAsyncCommand(async () => await _navigationService.Navigate<PeopleViewModel>());
+            ShowStatusCommand = new MvxAsyncCommand(async () => await _navigationService.Navigate<StatusViewModel>());
         }
 
         // MvvmCross Lifecycle
-        public override void Start()
-        {
-            base.Start();
-        }
 
         // MVVM Properties
 
         // MVVM Commands
-        public ICommand ShowStatusCommand { get; set; }
-        public ICommand ShowPlanetsCommand { get; set; }
-        public ICommand ShowPeopleCommand { get; set; }
+        public IMvxCommand ShowStatusCommand { get; set; }
+        public IMvxCommand ShowPlanetsCommand { get; set; }
+        public IMvxCommand ShowPeopleCommand { get; set; }
 
         // Private methods
     }

@@ -1,12 +1,10 @@
-﻿using System;
-using System.Linq;
+﻿using System.Linq;
 using System.Threading.Tasks;
+using MvvmCross.Core.Navigation;
 using MvvmCross.Core.ViewModels;
-using MvvmCross.Platform.Platform;
-using MvvmCross.Plugins.Messenger;
 using Nito.AsyncEx;
 using StarWarsSample.Models;
-using StarWarsSample.MvxMessages;
+using StarWarsSample.MvxResults;
 using StarWarsSample.Services.Interfaces;
 
 namespace StarWarsSample.ViewModels
@@ -14,30 +12,20 @@ namespace StarWarsSample.ViewModels
     public class PeopleViewModel : BaseViewModel
     {
         private readonly IPeopleService _peopleService;
-        private readonly IMvxJsonConverter _jsonConverter;
-        private readonly IMvxMessenger _mvxMessenger;
+        private readonly IMvxNavigationService _navigationService;
 
-        private MvxSubscriptionToken _personDestroyedToken;
         private string _nextPage;
 
-        public PeopleViewModel(IPeopleService peopleService, IMvxJsonConverter jsonConverter, IMvxMessenger mvxMessenger)
+        public PeopleViewModel(
+            IPeopleService peopleService,
+            IMvxNavigationService navigationService)
         {
             _peopleService = peopleService;
-            _jsonConverter = jsonConverter;
-            _mvxMessenger = mvxMessenger;
+            _navigationService = navigationService;
 
             People = new MvxObservableCollection<Person>();
 
-            _personDestroyedToken = _mvxMessenger.SubscribeOnMainThread<PersonDestroyedMessage>(
-                message =>
-                {
-                    var person = People.FirstOrDefault(p => p.Name == message.Person.Name);
-                    if (person != null)
-                        People.Remove(person);
-                }
-            );
-
-            PersonSelectedCommand = new MvxCommand<Person>(PersonSelected);
+            PersonSelectedCommand = new MvxAsyncCommand<Person>(PersonSelected);
             FetchPeopleCommand = new MvxCommand(
                 () =>
             {
@@ -47,11 +35,11 @@ namespace StarWarsSample.ViewModels
         }
 
         // MvvmCross Lifecycle
-        public override void Start()
+        public override Task Initialize()
         {
-            base.Start();
-
             LoadPeopleTask = NotifyTaskCompletion.Create(LoadPeople);
+
+            return base.Initialize();
         }
 
         // MVVM Properties
@@ -88,10 +76,16 @@ namespace StarWarsSample.ViewModels
             People.AddRange(result.Results.Where(p => !p.Name.Contains("Vader") && !p.Name.Contains("Anakin")));
         }
 
-        private void PersonSelected(Person selectedPerson)
+        private async Task PersonSelected(Person selectedPerson)
         {
-            var serializedPerson = _jsonConverter.SerializeObject(selectedPerson);
-            ShowViewModel<PersonViewModel>(new { serializedPerson });
+            var result = await _navigationService.Navigate<PersonViewModel, Person, MvxDestructionResult<Person>>(selectedPerson);
+
+            if (result != null && result.Destroyed)
+            {
+                var person = People.FirstOrDefault(p => p.Name == result.Entity.Name);
+                if (person != null)
+                    People.Remove(person);
+            }
         }
     }
 }

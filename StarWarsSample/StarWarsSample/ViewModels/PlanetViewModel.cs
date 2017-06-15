@@ -2,44 +2,32 @@
 using System.Threading.Tasks;
 using Acr.UserDialogs;
 using MvvmCross.Core.ViewModels;
-using MvvmCross.Platform.Platform;
-using MvvmCross.Plugins.Messenger;
 using StarWarsSample.Models;
 using StarWarsSample.MvxInteraction;
-using StarWarsSample.MvxMessages;
+using StarWarsSample.MvxResults;
 
 namespace StarWarsSample.ViewModels
 {
-    public class PlanetViewModel : BaseViewModel
+    public class PlanetViewModel : BaseViewModel<Planet, MvxDestructionResult<Planet>>
     {
-        private readonly IMvxJsonConverter _jsonConverter;
-        private readonly IMvxMessenger _mvxMessenger;
         private readonly IUserDialogs _userDialogs;
 
         private MvxInteraction<DestructionAction> _interaction = new MvxInteraction<DestructionAction>();
 
-
         public PlanetViewModel(
-            IMvxJsonConverter jsonConverter,
-            IMvxMessenger mvxMessenger,
             IUserDialogs userDialogs)
         {
-            _jsonConverter = jsonConverter;
-            _mvxMessenger = mvxMessenger;
             _userDialogs = userDialogs;
 
             DestroyPlanetCommand = new MvxAsyncCommand(DestroyPlanet);
         }
 
         // MvvmCross Lifecycle
-        public void Init(string serializedPlanet)
+        public override Task Initialize(Planet parameter)
         {
-            Planet = _jsonConverter.DeserializeObject<Planet>(serializedPlanet);
-        }
+            Planet = parameter;
 
-        public override void Start()
-        {
-            base.Start();
+            return Task.FromResult(0);
         }
 
         // MVVM Properties
@@ -78,12 +66,7 @@ namespace StarWarsSample.ViewModels
 
             var request = new DestructionAction
             {
-                OnDestroyed = () =>
-                {
-                    _mvxMessenger.Publish(new PlanetDestroyedMessage(this, Planet));
-
-                    Close(this);
-                }
+                OnDestroyed = () => Close(new MvxDestructionResult<Planet> { Entity = Planet, Destroyed = true })
             };
 
             _interaction.Raise(request);

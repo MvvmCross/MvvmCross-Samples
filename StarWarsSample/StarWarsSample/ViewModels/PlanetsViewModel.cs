@@ -1,12 +1,10 @@
-﻿using System;
-using System.Linq;
+﻿using System.Linq;
 using System.Threading.Tasks;
+using MvvmCross.Core.Navigation;
 using MvvmCross.Core.ViewModels;
-using MvvmCross.Platform.Platform;
-using MvvmCross.Plugins.Messenger;
 using Nito.AsyncEx;
 using StarWarsSample.Models;
-using StarWarsSample.MvxMessages;
+using StarWarsSample.MvxResults;
 using StarWarsSample.Services.Interfaces;
 
 namespace StarWarsSample.ViewModels
@@ -14,33 +12,20 @@ namespace StarWarsSample.ViewModels
     public class PlanetsViewModel : BaseViewModel
     {
         private readonly IPlanetsService _planetsService;
-        private readonly IMvxJsonConverter _jsonConverter;
-        private readonly IMvxMessenger _mvxMessenger;
+        private readonly IMvxNavigationService _navigationService;
 
-        private MvxSubscriptionToken _planetDestroyedToken;
         private string _nextPage;
 
         public PlanetsViewModel(
             IPlanetsService planetsService,
-            IMvxJsonConverter jsonConverter,
-            IMvxMessenger mvxMessenger)
+            IMvxNavigationService navigationService)
         {
             _planetsService = planetsService;
-            _jsonConverter = jsonConverter;
-            _mvxMessenger = mvxMessenger;
+            _navigationService = navigationService;
 
             Planets = new MvxObservableCollection<Planet>();
 
-            _planetDestroyedToken = _mvxMessenger.SubscribeOnMainThread<PlanetDestroyedMessage>(
-                message =>
-                {
-                    var planet = Planets.FirstOrDefault(p => p.Name == message.Planet.Name);
-                    if (planet != null)
-                        Planets.Remove(planet);
-                }
-            );
-
-            PlanetSelectedCommand = new MvxCommand<Planet>(PlanetSelected);
+            PlanetSelectedCommand = new MvxAsyncCommand<Planet>(PlanetSelected);
             FetchPlanetCommand = new MvxCommand(
                 () =>
             {
@@ -50,11 +35,11 @@ namespace StarWarsSample.ViewModels
         }
 
         // MvvmCross Lifecycle
-        public override void Start()
+        public override Task Initialize()
         {
-            base.Start();
-
             LoadPlanetsTask = NotifyTaskCompletion.Create(LoadPlanets);
+
+            return Task.FromResult(0);
         }
 
         // MVVM Properties
@@ -91,10 +76,16 @@ namespace StarWarsSample.ViewModels
             Planets.AddRange(result.Results);
         }
 
-        private void PlanetSelected(Planet selectedPlanet)
+        private async Task PlanetSelected(Planet selectedPlanet)
         {
-            var serializedPlanet = _jsonConverter.SerializeObject(selectedPlanet);
-            ShowViewModel<PlanetViewModel>(new { serializedPlanet });
+            var result = await _navigationService.Navigate<PlanetViewModel, Planet, MvxDestructionResult<Planet>>(selectedPlanet);
+
+            if (result != null && result.Destroyed)
+            {
+                var planet = Planets.FirstOrDefault(p => p.Name == result.Entity.Name);
+                if (planet != null)
+                    Planets.Remove(planet);
+            }
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Input;
+using MvvmCross.Core.Navigation;
 using MvvmCross.Core.ViewModels;
 using OxyPlot;
 using OxyPlot.Axes;
@@ -10,18 +11,16 @@ namespace StarWarsSample.ViewModels
 {
     public class StatusViewModel : BaseViewModel
     {
-        public StatusViewModel()
+        private readonly IMvxNavigationService _navigationService;
+
+        public StatusViewModel(IMvxNavigationService navigationService)
         {
-            CloseCommand = new MvxCommand(() => Close(this));
+            _navigationService = navigationService;
 
-
+            CloseCommand = new MvxAsyncCommand(async () => await _navigationService.Close(this));
         }
 
         // MvvmCross Lifecycle
-        public override void Start()
-        {
-            base.Start();
-        }
 
         // MVVM Properties
         public PlotModel PlotModel => GeneratePlotModel();

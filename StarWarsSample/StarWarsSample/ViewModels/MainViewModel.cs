@@ -1,19 +1,19 @@
-﻿using MvvmCross.Core.ViewModels;
-using StarWarsSample.Services.Interfaces;
+﻿using MvvmCross.Core.Navigation;
+using MvvmCross.Core.ViewModels;
 
 namespace StarWarsSample.ViewModels
 {
     public class MainViewModel : BaseViewModel
     {
-        private readonly IPeopleService _peopleService;
+        private readonly IMvxNavigationService _navigationService;
 
-        public MainViewModel(IPeopleService peopleService)
+        public MainViewModel(IMvxNavigationService navigationService)
         {
-            _peopleService = peopleService;
+            _navigationService = navigationService;
 
-            ShowPeopleViewModelCommand = new MvxCommand(() => ShowViewModel<PeopleViewModel>());
-            ShowPlanetsViewModelCommand = new MvxCommand(() => ShowViewModel<PlanetsViewModel>());
-            ShowMenuViewModelCommand = new MvxCommand(() => ShowViewModel<MenuViewModel>());
+            ShowPeopleViewModelCommand = new MvxAsyncCommand(async () => await _navigationService.Navigate<PeopleViewModel>());
+            ShowPlanetsViewModelCommand = new MvxAsyncCommand(async () => await _navigationService.Navigate<PlanetsViewModel>());
+            ShowMenuViewModelCommand = new MvxAsyncCommand(async () => await _navigationService.Navigate<MenuViewModel>());
         }
 
         // MvvmCross Lifecycle

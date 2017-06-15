@@ -55,6 +55,7 @@
     <Compile Include="ViewModels\BaseViewModel.cs" />
     <Compile Include="MvxInteraction\DestructionAction.cs" />
     <Compile Include="MvxMessages\PersonDestroyedMessage.cs" />
+    <Compile Include="MvxResults\MvxDestructionResult.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MvvmCross.Platform">
@@ -124,6 +125,7 @@
     <Folder Include="MvxMessages\" />
     <Folder Include="Resources\" />
     <Folder Include="MvxInteraction\" />
+    <Folder Include="MvxResults\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\Strings.resx">
