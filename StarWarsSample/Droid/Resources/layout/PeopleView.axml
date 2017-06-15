@@ -11,7 +11,7 @@
 		android:layout_height="match_parent"
 		local:layout_behavior="@string/appbar_scrolling_view_behavior">
 		<ImageView
-			android:id="@+id/posts_placeholder"
+			android:id="@+id/screen_background"
 			android:layout_width="match_parent"
 			android:layout_height="match_parent"
 			android:src="@drawable/Background"

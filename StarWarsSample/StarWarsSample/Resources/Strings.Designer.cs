@@ -136,5 +136,53 @@ namespace StarWarsSample.Resources {
                 return ResourceManager.GetString("TargetPeople", resourceCulture);
             }
         }
+        
+        public static string Height {
+            get {
+                return ResourceManager.GetString("Height", resourceCulture);
+            }
+        }
+        
+        public static string Mass {
+            get {
+                return ResourceManager.GetString("Mass", resourceCulture);
+            }
+        }
+        
+        public static string HairColor {
+            get {
+                return ResourceManager.GetString("HairColor", resourceCulture);
+            }
+        }
+        
+        public static string SkinColor {
+            get {
+                return ResourceManager.GetString("SkinColor", resourceCulture);
+            }
+        }
+        
+        public static string EyeColor {
+            get {
+                return ResourceManager.GetString("EyeColor", resourceCulture);
+            }
+        }
+        
+        public static string BirthYear {
+            get {
+                return ResourceManager.GetString("BirthYear", resourceCulture);
+            }
+        }
+        
+        public static string Gender {
+            get {
+                return ResourceManager.GetString("Gender", resourceCulture);
+            }
+        }
+        
+        public static string HomeWorld {
+            get {
+                return ResourceManager.GetString("HomeWorld", resourceCulture);
+            }
+        }
     }
 }

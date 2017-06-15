@@ -1,9 +1,12 @@
 ﻿using System;
+using System.Linq;
 using System.Threading.Tasks;
 using MvvmCross.Core.ViewModels;
 using MvvmCross.Platform.Platform;
+using MvvmCross.Plugins.Messenger;
 using Nito.AsyncEx;
 using StarWarsSample.Models;
+using StarWarsSample.MvxMessages;
 using StarWarsSample.Services.Interfaces;
 
 namespace StarWarsSample.ViewModels
@@ -12,15 +15,27 @@ namespace StarWarsSample.ViewModels
     {
         private readonly IPeopleService _peopleService;
         private readonly IMvxJsonConverter _jsonConverter;
+        private readonly IMvxMessenger _mvxMessenger;
 
+        private MvxSubscriptionToken _personDestroyedToken;
         private string _nextPage;
 
-        public PeopleViewModel(IPeopleService peopleService, IMvxJsonConverter jsonConverter)
+        public PeopleViewModel(IPeopleService peopleService, IMvxJsonConverter jsonConverter, IMvxMessenger mvxMessenger)
         {
             _peopleService = peopleService;
             _jsonConverter = jsonConverter;
+            _mvxMessenger = mvxMessenger;
 
             People = new MvxObservableCollection<Person>();
+
+            _personDestroyedToken = _mvxMessenger.SubscribeOnMainThread<PersonDestroyedMessage>(
+                message =>
+                {
+                    var person = People.FirstOrDefault(p => p.Name == message.Person.Name);
+                    if (person != null)
+                        People.Remove(person);
+                }
+            );
 
             PersonSelectedCommand = new MvxCommand<Person>(PersonSelected);
             FetchPeopleCommand = new MvxCommand(
@@ -70,7 +85,7 @@ namespace StarWarsSample.ViewModels
 
             _nextPage = result.Next;
 
-            People.AddRange(result.Results);
+            People.AddRange(result.Results.Where(p => !p.Name.Contains("Vader") && !p.Name.Contains("Anakin")));
         }
 
         private void PersonSelected(Person selectedPerson)

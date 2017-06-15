@@ -162,4 +162,28 @@
 	<data name="TargetPeople" xml:space="preserve">
     <value>Target: People</value> 
   </data>
+	<data name="Height" xml:space="preserve">
+    <value>Height</value> 
+  </data>
+	<data name="Mass" xml:space="preserve">
+    <value>Mass</value> 
+  </data>
+	<data name="HairColor" xml:space="preserve">
+    <value>Hair color</value> 
+  </data>
+	<data name="SkinColor" xml:space="preserve">
+    <value>Skin color</value> 
+  </data>
+	<data name="EyeColor" xml:space="preserve">
+    <value>Eye color</value> 
+  </data>
+	<data name="BirthYear" xml:space="preserve">
+    <value>Birth year</value> 
+  </data>
+	<data name="Gender" xml:space="preserve">
+    <value>Gender</value> 
+  </data>
+	<data name="HomeWorld" xml:space="preserve">
+    <value>Home world</value> 
+  </data>
 </root>

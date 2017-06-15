@@ -182,6 +182,12 @@
 		<Reference Include="Refractored.Controls.CircleImageView">
 		  <HintPath>..\packages\Refractored.Controls.CircleImageView.1.0.1\lib\MonoAndroid10\Refractored.Controls.CircleImageView.dll</HintPath>
 		</Reference>
+		<Reference Include="MvvmCross.Plugins.Visibility">
+		  <HintPath>..\packages\MvvmCross.Plugin.Visibility.5.0.2\lib\MonoAndroid\MvvmCross.Plugins.Visibility.dll</HintPath>
+		</Reference>
+		<Reference Include="MvvmCross.Plugins.Visibility.Droid">
+		  <HintPath>..\packages\MvvmCross.Plugin.Visibility.5.0.2\lib\MonoAndroid\MvvmCross.Plugins.Visibility.Droid.dll</HintPath>
+		</Reference>
 	</ItemGroup>
 	<ItemGroup>
 		<ProjectReference Include="..\StarWarsSample\StarWarsSample.csproj">
@@ -208,6 +214,8 @@
 		<Compile Include="Controls\InfoView.cs" />
 		<Compile Include="Views\PeopleView.cs" />
 		<Compile Include="Views\StatusView.cs" />
+		<Compile Include="Views\PersonView.cs" />
+		<Compile Include="Bootstrap\VisibilityPluginBootstrap.cs" />
 	</ItemGroup>
 	<ItemGroup>
 		<None Include="Resources\AboutResources.txt" />
@@ -252,6 +260,7 @@
 		<AndroidResource Include="Resources\drawable-nodpi\People_Header.png" />
 		<AndroidResource Include="Resources\drawable-nodpi\profile.png" />
 		<AndroidResource Include="Resources\drawable\statistics.xml" />
+		<AndroidResource Include="Resources\layout\PersonView.axml" />
 	</ItemGroup>
 	<ItemGroup>
 		<Folder Include="Views\" />
@@ -277,6 +286,11 @@
 		<AndroidAsset Include="Assets\starwars.json" />
 		<AndroidAsset Include="Assets\imgs\img_0.png" />
 		<AndroidAsset Include="Assets\imgs\img_1.png" />
+		<AndroidAsset Include="Assets\imgs\char1.png" />
+		<AndroidAsset Include="Assets\imgs\char2.png" />
+		<AndroidAsset Include="Assets\imgs\weapon.png" />
+		<AndroidAsset Include="Assets\imgs\weapon2.png" />
+		<AndroidAsset Include="Assets\starwars2.json" />
 	</ItemGroup>
 	<Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 	<Import Project="..\packages\Xamarin.Build.Download.0.4.3\build\Xamarin.Build.Download.targets" Condition="Exists('..\packages\Xamarin.Build.Download.0.4.3\build\Xamarin.Build.Download.targets')" />
