@@ -12,6 +12,7 @@
       "minimum-system-version": "8.0",
       "orientation": "portrait",
       "extent": "full-screen",
+      "filename": "splash1242x2208.png",
       "size": "414x736",
       "subtype": "736h",
       "scale": "3x",
@@ -31,6 +32,7 @@
       "minimum-system-version": "8.0",
       "orientation": "landscape",
       "extent": "full-screen",
+      "filename": "splash2208x1242.png",
       "size": "736x414",
       "subtype": "736h",
       "scale": "3x",
@@ -40,6 +42,7 @@
       "minimum-system-version": "7.0",
       "orientation": "portrait",
       "extent": "full-screen",
+      "filename": "splash2048x2732.png",
       "size": "1024x1366",
       "scale": "2x",
       "idiom": "ipad"

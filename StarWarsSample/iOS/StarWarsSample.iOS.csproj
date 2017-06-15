@@ -198,12 +198,15 @@
     <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Default%402x~iphone_640x960.png" />
     <ImageAsset Include="Assets.xcassets\ic_people.imageset\people.pdf" />
     <ImageAsset Include="Assets.xcassets\ic_planets.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\ic_planets.imageset\planets.pdf" />
     <ImageAsset Include="Assets.xcassets\ic_menu.imageset\menu.pdf" />
     <ImageAsset Include="Assets.xcassets\ic_statistics.imageset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\ic_statistics.imageset\estadisticas.pdf" />
     <ImageAsset Include="Assets.xcassets\ic_another_option.imageset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\ic_another_option.imageset\anotheroption1.pdf" />
+    <ImageAsset Include="Assets.xcassets\ic_planets.imageset\planet.pdf" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\splash1242x2208.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\splash2208x1242.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\splash2048x2732.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
