@@ -2,9 +2,8 @@
 using MvvmCross.Core.ViewModels;
 using MvvmCross.Platform;
 using MvvmCross.Platform.IoC;
-using StarWarsSample.ViewModels;
 
-namespace SwarWarsSample
+namespace StarWarsSample
 {
     public class App : MvxApplication
     {
@@ -22,7 +21,11 @@ namespace SwarWarsSample
 
             Mvx.RegisterSingleton<IUserDialogs>(() => UserDialogs.Instance);
 
-            RegisterAppStart<MainViewModel>();
+            Mvx.ConstructAndRegisterSingleton<IMvxAppStart, AppStart>();
+            var appStart = Mvx.Resolve<IMvxAppStart>();
+
+            // register the appstart object
+            RegisterAppStart(appStart);
         }
     }
 }

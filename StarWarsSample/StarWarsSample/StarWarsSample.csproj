@@ -56,6 +56,7 @@
     <Compile Include="MvxInteraction\DestructionAction.cs" />
     <Compile Include="MvxMessages\PersonDestroyedMessage.cs" />
     <Compile Include="MvxResults\MvxDestructionResult.cs" />
+    <Compile Include="AppStart.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MvvmCross.Platform">
