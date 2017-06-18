@@ -6,8 +6,8 @@ using Android.Views;
 using MvvmCross.Droid.Shared.Attributes;
 using MvvmCross.Droid.Support.V7.RecyclerView;
 using StarWarsSample.Droid.Extensions;
-using StarWarsSample.Resources;
-using StarWarsSample.ViewModels;
+using StarWarsSample.Core.Resources;
+using StarWarsSample.Core.ViewModels;
 
 namespace StarWarsSample.Droid.Views
 {

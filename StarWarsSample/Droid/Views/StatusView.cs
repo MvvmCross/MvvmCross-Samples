@@ -3,8 +3,8 @@ using Android.Runtime;
 using Android.Views;
 using MvvmCross.Droid.Shared.Attributes;
 using OxyPlot.Xamarin.Android;
-using StarWarsSample.Resources;
-using StarWarsSample.ViewModels;
+using StarWarsSample.Core.Resources;
+using StarWarsSample.Core.ViewModels;
 
 namespace StarWarsSample.Droid.Views
 {

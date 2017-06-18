@@ -1,7 +1,7 @@
 ﻿using System;
 using MvvmCross.Platform.UI;
 
-namespace StarWarsSample
+namespace StarWarsSample.Core
 {
     public static class AppColors
     {

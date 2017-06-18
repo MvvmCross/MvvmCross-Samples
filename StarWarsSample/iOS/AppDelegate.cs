@@ -3,6 +3,7 @@ using MvvmCross.Core.ViewModels;
 using MvvmCross.iOS.Platform;
 using MvvmCross.Platform;
 using MvvmCross.Plugins.Color.iOS;
+using StarWarsSample.Core;
 using UIKit;
 
 namespace StarWarsSample.iOS

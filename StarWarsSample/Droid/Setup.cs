@@ -7,12 +7,11 @@ using Android.Support.V4.Widget;
 using Android.Support.V7.Widget;
 using MvvmCross.Binding.Bindings.Target.Construction;
 using MvvmCross.Core.ViewModels;
-using MvvmCross.Droid.Platform;
 using MvvmCross.Droid.Shared.Presenter;
 using MvvmCross.Droid.Support.V7.AppCompat;
 using MvvmCross.Droid.Support.V7.RecyclerView;
 using MvvmCross.Droid.Views;
-using SwarWarsSample;
+using StarWarsSample.Core;
 
 namespace StarWarsSample.Droid
 {

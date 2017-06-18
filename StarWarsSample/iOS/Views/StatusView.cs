@@ -5,9 +5,10 @@ using MvvmCross.iOS.Views;
 using MvvmCross.iOS.Views.Presenters.Attributes;
 using MvvmCross.Plugins.Color.iOS;
 using OxyPlot.Xamarin.iOS;
-using StarWarsSample.Resources;
-using StarWarsSample.ViewModels;
+using StarWarsSample.Core.ViewModels;
+using StarWarsSample.Core.Resources;
 using UIKit;
+using StarWarsSample.Core;
 
 namespace StarWarsSample.iOS.Views
 {

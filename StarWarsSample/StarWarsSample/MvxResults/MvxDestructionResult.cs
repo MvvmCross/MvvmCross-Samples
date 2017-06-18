@@ -1,5 +1,5 @@
 ﻿using System;
-namespace StarWarsSample.MvxResults
+namespace StarWarsSample.Core.MvxResults
 {
     public class MvxDestructionResult<TEntity>
     {

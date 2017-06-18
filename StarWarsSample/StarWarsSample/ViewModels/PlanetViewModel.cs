@@ -2,11 +2,11 @@
 using System.Threading.Tasks;
 using Acr.UserDialogs;
 using MvvmCross.Core.ViewModels;
-using StarWarsSample.Models;
-using StarWarsSample.MvxInteraction;
-using StarWarsSample.MvxResults;
+using StarWarsSample.Core.Models;
+using StarWarsSample.Core.MvxInteraction;
+using StarWarsSample.Core.MvxResults;
 
-namespace StarWarsSample.ViewModels
+namespace StarWarsSample.Core.ViewModels
 {
     public class PlanetViewModel : BaseViewModel<Planet, MvxDestructionResult<Planet>>
     {

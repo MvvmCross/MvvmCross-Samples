@@ -5,9 +5,9 @@ using MvvmCross.Core.ViewModels;
 using OxyPlot;
 using OxyPlot.Axes;
 using OxyPlot.Series;
-using StarWarsSample.Resources;
+using StarWarsSample.Core.Resources;
 
-namespace StarWarsSample.ViewModels
+namespace StarWarsSample.Core.ViewModels
 {
     public class StatusViewModel : BaseViewModel
     {

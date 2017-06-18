@@ -1,6 +1,7 @@
 ﻿using System;
 using Cirrious.FluentLayouts.Touch;
 using MvvmCross.Plugins.Color.iOS;
+using StarWarsSample.Core;
 using UIKit;
 
 namespace StarWarsSample.iOS.CustomControls

@@ -11,8 +11,9 @@ using MvvmCross.Core.ViewModels;
 using MvvmCross.Droid.Shared.Attributes;
 using MvvmCross.Platform.Core;
 using MvvmCross.Plugins.Color.Droid;
-using StarWarsSample.MvxInteraction;
-using StarWarsSample.ViewModels;
+using StarWarsSample.Core;
+using StarWarsSample.Core.MvxInteraction;
+using StarWarsSample.Core.ViewModels;
 
 namespace StarWarsSample.Droid.Views
 {

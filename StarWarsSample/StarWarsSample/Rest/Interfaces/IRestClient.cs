@@ -2,7 +2,7 @@
 using System.Net.Http;
 using System.Threading.Tasks;
 
-namespace StarWarsSample.Rest.Interfaces
+namespace StarWarsSample.Core.Rest.Interfaces
 {
     public interface IRestClient
     {

@@ -1,5 +1,6 @@
 ﻿using System;
-namespace StarWarsSample
+
+namespace StarWarsSample.Core
 {
     public static class Constants
     {

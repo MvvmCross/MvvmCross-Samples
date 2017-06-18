@@ -5,8 +5,8 @@ using MvvmCross.Binding.iOS.Views.Gestures;
 using MvvmCross.iOS.Views;
 using MvvmCross.iOS.Views.Presenters.Attributes;
 using StarWarsSample.iOS.CustomControls;
-using StarWarsSample.Resources;
-using StarWarsSample.ViewModels;
+using StarWarsSample.Core.Resources;
+using StarWarsSample.Core.ViewModels;
 using TZStackView;
 using UIKit;
 

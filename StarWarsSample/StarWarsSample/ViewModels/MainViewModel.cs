@@ -1,7 +1,7 @@
 ﻿using MvvmCross.Core.Navigation;
 using MvvmCross.Core.ViewModels;
 
-namespace StarWarsSample.ViewModels
+namespace StarWarsSample.Core.ViewModels
 {
     public class MainViewModel : BaseViewModel
     {

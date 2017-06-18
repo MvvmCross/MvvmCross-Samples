@@ -8,11 +8,12 @@ using MvvmCross.Platform.Core;
 using MvvmCross.Plugins.Color.iOS;
 using StarWarsSample.iOS.CustomControls;
 using StarWarsSample.iOS.Extensions;
-using StarWarsSample.MvxInteraction;
-using StarWarsSample.Resources;
-using StarWarsSample.ViewModels;
+using StarWarsSample.Core.MvxInteraction;
+using StarWarsSample.Core.Resources;
+using StarWarsSample.Core.ViewModels;
 using TZStackView;
 using UIKit;
+using StarWarsSample.Core;
 
 namespace StarWarsSample.iOS.Views
 {

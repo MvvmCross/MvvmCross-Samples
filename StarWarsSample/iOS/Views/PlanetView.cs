@@ -5,14 +5,15 @@ using MvvmCross.iOS.Views.Presenters.Attributes;
 using MvvmCross.Plugins.Color.iOS;
 using StarWarsSample.iOS.CustomControls;
 using StarWarsSample.iOS.Extensions;
-using StarWarsSample.Resources;
-using StarWarsSample.ViewModels;
+using StarWarsSample.Core.Resources;
+using StarWarsSample.Core.ViewModels;
 using TZStackView;
 using UIKit;
 using Airbnb.Lottie;
 using MvvmCross.Core.ViewModels;
-using StarWarsSample.MvxInteraction;
+using StarWarsSample.Core.MvxInteraction;
 using MvvmCross.Platform.Core;
+using StarWarsSample.Core;
 
 namespace StarWarsSample.iOS.Views
 {

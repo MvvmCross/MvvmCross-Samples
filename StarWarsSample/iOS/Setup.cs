@@ -4,7 +4,7 @@ using MvvmCross.iOS.Platform;
 using MvvmCross.iOS.Views.Presenters;
 using MvvmCross.Platform;
 using StarWarsSample.iOS.MvxBindings;
-using SwarWarsSample;
+using StarWarsSample.Core;
 using UIKit;
 
 namespace StarWarsSample.iOS

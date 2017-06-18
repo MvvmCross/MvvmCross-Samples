@@ -3,11 +3,11 @@ using System.Threading.Tasks;
 using MvvmCross.Core.Navigation;
 using MvvmCross.Core.ViewModels;
 using Nito.AsyncEx;
-using StarWarsSample.Models;
-using StarWarsSample.MvxResults;
-using StarWarsSample.Services.Interfaces;
+using StarWarsSample.Core.Models;
+using StarWarsSample.Core.MvxResults;
+using StarWarsSample.Core.Services.Interfaces;
 
-namespace StarWarsSample.ViewModels
+namespace StarWarsSample.Core.ViewModels
 {
     public class PeopleViewModel : BaseViewModel
     {

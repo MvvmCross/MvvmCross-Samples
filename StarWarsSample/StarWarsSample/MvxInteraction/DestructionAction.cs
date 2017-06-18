@@ -1,5 +1,5 @@
 ﻿using System;
-namespace StarWarsSample.MvxInteraction
+namespace StarWarsSample.Core.MvxInteraction
 {
     public class DestructionAction
     {

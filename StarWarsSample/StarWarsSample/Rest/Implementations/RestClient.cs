@@ -4,9 +4,9 @@ using System.Text;
 using System.Threading.Tasks;
 using ModernHttpClient;
 using MvvmCross.Platform.Platform;
-using StarWarsSample.Rest.Interfaces;
+using StarWarsSample.Core.Rest.Interfaces;
 
-namespace StarWarsSample.Rest.Implementations
+namespace StarWarsSample.Core.Rest.Implementations
 {
     public class RestClient : IRestClient
     {

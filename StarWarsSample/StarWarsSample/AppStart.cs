@@ -1,9 +1,9 @@
 ﻿using System;
 using MvvmCross.Core.Navigation;
 using MvvmCross.Core.ViewModels;
-using StarWarsSample.ViewModels;
+using StarWarsSample.Core.ViewModels;
 
-namespace StarWarsSample
+namespace StarWarsSample.Core
 {
     public class AppStart : MvxNavigatingObject, IMvxAppStart
     {

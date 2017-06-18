@@ -4,8 +4,8 @@ using MvvmCross.Binding.BindingContext;
 using MvvmCross.iOS.Views;
 using MvvmCross.iOS.Views.Presenters.Attributes;
 using StarWarsSample.iOS.Sources;
-using StarWarsSample.Resources;
-using StarWarsSample.ViewModels;
+using StarWarsSample.Core.Resources;
+using StarWarsSample.Core.ViewModels;
 using UIKit;
 
 namespace StarWarsSample.iOS.Views

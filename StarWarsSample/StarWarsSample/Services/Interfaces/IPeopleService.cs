@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Threading.Tasks;
-using StarWarsSample.Models;
+using StarWarsSample.Core.Models;
 
-namespace StarWarsSample.Services.Interfaces
+namespace StarWarsSample.Core.Services.Interfaces
 {
     public interface IPeopleService
     {

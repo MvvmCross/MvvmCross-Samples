@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace StarWarsSample.Models
+namespace StarWarsSample.Core.Models
 {
     public class Planet
     {

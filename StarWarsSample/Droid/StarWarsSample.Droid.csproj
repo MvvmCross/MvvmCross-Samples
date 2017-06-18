@@ -190,12 +190,6 @@
 		</Reference>
 	</ItemGroup>
 	<ItemGroup>
-		<ProjectReference Include="..\StarWarsSample\StarWarsSample.csproj">
-			<Project>{DECE7897-83CC-431C-B87E-D61901D0A629}</Project>
-			<Name>StarWarsSample</Name>
-		</ProjectReference>
-	</ItemGroup>
-	<ItemGroup>
 		<Compile Include="Resources\Resource.designer.cs" />
 		<Compile Include="Properties\AssemblyInfo.cs" />
 		<Compile Include="Bootstrap\MessengerPluginBootstrap.cs" />
@@ -291,6 +285,12 @@
 		<AndroidAsset Include="Assets\imgs\weapon.png" />
 		<AndroidAsset Include="Assets\imgs\weapon2.png" />
 		<AndroidAsset Include="Assets\starwars2.json" />
+	</ItemGroup>
+	<ItemGroup>
+	  <ProjectReference Include="..\StarWarsSample\StarWarsSample.Core.csproj">
+	    <Project>{DECE7897-83CC-431C-B87E-D61901D0A629}</Project>
+	    <Name>StarWarsSample.Core</Name>
+	  </ProjectReference>
 	</ItemGroup>
 	<Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 	<Import Project="..\packages\Xamarin.Build.Download.0.4.3\build\Xamarin.Build.Download.targets" Condition="Exists('..\packages\Xamarin.Build.Download.0.4.3\build\Xamarin.Build.Download.targets')" />

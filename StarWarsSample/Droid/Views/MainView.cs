@@ -7,7 +7,7 @@ using Android.Support.V4.Widget;
 using Android.Views;
 using Android.Views.InputMethods;
 using MvvmCross.Droid.Support.V7.AppCompat;
-using StarWarsSample.ViewModels;
+using StarWarsSample.Core.ViewModels;
 
 namespace StarWarsSample.Droid.Views
 {

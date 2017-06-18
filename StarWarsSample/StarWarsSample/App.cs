@@ -3,7 +3,7 @@ using MvvmCross.Core.ViewModels;
 using MvvmCross.Platform;
 using MvvmCross.Platform.IoC;
 
-namespace StarWarsSample
+namespace StarWarsSample.Core
 {
     public class App : MvxApplication
     {

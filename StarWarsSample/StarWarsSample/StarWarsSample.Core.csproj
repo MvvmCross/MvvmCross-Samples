@@ -47,14 +47,12 @@
     <Compile Include="ViewModels\PersonViewModel.cs" />
     <Compile Include="AppColors.cs" />
     <Compile Include="ViewModels\PlanetViewModel.cs" />
-    <Compile Include="MvxMessages\PlanetDestroyedMessage.cs" />
     <Compile Include="ViewModels\StatusViewModel.cs" />
     <Compile Include="Resources\Strings.Designer.cs">
       <DependentUpon>Strings.resx</DependentUpon>
     </Compile>
     <Compile Include="ViewModels\BaseViewModel.cs" />
     <Compile Include="MvxInteraction\DestructionAction.cs" />
-    <Compile Include="MvxMessages\PersonDestroyedMessage.cs" />
     <Compile Include="MvxResults\MvxDestructionResult.cs" />
     <Compile Include="AppStart.cs" />
   </ItemGroup>
@@ -123,7 +121,6 @@
     <Folder Include="Rest\" />
     <Folder Include="Rest\Interfaces\" />
     <Folder Include="Rest\Implementations\" />
-    <Folder Include="MvxMessages\" />
     <Folder Include="Resources\" />
     <Folder Include="MvxInteraction\" />
     <Folder Include="MvxResults\" />

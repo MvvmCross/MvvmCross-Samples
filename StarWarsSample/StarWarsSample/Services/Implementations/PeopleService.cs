@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Net.Http;
 using System.Threading.Tasks;
-using StarWarsSample.Models;
-using StarWarsSample.Rest.Interfaces;
-using StarWarsSample.Services.Interfaces;
+using StarWarsSample.Core.Models;
+using StarWarsSample.Core.Rest.Interfaces;
+using StarWarsSample.Core.Services.Interfaces;
 
-namespace StarWarsSample.Services.Implementations
+namespace StarWarsSample.Core.Services.Implementations
 {
     public class PeopleService : IPeopleService
     {

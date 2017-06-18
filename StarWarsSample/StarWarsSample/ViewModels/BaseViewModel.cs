@@ -1,8 +1,8 @@
 ﻿using System;
 using MvvmCross.Core.ViewModels;
-using StarWarsSample.Resources;
+using StarWarsSample.Core.Resources;
 
-namespace StarWarsSample.ViewModels
+namespace StarWarsSample.Core.ViewModels
 {
     public abstract class BaseViewModel : MvxViewModel
     {
