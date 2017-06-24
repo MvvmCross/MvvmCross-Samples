@@ -8,7 +8,7 @@
     The primary goals of this format is to allow a simple XML format 
     that is mostly human readable. The generation and parsing of the 
     various data types are done through the TypeConverter classes 
-    associated with the data types.
+    associated with the data types. 
     
     Example:
     
@@ -153,11 +153,11 @@
 	<data name="AnotherOption" xml:space="preserve">
     <value>Another option</value> 
   </data>
-	<data name="Menu" xml:space="preserve">
+	<data name="Menu" xml:space="preserve"> 
     <value>Menu</value> 
   </data>
 	<data name="TargetPlanets" xml:space="preserve">
-    <value>Target: Planets</value> 
+    <value>Target: Planets</value>  
   </data>
 	<data name="TargetPeople" xml:space="preserve">
     <value>Target: People</value> 

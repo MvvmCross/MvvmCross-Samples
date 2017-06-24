@@ -260,12 +260,14 @@
 		<BundleResource Include="Resources\Planet_Header.jpg" />
 		<BundleResource Include="Resources\Background.jpg" />
 		<BundleResource Include="Resources\Person_Header.png" />
+		<BundleResource Include="Resources\menu_header_background.png" />
+		<BundleResource Include="Resources\profile.png" />
 	</ItemGroup>
 	<ItemGroup>
-		<ProjectReference Include="..\StarWarsSample.Core\StarWarsSample.Core.csproj">
-			<Project>{DECE7897-83CC-431C-B87E-D61901D0A629}</Project>
-			<Name>StarWarsSample.Core</Name>
-		</ProjectReference>
+	  <ProjectReference Include="..\StarWarsSample.Core\StarWarsSample.Core.csproj">
+	    <Project>{DECE7897-83CC-431C-B87E-D61901D0A629}</Project>
+	    <Name>StarWarsSample.Core</Name>
+	  </ProjectReference>
 	</ItemGroup>
 	<Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
