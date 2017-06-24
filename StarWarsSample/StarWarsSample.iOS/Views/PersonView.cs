@@ -179,11 +179,12 @@ namespace StarWarsSample.iOS.Views
 
                 _btnDestroy.Below(_stackInfo, 20f),
                 _btnDestroy.WithSameCenterX(_contentView),
-                _btnDestroy.AtBottomOf(_contentView, 100f),
+                _btnDestroy.AtBottomOf(_contentView, 300f),
                 _btnDestroy.Width().EqualTo(120f)
             );
 
             var set = this.CreateBindingSet<PersonView, PersonViewModel>();
+
             set.Bind(_lblName).To(vm => vm.Person.Name);
             set.Bind(_viewHeight.Information).To(vm => vm.Person.Height);
             set.Bind(_viewHeight).For("Visibility").To(vm => vm.Person.Height).WithConversion("Visibility");

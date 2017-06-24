@@ -171,7 +171,7 @@ namespace StarWarsSample.iOS.Views
 
                 _btnDestroy.Below(_stackInfo, 20f),
                 _btnDestroy.WithSameCenterX(_contentView),
-                _btnDestroy.AtBottomOf(_contentView, 100f),
+                _btnDestroy.AtBottomOf(_contentView, 250f),
                 _btnDestroy.Width().EqualTo(120f)
             );
 

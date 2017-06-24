@@ -30,7 +30,10 @@ namespace StarWarsSample.Core.ViewModels
                 () =>
             {
                 if (!string.IsNullOrEmpty(_nextPage))
-                    NotifyTaskCompletion.Create(LoadPlanets);
+                {
+                    FetchPlanetsTask = NotifyTaskCompletion.Create(LoadPlanets);
+                    RaisePropertyChanged(() => FetchPlanetsTask);
+                }
             });
             RefreshPlanetsCommand = new MvxCommand(RefreshPlanets);
         }

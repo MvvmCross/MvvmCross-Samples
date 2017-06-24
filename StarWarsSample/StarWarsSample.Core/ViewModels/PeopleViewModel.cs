@@ -30,7 +30,10 @@ namespace StarWarsSample.Core.ViewModels
                 () =>
             {
                 if (!string.IsNullOrEmpty(_nextPage))
-                    NotifyTaskCompletion.Create(LoadPeople);
+                {
+                    FetchPeopleTask = NotifyTaskCompletion.Create(LoadPeople);
+                    RaisePropertyChanged(() => FetchPeopleTask);
+                }
             });
             RefreshPeopleCommand = new MvxCommand(RefreshPeople);
         }
