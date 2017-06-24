@@ -180,13 +180,13 @@
 			<HintPath>..\packages\Com.Airbnb.Android.Lottie.2.0.0.0\lib\MonoAndroid40\Lottie.dll</HintPath>
 		</Reference>
 		<Reference Include="Refractored.Controls.CircleImageView">
-		  <HintPath>..\packages\Refractored.Controls.CircleImageView.1.0.1\lib\MonoAndroid10\Refractored.Controls.CircleImageView.dll</HintPath>
+			<HintPath>..\packages\Refractored.Controls.CircleImageView.1.0.1\lib\MonoAndroid10\Refractored.Controls.CircleImageView.dll</HintPath>
 		</Reference>
 		<Reference Include="MvvmCross.Plugins.Visibility">
-		  <HintPath>..\packages\MvvmCross.Plugin.Visibility.5.0.2\lib\MonoAndroid\MvvmCross.Plugins.Visibility.dll</HintPath>
+			<HintPath>..\packages\MvvmCross.Plugin.Visibility.5.0.2\lib\MonoAndroid\MvvmCross.Plugins.Visibility.dll</HintPath>
 		</Reference>
 		<Reference Include="MvvmCross.Plugins.Visibility.Droid">
-		  <HintPath>..\packages\MvvmCross.Plugin.Visibility.5.0.2\lib\MonoAndroid\MvvmCross.Plugins.Visibility.Droid.dll</HintPath>
+			<HintPath>..\packages\MvvmCross.Plugin.Visibility.5.0.2\lib\MonoAndroid\MvvmCross.Plugins.Visibility.Droid.dll</HintPath>
 		</Reference>
 	</ItemGroup>
 	<ItemGroup>
@@ -287,10 +287,10 @@
 		<AndroidAsset Include="Assets\starwars2.json" />
 	</ItemGroup>
 	<ItemGroup>
-	  <ProjectReference Include="..\StarWarsSample\StarWarsSample.Core.csproj">
-	    <Project>{DECE7897-83CC-431C-B87E-D61901D0A629}</Project>
-	    <Name>StarWarsSample.Core</Name>
-	  </ProjectReference>
+		<ProjectReference Include="..\StarWarsSample.Core\StarWarsSample.Core.csproj">
+			<Project>{DECE7897-83CC-431C-B87E-D61901D0A629}</Project>
+			<Name>StarWarsSample.Core</Name>
+		</ProjectReference>
 	</ItemGroup>
 	<Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 	<Import Project="..\packages\Xamarin.Build.Download.0.4.3\build\Xamarin.Build.Download.targets" Condition="Exists('..\packages\Xamarin.Build.Download.0.4.3\build\Xamarin.Build.Download.targets')" />
