@@ -1,7 +1,7 @@
 ﻿using System;
-namespace StarWarsSample.Core.MvxResults
+namespace StarWarsSample.Core.ViewModelResults
 {
-    public class MvxDestructionResult<TEntity>
+    public class DestructionResult<TEntity>
     {
         public TEntity Entity { get; set; }
 

@@ -4,11 +4,11 @@ using Acr.UserDialogs;
 using MvvmCross.Core.ViewModels;
 using StarWarsSample.Core.Models;
 using StarWarsSample.Core.MvxInteraction;
-using StarWarsSample.Core.MvxResults;
+using StarWarsSample.Core.ViewModelResults;
 
 namespace StarWarsSample.Core.ViewModels
 {
-    public class PlanetViewModel : BaseViewModel<Planet, MvxDestructionResult<Planet>>
+    public class PlanetViewModel : BaseViewModel<Planet, DestructionResult<Planet>>
     {
         private readonly IUserDialogs _userDialogs;
 
@@ -48,7 +48,7 @@ namespace StarWarsSample.Core.ViewModels
         public IMvxInteraction<DestructionAction> Interaction => _interaction;
 
         // MVVM Commands
-        public IMvxCommand DestroyPlanetCommand { get; set; }
+        public IMvxCommand DestroyPlanetCommand { get; private set; }
 
         // Private methods
         private async Task DestroyPlanet()
@@ -66,7 +66,7 @@ namespace StarWarsSample.Core.ViewModels
 
             var request = new DestructionAction
             {
-                OnDestroyed = () => Close(new MvxDestructionResult<Planet> { Entity = Planet, Destroyed = true })
+                OnDestroyed = () => Close(new DestructionResult<Planet> { Entity = Planet, Destroyed = true })
             };
 
             _interaction.Raise(request);

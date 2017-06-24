@@ -4,7 +4,7 @@ using MvvmCross.Core.Navigation;
 using MvvmCross.Core.ViewModels;
 using Nito.AsyncEx;
 using StarWarsSample.Core.Models;
-using StarWarsSample.Core.MvxResults;
+using StarWarsSample.Core.ViewModelResults;
 using StarWarsSample.Core.Services.Interfaces;
 
 namespace StarWarsSample.Core.ViewModels
@@ -32,6 +32,7 @@ namespace StarWarsSample.Core.ViewModels
                 if (!string.IsNullOrEmpty(_nextPage))
                     NotifyTaskCompletion.Create(LoadPeople);
             });
+            RefreshPeopleCommand = new MvxCommand(RefreshPeople);
         }
 
         // MvvmCross Lifecycle
@@ -43,9 +44,9 @@ namespace StarWarsSample.Core.ViewModels
         }
 
         // MVVM Properties
-        public INotifyTaskCompletion LoadPeopleTask { get; set; }
+        public INotifyTaskCompletion LoadPeopleTask { get; private set; }
 
-        public INotifyTaskCompletion FetchPeopleTask { get; set; }
+        public INotifyTaskCompletion FetchPeopleTask { get; private set; }
 
         private MvxObservableCollection<Person> _people;
         public MvxObservableCollection<Person> People
@@ -62,23 +63,33 @@ namespace StarWarsSample.Core.ViewModels
         }
 
         // MVVM Commands
-        public IMvxCommand PersonSelectedCommand { get; set; }
+        public IMvxCommand PersonSelectedCommand { get; private set; }
 
-        public IMvxCommand FetchPeopleCommand { get; set; }
+        public IMvxCommand FetchPeopleCommand { get; private set; }
+
+        public IMvxCommand RefreshPeopleCommand { get; private set; }
 
         // Private methods
         private async Task LoadPeople()
         {
             var result = await _peopleService.GetPeopleAsync(_nextPage);
 
-            _nextPage = result.Next;
+            if (string.IsNullOrEmpty(_nextPage))
+            {
+                People.Clear();
+                People.AddRange(result.Results.Where(p => !p.Name.Contains("Vader") && !p.Name.Contains("Anakin")));
+            }
+            else
+            {
+                People.AddRange(result.Results.Where(p => !p.Name.Contains("Vader") && !p.Name.Contains("Anakin")));
+            }
 
-            People.AddRange(result.Results.Where(p => !p.Name.Contains("Vader") && !p.Name.Contains("Anakin")));
+            _nextPage = result.Next;
         }
 
         private async Task PersonSelected(Person selectedPerson)
         {
-            var result = await _navigationService.Navigate<PersonViewModel, Person, MvxDestructionResult<Person>>(selectedPerson);
+            var result = await _navigationService.Navigate<PersonViewModel, Person, DestructionResult<Person>>(selectedPerson);
 
             if (result != null && result.Destroyed)
             {
@@ -86,6 +97,14 @@ namespace StarWarsSample.Core.ViewModels
                 if (person != null)
                     People.Remove(person);
             }
+        }
+
+        private void RefreshPeople()
+        {
+            _nextPage = null;
+
+            LoadPeopleTask = NotifyTaskCompletion.Create(LoadPeople);
+            RaisePropertyChanged(() => LoadPeopleTask);
         }
     }
 }

@@ -3,11 +3,11 @@ using Acr.UserDialogs;
 using MvvmCross.Core.ViewModels;
 using StarWarsSample.Core.Models;
 using StarWarsSample.Core.MvxInteraction;
-using StarWarsSample.Core.MvxResults;
+using StarWarsSample.Core.ViewModelResults;
 
 namespace StarWarsSample.Core.ViewModels
 {
-    public class PersonViewModel : BaseViewModel<Person, MvxDestructionResult<Person>>
+    public class PersonViewModel : BaseViewModel<Person, DestructionResult<Person>>
     {
         private readonly IUserDialogs _userDialogs;
 
@@ -47,7 +47,7 @@ namespace StarWarsSample.Core.ViewModels
         public IMvxInteraction<DestructionAction> Interaction => _interaction;
 
         // MVVM Commands
-        public IMvxCommand DestroyPersonCommand { get; set; }
+        public IMvxCommand DestroyPersonCommand { get; private set; }
 
         // Private methods
 
@@ -66,7 +66,7 @@ namespace StarWarsSample.Core.ViewModels
 
             var request = new DestructionAction
             {
-                OnDestroyed = () => Close(new MvxDestructionResult<Person> { Entity = Person, Destroyed = true })
+                OnDestroyed = () => Close(new DestructionResult<Person> { Entity = Person, Destroyed = true })
             };
 
             _interaction.Raise(request);

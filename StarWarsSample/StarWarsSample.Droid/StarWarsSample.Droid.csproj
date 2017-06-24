@@ -210,6 +210,7 @@
 		<Compile Include="Views\StatusView.cs" />
 		<Compile Include="Views\PersonView.cs" />
 		<Compile Include="Bootstrap\VisibilityPluginBootstrap.cs" />
+		<Compile Include="MvxBindings\SwipeRefreshLayoutIsRefreshingTargetBinding.cs" />
 	</ItemGroup>
 	<ItemGroup>
 		<None Include="Resources\AboutResources.txt" />
@@ -275,6 +276,7 @@
 		<Folder Include="Resources\mipmap-xhdpi\" />
 		<Folder Include="Resources\mipmap-xxhdpi\" />
 		<Folder Include="Resources\mipmap-xxxhdpi\" />
+		<Folder Include="MvxBindings\" />
 	</ItemGroup>
 	<ItemGroup>
 		<AndroidAsset Include="Assets\starwars.json" />

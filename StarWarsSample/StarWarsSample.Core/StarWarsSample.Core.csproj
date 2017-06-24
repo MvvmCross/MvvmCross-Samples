@@ -53,7 +53,7 @@
     </Compile>
     <Compile Include="ViewModels\BaseViewModel.cs" />
     <Compile Include="MvxInteraction\DestructionAction.cs" />
-    <Compile Include="MvxResults\MvxDestructionResult.cs" />
+    <Compile Include="ViewModelResults\DestructionResult.cs" />
     <Compile Include="AppStart.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -123,7 +123,7 @@
     <Folder Include="Rest\Implementations\" />
     <Folder Include="Resources\" />
     <Folder Include="MvxInteraction\" />
-    <Folder Include="MvxResults\" />
+    <Folder Include="ViewModelResults\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\Strings.resx">

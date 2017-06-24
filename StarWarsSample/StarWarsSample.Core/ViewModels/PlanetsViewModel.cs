@@ -4,7 +4,7 @@ using MvvmCross.Core.Navigation;
 using MvvmCross.Core.ViewModels;
 using Nito.AsyncEx;
 using StarWarsSample.Core.Models;
-using StarWarsSample.Core.MvxResults;
+using StarWarsSample.Core.ViewModelResults;
 using StarWarsSample.Core.Services.Interfaces;
 
 namespace StarWarsSample.Core.ViewModels
@@ -32,6 +32,7 @@ namespace StarWarsSample.Core.ViewModels
                 if (!string.IsNullOrEmpty(_nextPage))
                     NotifyTaskCompletion.Create(LoadPlanets);
             });
+            RefreshPlanetsCommand = new MvxCommand(RefreshPlanets);
         }
 
         // MvvmCross Lifecycle
@@ -43,9 +44,9 @@ namespace StarWarsSample.Core.ViewModels
         }
 
         // MVVM Properties
-        public INotifyTaskCompletion LoadPlanetsTask { get; set; }
+        public INotifyTaskCompletion LoadPlanetsTask { get; private set; }
 
-        public INotifyTaskCompletion FetchPlanetsTask { get; set; }
+        public INotifyTaskCompletion FetchPlanetsTask { get; private set; }
 
         private MvxObservableCollection<Planet> _planets;
         public MvxObservableCollection<Planet> Planets
@@ -62,23 +63,33 @@ namespace StarWarsSample.Core.ViewModels
         }
 
         // MVVM Commands
-        public IMvxCommand PlanetSelectedCommand { get; set; }
+        public IMvxCommand PlanetSelectedCommand { get; private set; }
 
-        public IMvxCommand FetchPlanetCommand { get; set; }
+        public IMvxCommand FetchPlanetCommand { get; private set; }
+
+        public IMvxCommand RefreshPlanetsCommand { get; private set; }
 
         // Private methods
         private async Task LoadPlanets()
         {
             var result = await _planetsService.GetPlanetsAsync(_nextPage);
 
-            _nextPage = result.Next;
+            if (string.IsNullOrEmpty(_nextPage))
+            {
+                Planets.Clear();
+                Planets.AddRange(result.Results);
+            }
+            else
+            {
+                Planets.AddRange(result.Results);
+            }
 
-            Planets.AddRange(result.Results);
+            _nextPage = result.Next;
         }
 
         private async Task PlanetSelected(Planet selectedPlanet)
         {
-            var result = await _navigationService.Navigate<PlanetViewModel, Planet, MvxDestructionResult<Planet>>(selectedPlanet);
+            var result = await _navigationService.Navigate<PlanetViewModel, Planet, DestructionResult<Planet>>(selectedPlanet);
 
             if (result != null && result.Destroyed)
             {
@@ -86,6 +97,14 @@ namespace StarWarsSample.Core.ViewModels
                 if (planet != null)
                     Planets.Remove(planet);
             }
+        }
+
+        private void RefreshPlanets()
+        {
+            _nextPage = null;
+
+            LoadPlanetsTask = NotifyTaskCompletion.Create(LoadPlanets);
+            RaisePropertyChanged(() => LoadPlanetsTask);
         }
     }
 }

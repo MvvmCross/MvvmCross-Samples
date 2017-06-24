@@ -26,7 +26,7 @@ namespace StarWarsSample.Core.ViewModels
         public PlotModel PlotModel => GeneratePlotModel();
 
         // MVVM Commands
-        public ICommand CloseCommand { get; set; }
+        public ICommand CloseCommand { get; private set; }
 
         // Private methods
         private PlotModel GeneratePlotModel()

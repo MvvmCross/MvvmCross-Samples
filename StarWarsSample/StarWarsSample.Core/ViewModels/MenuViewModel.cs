@@ -22,9 +22,9 @@ namespace StarWarsSample.Core.ViewModels
         // MVVM Properties
 
         // MVVM Commands
-        public IMvxCommand ShowStatusCommand { get; set; }
-        public IMvxCommand ShowPlanetsCommand { get; set; }
-        public IMvxCommand ShowPeopleCommand { get; set; }
+        public IMvxCommand ShowStatusCommand { get; private set; }
+        public IMvxCommand ShowPlanetsCommand { get; private set; }
+        public IMvxCommand ShowPeopleCommand { get; private set; }
 
         // Private methods
     }

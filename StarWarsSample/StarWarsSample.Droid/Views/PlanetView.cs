@@ -79,6 +79,7 @@ namespace StarWarsSample.Droid.Views
         private void OnInteractionRequested(object sender, MvxValueEventArgs<DestructionAction> eventArgs)
         {
             _animationView.Visibility = ViewStates.Visible;
+            _animationView.Progress = 0;
             _animationView.PlayAnimation();
 
             _interactionRequested = eventArgs.Value;
