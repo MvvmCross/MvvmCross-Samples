@@ -11,8 +11,6 @@ namespace StarWarsSample.Core.ViewModels
     {
         private readonly IUserDialogs _userDialogs;
 
-        private MvxInteraction<DestructionAction> _interaction = new MvxInteraction<DestructionAction>();
-
         public PersonViewModel(
             IUserDialogs userDialogs)
         {
@@ -44,7 +42,7 @@ namespace StarWarsSample.Core.ViewModels
             }
         }
 
-        public IMvxInteraction<DestructionAction> Interaction => _interaction;
+        public MvxInteraction<DestructionAction> Interaction { get; set; } = new MvxInteraction<DestructionAction>();
 
         // MVVM Commands
         public IMvxCommand DestroyPersonCommand { get; private set; }
@@ -66,10 +64,15 @@ namespace StarWarsSample.Core.ViewModels
 
             var request = new DestructionAction
             {
-                OnDestroyed = () => Close(new DestructionResult<Person> { Entity = Person, Destroyed = true })
+                OnDestroyed = () => Close(
+                    new DestructionResult<Person>
+                    {
+                        Entity = Person,
+                        Destroyed = true
+                    })
             };
 
-            _interaction.Raise(request);
+            Interaction.Raise(request);
         }
     }
 }
