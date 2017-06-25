@@ -8,6 +8,7 @@ using Android.Support.V7.Widget;
 using MvvmCross.Binding.Bindings.Target.Construction;
 using MvvmCross.Core.ViewModels;
 using MvvmCross.Droid.Shared.Presenter;
+using MvvmCross.Droid.Support.V4;
 using MvvmCross.Droid.Support.V7.AppCompat;
 using MvvmCross.Droid.Support.V7.RecyclerView;
 using MvvmCross.Droid.Views;
@@ -36,7 +37,8 @@ namespace StarWarsSample.Droid
             typeof(Toolbar).Assembly,
             typeof(DrawerLayout).Assembly,
             typeof(ViewPager).Assembly,
-            typeof(MvxRecyclerView).Assembly
+            typeof(MvxRecyclerView).Assembly,
+            typeof(MvxSwipeRefreshLayout).Assembly,
         };
 
         /// <summary>
