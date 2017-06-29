@@ -16,7 +16,7 @@ namespace StarWarsSample.iOS.Views
         private UIImageView _imgBackground;
         private MvxUIRefreshControl _refreshControl;
         private UITableView _tableView;
-        private PlanetsTableSource _source;
+        private PlanetsTableViewSource _source;
 
         public PlanetsView()
         {
@@ -45,7 +45,7 @@ namespace StarWarsSample.iOS.Views
                 ContentMode = UIViewContentMode.ScaleAspectFill
             };
 
-            _source = new PlanetsTableSource(_tableView);
+            _source = new PlanetsTableViewSource(_tableView);
             _tableView.Source = _source;
 
             View.AddSubviews(_tableView, _imgBackground);

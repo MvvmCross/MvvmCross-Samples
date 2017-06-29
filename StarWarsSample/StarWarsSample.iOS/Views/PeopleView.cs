@@ -16,7 +16,7 @@ namespace StarWarsSample.iOS.Views
         private UIImageView _imgBackground;
         private MvxUIRefreshControl _refreshControl;
         private UITableView _tableView;
-        private PeopleTableSource _source;
+        private PeopleTableViewSource _source;
 
         public override void ViewDidLoad()
         {
@@ -41,7 +41,7 @@ namespace StarWarsSample.iOS.Views
                 ContentMode = UIViewContentMode.ScaleAspectFill
             };
 
-            _source = new PeopleTableSource(_tableView);
+            _source = new PeopleTableViewSource(_tableView);
             _tableView.Source = _source;
 
             View.AddSubviews(_tableView, _imgBackground);
@@ -61,13 +61,17 @@ namespace StarWarsSample.iOS.Views
 
             View.BringSubviewToFront(_tableView);
 
+
             var set = this.CreateBindingSet<PeopleView, PeopleViewModel>();
             set.Bind(this).For("NetworkIndicator").To(vm => vm.FetchPeopleTask.IsNotCompleted).WithFallback(false);
             set.Bind(_refreshControl).For(r => r.IsRefreshing).To(vm => vm.LoadPeopleTask.IsNotCompleted).WithFallback(false);
             set.Bind(_refreshControl).For(r => r.RefreshCommand).To(vm => vm.RefreshPeopleCommand);
+
+
             set.Bind(_source).For(v => v.ItemsSource).To(vm => vm.People);
             set.Bind(_source).For(v => v.SelectionChangedCommand).To(vm => vm.PersonSelectedCommand);
             set.Bind(_source).For(v => v.FetchCommand).To(vm => vm.FetchPeopleCommand);
+
             set.Apply();
         }
     }

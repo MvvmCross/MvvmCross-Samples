@@ -66,7 +66,7 @@ namespace StarWarsSample.Core.ViewModels
         }
 
         // MVVM Commands
-        public IMvxCommand PlanetSelectedCommand { get; private set; }
+        public IMvxCommand<Planet> PlanetSelectedCommand { get; private set; }
 
         public IMvxCommand FetchPlanetCommand { get; private set; }
 

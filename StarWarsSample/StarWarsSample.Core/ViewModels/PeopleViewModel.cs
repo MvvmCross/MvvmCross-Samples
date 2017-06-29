@@ -66,7 +66,7 @@ namespace StarWarsSample.Core.ViewModels
         }
 
         // MVVM Commands
-        public IMvxCommand PersonSelectedCommand { get; private set; }
+        public IMvxCommand<Person> PersonSelectedCommand { get; private set; }
 
         public IMvxCommand FetchPeopleCommand { get; private set; }
 

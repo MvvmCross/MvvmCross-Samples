@@ -57,35 +57,14 @@
 		<Compile Include="AppStart.cs" />
 	</ItemGroup>
 	<ItemGroup>
-		<Reference Include="MvvmCross.Platform">
-			<HintPath>..\packages\MvvmCross.Platform.5.0.2\lib\portable-net45+win+wpa81+wp80\MvvmCross.Platform.dll</HintPath>
-		</Reference>
-		<Reference Include="MvvmCross.Core">
-			<HintPath>..\packages\MvvmCross.Core.5.0.2\lib\portable-net45+win+wpa81+wp80\MvvmCross.Core.dll</HintPath>
-		</Reference>
-		<Reference Include="MvvmCross.Binding">
-			<HintPath>..\packages\MvvmCross.Binding.5.0.2\lib\portable-net45+win+wpa81+wp80\MvvmCross.Binding.dll</HintPath>
-		</Reference>
-		<Reference Include="MvvmCross.Localization">
-			<HintPath>..\packages\MvvmCross.Binding.5.0.2\lib\portable-net45+win+wpa81+wp80\MvvmCross.Localization.dll</HintPath>
-		</Reference>
-		<Reference Include="MvvmCross.Plugins.Messenger">
-			<HintPath>..\packages\MvvmCross.Plugin.Messenger.5.0.2\lib\portable-net45+win+wpa81+wp80\MvvmCross.Plugins.Messenger.dll</HintPath>
-		</Reference>
 		<Reference Include="System.Net.Http.Extensions">
 			<HintPath>..\packages\Microsoft.Net.Http.2.2.22\lib\portable-net45+win8\System.Net.Http.Extensions.dll</HintPath>
 		</Reference>
 		<Reference Include="System.Net.Http.Primitives">
 			<HintPath>..\packages\Microsoft.Net.Http.2.2.22\lib\portable-net45+win8\System.Net.Http.Primitives.dll</HintPath>
 		</Reference>
-		<Reference Include="Newtonsoft.Json">
-			<HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
-		</Reference>
 		<Reference Include="ModernHttpClient">
 			<HintPath>..\packages\modernhttpclient.2.4.2\lib\Portable-Net45+WinRT45+WP8+WPA81\ModernHttpClient.dll</HintPath>
-		</Reference>
-		<Reference Include="MvvmCross.Plugins.Json">
-			<HintPath>..\packages\MvvmCross.Plugin.Json.5.0.2\lib\portable-net45+win+wpa81+wp80\MvvmCross.Plugins.Json.dll</HintPath>
 		</Reference>
 		<Reference Include="Nito.AsyncEx.Concurrent">
 			<HintPath>..\packages\Nito.AsyncEx.3.0.1\lib\portable-net45+netcore45+wpa81\Nito.AsyncEx.Concurrent.dll</HintPath>
@@ -105,8 +84,29 @@
 		<Reference Include="OxyPlot">
 			<HintPath>..\packages\OxyPlot.Core.2.0.0-unstable0956\lib\portable-net45+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1+Xamarin.iOS10\OxyPlot.dll</HintPath>
 		</Reference>
+		<Reference Include="MvvmCross.Platform">
+		  <HintPath>..\packages\MvvmCross.Platform.5.0.5\lib\portable-net45+win+wpa81+wp80\MvvmCross.Platform.dll</HintPath>
+		</Reference>
+		<Reference Include="MvvmCross.Core">
+		  <HintPath>..\packages\MvvmCross.Core.5.0.5\lib\portable-net45+win+wpa81+wp80\MvvmCross.Core.dll</HintPath>
+		</Reference>
+		<Reference Include="MvvmCross.Binding">
+		  <HintPath>..\packages\MvvmCross.Binding.5.0.5\lib\portable-net45+win+wpa81+wp80\MvvmCross.Binding.dll</HintPath>
+		</Reference>
+		<Reference Include="MvvmCross.Localization">
+		  <HintPath>..\packages\MvvmCross.Binding.5.0.5\lib\portable-net45+win+wpa81+wp80\MvvmCross.Localization.dll</HintPath>
+		</Reference>
+		<Reference Include="MvvmCross.Plugins.Messenger">
+		  <HintPath>..\packages\MvvmCross.Plugin.Messenger.5.0.5\lib\portable-net45+win+wpa81+wp80\MvvmCross.Plugins.Messenger.dll</HintPath>
+		</Reference>
 		<Reference Include="MvvmCross.Plugins.Visibility">
-			<HintPath>..\packages\MvvmCross.Plugin.Visibility.5.0.2\lib\portable-net45+win+wpa81+wp80\MvvmCross.Plugins.Visibility.dll</HintPath>
+		  <HintPath>..\packages\MvvmCross.Plugin.Visibility.5.0.5\lib\portable-net45+win+wpa81+wp80\MvvmCross.Plugins.Visibility.dll</HintPath>
+		</Reference>
+		<Reference Include="Newtonsoft.Json">
+		  <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\portable-net45+win8+wp8+wpa81\Newtonsoft.Json.dll</HintPath>
+		</Reference>
+		<Reference Include="MvvmCross.Plugins.Json">
+		  <HintPath>..\packages\MvvmCross.Plugin.Json.5.0.5\lib\portable-net45+win+wpa81+wp80\MvvmCross.Plugins.Json.dll</HintPath>
 		</Reference>
 	</ItemGroup>
 	<ItemGroup>

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
 using StarWarsSample.Core.Models;
@@ -26,6 +27,36 @@ namespace StarWarsSample.Core.Services.Implementations
         public Task<Person> GetPersonAsync()
         {
             return _restClient.MakeApiCall<Person>($"{Constants.BaseUrl}/people/1/", HttpMethod.Get);
+        }
+
+        private PagedResult<Person> GetMockedPeople()
+        {
+            return new PagedResult<Person>()
+            {
+                Count = 3,
+                Next = string.Empty,
+                Previous = string.Empty,
+                Results = new List<Person>
+                {
+                    new Person
+                    {
+                        Name = "Master Yoda",
+                        SkinColor = "Green",
+                        Height = "65"
+                    },
+                    new Person
+                    {
+                        Name = "Obi-Wan Kenobi",
+                        Mass = "80"
+                    },
+                    new Person
+                    {
+                        Name = "Master Windu",
+                        Height = "165",
+                        Mass = "85"
+                    }
+                }
+            };
         }
     }
 }

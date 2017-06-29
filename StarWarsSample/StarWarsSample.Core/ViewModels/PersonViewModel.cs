@@ -51,7 +51,7 @@ namespace StarWarsSample.Core.ViewModels
 
         private async Task DestroyPerson()
         {
-            var result = await _userDialogs.ConfirmAsync(new ConfirmConfig
+            var destroy = await _userDialogs.ConfirmAsync(new ConfirmConfig
             {
                 Title = "Destroy Person",
                 Message = "Sir, are you sure you want to destroy this person?",
@@ -59,7 +59,7 @@ namespace StarWarsSample.Core.ViewModels
                 CancelText = "No"
             });
 
-            if (!result)
+            if (!destroy)
                 return;
 
             var request = new DestructionAction

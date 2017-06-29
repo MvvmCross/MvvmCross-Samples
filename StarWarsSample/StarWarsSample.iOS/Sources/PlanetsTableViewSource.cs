@@ -7,11 +7,11 @@ using UIKit;
 
 namespace StarWarsSample.iOS.Sources
 {
-    public class PeopleTableSource : MvxSimpleTableViewSource
+    public class PlanetsTableViewSource : MvxSimpleTableViewSource
     {
         public ICommand FetchCommand { get; set; }
 
-        public PeopleTableSource(UITableView tableView) : base(tableView, typeof(NameTableViewCell))
+        public PlanetsTableViewSource(UITableView tableView) : base(tableView, typeof(NameTableViewCell))
         {
             DeselectAutomatically = true;
         }

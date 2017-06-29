@@ -43,34 +43,7 @@
 		<Reference Include="System.Xml" />
 		<Reference Include="System.Core" />
 		<Reference Include="Mono.Android" />
-		<Reference Include="MvvmCross.Platform">
-			<HintPath>..\packages\MvvmCross.Platform.5.0.2\lib\MonoAndroid\MvvmCross.Platform.dll</HintPath>
-		</Reference>
-		<Reference Include="MvvmCross.Platform.Droid">
-			<HintPath>..\packages\MvvmCross.Platform.5.0.2\lib\MonoAndroid\MvvmCross.Platform.Droid.dll</HintPath>
-		</Reference>
-		<Reference Include="MvvmCross.Plugins.Messenger">
-			<HintPath>..\packages\MvvmCross.Plugin.Messenger.5.0.2\lib\MonoAndroid\MvvmCross.Plugins.Messenger.dll</HintPath>
-		</Reference>
-		<Reference Include="MvvmCross.Core">
-			<HintPath>..\packages\MvvmCross.Core.5.0.2\lib\MonoAndroid\MvvmCross.Core.dll</HintPath>
-		</Reference>
-		<Reference Include="MvvmCross.Droid">
-			<HintPath>..\packages\MvvmCross.Core.5.0.2\lib\MonoAndroid\MvvmCross.Droid.dll</HintPath>
-		</Reference>
-		<Reference Include="MvvmCross.Binding">
-			<HintPath>..\packages\MvvmCross.Binding.5.0.2\lib\MonoAndroid\MvvmCross.Binding.dll</HintPath>
-		</Reference>
-		<Reference Include="MvvmCross.Binding.Droid">
-			<HintPath>..\packages\MvvmCross.Binding.5.0.2\lib\MonoAndroid\MvvmCross.Binding.Droid.dll</HintPath>
-		</Reference>
-		<Reference Include="MvvmCross.Localization">
-			<HintPath>..\packages\MvvmCross.Binding.5.0.2\lib\MonoAndroid\MvvmCross.Localization.dll</HintPath>
-		</Reference>
 		<Reference Include="Mono.Android.Export" />
-		<Reference Include="MvvmCross.Droid.Shared">
-			<HintPath>..\packages\MvvmCross.Droid.Shared.5.0.2\lib\MonoAndroid\MvvmCross.Droid.Shared.dll</HintPath>
-		</Reference>
 		<Reference Include="Xamarin.Android.Support.Annotations">
 			<HintPath>..\packages\Xamarin.Android.Support.Annotations.25.3.1\lib\MonoAndroid70\Xamarin.Android.Support.Annotations.dll</HintPath>
 		</Reference>
@@ -79,9 +52,6 @@
 		</Reference>
 		<Reference Include="Xamarin.Android.Support.Core.UI">
 			<HintPath>..\packages\Xamarin.Android.Support.Core.UI.25.3.1\lib\MonoAndroid70\Xamarin.Android.Support.Core.UI.dll</HintPath>
-		</Reference>
-		<Reference Include="MvvmCross.Droid.Support.Core.UI">
-			<HintPath>..\packages\MvvmCross.Droid.Support.Core.UI.5.0.2\lib\MonoAndroid70\MvvmCross.Droid.Support.Core.UI.dll</HintPath>
 		</Reference>
 		<Reference Include="Xamarin.Android.Support.Core.Utils">
 			<HintPath>..\packages\Xamarin.Android.Support.Core.Utils.25.3.1\lib\MonoAndroid70\Xamarin.Android.Support.Core.Utils.dll</HintPath>
@@ -92,9 +62,6 @@
 		<Reference Include="Xamarin.Android.Support.Fragment">
 			<HintPath>..\packages\Xamarin.Android.Support.Fragment.25.3.1\lib\MonoAndroid70\Xamarin.Android.Support.Fragment.dll</HintPath>
 		</Reference>
-		<Reference Include="MvvmCross.Droid.Support.Fragment">
-			<HintPath>..\packages\MvvmCross.Droid.Support.Fragment.5.0.2\lib\MonoAndroid70\MvvmCross.Droid.Support.Fragment.dll</HintPath>
-		</Reference>
 		<Reference Include="Xamarin.Android.Support.Vector.Drawable">
 			<HintPath>..\packages\Xamarin.Android.Support.Vector.Drawable.25.3.1\lib\MonoAndroid70\Xamarin.Android.Support.Vector.Drawable.dll</HintPath>
 		</Reference>
@@ -103,15 +70,6 @@
 		</Reference>
 		<Reference Include="Xamarin.Android.Support.v7.AppCompat">
 			<HintPath>..\packages\Xamarin.Android.Support.v7.AppCompat.25.3.1\lib\MonoAndroid70\Xamarin.Android.Support.v7.AppCompat.dll</HintPath>
-		</Reference>
-		<Reference Include="MvvmCross.Droid.Support.V7.AppCompat">
-			<HintPath>..\packages\MvvmCross.Droid.Support.V7.AppCompat.5.0.2\lib\MonoAndroid70\MvvmCross.Droid.Support.V7.AppCompat.dll</HintPath>
-		</Reference>
-		<Reference Include="Newtonsoft.Json">
-			<HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
-		</Reference>
-		<Reference Include="MvvmCross.Plugins.Json">
-			<HintPath>..\packages\MvvmCross.Plugin.Json.5.0.2\lib\MonoAndroid\MvvmCross.Plugins.Json.dll</HintPath>
 		</Reference>
 		<Reference Include="Xamarin.Android.Support.Transition">
 			<HintPath>..\packages\Xamarin.Android.Support.Transition.25.3.1\lib\MonoAndroid70\Xamarin.Android.Support.Transition.dll</HintPath>
@@ -122,26 +80,11 @@
 		<Reference Include="Xamarin.Android.Support.Design">
 			<HintPath>..\packages\Xamarin.Android.Support.Design.25.3.1\lib\MonoAndroid70\Xamarin.Android.Support.Design.dll</HintPath>
 		</Reference>
-		<Reference Include="MvvmCross.Droid.Support.Design">
-			<HintPath>..\packages\MvvmCross.Droid.Support.Design.5.0.2\lib\MonoAndroid70\MvvmCross.Droid.Support.Design.dll</HintPath>
-		</Reference>
-		<Reference Include="MvvmCross.Droid.Support.V7.RecyclerView">
-			<HintPath>..\packages\MvvmCross.Droid.Support.V7.RecyclerView.5.0.2\lib\MonoAndroid70\MvvmCross.Droid.Support.V7.RecyclerView.dll</HintPath>
-		</Reference>
-		<Reference Include="MvvmCross.Droid.Support.Core.Utils">
-			<HintPath>..\packages\MvvmCross.Droid.Support.Core.Utils.5.0.2\lib\MonoAndroid70\MvvmCross.Droid.Support.Core.Utils.dll</HintPath>
-		</Reference>
 		<Reference Include="ModernHttpClient">
 			<HintPath>..\packages\modernhttpclient.2.4.2\lib\MonoAndroid\ModernHttpClient.dll</HintPath>
 		</Reference>
 		<Reference Include="OkHttp">
 			<HintPath>..\packages\modernhttpclient.2.4.2\lib\MonoAndroid\OkHttp.dll</HintPath>
-		</Reference>
-		<Reference Include="MvvmCross.Plugins.Color">
-			<HintPath>..\packages\MvvmCross.Plugin.Color.5.0.2\lib\MonoAndroid\MvvmCross.Plugins.Color.dll</HintPath>
-		</Reference>
-		<Reference Include="MvvmCross.Plugins.Color.Droid">
-			<HintPath>..\packages\MvvmCross.Plugin.Color.5.0.2\lib\MonoAndroid\MvvmCross.Plugins.Color.Droid.dll</HintPath>
 		</Reference>
 		<Reference Include="Nito.AsyncEx.Concurrent">
 			<HintPath>..\packages\Nito.AsyncEx.3.0.1\lib\MonoAndroid\Nito.AsyncEx.Concurrent.dll</HintPath>
@@ -182,22 +125,79 @@
 		<Reference Include="Refractored.Controls.CircleImageView">
 			<HintPath>..\packages\Refractored.Controls.CircleImageView.1.0.1\lib\MonoAndroid10\Refractored.Controls.CircleImageView.dll</HintPath>
 		</Reference>
+		<Reference Include="Microsoft.CSharp" />
+		<Reference Include="MvvmCross.Platform">
+		  <HintPath>..\packages\MvvmCross.Platform.5.0.5\lib\MonoAndroid\MvvmCross.Platform.dll</HintPath>
+		</Reference>
+		<Reference Include="MvvmCross.Platform.Droid">
+		  <HintPath>..\packages\MvvmCross.Platform.5.0.5\lib\MonoAndroid\MvvmCross.Platform.Droid.dll</HintPath>
+		</Reference>
+		<Reference Include="MvvmCross.Core">
+		  <HintPath>..\packages\MvvmCross.Core.5.0.5\lib\MonoAndroid\MvvmCross.Core.dll</HintPath>
+		</Reference>
+		<Reference Include="MvvmCross.Droid">
+		  <HintPath>..\packages\MvvmCross.Core.5.0.5\lib\MonoAndroid\MvvmCross.Droid.dll</HintPath>
+		</Reference>
+		<Reference Include="MvvmCross.Binding">
+		  <HintPath>..\packages\MvvmCross.Binding.5.0.5\lib\MonoAndroid\MvvmCross.Binding.dll</HintPath>
+		</Reference>
+		<Reference Include="MvvmCross.Binding.Droid">
+		  <HintPath>..\packages\MvvmCross.Binding.5.0.5\lib\MonoAndroid\MvvmCross.Binding.Droid.dll</HintPath>
+		</Reference>
+		<Reference Include="MvvmCross.Localization">
+		  <HintPath>..\packages\MvvmCross.Binding.5.0.5\lib\MonoAndroid\MvvmCross.Localization.dll</HintPath>
+		</Reference>
+		<Reference Include="MvvmCross.Droid.Shared">
+		  <HintPath>..\packages\MvvmCross.Droid.Shared.5.0.5\lib\MonoAndroid\MvvmCross.Droid.Shared.dll</HintPath>
+		</Reference>
+		<Reference Include="MvvmCross.Plugins.Color">
+		  <HintPath>..\packages\MvvmCross.Plugin.Color.5.0.5\lib\MonoAndroid\MvvmCross.Plugins.Color.dll</HintPath>
+		</Reference>
+		<Reference Include="MvvmCross.Plugins.Color.Droid">
+		  <HintPath>..\packages\MvvmCross.Plugin.Color.5.0.5\lib\MonoAndroid\MvvmCross.Plugins.Color.Droid.dll</HintPath>
+		</Reference>
+		<Reference Include="MvvmCross.Plugins.Messenger">
+		  <HintPath>..\packages\MvvmCross.Plugin.Messenger.5.0.5\lib\MonoAndroid\MvvmCross.Plugins.Messenger.dll</HintPath>
+		</Reference>
 		<Reference Include="MvvmCross.Plugins.Visibility">
-			<HintPath>..\packages\MvvmCross.Plugin.Visibility.5.0.2\lib\MonoAndroid\MvvmCross.Plugins.Visibility.dll</HintPath>
+		  <HintPath>..\packages\MvvmCross.Plugin.Visibility.5.0.5\lib\MonoAndroid\MvvmCross.Plugins.Visibility.dll</HintPath>
 		</Reference>
 		<Reference Include="MvvmCross.Plugins.Visibility.Droid">
-			<HintPath>..\packages\MvvmCross.Plugin.Visibility.5.0.2\lib\MonoAndroid\MvvmCross.Plugins.Visibility.Droid.dll</HintPath>
+		  <HintPath>..\packages\MvvmCross.Plugin.Visibility.5.0.5\lib\MonoAndroid\MvvmCross.Plugins.Visibility.Droid.dll</HintPath>
+		</Reference>
+		<Reference Include="System.IO.Compression" />
+		<Reference Include="System.Net.Http" />
+		<Reference Include="Newtonsoft.Json">
+		  <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\netstandard1.3\Newtonsoft.Json.dll</HintPath>
+		</Reference>
+		<Reference Include="MvvmCross.Plugins.Json">
+		  <HintPath>..\packages\MvvmCross.Plugin.Json.5.0.5\lib\MonoAndroid\MvvmCross.Plugins.Json.dll</HintPath>
+		</Reference>
+		<Reference Include="MvvmCross.Droid.Support.Core.UI">
+		  <HintPath>..\packages\MvvmCross.Droid.Support.Core.UI.5.0.5\lib\MonoAndroid70\MvvmCross.Droid.Support.Core.UI.dll</HintPath>
+		</Reference>
+		<Reference Include="MvvmCross.Droid.Support.Core.Utils">
+		  <HintPath>..\packages\MvvmCross.Droid.Support.Core.Utils.5.0.5\lib\MonoAndroid70\MvvmCross.Droid.Support.Core.Utils.dll</HintPath>
+		</Reference>
+		<Reference Include="MvvmCross.Droid.Support.Fragment">
+		  <HintPath>..\packages\MvvmCross.Droid.Support.Fragment.5.0.5\lib\MonoAndroid70\MvvmCross.Droid.Support.Fragment.dll</HintPath>
+		</Reference>
+		<Reference Include="MvvmCross.Droid.Support.V7.RecyclerView">
+		  <HintPath>..\packages\MvvmCross.Droid.Support.V7.RecyclerView.5.0.5\lib\MonoAndroid70\MvvmCross.Droid.Support.V7.RecyclerView.dll</HintPath>
+		</Reference>
+		<Reference Include="MvvmCross.Droid.Support.V7.AppCompat">
+		  <HintPath>..\packages\MvvmCross.Droid.Support.V7.AppCompat.5.0.5\lib\MonoAndroid70\MvvmCross.Droid.Support.V7.AppCompat.dll</HintPath>
+		</Reference>
+		<Reference Include="MvvmCross.Droid.Support.Design">
+		  <HintPath>..\packages\MvvmCross.Droid.Support.Design.5.0.5\lib\MonoAndroid70\MvvmCross.Droid.Support.Design.dll</HintPath>
 		</Reference>
 	</ItemGroup>
 	<ItemGroup>
 		<Compile Include="Resources\Resource.designer.cs" />
 		<Compile Include="Properties\AssemblyInfo.cs" />
-		<Compile Include="Bootstrap\MessengerPluginBootstrap.cs" />
 		<Compile Include="LinkerPleaseInclude.cs" />
 		<Compile Include="Setup.cs" />
 		<Compile Include="SplashScreen.cs" />
-		<Compile Include="Bootstrap\JsonPluginBootstrap.cs" />
-		<Compile Include="Bootstrap\ColorPluginBootstrap.cs" />
 		<Compile Include="Views\MainView.cs" />
 		<Compile Include="Views\PlanetsView.cs" />
 		<Compile Include="Views\MenuView.cs" />
@@ -209,8 +209,11 @@
 		<Compile Include="Views\PeopleView.cs" />
 		<Compile Include="Views\StatusView.cs" />
 		<Compile Include="Views\PersonView.cs" />
-		<Compile Include="Bootstrap\VisibilityPluginBootstrap.cs" />
 		<Compile Include="MvxBindings\SwipeRefreshLayoutIsRefreshingTargetBinding.cs" />
+		<Compile Include="Bootstrap\ColorPluginBootstrap.cs" />
+		<Compile Include="Bootstrap\MessengerPluginBootstrap.cs" />
+		<Compile Include="Bootstrap\VisibilityPluginBootstrap.cs" />
+		<Compile Include="Bootstrap\JsonPluginBootstrap.cs" />
 	</ItemGroup>
 	<ItemGroup>
 		<None Include="Resources\AboutResources.txt" />

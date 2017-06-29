@@ -51,7 +51,7 @@ namespace StarWarsSample.Core.ViewModels
         // Private methods
         private async Task DestroyPlanet()
         {
-            var result = await _userDialogs.ConfirmAsync(new ConfirmConfig
+            var destroy = await _userDialogs.ConfirmAsync(new ConfirmConfig
             {
                 Title = "Destroy Planet",
                 Message = "Sir, are you sure you want to destroy this planet?",
@@ -59,7 +59,7 @@ namespace StarWarsSample.Core.ViewModels
                 CancelText = "No"
             });
 
-            if (!result)
+            if (!destroy)
                 return;
 
             var request = new DestructionAction
