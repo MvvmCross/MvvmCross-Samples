@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:local="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="192dp"
+	android:background="@drawable/menu_header_background"
+	android:gravity="bottom"
+	android:orientation="vertical"
+	android:padding="16dp"
+	android:theme="@style/ThemeOverlay.AppCompat.Dark">
+	<refractored.controls.CircleImageView
+		android:id="@+id/profile_image"
+		android:layout_width="64dp"
+		android:layout_height="64dp"
+		android:layout_marginBottom="8dp"
+		android:scaleType="centerCrop"
+		android:src="@drawable/profile"
+		local:civ_border_width="2dp"
+		local:civ_border_color="@android:color/white" />
+	<TextView
+		android:id="@+id/username"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:textColor="@android:color/white"
+		android:text="Darth Vader"
+		android:textAppearance="@style/TextAppearance.AppCompat.Title"
+		android:textStyle="bold" />
+</LinearLayout>

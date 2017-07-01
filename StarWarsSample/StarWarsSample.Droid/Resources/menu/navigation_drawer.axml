@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<menu
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:local="http://schemas.android.com/apk/res-auto">
+	<group
+		android:id="@+id/nav_items">
+		<item
+			android:id="@+id/nav_planets"
+			android:title="Target: Planets" />
+		<item
+			android:id="@+id/nav_people"
+			android:title="Target: People" />
+		<item
+			android:id="@+id/nav_statistics"
+			android:title="Statistics" />
+	</group>
+</menu>

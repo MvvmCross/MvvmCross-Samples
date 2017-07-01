@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:local="http://schemas.android.com/apk/res-auto"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content">
+	<android.support.percent.PercentRelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="12dp"
+		android:layout_marginBottom="12dp">
+		<TextView
+			android:id="@+id/label"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:textColor="@color/med_gray"
+			android:textStyle="bold"
+			android:textSize="16dp"
+			android:layout_alignParentLeft="true"
+			android:layout_alignParentStart="true"
+			android:layout_centerInParent="true"
+			android:layout_marginLeft="15dp"
+			local:layout_widthPercent="40%" />
+		<TextView
+			android:id="@+id/info"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:textColor="@android:color/white"
+			android:textStyle="bold"
+			android:textSize="16dp"
+			android:layout_centerInParent="true"
+			android:layout_alignParentRight="true"
+			android:layout_alignParentEnd="true"
+			android:layout_marginRight="15dp"
+			local:layout_widthPercent="55%" />
+	</android.support.percent.PercentRelativeLayout>
+	<View
+		android:id="@+id/line"
+		android:layout_height="1dp"
+		android:layout_width="match_parent"
+		android:background="@color/light_gray"
+		android:layout_alignParentBottom="true" />
+</LinearLayout>

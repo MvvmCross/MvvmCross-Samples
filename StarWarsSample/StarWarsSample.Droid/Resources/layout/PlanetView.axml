@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:local="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+	<android.support.design.widget.CoordinatorLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="@color/colorPrimary">
+		<android.support.design.widget.AppBarLayout
+			android:id="@+id/profile_appbar"
+			android:layout_width="match_parent"
+			android:layout_height="180dp"
+			android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+			<android.support.design.widget.CollapsingToolbarLayout
+				android:id="@+id/planet_collapsing"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				local:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
+				local:contentScrim="?attr/colorPrimary"
+				local:expandedTitleMarginStart="48dp"
+				local:expandedTitleMarginEnd="64dp">
+				<ImageView
+					android:id="@+id/planet_back"
+					android:layout_width="match_parent"
+					android:layout_height="180dp"
+					android:scaleType="centerCrop"
+					android:src="@drawable/Planet_Header"
+					local:layout_collapseMode="parallax" />
+				<android.support.v7.widget.Toolbar
+					android:id="@+id/toolbar"
+					android:layout_width="match_parent"
+					android:layout_height="?attr/actionBarSize"
+					local:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+					local:layout_collapseMode="pin" />
+			</android.support.design.widget.CollapsingToolbarLayout>
+		</android.support.design.widget.AppBarLayout>
+		<android.support.v4.widget.NestedScrollView
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_gravity="fill_vertical"
+			android:layout_marginBottom="?attr/actionBarSize"
+			android:isScrollContainer="true"
+			local:layout_behavior="@string/appbar_scrolling_view_behavior">
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="vertical">
+				<InfoView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					local:MvxBind="Label [Climate]; Info Planet.Climate" />
+				<InfoView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					local:MvxBind="Label [Diameter]; Info Planet.Diameter" />
+				<InfoView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					local:MvxBind="Label [Gravity]; Info Planet.Gravity" />
+				<InfoView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					local:MvxBind="Label [Terrain]; Info Planet.Terrain" />
+				<InfoView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					local:MvxBind="Label [Population]; Info Planet.Population" />
+				<Button
+					android:id="@+id/btn_destroy"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="20dp"
+					android:layout_marginBottom="16dp"
+					android:layout_marginLeft="60dp"
+					android:layout_marginRight="60dp"
+					android:textSize="15sp"
+					android:textAllCaps="true"
+					android:background="@color/colorAccent"
+					android:textColor="@android:color/white"
+					android:stateListAnimator="@null"
+					local:MvxBind="Click DestroyPlanetCommand; Text [Destroy]" />
+			</LinearLayout>
+		</android.support.v4.widget.NestedScrollView>
+	</android.support.design.widget.CoordinatorLayout>
+	<com.airbnb.lottie.LottieAnimationView
+		android:id="@+id/animation_view"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:visibility="gone"
+		android:scaleType="centerCrop"
+		local:lottie_fileName="starwars.json" />
+</RelativeLayout>
