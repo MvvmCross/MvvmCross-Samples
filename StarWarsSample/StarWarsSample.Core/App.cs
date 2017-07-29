@@ -2,6 +2,7 @@
 using MvvmCross.Core.ViewModels;
 using MvvmCross.Platform;
 using MvvmCross.Platform.IoC;
+using StarWarsSample.Core.ViewModels;
 
 namespace StarWarsSample.Core
 {
@@ -21,11 +22,8 @@ namespace StarWarsSample.Core
 
             Mvx.RegisterSingleton<IUserDialogs>(() => UserDialogs.Instance);
 
-            Mvx.ConstructAndRegisterSingleton<IMvxAppStart, AppStart>();
-            var appStart = Mvx.Resolve<IMvxAppStart>();
-
             // register the appstart object
-            RegisterAppStart(appStart);
+            RegisterNavigationServiceAppStart<MainViewModel>();
         }
     }
 }
