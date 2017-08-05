@@ -1,7 +1,7 @@
 ﻿using AppKit;
-using Cirrious.MvvmCross.Mac.Platform;
-using Cirrious.MvvmCross.Mac.Views.Presenters;
-using Cirrious.MvvmCross.ViewModels;
+using MvvmCross.Mac.Platform;
+using MvvmCross.Mac.Views.Presenters;
+using MvvmCross.Core.ViewModels;
 using Foundation;
 
 namespace Soba.XamMac.Unified

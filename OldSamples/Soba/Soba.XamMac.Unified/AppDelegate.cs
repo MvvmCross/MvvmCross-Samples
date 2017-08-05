@@ -1,10 +1,10 @@
 ﻿using System.Drawing;
 using AppKit;
-using Cirrious.CrossCore;
-using Cirrious.MvvmCross.Mac.Platform;
-using Cirrious.MvvmCross.Mac.Views.Presenters;
-using Cirrious.MvvmCross.ViewModels;
+using MvvmCross.Mac.Platform;
+using MvvmCross.Mac.Views.Presenters;
+using MvvmCross.Core.ViewModels;
 using Foundation;
+using MvvmCross.Platform;
 
 namespace Soba.XamMac.Unified
 {
@@ -21,7 +21,7 @@ namespace Soba.XamMac.Unified
 			_window = new NSWindow (new RectangleF(200,200,400,400), NSWindowStyle.Closable | NSWindowStyle.Resizable | NSWindowStyle.Titled,
 				NSBackingStore.Buffered, false, NSScreen.MainScreen);
 
-			var presenter = new MvxMacViewPresenter (this, _window);
+			var presenter = new MvxMacViewPresenter (this);
 			var setup = new Setup (this, presenter);
 			setup.Initialize ();
 
