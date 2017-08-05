@@ -1,5 +1,9 @@
-using Cirrious.CrossCore;
-using Cirrious.MvvmCross.ViewModels;
+using Foundation;
+using MvvmCross.Core;
+using MvvmCross.Core.ViewModels;
+using MvvmCross.iOS.Platform;
+using MvvmCross.Platform;
+using UIKit;
 
 namespace QuickLayout.Touch
 {

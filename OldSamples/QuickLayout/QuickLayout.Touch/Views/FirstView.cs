@@ -1,11 +1,14 @@
 using Cirrious.FluentLayouts.Touch;
-using Cirrious.MvvmCross.Binding.BindingContext;
+using Foundation;
+using MvvmCross.Binding.BindingContext;
+using MvvmCross.iOS.Views;
 using QuickLayout.Core.ViewModels;
+using UIKit;
 
 namespace QuickLayout.Touch.Views
 {
     [Register("FirstView")]
-    public class FirstView : MvxViewController
+    public partial class FirstView : MvxViewController
     {
         public override void ViewDidLoad()
         {

@@ -1,4 +1,5 @@
-using Cirrious.MvvmCross.ViewModels;
+using System.Threading.Tasks;
+using MvvmCross.Core.ViewModels;
 using QuickLayout.Core.Services;
 
 namespace QuickLayout.Core.ViewModels
@@ -43,7 +44,7 @@ namespace QuickLayout.Core.ViewModels
             set
             {
                 _generosity = Limit(value);
-                Cirrious.CrossCore.Core.MvxAsyncDispatcher.BeginAsync(() => RaisePropertyChanged(() => Generosity));
+                Task.Factory.StartNew(() => RaisePropertyChanged(() => Generosity));
                 Recalcuate();
             }
         }

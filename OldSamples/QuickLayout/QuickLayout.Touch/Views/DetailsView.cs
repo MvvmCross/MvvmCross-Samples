@@ -1,7 +1,10 @@
 using Cirrious.FluentLayouts.Touch;
-using Cirrious.MvvmCross.Binding.BindingContext;
+using MvvmCross.Binding.BindingContext;
 using QuickLayout.Core.ViewModels;
 using System.Reflection;
+using UIKit;
+using MvvmCross.iOS.Views;
+using Foundation;
 
 namespace QuickLayout.Touch.Views
 {

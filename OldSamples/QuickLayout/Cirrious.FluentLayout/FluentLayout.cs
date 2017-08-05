@@ -7,6 +7,8 @@
 
 using System;
 using System.Collections.Generic;
+using Foundation;
+using UIKit;
 
 namespace Cirrious.FluentLayouts.Touch
 {

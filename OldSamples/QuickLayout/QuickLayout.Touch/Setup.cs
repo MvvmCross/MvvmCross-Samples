@@ -1,9 +1,12 @@
-using Cirrious.CrossCore.Platform;
-using Cirrious.MvvmCross.ViewModels;
+using MvvmCross.Platform;
+using MvvmCross.Core.ViewModels;
+using MvvmCross.iOS.Platform;
+using MvvmCross.Platform.Platform;
+using UIKit;
 
 namespace QuickLayout.Touch
 {
-    public class Setup : MvxTouchSetup
+    public class Setup : MvxIosSetup
     {
         public Setup(MvxApplicationDelegate applicationDelegate, UIWindow window)
             : base(applicationDelegate, window)
