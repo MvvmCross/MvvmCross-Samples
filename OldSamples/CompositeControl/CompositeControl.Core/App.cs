@@ -1,9 +1,8 @@
-using MvvmCross.Core;
-using MvvmCross.Platform.IoC;
+using Cirrious.CrossCore.IoC;
 
 namespace CompositeControl.Core
 {
-    public class App : MvvmCross.Core.ViewModels.MvxApplication
+    public class App : Cirrious.MvvmCross.ViewModels.MvxApplication
     {
         public override void Initialize()
         {

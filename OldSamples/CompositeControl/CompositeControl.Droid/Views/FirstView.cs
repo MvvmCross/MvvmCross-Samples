@@ -1,6 +1,6 @@
 using Android.App;
 using Android.OS;
-using MvvmCross.Droid.Views;
+using Cirrious.MvvmCross.Droid.Views;
 
 namespace CompositeControl.Droid.Views
 {

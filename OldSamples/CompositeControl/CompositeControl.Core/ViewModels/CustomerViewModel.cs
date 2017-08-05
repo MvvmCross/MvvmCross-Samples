@@ -1,5 +1,4 @@
-using MvvmCross.Core.ViewModels;
-
+using Cirrious.MvvmCross.ViewModels;
 
 namespace CompositeControl.Core.ViewModels
 {

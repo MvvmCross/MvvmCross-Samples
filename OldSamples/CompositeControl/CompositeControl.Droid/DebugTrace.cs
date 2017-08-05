@@ -1,6 +1,6 @@
 using System;
 using System.Diagnostics;
-using MvvmCross.Platform.Platform;
+using Cirrious.CrossCore.Platform;
 
 namespace CompositeControl.Droid
 {

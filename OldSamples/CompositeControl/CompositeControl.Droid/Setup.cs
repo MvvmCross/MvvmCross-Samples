@@ -1,8 +1,7 @@
 using Android.Content;
-using MvvmCross.Platform;
-using MvvmCross.Droid.Platform;
-using MvvmCross.Core.ViewModels;
-using MvvmCross.Platform.Platform;
+using Cirrious.CrossCore.Platform;
+using Cirrious.MvvmCross.Droid.Platform;
+using Cirrious.MvvmCross.ViewModels;
 
 namespace CompositeControl.Droid
 {
