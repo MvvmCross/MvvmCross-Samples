@@ -1,4 +1,6 @@
-﻿namespace QuickLayout.Touch
+using UIKit;
+
+namespace QuickLayout.Touch
 {
     public class Application
     {

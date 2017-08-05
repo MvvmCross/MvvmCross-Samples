@@ -1,8 +1,9 @@
-using Cirrious.CrossCore.IoC;
+using System;
+using MvvmCross.Platform.IoC;
 
 namespace Cirrious.FluentLayouts.Touch
 {
-    public class App : Cirrious.MvvmCross.ViewModels.MvxApplication
+    public class App : MvvmCross.Core.ViewModels.MvxApplication
     {
         public override void Initialize()
         {

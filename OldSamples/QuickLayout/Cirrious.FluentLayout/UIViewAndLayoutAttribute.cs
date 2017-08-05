@@ -5,6 +5,8 @@
 //
 // Project Lead - Stuart Lodge, @slodge, me@slodge.com
 
+using UIKit;
+
 namespace Cirrious.FluentLayouts.Touch
 {
     public class UIViewAndLayoutAttribute
