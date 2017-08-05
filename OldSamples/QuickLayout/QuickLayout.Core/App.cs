@@ -11,7 +11,7 @@ namespace QuickLayout.Core
                 .AsInterfaces()
                 .RegisterAsLazySingleton();
 
-            RegisterAppStart<ViewModels.FirstViewModel>();
+            RegisterNavigationServiceAppStart<ViewModels.FirstViewModel>();
         }
     }
 }
