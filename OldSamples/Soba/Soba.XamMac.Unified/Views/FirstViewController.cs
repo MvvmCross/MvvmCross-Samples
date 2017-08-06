@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using AppKit;
-using Cirrious.MvvmCross.Binding;
-using Cirrious.MvvmCross.Binding.BindingContext;
-using Cirrious.MvvmCross.Mac.Views;
+using MvvmCross.Binding;
+using MvvmCross.Binding.BindingContext;
+using MvvmCross.Mac.Views;
 using Foundation;
 using Soba.Core.ViewModels;
 using System.Diagnostics;

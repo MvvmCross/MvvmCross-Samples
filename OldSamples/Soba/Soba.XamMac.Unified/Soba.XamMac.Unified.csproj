@@ -28,6 +28,7 @@
     <CodeSigningKey>Mac Developer</CodeSigningKey>
     <EnableCodeSigning>false</EnableCodeSigning>
     <CreatePackage>false</CreatePackage>
+    <PackageSigningKey>3rd Party Mac Developer Installer</PackageSigningKey>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>full</DebugType>
@@ -66,6 +67,27 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.Mac" />
+    <Reference Include="MvvmCross.Platform">
+      <HintPath>..\packages\MvvmCross.Platform.5.1.1\lib\Xamarin.Mac20\MvvmCross.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Platform.Mac">
+      <HintPath>..\packages\MvvmCross.Platform.5.1.1\lib\Xamarin.Mac20\MvvmCross.Platform.Mac.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Core">
+      <HintPath>..\packages\MvvmCross.Core.5.1.1\lib\Xamarin.Mac20\MvvmCross.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Mac">
+      <HintPath>..\packages\MvvmCross.Core.5.1.1\lib\Xamarin.Mac20\MvvmCross.Mac.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Binding">
+      <HintPath>..\packages\MvvmCross.Binding.5.1.1\lib\Xamarin.Mac20\MvvmCross.Binding.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Binding.Mac">
+      <HintPath>..\packages\MvvmCross.Binding.5.1.1\lib\Xamarin.Mac20\MvvmCross.Binding.Mac.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Localization">
+      <HintPath>..\packages\MvvmCross.Binding.5.1.1\lib\Xamarin.Mac20\MvvmCross.Localization.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
@@ -102,40 +124,13 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Mac\Xamarin.Mac.CSharp.targets" />
   <ItemGroup>
-    <ProjectReference Include="..\..\CrossCore\Cirrious.CrossCore\Cirrious.CrossCore.csproj">
-      <Project>{CFF6F25A-3C3B-44EE-A54C-2ED4AAFF3ADB}</Project>
-      <Name>Cirrious.CrossCore</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\CrossCore\Cirrious.CrossCore.XamMac.Unified\Cirrious.CrossCore.XamMac.Unified.csproj">
-      <Project>{EF426A55-0A10-4F13-BE4D-A96AC1C54706}</Project>
-      <Name>Cirrious.CrossCore.XamMac.Unified</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Cirrious\Cirrious.MvvmCross\Cirrious.MvvmCross.csproj">
-      <Project>{B6E27475-E7D0-448C-A5CC-5097DCA1E2DD}</Project>
-      <Name>Cirrious.MvvmCross</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Cirrious\Cirrious.MvvmCross.Binding\Cirrious.MvvmCross.Binding.csproj">
-      <Project>{64DCD397-9019-41E8-A928-E5F5C5DF185B}</Project>
-      <Name>Cirrious.MvvmCross.Binding</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Cirrious\Cirrious.MvvmCross.Binding.XamMac.Unified\Cirrious.MvvmCross.Binding.XamMac.Unified.csproj">
-      <Project>{F089E103-7F5D-4000-A4B0-B1D9F37594D9}</Project>
-      <Name>Cirrious.MvvmCross.Binding.XamMac.Unified</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Cirrious\Cirrious.MvvmCross.Localization\Cirrious.MvvmCross.Localization.csproj">
-      <Project>{D89351C1-D48F-4AD0-A0B9-353A93425AB7}</Project>
-      <Name>Cirrious.MvvmCross.Localization</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Soba.Core\Soba.Core.csproj">
       <Project>{E4CDBB62-2C86-4A09-A8B7-39DF59E7E340}</Project>
       <Name>Soba.Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Cirrious\Cirrious.MvvmCross.XamMac.Unified\Cirrious.MvvmCross.XamMac.Unified.csproj">
-      <Project>{682DF427-C955-4815-BFB8-7AD8066DBB0C}</Project>
-      <Name>Cirrious.MvvmCross.XamMac.Unified</Name>
     </ProjectReference>
   </ItemGroup>
 </Project>

@@ -4,16 +4,27 @@ VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Soba.Core", "Soba.Core\Soba.Core.csproj", "{E4CDBB62-2C86-4A09-A8B7-39DF59E7E340}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Soba.XamMac.Unified", "Soba.XamMac.Unified\Soba.XamMac.Unified.csproj", "{6C102965-57C0-4C88-809C-0CA9FB85E323}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
+		AppStore|Any CPU = AppStore|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{E4CDBB62-2C86-4A09-A8B7-39DF59E7E340}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E4CDBB62-2C86-4A09-A8B7-39DF59E7E340}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E4CDBB62-2C86-4A09-A8B7-39DF59E7E340}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E4CDBB62-2C86-4A09-A8B7-39DF59E7E340}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4CDBB62-2C86-4A09-A8B7-39DF59E7E340}.AppStore|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4CDBB62-2C86-4A09-A8B7-39DF59E7E340}.AppStore|Any CPU.Build.0 = Debug|Any CPU
+		{6C102965-57C0-4C88-809C-0CA9FB85E323}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C102965-57C0-4C88-809C-0CA9FB85E323}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C102965-57C0-4C88-809C-0CA9FB85E323}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C102965-57C0-4C88-809C-0CA9FB85E323}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C102965-57C0-4C88-809C-0CA9FB85E323}.AppStore|Any CPU.ActiveCfg = AppStore|Any CPU
+		{6C102965-57C0-4C88-809C-0CA9FB85E323}.AppStore|Any CPU.Build.0 = AppStore|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
