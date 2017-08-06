@@ -1,4 +1,6 @@
 using System;
+using System.Drawing;
+using UIKit;
 
 namespace QuickLayout.Touch
 {
@@ -24,8 +26,8 @@ namespace QuickLayout.Touch
             button = UIButton.FromType(UIButtonType.RoundedRect);
 
             button.Frame = new RectangleF(
-                View.Frame.Width / 2 - buttonWidth / 2,
-                View.Frame.Height / 2 - buttonHeight / 2,
+                    (float)(View.Frame.Width / 2 - buttonWidth / 2),
+                    (float)(View.Frame.Height / 2 - buttonHeight / 2),
                 buttonWidth,
                 buttonHeight);
 

@@ -1,8 +1,8 @@
-using Cirrious.CrossCore.IoC;
+using MvvmCross.Platform.IoC;
 
 namespace QuickLayout.Touch
 {
-    public class App : Cirrious.MvvmCross.ViewModels.MvxApplication
+    public class App : MvvmCross.Core.ViewModels.MvxApplication
     {
         public override void Initialize()
         {
