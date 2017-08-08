@@ -1,4 +1,4 @@
-using Cirrious.MvvmCross.Localization;
+using MvvmCross.Localization;
 using MvvmCross.Plugins.Visibility;
 
 namespace Cirrious.Conference.Core.Converters

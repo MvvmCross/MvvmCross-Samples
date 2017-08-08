@@ -1,11 +1,15 @@
 using Cirrious.Conference.Core.Interfaces;
-using Cirrious.CrossCore;
-using Cirrious.CrossCore.Exceptions;
-using Cirrious.MvvmCross.Localization;
-using Cirrious.MvvmCross.ViewModels;
 using MvvmCross.Plugins.Messenger;
 using System;
 using System.Windows.Input;
+using MvvmCross.Core.ViewModels;
+using MvvmCross.Platform;
+using MvvmCross.Localization;
+using MvvmCross.Platform.Exceptions;
+using MvvmCross.Plugins.PhoneCall;
+using MvvmCross.Plugins.WebBrowser;
+using MvvmCross.Plugins.Email;
+using MvvmCross.Plugins.Share;
 
 namespace Cirrious.Conference.Core.ViewModels
 {

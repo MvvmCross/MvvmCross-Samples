@@ -1,5 +1,5 @@
-using Cirrious.MvvmCross.ViewModels;
 using System.Windows.Input;
+using MvvmCross.Core.ViewModels;
 
 namespace Cirrious.Conference.Core.ViewModels
 {

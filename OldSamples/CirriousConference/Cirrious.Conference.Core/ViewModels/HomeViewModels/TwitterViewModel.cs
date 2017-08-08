@@ -1,12 +1,13 @@
 using Cirrious.Conference.Core.Interfaces;
 using Cirrious.Conference.Core.Models.Twitter;
 using Cirrious.Conference.Core.ViewModels.Helpers;
-using Cirrious.CrossCore;
-using Cirrious.MvvmCross.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Input;
+using MvvmCross.Platform;
+using MvvmCross.Core.ViewModels;
+using MvvmCross.Plugins.Network.Reachability;
 
 namespace Cirrious.Conference.Core.ViewModels.HomeViewModels
 {

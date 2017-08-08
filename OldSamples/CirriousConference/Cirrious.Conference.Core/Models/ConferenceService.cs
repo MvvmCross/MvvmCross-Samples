@@ -1,12 +1,13 @@
 ﻿using Cirrious.Conference.Core.Interfaces;
 using Cirrious.Conference.Core.Models.Raw;
-using Cirrious.CrossCore;
-using Cirrious.CrossCore.Core;
-using Cirrious.CrossCore.Platform;
 using MvvmCross.Plugins.Messenger;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using MvvmCross.Platform;
+using System.Threading.Tasks;
+using MvvmCross.Platform.Platform;
+using MvvmCross.Plugins.File;
 
 namespace Cirrious.Conference.Core.Models
 {
@@ -69,7 +70,7 @@ namespace Cirrious.Conference.Core.Models
         public void BeginAsyncLoad()
         {
             IsLoading = true;
-            MvxAsyncDispatcher.BeginAsync(Load);
+            Task.Factory.StartNew(() => Load());
         }
 
         public void DoSyncLoad()

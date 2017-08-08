@@ -1,8 +1,8 @@
 using Cirrious.Conference.Core.Models.Raw;
-using Cirrious.CrossCore;
-using Cirrious.CrossCore.Converters;
-using Cirrious.MvvmCross.Localization;
 using System;
+using MvvmCross.Platform.Converters;
+using MvvmCross.Localization;
+using MvvmCross.Platform;
 
 namespace Cirrious.Conference.Core.Converters
 {

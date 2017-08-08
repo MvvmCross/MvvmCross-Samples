@@ -1,10 +1,10 @@
 using Cirrious.Conference.Core.Models;
 using Cirrious.Conference.Core.Models.Raw;
 using Cirrious.Conference.Core.ViewModels.Helpers;
-using Cirrious.MvvmCross.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using MvvmCross.Core.ViewModels;
 
 namespace Cirrious.Conference.Core.ViewModels.SessionLists
 {

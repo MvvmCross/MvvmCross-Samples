@@ -1,10 +1,10 @@
-using Cirrious.CrossCore.Core;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net;
 using System.Xml.Linq;
+using System.Threading.Tasks;
 
 namespace Cirrious.Conference.Core.Models.Twitter
 {
@@ -12,7 +12,7 @@ namespace Cirrious.Conference.Core.Models.Twitter
     {
         public static void StartAsyncSearch(string searchText, Action<IEnumerable<Tweet>> success, Action<Exception> error)
         {
-            MvxAsyncDispatcher.BeginAsync(() => DoAsyncSearch(searchText, success, error));
+            Task.Factory.StartNew(() => DoAsyncSearch(searchText, success, error));
         }
 
         private static void DoAsyncSearch(string searchText, Action<IEnumerable<Tweet>> success, Action<Exception> error)
