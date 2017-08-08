@@ -4,7 +4,7 @@
 // actions made in the Xcode designer. If it is removed, they will be lost.
 // Manual changes to this file may not be handled correctly.
 //
-using MonoTouch.Foundation;
+using Foundation;
 
 namespace BestSellers.Touch.Views
 {
@@ -12,19 +12,19 @@ namespace BestSellers.Touch.Views
 	partial class BookView
 	{
 		[Outlet]
-		MonoTouch.UIKit.UILabel TitleLabel { get; set; }
+		UIKit.UILabel TitleLabel { get; set; }
 
 		[Outlet]
-		MonoTouch.UIKit.UILabel AuthorLabel { get; set; }
+		UIKit.UILabel AuthorLabel { get; set; }
 
 		[Outlet]
-		MonoTouch.UIKit.UILabel DescriptionLabel { get; set; }
+		UIKit.UILabel DescriptionLabel { get; set; }
 
 		[Outlet]
-		MonoTouch.UIKit.UIImageView BookImage { get; set; }
+		UIKit.UIImageView BookImage { get; set; }
 
 		[Outlet]
-		MonoTouch.UIKit.UIActivityIndicatorView ActivityIndicator { get; set; }
+		UIKit.UIActivityIndicatorView ActivityIndicator { get; set; }
 		
 		void ReleaseDesignerOutlets ()
 		{

@@ -7,10 +7,10 @@ using Android.Views;
 using Android.Widget;
 using Android.OS;
 using BestSellers.ViewModels;
-using Cirrious.MvvmCross.Binding.Droid.Views;
+using MvvmCross.Binding.Droid.Views;
 
 using BestSellers;
-using Cirrious.MvvmCross.Droid.Views;
+using MvvmCross.Droid.Views;
 
 namespace BestSellers.Droid.Views
 {

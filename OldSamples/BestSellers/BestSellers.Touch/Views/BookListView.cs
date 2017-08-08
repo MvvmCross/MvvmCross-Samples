@@ -1,6 +1,10 @@
 using BestSellers.ViewModels;
-using Cirrious.MvvmCross.Binding.BindingContext;
+using MvvmCross.Binding.BindingContext;
 using System.Collections.Generic;
+using MvvmCross.iOS.Views;
+using MvvmCross.Binding.iOS.Views;
+using UIKit;
+using Foundation;
 
 namespace BestSellers.Touch.Views
 {

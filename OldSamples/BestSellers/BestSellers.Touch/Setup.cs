@@ -1,36 +1,42 @@
-using Cirrious.CrossCore.Plugins;
-using Cirrious.MvvmCross.ViewModels;
+using MvvmCross.Core.ViewModels;
+using MvvmCross.iOS.Platform;
+using MvvmCross.iOS.Views.Presenters;
+using MvvmCross.Platform.Plugins;
 
 namespace BestSellers.Touch
 {
     public class Setup
-        : MvxTouchSetup
+        : MvxIosSetup
     {
-        public Setup(MvxApplicationDelegate applicationDelegate, IMvxTouchViewPresenter presenter)
+        public Setup(MvxApplicationDelegate applicationDelegate, IMvxIosViewPresenter presenter)
             : base(applicationDelegate, presenter)
         {
         }
 
+
         protected override void AddPluginsLoaders(MvxLoaderPluginRegistry registry)
         {
-            registry.AddConventionalPlugin<Cirrious.MvvmCross.Plugins.Visibility.Touch.Plugin>();
-            registry.AddConventionalPlugin<Cirrious.MvvmCross.Plugins.DownloadCache.Touch.Plugin>();
-            registry.AddConventionalPlugin<Cirrious.MvvmCross.Plugins.File.Touch.Plugin>();
-            base.AddPluginsLoaders(registry);
+            registry.Register<MvvmCross.Plugins.Visibility.PluginLoader, MvvmCross.Plugins.Visibility.iOS.Plugin>();
+            registry.Register<MvvmCross.Plugins.DownloadCache.PluginLoader , MvvmCross.Plugins.DownloadCache.iOS.Plugin>();
+            registry.Register<MvvmCross.Plugins.File.PluginLoader , MvvmCross.Plugins.File.iOS.Plugin>();
+			//registry.Register<MvvmCross.Plugins.Json.PluginLoader, MvvmCross.Plugins.Json.iOS.Plugin>();
+
+			base.AddPluginsLoaders(registry);
         }
 
         public override void LoadPlugins(IMvxPluginManager pluginManager)
         {
-            pluginManager.EnsurePluginLoaded<Cirrious.MvvmCross.Plugins.Visibility.PluginLoader>();
-            pluginManager.EnsurePluginLoaded<Cirrious.MvvmCross.Plugins.Json.PluginLoader>();
-            pluginManager.EnsurePluginLoaded<Cirrious.MvvmCross.Plugins.DownloadCache.PluginLoader>();
-            pluginManager.EnsurePluginLoaded<Cirrious.MvvmCross.Plugins.File.PluginLoader>();
+            pluginManager.EnsurePluginLoaded<MvvmCross.Plugins.Visibility.PluginLoader>();
+            //pluginManager.EnsurePluginLoaded<MvvmCross.Plugins.Json.PluginLoader>();
+            pluginManager.EnsurePluginLoaded<MvvmCross.Plugins.DownloadCache.PluginLoader>();
+            pluginManager.EnsurePluginLoaded<MvvmCross.Plugins.File.PluginLoader>();
             base.LoadPlugins(pluginManager);
         }
 
+
         protected override IMvxApplication CreateApp()
         {
-            var app = new App();
+            var app = new BestSellers.App();
             return app;
         }
 
