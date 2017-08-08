@@ -1,13 +1,10 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using MonoMac.Foundation;
-using MonoMac.AppKit;
-using Cirrious.MvvmCross.Binding.Mac.Views;
+using Foundation;
+using MvvmCross.Binding.Mac.Views;
 
 namespace FirstDemo.Mac
 {
-	public partial class FirstView : MvxView
+    public partial class FirstView : MvxView
 	{
 		#region Constructors
 		// Called when created from unmanaged code

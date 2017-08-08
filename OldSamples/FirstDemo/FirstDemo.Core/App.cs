@@ -1,9 +1,9 @@
-using Cirrious.CrossCore.IoC;
+using MvvmCross.Platform.IoC;
 using FirstDemo.Core.ViewModels;
 
 namespace FirstDemo.Core
 {
-    public class App : Cirrious.MvvmCross.ViewModels.MvxApplication
+    public class App : MvvmCross.Core.ViewModels.MvxApplication
     {
         public override void Initialize()
         {
@@ -11,7 +11,7 @@ namespace FirstDemo.Core
                 .EndingWith("Service")
                 .AsInterfaces()
                 .RegisterAsLazySingleton();
-            RegisterAppStart<FirstViewModel>();
+            RegisterNavigationServiceAppStart<FirstViewModel>();
         }
     }
 }
