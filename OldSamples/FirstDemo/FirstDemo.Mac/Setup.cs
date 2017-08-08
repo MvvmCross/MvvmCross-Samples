@@ -1,8 +1,8 @@
-using MonoMac.Foundation;
-using MonoMac.AppKit;
-using Cirrious.MvvmCross.Mac.Platform;
-using Cirrious.MvvmCross.Mac.Views.Presenters;
-using Cirrious.MvvmCross.ViewModels;
+using Foundation;
+using AppKit;
+using MvvmCross.Mac.Platform;
+using MvvmCross.Mac.Views.Presenters;
+using MvvmCross.Core.ViewModels;
 
 namespace FirstDemo.Mac
 {
