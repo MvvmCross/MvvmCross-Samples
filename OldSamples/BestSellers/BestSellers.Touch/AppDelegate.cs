@@ -1,5 +1,9 @@
-using Cirrious.CrossCore;
-using Cirrious.MvvmCross.ViewModels;
+using Foundation;
+using MvvmCross.Core.ViewModels;
+using MvvmCross.iOS.Platform;
+using MvvmCross.iOS.Views.Presenters;
+using MvvmCross.Platform;
+using UIKit;
 
 namespace BestSellers.Touch
 {
@@ -16,7 +20,7 @@ namespace BestSellers.Touch
             _window = new UIWindow(UIScreen.MainScreen.Bounds);
 
             // initialize app for single screen iPhone display
-            var presenter = new MvxTouchViewPresenter(this, _window);
+            var presenter = new MvxIosViewPresenter(this, _window);
             var setup = new Setup(this, presenter);
             setup.Initialize();
 

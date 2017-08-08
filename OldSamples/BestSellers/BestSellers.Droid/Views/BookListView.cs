@@ -13,8 +13,8 @@ using Android.Graphics.Drawables;
 
 using BestSellers;
 using BestSellers.ViewModels;
-using Cirrious.MvvmCross.Binding.Droid.Views;
-using Cirrious.MvvmCross.Droid.Views;
+using MvvmCross.Binding.Droid.Views;
+using MvvmCross.Droid.Views;
 
 namespace BestSellers.Droid.Views
 {

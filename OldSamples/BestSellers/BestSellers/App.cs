@@ -1,8 +1,8 @@
 ﻿using BestSellers.ViewModels;
-using Cirrious.CrossCore;
-using Cirrious.CrossCore.Core;
-using Cirrious.MvvmCross.ViewModels;
+using MvvmCross.Core.ViewModels;
 using System;
+using MvvmCross.Platform.Core;
+using MvvmCross.Platform;
 
 namespace BestSellers
 {
