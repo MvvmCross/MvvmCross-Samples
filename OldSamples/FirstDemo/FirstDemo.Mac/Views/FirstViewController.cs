@@ -1,40 +1,38 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using MonoMac.Foundation;
-using MonoMac.AppKit;
-using Cirrious.MvvmCross.Mac.Views;
-using Cirrious.MvvmCross.Binding.BindingContext;
+using Foundation;
+using AppKit;
+using MvvmCross.Mac.Views;
+using MvvmCross.Binding.BindingContext;
 using FirstDemo.Core.ViewModels;
-using System.Drawing;
-using Cirrious.MvvmCross.ViewModels;
+using CoreGraphics;
+using MvvmCross.Core.ViewModels;
 
 namespace FirstDemo.Mac
 {
-	[MvxViewFor(typeof(SecondViewModel))]
+    [MvxViewFor(typeof(SecondViewModel))]
 	public class SecondViewController : MvxViewController
 	{
 		public override void ViewDidLoad ()
 		{
-			View = new NSView (new RectangleF (0, 0, 320, 400));
+			View = new NSView (new CGRect (0, 0, 320, 400));
 			base.ViewDidLoad ();
 
-			var textEditFirst = new NSTextField(new System.Drawing.RectangleF(0,0,320,40));
+			var textEditFirst = new NSTextField(new CGRect(0,0,320,40));
 			View.AddSubview (textEditFirst);
-			var textEditSecond = new NSTextField(new System.Drawing.RectangleF(0,50,320,40));
+			var textEditSecond = new NSTextField(new CGRect(0,50,320,40));
 			View.AddSubview(textEditSecond);
-			var slider = new NSSlider(new System.Drawing.RectangleF(0,150,320,40));
+			var slider = new NSSlider(new CGRect(0,150,320,40));
 			slider.MinValue = 0;
 			slider.MaxValue = 100;
 			slider.IntValue = 23;
 			View.AddSubview(slider);
-			var labelFull = new NSTextField(new System.Drawing.RectangleF(0,100,320,40));
+			var labelFull = new NSTextField(new CGRect(0,100,320,40));
 			labelFull.Editable = false;
 			labelFull.Bordered = false;
 			labelFull.AllowsEditingTextAttributes = false;
 			labelFull.DrawsBackground = false;
 			View.AddSubview (labelFull);
-			var sw = new NSButton(new RectangleF(0,200,320,40));
+			var sw = new NSButton(new CGRect(0,200,320,40));
 			sw.SetButtonType (NSButtonType.Switch);
 			View.AddSubview (sw);
 			//sw.AddObserver()
@@ -80,16 +78,16 @@ namespace FirstDemo.Mac
 
 		public override void ViewDidLoad ()
 		{
-			View = new NSView(new RectangleF(0,100,320, 400));
+			View = new NSView(new CGRect(0,100,320, 400));
 			base.ViewDidLoad ();
 
-			var textEditFirst = new NSTextField(new System.Drawing.RectangleF(10,0,320,40));
+			var textEditFirst = new NSTextField(new CGRect(10,0,320,40));
 			View.AddSubview (textEditFirst);
-			var textEditSecond = new NSTextField(new System.Drawing.RectangleF(10,50,320,40));
+			var textEditSecond = new NSTextField(new CGRect(10,50,320,40));
 			View.AddSubview(textEditSecond);
-			var labelFull = new NSTextField(new System.Drawing.RectangleF(10,100,320,40));
+			var labelFull = new NSTextField(new CGRect(10,100,320,40));
 			View.AddSubview (labelFull);
-			var bu = new NSButton (new RectangleF (0, 150, 320, 40));
+			var bu = new NSButton (new CGRect (0, 150, 320, 40));
 			bu.Title = "Hello";
 			View.AddSubview (bu);
 
