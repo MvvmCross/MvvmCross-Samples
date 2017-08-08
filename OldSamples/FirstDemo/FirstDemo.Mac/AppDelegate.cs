@@ -1,10 +1,10 @@
-using MonoMac.Foundation;
-using MonoMac.AppKit;
-using Cirrious.CrossCore;
-using Cirrious.MvvmCross.Mac.Platform;
-using Cirrious.MvvmCross.Mac.Views.Presenters;
-using Cirrious.MvvmCross.ViewModels;
-using System.Drawing;
+using Foundation;
+using AppKit;
+using MvvmCross.Mac.Platform;
+using MvvmCross.Mac.Views.Presenters;
+using MvvmCross.Core.ViewModels;
+using CoreGraphics;
+using MvvmCross.Platform;
 
 namespace FirstDemo.Mac
 {
@@ -16,12 +16,12 @@ namespace FirstDemo.Mac
 		{
 		}
 
-		public override void FinishedLaunching (NSObject notification)
+		public override void DidFinishLaunching(NSNotification notification)
 		{
-			_window = new NSWindow (new RectangleF(200,200,400,400), NSWindowStyle.Closable | NSWindowStyle.Resizable | NSWindowStyle.Titled,
+			_window = new NSWindow (new CGRect(200,200,400,400), NSWindowStyle.Closable | NSWindowStyle.Resizable | NSWindowStyle.Titled,
 			                        NSBackingStore.Buffered, false, NSScreen.MainScreen);
 
-			var presenter = new MvxMacViewPresenter (this, _window);
+			var presenter = new MvxMacViewPresenter (this);
 			var setup = new Setup (this, presenter);
 			setup.Initialize ();
 
