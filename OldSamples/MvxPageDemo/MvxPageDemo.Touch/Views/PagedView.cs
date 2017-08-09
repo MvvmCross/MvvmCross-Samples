@@ -1,12 +1,11 @@
-﻿using Cirrious.MvvmCross.Binding.BindingContext;
-using Cirrious.MvvmCross.Touch;
-using Cirrious.MvvmCross.Touch.Views;
+﻿using MvvmCross.Binding.BindingContext;
+using MvvmCross.iOS.Views;
 using MvxPageDemo.ViewModels;
 using UIKit;
 
 namespace MvxPageDemo.Touch.Views
 {
-    public class PagedView : MvxPageViewController<PagedViewModel>, IMvxModalTouchView
+    public class PagedView : MvxPageViewController<PagedViewModel>, IMvxIosView
     {
         public override void ViewDidLoad()
         {

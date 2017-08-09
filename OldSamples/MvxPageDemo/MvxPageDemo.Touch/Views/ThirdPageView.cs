@@ -1,8 +1,8 @@
-﻿using Cirrious.MvvmCross.Binding.BindingContext;
-using Cirrious.MvvmCross.Touch.Views;
-using MvxPageDemo.ViewModels;
+﻿using MvxPageDemo.ViewModels;
 using System;
 using UIKit;
+using MvvmCross.iOS.Views;
+using MvvmCross.Binding.BindingContext;
 
 namespace MvxPageDemo.Touch.Views
 {

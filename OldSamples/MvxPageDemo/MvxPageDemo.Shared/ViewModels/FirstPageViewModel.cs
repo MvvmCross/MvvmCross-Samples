@@ -1,5 +1,6 @@
-﻿using Cirrious.MvvmCross;
-using Cirrious.MvvmCross.ViewModels;
+﻿
+
+using MvvmCross.Core.ViewModels;
 
 namespace MvxPageDemo.ViewModels
 {

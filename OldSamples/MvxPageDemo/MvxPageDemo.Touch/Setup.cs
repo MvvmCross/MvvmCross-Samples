@@ -1,12 +1,13 @@
-﻿using Cirrious.MvvmCross.Touch.Platform;
-using Cirrious.MvvmCross.Touch.Views.Presenters;
-using Cirrious.MvvmCross.ViewModels;
+﻿using MvvmCross.Core.ViewModels;
+using MvvmCross.iOS.Platform;
+using MvvmCross.iOS.Views;
+using MvvmCross.iOS.Views.Presenters;
 using MvxPageDemo.Shared;
 using UIKit;
 
 namespace MvxPageDemo.Touch
 {
-    public class Setup : MvxTouchSetup
+    public class Setup : MvxIosSetup
     {
         public Setup(MvxApplicationDelegate applicationDelegate, UIWindow window) : base(applicationDelegate, window)
         {
@@ -17,9 +18,10 @@ namespace MvxPageDemo.Touch
             return (new App());
         }
 
-        protected override IMvxTouchViewPresenter CreatePresenter()
-        {
-            return (new MvxModalNavSupportTouchViewPresenter((MvxApplicationDelegate)ApplicationDelegate, Window));
+        protected override IMvxIosViewPresenter CreatePresenter()
+        {            
+
+            return (new MvxIosViewPresenter((MvxApplicationDelegate)ApplicationDelegate, Window));
         }
     }
 }
