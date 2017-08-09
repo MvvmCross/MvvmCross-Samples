@@ -1,5 +1,5 @@
 using Cirrious.Conference.Core.Models.Raw;
-using Cirrious.MvvmCross.ViewModels;
+using MvvmCross.Core.ViewModels;
 
 namespace Cirrious.Conference.Core.Models
 {

@@ -1,6 +1,8 @@
-﻿using MvvmCross.Plugins.JsonLocalisation;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
+using MvvmCross.Plugins.JsonLocalization;
+using System.Reflection;
+using MvvmCross.Platform.IoC;
 
 namespace Cirrious.Conference.Core.ApplicationObjects
 {
@@ -17,8 +19,9 @@ namespace Cirrious.Conference.Core.ApplicationObjects
             get
             {
                 var dictionary = this.GetType()
+                                     .GetTypeInfo()
                     .Assembly
-                    .GetTypes()
+                    .CreatableTypes()
                     .Where(t => t.Name.EndsWith("ViewModel"))
                     .Where(t => !t.Name.StartsWith("Base"))
                     .ToDictionary(t => t.Name, t => t.Name);

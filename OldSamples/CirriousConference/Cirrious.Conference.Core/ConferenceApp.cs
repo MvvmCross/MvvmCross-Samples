@@ -2,9 +2,9 @@
 using Cirrious.Conference.Core.Interfaces;
 using Cirrious.Conference.Core.Models;
 using Cirrious.Conference.Core.Models.Twitter;
-using Cirrious.CrossCore;
-using Cirrious.MvvmCross.Localization;
-using Cirrious.MvvmCross.ViewModels;
+using MvvmCross.Core.ViewModels;
+using MvvmCross.Localization;
+using MvvmCross.Platform;
 
 namespace Cirrious.Conference.Core
 {
@@ -24,7 +24,7 @@ namespace Cirrious.Conference.Core
             MvvmCross.Plugins.Json.PluginLoader.Instance.EnsureLoaded();
 
             MvvmCross.Plugins.File.PluginLoader.Instance.EnsureLoaded();
-            MvvmCross.Plugins.JsonLocalisation.PluginLoader.Instance.EnsureLoaded();
+            MvvmCross.Plugins.JsonLocalization.PluginLoader.Instance.EnsureLoaded();
             MvvmCross.Plugins.ResourceLoader.PluginLoader.Instance.EnsureLoaded();
             MvvmCross.Plugins.Messenger.PluginLoader.Instance.EnsureLoaded();
 
@@ -46,7 +46,7 @@ namespace Cirrious.Conference.Core
         private void InitialiseServices()
         {
             var repository = new ConferenceService();
-            Cirrious.MvvmCross.Plugins.File.PluginLoader.Instance.EnsureLoaded();
+            MvvmCross.Plugins.File.PluginLoader.Instance.EnsureLoaded();
             Mvx.RegisterSingleton<IConferenceService>(repository);
             Mvx.RegisterSingleton<ITwitterSearchProvider>(new TwitterSearchProvider());
         }

@@ -1,9 +1,10 @@
-using Cirrious.CrossCore;
-using Cirrious.CrossCore.Core;
-using Cirrious.CrossCore.Exceptions;
-using Cirrious.CrossCore.Platform;
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
+using MvvmCross.Platform.Platform;
+using MvvmCross.Platform;
+using MvvmCross.Platform.Exceptions;
+using MvvmCross.Plugins.File;
 
 namespace Cirrious.Conference.Core.Models
 {
@@ -18,7 +19,7 @@ namespace Cirrious.Conference.Core.Models
                 var wasNull = _toSave == null;
                 _toSave = toSave;
                 if (wasNull)
-                    MvxAsyncDispatcher.BeginAsync(DoSave);
+                    Task.Factory.StartNew(() => DoSave());
             }
         }
 

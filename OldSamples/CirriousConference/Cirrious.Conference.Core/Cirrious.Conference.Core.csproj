@@ -34,34 +34,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Cirrious.CrossCore, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\MvvmCross.HotTuna.CrossCore.4.0.0-beta3\lib\portable-win+net45+wp8+win8+wpa81\Cirrious.CrossCore.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Cirrious.MvvmCross, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\MvvmCross.HotTuna.MvvmCrossLibraries.4.0.0-beta3\lib\portable-win+net45+wp8+win8+wpa81\Cirrious.MvvmCross.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Cirrious.MvvmCross.Binding, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\MvvmCross.HotTuna.Binding.4.0.0-beta3\lib\portable-win+net45+wp8+win8+wpa81\Cirrious.MvvmCross.Binding.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Cirrious.MvvmCross.Localization, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\MvvmCross.HotTuna.CrossCore.4.0.0-beta3\lib\portable-win+net45+wp8+win8+wpa81\Cirrious.MvvmCross.Localization.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="MvvmCross.Plugins.JsonLocalisation, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\MvvmCross.HotTuna.Plugin.JsonLocalisation.4.0.0-beta3\lib\portable-win+net45+wp8+win8+wpa81\MvvmCross.Plugins.JsonLocalisation.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="MvvmCross.Plugins.Messenger, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\MvvmCross.HotTuna.Plugin.Messenger.4.0.0-beta3\lib\portable-win+net45+wp8+win8+wpa81\MvvmCross.Plugins.Messenger.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="MvvmCross.Plugins.Visibility, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\MvvmCross.HotTuna.Plugin.Visibility.4.0.0-beta3\lib\portable-win+net45+wp8+win8+wpa81\MvvmCross.Plugins.Visibility.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Net" />
@@ -70,6 +42,54 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Xml.Serialization" />
+    <Reference Include="MvvmCross.Platform">
+      <HintPath>..\packages\MvvmCross.Platform.5.1.1\lib\portable-net45+win+wpa81+wp80\MvvmCross.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Core">
+      <HintPath>..\packages\MvvmCross.Core.5.1.1\lib\portable-net45+win+wpa81+wp80\MvvmCross.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Binding">
+      <HintPath>..\packages\MvvmCross.Binding.5.1.1\lib\portable-net45+win+wpa81+wp80\MvvmCross.Binding.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Localization">
+      <HintPath>..\packages\MvvmCross.Binding.5.1.1\lib\portable-net45+win+wpa81+wp80\MvvmCross.Localization.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.Messenger">
+      <HintPath>..\packages\MvvmCross.Plugin.Messenger.4.0.0\lib\portable-net45+win+wpa81+wp80\MvvmCross.Plugins.Messenger.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.ResourceLoader">
+      <HintPath>..\packages\MvvmCross.Plugin.ResourceLoader.4.0.0\lib\portable-win+net45+wp8+win8+wpa81\MvvmCross.Plugins.ResourceLoader.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.Visibility">
+      <HintPath>..\packages\MvvmCross.Plugin.Visibility.4.0.0\lib\portable-net45+win+wpa81+wp80\MvvmCross.Plugins.Visibility.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.8.0.2\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.Json">
+      <HintPath>..\packages\MvvmCross.Plugin.Json.4.0.0\lib\portable-net45+win+wpa81+wp80\MvvmCross.Plugins.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.JsonLocalization">
+      <HintPath>..\packages\MvvmCross.Plugin.JsonLocalization.4.0.0\lib\portable-net45+win+wpa81+wp80\MvvmCross.Plugins.JsonLocalization.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.File">
+      <HintPath>..\packages\MvvmCross.Plugin.File.5.1.1\lib\portable-net45+win+wpa81+wp80\MvvmCross.Plugins.File.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.Email">
+      <HintPath>..\packages\MvvmCross.Plugin.Email.5.1.1\lib\portable-net45+win+wpa81+wp80\MvvmCross.Plugins.Email.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.PhoneCall">
+      <HintPath>..\packages\MvvmCross.Plugin.PhoneCall.5.1.1\lib\portable-net45+win+wpa81+wp80\MvvmCross.Plugins.PhoneCall.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.Share">
+      <HintPath>..\packages\MvvmCross.Plugin.Share.5.1.1\lib\portable-net45+win+wpa81+wp80\MvvmCross.Plugins.Share.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.WebBrowser">
+      <HintPath>..\packages\MvvmCross.Plugin.WebBrowser.5.1.1\lib\portable-net45+win+wpa81+wp80\MvvmCross.Plugins.WebBrowser.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.Network">
+      <HintPath>..\packages\MvvmCross.Plugin.Network.5.1.1\lib\portable-net45+win+wpa81+wp80\MvvmCross.Plugins.Network.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.cs" />
@@ -126,6 +146,9 @@
     <Compile Include="Messages\FavoritesChangedMessage.cs" />
     <Compile Include="Messages\LoadingChangedMessage.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
@@ -134,10 +157,4 @@
   <Target Name="AfterBuild">
   </Target>
   -->
-  <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="ToDo-MvvmCross\_ Core.txt" />
-  </ItemGroup>
 </Project>

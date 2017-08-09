@@ -1,5 +1,5 @@
-﻿using Cirrious.CrossCore.Converters;
-using System;
+﻿using System;
+using MvvmCross.Platform.Converters;
 
 namespace Cirrious.Conference.Core.Converters
 {

@@ -1,5 +1,5 @@
 using Cirrious.Conference.Core.Interfaces;
-using Cirrious.CrossCore;
+using MvvmCross.Platform;
 using MvvmCross.Plugins.Messenger;
 
 namespace Cirrious.Conference.Core.ViewModels
