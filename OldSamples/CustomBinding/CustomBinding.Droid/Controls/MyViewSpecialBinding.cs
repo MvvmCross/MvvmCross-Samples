@@ -1,7 +1,7 @@
 using System;
 using System.Reflection;
-using Cirrious.MvvmCross.Binding;
-using Cirrious.MvvmCross.Binding.Bindings.Target;
+using MvvmCross.Binding;
+using MvvmCross.Binding.Bindings.Target;
 
 namespace CustomBinding.Droid.Controls
 {
