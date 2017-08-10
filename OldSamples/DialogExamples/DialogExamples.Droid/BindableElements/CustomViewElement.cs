@@ -1,6 +1,9 @@
 using Android.Content;
 using Android.Views;
 using CrossUI.Droid.Dialog.Elements;
+using MvvmCross.Binding.BindingContext;
+using MvvmCross.Binding.Droid.BindingContext;
+using MvvmCross.Binding.Droid.Views;
 
 namespace DialogExamples.Droid.BindableElements
 {
@@ -10,7 +13,7 @@ namespace DialogExamples.Droid.BindableElements
     {
         public CustomViewElement(Context context)
         {
-            BindingContext = new MvxAndroidBindingContext(context, (IMvxLayoutInflater)context);
+            BindingContext = new MvxAndroidBindingContext(context, (IMvxLayoutInflaterHolder)context);
         }
 
         public IMvxBindingContext BindingContext { get; set; }

@@ -1,5 +1,6 @@
 using CrossUI.Droid.Dialog.Elements;
 using DialogExamples.Core.ViewModels;
+using MvvmCross.Binding.BindingContext;
 
 namespace DialogExamples.Droid.BindableElements
 {

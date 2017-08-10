@@ -1,6 +1,6 @@
 using Android.Content;
-using Cirrious.MvvmCross.Dialog.Droid;
-using Cirrious.MvvmCross.ViewModels;
+using MvvmCross.Core.ViewModels;
+using MvvmCross.Dialog.Droid;
 
 namespace DialogExamples.Droid
 {
