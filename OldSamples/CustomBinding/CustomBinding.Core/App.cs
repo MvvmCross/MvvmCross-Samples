@@ -12,7 +12,7 @@ namespace CustomBinding.Core
                 .AsInterfaces()
                 .RegisterAsLazySingleton();
 
-            RegisterAppStart<ViewModels.FirstViewModel>();
+            RegisterNavigationServiceAppStart<ViewModels.FirstViewModel>();
         }
     }
 }
