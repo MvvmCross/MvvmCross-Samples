@@ -1,4 +1,4 @@
-﻿using Cirrious.MvvmCross.ViewModels;
+﻿using MvvmCross.Core.ViewModels;
 using MvxPageDemo.ViewModels;
 
 namespace MvxPageDemo.Shared
