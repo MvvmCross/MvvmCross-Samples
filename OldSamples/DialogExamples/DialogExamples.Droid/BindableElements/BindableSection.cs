@@ -1,10 +1,12 @@
-﻿using Cirrious.CrossCore.Platform;
-using Cirrious.CrossCore.WeakSubscription;
-using CrossUI.Droid.Dialog.Elements;
+﻿using CrossUI.Droid.Dialog.Elements;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.Specialized;
+using MvvmCross.Platform.WeakSubscription;
+using MvvmCross.Binding.Attributes;
+using MvvmCross.Binding;
+using MvvmCross.Platform.Platform;
 
 namespace DialogExamples.Droid.BindableElements
 {

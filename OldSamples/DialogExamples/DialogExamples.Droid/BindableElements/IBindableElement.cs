@@ -1,4 +1,6 @@
-﻿namespace DialogExamples.Droid.BindableElements
+﻿using MvvmCross.Binding.BindingContext;
+
+namespace DialogExamples.Droid.BindableElements
 {
     public interface IBindableElement
         : IMvxBindingContextOwner
