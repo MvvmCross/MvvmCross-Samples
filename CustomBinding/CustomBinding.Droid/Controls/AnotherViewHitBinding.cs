@@ -1,7 +1,7 @@
 using System;
 using Android.Graphics;
-using Cirrious.MvvmCross.Binding;
-using Cirrious.MvvmCross.Binding.Droid.Target;
+using MvvmCross.Binding;
+using MvvmCross.Binding.Droid.Target;
 
 namespace CustomBinding.Droid.Controls
 {

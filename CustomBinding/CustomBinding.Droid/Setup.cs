@@ -1,8 +1,8 @@
 using Android.Content;
-using Cirrious.MvvmCross.Binding.Bindings.Target.Construction;
-using Cirrious.MvvmCross.Droid.Platform;
-using Cirrious.MvvmCross.ViewModels;
 using CustomBinding.Droid.Controls;
+using MvvmCross.Binding.Bindings.Target.Construction;
+using MvvmCross.Core.ViewModels;
+using MvvmCross.Droid.Platform;
 
 namespace CustomBinding.Droid
 {
