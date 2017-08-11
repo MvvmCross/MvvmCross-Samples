@@ -4,7 +4,7 @@ VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Soba.Core", "Soba.Core\Soba.Core.csproj", "{E4CDBB62-2C86-4A09-A8B7-39DF59E7E340}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Soba.XamMac.Unified", "Soba.XamMac.Unified\Soba.XamMac.Unified.csproj", "{6C102965-57C0-4C88-809C-0CA9FB85E323}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Soba.XamMac", "Soba.XamMac\Soba.XamMac.csproj", "{6C102965-57C0-4C88-809C-0CA9FB85E323}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
