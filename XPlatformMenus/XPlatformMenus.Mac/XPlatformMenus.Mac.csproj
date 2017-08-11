@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9193A796-165B-43D3-BB47-FB23194096BD}</ProjectGuid>
+    <ProjectTypeGuids>{A3F8F2AB-B479-4A4A-A458-A89E7DC349F1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>XPlatformMenus.Mac</RootNamespace>
+    <AssemblyName>Test</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <TargetFrameworkIdentifier>Xamarin.Mac</TargetFrameworkIdentifier>
+    <MonoMacResourcePrefix>Resources</MonoMacResourcePrefix>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <EnableCodeSigning>false</EnableCodeSigning>
+    <CodeSigningKey>Mac Developer</CodeSigningKey>
+    <CreatePackage>false</CreatePackage>
+    <EnablePackageSigning>false</EnablePackageSigning>
+    <IncludeMonoRuntime>false</IncludeMonoRuntime>
+    <UseSGen>true</UseSGen>
+    <UseRefCounting>true</UseRefCounting>
+    <Profiling>true</Profiling>
+    <HttpClientHandler></HttpClientHandler>
+    <TlsProvider></TlsProvider>
+    <LinkMode></LinkMode>
+    <XamMacArch></XamMacArch>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <DefineConstants></DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <EnableCodeSigning>true</EnableCodeSigning>
+    <CodeSigningKey>Developer ID Application</CodeSigningKey>
+    <CreatePackage>true</CreatePackage>
+    <EnablePackageSigning>false</EnablePackageSigning>
+    <IncludeMonoRuntime>true</IncludeMonoRuntime>
+    <UseSGen>true</UseSGen>
+    <UseRefCounting>true</UseRefCounting>
+    <LinkMode>SdkOnly</LinkMode>
+    <HttpClientHandler></HttpClientHandler>
+    <TlsProvider></TlsProvider>
+    <XamMacArch></XamMacArch>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.Mac" />
+    <Reference Include="MvvmCross.Platform.Mac">
+      <HintPath>..\packages\MvvmCross.Platform.4.2.0\lib\Xamarin.Mac20\MvvmCross.Platform.Mac.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Platform">
+      <HintPath>..\packages\MvvmCross.Platform.4.2.0\lib\Xamarin.Mac20\MvvmCross.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Mac">
+      <HintPath>..\packages\MvvmCross.Core.4.2.0\lib\Xamarin.Mac20\MvvmCross.Mac.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Core">
+      <HintPath>..\packages\MvvmCross.Core.4.2.0\lib\Xamarin.Mac20\MvvmCross.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Binding.Mac">
+      <HintPath>..\packages\MvvmCross.Binding.4.2.0\lib\Xamarin.Mac20\MvvmCross.Binding.Mac.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Binding">
+      <HintPath>..\packages\MvvmCross.Binding.4.2.0\lib\Xamarin.Mac20\MvvmCross.Binding.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Localization">
+      <HintPath>..\packages\MvvmCross.Binding.4.2.0\lib\Xamarin.Mac20\MvvmCross.Localization.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\AppIcon-128.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\AppIcon-128%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\AppIcon-16.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\AppIcon-16%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\AppIcon-256.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\AppIcon-256%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\AppIcon-32.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\AppIcon-32%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\AppIcon-512.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\AppIcon-512%402x.png" />
+    <ImageAsset Include="Assets.xcassets\Contents.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+    <Folder Include="Views\" />
+    <Folder Include="Views\Base\" />
+    <Folder Include="Views\Help\" />
+    <Folder Include="Views\Menu\" />
+    <Folder Include="Views\Login\" />
+    <Folder Include="Views\Settings\" />
+    <Folder Include="Views\Home\" />
+    <Folder Include="Services\" />
+    <Folder Include="Assets\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Info.plist" />
+    <None Include="Entitlements.plist" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <Compile Include="Setup.cs" />
+    <Compile Include="Views\Login\LoginView.cs" />
+    <Compile Include="Views\Login\LoginView.designer.cs">
+      <DependentUpon>LoginView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Login\LoginViewController.cs" />
+    <Compile Include="Views\Login\LoginViewController.designer.cs">
+      <DependentUpon>LoginViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Help\HelpView.cs" />
+    <Compile Include="Views\Help\HelpView.designer.cs">
+      <DependentUpon>HelpView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Help\HelpViewController.cs" />
+    <Compile Include="Views\Help\HelpViewController.designer.cs">
+      <DependentUpon>HelpViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Services\MacDialogService.cs" />
+    <Compile Include="Views\Home\HomeView.cs" />
+    <Compile Include="Views\Home\HomeViewController.cs" />
+    <Compile Include="Views\Home\HomeView.designer.cs">
+      <DependentUpon>HomeView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Home\HomeViewController.designer.cs">
+      <DependentUpon>HomeViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Base\BaseView.cs" />
+    <Compile Include="Views\Base\BaseViewController.cs" />
+    <Compile Include="Views\Menu\MenuView.cs" />
+    <Compile Include="Views\Menu\MenuViewController.cs" />
+    <Compile Include="Views\Menu\MenuView.designer.cs">
+      <DependentUpon>MenuView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Menu\MenuViewController.designer.cs">
+      <DependentUpon>MenuViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Settings\SettingsView.cs" />
+    <Compile Include="Views\Settings\SettingsViewController.cs" />
+    <Compile Include="Views\Settings\SettingsView.designer.cs">
+      <DependentUpon>SettingsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Settings\SettingsViewController.designer.cs">
+      <DependentUpon>SettingsViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Home\InfoView.cs" />
+    <Compile Include="Views\Home\InfoViewController.cs" />
+    <Compile Include="Views\Home\InfoView.designer.cs">
+      <DependentUpon>InfoView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Home\InfoViewController.designer.cs">
+      <DependentUpon>InfoViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Home\ThirdView.cs" />
+    <Compile Include="Views\Home\ThirdViewController.cs" />
+    <Compile Include="Views\Home\ThirdView.designer.cs">
+      <DependentUpon>ThirdView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Home\ThirdViewController.designer.cs">
+      <DependentUpon>ThirdViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Base\MainView.cs" />
+    <Compile Include="Views\Base\MainViewController.cs" />
+    <Compile Include="Views\Base\MainView.designer.cs">
+      <DependentUpon>MainView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Base\MainViewController.designer.cs">
+      <DependentUpon>MainViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewController.cs" />
+    <Compile Include="ViewController.designer.cs">
+      <DependentUpon>ViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MvxRegionAttribute.cs" />
+    <Compile Include="Views\MvxMultiRegionMacViewPresenter.cs" />
+    <Compile Include="Views\MvxPanelPopToRootPresentationHint.cs" />
+    <Compile Include="Views\MvxMacExtensionMethods.cs" />
+    <Compile Include="Views\CustomViewPresenter.cs" />
+    <Compile Include="Views\Base\PageControllerDelegate.cs" />
+    <Compile Include="Views\Base\SplitViewDelegate.cs" />
+    <Compile Include="Views\Base\CustomSplitView.cs" />
+    <Compile Include="Views\Menu\MenuOutlineDelegate.cs" />
+    <Compile Include="Views\Menu\MenuOutlineDataSource.cs" />
+    <Compile Include="Views\Menu\MenuObj.cs" />
+    <Compile Include="Views\Menu\SourceListItem.cs" />
+    <Compile Include="Views\Menu\SourceListDataSource.cs" />
+    <Compile Include="Views\Menu\SourceListDelegate.cs" />
+    <Compile Include="Views\Menu\SourceListView.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="Main.storyboard" />
+    <InterfaceDefinition Include="Views\Login\LoginView.xib" />
+    <InterfaceDefinition Include="Views\Help\HelpView.xib" />
+    <InterfaceDefinition Include="Views\Home\HomeView.xib" />
+    <InterfaceDefinition Include="Views\Menu\MenuView.xib" />
+    <InterfaceDefinition Include="Views\Settings\SettingsView.xib" />
+    <InterfaceDefinition Include="Views\Home\InfoView.xib" />
+    <InterfaceDefinition Include="Views\Home\ThirdView.xib" />
+    <InterfaceDefinition Include="Views\Base\MainView.xib" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\XPlatformMenus.Core\XPlatformMenus.Core.csproj">
+      <Project>{C23A254A-EEC5-4BD7-B1F6-D01060BAC88B}</Project>
+      <Name>XPlatformMenus.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="help.png" />
+    <BundleResource Include="home.png" />
+    <BundleResource Include="settings.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Mac\Xamarin.Mac.CSharp.targets" />
+</Project>
