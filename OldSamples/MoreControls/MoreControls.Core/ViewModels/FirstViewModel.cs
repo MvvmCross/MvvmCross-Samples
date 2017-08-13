@@ -1,5 +1,5 @@
-using Cirrious.MvvmCross.ViewModels;
 using System.Collections.Generic;
+using MvvmCross.Core.ViewModels;
 
 namespace MoreControls.Core.ViewModels
 {
