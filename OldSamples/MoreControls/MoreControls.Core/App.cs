@@ -1,8 +1,9 @@
-using Cirrious.CrossCore.IoC;
+using MvvmCross.Core.ViewModels;
+using MvvmCross.Platform.IoC;
 
 namespace MoreControls.Core
 {
-    public class App : Cirrious.MvvmCross.ViewModels.MvxApplication
+    public class App : MvxApplication
     {
         public override void Initialize()
         {
@@ -11,7 +12,7 @@ namespace MoreControls.Core
                 .AsInterfaces()
                 .RegisterAsLazySingleton();
 
-            RegisterAppStart<ViewModels.FirstViewModel>();
+            RegisterNavigationServiceAppStart<ViewModels.FirstViewModel>();
         }
     }
 }

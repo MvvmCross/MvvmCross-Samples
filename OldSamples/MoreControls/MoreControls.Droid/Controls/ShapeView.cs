@@ -3,7 +3,7 @@ using Android.Content;
 using Android.Graphics;
 using Android.Util;
 using Android.Views;
-using Cirrious.MvvmCross.Binding.Droid.Views;
+using MvvmCross.Binding.Droid.Views;
 using MoreControls.Core.ViewModels;
 
 namespace MoreControls.Droid.Controls
