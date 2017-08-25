@@ -1,14 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using Foundation;
-using AppKit;
-using MvvmCross.Mac.Views;
-using MvvmCross.Core.ViewModels;
 using MvvmCross.Binding.BindingContext;
+using MvvmCross.Mac.Views;
 using TipCalc.Core.ViewModels;
 
-namespace TipCalc.UI.Mac
+namespace TipCalc.UI.Mac.Views
 {
 	public partial class TipViewController : MvxViewController
 	{

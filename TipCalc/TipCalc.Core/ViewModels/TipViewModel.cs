@@ -1,6 +1,4 @@
-﻿
-
-using MvvmCross.Core.ViewModels;
+﻿using MvvmCross.Core.ViewModels;
 using TipCalc.Core.Services;
 
 namespace TipCalc.Core.ViewModels
