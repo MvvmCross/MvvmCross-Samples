@@ -3,7 +3,7 @@ using MvvmCross.iOS.Views;
 using TipCalc.Core.ViewModels;
 using UIKit;
 
-namespace TipCalc.UI.iOS
+namespace TipCalc.iOS
 {
     public partial class TipView : MvxViewController
     {

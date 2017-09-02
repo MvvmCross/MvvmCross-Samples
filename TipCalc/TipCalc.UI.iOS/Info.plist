@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
     <key>CFBundleName</key>
-    <string>TipCalc.UI.iOS</string>
+    <string>TipCalc.iOS</string>
     <key>CFBundleIdentifier</key>
     <string>com.mvvmcross.tipcalc-ui-ios</string>
     <key>CFBundleShortVersionString</key>

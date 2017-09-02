@@ -5,7 +5,7 @@ using MvvmCross.iOS.Views.Presenters;
 using MvvmCross.Platform;
 using MvvmCross.Core.ViewModels;
 
-namespace TipCalc.UI.iOS
+namespace TipCalc.iOS
 {
     [Register("AppDelegate")]
     public class AppDelegate : MvxApplicationDelegate

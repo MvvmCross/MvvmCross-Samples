@@ -3,7 +3,7 @@ using MvvmCross.iOS.Views.Presenters;
 using MvvmCross.Core.ViewModels;
 using TipCalc.Core;
 
-namespace TipCalc.UI.iOS
+namespace TipCalc.iOS
 {
     public class Setup : MvxIosSetup
     {
