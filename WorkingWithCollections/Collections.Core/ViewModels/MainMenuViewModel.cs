@@ -12,20 +12,21 @@ using MvvmCross.Core.ViewModels;
 
 namespace Collections.Core.ViewModels
 {
+
     public class MainMenuViewModel : MvxViewModel
     {
         public MainMenuViewModel()
         {
             MenuItems = new List<MenuItem>
-                {
-                    new MenuItem("Small Fixed Collection", this, typeof (SmallFixedViewModel)),
-                    new MenuItem("Small Dynamic Collection", this, typeof (SmallDynamicViewModel)),
-                    new MenuItem("Large Fixed Collection", this, typeof (LargeFixedViewModel)),
-                    new MenuItem("Large Dynamic Collection", this, typeof (LargeDynamicViewModel)),
-                    new MenuItem("Polymorphic Collection", this, typeof (PolymorphicListItemTypesViewModel)),
-                    new MenuItem("Specific Positions Collection", this, typeof (SpecificPositionsViewModel)),
-					new MenuItem("Expandable Collection", this, typeof (ExpandableViewModel)),
-                };
+            {
+                new MenuItem("Small Fixed Collection", this, typeof (SmallFixedViewModel)),
+                new MenuItem("Small Dynamic Collection", this, typeof (SmallDynamicViewModel)),
+                new MenuItem("Large Fixed Collection", this, typeof (LargeFixedViewModel)),
+                new MenuItem("Large Dynamic Collection", this, typeof (LargeDynamicViewModel)),
+                new MenuItem("Polymorphic Collection", this, typeof (PolymorphicListItemTypesViewModel)),
+                new MenuItem("Specific Positions Collection", this, typeof (SpecificPositionsViewModel)),
+                new MenuItem("Expandable Collection", this, typeof (ExpandableViewModel)),
+            };
         }
 
         public List<MenuItem> MenuItems { get; private set; }
