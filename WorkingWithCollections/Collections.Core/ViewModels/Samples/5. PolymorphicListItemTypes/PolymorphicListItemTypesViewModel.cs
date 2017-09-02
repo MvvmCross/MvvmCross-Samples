@@ -1,6 +1,9 @@
 ﻿using Collections.Core.ViewModels.Samples.ListItems;
 using System.Collections.Generic;
+using MvvmCross.Core.Navigation;
+using Collections.Core.ViewModels.Samples.MultipleListItemTypes;
 
+[assembly: MvxNavigation(typeof(PolymorphicListItemTypesViewModel), nameof(PolymorphicListItemTypesViewModel))]
 namespace Collections.Core.ViewModels.Samples.MultipleListItemTypes
 {
     public class PolymorphicListItemTypesViewModel : BaseSampleViewModel
