@@ -1,11 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using Foundation;
-using AppKit;
 using MvvmCross.Binding.Mac.Views;
 
-namespace TipCalc.UI.Mac
+namespace TipCalc.UI.Mac.Views
 {
 	public partial class TipView : MvxView
 	{

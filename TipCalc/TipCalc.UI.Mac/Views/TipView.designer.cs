@@ -1,4 +1,4 @@
-﻿namespace TipCalc.UI.Mac
+﻿namespace TipCalc.UI.Mac.Views
 {
 
 	// Should subclass AppKit.NSView
