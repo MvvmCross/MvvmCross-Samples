@@ -3,6 +3,10 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows.Input;
 using MvvmCross.Core.ViewModels;
+using MvvmCross.Core.Navigation;
+using Collections.Core.ViewModels.Samples.SmallDynamic;
+
+[assembly: MvxNavigation(typeof(SmallDynamicViewModel), nameof(SmallDynamicViewModel))]
 
 namespace Collections.Core.ViewModels.Samples.SmallDynamic
 {

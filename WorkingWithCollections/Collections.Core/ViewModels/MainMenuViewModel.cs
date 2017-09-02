@@ -5,42 +5,46 @@ using Collections.Core.ViewModels.Samples.SmallDynamic;
 using Collections.Core.ViewModels.Samples.SmallFixed;
 using Collections.Core.ViewModels.Samples.SpecificPositions;
 using Collections.Core.ViewModels.Samples.Expandable;
-using System;
 using System.Collections.Generic;
 using System.Windows.Input;
 using MvvmCross.Core.ViewModels;
+using MvvmCross.Core.Navigation;
+using MvvmCross.Platform;
 
 namespace Collections.Core.ViewModels
 {
     public class MainMenuViewModel : MvxViewModel
     {
+        readonly IMvxNavigationService NavigationService;
+
         public MainMenuViewModel()
         {
+            NavigationService = Mvx.Resolve<IMvxNavigationService>();
+
             MenuItems = new List<MenuItem>
-                {
-                    new MenuItem("Small Fixed Collection", this, typeof (SmallFixedViewModel)),
-                    new MenuItem("Small Dynamic Collection", this, typeof (SmallDynamicViewModel)),
-                    new MenuItem("Large Fixed Collection", this, typeof (LargeFixedViewModel)),
-                    new MenuItem("Large Dynamic Collection", this, typeof (LargeDynamicViewModel)),
-                    new MenuItem("Polymorphic Collection", this, typeof (PolymorphicListItemTypesViewModel)),
-                    new MenuItem("Specific Positions Collection", this, typeof (SpecificPositionsViewModel)),
-					new MenuItem("Expandable Collection", this, typeof (ExpandableViewModel)),
-                };
+            {
+                new MenuItem("Small Fixed Collection", this, nameof(SmallFixedViewModel)),
+                new MenuItem("Small Dynamic Collection", this, nameof(SmallDynamicViewModel)),
+                new MenuItem("Large Fixed Collection", this, nameof(LargeFixedViewModel)),
+                new MenuItem("Large Dynamic Collection", this, nameof(LargeDynamicViewModel)),
+                new MenuItem("Polymorphic Collection", this, nameof(PolymorphicListItemTypesViewModel)),
+                new MenuItem("Specific Positions Collection", this, nameof(SpecificPositionsViewModel)),
+                new MenuItem("Expandable Collection", this, nameof(ExpandableViewModel)),
+            };
         }
 
         public List<MenuItem> MenuItems { get; private set; }
 
         public class MenuItem
         {
-            public MenuItem(string title, MainMenuViewModel parent, Type viewModelType)
+            public MenuItem(string title, MainMenuViewModel parent, string viewModelUrl)
             {
                 Title = title;
-                ViewModelType = viewModelType;
-                ShowCommand = new MvxCommand(() => parent.ShowViewModel(ViewModelType));
+                // Will change to navigate to type once https://github.com/MvvmCross/MvvmCross/pull/2148 is in.
+                ShowCommand = new MvxCommand(() => parent.NavigationService.Navigate(viewModelUrl));
             }
 
             public string Title { get; private set; }
-            public Type ViewModelType { get; private set; }
             public ICommand ShowCommand { get; private set; }
         }
     }

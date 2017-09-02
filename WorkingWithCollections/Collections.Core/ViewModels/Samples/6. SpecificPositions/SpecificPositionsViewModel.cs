@@ -1,6 +1,9 @@
 ﻿using Collections.Core.ViewModels.Samples.ListItems;
 using System.Collections.Generic;
+using MvvmCross.Core.Navigation;
+using Collections.Core.ViewModels.Samples.SpecificPositions;
 
+[assembly: MvxNavigation(typeof(SpecificPositionsViewModel), nameof(SpecificPositionsViewModel))]
 namespace Collections.Core.ViewModels.Samples.SpecificPositions
 {
     public class SpecificPositionsViewModel : BaseSampleViewModel

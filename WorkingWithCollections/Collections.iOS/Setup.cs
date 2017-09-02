@@ -1,15 +1,19 @@
+using Collections.iOS;
+using MvvmCross.Core.ViewModels;
 using MvvmCross.iOS.Platform;
 using MvvmCross.iOS.Views.Presenters;
-using MvvmCross.Core.ViewModels;
-using MvvmCross.Plugins.DownloadCache;
-using MvvmCross.Platform.Plugins;
-
+using MvvmCross.Platform.Platform;
+using UIKit;
 
 namespace Collections.Touch
 {
-    public class Setup
-        : MvxIosSetup
+    public class Setup : MvxIosSetup
     {
+        public Setup(MvxApplicationDelegate applicationDelegate, UIWindow window)
+            : base(applicationDelegate, window)
+        {
+        }
+
         public Setup(MvxApplicationDelegate applicationDelegate, IMvxIosViewPresenter presenter)
             : base(applicationDelegate, presenter)
         {
@@ -17,7 +21,12 @@ namespace Collections.Touch
 
         protected override IMvxApplication CreateApp()
         {
-            return new Collections.Core.App();
+            return new Core.App();
+        }
+
+        protected override IMvxTrace CreateDebugTrace()
+        {
+            return new DebugTrace();
         }
     }
 }

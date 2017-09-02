@@ -4,9 +4,11 @@ using MvvmCross.Binding.iOS.Views;
 using Foundation;
 using UIKit;
 using MvvmCross.Binding.BindingContext;
+using MvvmCross.iOS.Views.Presenters.Attributes;
 
 namespace Collections.Touch
 {
+    [MvxRootPresentation(WrapInNavigationController = true)]
     public class MainMenuView : MvxTableViewController
     {
         public MainMenuView()
@@ -32,8 +34,6 @@ namespace Collections.Touch
         {
             private static readonly NSString Identifier = new NSString("MenuCellIdentifier");
             private const string BindingText = "TitleText Title;SelectedCommand ShowCommand";
-
-#warning Switch to new base constructor when released...
 
             public TableSource(UITableView tableView)
                 : base(tableView, UITableViewCellStyle.Default, Identifier, BindingText)
