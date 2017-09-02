@@ -36,6 +36,11 @@ namespace Collections.Touch
                 : base(tableView, "KittenCell", "KittenCell")
             {
             }
+
+            public override System.nfloat GetHeightForRow(UITableView tableView, NSIndexPath indexPath)
+            {
+                return 120f;
+            }
         }
     }
 }
