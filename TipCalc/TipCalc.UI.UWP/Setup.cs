@@ -1,8 +1,8 @@
-﻿using Windows.UI.Xaml.Controls;
-using MvvmCross.Core.ViewModels;
-using MvvmCross.WindowsUWP.Platform;
+﻿using MvvmCross.Core.ViewModels;
+using MvvmCross.Uwp.Platform;
+using Windows.UI.Xaml.Controls;
 
-namespace TipCalc.UI.UWP
+namespace TipCalc.UWP
 {
     public class Setup : MvxWindowsSetup
     {
