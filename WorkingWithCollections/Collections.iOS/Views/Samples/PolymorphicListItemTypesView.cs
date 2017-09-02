@@ -63,6 +63,11 @@ namespace Collections.Touch
 
                 return (UITableViewCell)TableView.DequeueReusableCell(cellIdentifier, indexPath);
             }
+
+            public override System.nfloat GetHeightForRow(UITableView tableView, NSIndexPath indexPath)
+            {
+                return 120f;
+            }
         }
     }
 }
