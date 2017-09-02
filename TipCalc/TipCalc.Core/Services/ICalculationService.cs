@@ -1,6 +1,6 @@
 ﻿namespace TipCalc.Core.Services
 {
-    public interface ICalculation
+    public interface ICalculationService
     {
         double TipAmount(double subTotal, int generosity);
     }

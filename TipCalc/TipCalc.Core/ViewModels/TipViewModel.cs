@@ -1,24 +1,23 @@
-﻿
-
-using MvvmCross.Core.ViewModels;
+﻿using MvvmCross.Core.ViewModels;
 using TipCalc.Core.Services;
 
 namespace TipCalc.Core.ViewModels
 {
     public class TipViewModel : MvxViewModel
     {
-        readonly ICalculation _calculation;
+        private readonly ICalculationService _calculation;
 
-        public TipViewModel(ICalculation calculation)
+        public TipViewModel(ICalculationService calculation)
         {
             _calculation = calculation;
+
+            _subTotal = 100;
+            _generosity = 10;
+            Recalcuate();
         }
 
         public override void Start()
         {
-            _subTotal = 100;
-            _generosity = 10;
-            Recalcuate();
             base.Start();
         }
 
