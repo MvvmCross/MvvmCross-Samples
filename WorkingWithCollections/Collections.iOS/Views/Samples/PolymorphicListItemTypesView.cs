@@ -28,6 +28,7 @@ namespace Collections.Touch
                 });
 
             TableView.Source = source;
+            TableView.RowHeight = 120f;
             TableView.ReloadData();
         }
 
@@ -39,6 +40,7 @@ namespace Collections.Touch
             public TableSource(UITableView tableView)
                 : base(tableView)
             {
+                tableView.SeparatorStyle = UITableViewCellSeparatorStyle.None;
                 tableView.RegisterNibForCellReuse(UINib.FromName("KittenCell", NSBundle.MainBundle),
                                                   KittenCellIdentifier);
                 tableView.RegisterNibForCellReuse(UINib.FromName("DogCell", NSBundle.MainBundle), DogCellIdentifier);

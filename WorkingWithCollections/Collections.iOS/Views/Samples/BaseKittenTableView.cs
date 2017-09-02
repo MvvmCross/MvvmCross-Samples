@@ -27,6 +27,7 @@ namespace Collections.Touch
                 });
 
             TableView.Source = source;
+            TableView.RowHeight = 120f;
             TableView.ReloadData();
         }
 
@@ -35,6 +36,7 @@ namespace Collections.Touch
             public TableSource(UITableView tableView)
                 : base(tableView, "KittenCell", "KittenCell")
             {
+                tableView.SeparatorStyle = UITableViewCellSeparatorStyle.None;
             }
         }
     }

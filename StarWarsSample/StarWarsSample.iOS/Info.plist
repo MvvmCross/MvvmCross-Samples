@@ -19,8 +19,6 @@
 		<integer>1</integer>
 		<integer>2</integer>
 	</array>
-	<key>UIMainStoryboardFile~ipad</key>
-	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
