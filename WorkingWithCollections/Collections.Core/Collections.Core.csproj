@@ -55,7 +55,6 @@
     <Compile Include="ViewModels\Samples\6. SpecificPositions\SpecificPositionsViewModel.cs" />
     <Compile Include="ViewModels\Samples\7. Expandable\ExpandableViewModel.cs" />
     <Compile Include="ViewModels\Samples\ListItems\KittenGroup.cs" />
-    <Compile Include="ViewModels\BaseViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />

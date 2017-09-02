@@ -6,7 +6,7 @@ using MvvmCross.Core.ViewModels;
 
 namespace Collections.Core.ViewModels.Samples
 {
-    public class BaseSampleViewModel : BaseViewModel
+    public class BaseSampleViewModel : MvxViewModel
     {
         private readonly DogGenerator _dogGenerator = new DogGenerator();
         private readonly KittenGenerator _kittenGenerator = new KittenGenerator();

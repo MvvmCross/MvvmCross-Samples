@@ -5,18 +5,22 @@ using Collections.Core.ViewModels.Samples.SmallDynamic;
 using Collections.Core.ViewModels.Samples.SmallFixed;
 using Collections.Core.ViewModels.Samples.SpecificPositions;
 using Collections.Core.ViewModels.Samples.Expandable;
-using System;
 using System.Collections.Generic;
 using System.Windows.Input;
 using MvvmCross.Core.ViewModels;
+using MvvmCross.Core.Navigation;
+using MvvmCross.Platform;
 
 namespace Collections.Core.ViewModels
 {
-
-    public class MainMenuViewModel : BaseViewModel
+    public class MainMenuViewModel : MvxViewModel
     {
+        readonly IMvxNavigationService NavigationService;
+
         public MainMenuViewModel()
         {
+            NavigationService = Mvx.Resolve<IMvxNavigationService>();
+
             MenuItems = new List<MenuItem>
             {
                 new MenuItem("Small Fixed Collection", this, nameof(SmallFixedViewModel)),
