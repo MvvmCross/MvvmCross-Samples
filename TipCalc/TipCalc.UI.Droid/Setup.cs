@@ -1,9 +1,9 @@
 using Android.Content;
-using MvvmCross.Core.ViewModels;
 using MvvmCross.Droid.Platform;
-using TipCalc.Core;
+using MvvmCross.Core.ViewModels;
+using MvvmCross.Platform.Platform;
 
-namespace TipCalc.UI.Droid
+namespace TipCalc.Droid
 {
     public class Setup : MvxAndroidSetup
     {
@@ -14,7 +14,7 @@ namespace TipCalc.UI.Droid
 
         protected override IMvxApplication CreateApp()
         {
-            return new App();
+            return new Core.App();
         }
     }
 }
