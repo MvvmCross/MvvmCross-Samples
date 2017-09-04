@@ -1,6 +1,6 @@
 ﻿using UIKit;
 
-namespace TipCalc.UI.iOS
+namespace TipCalc.iOS
 {
     public class Application
     {

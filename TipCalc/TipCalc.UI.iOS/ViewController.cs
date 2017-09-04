@@ -2,7 +2,7 @@
 
 using UIKit;
 
-namespace TipCalc.UI.iOS
+namespace TipCalc.iOS
 {
     public partial class ViewController : UIViewController
     {

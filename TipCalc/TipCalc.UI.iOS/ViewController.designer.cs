@@ -9,7 +9,7 @@ using System;
 using System.CodeDom.Compiler;
 using UIKit;
 
-namespace TipCalc.UI.iOS
+namespace TipCalc.iOS
 {
     [Register ("ViewController")]
     partial class ViewController

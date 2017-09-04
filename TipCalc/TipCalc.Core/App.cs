@@ -1,16 +1,19 @@
 ﻿using MvvmCross.Core.ViewModels;
-using MvvmCross.Platform;
-using TipCalc.Core.Services;
+using MvvmCross.Platform.IoC;
 using TipCalc.Core.ViewModels;
 
 namespace TipCalc.Core
 {
     public class App : MvxApplication
     {
-        public App()
+        public override void Initialize()
         {
-            Mvx.RegisterType<ICalculation, Calculation>();
-            Mvx.RegisterSingleton<IMvxAppStart>(new MvxAppStart<TipViewModel>());
+            CreatableTypes()
+                .EndingWith("Service")
+                .AsInterfaces()
+                .RegisterAsLazySingleton();
+
+            RegisterNavigationServiceAppStart<TipViewModel>();
         }
     }
 }

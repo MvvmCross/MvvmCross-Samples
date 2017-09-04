@@ -1,13 +1,16 @@
 using Android.App;
+using Android.OS;
 using MvvmCross.Droid.Views;
+using TipCalc.Core.ViewModels;
 
-namespace TipCalc.UI.Droid.Views
+namespace TipCalc.Droid.Views
 {
-    [Activity(Label = "Tip", MainLauncher = true)]
-    public class TipView : MvxActivity
+    [Activity(Label = "Tip Calculator")]
+    public class TipView : MvxActivity<TipViewModel>
     {
-        protected override void OnViewModelSet()
+        protected override void OnCreate(Bundle bundle)
         {
+            base.OnCreate(bundle);
             SetContentView(Resource.Layout.View_Tip);
         }
     }
