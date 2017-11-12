@@ -2,15 +2,15 @@
 using Android.Runtime;
 using Android.Support.V7.Widget;
 using Android.Views;
-using MvvmCross.Droid.Shared.Attributes;
 using MvvmCross.Droid.Support.V7.RecyclerView;
 using StarWarsSample.Droid.Extensions;
 using StarWarsSample.Core.Resources;
 using StarWarsSample.Core.ViewModels;
+using MvvmCross.Droid.Views.Attributes;
 
 namespace StarWarsSample.Droid.Views
 {
-    [MvxFragment(typeof(MainViewModel), Resource.Id.content_frame, false)]
+    [MvxFragmentPresentation(typeof(MainViewModel), Resource.Id.content_frame, false)]
     [Register("starWarsSample.droid.views.PlanetsView")]
     public class PlanetsView : BaseFragment<PlanetsViewModel>
     {
@@ -23,7 +23,7 @@ namespace StarWarsSample.Droid.Views
             ParentActivity.SupportActionBar.Title = Strings.TargetPlanets;
 
             var recyclerView = view.FindViewById<MvxRecyclerView>(Resource.Id.planets_recycler_view);
-            if (recyclerView != null)
+            if(recyclerView != null)
             {
                 recyclerView.HasFixedSize = true;
                 var layoutManager = new LinearLayoutManager(Activity);

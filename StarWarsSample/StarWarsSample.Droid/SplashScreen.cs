@@ -2,9 +2,11 @@ using Android;
 using Android.App;
 using Android.Content.PM;
 using MvvmCross.Droid.Views;
+using MvvmCross.Droid.Views.Attributes;
 
 namespace StarWarsSample.Droid
 {
+    [MvxActivityPresentation]
     [Activity(
         MainLauncher = true,
         Icon = "@mipmap/icon",

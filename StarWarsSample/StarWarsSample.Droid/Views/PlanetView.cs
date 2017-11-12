@@ -8,7 +8,7 @@ using Android.Widget;
 using Com.Airbnb.Lottie;
 using MvvmCross.Binding.BindingContext;
 using MvvmCross.Core.ViewModels;
-using MvvmCross.Droid.Shared.Attributes;
+using MvvmCross.Droid.Views.Attributes;
 using MvvmCross.Platform.Core;
 using MvvmCross.Plugins.Color.Droid;
 using StarWarsSample.Core;
@@ -17,7 +17,7 @@ using StarWarsSample.Core.ViewModels;
 
 namespace StarWarsSample.Droid.Views
 {
-    [MvxFragment(typeof(MainViewModel), Resource.Id.content_frame, true)]
+    [MvxFragmentPresentation(typeof(MainViewModel), Resource.Id.content_frame, true)]
     [Register("starWarsSample.droid.views.PlanetView")]
     public class PlanetView : BaseFragment<PlanetViewModel>, Animator.IAnimatorListener
     {
@@ -35,7 +35,7 @@ namespace StarWarsSample.Droid.Views
             get => _interaction;
             set
             {
-                if (_interaction != null)
+                if(_interaction != null)
                     _interaction.Requested -= OnInteractionRequested;
 
                 _interaction = value;
