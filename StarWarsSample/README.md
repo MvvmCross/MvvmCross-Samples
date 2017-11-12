@@ -21,8 +21,9 @@ Checkout the "Artwork" folder to look at the designs for those platforms.
 - Charts from [OxyPlot](http://www.oxyplot.org/)
 
 ### Android
+- [MvxAppCompatViewPresenter](https://www.mvvmcross.com/documentation/presenters/android-view-presenter)
 - Support packages
-- Fragments (also MvxFragmentsPresenter)
+- Fragments
 - `DrawerLayout`, `CoordinatorLayout`, `CollapsingToolbarLayout`, `MvxRecyclerView`, `MvxSwipeRefreshLayout`
 - Custom MvxBindings
 - Custom controls

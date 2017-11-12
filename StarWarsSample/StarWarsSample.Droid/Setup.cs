@@ -10,6 +10,7 @@ using MvvmCross.Core.ViewModels;
 using MvvmCross.Droid.Support.V4;
 using MvvmCross.Droid.Support.V7.AppCompat;
 using MvvmCross.Droid.Support.V7.RecyclerView;
+using MvvmCross.Droid.Views;
 using StarWarsSample.Core;
 using StarWarsSample.Droid.MvxBindings;
 
@@ -48,6 +49,11 @@ namespace StarWarsSample.Droid
             base.FillTargetFactories(registry);
 
             registry.RegisterFactory(new MvxCustomBindingFactory<SwipeRefreshLayout>("IsRefreshing", (swipeRefreshLayout) => new SwipeRefreshLayoutIsRefreshingTargetBinding(swipeRefreshLayout)));
+        }
+
+        protected override IMvxAndroidViewPresenter CreateViewPresenter()
+        {
+            return new MvxAppCompatViewPresenter(AndroidViewAssemblies);
         }
     }
 }
