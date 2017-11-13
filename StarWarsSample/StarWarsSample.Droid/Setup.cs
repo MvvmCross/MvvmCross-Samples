@@ -7,7 +7,6 @@ using Android.Support.V4.Widget;
 using Android.Support.V7.Widget;
 using MvvmCross.Binding.Bindings.Target.Construction;
 using MvvmCross.Core.ViewModels;
-using MvvmCross.Droid.Shared.Presenter;
 using MvvmCross.Droid.Support.V4;
 using MvvmCross.Droid.Support.V7.AppCompat;
 using MvvmCross.Droid.Support.V7.RecyclerView;
@@ -52,12 +51,9 @@ namespace StarWarsSample.Droid
             registry.RegisterFactory(new MvxCustomBindingFactory<SwipeRefreshLayout>("IsRefreshing", (swipeRefreshLayout) => new SwipeRefreshLayoutIsRefreshingTargetBinding(swipeRefreshLayout)));
         }
 
-        /// <summary>
-        /// This is very important to override. The default view presenter does not know how to show fragments!
-        /// </summary>
         protected override IMvxAndroidViewPresenter CreateViewPresenter()
         {
-            return new MvxFragmentsPresenter(AndroidViewAssemblies); ;
+            return new MvxAppCompatViewPresenter(AndroidViewAssemblies);
         }
     }
 }
