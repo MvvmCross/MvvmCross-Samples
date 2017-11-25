@@ -1,28 +1,22 @@
-﻿using MvvmCross.Core.ViewModels;
+﻿using MvvmCross.Core.Navigation;
+using MvvmCross.Core.ViewModels;
 using MvvmCross.Platform;
 
 namespace XPlatformMenus.Core.ViewModels
 {
     public class ThirdViewModel : BaseViewModel
     {
+        private readonly IMvxNavigationService _navigationService;
 
-        private MvxCommand saveAndCloseCommand;
-
-        public MvxCommand SaveAndCloseCommand
+        public ThirdViewModel(IMvxNavigationService navigationService)
         {
-            get
-            {
-                saveAndCloseCommand = saveAndCloseCommand ?? new MvxCommand(DoSaveAndClose);
-                return saveAndCloseCommand;
-            }
+            _navigationService = navigationService;
         }
 
-        private MvxPresentationHint popToRootHint = Mvx.Resolve<MvxPresentationHint>();
-
-        private void DoSaveAndClose()
+        public IMvxAsyncCommand SaveAndCloseCommand => new MvxAsyncCommand(async () =>
         {
-            //do whatever work one would do to 'save', and send a message to pop to root               
-            ChangePresentation(popToRootHint);
-        }
+            await _navigationService.Navigate<HomeViewModel>();
+        });
+        
     }
 }

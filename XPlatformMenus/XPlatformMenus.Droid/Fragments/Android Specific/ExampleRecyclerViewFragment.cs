@@ -1,4 +1,5 @@
 ﻿using System;
+using Android.App;
 using Android.OS;
 using Android.Runtime;
 using Android.Support.Design.Widget;
@@ -6,14 +7,14 @@ using Android.Support.V7.Widget;
 using Android.Views;
 using Android.Widget;
 using XPlatformMenus.Core.ViewModels;
-using MvvmCross.Droid.Shared.Attributes;
 using MvvmCross.Droid.Support.V7.RecyclerView;
 using MvvmCross.Platform.WeakSubscription;
 using MvvmCross.Droid.Support.V4;
+using MvvmCross.Droid.Views.Attributes;
 
 namespace XPlatformMenus.Droid.Fragments
 {
-    [MvxFragment(typeof(MainViewModel), Resource.Id.content_frame, true)]
+    [MvxFragmentPresentation(typeof(MainViewModel), Resource.Id.content_frame, true)]
     [Register("xplatformmenus.droid.fragments.ExampleRecyclerViewFragment")]
     public class ExampleRecyclerViewFragment : BaseFragment<ExampleRecyclerViewModel>
     {

@@ -1,15 +1,16 @@
 using Android.Content;
 using System.Collections.Generic;
 using System.Reflection;
+using MvvmCross.Binding.Bindings.Target.Construction;
 using XPlatformMenus.Core.Interfaces;
 using XPlatformMenus.Droid.Services;
 using MvvmCross.Droid.Platform;
 using MvvmCross.Core.ViewModels;
+using MvvmCross.Droid.Support.V7.AppCompat;
 using MvvmCross.Droid.Views;
 using MvvmCross.Platform;
-using MvvmCross.Droid.Shared.Presenter;
-using XPlatformMenus.Droid.Utilities;
 using MvvmCross.Platform.Droid.Platform;
+using XPlatformMenus.Droid.Utilities;
 
 namespace XPlatformMenus.Droid
 {
@@ -40,26 +41,18 @@ namespace XPlatformMenus.Droid
         /// </summary>
         protected override IMvxAndroidViewPresenter CreateViewPresenter()
         {
-            var mvxFragmentsPresenter = new MvxFragmentsPresenter(AndroidViewAssemblies);
-            Mvx.RegisterSingleton<IMvxAndroidViewPresenter>(mvxFragmentsPresenter);
-
-            //add a presentation hint handler to listen for pop to root
-            mvxFragmentsPresenter.AddPresentationHintHandler<MvxPanelPopToRootPresentationHint>(hint =>
-            {                
-                var activity = Mvx.Resolve<IMvxAndroidCurrentTopActivity>().Activity;
-                var fragmentActivity = activity as Android.Support.V4.App.FragmentActivity;
-             
-                for (int i = 0; i < fragmentActivity.SupportFragmentManager.BackStackEntryCount; i++)
-                {
-                    fragmentActivity.SupportFragmentManager.PopBackStack();
-                }
-                return true;
-            });
-            //register the presentation hint to pop to root
-            //picked up in the third view model
-            Mvx.RegisterSingleton<MvxPresentationHint>(() => new MvxPanelPopToRootPresentationHint());            
-            return mvxFragmentsPresenter;
+            return new MvxAppCompatViewPresenter(AndroidViewAssemblies);
         }
+
+        /// <summary>
+        /// Fill the Binding Factory Registry with bindings from the support library.
+        /// </summary>
+        protected override void FillTargetFactories(IMvxTargetBindingFactoryRegistry registry)
+        {
+            MvxAppCompatSetupHelper.FillTargetFactories(registry);
+            base.FillTargetFactories(registry);
+        }
+       
 
         protected override void InitializeFirstChance()
         {

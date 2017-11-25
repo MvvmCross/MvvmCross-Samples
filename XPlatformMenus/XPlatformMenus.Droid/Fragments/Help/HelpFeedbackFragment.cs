@@ -2,11 +2,11 @@
 using XPlatformMenus.Core.ViewModels;
 using Android.Views;
 using Android.OS;
-using MvvmCross.Droid.Shared.Attributes;
+using MvvmCross.Droid.Views.Attributes;
 
 namespace XPlatformMenus.Droid.Fragments
 {
-	[MvxFragment(typeof(MainViewModel), Resource.Id.content_frame)]
+	[MvxFragmentPresentation(typeof(MainViewModel), Resource.Id.content_frame)]
     [Register("xplatformmenus.droid.fragments.HelpFeedbackFragment")]
     public class HelpFeedbackFragment : BaseFragment<HelpAndFeedbackViewModel>
     {

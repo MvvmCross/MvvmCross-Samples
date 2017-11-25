@@ -6,13 +6,13 @@ using Android.Support.Design.Widget;
 using Android.Views;
 using XPlatformMenus.Core.ViewModels;
 using XPlatformMenus.Droid.Activities;
-using MvvmCross.Droid.Shared.Attributes;
 using MvvmCross.Droid.Support.V4;
 using MvvmCross.Binding.Droid.BindingContext;
+using MvvmCross.Droid.Views.Attributes;
 
 namespace XPlatformMenus.Droid.Fragments
 {
-	[MvxFragment(typeof(MainViewModel), Resource.Id.navigation_frame)]
+	[MvxFragmentPresentation(typeof(MainViewModel), Resource.Id.navigation_frame)]
     [Register("xplatformmenus.droid.fragments.MenuFragment")]
     public class MenuFragment : MvxFragment<MenuViewModel>, NavigationView.IOnNavigationItemSelectedListener
     {

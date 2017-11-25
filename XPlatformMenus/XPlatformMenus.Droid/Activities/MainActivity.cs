@@ -6,7 +6,6 @@ using Android.Support.V4.Widget;
 using Android.Views;
 using Android.Views.InputMethods;
 using MvvmCross.Droid.Support.V7.AppCompat;
-using MvvmCross.Platform;
 using XPlatformMenus.Core.ViewModels;
 
 
@@ -18,7 +17,7 @@ namespace XPlatformMenus.Droid.Activities
         LaunchMode = LaunchMode.SingleTop,
         Name = "xplatformmenus.droid.activities.MainActivity"
     )]
-    public class MainActivity : MvxCachingFragmentCompatActivity<MainViewModel>
+    public class MainActivity : MvxAppCompatActivity<MainViewModel>
     {
         public DrawerLayout DrawerLayout;       
 

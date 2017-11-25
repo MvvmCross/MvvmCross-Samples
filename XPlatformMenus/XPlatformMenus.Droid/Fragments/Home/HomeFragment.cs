@@ -2,11 +2,11 @@
 using XPlatformMenus.Core.ViewModels;
 using Android.OS;
 using Android.Views;
-using MvvmCross.Droid.Shared.Attributes;
+using MvvmCross.Droid.Views.Attributes;
 
 namespace XPlatformMenus.Droid.Fragments
 {
-    [MvxFragment(typeof(MainViewModel), Resource.Id.content_frame)]
+    [MvxFragmentPresentation(typeof(MainViewModel), Resource.Id.content_frame)]
     [Register("xplatformmenus.droid.fragments.HomeFragment")]
     public class HomeFragment : BaseFragment<HomeViewModel>
     {

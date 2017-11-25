@@ -1,14 +1,13 @@
 ﻿using Android.OS;
 using Android.Runtime;
 using Android.Views;
+using MvvmCross.Droid.Views.Attributes;
 using XPlatformMenus.Core.ViewModels;
 using XPlatformMenus.Droid.Activities;
-using MvvmCross.Droid.Shared.Attributes;
-using XPlatformMenus.Droid.Utilities;
 
 namespace XPlatformMenus.Droid.Fragments
 {
-    [MvxFragment(typeof(MainViewModel), Resource.Id.content_frame, true)]
+    [MvxFragmentPresentation(typeof(MainViewModel), Resource.Id.content_frame, true)]
     [Register("xplatformmenus.droid.fragments.ThirdFragment")]
     public class ThirdFragment : BaseFragment<ThirdViewModel>
     {
