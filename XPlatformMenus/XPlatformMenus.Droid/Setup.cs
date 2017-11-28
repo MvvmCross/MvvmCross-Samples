@@ -53,7 +53,6 @@ namespace XPlatformMenus.Droid
             base.FillTargetFactories(registry);
         }
        
-
         protected override void InitializeFirstChance()
         {
             base.InitializeFirstChance();
