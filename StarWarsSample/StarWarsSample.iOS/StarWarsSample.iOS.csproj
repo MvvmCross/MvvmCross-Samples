@@ -271,7 +271,7 @@
 	</ItemGroup>
 	<ItemGroup>
 	  <ProjectReference Include="..\StarWarsSample.Core\StarWarsSample.Core.csproj">
-	    <Project>{DECE7897-83CC-431C-B87E-D61901D0A629}</Project>
+	    <Project>{C8D72805-91D3-48B5-8F5B-44B9263198B6}</Project>
 	    <Name>StarWarsSample.Core</Name>
 	  </ProjectReference>
 	</ItemGroup>

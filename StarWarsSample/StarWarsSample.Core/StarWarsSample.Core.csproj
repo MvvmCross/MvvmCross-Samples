@@ -1,135 +1,34 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-	<PropertyGroup>
-		<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-		<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-		<ProjectGuid>{DECE7897-83CC-431C-B87E-D61901D0A629}</ProjectGuid>
-		<ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-		<OutputType>Library</OutputType>
-		<RootNamespace>StarWarsSample.Core</RootNamespace>
-		<AssemblyName>StarWarsSample.Core</AssemblyName>
-		<TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-		<TargetFrameworkProfile>Profile7</TargetFrameworkProfile>
-	</PropertyGroup>
-	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-		<DebugSymbols>true</DebugSymbols>
-		<DebugType>full</DebugType>
-		<Optimize>false</Optimize>
-		<OutputPath>bin\Debug</OutputPath>
-		<DefineConstants>DEBUG;</DefineConstants>
-		<ErrorReport>prompt</ErrorReport>
-		<WarningLevel>4</WarningLevel>
-	</PropertyGroup>
-	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-		<Optimize>true</Optimize>
-		<OutputPath>bin\Release</OutputPath>
-		<ErrorReport>prompt</ErrorReport>
-		<WarningLevel>4</WarningLevel>
-	</PropertyGroup>
-	<ItemGroup>
-		<Compile Include="Properties\AssemblyInfo.cs" />
-		<Compile Include="Models\Person.cs" />
-		<Compile Include="Models\Film.cs" />
-		<Compile Include="App.cs" />
-		<Compile Include="ViewModels\MainViewModel.cs" />
-		<Compile Include="Services\Interfaces\IPeopleService.cs" />
-		<Compile Include="Services\Implementations\PeopleService.cs" />
-		<Compile Include="Rest\Interfaces\IRestClient.cs" />
-		<Compile Include="Rest\Implementations\RestClient.cs" />
-		<Compile Include="Constants.cs" />
-		<Compile Include="ViewModels\PeopleViewModel.cs" />
-		<Compile Include="ViewModels\PlanetsViewModel.cs" />
-		<Compile Include="Models\PagedResult.cs" />
-		<Compile Include="Services\Interfaces\IPlanetsService.cs" />
-		<Compile Include="Models\Planet.cs" />
-		<Compile Include="Services\Implementations\PlanetService.cs" />
-		<Compile Include="ViewModels\MenuViewModel.cs" />
-		<Compile Include="ViewModels\PersonViewModel.cs" />
-		<Compile Include="AppColors.cs" />
-		<Compile Include="ViewModels\PlanetViewModel.cs" />
-		<Compile Include="ViewModels\StatusViewModel.cs" />
-		<Compile Include="Resources\Strings.Designer.cs">
-			<DependentUpon>Strings.resx</DependentUpon>
-		</Compile>
-		<Compile Include="ViewModels\BaseViewModel.cs" />
-		<Compile Include="MvxInteraction\DestructionAction.cs" />
-		<Compile Include="ViewModelResults\DestructionResult.cs" />
-		<Compile Include="AppStart.cs" />
-	</ItemGroup>
-	<ItemGroup>
-		<Reference Include="System.Net.Http.Extensions">
-			<HintPath>..\packages\Microsoft.Net.Http.2.2.22\lib\portable-net45+win8\System.Net.Http.Extensions.dll</HintPath>
-		</Reference>
-		<Reference Include="System.Net.Http.Primitives">
-			<HintPath>..\packages\Microsoft.Net.Http.2.2.22\lib\portable-net45+win8\System.Net.Http.Primitives.dll</HintPath>
-		</Reference>
-		<Reference Include="ModernHttpClient">
-			<HintPath>..\packages\modernhttpclient.2.4.2\lib\Portable-Net45+WinRT45+WP8+WPA81\ModernHttpClient.dll</HintPath>
-		</Reference>
-		<Reference Include="Nito.AsyncEx.Concurrent">
-			<HintPath>..\packages\Nito.AsyncEx.3.0.1\lib\portable-net45+netcore45+wpa81\Nito.AsyncEx.Concurrent.dll</HintPath>
-		</Reference>
-		<Reference Include="Nito.AsyncEx">
-			<HintPath>..\packages\Nito.AsyncEx.3.0.1\lib\portable-net45+netcore45+wpa81\Nito.AsyncEx.dll</HintPath>
-		</Reference>
-		<Reference Include="OxyPlot">
-			<HintPath>..\packages\OxyPlot.Core.2.0.0-unstable0956\lib\portable-net45+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1+Xamarin.iOS10\OxyPlot.dll</HintPath>
-		</Reference>
-		<Reference Include="Newtonsoft.Json">
-		  <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\portable-net45+win8+wp8+wpa81\Newtonsoft.Json.dll</HintPath>
-		</Reference>
-		<Reference Include="Splat">
-		  <HintPath>..\packages\Splat.2.0.0\lib\netstandard1.1\Splat.dll</HintPath>
-		</Reference>
-		<Reference Include="Acr.UserDialogs">
-		  <HintPath>..\packages\Acr.UserDialogs.6.5.1\lib\netstandard1.1\Acr.UserDialogs.dll</HintPath>
-		</Reference>
-		<Reference Include="Acr.UserDialogs.Interface">
-		  <HintPath>..\packages\Acr.UserDialogs.6.5.1\lib\netstandard1.1\Acr.UserDialogs.Interface.dll</HintPath>
-		</Reference>
-		<Reference Include="MvvmCross.Platform">
-		  <HintPath>..\packages\MvvmCross.Platform.5.4.2\lib\portable-net45+win+wpa81+wp80\MvvmCross.Platform.dll</HintPath>
-		</Reference>
-		<Reference Include="MvvmCross.Core">
-		  <HintPath>..\packages\MvvmCross.Core.5.4.2\lib\portable-net45+win+wpa81+wp80\MvvmCross.Core.dll</HintPath>
-		</Reference>
-		<Reference Include="MvvmCross.Binding">
-		  <HintPath>..\packages\MvvmCross.Binding.5.4.2\lib\portable-net45+win+wpa81+wp80\MvvmCross.Binding.dll</HintPath>
-		</Reference>
-		<Reference Include="MvvmCross.Localization">
-		  <HintPath>..\packages\MvvmCross.Binding.5.4.2\lib\portable-net45+win+wpa81+wp80\MvvmCross.Localization.dll</HintPath>
-		</Reference>
-		<Reference Include="MvvmCross.Plugins.Messenger">
-		  <HintPath>..\packages\MvvmCross.Plugin.Messenger.5.4.2\lib\portable-net45+win+wpa81+wp80\MvvmCross.Plugins.Messenger.dll</HintPath>
-		</Reference>
-		<Reference Include="MvvmCross.Plugins.Visibility">
-		  <HintPath>..\packages\MvvmCross.Plugin.Visibility.5.4.2\lib\portable-net45+win+wpa81+wp80\MvvmCross.Plugins.Visibility.dll</HintPath>
-		</Reference>
-		<Reference Include="MvvmCross.Plugins.Json">
-		  <HintPath>..\packages\MvvmCross.Plugin.Json.5.4.2\lib\portable-net45+win+wpa81+wp80\MvvmCross.Plugins.Json.dll</HintPath>
-		</Reference>
-	</ItemGroup>
-	<ItemGroup>
-		<None Include="packages.config" />
-	</ItemGroup>
-	<ItemGroup>
-		<Folder Include="Models\" />
-		<Folder Include="ViewModels\" />
-		<Folder Include="Services\" />
-		<Folder Include="Services\Interfaces\" />
-		<Folder Include="Services\Implementations\" />
-		<Folder Include="Rest\" />
-		<Folder Include="Rest\Interfaces\" />
-		<Folder Include="Rest\Implementations\" />
-		<Folder Include="Resources\" />
-		<Folder Include="MvxInteraction\" />
-		<Folder Include="ViewModelResults\" />
-	</ItemGroup>
-	<ItemGroup>
-		<EmbeddedResource Include="Resources\Strings.resx">
-			<Generator>PublicResXFileCodeGenerator</Generator>
-			<LastGenOutput>Strings.Designer.cs</LastGenOutput>
-		</EmbeddedResource>
-	</ItemGroup>
-	<Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="ViewModels\" />
+    <Folder Include="Models\" />
+    <Folder Include="MvxInteraction\" />
+    <Folder Include="Services\" />
+    <Folder Include="Rest\" />
+    <Folder Include="ViewModelResults\" />
+    <Folder Include="Rest\Interfaces\" />
+    <Folder Include="Rest\Implementations\" />
+    <Folder Include="Services\Interfaces\" />
+    <Folder Include="Services\Implementations\" />
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="MvvmCross" Version="5.6.2" />
+    <PackageReference Include="OxyPlot.Core" Version="2.0.0-unstable0956" />
+    <PackageReference Include="MvvmCross.Plugin.Json" Version="5.6.2" />
+    <PackageReference Include="MvvmCross.Plugin.Visibility" Version="5.6.2" />
+    <PackageReference Include="MvvmCross.Plugin.Messenger" Version="5.6.2" />
+    <PackageReference Include="Acr.UserDialogs" Version="6.5.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Remove="Resources\Strings.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Strings.resx" />
+  </ItemGroup>
 </Project>

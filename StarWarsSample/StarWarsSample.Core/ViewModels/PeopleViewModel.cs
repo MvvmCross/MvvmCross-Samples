@@ -2,7 +2,6 @@
 using System.Threading.Tasks;
 using MvvmCross.Core.Navigation;
 using MvvmCross.Core.ViewModels;
-using Nito.AsyncEx;
 using StarWarsSample.Core.Models;
 using StarWarsSample.Core.ViewModelResults;
 using StarWarsSample.Core.Services.Interfaces;
@@ -31,7 +30,7 @@ namespace StarWarsSample.Core.ViewModels
             {
                 if (!string.IsNullOrEmpty(_nextPage))
                 {
-                    FetchPeopleTask = NotifyTaskCompletion.Create(LoadPeople);
+                    FetchPeopleTask = MvxNotifyTask.Create(LoadPeople);
                     RaisePropertyChanged(() => FetchPeopleTask);
                 }
             });
@@ -41,15 +40,15 @@ namespace StarWarsSample.Core.ViewModels
         // MvvmCross Lifecycle
         public override Task Initialize()
         {
-            LoadPeopleTask = NotifyTaskCompletion.Create(LoadPeople);
+            LoadPeopleTask = MvxNotifyTask.Create(LoadPeople);
 
             return base.Initialize();
         }
 
         // MVVM Properties
-        public INotifyTaskCompletion LoadPeopleTask { get; private set; }
+        public MvxNotifyTask LoadPeopleTask { get; private set; }
 
-        public INotifyTaskCompletion FetchPeopleTask { get; private set; }
+        public MvxNotifyTask FetchPeopleTask { get; private set; }
 
         private MvxObservableCollection<Person> _people;
         public MvxObservableCollection<Person> People
@@ -106,7 +105,7 @@ namespace StarWarsSample.Core.ViewModels
         {
             _nextPage = null;
 
-            LoadPeopleTask = NotifyTaskCompletion.Create(LoadPeople);
+            LoadPeopleTask = MvxNotifyTask.Create(LoadPeople);
             RaisePropertyChanged(() => LoadPeopleTask);
         }
     }
