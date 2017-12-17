@@ -65,5 +65,17 @@ Global
 		$3.AttributesInNewLine = True
 		$3.AlignAttributes = True
 		$2.scope = application/android+xml
+		$0.DotNetNamingPolicy = $4
+		$4.DirectoryNamespaceAssociation = PrefixedHierarchical
+		$0.TextStylePolicy = $5
+		$5.inheritsSet = null
+		$5.scope = text/microsoft-resx
+		$0.XmlFormattingPolicy = $6
+		$6.DefaultFormat = $7
+		$7.ContentIndentString = "    "
+		$7.MaxAttributesPerLine = 2
+		$7.AttributesIndentString = "    "
+		$7.AlignAttributes = True
+		$6.scope = text/microsoft-resx
 	EndGlobalSection
 EndGlobal

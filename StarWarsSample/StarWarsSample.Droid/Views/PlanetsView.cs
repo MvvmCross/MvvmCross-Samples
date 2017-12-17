@@ -7,6 +7,7 @@ using StarWarsSample.Droid.Extensions;
 using StarWarsSample.Core.Resources;
 using StarWarsSample.Core.ViewModels;
 using MvvmCross.Droid.Views.Attributes;
+using Android.Widget;
 
 namespace StarWarsSample.Droid.Views
 {
@@ -23,7 +24,7 @@ namespace StarWarsSample.Droid.Views
             ParentActivity.SupportActionBar.Title = Strings.TargetPlanets;
 
             var recyclerView = view.FindViewById<MvxRecyclerView>(Resource.Id.planets_recycler_view);
-            if(recyclerView != null)
+            if (recyclerView != null)
             {
                 recyclerView.HasFixedSize = true;
                 var layoutManager = new LinearLayoutManager(Activity);

@@ -79,12 +79,8 @@ namespace StarWarsSample.Core.ViewModels
             if (string.IsNullOrEmpty(_nextPage))
             {
                 Planets.Clear();
-                Planets.AddRange(result.Results);
             }
-            else
-            {
-                Planets.AddRange(result.Results);
-            }
+            Planets.AddRange(result.Results);
 
             _nextPage = result.Next;
         }

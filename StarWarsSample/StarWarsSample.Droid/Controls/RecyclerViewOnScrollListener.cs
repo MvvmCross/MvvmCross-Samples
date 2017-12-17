@@ -7,6 +7,8 @@ namespace StarWarsSample.Droid.Controls
     {
         public delegate void LoadMoreEventHandler(object sender, EventArgs e);
 
+        public int RemainingItemsToTriggerFetch { get; set; } = 8;
+
         public event LoadMoreEventHandler LoadMoreEvent;
 
         private LinearLayoutManager LayoutManager;
@@ -24,9 +26,15 @@ namespace StarWarsSample.Droid.Controls
             var totalItemCount = recyclerView.GetAdapter().ItemCount;
             var pastVisiblesItems = LayoutManager.FindFirstVisibleItemPosition();
 
-            if ((visibleItemCount + pastVisiblesItems) == totalItemCount)
+            if (totalItemCount != 0
+                //&& pastVisiblesItems > 0
+                &&
+                (
+                    RemainingItemsToTriggerFetch >= totalItemCount
+                    || (visibleItemCount + pastVisiblesItems + RemainingItemsToTriggerFetch) >= totalItemCount
+                ))
             {
-                this.LoadMoreEvent(this, null);
+                this.LoadMoreEvent?.Invoke(this, null);
             }
         }
     }

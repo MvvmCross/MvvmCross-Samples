@@ -26,9 +26,14 @@
     <PackageReference Include="Acr.UserDialogs" Version="6.5.1" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Remove="Resources\Strings.resx" />
+    <EmbeddedResource Update="Resources\Strings.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Strings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Strings.resx" />
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Resources\Strings.Designer.cs">
+      <DependentUpon>Strings.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
 </Project>
