@@ -3,9 +3,9 @@ using System.ComponentModel;
 using Android.Support.V4.Widget;
 using MvvmCross.Binding;
 using MvvmCross.Binding.Droid.Target;
+using MvvmCross.Core.ViewModels;
 using MvvmCross.Platform.Platform;
 using MvvmCross.Platform.WeakSubscription;
-using Nito.AsyncEx;
 
 namespace StarWarsSample.Droid.MvxBindings
 {
@@ -20,18 +20,18 @@ namespace StarWarsSample.Droid.MvxBindings
 
         public override MvxBindingMode DefaultMode => MvxBindingMode.OneWay;
 
-        public override Type TargetType => typeof(INotifyTaskCompletion);
+        public override Type TargetType => typeof(MvxNotifyTask);
 
         protected override void SetValueImpl(object target, object value)
         {
-            if (!(value is INotifyTaskCompletion))
+            if (!(value is MvxNotifyTask))
             {
                 MvxBindingTrace.Trace(MvxTraceLevel.Warning,
                     "Value '{0}' could not be parsed as a valid INotifyTaskCompletion", value);
                 return;
             }
 
-            var taskCompletion = (INotifyTaskCompletion)value;
+            var taskCompletion = (MvxNotifyTask)value;
             taskCompletion.WeakSubscribe(HandlePropertyChanged);
 
             SwipeRefreshLayout.Post(() => SwipeRefreshLayout.Refreshing = taskCompletion.IsNotCompleted);
@@ -39,9 +39,9 @@ namespace StarWarsSample.Droid.MvxBindings
 
         private void HandlePropertyChanged(object sender, PropertyChangedEventArgs e)
         {
-            if (e.PropertyName == nameof(INotifyTaskCompletion.IsNotCompleted))
+            if (e.PropertyName == nameof(MvxNotifyTask.IsNotCompleted))
             {
-                SwipeRefreshLayout.Post(() => SwipeRefreshLayout.Refreshing = ((INotifyTaskCompletion)sender).IsNotCompleted);
+                SwipeRefreshLayout.Post(() => SwipeRefreshLayout.Refreshing = ((MvxNotifyTask)sender).IsNotCompleted);
             }
         }
     }
