@@ -2,7 +2,6 @@
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
-using ModernHttpClient;
 using MvvmCross.Platform.Platform;
 using StarWarsSample.Core.Rest.Interfaces;
 
@@ -21,7 +20,7 @@ namespace StarWarsSample.Core.Rest.Implementations
         {
             url = url.Replace("http://", "https://");
 
-            using (var httpClient = new HttpClient(new NativeMessageHandler { UseCookies = false }))
+            using (var httpClient = new HttpClient())
             {
                 using (var request = new HttpRequestMessage { RequestUri = new Uri(url), Method = method })
                 {

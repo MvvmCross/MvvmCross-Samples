@@ -2,7 +2,6 @@
 using System.Threading.Tasks;
 using MvvmCross.Core.Navigation;
 using MvvmCross.Core.ViewModels;
-using Nito.AsyncEx;
 using StarWarsSample.Core.Models;
 using StarWarsSample.Core.ViewModelResults;
 using StarWarsSample.Core.Services.Interfaces;
@@ -31,7 +30,7 @@ namespace StarWarsSample.Core.ViewModels
             {
                 if (!string.IsNullOrEmpty(_nextPage))
                 {
-                    FetchPlanetsTask = NotifyTaskCompletion.Create(LoadPlanets);
+                    FetchPlanetsTask = MvxNotifyTask.Create(LoadPlanets);
                     RaisePropertyChanged(() => FetchPlanetsTask);
                 }
             });
@@ -41,15 +40,15 @@ namespace StarWarsSample.Core.ViewModels
         // MvvmCross Lifecycle
         public override Task Initialize()
         {
-            LoadPlanetsTask = NotifyTaskCompletion.Create(LoadPlanets);
+            LoadPlanetsTask = MvxNotifyTask.Create(LoadPlanets);
 
             return Task.FromResult(0);
         }
 
         // MVVM Properties
-        public INotifyTaskCompletion LoadPlanetsTask { get; private set; }
+        public MvxNotifyTask LoadPlanetsTask { get; private set; }
 
-        public INotifyTaskCompletion FetchPlanetsTask { get; private set; }
+        public MvxNotifyTask FetchPlanetsTask { get; private set; }
 
         private MvxObservableCollection<Planet> _planets;
         public MvxObservableCollection<Planet> Planets
@@ -80,12 +79,8 @@ namespace StarWarsSample.Core.ViewModels
             if (string.IsNullOrEmpty(_nextPage))
             {
                 Planets.Clear();
-                Planets.AddRange(result.Results);
             }
-            else
-            {
-                Planets.AddRange(result.Results);
-            }
+            Planets.AddRange(result.Results);
 
             _nextPage = result.Next;
         }
@@ -106,7 +101,7 @@ namespace StarWarsSample.Core.ViewModels
         {
             _nextPage = null;
 
-            LoadPlanetsTask = NotifyTaskCompletion.Create(LoadPlanets);
+            LoadPlanetsTask = MvxNotifyTask.Create(LoadPlanets);
             RaisePropertyChanged(() => LoadPlanetsTask);
         }
     }

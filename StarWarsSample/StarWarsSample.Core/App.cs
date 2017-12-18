@@ -23,7 +23,7 @@ namespace StarWarsSample.Core
             Mvx.RegisterSingleton<IUserDialogs>(() => UserDialogs.Instance);
 
             // register the appstart object
-            RegisterNavigationServiceAppStart<MainViewModel>();
+            RegisterCustomAppStart<AppStart>();
         }
     }
 }

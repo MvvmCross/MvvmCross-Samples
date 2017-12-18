@@ -26,7 +26,7 @@
 		<IOSDebuggerPort>24235</IOSDebuggerPort>
 		<MtouchLink>None</MtouchLink>
 		<MtouchArch>i386, x86_64</MtouchArch>
-		<MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+		<MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
 		<PlatformTarget>x86</PlatformTarget>
 	</PropertyGroup>
 	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
@@ -86,18 +86,6 @@
 		<Reference Include="ModernHttpClient">
 			<HintPath>..\packages\modernhttpclient.2.4.2\lib\Xamarin.iOS10\ModernHttpClient.dll</HintPath>
 		</Reference>
-		<Reference Include="Cirrious.FluentLayouts.Touch">
-			<HintPath>..\packages\Cirrious.FluentLayout.2.5.0\lib\Xamarin.iOS10\Cirrious.FluentLayouts.Touch.dll</HintPath>
-		</Reference>
-		<Reference Include="Nito.AsyncEx.Concurrent">
-			<HintPath>..\packages\Nito.AsyncEx.3.0.1\lib\Xamarin.iOS10\Nito.AsyncEx.Concurrent.dll</HintPath>
-		</Reference>
-		<Reference Include="Nito.AsyncEx">
-			<HintPath>..\packages\Nito.AsyncEx.3.0.1\lib\Xamarin.iOS10\Nito.AsyncEx.dll</HintPath>
-		</Reference>
-		<Reference Include="Nito.AsyncEx.Enlightenment">
-			<HintPath>..\packages\Nito.AsyncEx.3.0.1\lib\Xamarin.iOS10\Nito.AsyncEx.Enlightenment.dll</HintPath>
-		</Reference>
 		<Reference Include="Acr.Support.iOS">
 			<HintPath>..\packages\Acr.Support.2.1.0\lib\Xamarin.iOS10\Acr.Support.iOS.dll</HintPath>
 		</Reference>
@@ -110,53 +98,11 @@
 		<Reference Include="OxyPlot.Xamarin.iOS">
 			<HintPath>..\packages\OxyPlot.Xamarin.iOS.1.1.0-unstable0011\lib\Xamarin.iOS10\OxyPlot.Xamarin.iOS.dll</HintPath>
 		</Reference>
-		<Reference Include="Lottie.iOS">
-			<HintPath>..\packages\Com.Airbnb.iOS.Lottie.1.5.1.1\lib\xamarinios\Lottie.iOS.dll</HintPath>
-		</Reference>
 		<Reference Include="Microsoft.CSharp" />
 		<Reference Include="System.IO.Compression" />
 		<Reference Include="System.Net.Http" />
 		<Reference Include="Newtonsoft.Json">
 		  <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\netstandard1.3\Newtonsoft.Json.dll</HintPath>
-		</Reference>
-		<Reference Include="MvvmCross.Platform">
-		  <HintPath>..\packages\MvvmCross.Platform.5.4.2\lib\Xamarin.iOS10\MvvmCross.Platform.dll</HintPath>
-		</Reference>
-		<Reference Include="MvvmCross.Platform.iOS">
-		  <HintPath>..\packages\MvvmCross.Platform.5.4.2\lib\Xamarin.iOS10\MvvmCross.Platform.iOS.dll</HintPath>
-		</Reference>
-		<Reference Include="MvvmCross.Core">
-		  <HintPath>..\packages\MvvmCross.Core.5.4.2\lib\Xamarin.iOS10\MvvmCross.Core.dll</HintPath>
-		</Reference>
-		<Reference Include="MvvmCross.iOS">
-		  <HintPath>..\packages\MvvmCross.Core.5.4.2\lib\Xamarin.iOS10\MvvmCross.iOS.dll</HintPath>
-		</Reference>
-		<Reference Include="MvvmCross.Binding">
-		  <HintPath>..\packages\MvvmCross.Binding.5.4.2\lib\Xamarin.iOS10\MvvmCross.Binding.dll</HintPath>
-		</Reference>
-		<Reference Include="MvvmCross.Binding.iOS">
-		  <HintPath>..\packages\MvvmCross.Binding.5.4.2\lib\Xamarin.iOS10\MvvmCross.Binding.iOS.dll</HintPath>
-		</Reference>
-		<Reference Include="MvvmCross.Localization">
-		  <HintPath>..\packages\MvvmCross.Binding.5.4.2\lib\Xamarin.iOS10\MvvmCross.Localization.dll</HintPath>
-		</Reference>
-		<Reference Include="MvvmCross.Plugins.Color">
-		  <HintPath>..\packages\MvvmCross.Plugin.Color.5.4.2\lib\Xamarin.iOS10\MvvmCross.Plugins.Color.dll</HintPath>
-		</Reference>
-		<Reference Include="MvvmCross.Plugins.Color.iOS">
-		  <HintPath>..\packages\MvvmCross.Plugin.Color.5.4.2\lib\Xamarin.iOS10\MvvmCross.Plugins.Color.iOS.dll</HintPath>
-		</Reference>
-		<Reference Include="MvvmCross.Plugins.Messenger">
-		  <HintPath>..\packages\MvvmCross.Plugin.Messenger.5.4.2\lib\Xamarin.iOS10\MvvmCross.Plugins.Messenger.dll</HintPath>
-		</Reference>
-		<Reference Include="MvvmCross.Plugins.Visibility">
-		  <HintPath>..\packages\MvvmCross.Plugin.Visibility.5.4.2\lib\Xamarin.iOS10\MvvmCross.Plugins.Visibility.dll</HintPath>
-		</Reference>
-		<Reference Include="MvvmCross.Plugins.Visibility.iOS">
-		  <HintPath>..\packages\MvvmCross.Plugin.Visibility.5.4.2\lib\Xamarin.iOS10\MvvmCross.Plugins.Visibility.iOS.dll</HintPath>
-		</Reference>
-		<Reference Include="MvvmCross.Plugins.Json">
-		  <HintPath>..\packages\MvvmCross.Plugin.Json.5.4.2\lib\Xamarin.iOS10\MvvmCross.Plugins.Json.dll</HintPath>
 		</Reference>
 		<Reference Include="BTProgressHUD">
 		  <HintPath>..\packages\BTProgressHUD.1.2.0.5\lib\Xamarin.iOS10\BTProgressHUD.dll</HintPath>
@@ -169,6 +115,51 @@
 		</Reference>
 		<Reference Include="Acr.UserDialogs.Interface">
 		  <HintPath>..\packages\Acr.UserDialogs.6.5.1\lib\Xamarin.iOS10\Acr.UserDialogs.Interface.dll</HintPath>
+		</Reference>
+		<Reference Include="Cirrious.FluentLayouts.Touch">
+		  <HintPath>..\packages\Cirrious.FluentLayout.2.6.0\lib\Xamarin.iOS10\Cirrious.FluentLayouts.Touch.dll</HintPath>
+		</Reference>
+		<Reference Include="MvvmCross.Platform">
+		  <HintPath>..\packages\MvvmCross.Platform.5.6.2\lib\Xamarin.iOS10\MvvmCross.Platform.dll</HintPath>
+		</Reference>
+		<Reference Include="MvvmCross.Platform.iOS">
+		  <HintPath>..\packages\MvvmCross.Platform.5.6.2\lib\Xamarin.iOS10\MvvmCross.Platform.iOS.dll</HintPath>
+		</Reference>
+		<Reference Include="MvvmCross.Core">
+		  <HintPath>..\packages\MvvmCross.Core.5.6.2\lib\Xamarin.iOS10\MvvmCross.Core.dll</HintPath>
+		</Reference>
+		<Reference Include="MvvmCross.iOS">
+		  <HintPath>..\packages\MvvmCross.Core.5.6.2\lib\Xamarin.iOS10\MvvmCross.iOS.dll</HintPath>
+		</Reference>
+		<Reference Include="MvvmCross.Binding">
+		  <HintPath>..\packages\MvvmCross.Binding.5.6.2\lib\Xamarin.iOS10\MvvmCross.Binding.dll</HintPath>
+		</Reference>
+		<Reference Include="MvvmCross.Binding.iOS">
+		  <HintPath>..\packages\MvvmCross.Binding.5.6.2\lib\Xamarin.iOS10\MvvmCross.Binding.iOS.dll</HintPath>
+		</Reference>
+		<Reference Include="MvvmCross.Localization">
+		  <HintPath>..\packages\MvvmCross.Binding.5.6.2\lib\Xamarin.iOS10\MvvmCross.Localization.dll</HintPath>
+		</Reference>
+		<Reference Include="MvvmCross.Plugins.Color">
+		  <HintPath>..\packages\MvvmCross.Plugin.Color.5.6.2\lib\Xamarin.iOS10\MvvmCross.Plugins.Color.dll</HintPath>
+		</Reference>
+		<Reference Include="MvvmCross.Plugins.Color.iOS">
+		  <HintPath>..\packages\MvvmCross.Plugin.Color.5.6.2\lib\Xamarin.iOS10\MvvmCross.Plugins.Color.iOS.dll</HintPath>
+		</Reference>
+		<Reference Include="MvvmCross.Plugins.Messenger">
+		  <HintPath>..\packages\MvvmCross.Plugin.Messenger.5.6.2\lib\Xamarin.iOS10\MvvmCross.Plugins.Messenger.dll</HintPath>
+		</Reference>
+		<Reference Include="MvvmCross.Plugins.Visibility">
+		  <HintPath>..\packages\MvvmCross.Plugin.Visibility.5.6.2\lib\Xamarin.iOS10\MvvmCross.Plugins.Visibility.dll</HintPath>
+		</Reference>
+		<Reference Include="MvvmCross.Plugins.Visibility.iOS">
+		  <HintPath>..\packages\MvvmCross.Plugin.Visibility.5.6.2\lib\Xamarin.iOS10\MvvmCross.Plugins.Visibility.iOS.dll</HintPath>
+		</Reference>
+		<Reference Include="MvvmCross.Plugins.Json">
+		  <HintPath>..\packages\MvvmCross.Plugin.Json.5.6.2\lib\Xamarin.iOS10\MvvmCross.Plugins.Json.dll</HintPath>
+		</Reference>
+		<Reference Include="Lottie.iOS">
+		  <HintPath>..\packages\Com.Airbnb.iOS.Lottie.2.1.5.0\lib\xamarinios\Lottie.iOS.dll</HintPath>
 		</Reference>
 	</ItemGroup>
 	<ItemGroup>
@@ -271,7 +262,7 @@
 	</ItemGroup>
 	<ItemGroup>
 	  <ProjectReference Include="..\StarWarsSample.Core\StarWarsSample.Core.csproj">
-	    <Project>{DECE7897-83CC-431C-B87E-D61901D0A629}</Project>
+	    <Project>{C8D72805-91D3-48B5-8F5B-44B9263198B6}</Project>
 	    <Name>StarWarsSample.Core</Name>
 	  </ProjectReference>
 	</ItemGroup>
