@@ -11,7 +11,7 @@ Checkout the "Artwork" folder to look at the designs for those platforms.
 ### Shared (Core and all platforms)
 - MvxCommands
 - [MvxInteraction](https://www.mvvmcross.com/documentation/fundamentals/mvxinteraction)
-- `INotifyTaskCompletion` from [Async.Ex](https://github.com/StephenCleary/AsyncEx) (note: use version 3.0.1 or latest with NetStandard)
+- [MvxNotifyTask](https://www.mvvmcross.com/documentation/fundamentals/mvxnotifytask)
 - Localization through .resx files
 - [IMvxNavigationService](https://www.mvvmcross.com/documentation/fundamentals/navigation)
 - [Color plugin](https://www.mvvmcross.com/documentation/plugins/color)
@@ -29,7 +29,7 @@ Checkout the "Artwork" folder to look at the designs for those platforms.
 - Custom controls
 - Infinite lists
 - [Lottie animations](https://github.com/martijn00/LottieXamarin)
-- DataBinding in .axml and .cs
+- Tibet bindings in .axml and fluent bindings in .cs
 
 ### iOS
 - [MvxIosViewPresenter](https://www.mvvmcross.com/documentation/platform/ios-view-presenter) (tabs)
@@ -39,4 +39,4 @@ Checkout the "Artwork" folder to look at the designs for those platforms.
 - Coded UIs using [FluentLayout](https://github.com/FluentLayout/Cirrious.FluentLayout)
 - Infinite lists
 - [Lottie animations](https://github.com/martijn00/LottieXamarin)
-- DataBinding in .cs
+- Fluent bindings in .cs
