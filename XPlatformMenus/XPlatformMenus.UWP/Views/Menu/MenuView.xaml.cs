@@ -2,14 +2,14 @@
 using Windows.UI.Xaml.Automation;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
-using MvvmCross.WindowsUWP.Views;
 using XPlatformMenus.Core.ViewModels;
 using XPlatformMenus.UWP.Controls;
+using MvvmCross.Uwp.Attributes;
 
 namespace XPlatformMenus.UWP.Views
 {
-	[MvxRegion("MenuContent")]
-	public sealed partial class MenuView
+    [MvxRegionPresentation("MenuContent")]
+    public sealed partial class MenuView
 	{
 		public new MenuViewModel ViewModel
 		{

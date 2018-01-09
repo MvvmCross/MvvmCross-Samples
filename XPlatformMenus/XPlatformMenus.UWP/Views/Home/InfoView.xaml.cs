@@ -1,11 +1,11 @@
-﻿using MvvmCross.WindowsUWP.Views;
+﻿using MvvmCross.Uwp.Attributes;
 using XPlatformMenus.Core.ViewModels;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace XPlatformMenus.UWP.Views
 {
-    [MvxRegion("PageContent")]
+    [MvxRegionPresentation("PageContent")]
     public sealed partial class InfoView
     {
         public new InfoViewModel ViewModel

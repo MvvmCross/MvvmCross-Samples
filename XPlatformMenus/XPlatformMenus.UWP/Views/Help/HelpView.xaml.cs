@@ -1,10 +1,10 @@
-﻿using MvvmCross.WindowsUWP.Views;
+﻿using MvvmCross.Uwp.Attributes;
 using XPlatformMenus.Core.ViewModels;
 
 namespace XPlatformMenus.UWP.Views
 {
-	[MvxRegion("PageContent")]
-	public sealed partial class HelpView
+    [MvxRegionPresentation("PageContent")]
+    public sealed partial class HelpView
 	{
 		public new HelpAndFeedbackViewModel ViewModel
 		{
