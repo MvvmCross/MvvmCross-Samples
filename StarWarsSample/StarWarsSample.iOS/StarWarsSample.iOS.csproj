@@ -244,6 +244,7 @@
 		<Compile Include="Bootstrap\MessengerPluginBootstrap.cs" />
 		<Compile Include="Bootstrap\VisibilityPluginBootstrap.cs" />
 		<Compile Include="Bootstrap\JsonPluginBootstrap.cs" />
+		<Compile Include="LinkerPleaseInclude.cs" />
 	</ItemGroup>
 	<ItemGroup>
 		<BundleResource Include="Resources\starwars.json" />
