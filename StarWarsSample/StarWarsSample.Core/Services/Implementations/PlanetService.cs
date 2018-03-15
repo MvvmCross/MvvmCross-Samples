@@ -17,28 +17,30 @@ namespace StarWarsSample.Core.Services.Implementations
             _restClient = restClient;
         }
 
-        public Task<PagedResult<Planet>> GetPlanetsAsync(string url = null)
+        public Task<PagedResult<BasePlanet>> GetPlanetsAsync(string url = null)
         {
+
+
             return string.IsNullOrEmpty(url)
-                         ? _restClient.MakeApiCall<PagedResult<Planet>>($"{Constants.BaseUrl}/planets/", HttpMethod.Get)
-                         : _restClient.MakeApiCall<PagedResult<Planet>>(url, HttpMethod.Get);
+                         ? _restClient.MakeApiCall<PagedResult<BasePlanet>>($"{Constants.BaseUrl}/planets/", HttpMethod.Get)
+                         : _restClient.MakeApiCall<PagedResult<BasePlanet>>(url, HttpMethod.Get);
         }
 
-        private PagedResult<Planet> GetMockedPlanets()
+        private PagedResult<IPlanet> GetMockedPlanets()
         {
-            return new PagedResult<Planet>()
+            return new PagedResult<IPlanet>()
             {
                 Count = 3,
                 Next = string.Empty,
                 Previous = string.Empty,
-                Results = new List<Planet>
+                Results = new List<BasePlanet>
                 {
                     new Planet
                     {
                         Name = "Alderaan",
                         Population = "20000"
                     },
-                    new Planet
+                    new Planet2
                     {
                         Name = "Crait",
                         Population = "675000"

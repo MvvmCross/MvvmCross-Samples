@@ -17,6 +17,7 @@
     <Folder Include="Services\Implementations\" />
     <Folder Include="Resources\" />
     <Folder Include="Models\Planet\" />
+    <Folder Include="Extensions\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="MvvmCross" Version="5.6.2" />

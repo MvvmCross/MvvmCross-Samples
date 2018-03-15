@@ -5,6 +5,8 @@ using MvvmCross.Core.ViewModels;
 using StarWarsSample.Core.Models;
 using StarWarsSample.Core.ViewModelResults;
 using StarWarsSample.Core.Services.Interfaces;
+using System.Collections.Generic;
+using StarWarsSample.Core.Extensions;
 
 namespace StarWarsSample.Core.ViewModels
 {
@@ -76,11 +78,24 @@ namespace StarWarsSample.Core.ViewModels
         {
             var result = await _planetsService.GetPlanetsAsync(_nextPage);
 
+            List<IPlanet> planetsToAdd = new List<IPlanet>();
+            for (int i = 0; i < result.Results.Count(); i++)
+            {
+                if (i % 2 == 0)
+                {
+                    planetsToAdd.Add(result.Results.ElementAt(i).ToPlanet());
+                }
+                else
+                {
+                    planetsToAdd.Add(result.Results.ElementAt(i).ToPlanet2());
+                }
+            }
+
             if (string.IsNullOrEmpty(_nextPage))
             {
                 Planets.Clear();
             }
-            Planets.AddRange(result.Results);
+            Planets.AddRange(planetsToAdd);
 
             _nextPage = result.Next;
         }
