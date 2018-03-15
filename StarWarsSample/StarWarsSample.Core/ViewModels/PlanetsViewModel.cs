@@ -22,9 +22,9 @@ namespace StarWarsSample.Core.ViewModels
             _planetsService = planetsService;
             _navigationService = navigationService;
 
-            Planets = new MvxObservableCollection<Planet>();
+            Planets = new MvxObservableCollection<IPlanet>();
 
-            PlanetSelectedCommand = new MvxAsyncCommand<Planet>(PlanetSelected);
+            PlanetSelectedCommand = new MvxAsyncCommand<IPlanet>(PlanetSelected);
             FetchPlanetCommand = new MvxCommand(
                 () =>
             {
@@ -50,8 +50,8 @@ namespace StarWarsSample.Core.ViewModels
 
         public MvxNotifyTask FetchPlanetsTask { get; private set; }
 
-        private MvxObservableCollection<Planet> _planets;
-        public MvxObservableCollection<Planet> Planets
+        private MvxObservableCollection<IPlanet> _planets;
+        public MvxObservableCollection<IPlanet> Planets
         {
             get
             {
@@ -65,7 +65,7 @@ namespace StarWarsSample.Core.ViewModels
         }
 
         // MVVM Commands
-        public IMvxCommand<Planet> PlanetSelectedCommand { get; private set; }
+        public IMvxCommand<IPlanet> PlanetSelectedCommand { get; private set; }
 
         public IMvxCommand FetchPlanetCommand { get; private set; }
 
@@ -85,9 +85,9 @@ namespace StarWarsSample.Core.ViewModels
             _nextPage = result.Next;
         }
 
-        private async Task PlanetSelected(Planet selectedPlanet)
+        private async Task PlanetSelected(IPlanet selectedPlanet)
         {
-            var result = await _navigationService.Navigate<PlanetViewModel, Planet, DestructionResult<Planet>>(selectedPlanet);
+            var result = await _navigationService.Navigate<PlanetViewModel, IPlanet, DestructionResult<IPlanet>>(selectedPlanet);
 
             if (result != null && result.Destroyed)
             {
