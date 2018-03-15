@@ -213,6 +213,7 @@
 		<Compile Include="Bootstrap\MessengerPluginBootstrap.cs" />
 		<Compile Include="Bootstrap\VisibilityPluginBootstrap.cs" />
 		<Compile Include="Bootstrap\JsonPluginBootstrap.cs" />
+		<Compile Include="TemplateSelectors\PlanetsTemplateSelector.cs" />
 	</ItemGroup>
 	<ItemGroup>
 		<None Include="Resources\AboutResources.txt" />
@@ -258,6 +259,7 @@
 		<AndroidResource Include="Resources\drawable-nodpi\profile.png" />
 		<AndroidResource Include="Resources\drawable\statistics.xml" />
 		<AndroidResource Include="Resources\layout\PersonView.axml" />
+		<AndroidResource Include="Resources\layout\item_name_white.axml" />
 	</ItemGroup>
 	<ItemGroup>
 		<Folder Include="Views\" />
@@ -279,6 +281,7 @@
 		<Folder Include="Resources\mipmap-xxhdpi\" />
 		<Folder Include="Resources\mipmap-xxxhdpi\" />
 		<Folder Include="MvxBindings\" />
+		<Folder Include="TemplateSelectors\" />
 	</ItemGroup>
 	<ItemGroup>
 		<AndroidAsset Include="Assets\starwars.json" />

@@ -7,7 +7,6 @@ using StarWarsSample.Droid.Extensions;
 using StarWarsSample.Core.Resources;
 using StarWarsSample.Core.ViewModels;
 using MvvmCross.Droid.Views.Attributes;
-using Android.Widget;
 
 namespace StarWarsSample.Droid.Views
 {
