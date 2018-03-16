@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace StarWarsSample.Core.Models
 {
-    public class Planet
+    public class BasePlanet : IPlanet
     {
         public string Name { get; set; }
         public string RotationPeriod { get; set; }

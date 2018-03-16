@@ -9,7 +9,7 @@ using StarWarsSample.Core.ViewModelResults;
 
 namespace StarWarsSample.Core.ViewModels
 {
-    public class PlanetViewModel : BaseViewModel<Planet, DestructionResult<Planet>>
+    public class PlanetViewModel : BaseViewModel<IPlanet, DestructionResult<IPlanet>>
     {
         private readonly IUserDialogs _userDialogs;
         private readonly IMvxNavigationService _navigationService;
@@ -23,7 +23,7 @@ namespace StarWarsSample.Core.ViewModels
         }
 
         // MvvmCross Lifecycle
-        public override void Prepare(Planet parameter)
+        public override void Prepare(IPlanet parameter)
         {
             Planet = parameter;
         }
@@ -34,8 +34,8 @@ namespace StarWarsSample.Core.ViewModels
         }
 
         // MVVM Properties
-        private Planet _planet;
-        public Planet Planet
+        private IPlanet _planet;
+        public IPlanet Planet
         {
             get
             {
@@ -64,14 +64,14 @@ namespace StarWarsSample.Core.ViewModels
                 CancelText = "No"
             });
 
-            if(!destroy)
+            if (!destroy)
                 return;
 
             var request = new DestructionAction
             {
                 OnDestroyed = () => _navigationService.Close(
                     this,
-                    new DestructionResult<Planet>
+                    new DestructionResult<IPlanet>
                     {
                         Entity = Planet,
                         Destroyed = true

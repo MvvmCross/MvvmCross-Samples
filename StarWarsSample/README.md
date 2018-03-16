@@ -24,19 +24,21 @@ Checkout the "Artwork" folder to look at the designs for those platforms.
 - [MvxAppCompatViewPresenter](https://www.mvvmcross.com/documentation/presenters/android-view-presenter)
 - Support packages
 - Fragments
-- `DrawerLayout`, `CoordinatorLayout`, `CollapsingToolbarLayout`, `MvxRecyclerView`, `MvxSwipeRefreshLayout`
+- `DrawerLayout`, `CoordinatorLayout`, `CollapsingToolbarLayout`, `MvxRecyclerView`, `MvxSwipeRefreshLayout`, `IMvxTemplateSelector`
 - Custom MvxBindings
 - Custom controls
 - Infinite lists
+- Polymorphic lists with MvxTemplateSelector
 - [Lottie animations](https://github.com/martijn00/LottieXamarin)
 - Tibet bindings in .axml and fluent bindings in .cs
 
 ### iOS
 - [MvxIosViewPresenter](https://www.mvvmcross.com/documentation/platform/ios-view-presenter) (tabs)
-- `MvxUIRefreshControl`, `MvxTableViewCell`, `MvxSimpleTableViewSource`
+- `MvxUIRefreshControl`, `MvxTableViewCell`, `MvxSimpleTableViewSource`, `MvxTableViewSource`
 - Custom MvxBindings
 - Custom controls
 - Coded UIs using [FluentLayout](https://github.com/FluentLayout/Cirrious.FluentLayout)
 - Infinite lists
+- Polymorphic lists using MvxTableViewSource
 - [Lottie animations](https://github.com/martijn00/LottieXamarin)
 - Fluent bindings in .cs

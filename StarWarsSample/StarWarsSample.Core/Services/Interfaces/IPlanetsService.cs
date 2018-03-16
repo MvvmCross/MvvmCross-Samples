@@ -6,6 +6,6 @@ namespace StarWarsSample.Core.Services.Interfaces
 {
     public interface IPlanetsService
     {
-        Task<PagedResult<Planet>> GetPlanetsAsync(string url = null);
+        Task<PagedResult<BasePlanet>> GetPlanetsAsync(string url = null);
     }
 }

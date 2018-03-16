@@ -29,6 +29,7 @@
 				android:layout_width="match_parent"
 				android:layout_height="match_parent"
 				local:MvxItemTemplate="@layout/item_name"
+				local:MvxTemplateSelector="StarWarsSample.Droid.TemplateSelectors.PlanetsTemplateSelector,StarWarsSample.Droid"
 				local:MvxBind="ItemsSource Planets; ItemClick PlanetSelectedCommand" />
 		</MvxSwipeRefreshLayout>
 	</RelativeLayout>
