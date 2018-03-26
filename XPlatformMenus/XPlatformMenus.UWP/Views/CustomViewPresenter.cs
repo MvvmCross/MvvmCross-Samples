@@ -1,9 +1,9 @@
 ﻿using MvvmCross.Core.ViewModels;
-using MvvmCross.WindowsUWP.Views;
+using MvvmCross.Uwp.Views;
 
 namespace XPlatformMenus.UWP.Views
 {
-    public class CustomViewPresenter : MvxWindowsMultiRegionViewPresenter
+    public class CustomViewPresenter : MvxWindowsViewPresenter
     {
         IMvxWindowsFrame _rootFrame;
 
