@@ -4,6 +4,9 @@ using System.Windows.Input;
 using Android.App;
 using Android.Views;
 using Android.Widget;
+using MvvmCross.Binding.BindingContext;
+using MvvmCross.Core.Navigation;
+using MvvmCross.Core.ViewModels;
 
 namespace StarWarsSample.Droid
 {
