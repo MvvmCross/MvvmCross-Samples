@@ -1,5 +1,5 @@
-﻿using MvvmCross.Core.Navigation;
-using MvvmCross.Core.ViewModels;
+﻿using MvvmCross.Commands;
+using MvvmCross.Navigation;
 
 namespace StarWarsSample.Core.ViewModels
 {
@@ -17,10 +17,6 @@ namespace StarWarsSample.Core.ViewModels
         }
 
         // MvvmCross Lifecycle
-        public override void Start()
-        {
-            base.Start();
-        }
 
         // MVVM Properties
 

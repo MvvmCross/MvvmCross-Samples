@@ -6,11 +6,11 @@ using Android.Support.V4.View;
 using Android.Support.V4.Widget;
 using Android.Support.V7.Widget;
 using MvvmCross.Binding.Bindings.Target.Construction;
-using MvvmCross.Core.ViewModels;
 using MvvmCross.Droid.Support.V4;
 using MvvmCross.Droid.Support.V7.AppCompat;
 using MvvmCross.Droid.Support.V7.RecyclerView;
-using MvvmCross.Droid.Views;
+using MvvmCross.Platforms.Android.Presenters;
+using MvvmCross.ViewModels;
 using StarWarsSample.Core;
 using StarWarsSample.Droid.MvxBindings;
 
@@ -18,11 +18,10 @@ namespace StarWarsSample.Droid
 {
     public class Setup : MvxAppCompatSetup
     {
-        public Setup(Context applicationContext)
-            : base(applicationContext)
+        public Setup()
         {
         }
-
+        
         protected override IMvxApplication CreateApp()
         {
             return new App();

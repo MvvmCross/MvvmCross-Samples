@@ -1,7 +1,7 @@
 ﻿using Android.OS;
 using Android.Runtime;
 using Android.Views;
-using MvvmCross.Droid.Views.Attributes;
+using MvvmCross.Platforms.Android.Presenters.Attributes;
 using OxyPlot.Xamarin.Android;
 using StarWarsSample.Core.Resources;
 using StarWarsSample.Core.ViewModels;

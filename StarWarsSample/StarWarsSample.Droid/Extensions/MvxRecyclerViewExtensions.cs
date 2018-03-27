@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Windows.Input;
 using Android.Support.V7.Widget;
-using MvvmCross.Core.ViewModels;
 using MvvmCross.Droid.Support.V7.RecyclerView;
+using MvvmCross.ViewModels;
 using StarWarsSample.Droid.Controls;
 
 namespace StarWarsSample.Droid.Extensions

@@ -2,10 +2,11 @@
 using System.ComponentModel;
 using Android.Support.V4.Widget;
 using MvvmCross.Binding;
-using MvvmCross.Binding.Droid.Target;
-using MvvmCross.Core.ViewModels;
-using MvvmCross.Platform.Platform;
-using MvvmCross.Platform.WeakSubscription;
+using MvvmCross.Logging;
+using MvvmCross.Platforms.Android.Binding.Target;
+using MvvmCross.ViewModels;
+using MvvmCross.WeakSubscription;
+using StarWarsSample.Core;
 
 namespace StarWarsSample.Droid.MvxBindings
 {
@@ -26,8 +27,7 @@ namespace StarWarsSample.Droid.MvxBindings
         {
             if (!(value is MvxNotifyTask))
             {
-                MvxBindingTrace.Trace(MvxTraceLevel.Warning,
-                    "Value '{0}' could not be parsed as a valid INotifyTaskCompletion", value);
+                Logs.Instance.Trace("Value '{0}' could not be parsed as a valid INotifyTaskCompletion", value);
                 return;
             }
 

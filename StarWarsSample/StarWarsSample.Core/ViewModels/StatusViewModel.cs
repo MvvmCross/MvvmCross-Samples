@@ -1,7 +1,6 @@
-﻿using System;
-using System.Windows.Input;
-using MvvmCross.Core.Navigation;
-using MvvmCross.Core.ViewModels;
+﻿using System.Windows.Input;
+using MvvmCross.Commands;
+using MvvmCross.Navigation;
 using OxyPlot;
 using OxyPlot.Axes;
 using OxyPlot.Series;

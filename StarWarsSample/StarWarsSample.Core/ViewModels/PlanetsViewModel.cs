@@ -1,12 +1,13 @@
 ﻿using System.Linq;
 using System.Threading.Tasks;
-using MvvmCross.Core.Navigation;
-using MvvmCross.Core.ViewModels;
 using StarWarsSample.Core.Models;
 using StarWarsSample.Core.ViewModelResults;
 using StarWarsSample.Core.Services.Interfaces;
 using System.Collections.Generic;
 using StarWarsSample.Core.Extensions;
+using MvvmCross.Navigation;
+using MvvmCross.ViewModels;
+using MvvmCross.Commands;
 
 namespace StarWarsSample.Core.ViewModels
 {
