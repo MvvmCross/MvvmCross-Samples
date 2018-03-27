@@ -1,6 +1,6 @@
-﻿using MvvmCross.iOS.Views;
-using MvvmCross.iOS.Views.Presenters.Attributes;
-using MvvmCross.Plugins.Color.iOS;
+﻿using MvvmCross.Platforms.Ios.Presenters.Attributes;
+using MvvmCross.Platforms.Ios.Views;
+using MvvmCross.Plugin.Color.Platforms.Ios;
 using StarWarsSample.Core;
 using StarWarsSample.Core.ViewModels;
 

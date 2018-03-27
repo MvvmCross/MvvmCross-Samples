@@ -3,9 +3,9 @@ using System.Collections.Specialized;
 using System.Windows.Input;
 using Foundation;
 using MvvmCross.Binding.BindingContext;
-using MvvmCross.iOS.Views;
-using MvvmCross.Core.Navigation;
-using MvvmCross.Core.ViewModels;
+using MvvmCross.Navigation;
+using MvvmCross.Platforms.Ios.Views;
+using MvvmCross.ViewModels;
 using UIKit;
 
 namespace StarWarsSample.iOS
@@ -106,9 +106,9 @@ namespace StarWarsSample.iOS
         {
             command.CanExecuteChanged += (s, e) => { if (command.CanExecute(null)) command.Execute(null); };
         }
-        public void Include(MvvmCross.Platform.IoC.MvxPropertyInjector injector)
+        public void Include(MvvmCross.IoC.MvxPropertyInjector injector)
         {
-            injector = new MvvmCross.Platform.IoC.MvxPropertyInjector();
+            injector = new MvvmCross.IoC.MvxPropertyInjector();
         }
         public void Include(System.ComponentModel.INotifyPropertyChanged changed)
         {

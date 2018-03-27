@@ -1,14 +1,13 @@
-﻿using System;
-using Cirrious.FluentLayouts.Touch;
+﻿using Cirrious.FluentLayouts.Touch;
 using MvvmCross.Binding.BindingContext;
-using MvvmCross.iOS.Views;
-using MvvmCross.iOS.Views.Presenters.Attributes;
-using MvvmCross.Plugins.Color.iOS;
+using MvvmCross.Platforms.Ios.Presenters.Attributes;
+using MvvmCross.Platforms.Ios.Views;
+using MvvmCross.Plugin.Color.Platforms.Ios;
 using OxyPlot.Xamarin.iOS;
-using StarWarsSample.Core.ViewModels;
-using StarWarsSample.Core.Resources;
-using UIKit;
 using StarWarsSample.Core;
+using StarWarsSample.Core.Resources;
+using StarWarsSample.Core.ViewModels;
+using UIKit;
 
 namespace StarWarsSample.iOS.Views
 {

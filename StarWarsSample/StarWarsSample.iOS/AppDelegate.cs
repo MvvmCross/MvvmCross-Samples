@@ -1,8 +1,6 @@
 ﻿using Foundation;
-using MvvmCross.Core.ViewModels;
-using MvvmCross.iOS.Platform;
-using MvvmCross.Platform;
-using MvvmCross.Plugins.Color.iOS;
+using MvvmCross.Platforms.Ios.Core;
+using MvvmCross.Plugin.Color.Platforms.Ios;
 using StarWarsSample.Core;
 using UIKit;
 
@@ -11,7 +9,7 @@ namespace StarWarsSample.iOS
     // The UIApplicationDelegate for the application. This class is responsible for launching the
     // User Interface of the application, as well as listening (and optionally responding) to application events from iOS.
     [Register("AppDelegate")]
-    public partial class AppDelegate : MvxApplicationDelegate
+    public partial class AppDelegate : MvxApplicationDelegate<Setup, App>
     {
         public override UIWindow Window
         {
@@ -21,21 +19,22 @@ namespace StarWarsSample.iOS
 
         public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
         {
-            Window = new UIWindow(UIScreen.MainScreen.Bounds);
+            var result = base.FinishedLaunching(application, launchOptions);
+            //Window = new UIWindow(UIScreen.MainScreen.Bounds);
 
-            application.StatusBarStyle = UIStatusBarStyle.LightContent;
+            //application.StatusBarStyle = UIStatusBarStyle.LightContent;
 
-            var setup = new Setup(this, Window);
-            setup.Initialize();
+            //var setup = new Setup(this, Window);
+            //setup.Initialize();
 
-            var startup = Mvx.Resolve<IMvxAppStart>();
-            startup.Start();
+            //var startup = Mvx.Resolve<IMvxAppStart>();
+            //startup.Start();
 
-            Window.MakeKeyAndVisible();
+            //Window.MakeKeyAndVisible();
 
             CustomizeAppearance();
 
-            return true;
+            return result;
         }
 
         private void CustomizeAppearance()
