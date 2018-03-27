@@ -1,6 +1,5 @@
 using Android.App;
 using Android.Content.PM;
-using MvvmCross.Core;
 using MvvmCross.Platforms.Android.Presenters.Attributes;
 using MvvmCross.Platforms.Android.Views;
 
@@ -18,7 +17,6 @@ namespace StarWarsSample.Droid
         public SplashScreen()
             : base(Resource.Layout.SplashScreen)
         {
-            MvxSetup.RegisterSetupType<Setup>();
         }
     }
 }

@@ -34,7 +34,7 @@ namespace StarWarsSample.Droid.Views
             var view = this.BindingInflate(FragmentId, null);
 
             _toolbar = view.FindViewById<Toolbar>(Resource.Id.toolbar);
-            if(_toolbar != null)
+            if (_toolbar != null)
             {
                 ParentActivity.SetSupportActionBar(_toolbar);
                 ParentActivity.SupportActionBar.SetDisplayHomeAsUpEnabled(true);
@@ -58,14 +58,14 @@ namespace StarWarsSample.Droid.Views
         public override void OnConfigurationChanged(Configuration newConfig)
         {
             base.OnConfigurationChanged(newConfig);
-            if(_toolbar != null)
+            if (_toolbar != null)
                 _drawerToggle.OnConfigurationChanged(newConfig);
         }
 
         public override void OnActivityCreated(Bundle savedInstanceState)
         {
             base.OnActivityCreated(savedInstanceState);
-            if(_toolbar != null)
+            if (_toolbar != null)
                 _drawerToggle.SyncState();
         }
     }

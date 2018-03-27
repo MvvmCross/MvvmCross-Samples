@@ -190,6 +190,7 @@
     <Compile Include="Views\PersonView.cs" />
     <Compile Include="MvxBindings\SwipeRefreshLayoutIsRefreshingTargetBinding.cs" />
     <Compile Include="TemplateSelectors\PlanetsTemplateSelector.cs" />
+    <Compile Include="MainApplication.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

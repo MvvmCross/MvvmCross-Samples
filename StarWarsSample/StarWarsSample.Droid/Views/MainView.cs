@@ -31,7 +31,7 @@ namespace StarWarsSample.Droid.Views
 
             DrawerLayout = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
 
-            if(bundle == null)
+            if (bundle == null)
             {
                 ViewModel.ShowPlanetsViewModelCommand.Execute(null);
                 ViewModel.ShowMenuViewModelCommand.Execute(null);
@@ -40,7 +40,7 @@ namespace StarWarsSample.Droid.Views
 
         public override bool OnOptionsItemSelected(IMenuItem item)
         {
-            switch(item.ItemId)
+            switch (item.ItemId)
             {
                 case Android.Resource.Id.Home:
                     DrawerLayout.OpenDrawer(GravityCompat.Start);
@@ -51,7 +51,7 @@ namespace StarWarsSample.Droid.Views
 
         public override void OnBackPressed()
         {
-            if(DrawerLayout != null && DrawerLayout.IsDrawerOpen(GravityCompat.Start))
+            if (DrawerLayout != null && DrawerLayout.IsDrawerOpen(GravityCompat.Start))
                 DrawerLayout.CloseDrawers();
             else
                 base.OnBackPressed();
@@ -59,7 +59,7 @@ namespace StarWarsSample.Droid.Views
 
         public void HideSoftKeyboard()
         {
-            if(CurrentFocus == null)
+            if (CurrentFocus == null)
                 return;
 
             InputMethodManager inputMethodManager = (InputMethodManager)GetSystemService(InputMethodService);
