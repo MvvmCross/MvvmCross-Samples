@@ -102,14 +102,17 @@ namespace StarWarsSample.iOS
         {
             changed.CollectionChanged += (s, e) => { var test = $"{e.Action}{e.NewItems}{e.NewStartingIndex}{e.OldItems}{e.OldStartingIndex}"; };
         }
+
         public void Include(ICommand command)
         {
             command.CanExecuteChanged += (s, e) => { if (command.CanExecute(null)) command.Execute(null); };
         }
+
         public void Include(MvvmCross.IoC.MvxPropertyInjector injector)
         {
             injector = new MvvmCross.IoC.MvxPropertyInjector();
         }
+
         public void Include(System.ComponentModel.INotifyPropertyChanged changed)
         {
             changed.PropertyChanged += (sender, e) => { var test = e.PropertyName; };
@@ -119,6 +122,7 @@ namespace StarWarsSample.iOS
         {
             service = new MvxNavigationService(null, loader);
         }
+
         public void Include(ConsoleColor color)
         {
             Console.Write("");
@@ -130,6 +134,11 @@ namespace StarWarsSample.iOS
             Console.ForegroundColor = ConsoleColor.White;
             Console.ForegroundColor = ConsoleColor.Gray;
             Console.ForegroundColor = ConsoleColor.DarkGray;
+        }
+
+        public void Include(MvvmCross.Plugin.Json.Plugin plugin)
+        {
+            plugin.Load();
         }
     }
 }

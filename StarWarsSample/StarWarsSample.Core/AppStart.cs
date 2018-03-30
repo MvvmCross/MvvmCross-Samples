@@ -4,26 +4,18 @@ using StarWarsSample.Core.ViewModels;
 
 namespace StarWarsSample.Core
 {
-    public class AppStart : IMvxAppStart
+    public class AppStart : MvxAppStart
     {
         private readonly IMvxNavigationService _mvxNavigationService;
-
-        private bool _started;
 
         public AppStart(IMvxNavigationService mvxNavigationService)
         {
             _mvxNavigationService = mvxNavigationService;
         }
 
-        public bool IsStarted => _started;
-
-        public void Start(object hint = null)
+        protected override void Startup(object hint = null)
         {
-            if(!_started)
-            {
-                _started = true;
-                _mvxNavigationService.Navigate<MainViewModel>();
-            }
+            _mvxNavigationService.Navigate<MainViewModel>();
         }
     }
 }
