@@ -1,5 +1,4 @@
-﻿using System;
-using MvvmCross.Core.ViewModels;
+﻿using MvvmCross.ViewModels;
 using StarWarsSample.Core.Resources;
 
 namespace StarWarsSample.Core.ViewModels

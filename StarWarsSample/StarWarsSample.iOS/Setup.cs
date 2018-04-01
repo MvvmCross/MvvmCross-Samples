@@ -1,34 +1,21 @@
-﻿using MvvmCross.Binding.Bindings.Target.Construction;
-using MvvmCross.Core.ViewModels;
-using MvvmCross.iOS.Platform;
-using MvvmCross.iOS.Views.Presenters;
-using MvvmCross.Platform;
-using StarWarsSample.iOS.MvxBindings;
+﻿using MvvmCross;
+using MvvmCross.Base;
+using MvvmCross.Binding.Bindings.Target.Construction;
+using MvvmCross.Platforms.Ios.Core;
+using MvvmCross.Plugin.Json;
 using StarWarsSample.Core;
+using StarWarsSample.iOS.MvxBindings;
 using UIKit;
 
 namespace StarWarsSample.iOS
 {
-    public class Setup : MvxIosSetup
+    public class Setup : MvxIosSetup<App>
     {
-        public Setup(MvxApplicationDelegate applicationDelegate, UIWindow window)
-            : base(applicationDelegate, window)
+        protected override void InitializeFirstChance()
         {
-        }
+            base.InitializeFirstChance();
 
-        public Setup(MvxApplicationDelegate applicationDelegate, IMvxIosViewPresenter presenter)
-            : base(applicationDelegate, presenter)
-        {
-        }
-
-        protected override IMvxApplication CreateApp()
-        {
-            return new App();
-        }
-
-        public override void InitializePrimary()
-        {
-            base.InitializePrimary();
+            Mvx.RegisterType<IMvxJsonConverter, MvxJsonConverter>();
         }
 
         protected override void InitializeLastChance()

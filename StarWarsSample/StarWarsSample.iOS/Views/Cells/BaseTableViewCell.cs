@@ -1,5 +1,5 @@
 ﻿using System;
-using MvvmCross.Binding.iOS.Views;
+using MvvmCross.Platforms.Ios.Binding.Views;
 
 namespace StarWarsSample.iOS.Views.Cells
 {

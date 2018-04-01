@@ -1,6 +1,6 @@
 ﻿using System;
 using Cirrious.FluentLayouts.Touch;
-using MvvmCross.Plugins.Color.iOS;
+using MvvmCross.Plugin.Color.Platforms.Ios;
 using StarWarsSample.Core;
 using UIKit;
 

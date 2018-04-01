@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows.Input;
-using MvvmCross.Binding.ExtensionMethods;
-using MvvmCross.Binding.iOS.Views;
-using MvvmCross.Platform.Exceptions;
+using MvvmCross.Binding.Extensions;
+using MvvmCross.Exceptions;
+using MvvmCross.Platforms.Ios.Binding.Views;
 using StarWarsSample.Core.Models;
 using StarWarsSample.iOS.Views.Cells;
 using UIKit;

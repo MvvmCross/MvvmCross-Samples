@@ -1,12 +1,11 @@
-﻿using System;
-using Cirrious.FluentLayouts.Touch;
+﻿using Cirrious.FluentLayouts.Touch;
 using MvvmCross.Binding.BindingContext;
-using MvvmCross.Binding.iOS.Views.Gestures;
-using MvvmCross.iOS.Views;
-using MvvmCross.iOS.Views.Presenters.Attributes;
-using StarWarsSample.iOS.CustomControls;
+using MvvmCross.Platforms.Ios.Binding.Views.Gestures;
+using MvvmCross.Platforms.Ios.Presenters.Attributes;
+using MvvmCross.Platforms.Ios.Views;
 using StarWarsSample.Core.Resources;
 using StarWarsSample.Core.ViewModels;
+using StarWarsSample.iOS.CustomControls;
 using TZStackView;
 using UIKit;
 

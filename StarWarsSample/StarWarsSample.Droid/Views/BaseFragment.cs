@@ -1,12 +1,11 @@
-﻿using System;
-using Android.Content.Res;
+﻿using Android.Content.Res;
 using Android.OS;
 using Android.Support.V7.Widget;
 using Android.Views;
-using MvvmCross.Binding.Droid.BindingContext;
-using MvvmCross.Core.ViewModels;
 using MvvmCross.Droid.Support.V4;
 using MvvmCross.Droid.Support.V7.AppCompat;
+using MvvmCross.Platforms.Android.Binding.BindingContext;
+using MvvmCross.ViewModels;
 
 namespace StarWarsSample.Droid.Views
 {
@@ -35,7 +34,7 @@ namespace StarWarsSample.Droid.Views
             var view = this.BindingInflate(FragmentId, null);
 
             _toolbar = view.FindViewById<Toolbar>(Resource.Id.toolbar);
-            if(_toolbar != null)
+            if (_toolbar != null)
             {
                 ParentActivity.SetSupportActionBar(_toolbar);
                 ParentActivity.SupportActionBar.SetDisplayHomeAsUpEnabled(true);
@@ -59,14 +58,14 @@ namespace StarWarsSample.Droid.Views
         public override void OnConfigurationChanged(Configuration newConfig)
         {
             base.OnConfigurationChanged(newConfig);
-            if(_toolbar != null)
+            if (_toolbar != null)
                 _drawerToggle.OnConfigurationChanged(newConfig);
         }
 
         public override void OnActivityCreated(Bundle savedInstanceState)
         {
             base.OnActivityCreated(savedInstanceState);
-            if(_toolbar != null)
+            if (_toolbar != null)
                 _drawerToggle.SyncState();
         }
     }

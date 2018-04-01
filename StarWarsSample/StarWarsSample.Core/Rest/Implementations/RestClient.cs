@@ -2,7 +2,7 @@
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
-using MvvmCross.Platform.Platform;
+using MvvmCross.Base;
 using StarWarsSample.Core.Rest.Interfaces;
 
 namespace StarWarsSample.Core.Rest.Implementations

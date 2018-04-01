@@ -13,6 +13,8 @@ namespace StarWarsSample.Droid.TemplateSelectors
             [typeof(Planet2)] = Resource.Layout.item_name_white
         };
 
+        public int ItemTemplateId { get; set; }
+
         public int GetItemLayoutId(int fromViewType)
         {
             return fromViewType;

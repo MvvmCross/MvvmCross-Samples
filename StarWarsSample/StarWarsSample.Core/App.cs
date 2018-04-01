@@ -1,8 +1,7 @@
 ﻿using Acr.UserDialogs;
-using MvvmCross.Core.ViewModels;
-using MvvmCross.Platform;
-using MvvmCross.Platform.IoC;
-using StarWarsSample.Core.ViewModels;
+using MvvmCross;
+using MvvmCross.IoC;
+using MvvmCross.ViewModels;
 
 namespace StarWarsSample.Core
 {

@@ -20,11 +20,11 @@
     <Folder Include="Extensions\" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="MvvmCross" Version="5.6.2" />
-    <PackageReference Include="OxyPlot.Core" Version="2.0.0-unstable0956" />
-    <PackageReference Include="MvvmCross.Plugin.Json" Version="5.6.2" />
-    <PackageReference Include="MvvmCross.Plugin.Visibility" Version="5.6.2" />
-    <PackageReference Include="MvvmCross.Plugin.Messenger" Version="5.6.2" />
+    <PackageReference Include="MvvmCross" Version="6.0.0-beta.7" />
+    <PackageReference Include="OxyPlot.Core" Version="2.0.0-unstable1035" />
+    <PackageReference Include="MvvmCross.Plugin.Json" Version="6.0.0-beta.7" />
+    <PackageReference Include="MvvmCross.Plugin.Visibility" Version="6.0.0-beta.7" />
+    <PackageReference Include="MvvmCross.Plugin.Messenger" Version="6.0.0-beta.7" />
     <PackageReference Include="Acr.UserDialogs" Version="6.5.1" />
   </ItemGroup>
   <ItemGroup>

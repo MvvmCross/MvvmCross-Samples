@@ -1,7 +1,6 @@
-﻿using System;
-using System.Windows.Input;
-using MvvmCross.Binding.ExtensionMethods;
-using MvvmCross.Binding.iOS.Views;
+﻿using System.Windows.Input;
+using MvvmCross.Binding.Extensions;
+using MvvmCross.Platforms.Ios.Binding.Views;
 using StarWarsSample.iOS.Views.Cells;
 using UIKit;
 

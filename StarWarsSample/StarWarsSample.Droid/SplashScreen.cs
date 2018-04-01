@@ -1,8 +1,7 @@
-using Android;
 using Android.App;
 using Android.Content.PM;
-using MvvmCross.Droid.Views;
-using MvvmCross.Droid.Views.Attributes;
+using MvvmCross.Platforms.Android.Presenters.Attributes;
+using MvvmCross.Platforms.Android.Views;
 
 namespace StarWarsSample.Droid
 {

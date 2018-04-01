@@ -1,19 +1,19 @@
 ﻿using Airbnb.Lottie;
 using Cirrious.FluentLayouts.Touch;
+using MvvmCross.Base;
 using MvvmCross.Binding.BindingContext;
-using MvvmCross.Core.ViewModels;
-using MvvmCross.iOS.Views;
-using MvvmCross.iOS.Views.Presenters.Attributes;
-using MvvmCross.Platform.Core;
-using MvvmCross.Plugins.Color.iOS;
-using StarWarsSample.iOS.CustomControls;
-using StarWarsSample.iOS.Extensions;
+using MvvmCross.Platforms.Ios.Presenters.Attributes;
+using MvvmCross.Platforms.Ios.Views;
+using MvvmCross.Plugin.Color.Platforms.Ios;
+using MvvmCross.ViewModels;
+using StarWarsSample.Core;
 using StarWarsSample.Core.MvxInteraction;
 using StarWarsSample.Core.Resources;
 using StarWarsSample.Core.ViewModels;
+using StarWarsSample.iOS.CustomControls;
+using StarWarsSample.iOS.Extensions;
 using TZStackView;
 using UIKit;
-using StarWarsSample.Core;
 
 namespace StarWarsSample.iOS.Views
 {

@@ -1,6 +1,5 @@
-﻿using System;
-using MvvmCross.Core.Navigation;
-using MvvmCross.Core.ViewModels;
+﻿using MvvmCross.Commands;
+using MvvmCross.Navigation;
 
 namespace StarWarsSample.Core.ViewModels
 {

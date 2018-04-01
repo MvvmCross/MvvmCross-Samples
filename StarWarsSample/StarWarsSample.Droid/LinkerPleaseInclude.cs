@@ -5,13 +5,14 @@ using Android.App;
 using Android.Views;
 using Android.Widget;
 using MvvmCross.Binding.BindingContext;
-using MvvmCross.Core.Navigation;
-using MvvmCross.Core.ViewModels;
+using MvvmCross.Navigation;
+using MvvmCross.ViewModels;
 
 namespace StarWarsSample.Droid
 {
     // This class is never actually executed, but when Xamarin linking is enabled it does how to ensure types and properties
     // are preserved in the deployed app
+    [Android.Runtime.Preserve(AllMembers = true)]
     public class LinkerPleaseInclude
     {
         public void Include(Button button)
@@ -80,15 +81,17 @@ namespace StarWarsSample.Droid
         {
             changed.CollectionChanged += (s, e) => { var test = $"{e.Action}{e.NewItems}{e.NewStartingIndex}{e.OldItems}{e.OldStartingIndex}"; };
         }
+
         public void Include(ICommand command)
         {
             command.CanExecuteChanged += (s, e) => { if (command.CanExecute(null)) command.Execute(null); };
         }
 
-        public void Include(MvvmCross.Platform.IoC.MvxPropertyInjector injector)
+        public void Include(MvvmCross.IoC.MvxPropertyInjector injector)
         {
-            injector = new MvvmCross.Platform.IoC.MvxPropertyInjector();
+            injector = new MvvmCross.IoC.MvxPropertyInjector();
         }
+
         public void Include(System.ComponentModel.INotifyPropertyChanged changed)
         {
             changed.PropertyChanged += (sender, e) =>
@@ -103,10 +106,12 @@ namespace StarWarsSample.Droid
             var context2 = new MvxTaskBasedBindingContext();
             context2.Dispose();
         }
+
         public void Include(MvxNavigationService service, IMvxViewModelLoader loader)
         {
             service = new MvxNavigationService(null, loader);
         }
+
         public void Include(ConsoleColor color)
         {
             Console.Write("");

@@ -1,5 +1,4 @@
-﻿using System;
-using MvvmCross.Platform.UI;
+﻿using MvvmCross.UI;
 
 namespace StarWarsSample.Core
 {

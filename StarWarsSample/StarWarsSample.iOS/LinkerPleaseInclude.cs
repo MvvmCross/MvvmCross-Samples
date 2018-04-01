@@ -3,9 +3,9 @@ using System.Collections.Specialized;
 using System.Windows.Input;
 using Foundation;
 using MvvmCross.Binding.BindingContext;
-using MvvmCross.iOS.Views;
-using MvvmCross.Core.Navigation;
-using MvvmCross.Core.ViewModels;
+using MvvmCross.Navigation;
+using MvvmCross.Platforms.Ios.Views;
+using MvvmCross.ViewModels;
 using UIKit;
 
 namespace StarWarsSample.iOS
@@ -102,14 +102,17 @@ namespace StarWarsSample.iOS
         {
             changed.CollectionChanged += (s, e) => { var test = $"{e.Action}{e.NewItems}{e.NewStartingIndex}{e.OldItems}{e.OldStartingIndex}"; };
         }
+
         public void Include(ICommand command)
         {
             command.CanExecuteChanged += (s, e) => { if (command.CanExecute(null)) command.Execute(null); };
         }
-        public void Include(MvvmCross.Platform.IoC.MvxPropertyInjector injector)
+
+        public void Include(MvvmCross.IoC.MvxPropertyInjector injector)
         {
-            injector = new MvvmCross.Platform.IoC.MvxPropertyInjector();
+            injector = new MvvmCross.IoC.MvxPropertyInjector();
         }
+
         public void Include(System.ComponentModel.INotifyPropertyChanged changed)
         {
             changed.PropertyChanged += (sender, e) => { var test = e.PropertyName; };
@@ -119,6 +122,7 @@ namespace StarWarsSample.iOS
         {
             service = new MvxNavigationService(null, loader);
         }
+
         public void Include(ConsoleColor color)
         {
             Console.Write("");
@@ -130,6 +134,11 @@ namespace StarWarsSample.iOS
             Console.ForegroundColor = ConsoleColor.White;
             Console.ForegroundColor = ConsoleColor.Gray;
             Console.ForegroundColor = ConsoleColor.DarkGray;
+        }
+
+        public void Include(MvvmCross.Plugin.Json.Plugin plugin)
+        {
+            plugin.Load();
         }
     }
 }

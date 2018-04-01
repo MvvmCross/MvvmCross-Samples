@@ -1,16 +1,15 @@
-﻿using System;
-using Android.Animation;
+﻿using Android.Animation;
 using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Views.Animations;
 using Android.Widget;
 using Com.Airbnb.Lottie;
+using MvvmCross.Base;
 using MvvmCross.Binding.BindingContext;
-using MvvmCross.Core.ViewModels;
-using MvvmCross.Droid.Views.Attributes;
-using MvvmCross.Platform.Core;
-using MvvmCross.Plugins.Color.Droid;
+using MvvmCross.Platforms.Android.Presenters.Attributes;
+using MvvmCross.Plugin.Color.Platforms.Android;
+using MvvmCross.ViewModels;
 using StarWarsSample.Core;
 using StarWarsSample.Core.MvxInteraction;
 using StarWarsSample.Core.ViewModels;
@@ -53,7 +52,7 @@ namespace StarWarsSample.Droid.Views
             _animationView.ImageAssetsFolder = "imgs";
             _animationView.AddAnimatorListener(this);
 
-            _toolbar.SetTitleTextColor(AppColors.AccentColor.ToAndroidColor());
+            _toolbar.SetTitleTextColor(AppColors.AccentColor.ToNativeColor());
 
             this.AddBindings(_toolbar, "Title Planet.Name");
             this.AddBindings(this, "Interaction Interaction");

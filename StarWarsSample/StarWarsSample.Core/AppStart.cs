@@ -1,11 +1,10 @@
-﻿using System;
-using MvvmCross.Core.Navigation;
-using MvvmCross.Core.ViewModels;
+﻿using MvvmCross.Navigation;
+using MvvmCross.ViewModels;
 using StarWarsSample.Core.ViewModels;
 
 namespace StarWarsSample.Core
 {
-    public class AppStart : MvxNavigatingObject, IMvxAppStart
+    public class AppStart : MvxAppStart
     {
         private readonly IMvxNavigationService _mvxNavigationService;
 
@@ -14,7 +13,7 @@ namespace StarWarsSample.Core
             _mvxNavigationService = mvxNavigationService;
         }
 
-        public void Start(object hint = null)
+        protected override void Startup(object hint = null)
         {
             _mvxNavigationService.Navigate<MainViewModel>();
         }
