@@ -1,11 +1,10 @@
-
 using ApiExamples.Core.ViewModels;
 using MvvmCross.IoC;
 using MvvmCross.ViewModels;
 
 namespace ApiExamples.Core
 {
-    public class App :MvxApplication
+    public class App : MvxApplication
     {
         public override void Initialize()
         {
