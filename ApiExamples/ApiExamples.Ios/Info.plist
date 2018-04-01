@@ -13,14 +13,16 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>MinimumOSVersion</key>
-	<string>9.2</string>
+	<string>8.0</string>
 	<key>CFBundleDisplayName</key>
 	<string></string>
 	<key>CFBundleIdentifier</key>
-	<string></string>
+	<string>com.mvvmcross.apiexamples</string>
 	<key>CFBundleShortVersionString</key>
-	<string></string>
+	<string>1</string>
 	<key>CFBundleVersion</key>
-	<string></string>
+	<string>1</string>
+	<key>CFBundleName</key>
+	<string>ApiExamples</string>
 </dict>
 </plist>

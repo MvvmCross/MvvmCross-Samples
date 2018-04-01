@@ -1,8 +1,10 @@
-using MvvmCross.Platform.IoC;
+using ApiExamples.Core.ViewModels;
+using MvvmCross.IoC;
+using MvvmCross.ViewModels;
 
 namespace ApiExamples.Core
 {
-    public class App : MvvmCross.Core.ViewModels.MvxApplication
+    public class App : MvxApplication
     {
         public override void Initialize()
         {
@@ -11,7 +13,7 @@ namespace ApiExamples.Core
                 .AsInterfaces()
                 .RegisterAsLazySingleton();
 
-            RegisterAppStart<ViewModels.FirstViewModel>();
+            RegisterAppStart<FirstViewModel>();
         }
     }
 }
