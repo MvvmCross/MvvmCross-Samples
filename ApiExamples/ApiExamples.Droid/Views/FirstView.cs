@@ -1,7 +1,7 @@
 using Android.App;
 using Android.OS;
-using MvvmCross.Droid.Views;
-using MvvmCross.Platform.Converters;
+using MvvmCross.Converters;
+using MvvmCross.Platforms.Android.Views;
 
 namespace ApiExamples.Droid.Views
 {
@@ -19,7 +19,7 @@ namespace ApiExamples.Droid.Views
     public class DateTimeView : MvxActivity
     {
         protected override void OnCreate(Bundle bundle)
-           {
+        {
             base.OnCreate(bundle);
             SetContentView(Resource.Layout.Test_Date);
         }
@@ -62,16 +62,6 @@ namespace ApiExamples.Droid.Views
         {
             base.OnCreate(bundle);
             SetContentView(Resource.Layout.Test_LinearLayout);
-        }
-    }
-
-    [Activity(NoHistory = true)]
-    public class FrameView : MvxActivity
-    {
-        protected override void OnCreate(Bundle bundle)
-        {
-            base.OnCreate(bundle);
-            SetContentView(Resource.Layout.Test_Frame);
         }
     }
 

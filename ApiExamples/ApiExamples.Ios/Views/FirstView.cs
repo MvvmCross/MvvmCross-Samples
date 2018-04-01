@@ -1,10 +1,10 @@
 using ApiExamples.Core.ViewModels;
-using MvvmCross.iOS.Views;
 using MvvmCross.Binding.BindingContext;
-using MvvmCross.Binding.iOS.Views;
 using CoreGraphics;
 using Foundation;
 using UIKit;
+using MvvmCross.Platforms.Ios.Views;
+using MvvmCross.Platforms.Ios.Binding.Views;
 
 namespace ApiExamples.Ios.Views
 {
@@ -18,7 +18,7 @@ namespace ApiExamples.Ios.Views
             var source = new MvxStandardTableViewSource(TableView, "TitleText Strip(Name, 'ViewModel')");
             TableView.Source = source;
 
-            var set = this.CreateBindingSet<FirstView, Core.ViewModels.FirstViewModel>();
+            var set = this.CreateBindingSet<FirstView, FirstViewModel>();
             set.Bind(source).To(vm => vm.Tests);
             set.Bind(source).For(s => s.SelectionChangedCommand).To(vm => vm.GotoTestCommand);
             set.Apply();

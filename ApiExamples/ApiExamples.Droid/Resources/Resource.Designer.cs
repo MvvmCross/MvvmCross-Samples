@@ -26,27 +26,24 @@ namespace ApiExamples.Droid
 		
 		public static void UpdateIdValues()
 		{
-			global::MvvmCross.Binding.Droid.Resource.Attribute.MvxBind = global::ApiExamples.Droid.Resource.Attribute.MvxBind;
-			global::MvvmCross.Binding.Droid.Resource.Attribute.MvxDropDownItemTemplate = global::ApiExamples.Droid.Resource.Attribute.MvxDropDownItemTemplate;
-			global::MvvmCross.Binding.Droid.Resource.Attribute.MvxGroupItemTemplate = global::ApiExamples.Droid.Resource.Attribute.MvxGroupItemTemplate;
-			global::MvvmCross.Binding.Droid.Resource.Attribute.MvxItemTemplate = global::ApiExamples.Droid.Resource.Attribute.MvxItemTemplate;
-			global::MvvmCross.Binding.Droid.Resource.Attribute.MvxLang = global::ApiExamples.Droid.Resource.Attribute.MvxLang;
-			global::MvvmCross.Binding.Droid.Resource.Attribute.MvxSource = global::ApiExamples.Droid.Resource.Attribute.MvxSource;
-			global::MvvmCross.Binding.Droid.Resource.Attribute.MvxTemplate = global::ApiExamples.Droid.Resource.Attribute.MvxTemplate;
-			global::MvvmCross.Binding.Droid.Resource.Id.MvvmCrossTagId = global::ApiExamples.Droid.Resource.Id.MvvmCrossTagId;
-			global::MvvmCross.Binding.Droid.Resource.Id.MvxBindingTagUnique = global::ApiExamples.Droid.Resource.Id.MvxBindingTagUnique;
-			global::MvvmCross.Binding.Droid.Resource.Styleable.MvxBinding = global::ApiExamples.Droid.Resource.Styleable.MvxBinding;
-			global::MvvmCross.Binding.Droid.Resource.Styleable.MvxBinding_MvxBind = global::ApiExamples.Droid.Resource.Styleable.MvxBinding_MvxBind;
-			global::MvvmCross.Binding.Droid.Resource.Styleable.MvxBinding_MvxLang = global::ApiExamples.Droid.Resource.Styleable.MvxBinding_MvxLang;
-			global::MvvmCross.Binding.Droid.Resource.Styleable.MvxControl = global::ApiExamples.Droid.Resource.Styleable.MvxControl;
-			global::MvvmCross.Binding.Droid.Resource.Styleable.MvxControl_MvxTemplate = global::ApiExamples.Droid.Resource.Styleable.MvxControl_MvxTemplate;
-			global::MvvmCross.Binding.Droid.Resource.Styleable.MvxExpandableListView = global::ApiExamples.Droid.Resource.Styleable.MvxExpandableListView;
-			global::MvvmCross.Binding.Droid.Resource.Styleable.MvxExpandableListView_MvxGroupItemTemplate = global::ApiExamples.Droid.Resource.Styleable.MvxExpandableListView_MvxGroupItemTemplate;
-			global::MvvmCross.Binding.Droid.Resource.Styleable.MvxImageView = global::ApiExamples.Droid.Resource.Styleable.MvxImageView;
-			global::MvvmCross.Binding.Droid.Resource.Styleable.MvxImageView_MvxSource = global::ApiExamples.Droid.Resource.Styleable.MvxImageView_MvxSource;
-			global::MvvmCross.Binding.Droid.Resource.Styleable.MvxListView = global::ApiExamples.Droid.Resource.Styleable.MvxListView;
-			global::MvvmCross.Binding.Droid.Resource.Styleable.MvxListView_MvxDropDownItemTemplate = global::ApiExamples.Droid.Resource.Styleable.MvxListView_MvxDropDownItemTemplate;
-			global::MvvmCross.Binding.Droid.Resource.Styleable.MvxListView_MvxItemTemplate = global::ApiExamples.Droid.Resource.Styleable.MvxListView_MvxItemTemplate;
+			global::MvvmCross.Resource.Attribute.MvxBind = global::ApiExamples.Droid.Resource.Attribute.MvxBind;
+			global::MvvmCross.Resource.Attribute.MvxDropDownItemTemplate = global::ApiExamples.Droid.Resource.Attribute.MvxDropDownItemTemplate;
+			global::MvvmCross.Resource.Attribute.MvxGroupItemTemplate = global::ApiExamples.Droid.Resource.Attribute.MvxGroupItemTemplate;
+			global::MvvmCross.Resource.Attribute.MvxItemTemplate = global::ApiExamples.Droid.Resource.Attribute.MvxItemTemplate;
+			global::MvvmCross.Resource.Attribute.MvxLang = global::ApiExamples.Droid.Resource.Attribute.MvxLang;
+			global::MvvmCross.Resource.Attribute.MvxTemplate = global::ApiExamples.Droid.Resource.Attribute.MvxTemplate;
+			global::MvvmCross.Resource.Id.MvvmCrossTagId = global::ApiExamples.Droid.Resource.Id.MvvmCrossTagId;
+			global::MvvmCross.Resource.Id.MvxBindingTagUnique = global::ApiExamples.Droid.Resource.Id.MvxBindingTagUnique;
+			global::MvvmCross.Resource.Styleable.MvxBinding = global::ApiExamples.Droid.Resource.Styleable.MvxBinding;
+			global::MvvmCross.Resource.Styleable.MvxBinding_MvxBind = global::ApiExamples.Droid.Resource.Styleable.MvxBinding_MvxBind;
+			global::MvvmCross.Resource.Styleable.MvxBinding_MvxLang = global::ApiExamples.Droid.Resource.Styleable.MvxBinding_MvxLang;
+			global::MvvmCross.Resource.Styleable.MvxControl = global::ApiExamples.Droid.Resource.Styleable.MvxControl;
+			global::MvvmCross.Resource.Styleable.MvxControl_MvxTemplate = global::ApiExamples.Droid.Resource.Styleable.MvxControl_MvxTemplate;
+			global::MvvmCross.Resource.Styleable.MvxExpandableListView = global::ApiExamples.Droid.Resource.Styleable.MvxExpandableListView;
+			global::MvvmCross.Resource.Styleable.MvxExpandableListView_MvxGroupItemTemplate = global::ApiExamples.Droid.Resource.Styleable.MvxExpandableListView_MvxGroupItemTemplate;
+			global::MvvmCross.Resource.Styleable.MvxListView = global::ApiExamples.Droid.Resource.Styleable.MvxListView;
+			global::MvvmCross.Resource.Styleable.MvxListView_MvxDropDownItemTemplate = global::ApiExamples.Droid.Resource.Styleable.MvxListView_MvxDropDownItemTemplate;
+			global::MvvmCross.Resource.Styleable.MvxListView_MvxItemTemplate = global::ApiExamples.Droid.Resource.Styleable.MvxListView_MvxItemTemplate;
 		}
 		
 		public partial class Attribute
@@ -66,9 +63,6 @@ namespace ApiExamples.Droid
 			
 			// aapt resource value: 0x7f010001
 			public const int MvxLang = 2130771969;
-			
-			// aapt resource value: 0x7f010006
-			public const int MvxSource = 2130771974;
 			
 			// aapt resource value: 0x7f010002
 			public const int MvxTemplate = 2130771970;
@@ -167,49 +161,46 @@ namespace ApiExamples.Droid
 			public const int Test_Date = 2130903052;
 			
 			// aapt resource value: 0x7f03000d
-			public const int Test_Frame = 2130903053;
+			public const int Test_If = 2130903053;
 			
 			// aapt resource value: 0x7f03000e
-			public const int Test_If = 2130903054;
+			public const int Test_LinearLayout = 2130903054;
 			
 			// aapt resource value: 0x7f03000f
-			public const int Test_LinearLayout = 2130903055;
+			public const int Test_List = 2130903055;
 			
 			// aapt resource value: 0x7f030010
-			public const int Test_List = 2130903056;
+			public const int Test_Maths = 2130903056;
 			
 			// aapt resource value: 0x7f030011
-			public const int Test_Maths = 2130903057;
+			public const int Test_ObservableCollection = 2130903057;
 			
 			// aapt resource value: 0x7f030012
-			public const int Test_ObservableCollection = 2130903058;
+			public const int Test_ObservableDictionary = 2130903058;
 			
 			// aapt resource value: 0x7f030013
-			public const int Test_ObservableDictionary = 2130903059;
+			public const int Test_RadioGroup = 2130903059;
 			
 			// aapt resource value: 0x7f030014
-			public const int Test_RadioGroup = 2130903060;
+			public const int Test_RatingBar = 2130903060;
 			
 			// aapt resource value: 0x7f030015
-			public const int Test_RatingBar = 2130903061;
+			public const int Test_Relative = 2130903061;
 			
 			// aapt resource value: 0x7f030016
-			public const int Test_Relative = 2130903062;
+			public const int Test_Seek = 2130903062;
 			
 			// aapt resource value: 0x7f030017
-			public const int Test_Seek = 2130903063;
+			public const int Test_Spinner = 2130903063;
 			
 			// aapt resource value: 0x7f030018
-			public const int Test_Spinner = 2130903064;
+			public const int Test_Text = 2130903064;
 			
 			// aapt resource value: 0x7f030019
-			public const int Test_Text = 2130903065;
+			public const int Test_Time = 2130903065;
 			
 			// aapt resource value: 0x7f03001a
-			public const int Test_Time = 2130903066;
-			
-			// aapt resource value: 0x7f03001b
-			public const int Test_WithErrors = 2130903067;
+			public const int Test_WithErrors = 2130903066;
 			
 			static Layout()
 			{
@@ -280,12 +271,6 @@ namespace ApiExamples.Droid
 			
 			// aapt resource value: 0
 			public const int MvxExpandableListView_MvxGroupItemTemplate = 0;
-			
-			public static int[] MvxImageView = new int[] {
-					2130771974};
-			
-			// aapt resource value: 0
-			public const int MvxImageView_MvxSource = 0;
 			
 			public static int[] MvxListView = new int[] {
 					2130771971,

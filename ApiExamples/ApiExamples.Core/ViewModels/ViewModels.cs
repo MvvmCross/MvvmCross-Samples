@@ -1,12 +1,15 @@
-using ApiExamples.Core.ViewModels.Helpers;
-using MvvmCross.Platform;
-using MvvmCross.Platform.Converters;
-using MvvmCross.Core.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Text.RegularExpressions;
 using System.Windows.Input;
+using ApiExamples.Core.ViewModels.Helpers;
+using MvvmCross;
+using MvvmCross.Commands;
+using MvvmCross.Converters;
+using MvvmCross.Logging;
+using MvvmCross.Navigation;
+using MvvmCross.ViewModels;
 
 namespace ApiExamples.Core.ViewModels
 {
@@ -21,6 +24,8 @@ namespace ApiExamples.Core.ViewModels
     public class FirstViewModel
         : MvxViewModel
     {
+        private readonly Lazy<IMvxNavigationService> _navigationService = new Lazy<IMvxNavigationService>(Mvx.Resolve<IMvxNavigationService>);
+
         public FirstViewModel(IAllTestsService service)
         {
             Tests = service.All;
@@ -36,25 +41,27 @@ namespace ApiExamples.Core.ViewModels
 
         public ICommand GotoTestCommand
         {
-            get { return new MvxCommand<Type>(type => ShowViewModel(type)); }
+            get { return new MvxAsyncCommand<Type>(async type => await _navigationService.Value.Navigate(type)); }
         }
     }
 
     public abstract class TestViewModel
         : MvxViewModel
     {
+        private readonly Lazy<IMvxNavigationService> _navigationService = new Lazy<IMvxNavigationService>(Mvx.Resolve<IMvxNavigationService>);
+
         public ICommand NextCommand
         {
             get
             {
-                return new MvxCommand(() =>
+                return new MvxAsyncCommand(async () =>
                     {
                         var all = Mvx.Resolve<IAllTestsService>();
                         var next = all.NextViewModelType(this);
                         if (next == null)
-                            Close(this);
+                            await _navigationService.Value.Close(this);
                         else
-                            ShowViewModel(next);
+                            await _navigationService.Value.Navigate(next);
                     });
             }
         }
@@ -144,9 +151,9 @@ namespace ApiExamples.Core.ViewModels
         : TestViewModel
     {
         private ObservableCollection<string> _items = new ObservableCollection<string>()
-            {
-                "One", "Two", "Three"
-            };
+        {
+            "One", "Two", "Three"
+        };
 
         public ObservableCollection<string> Items
         {
@@ -187,14 +194,11 @@ namespace ApiExamples.Core.ViewModels
 
         public ICommand Hello
         {
-            get { return new MvxCommand(() => Mvx.Trace("Hello " + ++i)); }
+            get { return new MvxCommand(() => Logs.Instance.Trace("Hello " + ++i)); }
         }
     }
 
     public class LinearLayoutViewModel : BaseListTestViewModel
-    { }
-
-    public class FrameViewModel : BaseListTestViewModel
     { }
 
     public class RelativeViewModel : BaseListTestViewModel
