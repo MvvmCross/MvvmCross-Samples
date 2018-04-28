@@ -89,9 +89,6 @@
     <Reference Include="Acr.UserDialogs.Interface">
       <HintPath>..\packages\Acr.UserDialogs.6.5.1\lib\MonoAndroid10\Acr.UserDialogs.Interface.dll</HintPath>
     </Reference>
-    <Reference Include="Lottie">
-      <HintPath>..\packages\Com.Airbnb.Android.Lottie.2.2.5.0\lib\MonoAndroid40\Lottie.dll</HintPath>
-    </Reference>
     <Reference Include="Xamarin.Android.Arch.Lifecycle.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Xamarin.Android.Arch.Lifecycle.Common.1.0.3\lib\MonoAndroid80\Xamarin.Android.Arch.Lifecycle.Common.dll</HintPath>
     </Reference>
@@ -169,6 +166,9 @@
     </Reference>
     <Reference Include="MvvmCross.Plugin.Visibility">
       <HintPath>..\packages\MvvmCross.Plugin.Visibility.6.0.0\lib\monoandroid81\MvvmCross.Plugin.Visibility.dll</HintPath>
+    </Reference>
+    <Reference Include="Lottie.Android">
+      <HintPath>..\packages\Com.Airbnb.Android.Lottie.2.5.2.1\lib\monoandroid80\Lottie.Android.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
