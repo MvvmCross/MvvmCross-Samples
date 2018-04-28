@@ -18,26 +18,14 @@ namespace StarWarsSample.Droid.Controls
 
         public string Label
         {
-            get
-            {
-                return _label.Text;
-            }
-            set
-            {
-                _label.Text = value;
-            }
+            get => _label.Text;
+            set => _label.Text = value;
         }
 
         public string Info
         {
-            get
-            {
-                return _info.Text;
-            }
-            set
-            {
-                _info.Text = value;
-            }
+            get => _info.Text;
+            set => _info.Text = value;
         }
 
         private void Init(IAttributeSet attrs)
