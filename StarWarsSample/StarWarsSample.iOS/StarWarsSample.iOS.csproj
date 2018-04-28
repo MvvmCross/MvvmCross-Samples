@@ -81,21 +81,6 @@
     <PlatformTarget>x86</PlatformTarget>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MvvmCross, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MvvmCross.6.0.0-beta.7\lib\xamarinios10\MvvmCross.dll</HintPath>
-    </Reference>
-    <Reference Include="MvvmCross.Plugin.Color, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MvvmCross.Plugin.Color.6.0.0-beta.7\lib\xamarinios10\MvvmCross.Plugin.Color.dll</HintPath>
-    </Reference>
-    <Reference Include="MvvmCross.Plugin.Json, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MvvmCross.Plugin.Json.6.0.0-beta.7\lib\netstandard2.0\MvvmCross.Plugin.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="MvvmCross.Plugin.Messenger, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MvvmCross.Plugin.Messenger.6.0.0-beta.7\lib\netstandard2.0\MvvmCross.Plugin.Messenger.dll</HintPath>
-    </Reference>
-    <Reference Include="MvvmCross.Plugin.Visibility, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MvvmCross.Plugin.Visibility.6.0.0-beta.7\lib\xamarinios10\MvvmCross.Plugin.Visibility.dll</HintPath>
-    </Reference>
     <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\netstandard2.0\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -138,6 +123,21 @@
     </Reference>
     <Reference Include="Lottie.iOS">
       <HintPath>..\packages\Com.Airbnb.iOS.Lottie.2.1.5.0\lib\xamarinios\Lottie.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross">
+      <HintPath>..\packages\MvvmCross.6.0.0\lib\xamarinios10\MvvmCross.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Plugin.Color">
+      <HintPath>..\packages\MvvmCross.Plugin.Color.6.0.0\lib\xamarinios10\MvvmCross.Plugin.Color.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Plugin.Json">
+      <HintPath>..\packages\MvvmCross.Plugin.Json.6.0.0\lib\netstandard2.0\MvvmCross.Plugin.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Plugin.Messenger">
+      <HintPath>..\packages\MvvmCross.Plugin.Messenger.6.0.0\lib\netstandard2.0\MvvmCross.Plugin.Messenger.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Plugin.Visibility">
+      <HintPath>..\packages\MvvmCross.Plugin.Visibility.6.0.0\lib\xamarinios10\MvvmCross.Plugin.Visibility.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

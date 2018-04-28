@@ -14,17 +14,6 @@ namespace StarWarsSample.iOS
         public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
         {
             var result = base.FinishedLaunching(application, launchOptions);
-            //Window = new UIWindow(UIScreen.MainScreen.Bounds);
-
-            //application.StatusBarStyle = UIStatusBarStyle.LightContent;
-
-            //var setup = new Setup(this, Window);
-            //setup.Initialize();
-
-            //var startup = Mvx.Resolve<IMvxAppStart>();
-            //startup.Start();
-
-            //Window.MakeKeyAndVisible();
 
             CustomizeAppearance();
 
