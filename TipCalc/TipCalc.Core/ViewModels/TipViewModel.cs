@@ -1,57 +1,57 @@
-﻿using MvvmCross.Core.ViewModels;
+﻿using System.Threading.Tasks;
+using MvvmCross.ViewModels;
 using TipCalc.Core.Services;
 
 namespace TipCalc.Core.ViewModels
 {
     public class TipViewModel : MvxViewModel
     {
-        private readonly ICalculationService _calculation;
+        private readonly ICalculationService _calculationService;
 
-        public TipViewModel(ICalculationService calculation)
+        public TipViewModel(ICalculationService calculationService)
         {
-            _calculation = calculation;
+            _calculationService = calculationService;
+        }
+
+        public override async Task Initialize()
+        {
+            await base.Initialize();
 
             _subTotal = 100;
             _generosity = 10;
             Recalcuate();
         }
 
-        public override void Start()
-        {
-            base.Start();
-        }
-
-        double _subTotal;
-
+        private double _subTotal;
         public double SubTotal
         {
-            get { return _subTotal; }
+            get => _subTotal;
             set
             {
                 _subTotal = value;
                 RaisePropertyChanged(() => SubTotal);
+
                 Recalcuate();
             }
         }
 
-        int _generosity;
-
+        private int _generosity;
         public int Generosity
         {
-            get { return _generosity; }
+            get => _generosity;
             set
             {
                 _generosity = value;
                 RaisePropertyChanged(() => Generosity);
+
                 Recalcuate();
             }
         }
 
-        double _tip;
-
+        private double _tip;
         public double Tip
         {
-            get { return _tip; }
+            get => _tip;
             set
             {
                 _tip = value;
@@ -59,9 +59,9 @@ namespace TipCalc.Core.ViewModels
             }
         }
 
-        void Recalcuate()
+        private void Recalcuate()
         {
-            Tip = _calculation.TipAmount(SubTotal, Generosity);
+            Tip = _calculationService.TipAmount(SubTotal, Generosity);
         }
     }
 }
