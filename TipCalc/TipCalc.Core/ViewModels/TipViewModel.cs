@@ -17,8 +17,8 @@ namespace TipCalc.Core.ViewModels
         {
             await base.Initialize();
 
-            _subTotal = 100;
-            _generosity = 10;
+            SubTotal = 100;
+            Generosity = 10;
             Recalcuate();
         }
 
