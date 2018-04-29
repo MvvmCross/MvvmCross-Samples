@@ -1,13 +1,13 @@
 ﻿using MvvmCross.Binding.BindingContext;
-using MvvmCross.iOS.Views;
+using MvvmCross.Platforms.Ios.Views;
 using TipCalc.Core.ViewModels;
 using UIKit;
 
 namespace TipCalc.iOS
 {
-    public partial class TipView : MvxViewController
+    public partial class TipView : MvxViewController<TipViewModel>
     {
-        public TipView() : base("TipView", null)
+        public TipView() : base(nameof(TipView), null)
         {
         }
 
@@ -15,11 +15,14 @@ namespace TipCalc.iOS
         {
             base.ViewDidLoad();
 
-            this.CreateBinding(TipLabel).To((TipViewModel vm) => vm.Tip).Apply();
-            this.CreateBinding(SubTotalTextField).To((TipViewModel vm) => vm.SubTotal).Apply();
-            this.CreateBinding(GenerositySlider).To((TipViewModel vm) => vm.Generosity).Apply();
+            var set = this.CreateBindingSet<TipView, TipViewModel>();
+            set.Bind(TipLabel).To(vm => vm.Tip);
+            set.Bind(SubTotalTextField).To(vm => vm.SubTotal);
+            set.Bind(GenerositySlider).To(vm => vm.Generosity);
+            set.Apply();
 
-            View.AddGestureRecognizer(new UITapGestureRecognizer(() => {
+            View.AddGestureRecognizer(new UITapGestureRecognizer(() =>
+            {
                 this.SubTotalTextField.ResignFirstResponder();
             }));
         }
