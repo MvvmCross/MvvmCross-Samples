@@ -19,12 +19,13 @@
         <ErrorReport>prompt</ErrorReport>
         <WarningLevel>4</WarningLevel>
         <ConsolePause>false</ConsolePause>
-        <MtouchArch>i386</MtouchArch>
+        <MtouchArch>i386, x86_64</MtouchArch>
         <MtouchLink>None</MtouchLink>
         <MtouchFastDev>true</MtouchFastDev>
         <MtouchDebug>true</MtouchDebug>
         <CodesignKey>iPhone Developer</CodesignKey>
         <MtouchProfiling>true</MtouchProfiling>
+        <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
     </PropertyGroup>
     <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
         <DebugType>full</DebugType>
@@ -73,7 +74,9 @@
         <Reference Include="System.Xml" />
         <Reference Include="System.Core" />
         <Reference Include="Xamarin.iOS" />
-        <PackageReference Include="MvvmCross" Version="6.0.0" />
+        <PackageReference Include="MvvmCross">
+          <Version>6.0.1</Version>
+        </PackageReference>
     </ItemGroup>
     <ItemGroup>
         <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Contents.json">
@@ -83,7 +86,6 @@
     <ItemGroup>
         <InterfaceDefinition Include="Resources\LaunchScreen.xib" />
         <InterfaceDefinition Include="Views\TipView.xib" />
-        <InterfaceDefinition Include="Main.storyboard" />
     </ItemGroup>
     <ItemGroup>
         <None Include="Info.plist" />
@@ -92,10 +94,6 @@
     <ItemGroup>
         <Compile Include="Main.cs" />
         <Compile Include="AppDelegate.cs" />
-        <Compile Include="ViewController.cs" />
-        <Compile Include="ViewController.designer.cs">
-            <DependentUpon>ViewController.cs</DependentUpon>
-        </Compile>
         <Compile Include="Views\TipView.cs" />
         <Compile Include="Views\TipView.designer.cs">
             <DependentUpon>TipView.cs</DependentUpon>
