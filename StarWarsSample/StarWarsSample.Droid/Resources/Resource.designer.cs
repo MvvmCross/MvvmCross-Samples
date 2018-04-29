@@ -63,7 +63,6 @@ namespace StarWarsSample.Droid
 			global::AndroidHUD.Resource.Styleable.ProgressWheel_ahText = global::StarWarsSample.Droid.Resource.Styleable.ProgressWheel_ahText;
 			global::AndroidHUD.Resource.Styleable.ProgressWheel_ahTextColor = global::StarWarsSample.Droid.Resource.Styleable.ProgressWheel_ahTextColor;
 			global::AndroidHUD.Resource.Styleable.ProgressWheel_ahTextSize = global::StarWarsSample.Droid.Resource.Styleable.ProgressWheel_ahTextSize;
-			global::ModernHttpClient.Resource.String.library_name = global::StarWarsSample.Droid.Resource.String.library_name;
 			global::MvvmCross.Resource.Attribute.MvxBind = global::StarWarsSample.Droid.Resource.Attribute.MvxBind;
 			global::MvvmCross.Resource.Attribute.MvxDropDownItemTemplate = global::StarWarsSample.Droid.Resource.Attribute.MvxDropDownItemTemplate;
 			global::MvvmCross.Resource.Attribute.MvxGroupItemTemplate = global::StarWarsSample.Droid.Resource.Attribute.MvxGroupItemTemplate;
