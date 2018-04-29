@@ -1,9 +1,9 @@
 ﻿using Android;
 using Android.App;
 using Android.Content.PM;
-using MvvmCross.Droid.Views;
+using MvvmCross.Platforms.Android.Views;
 
-namespace TipCalc.Droid
+namespace TipCalc.UI.Droid
 {
     [Activity(
         MainLauncher = true,
