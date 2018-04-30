@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TipCalc.iOS", "TipCalc.iOS\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TipCalc.Forms.UI", "TipCalc.Forms.UI\TipCalc.Forms.UI.csproj", "{AE0DF5A8-BE4F-4928-BF36-D386BB88BBA2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TipCalc.Forms.iOS", "TipCalc.Form.iOS\TipCalc.Forms.iOS.csproj", "{B1E24BD5-C273-427A-A0B9-C6F8A7AE73D6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TipCalc.Forms.iOS", "TipCalc.Forms.iOS\TipCalc.Forms.iOS.csproj", "{B1E24BD5-C273-427A-A0B9-C6F8A7AE73D6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TipCalc.Forms.Droid", "TipCalc.Forms.Droid\TipCalc.Forms.Droid.csproj", "{6E38F2AF-D556-465F-92E7-2B8020B80E25}"
 EndProject
