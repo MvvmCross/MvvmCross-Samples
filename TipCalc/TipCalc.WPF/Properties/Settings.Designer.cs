@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TipCalc.UI.Wpf.Properties
+namespace TipCalc.WPF.Properties
 {
 
 
