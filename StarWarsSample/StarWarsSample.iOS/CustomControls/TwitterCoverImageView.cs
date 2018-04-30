@@ -75,7 +75,7 @@ namespace StarWarsSample.iOS.CustomControls
         {
             base.LayoutSubviews();
 
-            var windowWidth = UIApplication.SharedApplication.Delegate.GetWindow().Bounds.Width;
+            var windowWidth = ((AppDelegate)UIApplication.SharedApplication.Delegate).Window.Bounds.Width;
 
             if (ScrollView.ContentOffset.Y < 0)
             {

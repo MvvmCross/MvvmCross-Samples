@@ -15,7 +15,7 @@ namespace StarWarsSample.Droid.Controls
 
         public RecyclerViewOnScrollListener(LinearLayoutManager layoutManager)
         {
-            this.LayoutManager = layoutManager;
+            LayoutManager = layoutManager;
         }
 
         public override void OnScrolled(RecyclerView recyclerView, int dx, int dy)
@@ -34,7 +34,7 @@ namespace StarWarsSample.Droid.Controls
                     || (visibleItemCount + pastVisiblesItems + RemainingItemsToTriggerFetch) >= totalItemCount
                 ))
             {
-                this.LoadMoreEvent?.Invoke(this, null);
+                LoadMoreEvent?.Invoke(this, null);
             }
         }
     }

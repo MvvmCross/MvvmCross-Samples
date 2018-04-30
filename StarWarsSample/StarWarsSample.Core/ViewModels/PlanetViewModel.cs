@@ -1,10 +1,12 @@
 ﻿using System.Threading.Tasks;
 using Acr.UserDialogs;
 using MvvmCross.Commands;
+using MvvmCross.IoC;
 using MvvmCross.Navigation;
 using MvvmCross.ViewModels;
 using StarWarsSample.Core.Models;
 using StarWarsSample.Core.MvxInteraction;
+using StarWarsSample.Core.Services.Interfaces;
 using StarWarsSample.Core.ViewModelResults;
 
 namespace StarWarsSample.Core.ViewModels
@@ -34,6 +36,15 @@ namespace StarWarsSample.Core.ViewModels
         }
 
         // MVVM Properties
+
+        private IMyService _myService;
+        [MvxInject]
+        public IMyService MyService
+        {
+            get => _myService;
+            set => _myService = value;
+        }
+
         private IPlanet _planet;
         public IPlanet Planet
         {

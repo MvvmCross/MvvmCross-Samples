@@ -1,317 +1,290 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
-    <ProjectGuid>{4F3928A0-0F5C-496C-806A-09FD5C1975C8}</ProjectGuid>
-    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>StarWarsSample.iOS</RootNamespace>
-    <AssemblyName>StarWarsSample.iOS</AssemblyName>
-    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
-    <NuGetPackageImportStamp>
-    </NuGetPackageImportStamp>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
-    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <CodesignKey>iPhone Developer</CodesignKey>
-    <DeviceSpecificBuild>true</DeviceSpecificBuild>
-    <MtouchDebug>true</MtouchDebug>
-    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
-    <MtouchFastDev>true</MtouchFastDev>
-    <IOSDebuggerPort>24235</IOSDebuggerPort>
-    <MtouchLink>None</MtouchLink>
-    <MtouchArch>i386, x86_64</MtouchArch>
-    <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
-    <PlatformTarget>x86</PlatformTarget>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\iPhone\Release</OutputPath>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <CodesignKey>iPhone Developer</CodesignKey>
-    <MtouchFloat32>true</MtouchFloat32>
-    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
-    <MtouchLink>SdkOnly</MtouchLink>
-    <MtouchArch>ARMv7, ARM64</MtouchArch>
-    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
-    <PlatformTarget>x86</PlatformTarget>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <CodesignKey>iPhone Developer</CodesignKey>
-    <DeviceSpecificBuild>true</DeviceSpecificBuild>
-    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
-    <MtouchLink>None</MtouchLink>
-    <MtouchArch>i386, x86_64</MtouchArch>
-    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
-    <PlatformTarget>x86</PlatformTarget>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\iPhone\Debug</OutputPath>
-    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <CodesignKey>iPhone Developer</CodesignKey>
-    <DeviceSpecificBuild>true</DeviceSpecificBuild>
-    <MtouchDebug>true</MtouchDebug>
-    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
-    <MtouchFastDev>true</MtouchFastDev>
-    <MtouchFloat32>true</MtouchFloat32>
-    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
-    <IOSDebuggerPort>28295</IOSDebuggerPort>
-    <MtouchLink>SdkOnly</MtouchLink>
-    <MtouchArch>ARMv7, ARM64</MtouchArch>
-    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
-    <PlatformTarget>x86</PlatformTarget>
-  </PropertyGroup>
-  <ItemGroup>
-    <Reference Include="MvvmCross, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MvvmCross.6.0.0-beta.7\lib\xamarinios10\MvvmCross.dll</HintPath>
-    </Reference>
-    <Reference Include="MvvmCross.Plugin.Color, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MvvmCross.Plugin.Color.6.0.0-beta.7\lib\xamarinios10\MvvmCross.Plugin.Color.dll</HintPath>
-    </Reference>
-    <Reference Include="MvvmCross.Plugin.Json, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MvvmCross.Plugin.Json.6.0.0-beta.7\lib\netstandard2.0\MvvmCross.Plugin.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="MvvmCross.Plugin.Messenger, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MvvmCross.Plugin.Messenger.6.0.0-beta.7\lib\netstandard2.0\MvvmCross.Plugin.Messenger.dll</HintPath>
-    </Reference>
-    <Reference Include="MvvmCross.Plugin.Visibility, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MvvmCross.Plugin.Visibility.6.0.0-beta.7\lib\xamarinios10\MvvmCross.Plugin.Visibility.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\netstandard2.0\Newtonsoft.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="OxyPlot, Version=2.0.0.0, Culture=neutral, PublicKeyToken=638079a8f0bd61e9, processorArchitecture=MSIL">
-      <HintPath>..\packages\OxyPlot.Core.2.0.0-unstable1035\lib\netstandard1.0\OxyPlot.dll</HintPath>
-    </Reference>
-    <Reference Include="System" />
-    <Reference Include="System.Xml" />
-    <Reference Include="System.Core" />
-    <Reference Include="Xamarin.iOS" />
-    <Reference Include="ModernHttpClient">
-      <HintPath>..\packages\modernhttpclient.2.4.2\lib\Xamarin.iOS10\ModernHttpClient.dll</HintPath>
-    </Reference>
-    <Reference Include="Acr.Support.iOS">
-      <HintPath>..\packages\Acr.Support.2.1.0\lib\Xamarin.iOS10\Acr.Support.iOS.dll</HintPath>
-    </Reference>
-    <Reference Include="TZStackView">
-      <HintPath>..\packages\TZStackView.1.1.1\lib\Xamarin.iOS10\TZStackView.dll</HintPath>
-    </Reference>
-    <Reference Include="OxyPlot.Xamarin.iOS">
-      <HintPath>..\packages\OxyPlot.Xamarin.iOS.1.1.0-unstable0011\lib\Xamarin.iOS10\OxyPlot.Xamarin.iOS.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.IO.Compression" />
-    <Reference Include="System.Net.Http" />
-    <Reference Include="BTProgressHUD">
-      <HintPath>..\packages\BTProgressHUD.1.2.0.5\lib\Xamarin.iOS10\BTProgressHUD.dll</HintPath>
-    </Reference>
-    <Reference Include="Splat">
-      <HintPath>..\packages\Splat.2.0.0\lib\Xamarin.iOS10\Splat.dll</HintPath>
-    </Reference>
-    <Reference Include="Acr.UserDialogs">
-      <HintPath>..\packages\Acr.UserDialogs.6.5.1\lib\Xamarin.iOS10\Acr.UserDialogs.dll</HintPath>
-    </Reference>
-    <Reference Include="Acr.UserDialogs.Interface">
-      <HintPath>..\packages\Acr.UserDialogs.6.5.1\lib\Xamarin.iOS10\Acr.UserDialogs.Interface.dll</HintPath>
-    </Reference>
-    <Reference Include="Cirrious.FluentLayouts.Touch">
-      <HintPath>..\packages\Cirrious.FluentLayout.2.6.0\lib\Xamarin.iOS10\Cirrious.FluentLayouts.Touch.dll</HintPath>
-    </Reference>
-    <Reference Include="Lottie.iOS">
-      <HintPath>..\packages\Com.Airbnb.iOS.Lottie.2.1.5.0\lib\xamarinios\Lottie.iOS.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\Contents.json">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\ic_people.imageset\Contents.json">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\ic_menu.imageset\Contents.json">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-small.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-small%402x.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-small%403x.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-40%402x.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon%402x.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-60%402x.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-60%403x.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-40.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-76.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-76%402x.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-167.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Contents.json">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Default-750%402x~iphone6-portrait_750x1334.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Default-568h%402x~iphone_640x1136.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Default-Portrait~ipad_768x1024.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Default-Portrait%402x~ipad_1536x2048.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Default-Landscape~ipad_1024x768.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Default-Landscape%402x~ipad_2048x1536.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Default%402x~iphone_640x960.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\ic_people.imageset\people.pdf">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\ic_planets.imageset\Contents.json">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\ic_menu.imageset\menu.pdf">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\ic_statistics.imageset\Contents.json">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\ic_statistics.imageset\estadisticas.pdf">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\ic_another_option.imageset\Contents.json">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\ic_another_option.imageset\anotheroption1.pdf">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\ic_planets.imageset\planet.pdf">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\splash1242x2208.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\splash2208x1242.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\splash2048x2732.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Assets.xcassets\ic_another_option.imageset\" />
-    <Folder Include="Assets.xcassets\ic_menu.imageset\" />
-    <Folder Include="Assets.xcassets\ic_people.imageset\" />
-    <Folder Include="Assets.xcassets\ic_planets.imageset\" />
-    <Folder Include="Assets.xcassets\ic_statistics.imageset\" />
-    <Folder Include="Assets.xcassets\ic_vader.imageset\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="app.config" />
-    <None Include="Info.plist" />
-    <None Include="Entitlements.plist" />
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Main.cs" />
-    <Compile Include="AppDelegate.cs" />
-    <Compile Include="Setup.cs" />
-    <Compile Include="Views\MainView.cs" />
-    <Compile Include="Views\PeopleView.cs" />
-    <Compile Include="Views\PlanetsView.cs" />
-    <Compile Include="Views\MenuView.cs" />
-    <Compile Include="Sources\PeopleTableViewSource.cs" />
-    <Compile Include="Views\Cells\NameTableViewCell.cs" />
-    <Compile Include="Views\Cells\BaseTableViewCell.cs" />
-    <Compile Include="MvxBindings\NetworkIndicatorTargetBinding.cs" />
-    <Compile Include="Views\PersonView.cs" />
-    <Compile Include="CustomControls\TwitterCoverImageView.cs" />
-    <Compile Include="Sources\PlanetsTableViewSource.cs" />
-    <Compile Include="Views\PlanetView.cs" />
-    <Compile Include="CustomControls\InfoView.cs" />
-    <Compile Include="CustomControls\BaseView.cs" />
-    <Compile Include="Extensions\UIViewExtensions.cs" />
-    <Compile Include="Views\StatusView.cs" />
-    <Compile Include="CustomControls\MenuOption.cs" />
-    <Compile Include="LinkerPleaseInclude.cs" />
-    <Compile Include="Views\Cells\WhiteNameTableViewCell.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\starwars.json" />
-    <BundleResource Include="Resources\img_0.png" />
-    <BundleResource Include="Resources\img_1.png" />
-    <BundleResource Include="Resources\char1.png" />
-    <BundleResource Include="Resources\char2.png" />
-    <BundleResource Include="Resources\starwars2.json" />
-    <BundleResource Include="Resources\weapon.png" />
-    <BundleResource Include="Resources\weapon2.png" />
-    <BundleResource Include="Resources\Planet_Header.jpg" />
-    <BundleResource Include="Resources\Background.jpg" />
-    <BundleResource Include="Resources\Person_Header.png" />
-    <BundleResource Include="Resources\menu_header_background.png" />
-    <BundleResource Include="Resources\profile.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\StarWarsSample.Core\StarWarsSample.Core.csproj">
-      <Project>{C8D72805-91D3-48B5-8F5B-44B9263198B6}</Project>
-      <Name>StarWarsSample.Core</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
-  <Import Project="..\packages\NETStandard.Library.2.0.1\build\netstandard2.0\NETStandard.Library.targets" Condition="Exists('..\packages\NETStandard.Library.2.0.1\build\netstandard2.0\NETStandard.Library.targets')" />
-  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+<Project DefaultTargets="Build"
+         ToolsVersion="4.0"
+         xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
     <PropertyGroup>
-      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+        <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+        <ProjectGuid>{4F3928A0-0F5C-496C-806A-09FD5C1975C8}</ProjectGuid>
+        <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+        <OutputType>Exe</OutputType>
+        <RootNamespace>StarWarsSample.iOS</RootNamespace>
+        <AssemblyName>StarWarsSample.iOS</AssemblyName>
+        <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+        <NuGetPackageImportStamp>
+        </NuGetPackageImportStamp>
     </PropertyGroup>
-    <Error Condition="!Exists('..\packages\NETStandard.Library.2.0.1\build\netstandard2.0\NETStandard.Library.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NETStandard.Library.2.0.1\build\netstandard2.0\NETStandard.Library.targets'))" />
-  </Target>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+        <DebugSymbols>true</DebugSymbols>
+        <DebugType>full</DebugType>
+        <Optimize>false</Optimize>
+        <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+        <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+        <CodesignKey>iPhone Developer</CodesignKey>
+        <DeviceSpecificBuild>true</DeviceSpecificBuild>
+        <MtouchDebug>true</MtouchDebug>
+        <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+        <MtouchFastDev>true</MtouchFastDev>
+        <IOSDebuggerPort>24235</IOSDebuggerPort>
+        <MtouchLink>None</MtouchLink>
+        <MtouchArch>i386, x86_64</MtouchArch>
+        <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
+        <PlatformTarget>x86</PlatformTarget>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+        <DebugType>pdbonly</DebugType>
+        <Optimize>true</Optimize>
+        <OutputPath>bin\iPhone\Release</OutputPath>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+        <CodesignKey>iPhone Developer</CodesignKey>
+        <MtouchFloat32>true</MtouchFloat32>
+        <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+        <MtouchLink>SdkOnly</MtouchLink>
+        <MtouchArch>ARMv7, ARM64</MtouchArch>
+        <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+        <PlatformTarget>x86</PlatformTarget>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+        <DebugType>pdbonly</DebugType>
+        <Optimize>true</Optimize>
+        <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+        <CodesignKey>iPhone Developer</CodesignKey>
+        <DeviceSpecificBuild>true</DeviceSpecificBuild>
+        <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+        <MtouchLink>None</MtouchLink>
+        <MtouchArch>i386, x86_64</MtouchArch>
+        <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+        <PlatformTarget>x86</PlatformTarget>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+        <DebugSymbols>true</DebugSymbols>
+        <DebugType>full</DebugType>
+        <Optimize>false</Optimize>
+        <OutputPath>bin\iPhone\Debug</OutputPath>
+        <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+        <CodesignKey>iPhone Developer</CodesignKey>
+        <DeviceSpecificBuild>true</DeviceSpecificBuild>
+        <MtouchDebug>true</MtouchDebug>
+        <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+        <MtouchFastDev>true</MtouchFastDev>
+        <MtouchFloat32>true</MtouchFloat32>
+        <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+        <IOSDebuggerPort>28295</IOSDebuggerPort>
+        <MtouchLink>SdkOnly</MtouchLink>
+        <MtouchArch>ARMv7, ARM64</MtouchArch>
+        <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+        <PlatformTarget>x86</PlatformTarget>
+    </PropertyGroup>
+    <ItemGroup>
+        <Reference Include="System" />
+        <Reference Include="System.Xml" />
+        <Reference Include="System.Core" />
+        <Reference Include="Xamarin.iOS" />
+    </ItemGroup>
+    <ItemGroup>
+        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">
+            <Visible>false</Visible>
+        </ImageAsset>
+        <ImageAsset Include="Assets.xcassets\Contents.json">
+            <Visible>false</Visible>
+        </ImageAsset>
+        <ImageAsset Include="Assets.xcassets\ic_people.imageset\Contents.json">
+            <Visible>false</Visible>
+        </ImageAsset>
+        <ImageAsset Include="Assets.xcassets\ic_menu.imageset\Contents.json">
+            <Visible>false</Visible>
+        </ImageAsset>
+        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-small.png">
+            <Visible>false</Visible>
+        </ImageAsset>
+        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-small%402x.png">
+            <Visible>false</Visible>
+        </ImageAsset>
+        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-small%403x.png">
+            <Visible>false</Visible>
+        </ImageAsset>
+        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-40%402x.png">
+            <Visible>false</Visible>
+        </ImageAsset>
+        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon.png">
+            <Visible>false</Visible>
+        </ImageAsset>
+        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon%402x.png">
+            <Visible>false</Visible>
+        </ImageAsset>
+        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-60%402x.png">
+            <Visible>false</Visible>
+        </ImageAsset>
+        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-60%403x.png">
+            <Visible>false</Visible>
+        </ImageAsset>
+        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-40.png">
+            <Visible>false</Visible>
+        </ImageAsset>
+        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-76.png">
+            <Visible>false</Visible>
+        </ImageAsset>
+        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-76%402x.png">
+            <Visible>false</Visible>
+        </ImageAsset>
+        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-167.png">
+            <Visible>false</Visible>
+        </ImageAsset>
+        <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Contents.json">
+            <Visible>false</Visible>
+        </ImageAsset>
+        <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Default-750%402x~iphone6-portrait_750x1334.png">
+            <Visible>false</Visible>
+        </ImageAsset>
+        <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Default-568h%402x~iphone_640x1136.png">
+            <Visible>false</Visible>
+        </ImageAsset>
+        <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Default-Portrait~ipad_768x1024.png">
+            <Visible>false</Visible>
+        </ImageAsset>
+        <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Default-Portrait%402x~ipad_1536x2048.png">
+            <Visible>false</Visible>
+        </ImageAsset>
+        <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Default-Landscape~ipad_1024x768.png">
+            <Visible>false</Visible>
+        </ImageAsset>
+        <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Default-Landscape%402x~ipad_2048x1536.png">
+            <Visible>false</Visible>
+        </ImageAsset>
+        <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Default%402x~iphone_640x960.png">
+            <Visible>false</Visible>
+        </ImageAsset>
+        <ImageAsset Include="Assets.xcassets\ic_people.imageset\people.pdf">
+            <Visible>false</Visible>
+        </ImageAsset>
+        <ImageAsset Include="Assets.xcassets\ic_planets.imageset\Contents.json">
+            <Visible>false</Visible>
+        </ImageAsset>
+        <ImageAsset Include="Assets.xcassets\ic_menu.imageset\menu.pdf">
+            <Visible>false</Visible>
+        </ImageAsset>
+        <ImageAsset Include="Assets.xcassets\ic_statistics.imageset\Contents.json">
+            <Visible>false</Visible>
+        </ImageAsset>
+        <ImageAsset Include="Assets.xcassets\ic_statistics.imageset\estadisticas.pdf">
+            <Visible>false</Visible>
+        </ImageAsset>
+        <ImageAsset Include="Assets.xcassets\ic_another_option.imageset\Contents.json">
+            <Visible>false</Visible>
+        </ImageAsset>
+        <ImageAsset Include="Assets.xcassets\ic_another_option.imageset\anotheroption1.pdf">
+            <Visible>false</Visible>
+        </ImageAsset>
+        <ImageAsset Include="Assets.xcassets\ic_planets.imageset\planet.pdf">
+            <Visible>false</Visible>
+        </ImageAsset>
+        <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\splash1242x2208.png">
+            <Visible>false</Visible>
+        </ImageAsset>
+        <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\splash2208x1242.png">
+            <Visible>false</Visible>
+        </ImageAsset>
+        <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\splash2048x2732.png">
+            <Visible>false</Visible>
+        </ImageAsset>
+    </ItemGroup>
+    <ItemGroup>
+        <None Include="Info.plist" />
+        <None Include="Entitlements.plist" />
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Include="Main.cs" />
+        <Compile Include="AppDelegate.cs" />
+        <Compile Include="Setup.cs" />
+        <Compile Include="Views\MainView.cs" />
+        <Compile Include="Views\PeopleView.cs" />
+        <Compile Include="Views\PlanetsView.cs" />
+        <Compile Include="Views\MenuView.cs" />
+        <Compile Include="Sources\PeopleTableViewSource.cs" />
+        <Compile Include="Views\Cells\NameTableViewCell.cs" />
+        <Compile Include="Views\Cells\BaseTableViewCell.cs" />
+        <Compile Include="MvxBindings\NetworkIndicatorTargetBinding.cs" />
+        <Compile Include="Views\PersonView.cs" />
+        <Compile Include="CustomControls\TwitterCoverImageView.cs" />
+        <Compile Include="Sources\PlanetsTableViewSource.cs" />
+        <Compile Include="Views\PlanetView.cs" />
+        <Compile Include="CustomControls\InfoView.cs" />
+        <Compile Include="CustomControls\BaseView.cs" />
+        <Compile Include="Extensions\UIViewExtensions.cs" />
+        <Compile Include="Views\StatusView.cs" />
+        <Compile Include="CustomControls\MenuOption.cs" />
+        <Compile Include="LinkerPleaseInclude.cs" />
+        <Compile Include="Views\Cells\WhiteNameTableViewCell.cs" />
+    </ItemGroup>
+    <ItemGroup>
+        <BundleResource Include="Resources\starwars.json" />
+        <BundleResource Include="Resources\img_0.png" />
+        <BundleResource Include="Resources\img_1.png" />
+        <BundleResource Include="Resources\char1.png" />
+        <BundleResource Include="Resources\char2.png" />
+        <BundleResource Include="Resources\starwars2.json" />
+        <BundleResource Include="Resources\weapon.png" />
+        <BundleResource Include="Resources\weapon2.png" />
+        <BundleResource Include="Resources\Planet_Header.jpg" />
+        <BundleResource Include="Resources\Background.jpg" />
+        <BundleResource Include="Resources\Person_Header.png" />
+        <BundleResource Include="Resources\menu_header_background.png" />
+        <BundleResource Include="Resources\profile.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="OxyPlot.Core"
+                          Version="2.0.0-unstable1035" />
+        <PackageReference Include="OxyPlot.Xamarin.iOS"
+                          Version="1.1.0-unstable0011" />
+        <PackageReference Include="Acr.UserDialogs"
+                          Version="6.5.1" />
+        <PackageReference Include="Acr.Support"
+                          Version="2.1.0" />
+        <PackageReference Include="Newtonsoft.Json"
+                          Version="11.0.2" />
+        <PackageReference Include="MvvmCross"
+                          Version="6.0.0" />
+        <PackageReference Include="MvvmCross.Plugin.Json"
+                          Version="6.0.0" />
+        <PackageReference Include="MvvmCross.Plugin.Color"
+                          Version="6.0.0" />
+        <PackageReference Include="MvvmCross.Plugin.Messenger"
+                          Version="6.0.0" />
+        <PackageReference Include="MvvmCross.Plugin.Visibility"
+                          Version="6.0.0" />
+        <PackageReference Include="Splat"
+                          Version="2.0.0" />
+        <PackageReference Include="Cirrious.FluentLayout"
+                          Version="2.6.0" />
+        <PackageReference Include="Com.Airbnb.iOS.Lottie"
+                          Version="2.1.5.0" />
+        <PackageReference Include="BTProgressHUD"
+                          Version="1.2.0.5" />
+        <PackageReference Include="TZStackView"
+                          Version="1.1.1" />
+    </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\StarWarsSample.Core\StarWarsSample.Core.csproj">
+            <Project>{C8D72805-91D3-48B5-8F5B-44B9263198B6}</Project>
+            <Name>StarWarsSample.Core</Name>
+        </ProjectReference>
+    </ItemGroup>
+    <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+    <Import Project="..\packages\NETStandard.Library.2.0.1\build\netstandard2.0\NETStandard.Library.targets"
+            Condition="Exists('..\packages\NETStandard.Library.2.0.1\build\netstandard2.0\NETStandard.Library.targets')" />
+    <Target Name="EnsureNuGetPackageBuildImports"
+            BeforeTargets="PrepareForBuild">
+        <PropertyGroup>
+            <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+        </PropertyGroup>
+        <Error Condition="!Exists('..\packages\NETStandard.Library.2.0.1\build\netstandard2.0\NETStandard.Library.targets')"
+               Text="$([System.String]::Format('$(ErrorText)', '..\packages\NETStandard.Library.2.0.1\build\netstandard2.0\NETStandard.Library.targets'))" />
+    </Target>
 </Project>

@@ -8,7 +8,8 @@ namespace StarWarsSample.Core
     {
         private readonly IMvxNavigationService _mvxNavigationService;
 
-        public AppStart(IMvxNavigationService mvxNavigationService)
+        public AppStart(IMvxApplication app, IMvxNavigationService mvxNavigationService)
+            : base(app)
         {
             _mvxNavigationService = mvxNavigationService;
         }
