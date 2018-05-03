@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<views:MvxContentPage x:TypeArguments="viewModels:TipViewModel"
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:views="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
+    xmlns:mvx="clr-namespace:MvvmCross.Forms.Bindings;assembly=MvvmCross.Forms"
+    xmlns:viewModels="clr-namespace:TipCalc.Core.ViewModels;assembly=TipCalc.Core"
+    x:Class="TipCalc.Forms.UI.Pages.TipView">
+    <ContentPage.Content>
+            <StackLayout Margin="10">
+                <Label Text="Subtotal" />
+                <Entry x:Name="SubTotalEntry" 
+                       mvx:Bi.nd="Text SubTotal, Mode=TwoWay"/>
+                <Label Text="Generosity" />
+                <Slider x:Name="GenerositySlider"
+                        Maximum="100"
+                        mvx:Bi.nd="Value Generosity, Mode=TwoWay"/>
+                <Label Text="Tip to leave" />
+                <Label x:Name="TipLabel" 
+                       mvx:Bi.nd="Text Tip"/>
+            </StackLayout>
+    </ContentPage.Content>
+</views:MvxContentPage>
