@@ -6,17 +6,14 @@ namespace StarWarsSample.Core
 {
     public class AppStart : MvxAppStart
     {
-        private readonly IMvxNavigationService _mvxNavigationService;
-
         public AppStart(IMvxApplication app, IMvxNavigationService mvxNavigationService)
-            : base(app)
+            : base(app, mvxNavigationService)
         {
-            _mvxNavigationService = mvxNavigationService;
         }
 
-        protected override void Startup(object hint = null)
+        protected override void NavigateToFirstViewModel(object hint = null)
         {
-            _mvxNavigationService.Navigate<MainViewModel>();
+            NavigationService.Navigate<MainViewModel>();
         }
     }
 }
