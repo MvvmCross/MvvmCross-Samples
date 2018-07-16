@@ -70,22 +70,22 @@
     <PackageReference Include="MvvmCross.Plugin.Messenger" Version="6.1.2" />
     <PackageReference Include="MvvmCross.Plugin.Visibility" Version="6.1.2" />
     <PackageReference Include="Com.Airbnb.Android.Lottie" Version="2.5.2.1" />
-    <PackageReference Include="Xamarin.Android.Arch.Core.Common" Version="1.0.0" />
-    <PackageReference Include="Xamarin.Android.Arch.Lifecycle.Common" Version="1.0.3" />
-    <PackageReference Include="Xamarin.Android.Arch.Lifecycle.Runtime" Version="1.0.3" />
-    <PackageReference Include="Xamarin.Android.Support.Animated.Vector.Drawable" Version="27.0.2" />
-    <PackageReference Include="Xamarin.Android.Support.Annotations" Version="27.0.2" />
-    <PackageReference Include="Xamarin.Android.Support.Compat" Version="27.0.2" />
-    <PackageReference Include="Xamarin.Android.Support.Core.UI" Version="27.0.2" />
-    <PackageReference Include="Xamarin.Android.Support.Core.Utils" Version="27.0.2" />
-    <PackageReference Include="Xamarin.Android.Support.Design" Version="27.0.2" />
-    <PackageReference Include="Xamarin.Android.Support.Fragment" Version="27.0.2" />
-    <PackageReference Include="Xamarin.Android.Support.Media.Compat" Version="27.0.2" />
-    <PackageReference Include="Xamarin.Android.Support.Percent" Version="27.0.2" />
-    <PackageReference Include="Xamarin.Android.Support.Transition" Version="27.0.2" />
-    <PackageReference Include="Xamarin.Android.Support.v7.AppCompat" Version="27.0.2" />
-    <PackageReference Include="Xamarin.Android.Support.v7.RecyclerView" Version="27.0.2" />
-    <PackageReference Include="Xamarin.Android.Support.Vector.Drawable" Version="27.0.2" />
+    <PackageReference Include="Xamarin.Android.Arch.Core.Common" Version="1.0.0.1" />
+    <PackageReference Include="Xamarin.Android.Arch.Lifecycle.Common" Version="1.0.3.1" />
+    <PackageReference Include="Xamarin.Android.Arch.Lifecycle.Runtime" Version="1.0.3.1" />
+    <PackageReference Include="Xamarin.Android.Support.Animated.Vector.Drawable" Version="27.0.2.1" />
+    <PackageReference Include="Xamarin.Android.Support.Annotations" Version="27.0.2.1" />
+    <PackageReference Include="Xamarin.Android.Support.Compat" Version="27.0.2.1" />
+    <PackageReference Include="Xamarin.Android.Support.Core.UI" Version="27.0.2.1" />
+    <PackageReference Include="Xamarin.Android.Support.Core.Utils" Version="27.0.2.1" />
+    <PackageReference Include="Xamarin.Android.Support.Design" Version="27.0.2.1" />
+    <PackageReference Include="Xamarin.Android.Support.Fragment" Version="27.0.2.1" />
+    <PackageReference Include="Xamarin.Android.Support.Media.Compat" Version="27.0.2.1" />
+    <PackageReference Include="Xamarin.Android.Support.Percent" Version="27.0.2.1" />
+    <PackageReference Include="Xamarin.Android.Support.Transition" Version="27.0.2.1" />
+    <PackageReference Include="Xamarin.Android.Support.v7.AppCompat" Version="27.0.2.1" />
+    <PackageReference Include="Xamarin.Android.Support.v7.RecyclerView" Version="27.0.2.1" />
+    <PackageReference Include="Xamarin.Android.Support.Vector.Drawable" Version="27.0.2.1" />
     <PackageReference Include="Xamarin.Build.Download" Version="0.4.9" />
   </ItemGroup>
   <ItemGroup>
