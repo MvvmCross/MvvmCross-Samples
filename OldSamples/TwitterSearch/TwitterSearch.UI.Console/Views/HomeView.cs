@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MvvmCross.Platforms.Console.Views;
+using System;
 using TwitterSearch.Core.ViewModels;
 
 namespace TwitterSearch.UI.Console.Views

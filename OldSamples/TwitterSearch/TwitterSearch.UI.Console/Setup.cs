@@ -1,5 +1,7 @@
-using Cirrious.MvvmCross.ViewModels;
+using MvvmCross.ViewModels;
 using TwitterSearch.Core;
+using MvvmCross.Platforms.Console.Core;
+using MvvmCross.Logging;
 
 namespace TwitterSearch.UI.Console
 {

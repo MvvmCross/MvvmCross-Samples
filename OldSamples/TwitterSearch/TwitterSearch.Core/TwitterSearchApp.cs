@@ -7,11 +7,10 @@ namespace TwitterSearch.Core
     public class TwitterSearchApp
         : MvxApplication
     {
-        public TwitterSearchApp()
+        public override void Initialize()
         {
             InitaliseServices();
             InitialiseStartNavigation();
-            InitialisePlugIns();
         }
 
         private void InitaliseServices()
@@ -25,13 +24,6 @@ namespace TwitterSearch.Core
         private void InitialiseStartNavigation()
         {
             RegisterAppStart<HomeViewModel>();
-        }
-
-        private void InitialisePlugIns()
-        {
-            //https://github.com/MvvmCross/MvvmCross/issues/2082
-            //https://github.com/MvvmCross/MvvmCross/pull/2603
-            //MvvmCross.Plugin.Visibility.PluginLoader.Instance.EnsureLoaded();
         }
     }
 }

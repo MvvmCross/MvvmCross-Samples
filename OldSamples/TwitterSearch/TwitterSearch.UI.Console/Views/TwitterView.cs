@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MvvmCross.Platforms.Console.Views;
+using System;
 using System.Linq;
 using TwitterSearch.Core.ViewModels;
 

@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net;
+using System.Net.Http;
+using System.Net.Security;
+using System.Security.Cryptography.X509Certificates;
 using System.Xml.Linq;
 
 namespace TwitterSearch.Core.Models
@@ -11,9 +14,7 @@ namespace TwitterSearch.Core.Models
     {
         public static void StartAsyncSearch(string searchText, Action<IEnumerable<Tweet>> success, Action<Exception> error)
         {
-            //https://github.com/MvvmCross/MvvmCross/issues/1750
             DoAsyncSearch(searchText, success, error);
-            //MvxAsyncDispatcher.BeginAsync(() => DoAsyncSearch(searchText, success, error));
         }
 
         private static void DoAsyncSearch(string searchText, Action<IEnumerable<Tweet>> success, Action<Exception> error)
@@ -22,7 +23,7 @@ namespace TwitterSearch.Core.Models
             search.StartSearch();
         }
 
-        private const string TwitterUrl = "http://search.twitter.com/search.atom?rpp=100&&q=";
+        private const string TwitterUrl = "https://api.twitter.com/1.1/search/tweets.json?count=100&result_type=popular&q=";
 
         private readonly string _searchText;
         private readonly Action<IEnumerable<Tweet>> _success;
@@ -34,14 +35,40 @@ namespace TwitterSearch.Core.Models
             _success = success;
             _error = error;
         }
-
+        private static bool CheckValidationResult(object sender, X509Certificate certificate, X509Chain chain, SslPolicyErrors errors)
+        {
+            return true;
+        }
+        private string RemoveHeader(ref WebHeaderCollection tmpheader, string headname)
+        {
+            try
+            {
+                if (tmpheader == null)
+                {
+                    return null;
+                }
+                string str = tmpheader.Get(headname);
+                if (str != null)
+                {
+                    tmpheader.Remove(headname);
+                }
+                return str;
+            }
+            catch (NullReferenceException)
+            {
+                return null;
+            }
+        }
         private void StartSearch()
         {
             try
             {
+                var timestamp = DateTime.Now.ToBinary();
+
                 // perform the search
                 string uri = TwitterUrl + _searchText;
                 var request = WebRequest.Create(new Uri(uri));
+
                 request.BeginGetResponse(ReadCallback, request);
             }
             catch (Exception exception)

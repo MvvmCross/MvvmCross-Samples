@@ -15,11 +15,6 @@ namespace TwitterSearch.Core.ViewModels
             TwitterSearchProvider = searchProvider;
         }
 
-        //public void Init(string searchTerm)
-        //{
-        //    StartSearch(searchTerm);
-        //}
-
         private bool _isSearching;
 
         public bool IsSearching

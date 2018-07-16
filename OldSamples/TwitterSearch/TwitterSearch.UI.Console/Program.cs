@@ -1,4 +1,6 @@
-﻿using Cirrious.MvvmCross.ViewModels;
+﻿using MvvmCross;
+using MvvmCross.Platforms.Console.Core;
+using MvvmCross.ViewModels;
 
 namespace TwitterSearch.UI.Console
 {
@@ -14,7 +16,9 @@ namespace TwitterSearch.UI.Console
         {
             // initialize app
             var setup = new Setup();
-            setup.Initialize();
+            setup.InitializePrimary();
+            setup.InitializeSecondary();
+            setup.InitializeMessagePump();
 
             // trigger the first navigate...
             var starter = Mvx.Resolve<IMvxAppStart>();

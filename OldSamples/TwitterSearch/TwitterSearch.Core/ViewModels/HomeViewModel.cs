@@ -1,14 +1,18 @@
 using MvvmCross.Commands;
+using MvvmCross.Logging;
 using MvvmCross.ViewModels;
 using System;
+using System.Threading.Tasks;
 
 namespace TwitterSearch.Core.ViewModels
 {
     public class HomeViewModel
         : MvxViewModel
     {
-        public void Init()
+        public override async Task Initialize()
         {
+            await base.Initialize();
+
             Commands = new MvxCommandCollectionBuilder()
                 .BuildCollectionFor(this);
             PickRandomCommand();
@@ -23,13 +27,13 @@ namespace TwitterSearch.Core.ViewModels
 
         public void ReloadState(ViewModelState searchText)
         {
-            //MvxTrace.Trace("ReloadState called with {0}", searchText.SearchText);
+            Log.Trace("ReloadState called with {0}", searchText.SearchText);
             SearchText = searchText.SearchText;
         }
 
         public ViewModelState SaveState()
         {
-            //MvxTrace.Trace("SaveState called");
+            Log.Trace("SaveState called");
             return new ViewModelState { SearchText = SearchText };
         }
 
@@ -48,9 +52,6 @@ namespace TwitterSearch.Core.ViewModels
 
             if (string.IsNullOrWhiteSpace(SearchText))
                 return;
-            //https://www.mvvmcross.com/documentation/fundamentals/navigation
-            //https://github.com/MvvmCross/MvvmCross/pull/2559
-            //ShowViewModel<TwitterViewModel>(new { searchTerm = SearchText });
             NavigationService.Navigate<TwitterViewModel,string>(SearchText);
         }
 
