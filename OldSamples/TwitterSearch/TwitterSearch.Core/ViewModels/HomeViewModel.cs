@@ -1,4 +1,5 @@
-using Cirrious.MvvmCross.ViewModels;
+using MvvmCross.Commands;
+using MvvmCross.ViewModels;
 using System;
 
 namespace TwitterSearch.Core.ViewModels
@@ -22,13 +23,13 @@ namespace TwitterSearch.Core.ViewModels
 
         public void ReloadState(ViewModelState searchText)
         {
-            MvxTrace.Trace("ReloadState called with {0}", searchText.SearchText);
+            //MvxTrace.Trace("ReloadState called with {0}", searchText.SearchText);
             SearchText = searchText.SearchText;
         }
 
         public ViewModelState SaveState()
         {
-            MvxTrace.Trace("SaveState called");
+            //MvxTrace.Trace("SaveState called");
             return new ViewModelState { SearchText = SearchText };
         }
 
@@ -47,8 +48,10 @@ namespace TwitterSearch.Core.ViewModels
 
             if (string.IsNullOrWhiteSpace(SearchText))
                 return;
-
-            ShowViewModel<TwitterViewModel>(new { searchTerm = SearchText });
+            //https://www.mvvmcross.com/documentation/fundamentals/navigation
+            //https://github.com/MvvmCross/MvvmCross/pull/2559
+            //ShowViewModel<TwitterViewModel>(new { searchTerm = SearchText });
+            NavigationService.Navigate<TwitterViewModel,string>(SearchText);
         }
 
         public void PickRandomCommand()

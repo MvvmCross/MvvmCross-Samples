@@ -1,4 +1,5 @@
-﻿using Cirrious.MvvmCross.ViewModels;
+﻿using MvvmCross.IoC;
+using MvvmCross.ViewModels;
 using TwitterSearch.Core.ViewModels;
 
 namespace TwitterSearch.Core
@@ -28,7 +29,9 @@ namespace TwitterSearch.Core
 
         private void InitialisePlugIns()
         {
-            Cirrious.MvvmCross.Plugins.Visibility.PluginLoader.Instance.EnsureLoaded();
+            //https://github.com/MvvmCross/MvvmCross/issues/2082
+            //https://github.com/MvvmCross/MvvmCross/pull/2603
+            //MvvmCross.Plugin.Visibility.PluginLoader.Instance.EnsureLoaded();
         }
     }
 }

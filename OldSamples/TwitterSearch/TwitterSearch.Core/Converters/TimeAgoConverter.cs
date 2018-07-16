@@ -1,3 +1,4 @@
+using MvvmCross.Converters;
 using System;
 
 namespace TwitterSearch.Core.Converters

@@ -11,7 +11,9 @@ namespace TwitterSearch.Core.Models
     {
         public static void StartAsyncSearch(string searchText, Action<IEnumerable<Tweet>> success, Action<Exception> error)
         {
-            MvxAsyncDispatcher.BeginAsync(() => DoAsyncSearch(searchText, success, error));
+            //https://github.com/MvvmCross/MvvmCross/issues/1750
+            DoAsyncSearch(searchText, success, error);
+            //MvxAsyncDispatcher.BeginAsync(() => DoAsyncSearch(searchText, success, error));
         }
 
         private static void DoAsyncSearch(string searchText, Action<IEnumerable<Tweet>> success, Action<Exception> error)
