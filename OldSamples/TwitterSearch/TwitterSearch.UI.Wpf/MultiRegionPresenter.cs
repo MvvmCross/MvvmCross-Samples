@@ -1,4 +1,6 @@
-﻿using Cirrious.MvvmCross.Wpf.Views;
+﻿using MvvmCross.Platforms.Wpf.Presenters;
+using MvvmCross.Platforms.Wpf.Presenters.Attributes;
+using MvvmCross.ViewModels;
 using System.Linq;
 using System.Windows;
 
@@ -13,17 +15,16 @@ namespace TwitterSearch.UI.Wpf
         {
             _mainWindow = mainWindow;
         }
-
-        public override void Present(FrameworkElement frameworkElement)
+        protected override void ShowContentView(FrameworkElement element, MvxContentPresentationAttribute attribute, MvxViewModelRequest request)
         {
             // this is really hacky - do it using attributes isnt
-            var attribute = frameworkElement
+            var region = element
                                 .GetType()
                                 .GetCustomAttributes(typeof(RegionAttribute), true)
                                 .FirstOrDefault() as RegionAttribute;
 
-            var regionName = attribute == null ? null : attribute.Name;
-            _mainWindow.PresentInRegion(frameworkElement, regionName);
+            var regionName = region == null ? null : region.Name;
+            _mainWindow.PresentInRegion(element, regionName);
         }
     }
 }

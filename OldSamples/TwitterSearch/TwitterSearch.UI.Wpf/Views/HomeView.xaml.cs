@@ -1,4 +1,4 @@
-﻿using Cirrious.MvvmCross.Wpf.Views;
+﻿using MvvmCross.Platforms.Wpf.Views;
 using TwitterSearch.Core.ViewModels;
 
 namespace TwitterSearch.UI.Wpf.Views

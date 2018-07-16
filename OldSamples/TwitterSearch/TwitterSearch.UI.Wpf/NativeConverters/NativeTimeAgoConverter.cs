@@ -1,4 +1,5 @@
-﻿using TwitterSearch.Core.Converters;
+﻿using MvvmCross.Platforms.Wpf.Converters;
+using TwitterSearch.Core.Converters;
 
 namespace TwitterSearch.UI.Wpf.NativeConverters
 {
