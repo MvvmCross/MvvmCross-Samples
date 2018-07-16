@@ -237,10 +237,11 @@
     <BundleResource Include="Resources\profile.png" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Acr.UserDialogs">
+      <Version>7.0.1</Version>
+    </PackageReference>
     <PackageReference Include="OxyPlot.Core" Version="2.0.0-unstable1035" />
     <PackageReference Include="OxyPlot.Xamarin.iOS" Version="1.1.0-unstable0011" />
-    <PackageReference Include="Acr.UserDialogs" Version="6.5.1" />
-    <PackageReference Include="Acr.Support" Version="2.1.0" />
     <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
     <PackageReference Include="MvvmCross" Version="6.1.2" />
     <PackageReference Include="MvvmCross.Plugin.Json" Version="6.1.2" />
@@ -250,7 +251,6 @@
     <PackageReference Include="Splat" Version="2.0.0" />
     <PackageReference Include="Cirrious.FluentLayout" Version="2.6.0" />
     <PackageReference Include="Com.Airbnb.iOS.Lottie" Version="2.1.5.0" />
-    <PackageReference Include="BTProgressHUD" Version="1.2.0.5" />
     <PackageReference Include="TZStackView" Version="1.1.1" />
   </ItemGroup>
   <ItemGroup>
