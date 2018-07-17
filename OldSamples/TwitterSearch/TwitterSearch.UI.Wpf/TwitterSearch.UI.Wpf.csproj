@@ -35,7 +35,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>TwitterSearch.UI.Wpf.Program</StartupObject>
+    <StartupObject>TwitterSearch.UI.Wpf.App</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="MvvmCross, Version=6.1.2.0, Culture=neutral, processorArchitecture=MSIL">
@@ -68,7 +68,6 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="MultiRegionPresenter.cs" />
-    <Compile Include="Program.cs" />
     <Compile Include="RegionAttribute.cs" />
     <Compile Include="Setup.cs" />
     <Compile Include="Views\HomeView.xaml.cs">
@@ -117,7 +116,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -131,6 +129,11 @@
       <Project>{13ab7f80-fdd4-4408-9ad3-2b11e47a3482}</Project>
       <Name>TwitterSearch.Core</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="MvvmCross">
+      <Version>6.1.2</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

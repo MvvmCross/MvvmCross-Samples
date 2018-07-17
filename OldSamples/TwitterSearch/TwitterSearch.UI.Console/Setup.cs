@@ -10,8 +10,7 @@ namespace TwitterSearch.UI.Console
     {
         protected override IMvxApplication CreateApp()
         {
-            var app = new TwitterSearchApp();
-            return app;
+            return new Core.App();
         }
     }
 }

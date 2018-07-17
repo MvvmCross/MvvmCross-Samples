@@ -4,7 +4,7 @@ using TwitterSearch.Core.ViewModels;
 
 namespace TwitterSearch.Core
 {
-    public class TwitterSearchApp
+    public class App
         : MvxApplication
     {
         public override void Initialize()

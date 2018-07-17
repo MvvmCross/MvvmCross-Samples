@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{88DB2D56-1417-448C-B470-5970C0A11961}</ProjectGuid>
+    <ProjectGuid>{CA2D9FA4-58B1-4B38-994B-9A6855923A68}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>TwitterSearch.UI.Console</RootNamespace>
@@ -57,13 +57,15 @@
     <Compile Include="Views\TwitterView.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\TwitterSearch.Core\TwitterSearch.Core.csproj">
       <Project>{13ab7f80-fdd4-4408-9ad3-2b11e47a3482}</Project>
       <Name>TwitterSearch.Core</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="MvvmCross">
+      <Version>6.1.2</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

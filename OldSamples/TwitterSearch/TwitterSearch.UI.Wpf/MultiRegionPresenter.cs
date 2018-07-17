@@ -3,17 +3,18 @@ using MvvmCross.Platforms.Wpf.Presenters.Attributes;
 using MvvmCross.ViewModels;
 using System.Linq;
 using System.Windows;
+using System.Windows.Controls;
 
 namespace TwitterSearch.UI.Wpf
 {
     public class MultiRegionPresenter
         : MvxWpfViewPresenter
     {
-        private readonly MainWindow _mainWindow;
+        private readonly ContentControl _root;
 
-        public MultiRegionPresenter(MainWindow mainWindow)
+        public MultiRegionPresenter(ContentControl root)
         {
-            _mainWindow = mainWindow;
+            _root = root;
         }
         protected override void ShowContentView(FrameworkElement element, MvxContentPresentationAttribute attribute, MvxViewModelRequest request)
         {
@@ -24,7 +25,16 @@ namespace TwitterSearch.UI.Wpf
                                 .FirstOrDefault() as RegionAttribute;
 
             var regionName = region == null ? null : region.Name;
-            _mainWindow.PresentInRegion(element, regionName);
+
+            if (_root is MainWindow)
+            {
+                var mainWindow = _root as MainWindow;
+                mainWindow.PresentInRegion(element, regionName);
+            }
+            else
+            {
+                base.ShowContentView(element, attribute, request);
+            }
         }
     }
 }

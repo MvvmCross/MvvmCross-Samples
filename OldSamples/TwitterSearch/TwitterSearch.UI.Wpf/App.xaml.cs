@@ -1,17 +1,16 @@
-﻿using MvvmCross;
-using MvvmCross.ViewModels;
-using System.Windows;
+﻿using MvvmCross.Core;
+using MvvmCross.Platforms.Wpf.Core;
+using MvvmCross.Platforms.Wpf.Views;
+using TwitterSearch.Core;
 
 namespace TwitterSearch.UI.Wpf
 {
     public partial class App
-        : Application
+        : MvxApplication
     {
-        protected override void OnStartup(StartupEventArgs e)
+        protected override void RegisterSetup()
         {
-            base.OnStartup(e);
-            var start = Mvx.Resolve<IMvxAppStart>();
-            start.Start();
+            this.RegisterSetupType<Setup>();
         }
     }
 }
