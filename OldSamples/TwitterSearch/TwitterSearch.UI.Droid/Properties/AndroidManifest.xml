@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="internalOnly" package="com.cirrious.twittersearch">
-	<application android:label="TwitterSearch"></application>
-	<uses-sdk android:minSdkVersion="15" android:targetSdkVersion="21" />
+	<application android:label="TwitterSearch" android:icon="@drawable/Icon"></application>
+	<uses-sdk android:minSdkVersion="15" android:targetSdkVersion="27" />
 	<uses-permission android:name="android.permission.INTERNET" />
 </manifest>
