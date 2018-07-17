@@ -40,6 +40,20 @@ namespace TwitterSearch.Core.Models
         {
             return true;
         }
+        private void HandleData(string data)
+        {
+            var doc = XDocument.Parse(data);
+            var items = doc.Descendants(AtomConst.Entry)
+                .Select(entryElement => new Tweet()
+                {
+                    Title = entryElement.Descendants(AtomConst.Title).Single().Value,
+                    Id = long.Parse(entryElement.Descendants(AtomConst.ID).Single().Value.Split(':')[2]),
+                    ProfileImageUrl = entryElement.Descendants(AtomConst.Link).Skip(1).First().Attribute("href").Value,
+                    Timestamp = DateTime.Parse(entryElement.Descendants(AtomConst.Published).Single().Value),
+                    Author = entryElement.Descendants(AtomConst.Name).Single().Value
+                });
+            _success(items);
+        }
         private string RemoveHeader(ref WebHeaderCollection tmpheader, string headname)
         {
             try
@@ -76,7 +90,7 @@ namespace TwitterSearch.Core.Models
                         var response = (HttpWebResponse)request.GetResponse();
                         StreamReader reader = new StreamReader(response.GetResponseStream());
                         string str = reader.ReadToEnd();
-                        HandleResponse(str);
+                        HandleData(str);
                     }
                     catch (Exception exception)
                     {
@@ -90,19 +104,6 @@ namespace TwitterSearch.Core.Models
             }
         }
 
-        private void HandleResponse(string xml)
-        {
-            var doc = XDocument.Parse(xml);
-            var items = doc.Descendants(AtomConst.Entry)
-                .Select(entryElement => new Tweet()
-                {
-                    Title = entryElement.Descendants(AtomConst.Title).Single().Value,
-                    Id = long.Parse(entryElement.Descendants(AtomConst.ID).Single().Value.Split(':')[2]),
-                    ProfileImageUrl = entryElement.Descendants(AtomConst.Link).Skip(1).First().Attribute("href").Value,
-                    Timestamp = DateTime.Parse(entryElement.Descendants(AtomConst.Published).Single().Value),
-                    Author = entryElement.Descendants(AtomConst.Name).Single().Value
-                });
-            _success(items);
-        }
+       
     }
 }
