@@ -103,7 +103,5 @@ namespace TwitterSearch.Core.Models
                 _error(exception);
             }
         }
-
-       
     }
 }
