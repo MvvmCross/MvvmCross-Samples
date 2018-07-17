@@ -1,4 +1,5 @@
-﻿using MvvmCross.Platforms.Wpf.Views;
+﻿using MvvmCross.Platforms.Wpf.Presenters.Attributes;
+using MvvmCross.Platforms.Wpf.Views;
 using System.Windows;
 
 namespace TwitterSearch.UI.Wpf
@@ -13,9 +14,9 @@ namespace TwitterSearch.UI.Wpf
             InitializeComponent();
         }
 
-        public void PresentInRegion(FrameworkElement frameworkElement, string regionName)
+        public void PresentInRegion(FrameworkElement frameworkElement, MvxContentPresentationAttribute attribute)
         {
-            switch (regionName)
+            switch (attribute.WindowIdentifier)
             {
                 case "Detail":
                     RightHandColumn.Children.Clear();
@@ -27,6 +28,7 @@ namespace TwitterSearch.UI.Wpf
                     LeftHandColumn.Children.Add(frameworkElement);
                     break;
             }
+
         }
     }
 }

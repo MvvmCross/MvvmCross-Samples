@@ -1,4 +1,5 @@
-﻿using MvvmCross.Platforms.Wpf.Views;
+﻿using MvvmCross.Platforms.Wpf.Presenters.Attributes;
+using MvvmCross.Platforms.Wpf.Views;
 using TwitterSearch.Core.ViewModels;
 
 namespace TwitterSearch.UI.Wpf.Views
@@ -6,18 +7,12 @@ namespace TwitterSearch.UI.Wpf.Views
     /// <summary>
     /// Interaction logic for TwitterView.xaml
     /// </summary>
-    [Region("Detail")]
-    public partial class TwitterView : MvxWpfView
+    [MvxContentPresentation(WindowIdentifier = "Detail", StackNavigation = false)]
+    public partial class TwitterView : MvxWpfView<TwitterViewModel>
     {
         public TwitterView()
         {
             InitializeComponent();
-        }
-
-        public new TwitterViewModel ViewModel
-        {
-            get { return base.ViewModel as TwitterViewModel; }
-            set { base.ViewModel = value; }
         }
     }
 }

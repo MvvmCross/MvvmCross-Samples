@@ -1,5 +1,6 @@
 ﻿using MvvmCross.Platforms.Wpf.Presenters;
 using MvvmCross.Platforms.Wpf.Presenters.Attributes;
+using MvvmCross.Platforms.Wpf.Views;
 using MvvmCross.ViewModels;
 using System.Linq;
 using System.Windows;
@@ -18,23 +19,11 @@ namespace TwitterSearch.UI.Wpf
         }
         protected override void ShowContentView(FrameworkElement element, MvxContentPresentationAttribute attribute, MvxViewModelRequest request)
         {
-            if (_root is MainWindow)
+            if (_root is MainWindow && element is MvxWpfView)
             {
                 var mainWindow = _root as MainWindow;
                 // this is really hacky - do it using attributes isnt
-                var region = element
-                                .GetType()
-                                .GetCustomAttributes(typeof(RegionAttribute), true)
-                                .FirstOrDefault() as RegionAttribute;
-
-            var regionName = region == null ? null : region.Name;
-
-            
-                mainWindow.PresentInRegion(element, regionName);
-            }
-            else
-            {
-                base.ShowContentView(element, attribute, request);
+                mainWindow.PresentInRegion(element, attribute);
             }
         }
     }

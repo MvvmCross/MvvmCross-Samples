@@ -14,6 +14,7 @@
     <WarningLevel>4</WarningLevel>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -38,12 +39,6 @@
     <StartupObject>TwitterSearch.UI.Wpf.App</StartupObject>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MvvmCross, Version=6.1.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MvvmCross.6.1.2\lib\net461\MvvmCross.dll</HintPath>
-    </Reference>
-    <Reference Include="MvvmCross.Platforms.Wpf, Version=6.1.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MvvmCross.Platforms.Wpf.6.1.2\lib\net461\MvvmCross.Platforms.Wpf.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Console, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Console.4.3.0\lib\net46\System.Console.dll</HintPath>
@@ -132,6 +127,9 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="MvvmCross">
+      <Version>6.1.2</Version>
+    </PackageReference>
+    <PackageReference Include="MvvmCross.Platforms.Wpf">
       <Version>6.1.2</Version>
     </PackageReference>
   </ItemGroup>

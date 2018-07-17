@@ -3,9 +3,11 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-                                   xmlns:mvx="clr-namespace:MvvmCross.Platforms.Wpf.Views;assembly=MvvmCross.Platforms.Wpf"
-                xmlns:nativeConverters="clr-namespace:TwitterSearch.UI.Wpf.NativeConverters"
-                mc:Ignorable="d"
+             xmlns:mvx="clr-namespace:MvvmCross.Platforms.Wpf.Views;assembly=MvvmCross.Platforms.Wpf"
+             xmlns:nativeConverters="clr-namespace:TwitterSearch.UI.Wpf.NativeConverters"
+             xmlns:vm="clr-namespace:TwitterSearch.Core.ViewModels;assembly=TwitterSearch.Core"
+             x:TypeArguments="vm:TwitterViewModel"
+             mc:Ignorable="d"
              d:DesignHeight="300" d:DesignWidth="300">
     <mvx:MvxWpfView.Resources>
         <nativeConverters:NativeTimeAgoConverter x:Key="TimeAgo" />

@@ -6,17 +6,11 @@ namespace TwitterSearch.UI.Wpf.Views
     /// <summary>
     /// Interaction logic for HomeView.xaml
     /// </summary>
-    public partial class HomeView : MvxWpfView
+    public partial class HomeView : MvxWpfView<HomeViewModel>
     {
         public HomeView()
         {
             InitializeComponent();
-        }
-
-        public new HomeViewModel ViewModel
-        {
-            get { return base.ViewModel as HomeViewModel; }
-            set { base.ViewModel = value; }
         }
     }
 }
