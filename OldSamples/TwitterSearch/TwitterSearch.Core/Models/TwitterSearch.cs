@@ -6,6 +6,7 @@ using System.Net;
 using System.Net.Http;
 using System.Net.Security;
 using System.Security.Cryptography.X509Certificates;
+using System.Threading.Tasks;
 using System.Xml.Linq;
 
 namespace TwitterSearch.Core.Models
@@ -67,27 +68,21 @@ namespace TwitterSearch.Core.Models
 
                 // perform the search
                 string uri = TwitterUrl + _searchText;
-                var request = WebRequest.Create(new Uri(uri));
 
-                request.BeginGetResponse(ReadCallback, request);
-            }
-            catch (Exception exception)
-            {
-                _error(exception);
-            }
-        }
-
-        private void ReadCallback(IAsyncResult asynchronousResult)
-        {
-            try
-            {
-                var request = (HttpWebRequest)asynchronousResult.AsyncState;
-                var response = (HttpWebResponse)request.EndGetResponse(asynchronousResult);
-                using (var streamReader1 = new StreamReader(response.GetResponseStream()))
-                {
-                    string resultString = streamReader1.ReadToEnd();
-                    HandleResponse(resultString);
-                }
+                Task.Run(()=> {
+                    try
+                    {
+                        HttpWebRequest request = (HttpWebRequest)WebRequest.Create(new Uri(uri));
+                        var response = (HttpWebResponse)request.GetResponse();
+                        StreamReader reader = new StreamReader(response.GetResponseStream());
+                        string str = reader.ReadToEnd();
+                        HandleResponse(str);
+                    }
+                    catch (Exception exception)
+                    {
+                        _error(exception);
+                    }
+                });
             }
             catch (Exception exception)
             {
