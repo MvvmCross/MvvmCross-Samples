@@ -10,6 +10,7 @@
             <StackLayout Margin="10">
                 <Label Text="Subtotal" />
                 <Entry x:Name="SubTotalEntry" 
+                       Keyboard="Numeric"
                        mvx:Bi.nd="Text SubTotal, Mode=TwoWay"/>
                 <Label Text="Generosity" />
                 <Slider x:Name="GenerositySlider"
