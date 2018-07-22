@@ -22,11 +22,6 @@ namespace StarWarsSample.Droid.Views
             }
         }
 
-        protected BaseFragment()
-        {
-            RetainInstance = true;
-        }
-
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
             var ignore = base.OnCreateView(inflater, container, savedInstanceState);

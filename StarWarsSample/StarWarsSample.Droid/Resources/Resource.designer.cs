@@ -4146,7 +4146,6 @@ namespace StarWarsSample.Droid
 			global::MvvmCross.Droid.Support.V7.RecyclerView.Resource.Styleable.RecyclerView_reverseLayout = global::StarWarsSample.Droid.Resource.Styleable.RecyclerView_reverseLayout;
 			global::MvvmCross.Droid.Support.V7.RecyclerView.Resource.Styleable.RecyclerView_spanCount = global::StarWarsSample.Droid.Resource.Styleable.RecyclerView_spanCount;
 			global::MvvmCross.Droid.Support.V7.RecyclerView.Resource.Styleable.RecyclerView_stackFromEnd = global::StarWarsSample.Droid.Resource.Styleable.RecyclerView_stackFromEnd;
-			global::Splat.Resource.String.library_name = global::StarWarsSample.Droid.Resource.String.library_name;
 		}
 		
 		public partial class Animation
@@ -7785,14 +7784,14 @@ namespace StarWarsSample.Droid
 			// aapt resource value: 0x7f0a002c
 			public const int drawer_open = 2131361836;
 			
-			// aapt resource value: 0x7f0a0028
-			public const int fab_scroll_shrink_grow_autohide_behavior = 2131361832;
+			// aapt resource value: 0x7f0a0027
+			public const int fab_scroll_shrink_grow_autohide_behavior = 2131361831;
 			
 			// aapt resource value: 0x7f0a002a
 			public const int hello = 2131361834;
 			
-			// aapt resource value: 0x7f0a0027
-			public const int library_name = 2131361831;
+			// aapt resource value: 0x7f0a0029
+			public const int library_name = 2131361833;
 			
 			// aapt resource value: 0x7f0a0021
 			public const int password_toggle_content_description = 2131361825;
@@ -7815,8 +7814,8 @@ namespace StarWarsSample.Droid
 			// aapt resource value: 0x7f0a0026
 			public const int status_bar_notification_info_overflow = 2131361830;
 			
-			// aapt resource value: 0x7f0a0029
-			public const int view_scroll_translation_autohide_behavior = 2131361833;
+			// aapt resource value: 0x7f0a0028
+			public const int view_scroll_translation_autohide_behavior = 2131361832;
 			
 			static String()
 			{
