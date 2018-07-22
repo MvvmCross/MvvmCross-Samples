@@ -1,103 +1,103 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-    <PropertyGroup>
-        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-        <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-        <ProjectGuid>{6E38F2AF-D556-465F-92E7-2B8020B80E25}</ProjectGuid>
-        <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-        <OutputType>Library</OutputType>
-        <RootNamespace>TipCalc.Forms.Droid</RootNamespace>
-        <AssemblyName>TipCalc.Forms.Droid</AssemblyName>
-        <TargetFrameworkVersion>v8.1</TargetFrameworkVersion>
-        <AndroidApplication>True</AndroidApplication>
-        <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
-        <AndroidResgenClass>Resource</AndroidResgenClass>
-        <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
-        <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
-        <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
-        <AndroidUseLatestPlatformSdk>true</AndroidUseLatestPlatformSdk>
-    </PropertyGroup>
-    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-        <DebugSymbols>true</DebugSymbols>
-        <DebugType>full</DebugType>
-        <Optimize>false</Optimize>
-        <OutputPath>bin\Debug</OutputPath>
-        <DefineConstants>DEBUG;</DefineConstants>
-        <ErrorReport>prompt</ErrorReport>
-        <WarningLevel>4</WarningLevel>
-        <AndroidLinkMode>None</AndroidLinkMode>
-        <AndroidSupportedAbis>arm64-v8a;armeabi-v7a;x86</AndroidSupportedAbis>
-    </PropertyGroup>
-    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-        <DebugSymbols>true</DebugSymbols>
-        <DebugType>pdbonly</DebugType>
-        <Optimize>true</Optimize>
-        <OutputPath>bin\Release</OutputPath>
-        <ErrorReport>prompt</ErrorReport>
-        <WarningLevel>4</WarningLevel>
-        <AndroidManagedSymbols>true</AndroidManagedSymbols>
-        <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
-    </PropertyGroup>
-    <ItemGroup>
-        <Reference Include="System" />
-        <Reference Include="System.Xml" />
-        <Reference Include="System.Core" />
-        <Reference Include="Mono.Android" />
-        <Reference Include="Mono.Android.Export" />
-        <PackageReference Include="Xamarin.Android.Support.Animated.Vector.Drawable" Version="25.4.0.2" />
-        <PackageReference Include="Xamarin.Android.Support.Annotations" Version="25.4.0.2" />
-        <PackageReference Include="Xamarin.Android.Support.Compat" Version="25.4.0.2" />
-        <PackageReference Include="Xamarin.Android.Support.Core.UI" Version="25.4.0.2" />
-        <PackageReference Include="Xamarin.Android.Support.Core.Utils" Version="25.4.0.2" />
-        <PackageReference Include="Xamarin.Android.Support.Design" Version="25.4.0.2" />
-        <PackageReference Include="Xamarin.Android.Support.Fragment" Version="25.4.0.2" />
-        <PackageReference Include="Xamarin.Android.Support.Media.Compat" Version="25.4.0.2" />
-        <PackageReference Include="Xamarin.Android.Support.Transition" Version="25.4.0.2" />
-        <PackageReference Include="Xamarin.Android.Support.v4" Version="25.4.0.2" />
-        <PackageReference Include="Xamarin.Android.Support.v7.AppCompat" Version="25.4.0.2" />
-        <PackageReference Include="Xamarin.Android.Support.v7.CardView" Version="25.4.0.2" />
-        <PackageReference Include="Xamarin.Android.Support.v7.MediaRouter" Version="25.4.0.2" />
-        <PackageReference Include="Xamarin.Android.Support.v7.Palette" Version="25.4.0.2" />
-        <PackageReference Include="Xamarin.Android.Support.v7.RecyclerView" Version="25.4.0.2" />
-        <PackageReference Include="Xamarin.Android.Support.Vector.Drawable" Version="25.4.0.2" />
-        <PackageReference Include="Xamarin.Forms">
-            <Version>2.5.1.444934</Version>
-        </PackageReference>
-        <PackageReference Include="MvvmCross">
-            <Version>6.0.1</Version>
-        </PackageReference>
-        <PackageReference Include="MvvmCross.Forms">
-            <Version>6.0.1</Version>
-        </PackageReference>
-    </ItemGroup>
-    <ItemGroup>
-        <Compile Include="MainActivity.cs" />
-        <Compile Include="Resources\Resource.designer.cs" />
-        <Compile Include="Properties\AssemblyInfo.cs" />
-    </ItemGroup>
-    <ItemGroup>
-        <None Include="Resources\AboutResources.txt" />
-        <None Include="Properties\AndroidManifest.xml" />
-        <None Include="Assets\AboutAssets.txt" />
-    </ItemGroup>
-    <ItemGroup>
-        <AndroidResource Include="Resources\layout\Tabbar.axml" />
-        <AndroidResource Include="Resources\layout\Toolbar.axml" />
-        <AndroidResource Include="Resources\values\styles.xml" />
-        <AndroidResource Include="Resources\drawable\icon.png" />
-        <AndroidResource Include="Resources\drawable-hdpi\icon.png" />
-        <AndroidResource Include="Resources\drawable-xhdpi\icon.png" />
-        <AndroidResource Include="Resources\drawable-xxhdpi\icon.png" />
-    </ItemGroup>
-    <ItemGroup>
-        <ProjectReference Include="..\TipCalc.Core\TipCalc.Core.csproj">
-            <Project>{278DBED9-619C-4998-B734-4A4CC69C8269}</Project>
-            <Name>TipCalc.Core</Name>
-        </ProjectReference>
-        <ProjectReference Include="..\TipCalc.Forms.UI\TipCalc.Forms.UI.csproj">
-          <Project>{AE0DF5A8-BE4F-4928-BF36-D386BB88BBA2}</Project>
-          <Name>TipCalc.Forms.UI</Name>
-        </ProjectReference>
-    </ItemGroup>
-    <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6E38F2AF-D556-465F-92E7-2B8020B80E25}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>TipCalc.Forms.Droid</RootNamespace>
+    <AssemblyName>TipCalc.Forms.Droid</AssemblyName>
+    <TargetFrameworkVersion>v8.1</TargetFrameworkVersion>
+    <AndroidApplication>True</AndroidApplication>
+    <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
+    <AndroidResgenClass>Resource</AndroidResgenClass>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+    <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
+    <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
+    <AndroidUseLatestPlatformSdk>true</AndroidUseLatestPlatformSdk>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidLinkMode>None</AndroidLinkMode>
+    <AndroidSupportedAbis>arm64-v8a;armeabi-v7a;x86</AndroidSupportedAbis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidManagedSymbols>true</AndroidManagedSymbols>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Mono.Android" />
+    <Reference Include="Mono.Android.Export" />
+    <PackageReference Include="Xamarin.Android.Support.Animated.Vector.Drawable" Version="27.0.2.1" />
+    <PackageReference Include="Xamarin.Android.Support.Annotations" Version="27.0.2.1" />
+    <PackageReference Include="Xamarin.Android.Support.Compat" Version="27.0.2.1" />
+    <PackageReference Include="Xamarin.Android.Support.Core.UI" Version="27.0.2.1" />
+    <PackageReference Include="Xamarin.Android.Support.Core.Utils" Version="27.0.2.1" />
+    <PackageReference Include="Xamarin.Android.Support.Design" Version="27.0.2.1" />
+    <PackageReference Include="Xamarin.Android.Support.Fragment" Version="27.0.2.1" />
+    <PackageReference Include="Xamarin.Android.Support.Media.Compat" Version="27.0.2.1" />
+    <PackageReference Include="Xamarin.Android.Support.Transition" Version="27.0.2.1" />
+    <PackageReference Include="Xamarin.Android.Support.v4" Version="27.0.2.1" />
+    <PackageReference Include="Xamarin.Android.Support.v7.AppCompat" Version="27.0.2.1" />
+    <PackageReference Include="Xamarin.Android.Support.v7.CardView" Version="27.0.2.1" />
+    <PackageReference Include="Xamarin.Android.Support.v7.MediaRouter" Version="27.0.2.1" />
+    <PackageReference Include="Xamarin.Android.Support.v7.Palette" Version="27.0.2.1" />
+    <PackageReference Include="Xamarin.Android.Support.v7.RecyclerView" Version="27.0.2.1" />
+    <PackageReference Include="Xamarin.Android.Support.Vector.Drawable" Version="27.0.2.1" />
+    <PackageReference Include="Xamarin.Forms">
+      <Version>3.1.0.637273</Version>
+    </PackageReference>
+    <PackageReference Include="MvvmCross">
+      <Version>6.1.2</Version>
+    </PackageReference>
+    <PackageReference Include="MvvmCross.Forms">
+      <Version>6.1.2</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MainActivity.cs" />
+    <Compile Include="Resources\Resource.designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AboutResources.txt" />
+    <None Include="Properties\AndroidManifest.xml" />
+    <None Include="Assets\AboutAssets.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\Tabbar.axml" />
+    <AndroidResource Include="Resources\layout\Toolbar.axml" />
+    <AndroidResource Include="Resources\values\styles.xml" />
+    <AndroidResource Include="Resources\drawable\icon.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\icon.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\icon.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TipCalc.Core\TipCalc.Core.csproj">
+      <Project>{278DBED9-619C-4998-B734-4A4CC69C8269}</Project>
+      <Name>TipCalc.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TipCalc.Forms.UI\TipCalc.Forms.UI.csproj">
+      <Project>{AE0DF5A8-BE4F-4928-BF36-D386BB88BBA2}</Project>
+      <Name>TipCalc.Forms.UI</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

@@ -14,7 +14,7 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="number"
+        android:inputType="number|numberDecimal"
         android:textSize="24dp"
         android:gravity="right"
         local:MvxBind="Text SubTotal" />
