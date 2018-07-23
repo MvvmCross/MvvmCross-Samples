@@ -23,7 +23,10 @@
     <JavaOptions />
     <AndroidUseLatestPlatformSdk>true</AndroidUseLatestPlatformSdk>
     <TargetFrameworkVersion>v8.1</TargetFrameworkVersion>
-    <AndroidLinkSkip></AndroidLinkSkip>
+    <AndroidLinkSkip>
+    </AndroidLinkSkip>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -67,9 +70,6 @@
     <Reference Include="System.Xml.Serialization">
       <Private>True</Private>
       <HintPath>..\packages\MvvmCross.PortableSupport.3.1.1\lib\MonoAndroid\System.Xml.Serialization.dll</HintPath>
-    </Reference>
-    <Reference Include="MvvmCross">
-      <HintPath>..\packages\MvvmCross.6.0.0-beta.7\lib\monoandroid80\MvvmCross.dll</HintPath>
     </Reference>
     <Reference Include="Java.Interop" />
     <Reference Include="System.Runtime" />
@@ -133,7 +133,6 @@
     <AndroidResource Include="Resources\Layout\Test_Command.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
-    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\Layout\Main.axml" />
@@ -155,6 +154,17 @@
     <AndroidResource Include="Resources\Values\SplashStyle.xml" />
     <AndroidResource Include="Resources\Drawable\splash.png" />
   </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETCore.Platforms">
+      <Version>2.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="MvvmCross">
+      <Version>6.0.0-beta.7</Version>
+    </PackageReference>
+    <PackageReference Include="NETStandard.Library">
+      <Version>2.0.1</Version>
+    </PackageReference>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
      Other similar extension points exist, see Microsoft.Common.targets.
@@ -163,5 +173,4 @@
   <Target Name="AfterBuild">
   </Target>
   -->
-  <Import Project="..\packages\NETStandard.Library.2.0.1\build\netstandard2.0\NETStandard.Library.targets" Condition="Exists('..\packages\NETStandard.Library.2.0.1\build\netstandard2.0\NETStandard.Library.targets')" />
 </Project>
