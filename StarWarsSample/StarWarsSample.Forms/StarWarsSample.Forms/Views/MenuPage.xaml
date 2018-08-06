@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<views:MvxContentPage
+    x:TypeArguments="viewModels:MenuViewModel"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:views="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
+    xmlns:mvx="clr-namespace:MvvmCross.Forms.Bindings;assembly=MvvmCross.Forms"
+    xmlns:viewModels="clr-namespace:StarWarsSample.Core.ViewModels;assembly=StarWarsSample.Core"
+    xmlns:local="clr-namespace:StarWarsSample.Core;assembly=StarWarsSample.Core"
+    xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+    x:Class="StarWarsSample.Forms.UI.Views.MenuPage"
+    Title="Menu"
+    BackgroundColor="#1A1A1A">
+    <ContentPage.Content>
+        <Grid Margin="0, 20, 0, 20" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand">
+                <ffimageloading:CachedImage
+                    HorizontalOptions="Fill" VerticalOptions="Fill"
+                    HeightRequest="190" DownsampleToViewSize="True"
+                    Source="menu_header_background.png" />
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</views:MvxContentPage>

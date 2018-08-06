@@ -170,6 +170,10 @@
       <Project>{C8D72805-91D3-48B5-8F5B-44B9263198B6}</Project>
       <Name>StarWarsSample.Core</Name>
     </ProjectReference>
+    <ProjectReference Include="..\StarWarsSample.Forms\StarWarsSample.Forms\StarWarsSample.Forms.UI.csproj">
+      <Project>{872239d6-6c96-429b-84f5-a768ad993873}</Project>
+      <Name>StarWarsSample.Forms.UI</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <ProjectExtensions>
