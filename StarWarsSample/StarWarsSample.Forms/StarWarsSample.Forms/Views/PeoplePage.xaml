@@ -1,15 +1,15 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage x:TypeArguments="viewModels:PeopleViewModel"
+<?xml version="1.0" encoding="utf-8" ?>
+<views:MvxContentPage x:TypeArguments="viewModels:PeopleViewModel"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:view="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
     xmlns:mvx="clr-namespace:MvvmCross.Forms.Bindings;assembly=MvvmCross.Forms"
+    xmlns:views="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
     xmlns:viewModels="clr-namespace:StarWarsSample.Core.ViewModels;assembly=StarWarsSample.Core"
     x:Class="StarWarsSample.Forms.UI.Views.PeoplePage"
     mvx:Bi.nd="Title [TargetPeople]"
     BackgroundImage="Background.jpg">
     <ContentPage.Content>
-        <view:MvxListView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
+        <views:MvxListView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
             ItemsSource="{mvx:MvxBind People}" ItemClick="{mvx:MvxBind PersonSelectedCommand}"
             SelectedItem="{mvx:MvxBind PersonSelectedCommand}"
             IsPullToRefreshEnabled="True" RefreshCommand="{mvx:MvxBind RefreshPeopleCommand}"
@@ -17,15 +17,15 @@
             SeparatorColor="White" SeparatorVisibility="Default">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <view:MvxViewCell>
+                    <views:MvxViewCell>
                         <Label FontSize="Medium"
                                HorizontalOptions="Start" HorizontalTextAlignment="Start"
                                VerticalOptions="Center" VerticalTextAlignment="Center"
                                TextColor="#C1272C" FontAttributes="Bold"
                                mvx:Bi.nd="Text Name" />
-                    </view:MvxViewCell>
+                    </views:MvxViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
-        </view:MvxListView>
+        </views:MvxListView>
     </ContentPage.Content>
-</ContentPage>
+</views:MvxContentPage>

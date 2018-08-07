@@ -13,7 +13,7 @@ namespace StarWarsSample.Forms.Droid
         Theme = "@style/MainTheme",
         ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation,
         LaunchMode = LaunchMode.SingleTask)]
-    public class MainActivity : MvxFormsAppCompatActivity
+    public class RootActivity : MvxFormsAppCompatActivity
     {
         protected override void OnCreate(Bundle bundle)
         {

@@ -6,7 +6,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarWarsSample.Droid", "Sta
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarWarsSample.iOS", "StarWarsSample.iOS\StarWarsSample.iOS.csproj", "{4F3928A0-0F5C-496C-806A-09FD5C1975C8}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StarWarsSample.Core", "StarWarsSample.Core\StarWarsSample.Core.csproj", "{C8D72805-91D3-48B5-8F5B-44B9263198B6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarWarsSample.Core", "StarWarsSample.Core\StarWarsSample.Core.csproj", "{C8D72805-91D3-48B5-8F5B-44B9263198B6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarWarsSample.Forms.Droid", "StarWarsSample.Forms\StarWarsSample.Forms.Android\StarWarsSample.Forms.Droid.csproj", "{B1300D72-F622-4165-A60D-22D25D214767}"
 EndProject
@@ -155,7 +155,7 @@ Global
 		{FD7A86B4-D03E-4255-A066-0594E3C2EC14}.AppStore|iPhone.Build.0 = AppStore|iPhone
 		{FD7A86B4-D03E-4255-A066-0594E3C2EC14}.AppStore|iPhoneSimulator.ActiveCfg = AppStore|iPhoneSimulator
 		{FD7A86B4-D03E-4255-A066-0594E3C2EC14}.AppStore|iPhoneSimulator.Build.0 = AppStore|iPhoneSimulator
-		{FD7A86B4-D03E-4255-A066-0594E3C2EC14}.Debug|Any CPU.ActiveCfg = Debug|iPhone
+		{FD7A86B4-D03E-4255-A066-0594E3C2EC14}.Debug|Any CPU.ActiveCfg = Debug|iPhoneSimulator
 		{FD7A86B4-D03E-4255-A066-0594E3C2EC14}.Debug|iPhone.ActiveCfg = Debug|iPhone
 		{FD7A86B4-D03E-4255-A066-0594E3C2EC14}.Debug|iPhone.Build.0 = Debug|iPhone
 		{FD7A86B4-D03E-4255-A066-0594E3C2EC14}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
@@ -165,6 +165,7 @@ Global
 		{FD7A86B4-D03E-4255-A066-0594E3C2EC14}.Release|iPhone.Build.0 = Release|iPhone
 		{FD7A86B4-D03E-4255-A066-0594E3C2EC14}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
 		{FD7A86B4-D03E-4255-A066-0594E3C2EC14}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{FD7A86B4-D03E-4255-A066-0594E3C2EC14}.Debug|Any CPU.Build.0 = Debug|iPhoneSimulator
 		{872239D6-6C96-429B-84F5-A768AD993873}.Ad-Hoc|Any CPU.ActiveCfg = Debug|Any CPU
 		{872239D6-6C96-429B-84F5-A768AD993873}.Ad-Hoc|Any CPU.Build.0 = Debug|Any CPU
 		{872239D6-6C96-429B-84F5-A768AD993873}.Ad-Hoc|iPhone.ActiveCfg = Debug|Any CPU
@@ -199,22 +200,5 @@ Global
 	GlobalSection(MonoDevelopProperties) = preSolution
 		Policies = $0
 		$0.TextStylePolicy = $5
-		$1.inheritsSet = null
-		$1.scope = application/android+xml
-		$0.XmlFormattingPolicy = $6
-		$2.DefaultFormat = $3
-		$3.AttributesInNewLine = True
-		$3.AlignAttributes = True
-		$2.scope = application/android+xml
-		$0.DotNetNamingPolicy = $4
-		$4.DirectoryNamespaceAssociation = PrefixedHierarchical
-		$5.inheritsSet = null
-		$5.scope = text/microsoft-resx
-		$6.DefaultFormat = $7
-		$7.ContentIndentString = "    "
-		$7.MaxAttributesPerLine = 2
-		$7.AttributesIndentString = "    "
-		$7.AlignAttributes = True
-		$6.scope = text/microsoft-resx
 	EndGlobalSection
 EndGlobal
