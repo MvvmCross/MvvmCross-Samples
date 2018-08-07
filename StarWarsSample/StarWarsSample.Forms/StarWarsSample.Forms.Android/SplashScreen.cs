@@ -5,7 +5,7 @@ using Android.OS;
 using MvvmCross.Forms.Platforms.Android.Views;
 
 namespace StarWarsSample.Forms.Droid
-{    
+{
     [Activity(
         Label = "StarWarsSample.Forms",
         MainLauncher = true,
@@ -19,6 +19,12 @@ namespace StarWarsSample.Forms.Droid
         public SplashScreen()
             : base(Resource.Layout.SplashScreen)
         {
+        }
+
+        protected override void RunAppStart(Bundle bundle)
+        {
+            StartActivity(typeof(RootActivity));
+            base.RunAppStart(bundle);
         }
     }
 }

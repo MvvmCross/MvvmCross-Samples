@@ -101,45 +101,37 @@
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">
       <Visible>false</Visible>
     </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon1024.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon180.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon167.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon152.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon120.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon87.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon80.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon76.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon60.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon58.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon40.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon29.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon20.png">
-      <Visible>false</Visible>
-    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-small%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-small%403x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-40%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-60%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-60%403x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-small.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-40.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-76.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-76%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-167.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\splash1242x2208.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Default-750%402x~iphone6-portrait_750x1334.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\splash2208x1242.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\splash2048x2732.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Default%402x~iphone_640x960.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Default-568h%402x~iphone_640x1136.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Default-Portrait~ipad_768x1024.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Default-Portrait%402x~ipad_1536x2048.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Default-Landscape~ipad_1024x768.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Default-Landscape%402x~ipad_2048x1536.png" />
+    <ImageAsset Include="Assets.xcassets\ic_another_option.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\ic_another_option.imageset\anotheroption1.pdf" />
+    <ImageAsset Include="Assets.xcassets\ic_menu.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\ic_menu.imageset\menu.pdf" />
+    <ImageAsset Include="Assets.xcassets\ic_people.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\ic_people.imageset\people.pdf" />
+    <ImageAsset Include="Assets.xcassets\ic_planets.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\ic_planets.imageset\planet.pdf" />
+    <ImageAsset Include="Assets.xcassets\ic_statistics.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\ic_statistics.imageset\estadisticas.pdf" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -196,5 +188,27 @@
       <Project>{872239D6-6C96-429B-84F5-A768AD993873}</Project>
       <Name>StarWarsSample.Forms.UI</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Assets.xcassets\ic_another_option.imageset\" />
+    <Folder Include="Assets.xcassets\ic_menu.imageset\" />
+    <Folder Include="Assets.xcassets\ic_people.imageset\" />
+    <Folder Include="Assets.xcassets\ic_planets.imageset\" />
+    <Folder Include="Assets.xcassets\ic_statistics.imageset\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Background.jpg" />
+    <BundleResource Include="Resources\char1.png" />
+    <BundleResource Include="Resources\char2.png" />
+    <BundleResource Include="Resources\img_0.png" />
+    <BundleResource Include="Resources\img_1.png" />
+    <BundleResource Include="Resources\menu_header_background.png" />
+    <BundleResource Include="Resources\Person_Header.png" />
+    <BundleResource Include="Resources\Planet_Header.jpg" />
+    <BundleResource Include="Resources\profile.png" />
+    <BundleResource Include="Resources\starwars.json" />
+    <BundleResource Include="Resources\starwars2.json" />
+    <BundleResource Include="Resources\weapon.png" />
+    <BundleResource Include="Resources\weapon2.png" />
   </ItemGroup>
 </Project>

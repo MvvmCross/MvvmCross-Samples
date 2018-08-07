@@ -28,7 +28,9 @@
     <DefineConstants>DEBUG;</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <AndroidLinkMode>None</AndroidLinkMode>
+    <AndroidHttpClientHandlerType>Xamarin.Android.Net.AndroidClientHandler</AndroidHttpClientHandlerType>
+    <AndroidTlsProvider>btls</AndroidTlsProvider>
+    <AndroidSupportedAbis>x86</AndroidSupportedAbis>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -142,7 +144,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
-    <None Include="Assets\AboutAssets.txt" />
     <None Include="Properties\AndroidManifest.xml" />
   </ItemGroup>
   <ItemGroup>
@@ -150,21 +151,20 @@
     <AndroidResource Include="Resources\layout\Toolbar.axml" />
     <AndroidResource Include="Resources\values\styles.xml" />
     <AndroidResource Include="Resources\values\colors.xml" />
-    <AndroidResource Include="Resources\mipmap-anydpi-v26\icon.xml" />
-    <AndroidResource Include="Resources\mipmap-anydpi-v26\icon_round.xml" />
     <AndroidResource Include="Resources\mipmap-hdpi\Icon.png" />
-    <AndroidResource Include="Resources\mipmap-hdpi\launcher_foreground.png" />
     <AndroidResource Include="Resources\mipmap-mdpi\Icon.png" />
-    <AndroidResource Include="Resources\mipmap-mdpi\launcher_foreground.png" />
     <AndroidResource Include="Resources\mipmap-xhdpi\Icon.png" />
-    <AndroidResource Include="Resources\mipmap-xhdpi\launcher_foreground.png" />
     <AndroidResource Include="Resources\mipmap-xxhdpi\Icon.png" />
-    <AndroidResource Include="Resources\mipmap-xxhdpi\launcher_foreground.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\Icon.png" />
-    <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
+    <AndroidResource Include="Resources\drawable\another_option.xml" />
+    <AndroidResource Include="Resources\drawable\people.xml" />
+    <AndroidResource Include="Resources\drawable\planet.xml" />
+    <AndroidResource Include="Resources\drawable\statistics.xml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />
+    <Folder Include="Resources\anim\" />
+    <Folder Include="Assets\imgs\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\StarWarsSample.Core\StarWarsSample.Core.csproj">
@@ -210,6 +210,16 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\drawable-nodpi\profile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\imgs\char1.png" />
+    <AndroidAsset Include="Assets\imgs\char2.png" />
+    <AndroidAsset Include="Assets\imgs\img_0.png" />
+    <AndroidAsset Include="Assets\imgs\img_1.png" />
+    <AndroidAsset Include="Assets\imgs\weapon.png" />
+    <AndroidAsset Include="Assets\imgs\weapon2.png" />
+    <AndroidAsset Include="Assets\starwars.json" />
+    <AndroidAsset Include="Assets\starwars2.json" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>
