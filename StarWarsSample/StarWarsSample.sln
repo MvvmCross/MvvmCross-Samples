@@ -200,5 +200,16 @@ Global
 	GlobalSection(MonoDevelopProperties) = preSolution
 		Policies = $0
 		$0.TextStylePolicy = $5
+		$0.TextStylePolicy = $6
+		$6.FileWidth = 80
+		$6.TabsToSpaces = True
+		$6.scope = application/xaml+xml
+		$0.XmlFormattingPolicy = $7
+		$7.DefaultFormat = $8
+		$8.AttributesInNewLine = True
+		$8.MaxAttributesPerLine = 1
+		$8.AlignAttributes = True
+		$7.scope = application/xaml+xml
+		$0.StandardHeader = $9
 	EndGlobalSection
 EndGlobal

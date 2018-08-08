@@ -7,12 +7,12 @@ using Xamarin.Forms;
 namespace StarWarsSample.Forms.UI.Views
 {
     [MvxMasterDetailPagePresentation(MasterDetailPosition.Master)]
-	public partial class MenuPage : MvxContentPage<MenuViewModel>
-	{
-		public MenuPage ()
-		{
-			InitializeComponent();
-		}
+    public partial class MenuPage : MvxContentPage<MenuViewModel>
+    {
+        public MenuPage()
+        {
+            InitializeComponent();
+        }
 
         public void ToggleClicked(object sender, EventArgs e)
         {
@@ -22,5 +22,5 @@ namespace StarWarsSample.Forms.UI.Views
                 md.IsPresented = !md.IsPresented;
             }
         }
-	}
+    }
 }

@@ -8,21 +8,32 @@
     x:Class="StarWarsSample.Forms.UI.Views.PeoplePage"
     mvx:Bi.nd="Title [TargetPeople]"
     BackgroundImage="Background.jpg">
-    <ContentPage.Content>
-        <views:MvxListView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
-            ItemsSource="{mvx:MvxBind People}" ItemClick="{mvx:MvxBind PersonSelectedCommand}"
+    <ContentPage.Content> 
+        <views:MvxListView 
+            HorizontalOptions="FillAndExpand" 
+            VerticalOptions="FillAndExpand"
+            ItemsSource="{mvx:MvxBind People}" 
+            ItemClick="{mvx:MvxBind PersonSelectedCommand}"
             SelectedItem="{mvx:MvxBind PersonSelectedCommand}"
-            IsPullToRefreshEnabled="True" RefreshCommand="{mvx:MvxBind RefreshPeopleCommand}"
-            RowHeight="55" HasUnevenRows="False"
-            SeparatorColor="White" SeparatorVisibility="Default">
+            IsPullToRefreshEnabled="True"
+            RefreshCommand="{mvx:MvxBind RefreshPeopleCommand}"
+            BackgroundColor="Transparent"
+            RowHeight="55"
+            HasUnevenRows="False"
+            SeparatorColor="White" 
+            SeparatorVisibility="Default">
             <ListView.ItemTemplate>
-                <DataTemplate>
+                <DataTemplate> 
                     <views:MvxViewCell>
-                        <Label FontSize="Medium"
-                               HorizontalOptions="Start" HorizontalTextAlignment="Start"
-                               VerticalOptions="Center" VerticalTextAlignment="Center"
-                               TextColor="#C1272C" FontAttributes="Bold"
-                               mvx:Bi.nd="Text Name" />
+                        <Label  
+                            FontSize="Medium"
+                            HorizontalOptions="Start"
+                            HorizontalTextAlignment="Start"
+                            VerticalOptions="Center" 
+                            VerticalTextAlignment="Center"
+                            TextColor="#C1272C"
+                            FontAttributes="Bold"
+                            mvx:Bi.nd="Text Name" />
                     </views:MvxViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>

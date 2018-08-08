@@ -33,9 +33,9 @@ namespace StarWarsSample.iOS.Views.Cells
 
             this.DelayBind(
                 () =>
-            {
-                this.AddBindings(_lblName, "Text Name");
-            });
+                {
+                    this.AddBindings(_lblName, "Text Name");
+                });
         }
 
         protected override void CreateConstraints()
