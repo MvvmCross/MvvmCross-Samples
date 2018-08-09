@@ -122,16 +122,14 @@
     <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Default-Portrait%402x~ipad_1536x2048.png" />
     <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Default-Landscape~ipad_1024x768.png" />
     <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Default-Landscape%402x~ipad_2048x1536.png" />
-    <ImageAsset Include="Assets.xcassets\ic_another_option.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\ic_another_option.imageset\anotheroption1.pdf" />
-    <ImageAsset Include="Assets.xcassets\ic_menu.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\ic_menu.imageset\menu.pdf" />
-    <ImageAsset Include="Assets.xcassets\ic_people.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\ic_people.imageset\people.pdf" />
-    <ImageAsset Include="Assets.xcassets\ic_planets.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\ic_planets.imageset\planet.pdf" />
-    <ImageAsset Include="Assets.xcassets\ic_statistics.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\ic_statistics.imageset\estadisticas.pdf" />
+    <ImageAsset Include="Assets.xcassets\planet.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\planet.imageset\planet.pdf" />
+    <ImageAsset Include="Assets.xcassets\statistics.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\statistics.imageset\estadisticas.pdf" />
+    <ImageAsset Include="Assets.xcassets\people.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\people.imageset\people.pdf" />
+    <ImageAsset Include="Assets.xcassets\another_option.imageset\anotheroption1.pdf" />
+    <ImageAsset Include="Assets.xcassets\another_option.imageset\Contents.json" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -190,14 +188,13 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Assets.xcassets\ic_another_option.imageset\" />
     <Folder Include="Assets.xcassets\ic_menu.imageset\" />
-    <Folder Include="Assets.xcassets\ic_people.imageset\" />
-    <Folder Include="Assets.xcassets\ic_planets.imageset\" />
-    <Folder Include="Assets.xcassets\ic_statistics.imageset\" />
+    <Folder Include="Assets.xcassets\planet.imageset\" />
+    <Folder Include="Assets.xcassets\statistics.imageset\" />
+    <Folder Include="Assets.xcassets\people.imageset\" />
+    <Folder Include="Assets.xcassets\another_option.imageset\" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\Background.jpg" />
     <BundleResource Include="Resources\char1.png" />
     <BundleResource Include="Resources\char2.png" />
     <BundleResource Include="Resources\img_0.png" />
@@ -210,5 +207,9 @@
     <BundleResource Include="Resources\starwars2.json" />
     <BundleResource Include="Resources\weapon.png" />
     <BundleResource Include="Resources\weapon2.png" />
+    <BundleResource Include="Resources\ic_menu.png" />
+    <BundleResource Include="Resources\ic_menu%402x.png" />
+    <BundleResource Include="Resources\ic_menu%403x.png" />
+    <BundleResource Include="Resources\Background.png" />
   </ItemGroup>
 </Project>

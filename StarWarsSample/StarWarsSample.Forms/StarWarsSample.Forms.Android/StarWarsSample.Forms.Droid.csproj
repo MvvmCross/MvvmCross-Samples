@@ -160,6 +160,11 @@
     <AndroidResource Include="Resources\drawable\people.xml" />
     <AndroidResource Include="Resources\drawable\planet.xml" />
     <AndroidResource Include="Resources\drawable\statistics.xml" />
+    <AndroidResource Include="Resources\drawable-nodpi\Background.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\menu_header_background.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\People_Header.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\Planet_Header.jpg" />
+    <AndroidResource Include="Resources\drawable-nodpi\profile.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />
@@ -195,21 +200,6 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable-mdpi\screen.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Resources\drawable-nodpi\menu_header_background.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Resources\drawable-nodpi\Background.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Resources\drawable-nodpi\People_Header.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Resources\drawable-nodpi\Planet_Header.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Resources\drawable-nodpi\profile.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\imgs\char1.png" />

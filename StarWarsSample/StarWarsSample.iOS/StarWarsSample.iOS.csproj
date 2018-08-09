@@ -231,10 +231,10 @@
     <BundleResource Include="Resources\weapon.png" />
     <BundleResource Include="Resources\weapon2.png" />
     <BundleResource Include="Resources\Planet_Header.jpg" />
-    <BundleResource Include="Resources\Background.jpg" />
     <BundleResource Include="Resources\Person_Header.png" />
     <BundleResource Include="Resources\menu_header_background.png" />
     <BundleResource Include="Resources\profile.png" />
+    <BundleResource Include="Resources\Background.png" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Acr.UserDialogs">

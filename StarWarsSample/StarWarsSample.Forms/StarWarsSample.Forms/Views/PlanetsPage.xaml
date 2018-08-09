@@ -47,8 +47,8 @@
     <ContentPage.Content >
         <Grid>
             <Image 
-            Source="Background.jpg" 
-            Aspect="AspectFill" />
+                Source="Background" 
+                Aspect="AspectFill" />
             <views:MvxListView 
                 HorizontalOptions="FillAndExpand"
                 VerticalOptions="FillAndExpand"
