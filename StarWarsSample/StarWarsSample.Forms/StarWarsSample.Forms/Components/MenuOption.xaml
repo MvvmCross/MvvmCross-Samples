@@ -3,13 +3,14 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="StarWarsSample.Forms.UI.Components.MenuOption"
-    HeightRequest="40"
     Padding="10"
     Orientation="Horizontal">
     <Image 
         x:Name="Icon"
         Source="planet" 
-        Aspect="AspectFill" />
+        Aspect="AspectFit"
+        WidthRequest="30"
+        HeightRequest="30"/>
     <Label 
         x:Name="Label"
         HorizontalOptions="StartAndExpand"
