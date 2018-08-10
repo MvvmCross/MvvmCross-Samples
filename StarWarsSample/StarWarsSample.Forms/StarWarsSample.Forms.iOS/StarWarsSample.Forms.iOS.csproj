@@ -175,6 +175,12 @@
       <Version>2.4.3.840</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Forms" Version="3.1.0.583944" />
+    <PackageReference Include="Com.Airbnb.Xamarin.Forms.Lottie">
+      <Version>2.5.4</Version>
+    </PackageReference>
+    <PackageReference Include="Com.Airbnb.iOS.Lottie">
+      <Version>2.5.4</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>

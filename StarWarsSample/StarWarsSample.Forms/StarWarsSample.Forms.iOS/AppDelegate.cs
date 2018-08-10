@@ -1,5 +1,7 @@
-﻿using FFImageLoading.Forms.Platform;
+﻿using Acr.UserDialogs;
+using FFImageLoading.Forms.Platform;
 using Foundation;
+using Lottie.Forms.iOS.Renderers;
 using MvvmCross.Forms.Platforms.Ios.Core;
 using UIKit;
 
@@ -11,6 +13,7 @@ namespace StarWarsSample.Forms.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             CachedImageRenderer.Init();
+            AnimationViewRenderer.Init();
 
             return base.FinishedLaunching(app, options);
         }

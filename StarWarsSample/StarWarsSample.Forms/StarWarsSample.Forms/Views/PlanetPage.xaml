@@ -6,6 +6,7 @@
     xmlns:viewModels="clr-namespace:StarWarsSample.Core.ViewModels;assembly=StarWarsSample.Core"    
     xmlns:mvx="clr-namespace:MvvmCross.Forms.Bindings;assembly=MvvmCross.Forms"
     xmlns:component="using:StarWarsSample.Forms.UI.Components"
+    xmlns:lottie="clr-namespace:Lottie.Forms;assembly=Lottie.Forms" 
     x:Class="StarWarsSample.Forms.UI.Views.PlanetPage"
     BackgroundColor="Black">
     <ContentPage.Content>
@@ -80,8 +81,17 @@
                         BackgroundColor="Red"
                         CornerRadius="5"
                         TextColor="White"
+                        Command="{mvx:MvxBind DestroyPlanetCommand}"
                         mvx:Bi.nd="Text [Destroy]"/>
                 </StackLayout>
+                <lottie:AnimationView 
+                    x:Name="animationView" 
+                    IsVisible="false"
+                    Grid.Row="0"
+                    Grid.RowSpan="2"
+                    VerticalOptions="FillAndExpand"
+                    HorizontalOptions="FillAndExpand"
+                    Animation="starwars.json" />
             </Grid>
         </StackLayout>
     </ContentPage.Content>
