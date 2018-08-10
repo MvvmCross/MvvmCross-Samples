@@ -14,6 +14,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarWarsSample.Forms.iOS", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarWarsSample.Forms.UI", "StarWarsSample.Forms\StarWarsSample.Forms\StarWarsSample.Forms.UI.csproj", "{872239D6-6C96-429B-84F5-A768AD993873}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Forms", "Forms", "{8C3B9132-67EC-4D18-9446-FC5BD96CC601}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Traditional", "Traditional", "{D7182C2C-C26D-48A0-AD84-4A65F584196D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Ad-Hoc|Any CPU = Ad-Hoc|Any CPU
@@ -211,5 +215,12 @@ Global
 		$8.AlignAttributes = True
 		$7.scope = application/xaml+xml
 		$0.StandardHeader = $9
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B1300D72-F622-4165-A60D-22D25D214767} = {8C3B9132-67EC-4D18-9446-FC5BD96CC601}
+		{FD7A86B4-D03E-4255-A066-0594E3C2EC14} = {8C3B9132-67EC-4D18-9446-FC5BD96CC601}
+		{872239D6-6C96-429B-84F5-A768AD993873} = {8C3B9132-67EC-4D18-9446-FC5BD96CC601}
+		{7A6574CB-A020-4BC5-82BA-BC8FB9022349} = {D7182C2C-C26D-48A0-AD84-4A65F584196D}
+		{4F3928A0-0F5C-496C-806A-09FD5C1975C8} = {D7182C2C-C26D-48A0-AD84-4A65F584196D}
 	EndGlobalSection
 EndGlobal
