@@ -22,7 +22,7 @@ namespace StarWarsSample.Forms.UI.Views
 
             _showing = true;
 
-            AnimateButton();
+            await AnimateButton();
         }
 
         protected override void OnDisappearing()
