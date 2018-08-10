@@ -3,6 +3,7 @@ using FFImageLoading.Forms.Platform;
 using Foundation;
 using Lottie.Forms.iOS.Renderers;
 using MvvmCross.Forms.Platforms.Ios.Core;
+using OxyPlot.Xamarin.Forms.Platform.iOS;
 using UIKit;
 
 namespace StarWarsSample.Forms.iOS
@@ -14,6 +15,7 @@ namespace StarWarsSample.Forms.iOS
         {
             CachedImageRenderer.Init();
             AnimationViewRenderer.Init();
+            PlotViewRenderer.Init();
 
             return base.FinishedLaunching(app, options);
         }
