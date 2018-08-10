@@ -4,12 +4,12 @@ using StarWarsSample.Core.ViewModels;
 
 namespace StarWarsSample.Forms.UI.Views
 {
-    [MvxMasterDetailPagePresentation(MasterDetailPosition.Detail, NoHistory = true)]
-	public partial class PlanetsPage : MvxContentPage<PlanetsViewModel>
-	{
-		public PlanetsPage ()
-		{
-			InitializeComponent ();
-		}
-	}
+    [MvxMasterDetailPagePresentation(MasterDetailPosition.Detail, WrapInNavigationPage = true, NoHistory = true)]
+    public partial class PlanetsPage : MvxContentPage<PlanetsViewModel>
+    {
+        public PlanetsPage()
+        {
+            InitializeComponent();
+        }
+    }
 }

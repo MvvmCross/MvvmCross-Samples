@@ -18,8 +18,8 @@ namespace StarWarsSample.Forms
         {
             if (_firstTime)
             {
-                ViewModel.ShowPlanetsViewModelCommand.Execute(null);
                 ViewModel.ShowMenuViewModelCommand.Execute(null);
+                ViewModel.ShowPlanetsViewModelCommand.Execute(null);
 
                 _firstTime = false;
             }

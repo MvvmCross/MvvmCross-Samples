@@ -9,8 +9,8 @@
         x:Name="Icon"
         Source="planet" 
         Aspect="AspectFit"
-        WidthRequest="30"
-        HeightRequest="30"/>
+        WidthRequest="25"
+        HeightRequest="25"/>
     <Label 
         x:Name="Label"
         HorizontalOptions="StartAndExpand"

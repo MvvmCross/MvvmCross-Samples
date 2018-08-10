@@ -7,4 +7,5 @@
     <!-- Colors -->
     <Color x:Key="BackgroundGray">#333333</Color>
     <Color x:Key="MenuTextColor">#848585</Color>
+    <Color x:Key="MenuDividerColor">#636363</Color>
 </ResourceDictionary>

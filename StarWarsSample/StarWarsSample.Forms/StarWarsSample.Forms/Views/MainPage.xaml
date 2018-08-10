@@ -5,6 +5,5 @@
     xmlns:views="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
     xmlns:mvx="clr-namespace:MvvmCross.Forms.Bindings;assembly=MvvmCross.Forms"
     xmlns:viewModels="clr-namespace:StarWarsSample.Core.ViewModels;assembly=StarWarsSample.Core"
-    x:Class="StarWarsSample.Forms.MainPage"
-    Icon = "ic_menu">
+    x:Class="StarWarsSample.Forms.MainPage">
 </views:MvxMasterDetailPage>

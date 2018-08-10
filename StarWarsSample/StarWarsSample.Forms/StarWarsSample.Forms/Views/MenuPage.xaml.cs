@@ -6,7 +6,7 @@ using Xamarin.Forms;
 
 namespace StarWarsSample.Forms.UI.Views
 {
-    [MvxMasterDetailPagePresentation(MasterDetailPosition.Master, Icon = "ic_menu")]
+    [MvxMasterDetailPagePresentation(MasterDetailPosition.Master)]
     public partial class MenuPage : MvxContentPage<MenuViewModel>
     {
         public MenuPage()

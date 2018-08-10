@@ -7,6 +7,7 @@
     xmlns:mvx="clr-namespace:MvvmCross.Forms.Bindings;assembly=MvvmCross.Forms"
     xmlns:viewModels="clr-namespace:StarWarsSample.Core.ViewModels;assembly=StarWarsSample.Core"
     xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+    xmlns:fftransformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations"
     xmlns:component="using:StarWarsSample.Forms.UI.Components"
     x:Class="StarWarsSample.Forms.UI.Views.MenuPage"
     BackgroundColor="{StaticResource BackgroundGray}"
@@ -16,6 +17,7 @@
         <Grid
             HorizontalOptions="FillAndExpand" 
             VerticalOptions="FillAndExpand"
+            Padding="0"
             Margin="0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
@@ -24,13 +26,32 @@
             <Grid
                 Grid.Row="0" 
                 Margin="0"
+                Padding="0"
                 HorizontalOptions="FillAndExpand" 
                 VerticalOptions="StartAndExpand">
                 <Image
                     HorizontalOptions="FillAndExpand" 
                     VerticalOptions="FillAndExpand"
-                    HeightRequest="190" 
+                    Aspect="AspectFill"
+                    HeightRequest="130" 
                     Source="menu_header_background" />
+                <StackLayout
+                    Orientation="Horizontal"
+                    VerticalOptions="End"
+                    Padding="8">
+                    <ffimageloading:CachedImage
+                        HeightRequest="30"
+                        VerticalOptions="Center"
+                        Source="profile">
+                        <ffimageloading:CachedImage.Transformations>
+                            <fftransformations:CircleTransformation/>
+                        </ffimageloading:CachedImage.Transformations>
+                    </ffimageloading:CachedImage>
+                    <Label
+                        TextColor="White"
+                        Text="Darth Vader"
+                        VerticalOptions="Center"/>
+                </StackLayout>
             </Grid>
             <StackLayout
                 Grid.Row="1" 
@@ -42,17 +63,41 @@
                     HorizontalOptions="FillAndExpand" 
                     VerticalOptions="StartAndExpand"
                     mvx:Bi.nd="Text [TargetPlanets]"
-                    Source="planet" />
+                    Source="planet">
+                    <component:MenuOption.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="ToggleClicked" Command="{Binding ShowPlanetsCommand}"/>
+                    </component:MenuOption.GestureRecognizers>
+                </component:MenuOption>
+                <BoxView
+                    HorizontalOptions="FillAndExpand"
+                    HeightRequest="2"
+                    BackgroundColor="{StaticResource MenuDividerColor}" />
                 <component:MenuOption
                     HorizontalOptions="FillAndExpand" 
                     VerticalOptions="StartAndExpand"
                     mvx:Bi.nd="Text [TargetPeople]"
-                    Source="people" />
+                    Source="people">
+                    <component:MenuOption.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="ToggleClicked" Command="{Binding ShowPeopleCommand}"/>
+                    </component:MenuOption.GestureRecognizers>
+                </component:MenuOption>
+                <BoxView
+                    HorizontalOptions="FillAndExpand"
+                    HeightRequest="2"
+                    BackgroundColor="{StaticResource MenuDividerColor}" />
                 <component:MenuOption
                     HorizontalOptions="FillAndExpand" 
                     VerticalOptions="StartAndExpand"
                     mvx:Bi.nd="Text [Statistics]"
-                    Source="statistics" />
+                    Source="statistics">
+                    <component:MenuOption.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="ToggleClicked" Command="{Binding ShowStatusCommand}"/>
+                    </component:MenuOption.GestureRecognizers>
+                </component:MenuOption>
+                <BoxView
+                    HorizontalOptions="FillAndExpand"
+                    HeightRequest="2"
+                    BackgroundColor="{StaticResource MenuDividerColor}" />
                 <component:MenuOption
                     HorizontalOptions="FillAndExpand" 
                     VerticalOptions="StartAndExpand"
