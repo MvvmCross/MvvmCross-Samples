@@ -59,46 +59,46 @@
                 VerticalOptions="StartAndExpand"
                 Orientation="Vertical"
                 BackgroundColor="{StaticResource BackgroundGray}">
-                <component:MenuOption
+                <component:MenuOptionView
                     HorizontalOptions="FillAndExpand" 
                     VerticalOptions="StartAndExpand"
                     mvx:Bi.nd="Text [TargetPlanets]"
                     Source="planet">
-                    <component:MenuOption.GestureRecognizers>
+                    <component:MenuOptionView.GestureRecognizers>
                         <TapGestureRecognizer Tapped="ToggleClicked" Command="{Binding ShowPlanetsCommand}"/>
-                    </component:MenuOption.GestureRecognizers>
-                </component:MenuOption>
+                    </component:MenuOptionView.GestureRecognizers>
+                </component:MenuOptionView>
                 <BoxView
                     HorizontalOptions="FillAndExpand"
                     HeightRequest="2"
                     BackgroundColor="{StaticResource MenuDividerColor}" />
-                <component:MenuOption
+                <component:MenuOptionView
                     HorizontalOptions="FillAndExpand" 
                     VerticalOptions="StartAndExpand"
                     mvx:Bi.nd="Text [TargetPeople]"
                     Source="people">
-                    <component:MenuOption.GestureRecognizers>
+                    <component:MenuOptionView.GestureRecognizers>
                         <TapGestureRecognizer Tapped="ToggleClicked" Command="{Binding ShowPeopleCommand}"/>
-                    </component:MenuOption.GestureRecognizers>
-                </component:MenuOption>
+                    </component:MenuOptionView.GestureRecognizers>
+                </component:MenuOptionView>
                 <BoxView
                     HorizontalOptions="FillAndExpand"
                     HeightRequest="2"
                     BackgroundColor="{StaticResource MenuDividerColor}" />
-                <component:MenuOption
+                <component:MenuOptionView
                     HorizontalOptions="FillAndExpand" 
                     VerticalOptions="StartAndExpand"
                     mvx:Bi.nd="Text [Statistics]"
                     Source="statistics">
-                    <component:MenuOption.GestureRecognizers>
+                    <component:MenuOptionView.GestureRecognizers>
                         <TapGestureRecognizer Tapped="ToggleClicked" Command="{Binding ShowStatusCommand}"/>
-                    </component:MenuOption.GestureRecognizers>
-                </component:MenuOption>
+                    </component:MenuOptionView.GestureRecognizers>
+                </component:MenuOptionView>
                 <BoxView
                     HorizontalOptions="FillAndExpand"
                     HeightRequest="2"
                     BackgroundColor="{StaticResource MenuDividerColor}" />
-                <component:MenuOption
+                <component:MenuOptionView
                     HorizontalOptions="FillAndExpand" 
                     VerticalOptions="StartAndExpand"
                     mvx:Bi.nd="Text [AnotherOption]"

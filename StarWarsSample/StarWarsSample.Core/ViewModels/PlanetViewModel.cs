@@ -6,6 +6,7 @@ using MvvmCross.Navigation;
 using MvvmCross.ViewModels;
 using StarWarsSample.Core.Models;
 using StarWarsSample.Core.MvxInteraction;
+using StarWarsSample.Core.Resources;
 using StarWarsSample.Core.Services.Interfaces;
 using StarWarsSample.Core.ViewModelResults;
 
@@ -69,10 +70,10 @@ namespace StarWarsSample.Core.ViewModels
         {
             var destroy = await _userDialogs.ConfirmAsync(new ConfirmConfig
             {
-                Title = "Destroy Planet",
-                Message = "Sir, are you sure you want to destroy this planet?",
-                OkText = "YES",
-                CancelText = "No"
+                Title = Strings.DestroyPlanet,
+                Message = Strings.SirAreYouSureYouWantToDestroyThisPlanet,
+                OkText = Strings.Yes,
+                CancelText = Strings.No
             });
 
             if (!destroy)

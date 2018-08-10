@@ -201,7 +201,6 @@
     <BundleResource Include="Resources\img_1.png" />
     <BundleResource Include="Resources\menu_header_background.png" />
     <BundleResource Include="Resources\Person_Header.png" />
-    <BundleResource Include="Resources\Planet_Header.jpg" />
     <BundleResource Include="Resources\profile.png" />
     <BundleResource Include="Resources\starwars.json" />
     <BundleResource Include="Resources\starwars2.json" />
@@ -211,5 +210,6 @@
     <BundleResource Include="Resources\ic_menu%402x.png" />
     <BundleResource Include="Resources\ic_menu%403x.png" />
     <BundleResource Include="Resources\Background.png" />
+    <BundleResource Include="Resources\Planet_Header.png" />
   </ItemGroup>
 </Project>

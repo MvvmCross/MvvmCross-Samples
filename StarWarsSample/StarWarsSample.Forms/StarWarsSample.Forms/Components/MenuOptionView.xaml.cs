@@ -3,9 +3,9 @@ using Xamarin.Forms;
 
 namespace StarWarsSample.Forms.UI.Components
 {
-    public partial class MenuOption : StackLayout
+    public partial class MenuOptionView : StackLayout
     {
-        public MenuOption()
+        public MenuOptionView()
         {
             InitializeComponent();
         }

@@ -163,8 +163,8 @@
     <AndroidResource Include="Resources\drawable-nodpi\Background.png" />
     <AndroidResource Include="Resources\drawable-nodpi\menu_header_background.png" />
     <AndroidResource Include="Resources\drawable-nodpi\People_Header.png" />
-    <AndroidResource Include="Resources\drawable-nodpi\Planet_Header.jpg" />
     <AndroidResource Include="Resources\drawable-nodpi\profile.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\Planet_Header.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />
