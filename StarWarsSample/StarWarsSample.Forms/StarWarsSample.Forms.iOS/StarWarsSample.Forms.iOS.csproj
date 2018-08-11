@@ -111,17 +111,6 @@
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-76.png" />
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-76%402x.png" />
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-167.png" />
-    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\splash1242x2208.png" />
-    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Default-750%402x~iphone6-portrait_750x1334.png" />
-    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\splash2208x1242.png" />
-    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\splash2048x2732.png" />
-    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Default%402x~iphone_640x960.png" />
-    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Default-568h%402x~iphone_640x1136.png" />
-    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Default-Portrait~ipad_768x1024.png" />
-    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Default-Portrait%402x~ipad_1536x2048.png" />
-    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Default-Landscape~ipad_1024x768.png" />
-    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Default-Landscape%402x~ipad_2048x1536.png" />
     <ImageAsset Include="Assets.xcassets\planet.imageset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\planet.imageset\planet.pdf" />
     <ImageAsset Include="Assets.xcassets\statistics.imageset\Contents.json" />
@@ -130,6 +119,7 @@
     <ImageAsset Include="Assets.xcassets\people.imageset\people.pdf" />
     <ImageAsset Include="Assets.xcassets\another_option.imageset\anotheroption1.pdf" />
     <ImageAsset Include="Assets.xcassets\another_option.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Image.imageset\Contents.json" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -220,5 +210,8 @@
     <BundleResource Include="Resources\ic_menu%403x.png" />
     <BundleResource Include="Resources\Background.png" />
     <BundleResource Include="Resources\Planet_Header.png" />
+    <BundleResource Include="Resources\launch_background.png" />
+    <BundleResource Include="Resources\launch_background%402x.png" />
+    <BundleResource Include="Resources\launch_background%403x.png" />
   </ItemGroup>
 </Project>
