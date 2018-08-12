@@ -208,5 +208,11 @@ namespace StarWarsSample.Core.Resources {
                 return ResourceManager.GetString("No", resourceCulture);
             }
         }
+        
+        public static string Close {
+            get {
+                return ResourceManager.GetString("Close", resourceCulture);
+            }
+        }
     }
 }
