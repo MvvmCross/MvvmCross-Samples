@@ -22,16 +22,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" image="launch_background.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ieq-bN-wsI">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <rect key="frame" x="-40" y="0.0" width="455" height="812"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="Ieq-bN-wsI" secondAttribute="bottom" id="ZWh-cC-OL3"/>
-                            <constraint firstAttribute="trailing" secondItem="Ieq-bN-wsI" secondAttribute="trailing" id="ekt-64-noe"/>
+                            <constraint firstAttribute="trailing" secondItem="Ieq-bN-wsI" secondAttribute="trailing" constant="-40" id="ekt-64-noe"/>
                             <constraint firstItem="Ieq-bN-wsI" firstAttribute="top" secondItem="yd7-JS-zBw" secondAttribute="top" id="iCm-VQ-Jnt"/>
-                            <constraint firstItem="Ieq-bN-wsI" firstAttribute="leading" secondItem="yd7-JS-zBw" secondAttribute="leading" id="uT1-0t-f10"/>
+                            <constraint firstItem="Ieq-bN-wsI" firstAttribute="leading" secondItem="yd7-JS-zBw" secondAttribute="leading" constant="-40" id="uT1-0t-f10"/>
                         </constraints>
                     </view>
                 </viewController>

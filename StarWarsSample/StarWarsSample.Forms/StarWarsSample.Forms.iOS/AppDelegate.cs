@@ -8,7 +8,7 @@ using UIKit;
 
 namespace StarWarsSample.Forms.iOS
 {
-    [Register("AppDelegate")]
+    [Register(nameof(AppDelegate))]
     public partial class AppDelegate : MvxFormsApplicationDelegate<MvxFormsIosSetup<Core.App, App>, Core.App, App>
     {
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
