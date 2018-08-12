@@ -5,7 +5,8 @@
     xmlns:views="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
     xmlns:mvx="clr-namespace:MvvmCross.Forms.Bindings;assembly=MvvmCross.Forms"
     xmlns:viewModels="clr-namespace:StarWarsSample.Core.ViewModels;assembly=StarWarsSample.Core"
-    xmlns:selector="clr-namespace:StarWarsSample.Forms.UI.TemplateSelectors;assembly=StarWarsSample.Forms.UI"                  
+    xmlns:selector="clr-namespace:StarWarsSample.Forms.UI.TemplateSelectors"                  
+    xmlns:behavior="clr-namespace:StarWarsSample.Forms.UI.Behaviors"
     x:Class="StarWarsSample.Forms.UI.Views.PlanetsPage"
     mvx:Bi.nd="Title [TargetPlanets]">
     <ContentPage.Resources>
@@ -61,6 +62,9 @@
                 RowHeight="55"
                 BackgroundColor="Transparent"
                 SeparatorColor="White">
+                <ListView.Behaviors>  
+                    <behavior:InfiniteScroll LoadMoreCommand="{Binding FetchPlanetCommand}" />  
+                </ListView.Behaviors>
             </views:MvxListView>
         </Grid>
     </ContentPage.Content>

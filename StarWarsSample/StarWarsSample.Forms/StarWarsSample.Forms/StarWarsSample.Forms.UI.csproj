@@ -55,5 +55,6 @@
     <Folder Include="TemplateSelectors\" />
     <Folder Include="Styles\" />
     <Folder Include="Components\" />
+    <Folder Include="Behaviors\" />
   </ItemGroup>
 </Project>
