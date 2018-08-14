@@ -7090,7 +7090,7 @@ namespace StarWarsSample.Forms.Droid
 			public const int people = 2130837808;
 			
 			// aapt resource value: 0x7f020131
-			public const int People_Header = 2130837809;
+			public const int Person_Header = 2130837809;
 			
 			// aapt resource value: 0x7f020132
 			public const int planet = 2130837810;

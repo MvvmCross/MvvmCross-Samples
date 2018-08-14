@@ -166,7 +166,7 @@
     <AndroidResource Include="Resources\drawable\statistics.xml" />
     <AndroidResource Include="Resources\drawable-nodpi\Background.png" />
     <AndroidResource Include="Resources\drawable-nodpi\menu_header_background.png" />
-    <AndroidResource Include="Resources\drawable-nodpi\People_Header.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\Person_Header.png" />
     <AndroidResource Include="Resources\drawable-nodpi\profile.png" />
     <AndroidResource Include="Resources\drawable-nodpi\Planet_Header.png" />
     <AndroidResource Include="Resources\mipmap-hdpi\icon.png" />
@@ -178,7 +178,6 @@
   <ItemGroup>
     <Folder Include="Resources\drawable\" />
     <Folder Include="Resources\anim\" />
-    <Folder Include="Assets\imgs\" />
     <Folder Include="Resources\mipmap-hdpi\" />
     <Folder Include="Resources\mipmap-mdpi\" />
     <Folder Include="Resources\mipmap-xhdpi\" />
@@ -216,12 +215,6 @@
     <AndroidResource Include="Resources\drawable-mdpi\screen.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\imgs\char1.png" />
-    <AndroidAsset Include="Assets\imgs\char2.png" />
-    <AndroidAsset Include="Assets\imgs\img_0.png" />
-    <AndroidAsset Include="Assets\imgs\img_1.png" />
-    <AndroidAsset Include="Assets\imgs\weapon.png" />
-    <AndroidAsset Include="Assets\imgs\weapon2.png" />
     <AndroidAsset Include="Assets\starwars.json" />
     <AndroidAsset Include="Assets\starwars2.json" />
   </ItemGroup>
