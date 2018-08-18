@@ -8,7 +8,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="MvvmCross" Version="6.0.0-beta.7" />
+    <PackageReference Include="MvvmCross" Version="6.1.2" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />
