@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<views:MvxContentPage x:TypeArguments="viewModels:PlanetViewModel"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:views="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
+    xmlns:viewModels="clr-namespace:StarWarsSample.Core.ViewModels;assembly=StarWarsSample.Core"    
+    xmlns:mvx="clr-namespace:MvvmCross.Forms.Bindings;assembly=MvvmCross.Forms"
+    xmlns:component="using:StarWarsSample.Forms.UI.Components"
+    xmlns:lottie="clr-namespace:Lottie.Forms;assembly=Lottie.Forms" 
+    x:Class="StarWarsSample.Forms.UI.Views.PlanetPage"
+    BackgroundColor="Black">
+    <ContentPage.Content>
+        <StackLayout>
+            <ScrollView>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Image
+                        Grid.Row="0"
+                        Source="Planet_Header"
+                        HorizontalOptions="FillAndExpand"
+                        Aspect="AspectFill"
+                        HeightRequest="180"/>
+                    <Label
+                        Grid.Row="0"
+                        FontSize="Large"
+                        TextColor="Red"
+                        Margin="16"
+                        FontAttributes="Bold"
+                        VerticalOptions="End" 
+                        HorizontalOptions="StartAndExpand" 
+                        mvx:Bi.nd="Text Planet.Name"/>
+                    <StackLayout
+                        Grid.Row="1"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="StartAndExpand">
+                        <component:InformationView 
+                            HorizontalOptions="FillAndExpand" 
+                            VerticalOptions="StartAndExpand"
+                            mvx:Bi.nd="LabelText [Climate]; ValueText Planet.Climate"/>
+                        <BoxView
+                            HorizontalOptions="FillAndExpand"
+                            HeightRequest="2"
+                            BackgroundColor="{StaticResource MenuDividerColor}" />
+                        <component:InformationView 
+                            HorizontalOptions="FillAndExpand" 
+                            VerticalOptions="StartAndExpand"
+                            mvx:Bi.nd="LabelText [Diameter]; ValueText Planet.Diameter"/>
+                        <BoxView
+                            HorizontalOptions="FillAndExpand"
+                            HeightRequest="2"
+                            BackgroundColor="{StaticResource MenuDividerColor}" />
+                        <component:InformationView 
+                            HorizontalOptions="FillAndExpand" 
+                            VerticalOptions="StartAndExpand"
+                            mvx:Bi.nd="LabelText [Gravity]; ValueText Planet.Gravity"/>
+                        <BoxView
+                            HorizontalOptions="FillAndExpand"
+                            HeightRequest="2"
+                            BackgroundColor="{StaticResource MenuDividerColor}" />
+                        <component:InformationView 
+                            HorizontalOptions="FillAndExpand" 
+                            VerticalOptions="StartAndExpand"
+                            mvx:Bi.nd="LabelText [Terrain]; ValueText Planet.Terrain"/>
+                        <BoxView
+                            HorizontalOptions="FillAndExpand"
+                            HeightRequest="2"
+                            BackgroundColor="{StaticResource MenuDividerColor}" />
+                        <component:InformationView 
+                            HorizontalOptions="FillAndExpand" 
+                            VerticalOptions="StartAndExpand"
+                            mvx:Bi.nd="LabelText [Population]; ValueText Planet.Population"/>
+                        <BoxView
+                            HorizontalOptions="FillAndExpand"
+                            HeightRequest="2"
+                            BackgroundColor="{StaticResource MenuDividerColor}" />
+                        <Button
+                            x:Name="Destroy"
+                            Margin="50, 20, 50, 20"
+                            BackgroundColor="Red"
+                            CornerRadius="5"
+                            TextColor="White"
+                            Command="{mvx:MvxBind DestroyPlanetCommand}"
+                            mvx:Bi.nd="Text [Destroy]"/>
+                    </StackLayout>
+                    <lottie:AnimationView 
+                        x:Name="animationView" 
+                        IsVisible="false"
+                        Grid.Row="0"
+                        Grid.RowSpan="2"
+                        VerticalOptions="FillAndExpand"
+                        HorizontalOptions="FillAndExpand"
+                        Animation="starwars.json" />
+                </Grid>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</views:MvxContentPage>

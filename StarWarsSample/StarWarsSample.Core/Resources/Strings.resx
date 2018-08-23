@@ -59,56 +59,76 @@
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
-    <xsd:schema id="root" xmlns=""
-        xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:schema id="root"
+                xmlns=""
+                xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
-        <xsd:element name="root" msdata:IsDataSet="true">
+        <xsd:element name="root"
+                     msdata:IsDataSet="true">
             <xsd:complexType>
                 <xsd:choice maxOccurs="unbounded">
                     <xsd:element name="metadata">
                         <xsd:complexType>
                             <xsd:sequence>
-                                <xsd:element name="value" type="xsd:string"
-                                    minOccurs="0" />
+                                <xsd:element name="value"
+                                             type="xsd:string"
+                                             minOccurs="0" />
                             </xsd:sequence>
-                            <xsd:attribute name="name" use="required"
-                                type="xsd:string" />
-                            <xsd:attribute name="type" type="xsd:string" />
-                            <xsd:attribute name="mimetype" type="xsd:string" />
+                            <xsd:attribute name="name"
+                                           use="required"
+                                           type="xsd:string" />
+                            <xsd:attribute name="type"
+                                           type="xsd:string" />
+                            <xsd:attribute name="mimetype"
+                                           type="xsd:string" />
                             <xsd:attribute ref="xml:space" />
                         </xsd:complexType>
                     </xsd:element>
                     <xsd:element name="assembly">
                         <xsd:complexType>
-                            <xsd:attribute name="alias" type="xsd:string" />
-                            <xsd:attribute name="name" type="xsd:string" />
+                            <xsd:attribute name="alias"
+                                           type="xsd:string" />
+                            <xsd:attribute name="name"
+                                           type="xsd:string" />
                         </xsd:complexType>
                     </xsd:element>
                     <xsd:element name="data">
                         <xsd:complexType>
                             <xsd:sequence>
-                                <xsd:element name="value" type="xsd:string"
-                                    minOccurs="0" msdata:Ordinal="1" />
-                                <xsd:element name="comment" type="xsd:string"
-                                    minOccurs="0" msdata:Ordinal="2" />
+                                <xsd:element name="value"
+                                             type="xsd:string"
+                                             minOccurs="0"
+                                             msdata:Ordinal="1" />
+                                <xsd:element name="comment"
+                                             type="xsd:string"
+                                             minOccurs="0"
+                                             msdata:Ordinal="2" />
                             </xsd:sequence>
-                            <xsd:attribute name="name" type="xsd:string"
-                                use="required" msdata:Ordinal="1" />
-                            <xsd:attribute name="type" type="xsd:string"
-                                msdata:Ordinal="3" />
-                            <xsd:attribute name="mimetype" type="xsd:string"
-                                msdata:Ordinal="4" />
+                            <xsd:attribute name="name"
+                                           type="xsd:string"
+                                           use="required"
+                                           msdata:Ordinal="1" />
+                            <xsd:attribute name="type"
+                                           type="xsd:string"
+                                           msdata:Ordinal="3" />
+                            <xsd:attribute name="mimetype"
+                                           type="xsd:string"
+                                           msdata:Ordinal="4" />
                             <xsd:attribute ref="xml:space" />
                         </xsd:complexType>
                     </xsd:element>
                     <xsd:element name="resheader">
                         <xsd:complexType>
                             <xsd:sequence>
-                                <xsd:element name="value" type="xsd:string"
-                                    minOccurs="0" msdata:Ordinal="1" />
+                                <xsd:element name="value"
+                                             type="xsd:string"
+                                             minOccurs="0"
+                                             msdata:Ordinal="1" />
                             </xsd:sequence>
-                            <xsd:attribute name="name" type="xsd:string"
-                                use="required" />
+                            <xsd:attribute name="name"
+                                           type="xsd:string"
+                                           use="required" />
                         </xsd:complexType>
                     </xsd:element>
                 </xsd:choice>
@@ -127,73 +147,116 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-    <data name="Population" xml:space="preserve">
+    <data name="Population"
+          xml:space="preserve">
     <value>Population</value> 
   </data>
-    <data name="Terrain" xml:space="preserve">
+    <data name="Terrain"
+          xml:space="preserve">
     <value>Terrain</value> 
   </data>
-    <data name="Gravity" xml:space="preserve">
+    <data name="Gravity"
+          xml:space="preserve">
     <value>Gravity</value> 
   </data>
-    <data name="Diameter" xml:space="preserve"> 
+    <data name="Diameter"
+          xml:space="preserve"> 
     <value>Diameter</value> 
   </data>
-    <data name="Climate" xml:space="preserve">
+    <data name="Climate"
+          xml:space="preserve">
     <value>Climate</value> 
   </data>
-    <data name="Name" xml:space="preserve">
+    <data name="Name"
+          xml:space="preserve">
     <value>Name</value> 
   </data>
-    <data name="Destroy" xml:space="preserve">
+    <data name="Destroy"
+          xml:space="preserve">
     <value>Destroy</value> 
   </data>
-    <data name="Statistics" xml:space="preserve">
+    <data name="Statistics"
+          xml:space="preserve">
     <value>Statistics</value> 
   </data>
-    <data name="DeathStarStatus" xml:space="preserve">
+    <data name="DeathStarStatus"
+          xml:space="preserve">
     <value>Death Star Status</value> 
   </data>
-    <data name="Time" xml:space="preserve">
+    <data name="Time"
+          xml:space="preserve">
     <value>Time</value> 
   </data>
-    <data name="Targets" xml:space="preserve">
+    <data name="Targets"
+          xml:space="preserve">
     <value>Targets</value> 
   </data>
-    <data name="AnotherOption" xml:space="preserve">
+    <data name="AnotherOption"
+          xml:space="preserve">
     <value>Another option</value> 
   </data>
-    <data name="Menu" xml:space="preserve"> 
+    <data name="Menu"
+          xml:space="preserve"> 
     <value>Menu</value> 
   </data>
-    <data name="TargetPlanets" xml:space="preserve">
+    <data name="TargetPlanets"
+          xml:space="preserve">
     <value>Target: Planets</value>  
   </data>
-    <data name="TargetPeople" xml:space="preserve">
+    <data name="TargetPeople"
+          xml:space="preserve">
     <value>Target: People</value> 
   </data>
-    <data name="Height" xml:space="preserve">
+    <data name="Height"
+          xml:space="preserve">
     <value>Height</value> 
   </data>
-    <data name="Mass" xml:space="preserve">
+    <data name="Mass"
+          xml:space="preserve">
     <value>Mass</value> 
   </data>
-    <data name="HairColor" xml:space="preserve">
+    <data name="HairColor"
+          xml:space="preserve">
     <value>Hair color</value> 
   </data>
-    <data name="SkinColor" xml:space="preserve">
+    <data name="SkinColor"
+          xml:space="preserve">
     <value>Skin color</value> 
   </data>
-    <data name="EyeColor" xml:space="preserve">
+    <data name="EyeColor"
+          xml:space="preserve">
     <value>Eye color</value> 
   </data>
-    <data name="BirthYear" xml:space="preserve">
+    <data name="BirthYear"
+          xml:space="preserve">
     <value>Birth year</value> 
   </data>
-    <data name="Gender" xml:space="preserve">
+    <data name="Gender"
+          xml:space="preserve">
     <value>Gender</value>   
   </data>
-    <data name="HomeWorld" xml:space="preserve">
+    <data name="HomeWorld"
+          xml:space="preserve">
     <value>Home world</value> 
+  </data>
+    <data name="DestroyPlanet"
+          xml:space="preserve">
+    <value>Destroy Planet</value> 
+  </data>
+    <data name="SirAreYouSureYouWantToDestroyThisPlanet"
+          xml:space="preserve">
+    <value>Sir, are you sure you want to destroy this planet?</value> 
+  </data>
+    <data name="Yes"
+          xml:space="preserve">
+    <value>Yes</value> 
+  </data>
+    <data name="No"
+          xml:space="preserve">
+    <value>No</value> 
+  </data>
+    <data name="Close"
+          xml:space="preserve">
+    <value>Close</value> 
   </data>
 </root>

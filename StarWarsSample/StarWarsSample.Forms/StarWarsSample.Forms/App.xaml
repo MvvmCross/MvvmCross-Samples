@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="clr-namespace:MvvCross.Forms.Core;assembly=MvvmCross.Forms"
+    xmlns:global="clr-namespace:StarWarsSample.Forms.UI"
+    xmlns:styles="using:StarWarsSample.Forms.UI.Styles"
+    x:Class="StarWarsSample.Forms.App">
+	<Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <styles:Colors />
+                <styles:Widgets />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+	</Application.Resources>
+</Application>

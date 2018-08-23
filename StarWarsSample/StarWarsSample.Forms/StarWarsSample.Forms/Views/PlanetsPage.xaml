@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<views:MvxContentPage x:TypeArguments="viewModels:PlanetsViewModel"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:views="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
+    xmlns:mvx="clr-namespace:MvvmCross.Forms.Bindings;assembly=MvvmCross.Forms"
+    xmlns:viewModels="clr-namespace:StarWarsSample.Core.ViewModels;assembly=StarWarsSample.Core"
+    xmlns:selector="clr-namespace:StarWarsSample.Forms.UI.TemplateSelectors"                  
+    xmlns:behavior="clr-namespace:StarWarsSample.Forms.UI.Behaviors"
+    x:Class="StarWarsSample.Forms.UI.Views.PlanetsPage"
+    mvx:Bi.nd="Title [TargetPlanets]">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <DataTemplate x:Key="planetNameTemplate">
+                <views:MvxViewCell>
+                    <Label 
+                        FontSize="Medium"
+                        Margin="10,0,0,0"
+                        HorizontalOptions="Start"
+                        HorizontalTextAlignment="Start"
+                        VerticalOptions="Center"
+                        VerticalTextAlignment="Center"
+                        TextColor="Red"
+                        FontAttributes="Bold"
+                        mvx:Bi.nd="Text Name" />
+                </views:MvxViewCell>
+            </DataTemplate>
+            <DataTemplate x:Key="whitePlanetNameTemplate">
+                <views:MvxViewCell>
+                    <Label 
+                        FontSize="Medium"
+                        Margin="10,0,0,0"
+                        HorizontalOptions="Start"
+                        HorizontalTextAlignment="Start"
+                        VerticalOptions="Center"
+                        VerticalTextAlignment="Center"
+                        TextColor="White"
+                        FontAttributes="Bold"
+                        mvx:Bi.nd="Text Name" />
+                </views:MvxViewCell>
+            </DataTemplate>
+            <selector:PlanetsTemplateSelector 
+                x:Key="planetsDataTemplateSelector"
+                NameTemplate="{StaticResource planetNameTemplate}"
+                WhiteNameTemplate="{StaticResource whitePlanetNameTemplate}" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content >
+        <Grid>
+            <Image 
+                Source="Background" 
+                Aspect="AspectFill" />
+            <views:MvxListView 
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand"
+                SelectionMode="None"
+                ItemsSource="{mvx:MvxBind Planets}" 
+                ItemClick="{mvx:MvxBind PlanetSelectedCommand}"
+                IsPullToRefreshEnabled="True" 
+                RefreshCommand="{mvx:MvxBind RefreshPlanetsCommand}"
+                ItemTemplate="{StaticResource planetsDataTemplateSelector}"
+                RowHeight="55"
+                BackgroundColor="Transparent"
+                SeparatorColor="White">
+                <ListView.Behaviors>  
+                    <behavior:InfiniteScroll LoadMoreCommand="{Binding FetchPlanetCommand}" />  
+                </ListView.Behaviors>
+            </views:MvxListView>
+        </Grid>
+    </ContentPage.Content>
+</views:MvxContentPage>

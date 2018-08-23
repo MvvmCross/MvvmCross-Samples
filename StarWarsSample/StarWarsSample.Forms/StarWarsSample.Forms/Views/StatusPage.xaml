@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<views:MvxContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:TypeArguments="viewModels:StatusViewModel"
+    xmlns:oxy="clr-namespace:OxyPlot.Xamarin.Forms;assembly=OxyPlot.Xamarin.Forms"
+    xmlns:mvx="clr-namespace:MvvmCross.Forms.Bindings;assembly=MvvmCross.Forms"
+    xmlns:views="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
+    xmlns:viewModels="clr-namespace:StarWarsSample.Core.ViewModels;assembly=StarWarsSample.Core"
+    x:Class="StarWarsSample.Forms.UI.Views.StatusPage"
+    mvx:Bi.nd="Title [Statistics]">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem 
+            Name="CloseMenuItem"
+            Order="Primary"
+            Text="{mvx:MvxBind [Close]}"
+            Command="{mvx:MvxBind CloseCommand}"
+            Priority="0" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <Grid>
+            <Image 
+                Source="Background" 
+                Aspect="AspectFill" />
+            <oxy:PlotView
+                Model="{mvx:MvxBind PlotModel}" 
+                VerticalOptions="Fill" 
+                HorizontalOptions="Fill" />
+        </Grid>
+    </ContentPage.Content>
+</views:MvxContentPage>

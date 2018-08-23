@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StackLayout
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="StarWarsSample.Forms.UI.Components.MenuOptionView"
+    Padding="10"
+    Orientation="Horizontal">
+    <Image 
+        x:Name="Icon"
+        Source="planet" 
+        Aspect="AspectFit"
+        WidthRequest="25"
+        HeightRequest="25"/>
+    <Label 
+        x:Name="Label"
+        HorizontalOptions="StartAndExpand"
+        VerticalOptions="Center"
+        TextColor="{StaticResource MenuTextColor}"/>
+</StackLayout>

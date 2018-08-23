@@ -184,5 +184,35 @@ namespace StarWarsSample.Core.Resources {
                 return ResourceManager.GetString("HomeWorld", resourceCulture);
             }
         }
+        
+        public static string DestroyPlanet {
+            get {
+                return ResourceManager.GetString("DestroyPlanet", resourceCulture);
+            }
+        }
+        
+        public static string SirAreYouSureYouWantToDestroyThisPlanet {
+            get {
+                return ResourceManager.GetString("SirAreYouSureYouWantToDestroyThisPlanet", resourceCulture);
+            }
+        }
+        
+        public static string Yes {
+            get {
+                return ResourceManager.GetString("Yes", resourceCulture);
+            }
+        }
+        
+        public static string No {
+            get {
+                return ResourceManager.GetString("No", resourceCulture);
+            }
+        }
+        
+        public static string Close {
+            get {
+                return ResourceManager.GetString("Close", resourceCulture);
+            }
+        }
     }
 }
