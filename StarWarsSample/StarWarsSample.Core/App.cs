@@ -19,7 +19,7 @@ namespace StarWarsSample.Core
                 .AsInterfaces()
                 .RegisterAsLazySingleton();
 
-            Mvx.RegisterSingleton<IUserDialogs>(() => UserDialogs.Instance);
+            Mvx.IoCProvider.RegisterSingleton<IUserDialogs>(() => UserDialogs.Instance);
 
             // register the appstart object
             RegisterCustomAppStart<AppStart>();
