@@ -1,4 +1,5 @@
-﻿using MvvmCross.Navigation;
+﻿using System.Threading.Tasks;
+using MvvmCross.Navigation;
 using MvvmCross.ViewModels;
 using StarWarsSample.Core.ViewModels;
 
@@ -11,9 +12,9 @@ namespace StarWarsSample.Core
         {
         }
 
-        protected override void NavigateToFirstViewModel(object hint = null)
+        protected override Task NavigateToFirstViewModel(object hint = null)
         {
-            NavigationService.Navigate<MainViewModel>();
+            return NavigationService.Navigate<MainViewModel>();
         }
     }
 }
