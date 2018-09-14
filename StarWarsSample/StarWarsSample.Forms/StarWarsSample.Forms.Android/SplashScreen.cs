@@ -1,4 +1,5 @@
-﻿using Android.App;
+﻿using System.Threading.Tasks;
+using Android.App;
 using Android.Content.PM;
 using Android.OS;
 using MvvmCross.Forms.Platforms.Android.Views;
@@ -20,10 +21,10 @@ namespace StarWarsSample.Forms.Droid
         {
         }
 
-        protected override void RunAppStart(Bundle bundle)
+        protected override Task RunAppStartAsync(Bundle bundle)
         {
             StartActivity(typeof(RootActivity));
-            base.RunAppStart(bundle);
+            return Task.CompletedTask;
         }
     }
 }

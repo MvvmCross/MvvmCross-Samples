@@ -11,7 +11,7 @@ namespace StarWarsSample.Forms.Droid
         {
             // workaround which should be removed when https://github.com/MvvmCross/MvvmCross/pull/2972 is released
             var presenter = base.CreateFormsPagePresenter(viewPresenter);
-            Mvx.RegisterSingleton<IMvxFormsPagePresenter>(presenter);
+            Mvx.IoCProvider.RegisterSingleton<IMvxFormsPagePresenter>(presenter);
             return presenter;
         }
     }

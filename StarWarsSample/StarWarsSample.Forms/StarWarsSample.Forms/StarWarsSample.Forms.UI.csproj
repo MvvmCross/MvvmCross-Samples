@@ -5,12 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="MvvmCross" Version="6.1.2" />
-    <PackageReference Include="MvvmCross.Forms" Version="6.1.2" />
-    <PackageReference Include="MvvmCross.Plugin.Json" Version="6.1.2" />
-    <PackageReference Include="MvvmCross.Plugin.JsonLocalization" Version="6.1.2" />
-    <PackageReference Include="MvvmCross.Plugin.Messenger" Version="6.1.2" />
-    <PackageReference Include="MvvmCross.Plugin.ResourceLoader" Version="6.1.2" />
     <PackageReference Include="Xamarin.FFImageLoading.Forms" Version="2.4.3.840" />
     <PackageReference Include="Xamarin.FFImageLoading.Svg" Version="2.4.3.840" />
     <PackageReference Include="Xamarin.FFImageLoading.Svg.Forms" Version="2.4.3.840" />
@@ -19,6 +13,12 @@
     <PackageReference Include="Acr.UserDialogs" Version="7.0.1" />
     <PackageReference Include="Com.Airbnb.Xamarin.Forms.Lottie" Version="2.5.4" />
     <PackageReference Include="OxyPlot.Xamarin.Forms" Version="1.0.0" />
+    <PackageReference Include="MvvmCross" Version="6.2.0" />
+    <PackageReference Include="MvvmCross.Forms" Version="6.2.0" />
+    <PackageReference Include="MvvmCross.Plugin.Json" Version="6.2.0" />
+    <PackageReference Include="MvvmCross.Plugin.JsonLocalization" Version="6.2.0" />
+    <PackageReference Include="MvvmCross.Plugin.Messenger" Version="6.2.0" />
+    <PackageReference Include="MvvmCross.Plugin.ResourceLoader" Version="6.2.0" />
   </ItemGroup>
 
   <ItemGroup>
