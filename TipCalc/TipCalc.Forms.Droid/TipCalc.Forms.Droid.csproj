@@ -63,10 +63,10 @@
       <Version>3.1.0.697729</Version>
     </PackageReference>
     <PackageReference Include="MvvmCross">
-      <Version>6.2.0</Version>
+      <Version>6.2.2</Version>
     </PackageReference>
     <PackageReference Include="MvvmCross.Forms">
-      <Version>6.2.0</Version>
+      <Version>6.2.2</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
