@@ -75,7 +75,7 @@
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.iOS" />
     <PackageReference Include="MvvmCross">
-      <Version>6.1.2</Version>
+      <Version>6.2.2</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
