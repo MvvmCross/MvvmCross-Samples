@@ -10,8 +10,8 @@ Checkout the "Artwork" folder to look at the designs for those platforms.
 
 ### Shared (Core and all platforms)
 - MvxCommands
-- [MvxInteraction](https://www.mvvmcross.com/documentation/fundamentals/mvxinteraction)
-- [MvxNotifyTask](https://www.mvvmcross.com/documentation/fundamentals/mvxnotifytask)
+- [MvxInteraction](https://www.mvvmcross.com/documentation/advanced/mvxinteraction)
+- [MvxNotifyTask](https://www.mvvmcross.com/documentation/advanced/mvxnotifytask)
 - Localization through .resx files
 - [IMvxNavigationService](https://www.mvvmcross.com/documentation/fundamentals/navigation)
 - [Color plugin](https://www.mvvmcross.com/documentation/plugins/color)
@@ -21,7 +21,7 @@ Checkout the "Artwork" folder to look at the designs for those platforms.
 - Charts from [OxyPlot](http://www.oxyplot.org/)
 
 ### Android
-- [MvxAppCompatViewPresenter](https://www.mvvmcross.com/documentation/presenters/android-view-presenter)
+- [MvxAppCompatViewPresenter](https://www.mvvmcross.com/documentation/platform/android/android-view-presenter)
 - Support packages
 - Fragments
 - `DrawerLayout`, `CoordinatorLayout`, `CollapsingToolbarLayout`, `MvxRecyclerView`, `MvxSwipeRefreshLayout`, `IMvxTemplateSelector`
@@ -33,7 +33,7 @@ Checkout the "Artwork" folder to look at the designs for those platforms.
 - Tibet bindings in .axml and fluent bindings in .cs
 
 ### iOS
-- [MvxIosViewPresenter](https://www.mvvmcross.com/documentation/platform/ios-view-presenter) (tabs)
+- [MvxIosViewPresenter](https://www.mvvmcross.com/documentation/platform/ios/ios-view-presenter) (tabs)
 - `MvxUIRefreshControl`, `MvxTableViewCell`, `MvxSimpleTableViewSource`, `MvxTableViewSource`
 - Custom MvxBindings
 - Custom controls
