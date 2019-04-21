@@ -16,14 +16,14 @@ namespace StarWarsSample.iOS
         {
             base.InitializeFirstChance();
 
-            Mvx.RegisterType<IMvxJsonConverter, MvxJsonConverter>();
+            Mvx.IoCProvider.RegisterType<IMvxJsonConverter, MvxJsonConverter>();
         }
 
         protected override void InitializeLastChance()
         {
             base.InitializeLastChance();
 
-            var registry = Mvx.Resolve<IMvxTargetBindingFactoryRegistry>();
+            var registry = Mvx.IoCProvider.Resolve<IMvxTargetBindingFactoryRegistry>();
             registry.RegisterFactory(new MvxCustomBindingFactory<UIViewController>("NetworkIndicator", (viewController) => new NetworkIndicatorTargetBinding(viewController)));
         }
 
