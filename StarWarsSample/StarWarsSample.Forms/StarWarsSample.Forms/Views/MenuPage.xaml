@@ -34,7 +34,7 @@
                     VerticalOptions="FillAndExpand"
                     Aspect="AspectFill"
                     HeightRequest="130" 
-                    Source="menu_header_background" />
+                    Source="{x:OnPlatform Android=menu_header_background, iOS=menu_header_background, UWP=menu_header_background.png}" />
                 <StackLayout
                     Orientation="Horizontal"
                     VerticalOptions="End"
@@ -42,7 +42,7 @@
                     <ffimageloading:CachedImage
                         HeightRequest="30"
                         VerticalOptions="Center"
-                        Source="profile">
+                        Source="{x:OnPlatform Android=profile, iOS=profile, UWP=profile.png}">
                         <ffimageloading:CachedImage.Transformations>
                             <fftransformations:CircleTransformation/>
                         </ffimageloading:CachedImage.Transformations>

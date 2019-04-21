@@ -7,7 +7,7 @@ using Xamarin.Forms;
 
 namespace StarWarsSample.Forms.UI.Views
 {
-    [MvxModalPresentation(WrapInNavigationPage = true)]
+    [MvxModalPresentation()]
     public partial class StatusPage : MvxContentPage<StatusViewModel>
     {
         public StatusPage()

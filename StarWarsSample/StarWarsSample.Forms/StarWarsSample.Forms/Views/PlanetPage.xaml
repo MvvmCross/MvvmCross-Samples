@@ -19,7 +19,7 @@
                     </Grid.RowDefinitions>
                     <Image
                         Grid.Row="0"
-                        Source="Planet_Header"
+                        Source="{x:OnPlatform Android=Planet_Header, iOS=Planet_Header, UWP=Planet_Header.png}"
                         HorizontalOptions="FillAndExpand"
                         Aspect="AspectFill"
                         HeightRequest="180"/>

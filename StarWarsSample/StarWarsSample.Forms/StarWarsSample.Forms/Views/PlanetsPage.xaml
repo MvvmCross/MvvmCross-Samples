@@ -13,30 +13,42 @@
         <ResourceDictionary>
             <DataTemplate x:Key="planetNameTemplate">
                 <views:MvxViewCell>
-                    <Label 
-                        FontSize="Medium"
-                        Margin="10,0,0,0"
-                        HorizontalOptions="Start"
-                        HorizontalTextAlignment="Start"
-                        VerticalOptions="Center"
-                        VerticalTextAlignment="Center"
-                        TextColor="Red"
-                        FontAttributes="Bold"
-                        mvx:Bi.nd="Text Name" />
+                    <StackLayout
+                        Orientation="Vertical">
+                        <Label 
+                            FontSize="Medium"
+                            Margin="10,0,0,0"
+                            HorizontalOptions="Start"
+                            HorizontalTextAlignment="Start"
+                            VerticalOptions="Center"
+                            VerticalTextAlignment="Center"
+                            TextColor="Red"
+                            FontAttributes="Bold"
+                            mvx:Bi.nd="Text Name" />
+                        <BoxView
+                            HeightRequest="1"
+                            Color="White" />
+                    </StackLayout>
                 </views:MvxViewCell>
             </DataTemplate>
             <DataTemplate x:Key="whitePlanetNameTemplate">
                 <views:MvxViewCell>
-                    <Label 
-                        FontSize="Medium"
-                        Margin="10,0,0,0"
-                        HorizontalOptions="Start"
-                        HorizontalTextAlignment="Start"
-                        VerticalOptions="Center"
-                        VerticalTextAlignment="Center"
-                        TextColor="White"
-                        FontAttributes="Bold"
-                        mvx:Bi.nd="Text Name" />
+                    <StackLayout
+                        Orientation="Vertical">
+                        <Label 
+                            FontSize="Medium"
+                            Margin="10,0,0,0"
+                            HorizontalOptions="Start"
+                            HorizontalTextAlignment="Start"
+                            VerticalOptions="Center"
+                            VerticalTextAlignment="Center"
+                            TextColor="White"
+                            FontAttributes="Bold"
+                            mvx:Bi.nd="Text Name" />
+                        <BoxView
+                            HeightRequest="1"
+                            Color="White" />
+                    </StackLayout>
                 </views:MvxViewCell>
             </DataTemplate>
             <selector:PlanetsTemplateSelector 
@@ -47,8 +59,8 @@
     </ContentPage.Resources>
     <ContentPage.Content >
         <Grid>
-            <Image 
-                Source="Background" 
+            <Image
+                Source="{x:OnPlatform Android=Background, iOS=Background, UWP=Background.png}"
                 Aspect="AspectFill" />
             <views:MvxListView 
                 HorizontalOptions="FillAndExpand"
@@ -59,9 +71,9 @@
                 IsPullToRefreshEnabled="True" 
                 RefreshCommand="{mvx:MvxBind RefreshPlanetsCommand}"
                 ItemTemplate="{StaticResource planetsDataTemplateSelector}"
-                RowHeight="55"
+                RowHeight="{x:OnPlatform Android=55, iOS=55, UWP=40}"
                 BackgroundColor="Transparent"
-                SeparatorColor="White">
+                SeparatorVisibility="None">
                 <ListView.Behaviors>  
                     <behavior:InfiniteScroll LoadMoreCommand="{Binding FetchPlanetCommand}" />  
                 </ListView.Behaviors>

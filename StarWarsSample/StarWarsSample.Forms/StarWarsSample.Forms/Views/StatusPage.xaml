@@ -20,7 +20,7 @@
     <ContentPage.Content>
         <Grid>
             <Image 
-                Source="Background" 
+                Source="{x:OnPlatform Android=Background, iOS=Background, UWP=Background.png}" 
                 Aspect="AspectFill" />
             <oxy:PlotView
                 Model="{mvx:MvxBind PlotModel}" 
