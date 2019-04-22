@@ -16,7 +16,6 @@
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
-    <AndroidUseLatestPlatformSdk>true</AndroidUseLatestPlatformSdk>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
   </PropertyGroup>
@@ -31,6 +30,9 @@
     <AndroidLinkMode>None</AndroidLinkMode>
     <AndroidHttpClientHandlerType>Xamarin.Android.Net.AndroidClientHandler</AndroidHttpClientHandlerType>
     <AndroidTlsProvider>btls</AndroidTlsProvider>
+    <AotAssemblies>false</AotAssemblies>
+    <EnableLLVM>false</EnableLLVM>
+    <BundleAssemblies>false</BundleAssemblies>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -52,62 +54,62 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Acr.UserDialogs">
-      <Version>7.0.1</Version>
+      <Version>7.0.4</Version>
     </PackageReference>
     <PackageReference Include="OxyPlot.Core" Version="2.0.0-unstable1035" />
     <PackageReference Include="OxyPlot.Xamarin.Android" Version="1.1.0-unstable0011" />
     <PackageReference Include="Refractored.Controls.CircleImageView" Version="1.0.1" />
-    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
     <PackageReference Include="Com.Airbnb.Android.Lottie" Version="2.5.4" />
-    <PackageReference Include="Xamarin.Android.Arch.Core.Common" Version="1.0.0.1" />
-    <PackageReference Include="Xamarin.Android.Arch.Lifecycle.Common" Version="1.0.3.1" />
-    <PackageReference Include="Xamarin.Android.Arch.Lifecycle.Runtime" Version="1.0.3.1" />
-    <PackageReference Include="Xamarin.Android.Support.Animated.Vector.Drawable" Version="27.0.2.1" />
-    <PackageReference Include="Xamarin.Android.Support.Annotations" Version="27.0.2.1" />
-    <PackageReference Include="Xamarin.Android.Support.Compat" Version="27.0.2.1" />
-    <PackageReference Include="Xamarin.Android.Support.Core.UI" Version="27.0.2.1" />
-    <PackageReference Include="Xamarin.Android.Support.Core.Utils" Version="27.0.2.1" />
-    <PackageReference Include="Xamarin.Android.Support.Design" Version="27.0.2.1" />
-    <PackageReference Include="Xamarin.Android.Support.Fragment" Version="27.0.2.1" />
-    <PackageReference Include="Xamarin.Android.Support.Media.Compat" Version="27.0.2.1" />
-    <PackageReference Include="Xamarin.Android.Support.Percent" Version="27.0.2.1" />
-    <PackageReference Include="Xamarin.Android.Support.Transition" Version="27.0.2.1" />
-    <PackageReference Include="Xamarin.Android.Support.v7.AppCompat" Version="27.0.2.1" />
-    <PackageReference Include="Xamarin.Android.Support.v7.RecyclerView" Version="27.0.2.1" />
-    <PackageReference Include="Xamarin.Android.Support.Vector.Drawable" Version="27.0.2.1" />
+    <PackageReference Include="Xamarin.Android.Arch.Core.Common" Version="1.1.1.1" />
+    <PackageReference Include="Xamarin.Android.Arch.Lifecycle.Common" Version="1.1.1.1" />
+    <PackageReference Include="Xamarin.Android.Arch.Lifecycle.Runtime" Version="1.1.1.1" />
+    <PackageReference Include="Xamarin.Android.Support.Animated.Vector.Drawable" Version="28.0.0.1" />
+    <PackageReference Include="Xamarin.Android.Support.Annotations" Version="28.0.0.1" />
+    <PackageReference Include="Xamarin.Android.Support.Compat" Version="28.0.0.1" />
+    <PackageReference Include="Xamarin.Android.Support.Core.UI" Version="28.0.0.1" />
+    <PackageReference Include="Xamarin.Android.Support.Core.Utils" Version="28.0.0.1" />
+    <PackageReference Include="Xamarin.Android.Support.Design" Version="28.0.0.1" />
+    <PackageReference Include="Xamarin.Android.Support.Fragment" Version="28.0.0.1" />
+    <PackageReference Include="Xamarin.Android.Support.Media.Compat" Version="28.0.0.1" />
+    <PackageReference Include="Xamarin.Android.Support.Percent" Version="28.0.0.1" />
+    <PackageReference Include="Xamarin.Android.Support.Transition" Version="28.0.0.1" />
+    <PackageReference Include="Xamarin.Android.Support.v7.AppCompat" Version="28.0.0.1" />
+    <PackageReference Include="Xamarin.Android.Support.v7.RecyclerView" Version="28.0.0.1" />
+    <PackageReference Include="Xamarin.Android.Support.Vector.Drawable" Version="28.0.0.1" />
     <PackageReference Include="Xamarin.Build.Download" Version="0.4.11" />
     <PackageReference Include="MvvmCross">
-      <Version>6.2.0</Version>
+      <Version>6.2.3</Version>
     </PackageReference>
     <PackageReference Include="MvvmCross.Droid.Support.Core.UI">
-      <Version>6.2.0</Version>
+      <Version>6.2.3</Version>
     </PackageReference>
     <PackageReference Include="MvvmCross.Droid.Support.Core.Utils">
-      <Version>6.2.0</Version>
+      <Version>6.2.3</Version>
     </PackageReference>
     <PackageReference Include="MvvmCross.Droid.Support.Design">
-      <Version>6.2.0</Version>
+      <Version>6.2.3</Version>
     </PackageReference>
     <PackageReference Include="MvvmCross.Droid.Support.Fragment">
-      <Version>6.2.0</Version>
+      <Version>6.2.3</Version>
     </PackageReference>
     <PackageReference Include="MvvmCross.Droid.Support.V7.AppCompat">
-      <Version>6.2.0</Version>
+      <Version>6.2.3</Version>
     </PackageReference>
     <PackageReference Include="MvvmCross.Droid.Support.V7.RecyclerView">
-      <Version>6.2.0</Version>
+      <Version>6.2.3</Version>
     </PackageReference>
     <PackageReference Include="MvvmCross.Plugin.Color">
-      <Version>6.2.0</Version>
+      <Version>6.2.3</Version>
     </PackageReference>
     <PackageReference Include="MvvmCross.Plugin.Json">
-      <Version>6.2.0</Version>
+      <Version>6.2.3</Version>
     </PackageReference>
     <PackageReference Include="MvvmCross.Plugin.Messenger">
-      <Version>6.2.0</Version>
+      <Version>6.2.3</Version>
     </PackageReference>
     <PackageReference Include="MvvmCross.Plugin.Visibility">
-      <Version>6.2.0</Version>
+      <Version>6.2.3</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
