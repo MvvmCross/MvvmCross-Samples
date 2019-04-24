@@ -10,7 +10,7 @@ using Xamarin.Forms;
 
 namespace StarWarsSample.Forms.UI.Views
 {
-    [MvxMasterDetailPagePresentation(MasterDetailPosition.Detail)]
+    [MvxMasterDetailPagePresentation(WrapInNavigationPage = true)]
     public partial class PlanetPage : MvxContentPage<PlanetViewModel>
     {
         private bool _showing = false;
@@ -49,7 +49,7 @@ namespace StarWarsSample.Forms.UI.Views
 
             _showing = true;
 
-            AnimateButton();
+            Device.BeginInvokeOnMainThread(async () => await AnimateButton());
         }
 
         protected override void OnDisappearing()

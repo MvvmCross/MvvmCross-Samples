@@ -4,7 +4,7 @@ using StarWarsSample.Core.ViewModels;
 
 namespace StarWarsSample.Forms
 {
-    [MvxMasterDetailPagePresentation(MasterDetailPosition.Root, WrapInNavigationPage = false)]
+    [MvxMasterDetailPagePresentation(MasterDetailPosition.Root, WrapInNavigationPage = false, NoHistory = true)]
     public partial class MainPage : MvxMasterDetailPage<MainViewModel>
     {
         private bool _firstTime = true;

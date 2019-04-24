@@ -16,7 +16,7 @@ namespace StarWarsSample.Forms.UI.Views
 
         public void ToggleClicked(object sender, EventArgs e)
         {
-            if (Parent is MvxMasterDetailPage md)
+            if (Parent is MvxMasterDetailPage md && Device.RuntimePlatform != Device.UWP)
             {
                 md.MasterBehavior = MasterBehavior.Popover;
                 md.IsPresented = !md.IsPresented;

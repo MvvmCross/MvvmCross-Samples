@@ -18,8 +18,8 @@
                         <RowDefinition Height="Auto" />
                     </Grid.RowDefinitions>
                     <Image
-                        Grid.Row="0"
-                        Source="Person_Header"
+                        Grid.Row="0"                        
+                        Source="{x:OnPlatform Android=Person_Header, iOS=Person_Header, UWP=Person_Header.png}"
                         HorizontalOptions="FillAndExpand"
                         Aspect="AspectFill"
                         HeightRequest="180" />

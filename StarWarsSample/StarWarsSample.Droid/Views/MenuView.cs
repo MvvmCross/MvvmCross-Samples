@@ -64,7 +64,7 @@ namespace StarWarsSample.Droid.Views
 
             _previousMenuItem = item;
 
-            Navigate(item.ItemId);
+            Task.Run(() => Navigate(item.ItemId));
 
             return true;
         }
