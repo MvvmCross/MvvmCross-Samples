@@ -45,24 +45,6 @@
     <Reference Include="Mono.Android" />
     <Reference Include="Mono.Android.Export" />
     <Reference Include="mscorlib" />
-    <Reference Include="MvvmCross, Version=6.2.3.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MvvmCross.6.2.3\lib\monoandroid81\MvvmCross.dll</HintPath>
-    </Reference>
-    <Reference Include="MvvmCross.Plugin.File, Version=6.2.3.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MvvmCross.Plugin.File.6.2.3\lib\monoandroid81\MvvmCross.Plugin.File.dll</HintPath>
-    </Reference>
-    <Reference Include="MvvmCross.Plugin.Json, Version=6.2.3.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MvvmCross.Plugin.Json.6.2.3\lib\netstandard2.0\MvvmCross.Plugin.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="MvvmCross.Plugin.JsonLocalization, Version=6.2.3.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MvvmCross.Plugin.JsonLocalization.6.2.3\lib\netstandard2.0\MvvmCross.Plugin.JsonLocalization.dll</HintPath>
-    </Reference>
-    <Reference Include="MvvmCross.Plugin.ResourceLoader, Version=6.2.3.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MvvmCross.Plugin.ResourceLoader.6.2.3\lib\monoandroid81\MvvmCross.Plugin.ResourceLoader.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\netstandard2.0\Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Net">
@@ -108,7 +90,6 @@
     <AndroidAsset Include="..\Babel.Phone\BabelResources\Text\SecondViewModel.json">
       <Link>Assets\BabelResources\Text\SecondViewModel.json</Link>
     </AndroidAsset>
-    <None Include="packages.config" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\BabelResources\Text\AboutAssets.txt" />
     <AndroidResource Include="Resources\Layout\FirstView.axml" />
@@ -131,6 +112,11 @@
     <Content Include="Properties\AndroidManifest.xml" />
     <AndroidResource Include="Resources\Values\SplashStyle.xml" />
     <AndroidResource Include="Resources\Drawable\splash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="MvvmCross.Plugin.JsonLocalization">
+      <Version>6.2.3</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
