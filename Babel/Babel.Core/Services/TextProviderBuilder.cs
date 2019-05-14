@@ -1,13 +1,12 @@
-﻿using MvvmCross.Platform.IoC;
-using MvvmCross.Plugins.JsonLocalization;
+﻿using MvvmCross.IoC;
+using MvvmCross.Plugin.JsonLocalization;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 
 namespace Babel.Core.Services
 {
-    public class TextProviderBuilder
-        : MvxTextProviderBuilder
+    public class TextProviderBuilder : MvxTextProviderBuilder
     {
         public TextProviderBuilder()
             : base(Constants.GeneralNamespace, Constants.RootFolderForResources)

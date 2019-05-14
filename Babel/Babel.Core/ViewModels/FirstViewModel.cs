@@ -1,17 +1,19 @@
-using MvvmCross.Core.ViewModels;
-using MvvmCross.Plugins.JsonLocalization;
+using MvvmCross.Commands;
+using MvvmCross.Navigation;
+using MvvmCross.Plugin.JsonLocalization;
 using System.Windows.Input;
 
 namespace Babel.Core.ViewModels
 {
-    public class FirstViewModel
-        : BaseViewModel
+    public class FirstViewModel : BaseViewModel
     {
         private readonly IMvxTextProviderBuilder _builder;
+        private readonly IMvxNavigationService _navigationService;
 
-        public FirstViewModel(IMvxTextProviderBuilder builder)
+        public FirstViewModel(IMvxTextProviderBuilder builder, IMvxNavigationService navigationService)
         {
             _builder = builder;
+            _navigationService = navigationService;
         }
 
         public ICommand LolCatCommand
@@ -36,7 +38,7 @@ namespace Babel.Core.ViewModels
 
         public ICommand GoCommand
         {
-            get { return new MvxCommand(() => ShowViewModel<SecondViewModel>()); }
+            get { return new MvxCommand(() => _navigationService.Navigate<SecondViewModel>()); }
         }
 
         public ICommand ForceTextRefreshCommand

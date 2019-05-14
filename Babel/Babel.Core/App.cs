@@ -1,9 +1,9 @@
 using Babel.Core.Services;
-using MvvmCross.Core.ViewModels;
+using MvvmCross;
+using MvvmCross.IoC;
 using MvvmCross.Localization;
-using MvvmCross.Platform;
-using MvvmCross.Platform.IoC;
-using MvvmCross.Plugins.JsonLocalization;
+using MvvmCross.Plugin.JsonLocalization;
+using MvvmCross.ViewModels;
 
 namespace Babel.Core
 {
@@ -23,8 +23,8 @@ namespace Babel.Core
         private void InitializeText()
         {
             var builder = new TextProviderBuilder();
-            Mvx.RegisterSingleton<IMvxTextProviderBuilder>(builder);
-            Mvx.RegisterSingleton<IMvxTextProvider>(builder.TextProvider);
+            Mvx.IoCProvider.RegisterSingleton<IMvxTextProviderBuilder>(builder);
+            Mvx.IoCProvider.RegisterSingleton<IMvxTextProvider>(builder.TextProvider);
         }
     }
 }

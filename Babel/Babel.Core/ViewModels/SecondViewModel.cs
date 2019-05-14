@@ -1,7 +1,6 @@
 namespace Babel.Core.ViewModels
 {
-    public class SecondViewModel
-        : BaseViewModel
+    public class SecondViewModel : BaseViewModel
     {
     }
 }
