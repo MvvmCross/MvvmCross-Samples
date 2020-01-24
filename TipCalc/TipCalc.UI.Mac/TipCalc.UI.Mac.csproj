@@ -57,26 +57,8 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.Mac" />
-    <Reference Include="MvvmCross.Platform.Mac">
-      <HintPath>..\packages\MvvmCross.Platform.4.2.0\lib\Xamarin.Mac20\MvvmCross.Platform.Mac.dll</HintPath>
-    </Reference>
-    <Reference Include="MvvmCross.Platform">
-      <HintPath>..\packages\MvvmCross.Platform.4.2.0\lib\Xamarin.Mac20\MvvmCross.Platform.dll</HintPath>
-    </Reference>
-    <Reference Include="MvvmCross.Mac">
-      <HintPath>..\packages\MvvmCross.Core.4.2.0\lib\Xamarin.Mac20\MvvmCross.Mac.dll</HintPath>
-    </Reference>
-    <Reference Include="MvvmCross.Core">
-      <HintPath>..\packages\MvvmCross.Core.4.2.0\lib\Xamarin.Mac20\MvvmCross.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="MvvmCross.Binding.Mac">
-      <HintPath>..\packages\MvvmCross.Binding.4.2.0\lib\Xamarin.Mac20\MvvmCross.Binding.Mac.dll</HintPath>
-    </Reference>
-    <Reference Include="MvvmCross.Binding">
-      <HintPath>..\packages\MvvmCross.Binding.4.2.0\lib\Xamarin.Mac20\MvvmCross.Binding.dll</HintPath>
-    </Reference>
-    <Reference Include="MvvmCross.Localization">
-      <HintPath>..\packages\MvvmCross.Binding.4.2.0\lib\Xamarin.Mac20\MvvmCross.Localization.dll</HintPath>
+    <Reference Include="MvvmCross">
+      <HintPath>..\packages\MvvmCross.6.2.2\lib\xamarinmac20\MvvmCross.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -105,7 +87,6 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
-    <Compile Include="Setup.cs" />
     <Compile Include="Views\TipView.cs" />
     <Compile Include="Views\TipViewController.cs" />
     <Compile Include="Views\TipView.designer.cs">
