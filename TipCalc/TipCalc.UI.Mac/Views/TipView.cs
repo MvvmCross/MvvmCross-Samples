@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Foundation;
 using AppKit;
-using MvvmCross.Binding.Mac.Views;
+using MvvmCross.Platforms.Mac.Binding.Views;
 
 namespace TipCalc.UI.Mac
 {

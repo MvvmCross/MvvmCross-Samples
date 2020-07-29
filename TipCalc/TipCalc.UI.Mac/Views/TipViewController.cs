@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Foundation;
 using AppKit;
-using MvvmCross.Mac.Views;
-using MvvmCross.Core.ViewModels;
+using MvvmCross.Platforms.Mac.Views;
 using MvvmCross.Binding.BindingContext;
 using TipCalc.Core.ViewModels;
 
