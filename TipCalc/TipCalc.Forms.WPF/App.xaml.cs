@@ -1,5 +1,7 @@
 ﻿using MvvmCross.Core;
 using MvvmCross.Forms.Platforms.Wpf.Core;
+using MvvmCross.Platforms.Wpf.Views;
+using MvvmCross.ViewModels;
 using TipCalc.Forms.UI;
 
 namespace TipCalc.Forms.WPF
@@ -11,7 +13,7 @@ namespace TipCalc.Forms.WPF
     {
         protected override void RegisterSetup()
         {
-            this.RegisterSetupType<MvxFormsWpfSetup<App, FormsApp>>();
+            this.RegisterSetupType<MvxFormsWpfSetup<Core.App, FormsApp>>();
         }
     }
 }
