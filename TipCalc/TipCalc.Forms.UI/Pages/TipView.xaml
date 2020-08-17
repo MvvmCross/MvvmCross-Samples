@@ -15,6 +15,7 @@
                 <Label Text="Generosity" />
                 <Slider x:Name="GenerositySlider"
                         Maximum="100"
+                        BackgroundColor="Aqua"
                         mvx:Bi.nd="Value Generosity, Mode=TwoWay"/>
                 <Label Text="Tip to leave" />
                 <Label x:Name="TipLabel" 

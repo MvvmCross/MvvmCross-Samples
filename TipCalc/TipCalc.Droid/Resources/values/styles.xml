@@ -1,8 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <resources>
-  <style name="Theme.Splash" parent="android:Theme">
-    <item name="android:windowBackground">@drawable/splash</item>
-    <item name="android:windowNoTitle">true</item>
-    <item name="android:windowFullscreen">true</item>
-  </style>
+	<style name="Theme.Splash" parent="AppTheme.Base">
+		<item name="android:statusBarColor">#000000</item>
+		<item name="android:windowNoTitle">true</item>
+		<item name="android:windowFullscreen">true</item>
+	</style>
+	<!-- Application theme -->
+	<style name="AppTheme" parent="AppTheme.Base">
+	</style>
+	<style name="AppTheme.Base" parent="Theme.AppCompat.Light.NoActionBar">
+		<item name="colorPrimary">#1a1a1a</item>
+		<item name="colorPrimaryDark">#000000</item>
+		<item name="colorAccent">#C1272C</item>
+		<item name="android:windowBackground">@android:color/white</item>
+	</style>
+	<style name="Toolbar">
+		<item name="android:layout_height">?attr/actionBarSize</item>
+		<item name="android:background">?attr/colorPrimary</item>
+	</style>
 </resources>
