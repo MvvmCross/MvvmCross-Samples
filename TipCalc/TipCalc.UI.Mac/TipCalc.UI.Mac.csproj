@@ -57,9 +57,9 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.Mac" />
-    <Reference Include="MvvmCross">
-      <HintPath>..\packages\MvvmCross.6.2.2\lib\xamarinmac20\MvvmCross.dll</HintPath>
-    </Reference>
+    <PackageReference Include="MvvmCross">
+      <Version>7.0.0</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Contents.json" />

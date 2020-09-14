@@ -8,7 +8,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>TipCalc.Forms.Droid</RootNamespace>
     <AssemblyName>TipCalc.Forms.Droid</AssemblyName>
-    <TargetFrameworkVersion>v9.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v10.0</TargetFrameworkVersion>
     <AndroidApplication>True</AndroidApplication>
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
     <AndroidResgenClass>Resource</AndroidResgenClass>
@@ -43,43 +43,11 @@
     <Reference Include="System.Core" />
     <Reference Include="Mono.Android" />
     <Reference Include="Mono.Android.Export" />
-    <PackageReference Include="Xamarin.Android.Support.Animated.Vector.Drawable" Version="28.0.0.3" />
-    <PackageReference Include="Xamarin.Android.Support.Annotations" Version="28.0.0.3" />
-    <PackageReference Include="Xamarin.Android.Support.Compat" Version="28.0.0.3" />
-    <PackageReference Include="Xamarin.Android.Support.Core.UI" Version="28.0.0.3" />
-    <PackageReference Include="Xamarin.Android.Support.Core.Utils" Version="28.0.0.3" />
-    <PackageReference Include="Xamarin.Android.Support.Design" Version="28.0.0.3" />
-    <PackageReference Include="Xamarin.Android.Support.Fragment" Version="28.0.0.3" />
-    <PackageReference Include="Xamarin.Android.Support.Media.Compat" Version="28.0.0.3" />
-    <PackageReference Include="Xamarin.Android.Support.Transition" Version="28.0.0.3" />
-    <PackageReference Include="Xamarin.Android.Support.v4" Version="28.0.0.3" />
-    <PackageReference Include="Xamarin.Android.Support.v7.AppCompat" Version="28.0.0.3" />
-    <PackageReference Include="Xamarin.Android.Support.v7.CardView" Version="28.0.0.3" />
-    <PackageReference Include="Xamarin.Android.Support.v7.MediaRouter" Version="28.0.0.3" />
-    <PackageReference Include="Xamarin.Android.Support.v7.Palette" Version="28.0.0.3" />
-    <PackageReference Include="Xamarin.Android.Support.v7.RecyclerView" Version="28.0.0.3" />
-    <PackageReference Include="Xamarin.Android.Support.Vector.Drawable" Version="28.0.0.3" />
-    <PackageReference Include="Xamarin.Forms">
-      <Version>4.6.0.800</Version>
-    </PackageReference>
-    <PackageReference Include="MvvmCross">
-      <Version>6.4.2</Version>
-    </PackageReference>
-    <PackageReference Include="MvvmCross.Forms">
-      <Version>6.4.2</Version>
-    </PackageReference>
-    <PackageReference Include="Xamarin.Android.Support.DrawerLayout">
-      <Version>28.0.0.3</Version>
-    </PackageReference>
-    <PackageReference Include="Xamarin.Android.Support.ViewPager">
-      <Version>28.0.0.3</Version>
-    </PackageReference>
-    <PackageReference Include="Xamarin.Android.Support.SwipeRefreshLayout">
-      <Version>28.0.0.3</Version>
-    </PackageReference>
-    <PackageReference Include="Xamarin.Android.Support.CoordinaterLayout">
-      <Version>28.0.0.3</Version>
-    </PackageReference>
+    <PackageReference Include="MvvmCross" Version="7.0.0" />
+    <PackageReference Include="MvvmCross.Forms" Version="7.0.0" />
+    <PackageReference Include="Xamarin.Forms" Version="4.6.0.847" />
+    <PackageReference Include="Xamarin.AndroidX.AppCompat.Resources" Version="1.1.0.1" />
+    <PackageReference Include="Xamarin.AndroidX.AppCompat" Version="1.2.0.2" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />

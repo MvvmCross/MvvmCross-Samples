@@ -3,26 +3,25 @@
     xmlns:local="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:padding="20dp"
-    android:background="#00007f"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="24dp"
+        android:textSize="24sp"
         android:text="SubTotal" />
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="number|numberDecimal"
-        android:textSize="24dp"
+        android:textSize="24sp"
         android:gravity="right"
         local:MvxBind="Text SubTotal" />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:textSize="24dp"
+        android:textSize="24sp"
         android:text="Generosity" />
     <SeekBar
         android:layout_width="match_parent"
@@ -33,17 +32,16 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_margin="30dp"
-        android:background="#ffff00" />
+        android:background="?android:attr/colorPrimary" />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="24dp"
+        android:textSize="24sp"
         android:text="Tip to leave" />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="#ffffff"
-        android:textSize="24dp"
+        android:textSize="24sp"
         android:gravity="center"
         local:MvxBind="Text Tip" />
 </LinearLayout>

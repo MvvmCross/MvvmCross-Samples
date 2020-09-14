@@ -92,15 +92,9 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.iOS" />
-    <PackageReference Include="MvvmCross.Forms">
-      <Version>6.4.2</Version>
-    </PackageReference>
-    <PackageReference Include="Xamarin.Forms">
-      <Version>4.6.0.800</Version>
-    </PackageReference>
-    <PackageReference Include="MvvmCross">
-      <Version>6.4.2</Version>
-    </PackageReference>
+    <PackageReference Include="MvvmCross" Version="7.0.0" />
+    <PackageReference Include="MvvmCross.Forms" Version="7.0.0" />
+    <PackageReference Include="Xamarin.Forms" Version="4.6.0.847" />
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">
