@@ -43,11 +43,11 @@
     <Reference Include="System.Core" />
     <Reference Include="Mono.Android" />
     <Reference Include="Mono.Android.Export" />
-    <PackageReference Include="MvvmCross" Version="7.0.0" />
-    <PackageReference Include="MvvmCross.Forms" Version="7.0.0" />
-    <PackageReference Include="Xamarin.Forms" Version="4.6.0.847" />
+    <PackageReference Include="MvvmCross" Version="7.1.2" />
+    <PackageReference Include="MvvmCross.Forms" Version="7.1.2" />
+    <PackageReference Include="Xamarin.Forms" Version="4.8.0.1687" />
     <PackageReference Include="Xamarin.AndroidX.AppCompat.Resources" Version="1.1.0.1" />
-    <PackageReference Include="Xamarin.AndroidX.AppCompat" Version="1.2.0.2" />
+    <PackageReference Include="Xamarin.AndroidX.AppCompat" Version="1.2.0.6" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />

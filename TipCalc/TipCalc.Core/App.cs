@@ -9,7 +9,7 @@ namespace TipCalc.Core
     {
         public override void Initialize()
         {
-            Mvx.RegisterType<ICalculationService, CalculationService>();
+            Mvx.IoCProvider.RegisterType<ICalculationService, CalculationService>();
 
             RegisterAppStart<TipViewModel>();
         }
