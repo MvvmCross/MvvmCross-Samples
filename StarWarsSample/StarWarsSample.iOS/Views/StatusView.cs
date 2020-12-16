@@ -36,7 +36,7 @@ namespace StarWarsSample.iOS.Views
 
             Title = Strings.Statistics;
 
-            _btnClose = new UIBarButtonItem(UIBarButtonSystemItem.Cancel, null);
+            _btnClose = new UIBarButtonItem(UIBarButtonSystemItem.Cancel);
             NavigationItem.SetLeftBarButtonItem(_btnClose, false);
 
             _lblTitle = new UILabel

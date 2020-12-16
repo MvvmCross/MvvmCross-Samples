@@ -1,20 +1,23 @@
 using System.Collections.Generic;
 using System.Reflection;
-using Android.Support.Design.Widget;
-using Android.Support.V4.View;
-using Android.Support.V4.Widget;
-using Android.Support.V7.Widget;
+using AndroidX.AppCompat.Widget;
+using AndroidX.CoordinatorLayout.Widget;
+using AndroidX.DrawerLayout.Widget;
+using AndroidX.SwipeRefreshLayout.Widget;
+using AndroidX.ViewPager.Widget;
+using Google.Android.Material.FloatingActionButton;
+using Google.Android.Material.Navigation;
 using MvvmCross.Binding.Bindings.Target.Construction;
-using MvvmCross.Droid.Support.V4;
-using MvvmCross.Droid.Support.V7.AppCompat;
-using MvvmCross.Droid.Support.V7.RecyclerView;
+using MvvmCross.DroidX;
+using MvvmCross.DroidX.RecyclerView;
+using MvvmCross.Platforms.Android.Core;
 using MvvmCross.Platforms.Android.Presenters;
 using StarWarsSample.Core;
 using StarWarsSample.Droid.MvxBindings;
 
 namespace StarWarsSample.Droid
 {
-    public class Setup : MvxAppCompatSetup<App>
+    public class Setup : MvxAndroidSetup<App>
     {
         protected override IEnumerable<Assembly> AndroidViewAssemblies => new List<Assembly>(base.AndroidViewAssemblies)
         {
@@ -33,7 +36,7 @@ namespace StarWarsSample.Droid
         /// </summary>
         protected override void FillTargetFactories(IMvxTargetBindingFactoryRegistry registry)
         {
-            MvxAppCompatSetupHelper.FillTargetFactories(registry);
+            //MvxAndroidSetupHelper.FillTargetFactories(registry);
             base.FillTargetFactories(registry);
 
             registry.RegisterFactory(new MvxCustomBindingFactory<SwipeRefreshLayout>("IsRefreshing", (swipeRefreshLayout) => new SwipeRefreshLayoutIsRefreshingTargetBinding(swipeRefreshLayout)));
@@ -41,7 +44,7 @@ namespace StarWarsSample.Droid
 
         protected override IMvxAndroidViewPresenter CreateViewPresenter()
         {
-            return new MvxAppCompatViewPresenter(AndroidViewAssemblies);
+            return new MvxAndroidViewPresenter(AndroidViewAssemblies);
         }
     }
 }

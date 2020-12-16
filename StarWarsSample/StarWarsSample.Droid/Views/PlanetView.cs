@@ -22,19 +22,20 @@ namespace StarWarsSample.Droid.Views
     {
         protected override int FragmentId => Resource.Layout.PlanetView;
 
-        private Android.Support.V7.Widget.Toolbar _toolbar;
+        private AndroidX.AppCompat.Widget.Toolbar _toolbar;
         private Button _btnDestroy;
         private LottieAnimationView _animationView;
 
         private DestructionAction _interactionRequested;
 
         private IMvxInteraction<DestructionAction> _interaction;
+
         public IMvxInteraction<DestructionAction> Interaction
         {
             get => _interaction;
             set
             {
-                if(_interaction != null)
+                if (_interaction != null)
                     _interaction.Requested -= OnInteractionRequested;
 
                 _interaction = value;
@@ -46,7 +47,7 @@ namespace StarWarsSample.Droid.Views
         {
             var view = base.OnCreateView(inflater, container, savedInstanceState);
 
-            _toolbar = view.FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
+            _toolbar = view.FindViewById<AndroidX.AppCompat.Widget.Toolbar>(Resource.Id.toolbar);
             _btnDestroy = view.FindViewById<Button>(Resource.Id.btn_destroy);
             _animationView = view.FindViewById<LottieAnimationView>(Resource.Id.animation_view);
             _animationView.ImageAssetsFolder = "imgs";

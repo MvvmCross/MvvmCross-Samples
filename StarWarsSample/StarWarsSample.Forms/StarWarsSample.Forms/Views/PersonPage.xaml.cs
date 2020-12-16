@@ -16,6 +16,7 @@ namespace StarWarsSample.Forms.UI.Views
         private bool _showing = false;
 
         private IMvxInteraction<DestructionAction> _interaction;
+
         public IMvxInteraction<DestructionAction> Interaction
         {
             get => _interaction;
@@ -73,8 +74,8 @@ namespace StarWarsSample.Forms.UI.Views
         private void OnInteractionRequested(object sender, MvxValueEventArgs<DestructionAction> eventArgs)
         {
             animationView.IsVisible = true;
-            animationView.OnFinish += (s, e) => eventArgs.Value.OnDestroyed();
-            animationView.Play();
+            animationView.OnFinishedAnimation += (s, e) => eventArgs.Value.OnDestroyed();
+            animationView.PlayAnimation();
         }
     }
 }

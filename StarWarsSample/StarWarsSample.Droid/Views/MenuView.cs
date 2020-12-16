@@ -2,12 +2,12 @@
 using System.Threading.Tasks;
 using Android.OS;
 using Android.Runtime;
-using Android.Support.Design.Widget;
-using Android.Support.Graphics.Drawable;
 using Android.Views;
-using MvvmCross.Droid.Support.V4;
+using AndroidX.VectorDrawable.Graphics.Drawable;
+using Google.Android.Material.Navigation;
 using MvvmCross.Platforms.Android.Binding.BindingContext;
 using MvvmCross.Platforms.Android.Presenters.Attributes;
+using MvvmCross.Platforms.Android.Views.Fragments;
 using StarWarsSample.Core.Resources;
 using StarWarsSample.Core.ViewModels;
 
@@ -56,7 +56,7 @@ namespace StarWarsSample.Droid.Views
 
         public bool OnNavigationItemSelected(IMenuItem item)
         {
-            if(_previousMenuItem != null)
+            if (_previousMenuItem != null)
                 _previousMenuItem.SetChecked(false);
 
             item.SetCheckable(true);
@@ -74,14 +74,16 @@ namespace StarWarsSample.Droid.Views
             ((MainView)Activity).DrawerLayout.CloseDrawers();
             await Task.Delay(TimeSpan.FromMilliseconds(250));
 
-            switch(itemId)
+            switch (itemId)
             {
                 case Resource.Id.nav_planets:
                     ViewModel.ShowPlanetsCommand.Execute(null);
                     break;
+
                 case Resource.Id.nav_people:
                     ViewModel.ShowPeopleCommand.Execute(null);
                     break;
+
                 case Resource.Id.nav_statistics:
                     ViewModel.ShowStatusCommand.Execute(null);
                     break;

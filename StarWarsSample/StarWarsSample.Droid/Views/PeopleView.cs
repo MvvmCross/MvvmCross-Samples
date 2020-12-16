@@ -1,12 +1,12 @@
 ﻿using Android.OS;
 using Android.Runtime;
-using Android.Support.V7.Widget;
 using Android.Views;
-using MvvmCross.Droid.Support.V7.RecyclerView;
 using StarWarsSample.Droid.Extensions;
 using StarWarsSample.Core.Resources;
 using StarWarsSample.Core.ViewModels;
 using MvvmCross.Platforms.Android.Presenters.Attributes;
+using MvvmCross.DroidX.RecyclerView;
+using AndroidX.RecyclerView.Widget;
 
 namespace StarWarsSample.Droid.Views
 {
@@ -23,7 +23,7 @@ namespace StarWarsSample.Droid.Views
             ParentActivity.SupportActionBar.Title = Strings.TargetPeople;
 
             var recyclerView = view.FindViewById<MvxRecyclerView>(Resource.Id.people_recycler_view);
-            if(recyclerView != null)
+            if (recyclerView != null)
             {
                 recyclerView.HasFixedSize = true;
                 var layoutManager = new LinearLayoutManager(Activity);

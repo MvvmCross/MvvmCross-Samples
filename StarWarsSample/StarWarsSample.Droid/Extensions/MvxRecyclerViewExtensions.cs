@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Input;
-using Android.Support.V7.Widget;
-using MvvmCross.Droid.Support.V7.RecyclerView;
+using AndroidX.RecyclerView.Widget;
+using MvvmCross.DroidX.RecyclerView;
 using MvvmCross.ViewModels;
 using StarWarsSample.Droid.Controls;
 

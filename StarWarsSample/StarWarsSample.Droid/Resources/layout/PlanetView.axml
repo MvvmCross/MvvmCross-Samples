@@ -28,7 +28,7 @@
 					android:scaleType="centerCrop"
 					android:src="@drawable/Planet_Header"
 					local:layout_collapseMode="parallax" />
-				<android.support.v7.widget.Toolbar
+				<androidx.appcompat.widget.Toolbar
 					android:id="@+id/toolbar"
 					android:layout_width="match_parent"
 					android:layout_height="?attr/actionBarSize"
@@ -36,7 +36,7 @@
 					local:layout_collapseMode="pin" />
 			</android.support.design.widget.CollapsingToolbarLayout>
 		</android.support.design.widget.AppBarLayout>
-		<android.support.v4.widget.NestedScrollView
+		<androidx.core.widget.NestedScrollView
 			android:layout_width="match_parent"
 			android:layout_height="match_parent"
 			android:layout_gravity="fill_vertical"
@@ -82,7 +82,7 @@
 					android:stateListAnimator="@null"
 					local:MvxBind="Click DestroyPlanetCommand; Text [Destroy]" />
 			</LinearLayout>
-		</android.support.v4.widget.NestedScrollView>
+		</androidx.core.widget.NestedScrollView>
 	</android.support.design.widget.CoordinatorLayout>
 	<com.airbnb.lottie.LottieAnimationView
 		android:id="@+id/animation_view"

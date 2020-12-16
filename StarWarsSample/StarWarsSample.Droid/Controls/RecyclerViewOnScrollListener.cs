@@ -1,5 +1,5 @@
-﻿using System;
-using Android.Support.V7.Widget;
+﻿using AndroidX.RecyclerView.Widget;
+using System;
 
 namespace StarWarsSample.Droid.Controls
 {
