@@ -9,7 +9,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>StarWarsSample.Droid</RootNamespace>
     <AssemblyName>StarWarsSample.Droid</AssemblyName>
-    <TargetFrameworkVersion>v8.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v10.0</TargetFrameworkVersion>
     <AndroidApplication>True</AndroidApplication>
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
     <AndroidResgenClass>Resource</AndroidResgenClass>
@@ -33,6 +33,10 @@
     <AotAssemblies>false</AotAssemblies>
     <EnableLLVM>false</EnableLLVM>
     <BundleAssemblies>false</BundleAssemblies>
+    <AndroidEnableProfiledAot>false</AndroidEnableProfiledAot>
+    <EmbedAssembliesIntoApk>true</EmbedAssembliesIntoApk>
+    <AndroidLinkTool>r8</AndroidLinkTool>
+    <AndroidEnableSGenConcurrent>true</AndroidEnableSGenConcurrent>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -54,62 +58,38 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Acr.UserDialogs">
-      <Version>7.0.4</Version>
+      <Version>7.1.0.470</Version>
     </PackageReference>
-    <PackageReference Include="OxyPlot.Core" Version="2.0.0-unstable1035" />
+    <PackageReference Include="MvvmCross.DroidX.RecyclerView">
+      <Version>7.1.2</Version>
+    </PackageReference>
+    <PackageReference Include="MvvmCross.DroidX.SwipeRefreshLayout">
+      <Version>7.1.2</Version>
+    </PackageReference>
+    <PackageReference Include="OxyPlot.Core" Version="2.0.0" />
     <PackageReference Include="OxyPlot.Xamarin.Android" Version="1.1.0-unstable0011" />
     <PackageReference Include="Refractored.Controls.CircleImageView" Version="1.0.1" />
-    <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
-    <PackageReference Include="Com.Airbnb.Android.Lottie" Version="2.5.4" />
-    <PackageReference Include="Xamarin.Android.Arch.Core.Common" Version="1.1.1.1" />
-    <PackageReference Include="Xamarin.Android.Arch.Lifecycle.Common" Version="1.1.1.1" />
-    <PackageReference Include="Xamarin.Android.Arch.Lifecycle.Runtime" Version="1.1.1.1" />
-    <PackageReference Include="Xamarin.Android.Support.Animated.Vector.Drawable" Version="28.0.0.1" />
-    <PackageReference Include="Xamarin.Android.Support.Annotations" Version="28.0.0.1" />
-    <PackageReference Include="Xamarin.Android.Support.Compat" Version="28.0.0.1" />
-    <PackageReference Include="Xamarin.Android.Support.Core.UI" Version="28.0.0.1" />
-    <PackageReference Include="Xamarin.Android.Support.Core.Utils" Version="28.0.0.1" />
-    <PackageReference Include="Xamarin.Android.Support.Design" Version="28.0.0.1" />
-    <PackageReference Include="Xamarin.Android.Support.Fragment" Version="28.0.0.1" />
-    <PackageReference Include="Xamarin.Android.Support.Media.Compat" Version="28.0.0.1" />
-    <PackageReference Include="Xamarin.Android.Support.Percent" Version="28.0.0.1" />
-    <PackageReference Include="Xamarin.Android.Support.Transition" Version="28.0.0.1" />
-    <PackageReference Include="Xamarin.Android.Support.v7.AppCompat" Version="28.0.0.1" />
-    <PackageReference Include="Xamarin.Android.Support.v7.RecyclerView" Version="28.0.0.1" />
-    <PackageReference Include="Xamarin.Android.Support.Vector.Drawable" Version="28.0.0.1" />
-    <PackageReference Include="Xamarin.Build.Download" Version="0.4.11" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="Com.Airbnb.Android.Lottie" Version="3.5.0" />
+    <PackageReference Include="Xamarin.AndroidX.PercentLayout" Version="1.0.0.7" />
+    <PackageReference Include="Xamarin.Android.Arch.Core.Common" Version="1.1.1.3" />
+    <PackageReference Include="Xamarin.Android.Arch.Lifecycle.Common" Version="1.1.1.3" />
+    <PackageReference Include="Xamarin.Android.Arch.Lifecycle.Runtime" Version="1.1.1.3" />
+    <PackageReference Include="Xamarin.Build.Download" Version="0.10.0" />
     <PackageReference Include="MvvmCross">
-      <Version>6.2.3</Version>
-    </PackageReference>
-    <PackageReference Include="MvvmCross.Droid.Support.Core.UI">
-      <Version>6.2.3</Version>
-    </PackageReference>
-    <PackageReference Include="MvvmCross.Droid.Support.Core.Utils">
-      <Version>6.2.3</Version>
-    </PackageReference>
-    <PackageReference Include="MvvmCross.Droid.Support.Design">
-      <Version>6.2.3</Version>
-    </PackageReference>
-    <PackageReference Include="MvvmCross.Droid.Support.Fragment">
-      <Version>6.2.3</Version>
-    </PackageReference>
-    <PackageReference Include="MvvmCross.Droid.Support.V7.AppCompat">
-      <Version>6.2.3</Version>
-    </PackageReference>
-    <PackageReference Include="MvvmCross.Droid.Support.V7.RecyclerView">
-      <Version>6.2.3</Version>
+      <Version>7.1.2</Version>
     </PackageReference>
     <PackageReference Include="MvvmCross.Plugin.Color">
-      <Version>6.2.3</Version>
+      <Version>7.1.2</Version>
     </PackageReference>
     <PackageReference Include="MvvmCross.Plugin.Json">
-      <Version>6.2.3</Version>
+      <Version>7.1.2</Version>
     </PackageReference>
     <PackageReference Include="MvvmCross.Plugin.Messenger">
-      <Version>6.2.3</Version>
+      <Version>7.1.2</Version>
     </PackageReference>
     <PackageReference Include="MvvmCross.Plugin.Visibility">
-      <Version>6.2.3</Version>
+      <Version>7.1.2</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
@@ -212,5 +192,8 @@
         </Policies>
       </Properties>
     </MonoDevelop>
+    <VisualStudio>
+      <UserProperties TriggeredFromHotReload="False" />
+    </VisualStudio>
   </ProjectExtensions>
 </Project>

@@ -1,6 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
-using Android.Support.V4.Widget;
+using AndroidX.SwipeRefreshLayout.Widget;
 using MvvmCross.Binding;
 using MvvmCross.Logging;
 using MvvmCross.Platforms.Android.Binding.Target;

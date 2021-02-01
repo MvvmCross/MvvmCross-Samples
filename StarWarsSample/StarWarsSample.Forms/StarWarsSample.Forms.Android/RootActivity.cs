@@ -3,7 +3,6 @@ using Android.App;
 using Android.Content.PM;
 using Android.OS;
 using FFImageLoading.Forms.Platform;
-using Lottie.Forms.Droid;
 using MvvmCross.Forms.Platforms.Android.Views;
 using OxyPlot.Xamarin.Forms.Platform.Android;
 
@@ -24,7 +23,6 @@ namespace StarWarsSample.Forms.Droid
 
             base.OnCreate(bundle);
 
-            AnimationViewRenderer.Init();
             PlotViewRenderer.Init();
             CachedImageRenderer.Init(true);
             UserDialogs.Init(this);
@@ -36,4 +34,3 @@ namespace StarWarsSample.Forms.Droid
         }
     }
 }
-

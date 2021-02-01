@@ -1,10 +1,11 @@
 ﻿using Android.Content.Res;
 using Android.OS;
-using Android.Support.V7.Widget;
 using Android.Views;
-using MvvmCross.Droid.Support.V4;
-using MvvmCross.Droid.Support.V7.AppCompat;
+using AndroidX.AppCompat.Widget;
 using MvvmCross.Platforms.Android.Binding.BindingContext;
+using MvvmCross.Platforms.Android.Views;
+using MvvmCross.Platforms.Android.Views.AppCompat;
+using MvvmCross.Platforms.Android.Views.Fragments;
 using MvvmCross.ViewModels;
 
 namespace StarWarsSample.Droid.Views
@@ -14,11 +15,11 @@ namespace StarWarsSample.Droid.Views
         private Toolbar _toolbar;
         private MvxActionBarDrawerToggle _drawerToggle;
 
-        public MvxAppCompatActivity ParentActivity
+        public MvxActivity ParentActivity
         {
             get
             {
-                return (MvxAppCompatActivity)Activity;
+                return (MvxActivity)Activity;
             }
         }
 

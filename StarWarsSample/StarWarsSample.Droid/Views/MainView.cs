@@ -1,12 +1,12 @@
 ﻿using Acr.UserDialogs;
 using Android.App;
 using Android.Content.PM;
-using Android.Support.V4.View;
-using Android.Support.V4.Widget;
 using Android.Views;
 using Android.Views.InputMethods;
-using MvvmCross.Droid.Support.V7.AppCompat;
+using AndroidX.Core.View;
+using AndroidX.DrawerLayout.Widget;
 using MvvmCross.Platforms.Android.Presenters.Attributes;
+using MvvmCross.Platforms.Android.Views;
 using StarWarsSample.Core.ViewModels;
 
 namespace StarWarsSample.Droid.Views
@@ -17,7 +17,7 @@ namespace StarWarsSample.Droid.Views
         LaunchMode = LaunchMode.SingleTop,
         Name = "starWarsSample.droid.views.MainView"
         )]
-    public class MainView : MvxAppCompatActivity<MainViewModel>
+    public class MainView : MvxActivity<MainViewModel>
     {
         public DrawerLayout DrawerLayout { get; set; }
 
@@ -69,4 +69,3 @@ namespace StarWarsSample.Droid.Views
         }
     }
 }
-
