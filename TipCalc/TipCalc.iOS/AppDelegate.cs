@@ -6,7 +6,7 @@ using MvvmCross.Platforms.Ios.Core;
 namespace TipCalc.iOS
 {
     [Register(nameof(AppDelegate))]
-    public class AppDelegate : MvxApplicationDelegate<MvxIosSetup<App>, App>
+    public class AppDelegate : MvxApplicationDelegate<Setup, App>
     {
         public override UIWindow Window { get; set; }
 

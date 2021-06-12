@@ -4,14 +4,14 @@ using MvvmCross.Platforms.Mac.Core;
 
 namespace TipCalc.UI.Mac
 {
-	[Register("AppDelegate")]
-	public class AppDelegate : MvxApplicationDelegate<MvxMacSetup<Core.App>, Core.App>
+    [Register("AppDelegate")]
+	public class AppDelegate : MvxApplicationDelegate<Setup, Core.App>
 	{
 		public NSWindow Window { get; set; }
 
 		public override void DidFinishLaunching(NSNotification notification)
 		{
-			MvxMacSetupSingleton.EnsureSingletonAvailable(this, MainWindow).EnsureInitialized();
+			MvxMacSetupSingleton.EnsureSingletonAvailable(this).EnsureInitialized();
 			RunAppStart();
 		}
 

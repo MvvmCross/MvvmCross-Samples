@@ -1,4 +1,5 @@
 ﻿using System.Threading.Tasks;
+using Microsoft.Extensions.Logging;
 using MvvmCross.ViewModels;
 using TipCalc.Core.Services;
 
@@ -7,10 +8,12 @@ namespace TipCalc.Core.ViewModels
     public class TipViewModel : MvxViewModel
     {
         private readonly ICalculationService _calculationService;
+        private readonly ILogger<TipViewModel> _logger;
 
-        public TipViewModel(ICalculationService calculationService)
+        public TipViewModel(ICalculationService calculationService, ILogger<TipViewModel> logger)
         {
             _calculationService = calculationService;
+            _logger = logger;
         }
 
         public override async Task Initialize()
@@ -62,6 +65,8 @@ namespace TipCalc.Core.ViewModels
         private void Recalcuate()
         {
             Tip = _calculationService.TipAmount(SubTotal, Generosity);
+            _logger.LogInformation("Calculated Tip: {Tip} from Sub Total: {SubTotal} and Generosity: {Generosity}",
+                Tip, SubTotal, Generosity);
         }
     }
 }

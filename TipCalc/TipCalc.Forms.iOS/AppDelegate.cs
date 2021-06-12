@@ -7,7 +7,7 @@ using UIKit;
 namespace TipCalc.Forms.iOS
 {
     [Register(nameof(AppDelegate))]
-    public partial class AppDelegate : MvxFormsApplicationDelegate<MvxFormsIosSetup<App, FormsApp>, App, FormsApp>
+    public partial class AppDelegate : MvxFormsApplicationDelegate<Setup, App, FormsApp>
     {
         public override bool FinishedLaunching(UIApplication uiApplication, NSDictionary launchOptions)
         {
