@@ -1,5 +1,4 @@
-﻿using MvvmCross.Platforms.Uap.Core;
-using MvvmCross.Platforms.Uap.Views;
+﻿using MvvmCross.Platforms.Uap.Views;
 
 namespace TipCalc.UWP
 {
@@ -11,7 +10,7 @@ namespace TipCalc.UWP
         }
     }
 
-    public abstract class TipCalcApp : MvxApplication<MvxWindowsSetup<Core.App>, Core.App>
+    public abstract class TipCalcApp : MvxApplication<Setup, Core.App>
     {
     }
 }
