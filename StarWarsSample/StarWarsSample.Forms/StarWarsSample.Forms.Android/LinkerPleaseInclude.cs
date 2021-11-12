@@ -8,6 +8,7 @@ using MvvmCross.Binding.BindingContext;
 using MvvmCross.IoC;
 using MvvmCross.Navigation;
 using MvvmCross.ViewModels;
+using MvvmCross.Views;
 
 namespace StarWarsSample.Forms.Droid
 {
@@ -108,11 +109,10 @@ namespace StarWarsSample.Forms.Droid
             context2.Dispose();
         }
 
-        public void Include(MvxNavigationService service, IMvxViewModelLoader loader, IMvxIoCProvider iocProvider)
+        public void Include(MvxNavigationService service, IMvxViewDispatcher dispatcher, IMvxViewModelLoader loader, IMvxIoCProvider ioc)
         {
-            service = new MvxNavigationService(loader, null, iocProvider);
+            service = new MvxNavigationService(null, dispatcher, ioc);
         }
-
         public void Include(ConsoleColor color)
         {
             Console.Write("");

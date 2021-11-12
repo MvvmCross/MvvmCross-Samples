@@ -7,6 +7,7 @@ using MvvmCross.IoC;
 using MvvmCross.Navigation;
 using MvvmCross.Platforms.Ios.Views;
 using MvvmCross.ViewModels;
+using MvvmCross.Views;
 using UIKit;
 
 namespace StarWarsSample.Forms.iOS
@@ -119,9 +120,9 @@ namespace StarWarsSample.Forms.iOS
             changed.PropertyChanged += (sender, e) => { var test = e.PropertyName; };
         }
 
-        public void Include(MvxNavigationService service, IMvxViewModelLoader loader, IMvxIoCProvider iocProvider)
+        public void Include(MvxNavigationService service, IMvxViewDispatcher dispatcher, IMvxViewModelLoader loader, IMvxIoCProvider ioc)
         {
-            service = new MvxNavigationService(loader, null, iocProvider);
+            service = new MvxNavigationService(null, dispatcher, ioc);
         }
 
         public void Include(ConsoleColor color)

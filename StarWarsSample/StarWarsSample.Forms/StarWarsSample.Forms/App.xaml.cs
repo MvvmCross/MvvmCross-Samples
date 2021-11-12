@@ -1,6 +1,5 @@
 using Xamarin.Forms;
 
-
 namespace StarWarsSample.Forms.UI
 {
     public partial class App : Application

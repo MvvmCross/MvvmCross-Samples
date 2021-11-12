@@ -28,7 +28,6 @@ namespace StarWarsSample.Droid.MvxBindings
         {
             if (!(value is MvxNotifyTask))
             {
-               
                 Logs.Instance.Log(LogLevel.Trace, "Value '"+value+"' could not be parsed as a valid INotifyTaskCompletion");
                 return;
             }
