@@ -1,9 +1,7 @@
-using MvvmCross.Forms.Core;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
-[assembly: XamlCompilation(XamlCompilationOptions.Compile)]
-namespace StarWarsSample.Forms
+
+namespace StarWarsSample.Forms.UI
 {
     public partial class App : Application
     {

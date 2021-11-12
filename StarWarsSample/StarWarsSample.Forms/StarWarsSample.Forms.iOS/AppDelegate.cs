@@ -1,7 +1,5 @@
-﻿using Acr.UserDialogs;
-using FFImageLoading.Forms.Platform;
+﻿using FFImageLoading.Forms.Platform;
 using Foundation;
-using Lottie.Forms.Platforms.Ios;
 using MvvmCross.Forms.Platforms.Ios.Core;
 using OxyPlot.Xamarin.Forms.Platform.iOS;
 using UIKit;
@@ -9,14 +7,14 @@ using UIKit;
 namespace StarWarsSample.Forms.iOS
 {
     [Register(nameof(AppDelegate))]
-    public partial class AppDelegate : MvxFormsApplicationDelegate<MvxFormsIosSetup<Core.App, App>, Core.App, App>
+    public partial class AppDelegate : MvxFormsApplicationDelegate<Setup, Core.App, UI.App>
     {
-        public override bool FinishedLaunching(UIApplication app, NSDictionary options)
+        public override bool FinishedLaunching(UIApplication uiApplication, NSDictionary launchOptions)
         {
             CachedImageRenderer.Init();
             PlotViewRenderer.Init();
 
-            return base.FinishedLaunching(app, options);
+            return base.FinishedLaunching(uiApplication, launchOptions);
         }
     }
 }

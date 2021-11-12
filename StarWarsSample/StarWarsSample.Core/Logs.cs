@@ -1,10 +1,10 @@
-﻿using MvvmCross;
-using MvvmCross.Logging;
+﻿using Microsoft.Extensions.Logging;
+using MvvmCross;
 
 namespace StarWarsSample.Core
 {
     public static class Logs
     {
-        public static IMvxLog Instance { get; } = Mvx.IoCProvider.Resolve<IMvxLogProvider>().GetLogFor("StarWarsSample");
+        public static ILogger Instance { get; } = Mvx.IoCProvider.Resolve<ILoggerProvider>().CreateLogger("StarWarsSample");
     }
 }
