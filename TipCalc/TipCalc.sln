@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26730.12
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32126.317
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TipCalc.Core", "TipCalc.Core\TipCalc.Core.csproj", "{278DBED9-619C-4998-B734-4A4CC69C8269}"
 EndProject
@@ -106,6 +106,7 @@ Global
 		{9F649F0F-E5E4-4A40-B292-80A73EE88D01}.Release|ARM.Build.0 = Release|iPhone
 		{9F649F0F-E5E4-4A40-B292-80A73EE88D01}.Release|iPhone.ActiveCfg = Release|iPhone
 		{9F649F0F-E5E4-4A40-B292-80A73EE88D01}.Release|iPhone.Build.0 = Release|iPhone
+		{9F649F0F-E5E4-4A40-B292-80A73EE88D01}.Release|iPhone.Deploy.0 = Release|iPhone
 		{9F649F0F-E5E4-4A40-B292-80A73EE88D01}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
 		{9F649F0F-E5E4-4A40-B292-80A73EE88D01}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
 		{9F649F0F-E5E4-4A40-B292-80A73EE88D01}.Release|x64.ActiveCfg = Release|iPhone

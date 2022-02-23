@@ -70,7 +70,7 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
     <PackageReference Include="MvvmCross">
-      <Version>8.0.1</Version>
+      <Version>8.0.2</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
