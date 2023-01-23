@@ -1,8 +1,8 @@
-﻿using MvvmCross.Platforms.Uap.Views;
+﻿using MvvmCross.Platforms.WinUi.Views;
 using MvvmCross.ViewModels;
 using TipCalc.Core.ViewModels;
 
-namespace TipCalc.UWP.Views
+namespace TipCalc.WinUI3.Views
 {
     [MvxViewFor(typeof(TipViewModel))]
     public sealed partial class TipView : MvxWindowsPage

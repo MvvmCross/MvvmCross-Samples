@@ -1,9 +1,9 @@
 ﻿using Microsoft.Extensions.Logging;
-using MvvmCross.Platforms.Uap.Core;
+using MvvmCross.Platforms.WinUi.Core;
 using Serilog;
 using Serilog.Extensions.Logging;
 
-namespace TipCalc.UWP
+namespace TipCalc.WinUI3
 {
     public class Setup : MvxWindowsSetup<Core.App>
     {
@@ -17,7 +17,6 @@ namespace TipCalc.UWP
             // serilog configuration
             Log.Logger = new LoggerConfiguration()
                 .MinimumLevel.Debug()
-                .WriteTo.Trace()
                 .CreateLogger();
 
             return new SerilogLoggerFactory();

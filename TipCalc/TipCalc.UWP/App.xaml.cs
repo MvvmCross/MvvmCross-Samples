@@ -1,6 +1,6 @@
-﻿using MvvmCross.Platforms.Uap.Views;
+﻿using MvvmCross.Platforms.WinUi.Views;
 
-namespace TipCalc.UWP
+namespace TipCalc.WinUI3
 {
     public sealed partial class App
     {

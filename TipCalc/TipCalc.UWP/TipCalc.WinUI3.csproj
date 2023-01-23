@@ -1,0 +1,42 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>net6.0-windows10.0.19041.0</TargetFramework>
+		<TargetPlatformMinVersion>10.0.17763.0</TargetPlatformMinVersion>
+		<RootNamespace>TipCalc.WinUi3</RootNamespace>
+		<ApplicationManifest>app.manifest</ApplicationManifest>
+		<Platforms>x86;x64;arm64</Platforms>
+		<RuntimeIdentifiers>win10-x86;win10-x64;win10-arm64</RuntimeIdentifiers>
+		<UseWinUI>true</UseWinUI>
+		<SupportedOSPlatformVersion>10.0.19041.0</SupportedOSPlatformVersion>
+		<StartupObject>TipCalc.WinUI3.Program</StartupObject>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<!-- This bundles the .NET Core libraries -->
+		<SelfContained>true</SelfContained>
+		<!-- This bundles the WinUI3 components -->
+		<WindowsAppSDKSelfContained>true</WindowsAppSDKSelfContained>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.WindowsAppSDK" Version="1.2.221209.1">
+			<IncludeAssets>build</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.22621.755" />
+		<PackageReference Include="Serilog.Extensions.Logging" Version="3.1.0" />
+		<Manifest Remove="app.manifest" />
+		<Manifest Include="$(ApplicationManifest)" />
+	</ItemGroup>
+
+	<!-- Defining the "Msix" ProjectCapability here allows the Single-project MSIX Packaging
+       Tools extension to be activated for this project even if the Windows App SDK Nuget
+       package has not yet been restored -->
+	<ItemGroup Condition="'$(DisableMsixProjectCapabilityAddedByProject)'!='true' and '$(EnableMsixTooling)'=='true'">
+		<ProjectCapability Include="Msix" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\TipCalc.Core\TipCalc.Core.csproj" />
+	</ItemGroup>
+</Project>
