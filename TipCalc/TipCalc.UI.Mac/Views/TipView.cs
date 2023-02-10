@@ -4,6 +4,7 @@ using System.Linq;
 using Foundation;
 using AppKit;
 using MvvmCross.Platforms.Mac.Binding.Views;
+using ObjCRuntime;
 
 namespace TipCalc.UI.Mac
 {
@@ -12,7 +13,7 @@ namespace TipCalc.UI.Mac
 		#region Constructors
 
 		// Called when created from unmanaged code
-		public TipView(IntPtr handle) : base(handle)
+		public TipView(NativeHandle handle) : base(handle)
 		{
 			Initialize();
 		}
