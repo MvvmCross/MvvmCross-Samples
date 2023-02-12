@@ -6,10 +6,12 @@ using AppKit;
 using MvvmCross.Platforms.Mac.Views;
 using MvvmCross.Binding.BindingContext;
 using TipCalc.Core.ViewModels;
+using MvvmCross.Platforms.Mac.Presenters.Attributes;
 
 namespace TipCalc.UI.Mac
 {
-	public partial class TipViewController : MvxViewController
+    [MvxWindowPresentation]
+    public partial class TipViewController : MvxViewController
 	{
 		#region Constructors
 
