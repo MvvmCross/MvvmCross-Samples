@@ -3,7 +3,7 @@ using MvvmCross.Platforms.Ios.Binding;
 using MvvmCross.Platforms.Ios.Presenters.Attributes;
 using MvvmCross.Platforms.Ios.Views;
 
-namespace iOSApp;
+namespace iOSApp.Views;
 
 [MvxRootPresentation(WrapInNavigationController = true)]
 public sealed class MainViewController : MvxViewController<MainViewModel>

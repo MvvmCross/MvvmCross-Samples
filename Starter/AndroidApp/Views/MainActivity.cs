@@ -1,7 +1,7 @@
 using Core.ViewModels;
 using MvvmCross.Platforms.Android.Views;
 
-namespace AndroidApp;
+namespace AndroidApp.Views;
 
 [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = true)]
 public sealed class MainActivity : MvxActivity<MainViewModel>

@@ -6,7 +6,7 @@ using MvvmCross.Platforms.Android.Binding.BindingContext;
 using MvvmCross.Platforms.Android.Presenters.Attributes;
 using MvvmCross.Platforms.Android.Views.Fragments;
 
-namespace AndroidApp;
+namespace AndroidApp.Views;
 
 [MvxFragmentPresentation(FragmentContentId = Resource.Id.fragment_container)]
 [Register("starter.DetailFragment")]

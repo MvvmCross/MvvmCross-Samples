@@ -1,7 +1,7 @@
 using Core.ViewModels;
 using MvvmCross.Platforms.Ios.Views;
 
-namespace iOSApp;
+namespace iOSApp.Views;
 
 public sealed class DetailViewController : MvxViewController<DetailViewModel>
 {
