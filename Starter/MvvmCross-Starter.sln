@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{9B7E746F-A424-469B-B29E-99CD43278FF9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iOSApp", "iOSApp\iOSApp.csproj", "{8C1802EF-B373-458D-9C79-09468195C019}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AndroidApp", "AndroidApp\AndroidApp.csproj", "{A58E21DC-A0B9-43AA-9983-E70FCC589C82}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9B7E746F-A424-469B-B29E-99CD43278FF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B7E746F-A424-469B-B29E-99CD43278FF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B7E746F-A424-469B-B29E-99CD43278FF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B7E746F-A424-469B-B29E-99CD43278FF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C1802EF-B373-458D-9C79-09468195C019}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C1802EF-B373-458D-9C79-09468195C019}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C1802EF-B373-458D-9C79-09468195C019}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C1802EF-B373-458D-9C79-09468195C019}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A58E21DC-A0B9-43AA-9983-E70FCC589C82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A58E21DC-A0B9-43AA-9983-E70FCC589C82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A58E21DC-A0B9-43AA-9983-E70FCC589C82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A58E21DC-A0B9-43AA-9983-E70FCC589C82}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
