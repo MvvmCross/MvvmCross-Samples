@@ -1,19 +1,13 @@
 ﻿using Core.ViewModels;
-using MvvmCross.IoC;
 using MvvmCross.ViewModels;
 
 namespace Core;
 
 public class App : MvxApplication
 {
-    public App()
+    public override void Initialize()
     {
-        CreatableTypes()
-            .EndingWith("Service")
-            .AsInterfaces()
-            .RegisterAsLazySingleton();
-        
-        // This only works on Android if you are using MvxSetupActivity
-        //RegisterAppStart<MainViewModel>();
+        // This only works on Android if you are using MvxSetupActivity and will otherwise be ignored
+        RegisterAppStart<MainViewModel>();
     }
 }

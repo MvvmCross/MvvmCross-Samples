@@ -6,7 +6,7 @@ namespace Core.ViewModels;
 
 public record DetailParameters(int Clicks);
 
-public class DetailViewModel : MvxViewModel<DetailParameters>
+public sealed class DetailViewModel : MvxViewModel<DetailParameters>
 {
     public string DetailText { get; private set; } = string.Empty;
     
@@ -19,6 +19,6 @@ public class DetailViewModel : MvxViewModel<DetailParameters>
     
     public override void Prepare(DetailParameters parameter)
     {
-        DetailText = $"We had {parameter.Clicks} on previous view";
+        DetailText = $"We had {parameter.Clicks} clicks on previous screen";
     }
 }

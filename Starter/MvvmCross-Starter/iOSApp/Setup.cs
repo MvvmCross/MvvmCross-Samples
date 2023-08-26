@@ -2,14 +2,14 @@ using System.Globalization;
 using Core;
 using Microsoft.Extensions.Logging;
 using MvvmCross.Binding;
-using MvvmCross.Platforms.Android.Core;
+using MvvmCross.Platforms.Ios.Core;
 using Serilog;
 using Serilog.Events;
 using Serilog.Extensions.Logging;
 
-namespace AndroidApp;
+namespace iOSApp;
 
-public sealed class Setup : MvxAndroidSetup<App>
+public class Setup : MvxIosSetup<App>
 {
     protected override ILoggerProvider? CreateLogProvider() => new SerilogLoggerProvider();
 
@@ -21,7 +21,7 @@ public sealed class Setup : MvxAndroidSetup<App>
 
         var logFolder = GetLogFolder();
         var logger = LoggingSetup.CreateCommonLoggerConfiguration(logFolder)
-            .WriteTo.Async(l => l.AndroidLog(
+            .WriteTo.Async(l => l.NSLog(
                 LogEventLevel.Verbose,
                 LoggingSetup.OutputTemplate,
                 CultureInfo.InvariantCulture

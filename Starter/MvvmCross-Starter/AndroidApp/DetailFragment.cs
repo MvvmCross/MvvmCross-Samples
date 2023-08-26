@@ -10,7 +10,7 @@ namespace AndroidApp;
 
 [MvxFragmentPresentation(FragmentContentId = Resource.Id.fragment_container)]
 [Register("starter.DetailFragment")]
-public class DetailFragment : MvxFragment<DetailViewModel>
+public sealed class DetailFragment : MvxFragment<DetailViewModel>
 {
     public override View OnCreateView(LayoutInflater inflater, ViewGroup? container, Bundle? savedInstanceState)
     {
