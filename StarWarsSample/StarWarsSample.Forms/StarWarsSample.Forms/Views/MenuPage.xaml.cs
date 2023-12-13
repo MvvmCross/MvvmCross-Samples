@@ -18,7 +18,7 @@ namespace StarWarsSample.Forms.UI.Views
         {
             if (Parent is MvxMasterDetailPage md && Device.RuntimePlatform != Device.UWP)
             {
-                md.MasterBehavior = MasterBehavior.Popover;
+                //md.MasterBehavior = MasterBehavior.Popover;
                 md.IsPresented = !md.IsPresented;
             }
         }

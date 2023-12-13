@@ -6,5 +6,5 @@
     xmlns:mvx="clr-namespace:MvvmCross.Forms.Bindings;assembly=MvvmCross.Forms"
     xmlns:viewModels="clr-namespace:StarWarsSample.Core.ViewModels;assembly=StarWarsSample.Core"
     x:Class="StarWarsSample.Forms.MainPage"
-    MasterBehavior="{x:OnPlatform Android=Default, iOS=Default, UWP=Split}">
+            >
 </views:MvxMasterDetailPage>

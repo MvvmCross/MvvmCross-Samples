@@ -2,23 +2,24 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <LangVersion>8.0</LangVersion>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="OxyPlot.Xamarin.Forms" Version="1.0.0" />
     <PackageReference Include="Xamarin.FFImageLoading.Forms" Version="2.4.11.982" />
     <PackageReference Include="Xamarin.FFImageLoading.Svg" Version="2.4.11.982" />
     <PackageReference Include="Xamarin.FFImageLoading.Svg.Forms" Version="2.4.11.982" />
     <PackageReference Include="Xamarin.FFImageLoading.Transformations" Version="2.4.11.982" />
-    <PackageReference Include="Xamarin.Forms" Version="4.8.0.1687" />
-    <PackageReference Include="Acr.UserDialogs" Version="7.1.0.470" />
-    <PackageReference Include="Com.Airbnb.Xamarin.Forms.Lottie" Version="4.0.8" />
-    <PackageReference Include="OxyPlot.Xamarin.Forms" Version="1.0.0" />
-    <PackageReference Include="MvvmCross" Version="7.1.2" />
-    <PackageReference Include="MvvmCross.Forms" Version="7.1.2" />
-    <PackageReference Include="MvvmCross.Plugin.Json" Version="7.1.2" />
-    <PackageReference Include="MvvmCross.Plugin.JsonLocalization" Version="7.1.2" />
-    <PackageReference Include="MvvmCross.Plugin.Messenger" Version="7.1.2" />
-    <PackageReference Include="MvvmCross.Plugin.ResourceLoader" Version="7.1.2" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2196" />
+    <PackageReference Include="Acr.UserDialogs" Version="7.2.0.534" />
+    <PackageReference Include="Com.Airbnb.Xamarin.Forms.Lottie" Version="4.0.11" />
+    <PackageReference Include="MvvmCross" Version="8.0.2" />
+    <PackageReference Include="MvvmCross.Forms" Version="8.0.2" />
+    <PackageReference Include="MvvmCross.Plugin.Json" Version="8.0.2" />
+    <PackageReference Include="MvvmCross.Plugin.JsonLocalization" Version="8.0.2" />
+    <PackageReference Include="MvvmCross.Plugin.Messenger" Version="8.0.2" />
+    <PackageReference Include="MvvmCross.Plugin.ResourceLoader" Version="8.0.2" />
   </ItemGroup>
 
   <ItemGroup>
@@ -27,7 +28,7 @@
 
   <ItemGroup>
     <Compile Update="App.xaml.cs">
-      <DependentUpon>App</DependentUpon>
+      <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Update="Views\PersonPage.xaml.cs">
       <DependentUpon>PersonPage.xaml</DependentUpon>

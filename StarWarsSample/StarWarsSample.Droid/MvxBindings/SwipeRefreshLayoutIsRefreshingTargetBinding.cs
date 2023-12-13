@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 using AndroidX.SwipeRefreshLayout.Widget;
+using Microsoft.Extensions.Logging;
 using MvvmCross.Binding;
 using MvvmCross.Logging;
 using MvvmCross.Platforms.Android.Binding.Target;
@@ -27,7 +28,7 @@ namespace StarWarsSample.Droid.MvxBindings
         {
             if (!(value is MvxNotifyTask))
             {
-                Logs.Instance.Trace("Value '{0}' could not be parsed as a valid INotifyTaskCompletion", value);
+                Logs.Instance.Log(LogLevel.Trace, "Value '"+value+"' could not be parsed as a valid INotifyTaskCompletion");
                 return;
             }
 

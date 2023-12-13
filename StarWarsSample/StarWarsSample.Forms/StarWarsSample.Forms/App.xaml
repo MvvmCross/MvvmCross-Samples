@@ -4,7 +4,7 @@
     xmlns:d="clr-namespace:MvvCross.Forms.Core;assembly=MvvmCross.Forms"
     xmlns:global="clr-namespace:StarWarsSample.Forms.UI"
     xmlns:styles="using:StarWarsSample.Forms.UI.Styles"
-    x:Class="StarWarsSample.Forms.App">
+    x:Class="StarWarsSample.Forms.UI.App">
 	<Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>

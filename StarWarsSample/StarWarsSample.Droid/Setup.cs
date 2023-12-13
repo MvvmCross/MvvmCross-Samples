@@ -7,11 +7,14 @@ using AndroidX.SwipeRefreshLayout.Widget;
 using AndroidX.ViewPager.Widget;
 using Google.Android.Material.FloatingActionButton;
 using Google.Android.Material.Navigation;
+using Microsoft.Extensions.Logging;
 using MvvmCross.Binding.Bindings.Target.Construction;
 using MvvmCross.DroidX;
 using MvvmCross.DroidX.RecyclerView;
 using MvvmCross.Platforms.Android.Core;
 using MvvmCross.Platforms.Android.Presenters;
+using Serilog;
+using Serilog.Extensions.Logging;
 using StarWarsSample.Core;
 using StarWarsSample.Droid.MvxBindings;
 
@@ -19,6 +22,21 @@ namespace StarWarsSample.Droid
 {
     public class Setup : MvxAndroidSetup<App>
     {
+        protected override ILoggerProvider CreateLogProvider()
+        {
+            return new SerilogLoggerProvider();
+        }
+
+        protected override ILoggerFactory CreateLogFactory()
+        {
+            // serilog configuration
+            Log.Logger = new LoggerConfiguration()
+                .MinimumLevel.Debug()
+                .WriteTo.AndroidLog()
+                .CreateLogger();
+
+            return new SerilogLoggerFactory();
+        }
         protected override IEnumerable<Assembly> AndroidViewAssemblies => new List<Assembly>(base.AndroidViewAssemblies)
         {
             typeof(NavigationView).Assembly,
