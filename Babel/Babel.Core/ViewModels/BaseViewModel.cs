@@ -1,10 +1,9 @@
-using MvvmCross.Core.ViewModels;
 using MvvmCross.Localization;
+using MvvmCross.ViewModels;
 
 namespace Babel.Core.ViewModels
 {
-    public abstract class BaseViewModel
-        : MvxViewModel
+    public abstract class BaseViewModel : MvxViewModel
     {
         public IMvxLanguageBinder TextSource
         {

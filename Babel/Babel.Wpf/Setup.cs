@@ -1,27 +1,20 @@
-using System.Windows.Threading;
-using MvvmCross.Core.ViewModels;
-using MvvmCross.Platform.Platform;
-using MvvmCross.Wpf.Platform;
-using MvvmCross.Wpf.Views;
+﻿using MvvmCross;
+using MvvmCross.Base;
+using MvvmCross.Platforms.Wpf.Core;
+using MvvmCross.Plugin;
+using MvvmCross.Plugin.ResourceLoader.Platforms.Wpf;
 
 namespace Babel.Wpf
 {
-    public class Setup
-        : MvxWpfSetup
+    public class Setup : MvxWpfSetup<Core.App>
     {
-        public Setup(Dispatcher dispatcher, IMvxWpfViewPresenter presenter)
-            : base(dispatcher, presenter)
+        public override void LoadPlugins(IMvxPluginManager pluginManager)
         {
-        }
+            base.LoadPlugins(pluginManager);
 
-        protected override IMvxApplication CreateApp()
-        {
-            return new Core.App();
-        }
+            Mvx.IoCProvider.RegisterType<IMvxResourceLoader, MvxWpfResourceLoader>();
 
-        protected override IMvxTrace CreateDebugTrace()
-        {
-            return new DebugTrace();
+            pluginManager.EnsurePluginLoaded<MvvmCross.Plugin.Json.Plugin>();
         }
     }
 }

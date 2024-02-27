@@ -1,4 +1,4 @@
-using MvvmCross.Wpf.Views;
+﻿using MvvmCross.Platforms.Wpf.Views;
 
 namespace Babel.Wpf.Views
 {
@@ -6,7 +6,7 @@ namespace Babel.Wpf.Views
     {
         public FirstView()
         {
-            this.InitializeComponent();
+            InitializeComponent();
         }
     }
 }
