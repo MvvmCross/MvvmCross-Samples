@@ -3,9 +3,11 @@ using System.Collections.Specialized;
 using System.Windows.Input;
 using Foundation;
 using MvvmCross.Binding.BindingContext;
+using MvvmCross.IoC;
 using MvvmCross.Navigation;
 using MvvmCross.Platforms.Ios.Views;
 using MvvmCross.ViewModels;
+using MvvmCross.Views;
 using UIKit;
 
 namespace StarWarsSample.iOS
@@ -118,9 +120,9 @@ namespace StarWarsSample.iOS
             changed.PropertyChanged += (sender, e) => { var test = e.PropertyName; };
         }
 
-        public void Include(MvxNavigationService service, IMvxViewModelLoader loader)
+        public void Include(MvxNavigationService service, IMvxViewDispatcher dispatcher, IMvxViewModelLoader loader, IMvxIoCProvider ioc)
         {
-            service = new MvxNavigationService(null, loader);
+            service = new MvxNavigationService(null, dispatcher, ioc);
         }
 
         public void Include(ConsoleColor color)

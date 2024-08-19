@@ -2,8 +2,8 @@
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.Extensions.Logging;
 using MvvmCross.Base;
-using MvvmCross.Logging;
 using StarWarsSample.Core.Rest.Interfaces;
 
 namespace StarWarsSample.Core.Rest.Implementations
@@ -11,12 +11,12 @@ namespace StarWarsSample.Core.Rest.Implementations
     public class RestClient : IRestClient
     {
         private readonly IMvxJsonConverter _jsonConverter;
-        private readonly IMvxLog _mvxLog;
+        private readonly ILogger<RestClient> _logger;
 
-        public RestClient(IMvxJsonConverter jsonConverter, IMvxLog mvxLog)
+        public RestClient(IMvxJsonConverter jsonConverter, ILogger<RestClient> logger)
         {
             _jsonConverter = jsonConverter;
-            _mvxLog = mvxLog;
+            _logger = logger;
         }
 
         public async Task<TResult> MakeApiCall<TResult>(string url, HttpMethod method, object data = null) where TResult : class
@@ -41,7 +41,7 @@ namespace StarWarsSample.Core.Rest.Implementations
                     }
                     catch (Exception ex)
                     {
-                        _mvxLog.ErrorException("MakeApiCall failed", ex);
+                        _logger.LogError("MakeApiCall failed", ex);
                     }
 
                     var stringSerialized = await response.Content.ReadAsStringAsync().ConfigureAwait(false);

@@ -24,7 +24,7 @@ namespace StarWarsSample.Forms.UWP
         }
     }
 
-    public abstract class StarWarsSampleApp : MvxWindowsApplication<MvxFormsWindowsSetup<Core.App, Forms.App>, Core.App, Forms.App, MainPage>
+    public abstract class StarWarsSampleApp : MvxWindowsApplication<Setup, Core.App, UI.App, MainPage>
     {
     }
 }
