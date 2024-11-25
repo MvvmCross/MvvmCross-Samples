@@ -1,24 +1,15 @@
-using Android.Content;
-using MvvmCross.Droid.Platform;
-using MvvmCross.Core.ViewModels;
-using MvvmCross.Platform.Platform;
+using MvvmCross.Platforms.Android.Core;
+using MvvmCross.Plugin;
 
 namespace Babel.Droid
 {
-    public class Setup : MvxAndroidSetup
+    public class Setup : MvxAndroidSetup<Core.App>
     {
-        public Setup(Context applicationContext) : base(applicationContext)
+        public override void LoadPlugins(IMvxPluginManager pluginManager)
         {
-        }
+            base.LoadPlugins(pluginManager);
 
-        protected override IMvxApplication CreateApp()
-        {
-            return new Core.App();
-        }
-
-        protected override IMvxTrace CreateDebugTrace()
-        {
-            return new DebugTrace();
+            pluginManager.EnsurePluginLoaded<MvvmCross.Plugin.Json.Plugin>();
         }
     }
 }

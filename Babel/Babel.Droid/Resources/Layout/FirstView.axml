@@ -1,19 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:local="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
-  <EditText
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    android:textSize="40dp"
-    local:MvxBind="Text Hello"
-    />
-  <TextView
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    android:textSize="40dp"
-    local:MvxBind="Text Hello"
-    />
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:local="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:orientation="vertical"
+	android:focusableInTouchMode="true">
+
+	<Button
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="Fallback language"
+		android:layout_marginBottom="20dp"
+		local:MvxBind="Click DefaultCommand;" />
+
+	<Button
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="Cat language"
+		local:MvxBind="Click LolCatCommand;" />
+
+	<Button
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="English"
+		local:MvxBind="Click ProperEnglishCommand;" />
+
+	<TextView
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="Click the &quot;Cat language&quot; / &quot;English&quot; / &quot;Fallback language&quot; button to change the UI language and click the &quot;Test automatic localization on another View&quot; button to see the effect." />
+
+	<Button
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="Test localization on another View"
+		local:MvxBind="Click GoCommand;" />
+
+	<TextView
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="To update the text on this View You have to click the &quot;Force refresh localized text&quot; button!" />
+
+	<Button
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="Force refresh localized text"
+		local:MvxBind="Click ForceTextRefreshCommand;" />
+
+	<TextView
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_margin="10dp"
+		android:textColor="@android:color/holo_purple"
+		local:MvxBind="Text Language(TextSource, 'ExampleText')" />
+
+	<TextView
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="Or You could use the local:MvxLang which is a OneTime binding" />
+
+	<TextView
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_margin="10dp"
+		android:textColor="@android:color/holo_purple"
+		local:MvxLang="Text ExampleText" />
+	
+	<EditText
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:hint="Type something here"
+		local:MvxBind="Text Hello" />
+	
+	<TextView
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		local:MvxBind="Text Hello" />
+
 </LinearLayout>

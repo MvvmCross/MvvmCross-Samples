@@ -1,16 +1,42 @@
-<views:MvxWpfView 
-             x:Class="Babel.Wpf.Views.FirstView"
-             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             xmlns:views="clr-namespace:MvvmCross.Wpf.Views;assembly=MvvmCross.Wpf"
-             mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
-    <Grid>
+<views:MvxWpfView x:Class="Babel.Wpf.Views.FirstView"
+                  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                  xmlns:views="clr-namespace:MvvmCross.Platforms.Wpf.Views;assembly=MvvmCross.Platforms.Wpf"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Grid Margin="25">
         <StackPanel>
-            <TextBox Text="{Binding Hello, Mode=TwoWay}" />
-            <TextBox Text="{Binding Hello, Mode=TwoWay}" />
+            <Button Command="{Binding DefaultCommand}"
+                    Content="Fallback language"
+                    Margin="0,0,0,20"/>
+            
+            <Button Command="{Binding LolCatCommand}"
+                    Content="Cat language" />
+
+            <Button Command="{Binding ProperEnglishCommand}"
+                    Content="English" />
+
+            <TextBlock Text="Click the &quot;Cat language&quot; / &quot;English&quot; / &quot;Fallback language&quot; button to change the UI language and click the &quot;Test automatic localization on another View&quot; button to see the effect."
+                       TextWrapping="Wrap"
+                       Margin="5" />
+
+            <Button Command="{Binding GoCommand}"
+                    Content="Test localization on another View" />
+
+            <TextBlock Text="To update the text on this View You have to click the &quot;Force refresh localized text&quot; button!"
+                       TextWrapping="Wrap"
+                       Margin="5" />
+
+            <Button Command="{Binding ForceTextRefreshCommand}"
+                    Content="Force refresh localized text" />
+
+            <Label Content="Localized text:" />
+            <TextBlock Text="{Binding TextSource, Converter={StaticResource Language}, ConverterParameter=ExampleText, FallbackValue=ExampleText}"
+                       TextWrapping="Wrap"
+                       Margin="10"
+                       FontStyle="Italic"/>
+
+            <Label Content="Type something:" />
+            <TextBox Text="{Binding Hello, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+            <TextBox Text="{Binding Hello, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
         </StackPanel>
     </Grid>
 </views:MvxWpfView>
